@@ -6,7 +6,7 @@
 || Damian Flannery   || d.w.flannery || ISIS|| Main ICAT developer || ||
 || Laurent Lerusse   || l.lerusse|| ESC || Developer || ||
 || Shirley Crompton  || || ESC || [http://www.consequence-project.eu/showcase_scenarios.html Consequence Test Bed] Leader ||  ||
-|| Micheal Gleaves   || || ESC || DLS & CLF Project manager ||  ||
+|| Micheal Gleaves   || micheal.gleaves   || ESC || DLS & CLF Project manager ||  ||
 || Brian Matthews    || || ESC || Group Leader || ||
 || Lakshmi Sastry    || || ESC || CLF eCAT project manager || ||
 || Anjan Pakira      || || ESC || CLF eCAT developer || ||
