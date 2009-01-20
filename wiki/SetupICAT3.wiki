@@ -1,0 +1,42 @@
+#summary One-sentence summary of this page.
+#labels Icat-Api
+
+== Setting Up ICAT3 Modules in [http://www.netbeans.org NetBean] ==
+
+
+Author: Shirley Crompton[[BR]]
+Date:   9 September, 2008[[BR]]
+
+
+
+=== Introduction  ===
+
+These are rough notes from my painful experience of setting up ICAT3 as netbean projects.  
+
+=== Prerequisites  ===
+  # Make sure you are using [http://www.netbeans.org NetBean] 6.1 with [https://glassfish.dev.java.net/ Glassfish] V2Ur2  (Devigo did not leave any technical handover instructions that I know of and I wasted several days trying to set up the projects in [http://www.netbeans.org NetBean] 6.0.  [http://www.netbeans.org NetBean] 6.0 does not support Sharable Libraries and your build files will be messed up if you use a lower version.)[[BR]]
+  # Have the Devigo's binary installation zip file accessible from your desktop, you will need to copy some of the jar files.[[BR]]
+
+=== Procedures ===
+  # Check out the ICAT3_api branch from the SVN onto your desktop.[[BR]]
+  # Open these projects in [http://www.netbeans.org NetBean] '''6.1'''(!#~@F%, some unprintable words here)[[BR]]
+    * icat3-core[[BR]]
+    * icat3-data[[BR]]
+    * icat3-download[[BR]]
+    * icat3-jaxb[[BR]]
+    * icat3-user-default[[BR]] 
+    * icat3-exposed (this is the main project)[[BR]]
+  # Go through each projects to resolve the missing libraries and correct/update errors in the code flashed up NetBean.  Some Test packages contain missing methods and you may wish to remove them in the first instance to save time.[[BR]]
+  # You will need to adjust the environment-specific properties in the project.properties to match your own settings.[[BR]]
+  # Set up the required Database schemas - ICAT (main ICAT schema) and ICAT-user (for the session beans) (if required).[[BR]]
+  # Add server resources (JDBC resources and connection pools) for the ejb/enterprise bean modules. (This may not be absolutely necessary as the deploy process may perform this).[[BR]]
+  # Add these:[[BR]]
+    * wstx-asl-3.9.2.jar to your {{{<JAVA_HOME>\lib\endorsed}}} folder.[[BR]]
+    * ojdbc14.jar to your  {{{<GLASS_FISH_HOME>\domiains\<your domain>\lib\ext}}} folder.[[BR]]
+    * log4j.properties to your  {{{<GLASS_FISH_HOME>\domiains\<your domain>\config}}} folder.[[BR]]
+    * ICAT.wsdl to your  {{{<GLASS_FISH_HOME>\domiains\<your domain>\config}}} folder.[[BR]]
+  # Clean and build the icat3-exposed project (this will also build the dependent projects).[[BR]]
+  # Deploy icat3-exposed to your [https://glassfish.dev.java.net/ Glassfish] instance.  If you already have a database schema installed, ignore the SQL errors that complain about constraints.[[BR]]
+  # Make sure that you have configured cog-kit on your desktop (see [CogkitConfig Configure Cogkit]).[[BR]]
+
+You are now ready to test ICAT3 with your own webservice client.  (If you wish to use Dataportal, you may like to refer to [wiki:SetupDP5 Setting Up Dataportal as Exploded Enterprise Modules in Netbean].).[[BR]]

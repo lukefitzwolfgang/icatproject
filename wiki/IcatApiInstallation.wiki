@@ -1,0 +1,85 @@
+#summary ICAT API Installation.
+#labels Icat-Api
+
+= ICAT API Installation =
+
+== Binary creation from Source == 
+
+This part is unknown at the moment.
+
+== ICAT API Installation from Binary ==
+Author(s): Glen Drinkwater
+
+=== Introduction ===
+
+This document is to guide an administrator through the steps needed to install the ICAT API v3.3 onto Glassfish v2 UR2 b4 on Microsoft Windows or Linux.
+
+=== Prerequisites ===
+
+The installation needs the following software installed:
+ 1. Java 6 Update 6 from http://java.sun.com/javase/downloads/index.jsp
+ 1. Apache Ant v1.7+ from http://ant.apache.org
+ 1. Glassfish v2 UR2 b4 from https://glassfish.dev.java.net/downloads/v2ur2-b04.html
+ 1. Installed and configured Java Cog Kit from http://wiki.cogkit.org/index.php/Main_Page, help http://www.globus.org/cog/distribution/1.2/FAQ.TXT NB: This is only needed for running of the ICAT API and not the installation. (SYC 21/08/2008 - also see CogkitConfig.)
+
+The installation also needs these databases accessible.
+ 1. An installed ICAT 3.3 schema instance on an Oracle DB 
+ 1. An accessible empty schema for the ICAT API user session tables on an Oracle DB
+
+'''''Note:''''' From now on <JAVA_HOME> and <GLASSFISH_HOME> represent the root directory installation of Java and Glassfish respectively.	
+
+If you have already installed the Data Portal, please go to section 3 and then onto 7 or 8 depending whether Glassfish is currently running.
+
+=== Installation ===
+ 1. Download and unpack the installation.zip file provided by Devigo
+   a. This contains all the binary jars and ant scripts needed to install ICAT API
+   a. This will be known as the <INSTALLATION_HOME>
+ 1. Check ant is installed with the correct version by executing this from the command prompt:
+   a. '''{{{ $ant -version }}}'''           Apache Ant version 1.7.0 compiled on December 13 2006
+ 1. Configure the '''<INSTALLATION_HOME>/nbproject/database.properties''' file.
+   a. Configure the ICAT schema
+     i. Add your own values to the icat.user, icat.url and icat.password properties
+     i. This is for the main ICAT schema’s username, password and url
+     i. Note that icat.url must be in Oracle JBDC format, i.e. start with jdbc:oracle:thin:@[[BR]] See Note Below
+   a. Configure the ICAT user session schema (SYC 20Aug2008 - the ICAT user session database will be installed by the ant target if it doesn't exist.  If you need to install a separate database for development use, I have the schema ddl.)
+     i. Add your own values to the icatuser.user, icatuser.url and icatuser.password properties
+     i. This is for the ICAT API user session schema’s username, password and url
+     i. Note that icatuser.url must be in Oracle JDBC format, i.e. start with jdbc:oracle:thin:@ [[BR]] See Note Below
+   a. Configure the name of facility you wish to install.
+     i. Change facility.name to either ISIS or DLS
+     i. '''NB:''' This will either install the version of ICAT API for ISIS or DLS
+ 1. Configure the '''<INSTALLATION_HOME>/nbproject/glassfish.properties''' file.
+   a. Configure the application server Glassfish
+     i. If you are using the default Glassfish installation sjsas.admin.port, sjsas.http.port, sjsas.password, sjsas.host, sjsas.username and sjsas.domain can leave alone.
+     i. Change '''sjsas.root''' to the '''<GLASSFISH_HOME>''' remembering to add the escape character \ if you are on windows for :  and \
+     i. Change admin.auth.password to the password you wish to add for the admin ICAT API web services.  The username will be '''facility.name-admin''' from 3 c) i) i.e. '''DLS-admin'''
+   a. This step can be skipped if you have already installed the Data Portal
+ 1. Now the configuration is finished the installation can start with a series of ant commands executed in the <INSTALLATION_HOME>
+ 1. '''{{{ $ ant –f icat.xml init-config }}}'''
+   a. Copies the required files onto the Glassfish server i.e. Oracle’s JDBC driver
+   a. Copies a jar file to fix a bug in the StAX Parser in Java 6.
+     i. '''NB:''' If you are using Linux, you will need to manually copy '''<INSTALLATION_HOME>/lib/wstx-asl-3.9.2.jar''' into '''<JAVA_HOME>/jre/lib/endorsed''' creating the endorsed directory if it does not exist.
+ 1. '''{{{ $ ant –f icat.xml start-domain }}}'''
+   a. Starts the Glassfish server, if it complains of not starting, check http://localhost:4848. 
+   a. If it still has not started use the commands {{{<GLASSFISH_HOME>/bin/asadmin start-domain domain1}}} and {{{<GLASSFISH_HOME>/bin/asadmin stop-domain domain1}}} to start and stop the default domain domain1
+ 1. '''{{{ $ ant –f icat.xml install }}}'''
+   a. Creates all the glassfish data sources and connection pools and deploys the '''icat-api.ws.jar''' onto Glassfish
+   a. If you are reinstalling this then some errors will occur saying it cannot create some tables, do not worry about this, it just means the tables have already been recreated.
+ 1. '''{{{ $ ant –f icat.xml configure-icat-db }}}'''
+   a. Configures the MyProxy Servers and enables SUPER and ADMIN for ICAT API admin logins
+ 1. '''{{{ $ ant –f icat.xml restart-domain }}}'''
+   a. Allows the changes to 9 to be picked up from the database.
+ 1. To check if the installation is correct, check ''https://localhost:8181/ICATService/ICAT?wsdl'' to view the WSDL file.
+
+=== See Also ===
+
+[source:"ICAT/DevigoTutorial/ICAT API Installation.doc"  Data Portal Installation]
+
+[source:"ICAT/DevigoTutorial/DataPortal and ICAT Installation.pdf" Data Portal and ICAT Installation Presentation]
+
+
+== Notes ==
+ icat.url (example for point 3) ::
+ jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=yes)(FAILOVER=ON)(ADDRESS=(PROTOCOL=TCP)(HOST=jinx-vip.dl.ac.uk)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=elektra-vip.dl.ac.uk)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=minerva.dl.ac.uk)(FAILOVER_MODE=(TYPE=SESSION)(METHOD=BASIC))))
+
+

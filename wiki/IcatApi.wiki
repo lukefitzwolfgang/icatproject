@@ -1,0 +1,119 @@
+#summary Description of the ICAT API
+#labels Icat-Api
+
+= ICAT API = 
+Author(s): Glen Drinkwater and Richard Tyer 
+
+The ICAT API consists of three main modules: 
+
+  # the Web Services module – this can be offered to any application wishing to interact with the ICAT. Further details about these services and how to use them within other applications can be found in the ICAT Client Tutorial.
+  # the Core module – this handles all interaction with the ICAT schema itself.
+  # the Session module – this is responsible for the session management with the ICAT.
+The ICAT API mostly uses JPA to interact with the underlying Oracle databases, although for performance reasons some SQL is also required. The core and session modules interact directly with the underlying databases and these two layers provide all interactions necessary to underpin the web services offered through the top layer interface of the ICAT API.
+
+The ICAT schema resides in an Oracle database and is accessed through the core module of the ICAT API. This core module abstracts all other components in the higher level application layers from changes in the underlying schema or database as long as the new schema is backwards compatible and until any additional features of the new ICAT version are required.
+
+The session module provides the default implementation of the User interface found within the core module. Figure 2 shows the methods within the User interface that specifies the contract between the session management module and the core module.  The implementation provided by the session module logs users on with their federal username and password, which is then used to authenticate with e-Science modified MyProxy server.  Once the user is logged on, the web service module calls the getUserIdFromSessionId() method to look up the user’s federal id from the corresponding session id.  This federal id is then used to authorise the user within the core module when it is interacting with the ICAT.
+{{{
+    public Collectioon<Investigation> searchbyAdvanced(String sessionId, AdvancedSearchDetails advance Search) throws Session Exception{
+        // for user bean get userId
+        String userId = user.getUserIdFromSessionId(sessionId);
+        // now do the search using the API
+        return InvestgigationSearch.searchByAdvanced(userId, advancedSearch, -1, -1, manager);
+    }
+   
+   Figure : Web Service module's search by advanced method
+}}}
+
+The web service module is an example of the façade pattern that provides a simplified interface to both the session and core modules.  The code above shows an example of one of the advanced search web service methods.  This method retrieves the user federal id from the session module and then executes a core module method and returns the results.  The use of the façade pattern to abstract from the complexity of the session and core modules makes the web service module’s methods simple and also the module itself very extensible.   New methods can readily be added to the module by either plugging additional modules or using their methods or by wiring together methods from the core module. In both cases, these should be combined with the getUserIdFromSessionId() method of the session module.
+
+
+The ICAT API is the interface that all applications should use to interact with the core ICAT system.  At present, it is used by a range of applications that includes ISIS XML ingest, the DLS Generic Data Acquisition System, the Facility’s HTTP Interfaces DDH and the Data Portal. The ICAT API offers a wide range of web services for easy interaction with the ICAT which are utilised by these applications.
+
+There is a wide range of methods for searching, adding, removing and modifying investigations, datasets and datafiles as well as their child objects (publications, samples, investigators etc.). In addition, it includes methods for adding and removing authorisations, logging on and off the system and listing schema control data (i.e. dataset types, parameter types, etc.).
+
+
+= Code Organisation = 
+
+ The source code can be found there : https://esc-cvs.dl.ac.uk/svn/dl/icat3_api/trunk/ 
+
+ This contains 11 repository 10 of which are netBeans projects. 
+
+ icat3-core ::
+ icat3-data ::
+ icat3-download ::
+ icat3-exposed ::
+ icat3-ingest-client ::
+ icat3-jaxb ::
+ icat3-user ::
+ icat3-acc-tests ::
+ icat3-ws-test ::
+ Libraries ::
+
+
+
+=== icat3-core  ===
+ dependancies ::
+ javaee.jar, log4j-1.2.14.jar, odbc14.jar, toplink-essentials-agent.jar, toplink-essentials.jar
+
+ 
+ packages ::
+ uk.icat3.entity, uk.icat3.exceptions, uk.icat3.manager, uk.icat3.security, uk.icat3.test, uk.icat3.user, uk.icat3.util
+
+=== icat3-data === 
+ dependancies ::
+ icat3-core [[BR]]
+ javaee.jar log4j-1.2.14.jar, odbc14.jar, toplink-essentials-agent.jar, toplink-essentials.jar, cogkit-without-jce/cog-jglobus-kerberos.jar, ogkit-without-jce/common-logging.jar
+
+ packages ::
+ uk.icat3.data, uk.icat3.test
+
+=== icat3-download === 
+ dependancies ::
+ icat3-core, icat3-exposed [[BR]] 
+ log4j-1.2.14.jar
+
+=== icat3-exposed === 
+ dependancies ::
+ icat3-core, icat3-jaxb, icat3-user-default, icat3-data  [[BR]]
+ commons-logging.jar, log4j-1.2.14.jar, 
+ ''cog-jglobus.jar'', 
+ ''cryptix-asn1.jar'', ''cryptix.jar'', ''cryptix32.jar'', 
+ ''jce-jdk13-120.jar'', ''jgss.jar, puretls.jar'' 
+
+ 
+=== icat3-ingest-client === 
+ packages ::
+ uk.icat3.ingest.client
+
+=== icat3-jaxb === 
+ dependancies ::
+ log4j-1.2.14.jar, toplink-essentials-agent.jar, toplink-essentials.jar
+
+ packages ::
+ uk.icat3.jaxb, uk.icat3.jaxb.gen, uk.icat3.jaxb.helper,
+
+=== icat3-user === 
+ dependancies ::
+ icat3-core [[BR]]
+ ''Library log4j'' , junit-4.1.jar, ''jboss-all-client.jar'', ''userdb.jar''
+
+ packages ::
+ uk.icat3.user.facility
+
+=== icat3-user-default === 
+ dependancies ::
+ icat3-core [[BR]]
+ javaee.jar, ''Library log4j'' ,cogkit-without-jce/cog-jglobus-kerberos.jar, ogkit-without-jce/common-logging.jar
+
+ packages ::
+ uk.icat3.userdefault.cog, uk.icat3.userdefault.entity, uk.icat3.userdefault.exception, uk.icat3.userdefault.facility, uk.icat3.userdefault.test 
+
+=== icat3-acc-tests === 
+ dependancies ::
+ icat3-core [[BR]]
+ javaee.jar, log4j-1.2.14.jar, cogkit-without-jce/cog-jglobus-kerberos.jar, ogkit-without-jce/common-logging.jar
+
+=== icat3-ws-test === 
+ packages ::
+ icat3wstest, icat3wstestother
