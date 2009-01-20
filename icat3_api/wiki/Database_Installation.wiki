@@ -1,0 +1,38 @@
+#summary Notes for installation of database schemas
+#labels Installation,Featured
+
+= Database Installation =
+
+The ICAT/Data Portal installation notes assume that you already have a working oracle database with the follwoing database schemas/users installed
+
+ * 1) icat
+ * 2) icatuser
+ * 3) dataportal
+
+These instructions assume that you have installed Oracle XE 10G.
+Please download and extract the latest ICAT/Data Portal [http://code.google.com/p/icatproject/downloads/ download bundle]. This will be known as {{{<INSTALLATION_HOME>}}}.
+
+To install 1) icat, please follow the instructions {{{<INSTALLATION_HOME>/database/icat/README.txt}}} file.
+
+To install 2) icatuser, please goto the Oracle XE web administration console and 
+  * log in as sys user
+  * create a new user (Administration --> Database Users --> Create User)
+  * specify 'icatuser' as username (without quotes) 
+  * give appropriate password
+  * ensure that user has CONNECT and RESOURCE privileges
+  * press 'Create' button
+  * The required tables will be automatically created later as part of the ICAT/Data Portal installation
+
+To install 3) dataportal please goto the Oracle XE web administration console and 
+  * log in as sys user
+  * create a new user (Administration --> Database Users --> Create User)
+  * specify 'dataportal' as username (without quotes) 
+  * give appropriate password
+  * ensure that user has CONNECT and RESOURCE privileges
+  * press 'Create' button
+  * logout of web console
+  * login as 'dataportal' user
+  * execute the following scripts in order by uploading and running each script (SQL -> SQL Scripts --> Upload)
+	* {{{<INSTALLATION_HOME>/database/dataportal/dataportal_schema_create_oracle.sql}}}
+	* {{{<INSTALLATION_HOME>/database/dataportal_schema_insert_oracle.sql}}}
+	* {{{<INSTALLATION_HOME>/database/dataportal_schema_update_oracle.sql}}}

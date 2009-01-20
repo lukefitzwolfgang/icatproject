@@ -1,0 +1,20 @@
+#summary ICAT Client Tutorial .
+#labels Icat-Client
+== ICAT Client Tutorial ==
+
+See :  
+ * [source:"ICAT/DevigoTutorial/ICAT Client Tutorial Presentation.pdf"]
+ * [source:"ICAT/DevigoTutorial/ICAT Client Tutorial.pdf"]
+ * [source:"ICAT/DevigoTutorial/icat_api_example.zip"]
+ * [source:"ICAT/DevigoTutorial/ICAT-WS-tutorial.doc" ICAT Web Service Tutorial]
+
+== ICAT Rich Client Applications ==
+
+A prototype developed by Metataxa has successfully shown that it is possible to create a very rich application experience for searching and editing information by using the NetBeans Platform in conjunction with the ICAT API.  This GUI was built on top of the NetBeans platform and resulted in a very professional 'look and feel' with all of the default tool/behaviour support expected for a GUI. In addition, it can be delivered via Java Web Start (i.e. from web pages) to the client.  Compared to web applications, development time for GUI applications is much shorter, so additional features can be readily added. The performance of a GUI is also very good and the features supported within the demonstrator ‘proof of concept’ GUI are in some ways superior to those of the Data Portal (e.g. full display of all data is possible). The development with the NetBeans Platform also allows fully modular, concurrent development of features, displays and general work bug fixes, which can be difficult with web applications. The NetBeans platform would also allow additional service support to be hooked into the GUI though the DataPortal GUI, i.e. visualisation and analysis workflow could be integrated into the GUI.
+taxa
+ 
+
+[[Image(ICATnetBeansClient.jpg, 50%, middle)]]
+
+
+Figure above shows an example of a search that returns two investigations. A datafile within the 'default' dataset has been highlighted and its parameters can be seen within the table at the bottom of the window, as well as within the tree hierarchy of the datafile itself.  The complete set of metadata associated with the datafile can be viewed in the properties box in the middle panel on the left of the GUI, which could easily be extended to provide editing functionality by updating the ICAT when the user changes the values. Both the properties and parameter tables are automatically updated when a user selects a different datafile or onto a dataset in the search results.
