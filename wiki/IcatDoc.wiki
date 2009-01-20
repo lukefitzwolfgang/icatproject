@@ -1,0 +1,53 @@
+#summary List of available documents.
+#labels Icat-Generic
+
+= Introduction = 
+
+The documents are available via the source under [http://code.google.com/p/icatproject/source/browse/#svn/Documentation svn/Documentation]. 
+
+= Devigo documentation with ICAT 3.3 =
+
+  * DataPortal and ICAT Overview.ppt
+    Overview and history of ICAT and Data Portal 
+
+  * icat-why.pdf
+    ICAT Schema development presentation 
+
+  * dataportal-design_plan-0.5.doc
+    Data Portal Design 
+
+  * interfaces_overview.pdf
+    Overview of the existing interfaces to the ICAT system. 
+
+  * data_dictionary.pdf
+    ICAT Schema column name definition. 
+
+  * icat3_authorisation_spec.doc
+    ICAT3 Authorisation specification 
+
+  * DataPortal and ICAT Installation.pdf
+    Data Portal and Icat Installation (presentation) 
+
+  * ICAT API Installation.doc
+    ICAT API Installation manual 
+
+  * Data Portal Installation.doc
+    Data Portal Installation manual. 
+
+  * DataPortal Users Guide 0 1.doc
+    Data Portal User Guide 
+
+  * ICAT Client Tutorial Presentation.pdf
+    ICAT Client Tutorial presentation 
+
+  * icat_api_examples.zip
+    ICAT Client Tutorial - the examples. 
+
+  * ICAT Client Tutorial.pdf
+    ICAT Client Tutorial 
+
+  * ICAT-WS-tutorial.doc
+    ICAT Web Service Tutorial 
+
+  * ICAT Training Final (4).doc
+    Timetable of the ICAT training session. 

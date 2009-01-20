@@ -1,0 +1,17 @@
+#summary Who's Who?
+#labels Icat-Generic
+
+
+|| *_Name             _* || *_Google account_*  || *_Group_* || *_Role_*  || *_Responsibilities _*  ||
+|| Damian Flannery   || d.w.flannery || ISIS|| Main ICAT developer || ||
+|| Laurent Lerusse   || l.lerusse|| ESC || Developer || ||
+|| Shirley Crompton  || || ESC || [http://www.consequence-project.eu/showcase_scenarios.html Consequence Test Bed] Leader ||  ||
+|| Micheal Gleaves   || || ESC || DLS & CLF Project manager ||  ||
+|| Brian Matthews    || || ESC || Group Leader || ||
+|| Lakshmi Sastry    || || ESC || CLF eCAT project manager || ||
+|| Anjan Pakira      || || ESC || CLF eCAT developer || ||
+|| Gordon Brown      || || ESC || Databases group leader || ||
+|| Keir Hawker       || || ESC || Databases administrator || ||
+|| Carmine Cioffi    || || ESC || Databases administrator || ||
+|| Kenneth Shankland || || ISIS|| ISIS analysis group leader || ||
+|| Alun Ashton       || || DLS || DLS analysis group leader ||  ||

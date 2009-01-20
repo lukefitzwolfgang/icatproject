@@ -1,0 +1,55 @@
+#summary Setting Up Dataportal Modules in NetBean.
+#labels Icat-DP
+
+= Setting Up Dataportal Exploded Enterprise Modules in [http://www.netbeans.org NetBean] =
+
+Author: Shirley Crompton[[BR]]
+
+Date:   14 September, 2008[[BR]]
+
+== Introduction  ==
+
+These are rough notes from my experience of setting up the Dataportal v5 project as exploded enterprise modules in [http://www.netbeans.org NetBean].  You may like to refer to the wiki page on how to [wiki:SetupICAT3 set up icat3.3 modules] as [http://www.netbeans.org NetBean] projects.
+
+== Prerequisites  ==
+1.  Make sure that you are using [http://www.netbeans.org NetBean] 6.1 with [https://glassfish.dev.java.net/ Glassfish] V2Ur2.[[BR]]
+
+== Procedures ==
+1.  Check out the dataportal/modules/trunk from the SVN onto your desktop.[[BR]]
+
+2.  Open these projects in [http://www.netbeans.org NetBean] '''6.1''':[[BR]]
+  * dataportal-coreutil (ejb module)[[BR]]
+  * dataportal-core (java app)[[BR]]
+  * dataportal-web (webapp) [[BR]]
+  
+3.  Set the context path and run url for dataportal-web:[[BR]]
+  * In the Projects window pane, right click on the dataportal-web application.[[BR]]
+  * Select the Project Properties option.[[BR]]
+  * Click on the Run categories.[[BR]]
+  * Add '/dp' to Context Path.[[BR]]
+  * Add '/dp/faces/protected/logon.jsp' to Relative URL.[[BR]]
+
+
+4. You may need to go through each projects to resolve the missing libraries flashed up by [http://www.netbeans.org NetBean].[[BR]]
+
+5.  You may need to adjust the environment-specific properties in the project.properties to match your own settings.[[BR]]
+
+== Compile the Enterprise Application ==
+
+1.  Extend the build.xml (or write a separate ant script) to include targets for building a single dataportal.ear distribution.  You will need to set the classpaths and package the dependent jars correctly for each module to go into the ear.[[BR]]
+
+2.  To compile facility-specific version of the Dataportal.war, you need to replace the src\uk\ac\dl\dp\web\messages\facility.properties file with a copy of the appropriate {{{<facility>.properties}}} file (available in the same folder).[[BR]]
+
+== Deploy the Enterprse Application (this example uses Glassfish Admin console) ==
+
+1.  Set up the backend Dataportal database schema (if required).[[BR]]
+
+2.  Logon to Glassfish Admin console.[[BR]]
+
+3.  Add server resources (JDBC resource and connection pool) for the ejb bean module.[[BR]]
+
+4.  Add JMS factory and queues for the session beans.  (Have a look at the Devigo's dataportal.xml ant script for details.)[[BR]]
+
+5.  Go to Enterprise Application and deploy the dataportal.ear.  Use 'dataportal' as the application name and enable Java Web Start.
+
+6.  That's it.
