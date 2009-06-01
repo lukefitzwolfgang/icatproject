@@ -20,3 +20,6 @@ prompt
 prompt ====================================================================
 prompt database users now removed!
 prompt
+
+disconnect
+exit
