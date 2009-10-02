@@ -60,6 +60,18 @@ This table has the Role and Actions that are allowed,
 ||ACTION_MANAGE_USERS_WEIGHT|| ||
 ||ACTION_SUPER||User can theoretically do anything that one could do with direct access to ICAT system eg via SQL. In practice this is limited to the maximum available functionality of the ICAT API.<br>'Y' - Yes <br> 'N' - No||
 ||ACTION_SUPER_WEIGHT|| ||
+
+ * Default Role
+||Role||Actions||
+||READER||select||
+||DOWNLOADER||select,download||
+||UPDATER||select,download,update||
+||DELETER||select,download,update,delete||
+||CREATOR||select,insert,download,update,delete,root_insert,manage_users||
+||ADMIN||select,insert,download,update,delete,remove,root_insert,manage_users||
+||ICAT_ADMIN||select,insert,download,update,delete,remove,root_insert,root_remove,set_fa,manage_users||
+||SUPER||select,insert,download,update,delete,remove,root_insert,root_remove,set_fa,manager_users,super||
+
 = Details =
 
 Add your content here.  Format your content with:
