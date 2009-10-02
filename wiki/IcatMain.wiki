@@ -23,6 +23,9 @@
  * [SetupICAT3 Setting up ICAT3 modules in NetBean]
  * [SetupDP5 Setting up Dataportal exploded enterprise modules in NetBean]
 
+== Developers Resource ==
+
+ * [Authorisation]
 
 == Project ==
 
