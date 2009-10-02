@@ -37,29 +37,17 @@ This table has following fields with details
 This table has the Role and Actions that are allowed,
 ||Column||Description||
 ||ROLE||Name of the ROLE||
-||ROLE_WEIGHT|| ||
 ||ACTION_INSERT||User can insert/create new child of the element <br>'Y' - Yes <br> 'N' - No||
-||ACTION_INSERT_WEIGHT|| ||
 ||ACTION_SELECT||User can read anything in the EH<br><br>'Y' - Yes <br> 'N' - No||
-||ACTION_SELECT_WEIGHT|| ||
 ||ACTION_DOWNLOAD||User can Download any relevent entities in the EH<br>'Y' - Yes <br> 'N' - No||
-||ACTION_DOWNLOAD_WEIGHT|| ||
 ||ACTION_UPDATE||User can Update anything in the EH<br>'Y' - Yes <br> 'N' - No||
-||ACTION_UPDATE_WEIGHT|| ||
 ||ACTION_DELETE||User can mark as deleted any child element of the EH but not root<br>'Y' - Yes <br> 'N' - No||
-||ACTION_DELETE_WEIGHT|| ||
 ||ACTION_REMOVE||User can remove/permanently any child of the EH but not the root<br>'Y' - Yes <br> 'N' - No||
-||ACTION_REMOVE_WEIGHT|| ||
 ||ACTION_ROOT_INSERT||User can create a new EH<br>'Y' - Yes <br> 'N' - No||
-||ACTION_ROOT_INSERT_WEIGHT|| ||
 ||ACTION_ROOT_REMOVE||User can remove/permanently delete an EH<br>'Y' - Yes <br> 'N' - No||
-||ACTION_ROOT_REMOVE_WEIGHT|| ||
 ||ACTION_SET_FA||User can set and unset FACILITY_ACQUIRED in any of the EH<br>'Y' - Yes <br> 'N' - No||
-||ACTION_SET_FA_WEIGHT|| ||
 ||ACTION_MANAGE_USERS||User can add or remove users from EH (but not other ICAT_ADMIN's they did not create)<br>'Y' - Yes <br> 'N' - No||
-||ACTION_MANAGE_USERS_WEIGHT|| ||
 ||ACTION_SUPER||User can theoretically do anything that one could do with direct access to ICAT system eg via SQL. In practice this is limited to the maximum available functionality of the ICAT API.<br>'Y' - Yes <br> 'N' - No||
-||ACTION_SUPER_WEIGHT|| ||
 
  * Default Role
 ||Role||Actions||
