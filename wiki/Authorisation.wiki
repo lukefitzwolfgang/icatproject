@@ -21,6 +21,18 @@ The icat authorisation can be applied to Investigation or Dataset, The elements 
    * Related Datafile
 Any operation on these elements needs appropriate authorisation entry of its parent in *ICAT_AUTHORISATION* table. 
 
+==*ICAT_AUTHORISATION Details*==
+This table has following fields with details
+||Column||Description||
+||ID||Key of the ICAT Authorisation entry||
+||USER_ID||This is the user id used in authorisation, can be one of these <br>  fedid<br> 'ANY' keyword for any registered user <br> GUARDIAN for the process with adds data on behalf of facility <br>  SUPER_USER for super user||
+||ROLE||ROLE from the ICAT_ROLE table||
+||ELEMENT_TYPE||Can be INVESTIGATION or DATASET||
+||ELEMENT_ID||This is generally the id associated with the ELEMENT_TYPE element for which authorisation is set. the exception are: <br> If null and ELEMENT_TYPE='DATASET' then user can create datasets for the linked investigation depending on the user ROLE permission.<br> if null and ELEMENT_TYPE='INVESTIGATION' this means the user can create investigations; in practice only two record like this should exist in ICAT, one for GUARDIAN and one for the SUPER_USER. ||
+||PARENT_ELEMENT_TYPE||This is there for quick lookup of parent element type of ELEMENT_ID, usually used for DATASET elements||
+||PARENT_ELEMENT_ID||This is parent key id for the element||
+||USER_CHILD_RECORD|| ? ||
+
 = Details =
 
 Add your content here.  Format your content with:
