@@ -1,5 +1,4 @@
-#summary One-sentence summary of this page.
-This page describes the authorisation mechanism useful for developers.
+#This page describes the authorisation mechanism useful for developers.
 
 = Introduction =
 The authorisation mechanism is based on model with roles & actions. The idea behind this is that the new roles and actions can be created without any change to the authorisation code.
