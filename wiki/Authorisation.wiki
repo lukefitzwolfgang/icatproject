@@ -1,7 +1,7 @@
 #This page describes the authorisation mechanism useful for developers
 
 = Introduction =
-The authorisation mechanism is based on model with roles & actions. The idea behind this is that the new roles and actions can be created without any change to the authorisation code.
+The authorisation mechanism is based on model with roles & actions. The idea behind this is that the new roles and actions can be created with minimal change to the authorisation code.
 The logic of a particular role performing an action can be checked before performing the action.
 eg: an READER role can do only reading action this means the code logic for performing read can check whether user can read. 
 Table that is associated with the roles and actions are provided in *ICAT_ROLE*
