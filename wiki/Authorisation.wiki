@@ -1,4 +1,4 @@
-#This page describes the authorisation mechanism useful for developers
+#summary Notes for authorisation mechanism useful for developers
 
 = Introduction =
 The authorisation mechanism is based on model with roles & actions. The idea behind this is that the new roles and actions can be created with minimal change to the authorisation code.
