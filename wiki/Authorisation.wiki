@@ -18,7 +18,8 @@ The icat authorisation can be applied to Investigation or Dataset, The elements 
    * Datafile
    * Datafile Parameter
    * Related Datafile
-Any operation on these elements needs appropriate authorisation entry of its parent in *ICAT_AUTHORISATION* table. 
+Any operation on these elements needs appropriate authorisation entry of its parent in 
+*ICAT_AUTHORISATION* table. 
 
 ==*ICAT_AUTHORISATION Details*==
 This table has following fields with details
@@ -59,6 +60,7 @@ This table has the Role and Actions that are allowed,
 ||ICAT_ADMIN||select,insert,download,update,delete,remove,root_insert,root_remove,set_fa,manage_users||
 ||SUPER||select,insert,download,update,delete,remove,root_insert,root_remove,set_fa,manager_users,super||
 
+[http://icatproject.googlecode.com/svn/Images/ICAT_Authorisation.JPG]
 = Details =
 
 Add your content here.  Format your content with:
