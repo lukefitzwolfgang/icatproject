@@ -81,7 +81,7 @@ A) There will be only one entry in the authroisation table as below.
 ||ID||USER_ID||ROLE||ELEMENT_TYPE||ELEMENT_ID||PARENT_ELEMENT_TYPE||PARENT_ELEMENT_ID||USER_CHILD_RECORD||
 ||1003||56790||CREATOR||INVESTIGATION||2000||NULL||NULL||NULL||
 
-4) User 'C' (56791) is an scientist who can only access metadata information and download files in a dataset dataset-1 (4000) but cannot get the information about the investigation.
+4) User 'C' (56791) is an scientist who can only access metadata information and download files in a dataset dataset-1 (4000) but cannot get the information about the investigation. <br>
 A) There will be only one entry in the authorisation table as below.
 ||ID||USER_ID||ROLE||ELEMENT_TYPE||ELEMENT_ID||PARENT_ELEMENT_TYPE||PARENT_ELEMENT_ID||USER_CHILD_RECORD||
 ||1004||56791||DOWNLOADER||DATASET||4000||INVESTIGATION||2000||NULL||
