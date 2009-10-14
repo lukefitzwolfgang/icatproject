@@ -63,7 +63,7 @@ This table has the Role and Actions that are allowed,
 [http://icatproject.googlecode.com/svn/Images/ICAT_Authorisation.JPG]<br>
 This Figure shows the Element Hierarchy.
 
-Eg:
+==Eg:==
 1) User 'A'(56789) is an investigator in Investigation 'Investigation-1'(2000) and has a creator rights and can create datafiles in Dataset 'Dataset-1'(4000).
 A) There will be two entries in the Authroisation table as below
 ||ID||USER_ID||ROLE||ELEMENT_TYPE||ELEMENT_ID||PARENT_ELEMENT_TYPE||PARENT_ELEMENT_ID||USER_CHILD_RECORD||
