@@ -43,7 +43,7 @@ This table has the Role and Actions that are allowed,
 ||ACTION_UPDATE||User can Update anything in the EH<br>'Y' - Yes <br> 'N' - No||
 ||ACTION_DELETE||User can mark as deleted any child element of the EH but not root<br>'Y' - Yes <br> 'N' - No||
 ||ACTION_REMOVE||User can remove/permanently any child of the EH but not the root<br>'Y' - Yes <br> 'N' - No||
-||ACTION_ROOT_INSERT||User can create a new EH<br>'Y' - Yes <br> 'N' - No||
+||ACTION_ROOT_INSERT||User can create a new EH, i.e for INVESTIGATION can create DATASETs and for DATASET can create DATAFILEs<br>'Y' - Yes <br> 'N' - No||
 ||ACTION_ROOT_REMOVE||User can remove/permanently delete an EH<br>'Y' - Yes <br> 'N' - No||
 ||ACTION_SET_FA||User can set and unset FACILITY_ACQUIRED in any of the EH<br>'Y' - Yes <br> 'N' - No||
 ||ACTION_MANAGE_USERS||User can add or remove users from EH (but not other ICAT_ADMIN's they did not create)<br>'Y' - Yes <br> 'N' - No||
