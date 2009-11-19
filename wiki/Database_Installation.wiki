@@ -15,8 +15,12 @@ Please download and extract the latest ICAT/Data Portal [http://code.google.com/
 To install the schemas necessary for ICAT & the Data Portal (icat, icatuser, dataportal):
 
 1. CD to the directory containing the file install_icatisis.sql i.e. {{{<INSTALLATION_HOME>/database/icat}}}
+
 2. Run sqlplus without connecting to the database (sqlplus /nolog) 
+
 3. Run the script install_icatisis.sql (@install_icatisis.sql).
+
+Note: Running sqlplus from a directory other than {{{<INSTALLATION_HOME>/database/icat}}} may cause the installation script to fail.
 
 The installation script will request the sys password so that it can connect to the database and create the schemas (icat, icatuser, dataportal) and the 
 
@@ -40,11 +44,17 @@ This script will create ICATISIS schema objects in a named schema in a
 specified database.
 
 Enter Database Name             : XE
+
 Enter SYS password              : mysyspasswd
+
 Enter icat password       	: myicatpasswd
+
 Enter dataportal password       : mydataportalpasswd
+
 Enter icatuser   password       : myicatuserpasswd
+
 Enter External tables location 	: /tmp/extloc
+
 
 ====================================================================
 creating user icat
