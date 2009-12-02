@@ -10,7 +10,7 @@ The CSMD is developed to support data collected within a facility’s scientific
   * [CSMDOverview Overview of the CSMD]
   * [CSMDSpecification Specification]
   * [CSMDSchemas Schemas and formats]
-  * API
+  * [IcatApi API]
   * Relationship to other models 
     * Nexus
     * Dublin Core
