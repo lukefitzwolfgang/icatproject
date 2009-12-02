@@ -9,7 +9,7 @@
 
  * [IcatOverview ICAT Overview]
  * [IcatDb ICAT DataBases]
- * [CSMD Metadata Model]
+ * [CSMD Metadata Model (CSMD)]
  * [IcatApi ICAT API]
  * [IcatDp ICAT DataPortal]
  * [IcatClients ICAT Clients]
