@@ -7,7 +7,7 @@ The model is organised around a notion of Studies, a study being a body of scien
 
 For specific data sets the model provides links to the files holding the actual data. Users can then use these links to access the data with their own applications for analysis as required. Data should be grouped accordingly, and associated with the appropriate experimental parameters. Not all information captured in specific metadata schemas would be used to search for this data or distinguish one data set from another, give possibility to select special parameter. The core entities of the CSMD are given in Figure 1.
 
-[CSMD-overview.png]
+[http://code.google.com/p/icatproject/source/browse/Images/DPcoreSchema.png]
 
   * *Investigation*: forms the fundamental unit of the model, with a title, abstract, dates, and unique identifiers referencing the particular study.   Also associated with the investigation are the facility and instrument used to collect data.
   * *Investigator*: describes the people involved in the study, together with their institution and role in the study (e.g. principle investigator, research student).
