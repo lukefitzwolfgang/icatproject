@@ -7,10 +7,10 @@ This is list of feature that are currently missing in ICAT API but they are easy
 
 = Details =
 
-1) RelatedDatafiles (done on test server) : Get/Set the list of datafiles related to another files
-2) Users : Search and get the user id of a scientist using surname or firstname. useful in giving permissions.
-3) Cycles : Get the list of experiment cycles.
-4) AdvancedSearch Sorting : Sorting option in the advanced search.
+1) RelatedDatafiles (done on test server) : Get/Set the list of datafiles related to another files <br>
+2) Users : Search and get the user id of a scientist using surname or firstname. useful in giving permissions. <br>
+3) Cycles : Get the list of experiment cycles. <br>
+4) AdvancedSearch Sorting : Sorting option in the advanced search. <br>
 
 
 Add your content here.  Format your content with:
