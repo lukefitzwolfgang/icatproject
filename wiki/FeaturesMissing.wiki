@@ -11,6 +11,7 @@ This is list of feature that are currently missing in ICAT API but they are easy
 2) Users : Search and get the user id of a scientist using surname or firstname. useful in giving permissions. <br>
 3) Cycles : Get the list of experiment cycles. <br>
 4) AdvancedSearch Sorting : Sorting option in the advanced search. <br>
+5) Version : Installed version of ICAT 
 
 
 Add your content here.  Format your content with:
