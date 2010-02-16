@@ -86,6 +86,11 @@ A) There will be only one entry in the authorisation table as below.
 ||ID||USER_ID||ROLE||ELEMENT_TYPE||ELEMENT_ID||PARENT_ELEMENT_TYPE||PARENT_ELEMENT_ID||USER_CHILD_RECORD||
 ||1004||56791||DOWNLOADER||DATASET||4000||INVESTIGATION||2000||NULL||
 
+5) User 'Admin' (1) is an ICAT admin. <br>
+A) There will be only one entry in the authorisation table as below.
+||ID||USER_ID||ROLE||ELEMENT_TYPE||ELEMENT_ID||PARENT_ELEMENT_TYPE||PARENT_ELEMENT_ID||USER_CHILD_RECORD||
+||1005||1||ICAT_ADMIN||NULL||NULL||NULL||NULL||NULL||
+
 = Details =
 
 Add your content here.  Format your content with:
