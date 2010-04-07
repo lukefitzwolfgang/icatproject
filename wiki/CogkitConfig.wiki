@@ -14,7 +14,7 @@ This document summarises the main steps in configuring the cog-kit for the icat-
   #  Download the cog-kit binary from http://www.cogkit.org/php/download.html. 
   #  Extract to a folder on the server where you have installed the icat-api and data portal.
   #  Set the COG_HOME environment variable to point to this folder.
-  #  Place the UK e-Science CA and UK e-Science Root certificates and signing policies (see http://www.grid-support.ac.uk/content/view/182/244/) in a local folder (I've put them in $COG_HOME/etc/grid-security/certificates)
+  #  Place the UK e-Science CA and UK e-Science Root certificates and signing policies (see http://www.ngs.ac.uk/cacerts) in a local folder (I've put them in $COG_HOME/etc/grid-security/certificates)
   #  Place your _host_ or _user_cert.pem and matching key.pem files in a folder accessible by cog-kit.  (I've left them in the 'USER_HOME'/.globus folder)  
   #  Run the cog-kit gui configuration tool - 'COG_HOME'/bin/cog-setup.
   #  Setup Step 1 Agree to licence terms.
