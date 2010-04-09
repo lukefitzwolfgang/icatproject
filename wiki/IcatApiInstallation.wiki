@@ -59,6 +59,7 @@ If you have already installed the Data Portal, please go to section 3 and then o
   # *{{{ $ ant –f icat.xml install }}}*
     * Creates all the glassfish data sources and connection pools and deploys the *icat-api.ws.jar* onto Glassfish
     * If you are reinstalling this then some errors will occur saying it cannot create some tables, do not worry about this, it just means the tables have already been recreated.
+    * If you experience a fail and error in the context of database connection that includes: Class not found, check to see if there is a 'ojdbc14.jar' in {{{<GLASSFISH_HOME>domains/domain1/lib/}}}. If there is not one present, the copy it there from {{{<INSTALLATION_HOME>/lib/ojdbc14.jar}}}.
   # *{{{ $ ant –f icat.xml configure-icat-db }}}*
     * Configures the MyProxy Servers and enables SUPER and ADMIN for ICAT API admin logins
   # *{{{ $ ant –f icat.xml restart-domain }}}*
