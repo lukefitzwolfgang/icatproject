@@ -6,4 +6,4 @@
 The CSMD is available in a number of formats:
 
   * [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/icat3-jaxb/src/uk/icat3/jaxb/icatXSD.xsd XML Schema]
-  * RelaxNG - courtesy Peter Turner
+  * [http://icatproject.googlecode.com/svn/Images/icat_v3_core_PeterTurner.png RelaxNG] - courtesy Peter Turner
