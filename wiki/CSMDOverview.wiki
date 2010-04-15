@@ -18,3 +18,6 @@ For specific data sets the model provides links to the files holding the actual 
   * *Datafile*: the CSMD takes a hierarchical view of data holdings, as data sets may contain other dataset as well as units of storage, typically datafiles.  Each datafile has more detailed information, including its name, version, location, data format, creation and modification time, and fixity information such as a Checksum.
   * *Parameter*: parameters describe physical entities associated with the investigation, such as temperature, pressure, or scattering angle, describing either the parameters of the sample, the environment the data was collected in, or the parameters being measured.  Thus parameters are associated with the sample, dataset or the datafile, and have names, units, values, and allowable data ranges. 
   * *Authorisation*: the CSMD can associate conditions on investigations and data sets, so that user specified access conditions can be specified.  Thus the authorisation entity can record which user in which role can access data on specific investigations. 
+
+
+http://code.google.com/p/icatproject/Images/icat_v3_core_PeterTurner.png
