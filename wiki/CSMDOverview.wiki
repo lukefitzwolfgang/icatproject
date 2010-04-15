@@ -30,3 +30,5 @@ source/browse/Images/icat_v3_core_PeterTurner.png
 somehing else
 
 [ http://code.google.com/p/icatproject/source/browse/Images/icat_v3_core_PeterTurner.png ]
+
+[source/browse/Images/icat_v3_core_PeterTurner.png]
