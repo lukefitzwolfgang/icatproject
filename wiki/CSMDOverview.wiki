@@ -25,7 +25,7 @@ http://code.google.com/p/icatproject/source/browse/Images/icat_v3_core_PeterTurn
 somethign
 
 
-source/browse/Images/icat_v3_core_PeterTurner.png
+[http://icatproject.googlecode.com/svn/Images/icat_v3_core_PeterTurner.png]
 
 somehing else
 
