@@ -12,12 +12,13 @@ Date:   9 September, 2008
 These are rough notes from my painful experience of setting up ICAT3 as netbeans projects.  
 
 === Prerequisites  ===
-  # Make sure you are using [http://www.netbeans.org NetBean] 6.1 with [https://glassfish.dev.java.net/ Glassfish] V2Ur2  (Devigo did not leave any technical handover instructions that I know of and I wasted several days trying to set up the projects in [http://www.netbeans.org NetBeans] 6.0.  [http://www.netbeans.org NetBean] 6.0 does not support Sharable Libraries and your build files will be messed up if you use a lower version.)
+  # Make sure you are using [http://www.netbeans.org NetBean] 6.1 or later with [https://glassfish.dev.java.net/ Glassfish] V2Ur2  (Devigo did not leave any technical handover instructions that I know of and I wasted several days trying to set up the projects in [http://www.netbeans.org NetBeans] 6.0.  [http://www.netbeans.org NetBean] 6.0 does not support Sharable Libraries and your build files will be messed up if you use a lower version.)
+  # NetBeans EJB plugin is installed.
   # Have the Devigo's binary installation zip file accessible from your desktop, you will need to copy some of the jar files.
 
 === Procedures ===
   # Check out the ICAT3_api branch from the SVN onto your desktop.
-  # Open these projects in [http://www.netbeans.org NetBeans] *6.1*(!#~@F%, some unprintable words here)
+  # Open these projects in [http://www.netbeans.org NetBeans] *6.1* or later.
     * icat3-core
     * icat3-data
     * icat3-download
