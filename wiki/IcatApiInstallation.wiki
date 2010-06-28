@@ -14,7 +14,7 @@ The installation needs the following software installed:
   #  Java 6 Update 6 from http://java.sun.com/javase/downloads/index.jsp
   #  Apache Ant v1.7+ from http://ant.apache.org
   #  Glassfish v2 UR2 b4 from https://glassfish.dev.java.net/downloads/v2ur2-b04.html
-  #  Installed and configured Java Cog Kit from http://wiki.cogkit.org/index.php/Main_Page, help http://www.globus.org/cog/distribution/1.2/FAQ.TXT NB: This is only needed for running of the ICAT API and not the installation. (SYC 21/08/2008 - also see CogkitConfig.)
+  #  <Optional> Installed and configured Java Cog Kit from http://wiki.cogkit.org/index.php/Main_Page, help http://www.globus.org/cog/distribution/1.2/FAQ.TXT NB: This is only needed for running of the ICAT API and not the installation. (SYC 21/08/2008 - also see CogkitConfig.)
 
 The installation also needs these databases accessible.
   #  An installed ICAT 3.3 schema instance on an Oracle DB 
