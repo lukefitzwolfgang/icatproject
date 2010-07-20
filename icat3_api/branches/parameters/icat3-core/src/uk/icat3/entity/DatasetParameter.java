@@ -10,6 +10,7 @@
 package uk.icat3.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -20,6 +21,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlTransient;
 import uk.icat3.exceptions.ValidationException;
@@ -39,6 +42,7 @@ import uk.icat3.util.ElementType;
     @NamedQuery(name = "DatasetParameter.findByUnits", query = "SELECT d FROM DatasetParameter d WHERE d.datasetParameterPK.units = :units"),
     @NamedQuery(name = "DatasetParameter.findByStringValue", query = "SELECT d FROM DatasetParameter d WHERE d.stringValue = :stringValue"),
     @NamedQuery(name = "DatasetParameter.findByNumericValue", query = "SELECT d FROM DatasetParameter d WHERE d.numericValue = :numericValue"),
+    @NamedQuery(name = "DatesetParameter.findByDateTimeValue", query = "SELECT d FROM DatasetParameter d WHERE d.dateTimeValue = :dateTimeValue"),
     @NamedQuery(name = "DatasetParameter.findByRangeTop", query = "SELECT d FROM DatasetParameter d WHERE d.rangeTop = :rangeTop"),
     @NamedQuery(name = "DatasetParameter.findByRangeBottom", query = "SELECT d FROM DatasetParameter d WHERE d.rangeBottom = :rangeBottom"),
     @NamedQuery(name = "DatasetParameter.findByError", query = "SELECT d FROM DatasetParameter d WHERE d.error = :error"),
@@ -59,6 +63,10 @@ import uk.icat3.util.ElementType;
     
     @Column(name = "NUMERIC_VALUE")
     private Double numericValue;
+
+    @Column(name = "DATETIME_VALUE")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date dateTimeValue;
     
     @Column(name = "RANGE_TOP")
     private String rangeTop;
@@ -159,6 +167,23 @@ import uk.icat3.util.ElementType;
      */
     public void setNumericValue(Double numericValue) {
         this.numericValue = numericValue;
+    }
+
+    /**
+     * Gets the data time of the DatasetParameter
+     * @return Date in milliseconds.
+     */
+    public Date getDateTimeValue() {
+        return dateTimeValue;
+    }
+
+    /**
+     * Sets the dataTimeValue of this DatasetParameter to the specified value.
+     * the time can be set in milliseconds.
+     * @param dateTimeValue the new date time value
+     */
+    public void setDateTimeValue(Date dateTimeValue) {
+        this.dateTimeValue = dateTimeValue;
     }
     
     /**

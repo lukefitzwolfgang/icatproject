@@ -10,6 +10,7 @@
 package uk.icat3.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -20,6 +21,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -40,6 +43,7 @@ import uk.icat3.util.ElementType;
     @NamedQuery(name = "DatafileParameter.findByUnits", query = "SELECT d FROM DatafileParameter d WHERE d.datafileParameterPK.units = :units"),
     @NamedQuery(name = "DatafileParameter.findByStringValue", query = "SELECT d FROM DatafileParameter d WHERE d.stringValue = :stringValue"),
     @NamedQuery(name = "DatafileParameter.findByNumericValue", query = "SELECT d FROM DatafileParameter d WHERE d.numericValue = :numericValue"),
+    @NamedQuery(name = "DatafileParameter.findByDateTimeValue", query = "SELECT d FROM DatafileParameter d WHERE d.dateTimeValue = :dateTimeValue"),
     @NamedQuery(name = "DatafileParameter.findByRangeTop", query = "SELECT d FROM DatafileParameter d WHERE d.rangeTop = :rangeTop"),
     @NamedQuery(name = "DatafileParameter.findByRangeBottom", query = "SELECT d FROM DatafileParameter d WHERE d.rangeBottom = :rangeBottom"),
     @NamedQuery(name = "DatafileParameter.findByError", query = "SELECT d FROM DatafileParameter d WHERE d.error = :error"),
@@ -61,6 +65,10 @@ import uk.icat3.util.ElementType;
     
     @Column(name = "NUMERIC_VALUE")
     private Double numericValue;
+
+    @Column(name = "DATETIME_VALUE")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date dateTimeValue;
     
     @Column(name = "RANGE_TOP")
     private String rangeTop;
@@ -162,6 +170,23 @@ import uk.icat3.util.ElementType;
      */
     public void setNumericValue(Double numericValue) {
         this.numericValue = numericValue;
+    }
+
+    /**
+     * Gets the data time of the DatafileParameter
+     * @return Date in milliseconds.
+     */
+    public Date getDateTimeValue() {
+        return dateTimeValue;
+    }
+
+    /**
+     * Sets the dataTimeValue of this DatafileParameter to the specified value.
+     * the time can be set in milliseconds.
+     * @param dateTimeValue the new date time value
+     */
+    public void setDateTimeValue(Date dateTimeValue) {
+        this.dateTimeValue = dateTimeValue;
     }
     
     /**
