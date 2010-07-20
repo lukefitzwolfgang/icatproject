@@ -8,14 +8,15 @@
  */
 package uk.icat3.search;
 
+import fr.ill.parametersearch.exception.NoParametersException;
+import fr.ill.parametersearch.util.ExtractedJPQL;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
+import java.util.Map.Entry;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import org.apache.log4j.Logger;
-import uk.icat3.entity.FacilityCycle;
 import uk.icat3.entity.IcatRole;
 import uk.icat3.entity.Instrument;
 import uk.icat3.entity.Investigation;
@@ -37,17 +38,17 @@ public class InvestigationSearch extends ManagerUtil {
     // Global class logger
 
     static Logger log = Logger.getLogger(InvestigationSearch.class);
-
+    
     //used for type of user search
 
     private enum SearchType {
 
         SURNAME, USERID
     }
-    
+        
 
     ;
-        
+
     /**
      * Searches a single keyword for a users and returns all the Id of the investigations
      *
@@ -83,6 +84,46 @@ public class InvestigationSearch extends ManagerUtil {
             investigationsIds.add(bd.longValue());
         }
         return investigationsIds;
+    }
+
+    /**
+     * Search by parameters in the database. The parameter object 'ejpql' contains some
+     * JPQL statement (parameters, conditions).
+     *
+     * @param userId federalId of the user.
+     * @param ejpql This object contains the jpql statement.
+     * @param startIndex start index of the results found
+     * @param numberResults number of results found from the start index
+     * @param manager manager object that will facilitate interaction with underlying database
+     * @return Collection of investigation matched
+     * @throws NoParameterTypeException
+     */
+     public static Collection<Investigation> searchByParameter(String userId, ExtractedJPQL ejpql, int startIndex, int numberResults, EntityManager manager) throws NoParametersException  {
+        log.trace("searchByParameter(" + ", " + ejpql.getCondition() + ", " + startIndex + ", " + numberResults + ", EntityManager)");
+
+        String invParameter = ejpql.getFirstParameter ();
+
+        String jpql = "select distinct " + invParameter + " i from " + ejpql.getParameters() +
+                      QUERY_USERS_INVESTIGATIONS_JPQL + "AND " + ejpql.getCondition();
+
+        System.out.println("*****************");
+        System.out.println("     " + jpql);
+        System.out.println("************");
+        Query q = manager.createQuery(jpql);
+
+        for (Entry<String, Parameter> e : ejpql.getAllParameter().entrySet())
+            q.setParameter (e.getKey(), e.getValue());
+
+        q.setParameter("objectType", ElementType.INVESTIGATION);
+        q.setParameter("userId", userId);
+
+
+        if (numberResults <0) {
+            return q.setMaxResults(MAX_QUERY_RESULTSET).getResultList();
+        }
+        else {
+            return q.setMaxResults(numberResults).setFirstResult(startIndex).getResultList();
+        }
     }
 
     /**
