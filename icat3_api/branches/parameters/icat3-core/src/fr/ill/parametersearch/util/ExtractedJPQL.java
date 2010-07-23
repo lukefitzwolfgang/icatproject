@@ -31,64 +31,46 @@ public class ExtractedJPQL {
     protected Map<String, Parameter> datasetParameter;
     /** List of sample parameter */
     protected Map<String, Parameter> sampleParameter;
-    /** First datafile parameter that was created */
-    protected String datafileFirstParameter;
-    /** First dataset parameter that was created */
-    protected String datasetFirstParameter;
-    /** First sample parameter that was created */
-    protected String sampleFirstParameter;
 
     /**
      * Constructor
      */
     public ExtractedJPQL() {
-        // This paranthesis separated the conditions from
-        // other comparasions.
-        condition = new StringBuffer("(");
-        datafileFirstParameter = datasetFirstParameter = sampleFirstParameter = null;
+        condition = new StringBuffer();
         datafileParameter = new HashMap<String, Parameter> ();
         datasetParameter = new HashMap<String, Parameter> ();
         sampleParameter = new HashMap<String, Parameter> ();
     }
 
     /**
-     * Return the first parameter that has to be defined. This is used when the
-     * JQPL statement is created (select firstparameter.investigation i from ....)
+     * Return JPQL statement relative to the JPQL parameter declaration
      *
-     * @return First parameter which select investigations.
+     * @return JPQL parameters declaration
+     * @throws NoParametersException
      */
-    public String getFirstParameter() {
-        String firstParameter = "";
-        if (getDatafileParameter().size() > 0) {
-            firstParameter = getDatafileFirstParameter() + ".datafile.dataset.investigation";
-            addStartCondition(firstParameter, sampleFirstParameter,  ".sample.investigationId");
-            addStartCondition(firstParameter, datasetFirstParameter,  ".dataset.investigationId");
-        }
-        else if (getDatasetParameter().size() > 0) {
-            firstParameter = getDatasetFirstParameter() + ".dataset.investigation";
-            addStartCondition(firstParameter, sampleFirstParameter,  ".sample.investigationId");
-            addStartCondition(firstParameter, datafileFirstParameter,  ".datafile.dataset.investigationId");
-        }
-        else if (getSampleParameter().size() > 0) {
-            firstParameter = getSampleFirstParameter() + ".sample.investigationId";
-            addStartCondition(firstParameter, datasetFirstParameter,  ".dataset.investigationId");
-            addStartCondition(firstParameter, datafileFirstParameter,  ".datafile.dataset.investigationId");
-        }
+    public String getParametersJPQL () throws NoParametersException  {
+        String ret = "";
+        for (Map.Entry<String, Parameter> e : datafileParameter.entrySet())
+            ret += ", IN(df.datafileParameterCollection) " + e.getKey();
 
-        return firstParameter;
-    }
+        for (Map.Entry<String, Parameter> e : datasetParameter.entrySet())
+             ret += ", IN(ds.datasetParameterCollection) " + e.getKey();
 
-    /**
-     * Add a new condition at the begining of the statement
-     * 
-     * @param paramName Name of the JQPL parameter
-     * @param param Parameter
-     * @param investigationPath Where is defined the investigation in the parameter Name
-     * ( Ex: for datafileParrameter is '.datafile.dataset.investigation')
-     */
-    private void addStartCondition (String paramName, String param, String investigationPath) {
-        if (param != null)
-            this.condition.insert(0, paramName + " = " + param + investigationPath + " AND ");
+        for (Map.Entry<String, Parameter> e : sampleParameter.entrySet())
+             ret += ", IN(sample.sampleParameterCollection) " + e.getKey();
+
+        if (ret.isEmpty())
+            throw new NoParametersException();
+
+        String parameter = "";
+        if (!datafileParameter.isEmpty())
+            parameter += ", IN(i.datasetCollection) ds, IN(ds.datafileCollection) df";
+        if (datafileParameter.isEmpty() && !datasetParameter.isEmpty())
+            parameter += ", IN(i.datasetCollection) ds";
+        if (!sampleParameter.isEmpty())
+            parameter += ", IN(i.sampleCollection) sample";
+
+        return parameter.substring(2) + ret;
     }
 
 
@@ -97,26 +79,10 @@ public class ExtractedJPQL {
     ////////////////////////////////////////////////////////////////////////
    
     public String getCondition() {
-        // Add the parenthesis create in the constructor
-        return condition.toString() + ")";
+        return condition.toString();
     }
 
-    public String getParameters () throws NoParametersException  {
-        String ret = "";
-        for (Map.Entry<String, Parameter> e : datafileParameter.entrySet())
-            ret += ", " + DatafileParameter.class.getSimpleName() + " " + e.getKey();
-        
-        for (Map.Entry<String, Parameter> e : datasetParameter.entrySet())
-            ret += ", " + DatasetParameter.class.getSimpleName() + " " + e.getKey();
-
-        for (Map.Entry<String, Parameter> e : sampleParameter.entrySet())
-            ret += ", " + SampleParameter.class.getSimpleName() + " " + e.getKey();
-
-        if (ret.isEmpty())
-            throw new NoParametersException();
-        
-        return ret.substring(2);
-    }
+    
 
     public Map<String, Parameter> getDatafileParameter () {
         return datafileParameter;
@@ -132,27 +98,11 @@ public class ExtractedJPQL {
         return ret;
     }
 
-    public String getDatafileFirstParameter() {
-        return datafileFirstParameter;
-    }
-
-    public String getDatasetFirstParameter() {
-        return datasetFirstParameter;
-    }
-
     public Map<String, Parameter> getDatasetParameter() {
         return datasetParameter;
-    }
-
-    public String getSampleFirstParameter() {
-        return sampleFirstParameter;
     }
 
     public Map<String, Parameter> getSampleParameter() {
         return sampleParameter;
     }
-
-    
-
-    
 }

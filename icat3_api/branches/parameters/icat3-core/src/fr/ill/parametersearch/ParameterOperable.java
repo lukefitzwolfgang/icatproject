@@ -20,7 +20,7 @@ package fr.ill.parametersearch;
  * ParameterComparator p3 = new ParameterComparator (TEMP, LESS_THAN,
  *       new Float(2.10), DATAFILE);
 
- * ParameterOperable paramOp = new ParameterOperable (AND);
+ * ParameterOperator paramOp = new ParameterOperator (AND);
 
  * paramOp.add(new ParameterComparator (PRESS, EQUAL,new Float(21.00),
  *             SAMPLE));
@@ -35,9 +35,6 @@ package fr.ill.parametersearch;
  * @see ParameterComparator
  * @see ParameterOperator
  */
-public class ParameterOperable {
-
-    public ParameterOperable() {
-    }
+public abstract class ParameterOperable {
     
 }

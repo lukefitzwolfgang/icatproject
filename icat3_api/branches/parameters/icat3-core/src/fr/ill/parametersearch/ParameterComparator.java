@@ -10,6 +10,7 @@ package fr.ill.parametersearch;
 import fr.ill.parametersearch.comparator.Comparator;
 import fr.ill.parametersearch.exception.NullParameterException;
 import fr.ill.parametersearch.exception.ParameterSearchException;
+import fr.ill.parametersearch.util.ParameterValued;
 import uk.icat3.entity.Parameter;
 
 /**
@@ -17,20 +18,15 @@ import uk.icat3.entity.Parameter;
  * going to be compare with.
  *
  * @author cruzcruz
+ * @see ParameterOperable
  */
 public class ParameterComparator extends ParameterOperable{
 
-    /** JQPL field name for NUMERIC_VALUE */
-    public static String NUMERIC_VALUE = "numericValue";
-    /** JQPL field name for STRING_VALUE */
-    public static String STRING_VALUE = "stringValue";
-
-    /** Parameter to compare */
-    private Parameter param = null;
+    /** Parameter valued which contains parameter and its type */
+    private ParameterValued param;
     /** Type of comparator (greater_than, less_than, equal, ..)*/
     private Comparator comparator = null;
-    /** Type of parameter (dataset, datafile, sample, ALL) */
-    private ParameterType type;
+    
     /** Value to compare with */
     private Object value = null;
     /** Second value to compare with (only for some comparators like between)*/
@@ -40,6 +36,7 @@ public class ParameterComparator extends ParameterOperable{
      * Empty constructor. Needed for Web Service implementation
      */
     public ParameterComparator() {
+        this.param = new ParameterValued ();
     }
 
 
@@ -51,7 +48,7 @@ public class ParameterComparator extends ParameterOperable{
      * @param value Value to compare with parameter 'param'
      */
     public ParameterComparator(Parameter param, Comparator comparator, String value) {
-        this.param = param;
+        this.param = new ParameterValued(param);
         this.comparator = comparator;
         this.value = value;
     }
@@ -82,11 +79,11 @@ public class ParameterComparator extends ParameterOperable{
         this.comparator = comparator;
     }
 
-    public Parameter getParam() {
+    public ParameterValued getParameterValued() {
         return param;
     }
 
-    public void setParam(Parameter param) {
+    public void setParameterValued(ParameterValued param) {
         this.param = param;
     }
 
@@ -105,12 +102,4 @@ public class ParameterComparator extends ParameterOperable{
     public void setValue2(Object value2) {
         this.value2 = value2;
     }
-
-    public ParameterType getType() {
-        return type;
-    }
-
-    public void setType(ParameterType type) {
-        this.type = type;
-    }    
 }

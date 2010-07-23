@@ -15,13 +15,10 @@ import fr.ill.parametersearch.comparator.Comparator;
 import fr.ill.parametersearch.exception.ExtractNumericConditionException;
 import fr.ill.parametersearch.exception.ExtractStringConditionException;
 import fr.ill.parametersearch.exception.NoParameterTypeException;
+import fr.ill.parametersearch.exception.NoParametersException;
 import fr.ill.parametersearch.exception.ParameterSearchException;
 import java.util.List;
-import java.util.Map;
-import uk.icat3.entity.DatafileParameter;
-import uk.icat3.entity.DatasetParameter;
 import uk.icat3.entity.Parameter;
-import uk.icat3.entity.SampleParameter;
 import uk.icat3.util.LogicalOperator;
 
 /**
@@ -35,7 +32,7 @@ public class ParameterSearchUtil {
     /** This counter contains the number of JPQL parameters created (param_0, param_1)*/
     private int contParameter;
     /** Root name of the parameters used in the JPQL statment ('PARAM_NAME'_'contParameter')*/
-    public final static String PARAM_NAME = "parameter";
+    private final static String PARAM_NAME = "parameter";
 
     /**
      * Constructor
@@ -68,7 +65,7 @@ public class ParameterSearchUtil {
      */
     public String getCondition (String paramName, ParameterComparator paramComp) throws ExtractStringConditionException, ExtractNumericConditionException {
 
-        Parameter param = paramComp.getParam();
+        Parameter param = paramComp.getParameterValued().getParameter();
         Comparator comparator = paramComp.getComparator();
         Object value = paramComp.getValue();
 
@@ -103,7 +100,7 @@ public class ParameterSearchUtil {
     }
 
     /**
-     * Extract a JPQL statement from a parameter search structure defined in a
+     * Extract JPQL statement from a parameter search structure defined inside
      * the ParameterOperable object called 'paramOperable'
      * 
      * @param paramOperable Contains the parameter search structure
@@ -118,130 +115,170 @@ public class ParameterSearchUtil {
         return ejpql;
     }
 
-    private void extractJPQL(ParameterOperable parameterOperable, ExtractedJPQLPriva ejpql) throws ParameterSearchException {
+    /**
+     * Extract JPQL statement condition from a Comparator and store in the ejpql
+     * object.
+     * 
+     * @param comp Comparator
+     * @param ejpql Object where the information is stored
+     * @throws NoParameterTypeException
+     * @throws ExtractStringConditionException
+     * @throws ExtractNumericConditionException
+     * @throws ParameterSearchException
+     */
+    private void extractJPQLComparator (ParameterComparator comp, ExtractedJPQLPriva ejpql) throws NoParameterTypeException, ExtractStringConditionException, ExtractNumericConditionException, ParameterSearchException {
+        // Check that the comparator is well contructed.
+        comp.validate();
 
-        if (parameterOperable.getClass() == ParameterComparator.class) {
-            ParameterComparator comp = (ParameterComparator) parameterOperable;
-            comp.validate();
-
-            String paramName = this.getNextParamName();
-            
-            ejpql.addParameter(paramName, comp.getParam(), comp.getType());
-
-            if (comp.getValue().getClass() == Parameter.class) {
-                String paramNameVal = this.getNextParamName();
-                Parameter p = (Parameter)comp.getValue();
-                ejpql.addParameter(paramNameVal, p, getParameterType(p));
-                
-                comp.setValue(paramNameVal + "." + getValueType((Parameter) comp.getValue()));
-            }
-
-            String condition = this.getParamterCondition (paramName);
-            condition += " AND " + this.getCondition(paramName + "." + getValueType(comp.getParam()), comp);
-            ejpql.addCondition(condition);
+        // Check if the parameter to compare with it's a parameter
+        if (comp.getValue().getClass() == ParameterValued.class) {
+            String paramNameVal = this.getNextParamName();
+            ParameterValued p = (ParameterValued)comp.getValue();
+            ejpql.addParameter(paramNameVal, p);
+            comp.setValue(paramNameVal + "." + ((ParameterValued) comp.getValue()).getValueType());
         }
+        addParameterCondition(this.getNextParamName(), comp, ejpql);
+    }
+
+    private void addParameterCondition (String paramName, ParameterComparator comp, ExtractedJPQLPriva ejpql) throws ExtractStringConditionException, ExtractNumericConditionException {
+        ejpql.addParameter(paramName, comp.getParameterValued());
+        // Add condition for parameter
+        ejpql.addStartCondition(this.getParameterCondition (paramName), LogicalOperator.AND);
+        // Add condition for comparator
+        ejpql.addCondition(this.getCondition(paramName + "." + comp.getParameterValued().getValueType(), comp));
+    }
+
+    /**
+     * Extract JPQL statement condition from a Comparator and store in the ejpql
+     * object. To optimize the ejecution of SQL queries where the OR condition
+     * is present, the code try to reuse declared paremeters to use them
+     * inside OR condition. The last parameter name using in a OR condition is
+     * 'paramName'
+     *
+     * DatafileParameter p0 where
+     *              p0.parameter = scanType  OR p0.parameter = wavelength
+     * 
+     * DatafileParameter p0, DatafileParameter p1 where
+     *              p0.parameter = scanType AND p1.parameter = wavelength
+     *
+     * The difference between the sentences above, is that the first use only
+     * one parameter to make the OR condition, and the other has to use 2
+     * parameters.
+     * 
+     * @param comp Comparator
+     * @param ejpql Object where the information is stored
+     * @param paramName Last parameter name used in OR condition
+     * @return
+     * @throws ParameterSearchException
+     */
+    private String extractJQPL (ParameterComparator comp, ExtractedJPQLPriva ejpql, String paramName) throws ParameterSearchException {
+        comp.validate();
+
+        // Check if the parameter to compare with, it's a parameter
+        // TODO: make some test with this.
+        if (comp.getValue().getClass() == ParameterValued.class) {
+            String paramNameVal = this.getNextParamName();
+            ParameterValued p = (ParameterValued)comp.getValue();
+            ejpql.addParameter(paramNameVal, p);
+            comp.setValue(paramNameVal + "." + ((ParameterValued) comp.getValue()).getValueType());
+        }
+
+        // No parameter name has been defined in OR condition
+        if (paramName == null) {
+            paramName = this.getNextParamName();
+            addParameterCondition(paramName, comp, ejpql);
+        }
+        // OR condition has been defined
+        else {
+            if (comp.getParameterValued().getType() != ejpql.getParameterType(paramName)) {
+                paramName = this.getNextParamName();
+                addParameterCondition(paramName, comp, ejpql);
+            }
+            // User a parameter which has been declared before
+            else {
+                ejpql.addCondition(this.getCondition(paramName + "." + comp.getParameterValued().getValueType(), comp));
+            }
+        }
+        return paramName;
+    }
+
+    /**
+     * Extract JPQL statement condition from a Operable parameter and store it in the ejpql
+     * object.
+     * 
+     * @param paramOperable Operable parameter
+     * @param ejpql Object where the information is stored
+     * @throws ParameterSearchException
+     */
+    private void extractJPQL(ParameterOperable paramOperable, ExtractedJPQLPriva ejpql) throws ParameterSearchException {
+        extractJPQL(paramOperable, ejpql, null);
+    }
+
+    /**
+     * Extract JPQL statement condition from a Operable parameter and store in the ejpql
+     * object. To optimize the ejecution of SQL queries where the OR condition
+     * is present, the code try to reuse declared paremeters to use them
+     * inside OR condition. The last parameter name using in a OR condition is
+     * 'paramName'
+     *
+     * DatafileParameter p0 where
+     *              p0.parameter = scanType  OR p0.parameter = wavelength
+     *
+     * DatafileParameter p0, DatafileParameter p1 where
+     *              p0.parameter = scanType AND p1.parameter = wavelength
+     *
+     * The difference between the sentences above, is that the first use only
+     * one parameter to make the OR condition, and the other has to use 2
+     * parameters.
+     * 
+     * @param parameterOperable Operable parameter
+     * @param ejpql Object where the information is stored
+     * @param paramName Last parameter name used in OR condition
+     * @return
+     * @throws ParameterSearchException
+     */
+    private String extractJPQL(ParameterOperable parameterOperable, ExtractedJPQLPriva ejpql, String paramName) throws ParameterSearchException {
+
+        // If it's a parameterComparator
+        if (parameterOperable.getClass() == ParameterComparator.class)
+            return extractJQPL((ParameterComparator) parameterOperable, ejpql, paramName);
         
+        // If it's a ParameterOperator
         else if (parameterOperable.getClass() == ParameterOperator.class) {
             ParameterOperator op = (ParameterOperator) parameterOperable;
 
+            // If the list is empty then exit
             if (op.getListComparable().isEmpty())
-                return;
+                return paramName;
 
-            String paramNameOR = null;
-            for (ParameterOperable po : op.getListComparable().subList(0, op.getListComparable().size() - 1)) {
+            // Open parenthesis for the list of comparators
+            ejpql.openParenthesis();
+
+            int size = op.getListComparable().size();
+            // Iterates over the list except the first parameter
+            for (int i = 1; i < size; i++) {
                 if (op.getOperator() == LogicalOperator.OR)
-                    paramNameOR = extractJPQLOR(po, ejpql, paramNameOR);
+                    paramName = extractJPQL(op.getListComparable().get(i), ejpql, paramName);
                 else
-                    extractJPQL(po, ejpql);
+                    extractJPQL(op.getListComparable().get(i), ejpql);
                 
                 ejpql.addCondition(op.getOperator());
             }
 
-            ParameterOperable po = op.getListComparable().get(op.getListComparable().size() - 1);
+            // Extract first parameter (Then it's not necessary to delete last
+            //  addCondition(Operator)).
+            ParameterOperable po = op.getListComparable().get(0);
 
             // Extract last ParameterOperable
             if (op.getOperator() == LogicalOperator.OR)
-                paramNameOR = extractJPQLOR(po, ejpql, paramNameOR);
+                paramName = extractJPQL(po, ejpql, paramName);
             else
                 extractJPQL(po, ejpql);
+
+            // Close the parenthesis for the comparators
+            ejpql.closeParenthesis();
         }
-    }
-
-     private String extractJPQLOR(ParameterOperable parameterOperable, ExtractedJPQLPriva ejpql, String paramName) throws ParameterSearchException {
-
-         if (parameterOperable.getClass() == ParameterComparator.class) {
-            ParameterComparator comp = (ParameterComparator) parameterOperable;
-            comp.validate();
-
-            // Check if the parameter to compare with it's a parameter
-            if (comp.getValue().getClass() == Parameter.class) {
-                String paramNameVal = this.getNextParamName();
-                Parameter p = (Parameter)comp.getValue();
-                ejpql.addParameter(paramNameVal, p, getParameterType(p));
-
-                comp.setValue(paramNameVal + "." + getValueType((Parameter) comp.getValue()));
-            }
-
-            String condition = "";
-            if (paramName == null) {
-                paramName = this.getNextParamName();
-                ejpql.addParameter(paramName, comp.getParam(), comp.getType());
-
-                condition = this.getParamterCondition (paramName);
-                condition += " AND " + this.getCondition(paramName + "." + getValueType(comp.getParam()), comp);
-            }
-            else {
-                Parameter p = ejpql.getAllParameter().get(paramName);
-                
-                if (comp.getType() != getParameterType(p)) {
-                    paramName = this.getNextParamName();
-                    ejpql.addParameter(paramName, comp.getParam(), comp.getType());
-
-                    condition = this.getParamterCondition (paramName);
-                    condition += " AND " + this.getCondition(paramName + "." + getValueType(comp.getParam()), comp);
-                }
-                else {
-                    condition += this.getCondition(paramName + "." + getValueType(comp.getParam()), comp);
-                }
-            }
-            
-            ejpql.addCondition(condition);
-         }
-         else
-             extractJPQL(parameterOperable, ejpql);
-
-         return paramName;
-    }
-
-    public static String getTableName(ParameterType type) throws NoParameterTypeException {
-        if (type == ParameterType.DATASET) {
-            return DatasetParameter.class.getSimpleName();
-        }
-        else if (type == ParameterType.DATAFILE) {
-            return DatafileParameter.class.getSimpleName();
-        }
-        else if (type == ParameterType.SAMPLE) {
-            return SampleParameter.class.getSimpleName();
-        }
-
-        throw new NoParameterTypeException("function getTableName (ParameterType type)");
-    }
-
-    private ParameterType getParameterType (Parameter p) throws NoParameterTypeException {
-         if (p.isDatafileParameter())
-            return ParameterType.DATAFILE;
-        if (p.isSampleParameter())
-            return ParameterType.SAMPLE;
-        if (p.isDataSetParameter())
-            return ParameterType.DATASET;
-         
-        throw new NoParameterTypeException(p.getParameterPK().getName() + " " + p.getParameterPK().getUnits());
-    }
-
-    private String getValueType(Parameter param) {
-        if (param.isNumeric())
-            return ParameterComparator.NUMERIC_VALUE;
-        return ParameterComparator.STRING_VALUE;
+        return paramName;
     }
 
     /**
@@ -253,104 +290,143 @@ public class ParameterSearchUtil {
      * @return
      * @throws NoParameterTypeException
      */
-    public ExtractedJPQL extractJPQLParameters(List<Parameter> listParameters) throws NoParameterTypeException {
+    public ExtractedJPQL extractJPQLParameters(List<ParameterValued> listParameters) throws NoParameterTypeException {
         ExtractedJPQLPriva ejpql = new ExtractedJPQLPriva();
 
-        String condition = "";
         String paramName;
-        ParameterType parameterType;
-       
-        for (Parameter p : listParameters) {
+
+        int size = listParameters.size();
+        for (int i = 1; i < size; i++) {
             paramName = getNextParamName();
-            parameterType = getParameterType(p);
-
-            condition = getParamterCondition(paramName);
-
-            ejpql.addParameter(paramName, p, parameterType);
-            ejpql.addCondition(condition);
+            ejpql.addParameter(paramName, listParameters.get(i));
+            ejpql.addCondition(getParameterCondition(paramName));
             ejpql.addCondition(LogicalOperator.AND);
         }
-        
-        // Remove last AND operator
-        ejpql.removeLastCondition (LogicalOperator.AND);
+
+        // Add last parameter
+        paramName = getNextParamName();
+        ejpql.addCondition (getParameterCondition(paramName));
+        ejpql.addParameter(paramName, listParameters.get(0));
 
         return ejpql;
     }
 
+    /**
+     * Extract JPQL statement from a list of comparators and store it in the ejpql
+     * object.
+     * 
+     * @param listComparators
+     * @return
+     * @throws ParameterSearchException
+     */
     public ExtractedJPQL extractJPQLComparators(List<ParameterComparator> listComparators) throws ParameterSearchException {
 
         ExtractedJPQLPriva ejpql = new ExtractedJPQLPriva();
 
-        for (ParameterComparator p : listComparators.subList(0, listComparators.size() - 1)) {
-            extractJPQL(p, ejpql);
+        int size = listComparators.size();
+        // Extract all the comparators except the first one.
+        for (int i = 1; i < size; i++) {
+            extractJPQLComparator(listComparators.get(i), ejpql);
             ejpql.addCondition(LogicalOperator.AND);
         }
-        
-        extractJPQL(listComparators.get(listComparators.size() - 1), ejpql);
-        System.out.println("+++ " + ejpql.getCondition());
 
-        for (Map.Entry<String, ?> e : ejpql.getAllParameter().entrySet()) {
-            System.out.println("--- " + e.getValue() + " " + e.getKey());
-        }
+        // Extract first comparator
+        extractJPQLComparator(listComparators.get(0), ejpql);
 
         return ejpql;
     }
 
-    private String getParamterCondition(String paramName) {
+    /**
+     * Return the JPQL condition for a parameter
+     * 
+     * @param paramName Name or the parameter
+     * @return JPQL condition
+     */
+    private String getParameterCondition(String paramName) {
         return paramName + ".parameter = " + ":" + paramName;
     }
 
-   
 
-    
+    /**
+     * Private class that extends ExtractedJPQL for adding information, only
+     * used inside this class
+     *
+     * @see ExtractedJPQL
+     */
     private class ExtractedJPQLPriva extends ExtractedJPQL {
+        /**
+         * Add a condition between parenthesis
+         * 
+         * @param condition Condition to add
+         */
         private void addCondition (String condition) {
             this.condition.append("(" + condition + ") ");
         }
 
-        private void addParameter (String paramName, Parameter param, ParameterType paramType) {
-            if (paramType == ParameterType.DATAFILE) {
-                datafileParameter.put(paramName, param);
-                if (datafileParameter.size() > 1) {
-                    this.addStartCondition (datafileFirstParameter + ".datafile = " +
-                            paramName + ".datafile", LogicalOperator.AND);
-                }
-                else
-                    datafileFirstParameter = paramName;
-            }
-            else if (paramType == ParameterType.DATASET) {
-                datasetParameter.put(paramName, param);
-                if (datasetParameter.size() > 1) {
-                    this.addStartCondition (datasetFirstParameter + ".dataset = " +
-                            paramName + ".dataset", LogicalOperator.AND);
-                }
-                else
-                    datasetFirstParameter = paramName;
-            }
-            else if (paramType == ParameterType.SAMPLE) {
-                sampleParameter.put(paramName, param);
-                if (sampleParameter.size() > 1) {
-                    this.addStartCondition (sampleFirstParameter + ".sample = " +
-                            paramName + ".sample", LogicalOperator.AND);
-                }
-                else
-                    sampleFirstParameter = paramName;
-            }
+        /**
+         * Open a parenthesis in the condition string.
+         */
+        private void openParenthesis () {
+            this.condition.append("(");
         }
 
+        /**
+         * Close a parenthesis in the condition string.
+         */
+        private void closeParenthesis () {
+            this.condition.append(")");
+        }
+
+        /**
+         * Add a parameter
+         *
+         * @param paramName JQPL parameter name for the ParameterValued
+         * @param p ParameterValued to be added
+         */
+        private void addParameter (String paramName, ParameterValued p) {
+            if (p.getType() == ParameterType.DATAFILE)
+                datafileParameter.put(paramName, p.getParameter());
+            else if (p.getType() == ParameterType.DATASET)
+                datasetParameter.put(paramName, p.getParameter());
+            else if (p.getType() == ParameterType.SAMPLE)
+                sampleParameter.put(paramName, p.getParameter());
+        }
+
+        /**
+         * Add a condition in the begining of the string
+         * 
+         * @param condition Condition to be added
+         * @param op Operator to added
+         */
         private void addStartCondition (String condition, LogicalOperator op) {
-            this.condition.insert(0, condition + " " + op.name() + " ");
+            this.condition.insert(0, "(" + condition + ") " + op.name() + " ");
         }
 
+        /**
+         * Add an operator to the condition
+         *
+         * @param logicalOperator Operator to be added.
+         */
         private void addCondition(LogicalOperator logicalOperator) {
             this.condition.append(logicalOperator + " ");
         }
 
-        private void removeLastCondition(LogicalOperator op) {
-            int length = this.condition.length();
-            this.condition.delete(length - op.toString().length() - 1, length);
-        }
+        /**
+         * Return the parameter type of a JPQL parameter name
+         * 
+         * @param paramName JPQL parameter name
+         * @return Parameter type
+         * @throws NoParametersException
+         */
+        private ParameterType getParameterType(String paramName) throws NoParametersException {
+            if (datafileParameter.containsKey(paramName))
+                return ParameterType.DATAFILE;
+            if (datasetParameter.containsKey(paramName))
+                return ParameterType.DATASET;
+            if (sampleParameter.containsKey(paramName))
+                return ParameterType.SAMPLE;
 
-        
+            throw new NoParametersException("No parameter name '" + paramName + "' defined");
+        }
     }
 }
