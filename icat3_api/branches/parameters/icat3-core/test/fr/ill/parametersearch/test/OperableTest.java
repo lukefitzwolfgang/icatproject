@@ -8,6 +8,7 @@
 package fr.ill.parametersearch.test;
 
 import fr.ill.parametersearch.ParameterComparator;
+import fr.ill.parametersearch.ParameterOperator;
 import fr.ill.parametersearch.ParameterType;
 import fr.ill.parametersearch.comparator.Comparator;
 import fr.ill.parametersearch.exception.NoParameterTypeException;
@@ -22,16 +23,18 @@ import uk.icat3.entity.Investigation;
 import uk.icat3.entity.Parameter;
 import uk.icat3.entity.ParameterPK;
 import uk.icat3.search.InvestigationSearch;
+import uk.icat3.util.LogicalOperator;
 
 /**
  *
  * @author cruzcruz
  */
-public class ListComparatorTest extends ILLTest {
+public class OperableTest extends ILLTest {
 
     @Test
     public void datafileParameterTest () throws NoParameterTypeException, ParameterSearchException {
-        
+
+        startTime();
         // ------------- Comparator 1 ----------------------
         Parameter p1 = new Parameter();
         p1.setParameterPK(new ParameterPK("s", "Time duration"));
@@ -56,13 +59,49 @@ public class ListComparatorTest extends ILLTest {
         comp2.setValue(new Float (8.0));
         // ----------------------------------------------------
 
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
-        lc.add(comp1);
-        lc.add(comp2);
+        // ------------- Comparator 3 -------------------------
+        Parameter p3 = new Parameter();
+        p3.setParameterPK(new ParameterPK("deg", "Angle derived"));
+        p3.setIsDatafileParameter("Y");
+        p3.setNumeric(true);
+
+        ParameterComparator comp3 = new ParameterComparator();
+        comp3.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p3));
+        comp3.setComparator(Comparator.EQUAL);
+        comp3.setValue(new Float (0.0));
+        // ----------------------------------------------------
+
+        ParameterOperator op1 = new ParameterOperator();
+        ParameterOperator op2 = new ParameterOperator();
+        ParameterOperator op3 = new ParameterOperator();
+        ParameterOperator op4 = new ParameterOperator();
+
+        op1.setOperator(LogicalOperator.OR);
+        op2.setOperator(LogicalOperator.AND);
+        op3.setOperator(LogicalOperator.OR);
+        op4.setOperator(LogicalOperator.AND);
+
+        op2.add(comp3);
+        op2.add(comp2);
+        
+        op1.add(comp1);
+//        op1.add(comp2);
+        op1.add(op2);
+
+//        op2.add(comp1);
+//        op3.add(comp2);
+//        op1.add(comp2);
+//        op4.add(comp1);
+//        op2.add(op3);
+//        op1.add(op2);
+//        op1.add(op3);
+//        op4.add(op1);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLComparators(lc), 1, -1, em);
+                .searchByParameter("SUPER_USER", searchUtil.extractJPQLOperable(op1), 1, -1, em);
         
+        show(li);
+
        assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
     }
 
@@ -92,9 +131,9 @@ public class ListComparatorTest extends ILLTest {
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
                 .searchByParameter("SUPER_USER", searchUtil.extractJPQLParameters(lp), 1, -1, em);
-        
+
         assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
-        
+
     }
 
     @Test
@@ -123,12 +162,27 @@ public class ListComparatorTest extends ILLTest {
         comp2.setValue("solution");
         // ----------------------------------------------------
 
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
-        lc.add(comp1);
-        lc.add(comp2);
+        ParameterOperator op1 = new ParameterOperator();
+        ParameterOperator op2 = new ParameterOperator();
+        ParameterOperator op3 = new ParameterOperator();
+        ParameterOperator op4 = new ParameterOperator();
+
+        op1.setOperator(LogicalOperator.AND);
+        op2.setOperator(LogicalOperator.AND);
+        op3.setOperator(LogicalOperator.OR);
+        op4.setOperator(LogicalOperator.AND);
+
+        op2.add(comp1);
+        op3.add(comp2);
+        op1.add(comp2);
+        op4.add(comp1);
+//        op2.add(op3);
+        op1.add(op2);
+//        op1.add(op3);
+//        op4.add(op1);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLComparators(lc), 1, -1, em);
+                .searchByParameter("SUPER_USER", searchUtil.extractJPQLOperable(op1), 1, -1, em);
 
         show(li);
 
@@ -163,12 +217,29 @@ public class ListComparatorTest extends ILLTest {
         comp2.setValue("10");
         // ----------------------------------------------------
 
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
-        lc.add(comp1);
-        lc.add(comp2);
+        ParameterOperator op1 = new ParameterOperator();
+        ParameterOperator op2 = new ParameterOperator();
+        ParameterOperator op3 = new ParameterOperator();
+        ParameterOperator op4 = new ParameterOperator();
+
+        op1.setOperator(LogicalOperator.AND);
+        op2.setOperator(LogicalOperator.AND);
+        op3.setOperator(LogicalOperator.OR);
+        op4.setOperator(LogicalOperator.AND);
+
+        op2.add(comp1);
+        op3.add(comp2);
+        op1.add(comp2);
+        op4.add(comp1);
+//        op2.add(op3);
+        op1.add(op2);
+//        op1.add(op3);
+//        op4.add(op1);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLComparators(lc), 1, -1, em);
+                .searchByParameter("SUPER_USER", searchUtil.extractJPQLOperable(op1), 1, -1, em);
+
+        show(li);
 
 
        assertFalse("Results of investigations should not be ZERO", (li.size() == 0));

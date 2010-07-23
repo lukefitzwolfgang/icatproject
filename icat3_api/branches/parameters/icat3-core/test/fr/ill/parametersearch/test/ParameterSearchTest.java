@@ -11,8 +11,10 @@ package fr.ill.parametersearch.test;
 
 import fr.ill.parametersearch.ParameterComparator;
 import fr.ill.parametersearch.ParameterOperator;
+import fr.ill.parametersearch.ParameterType;
 import fr.ill.parametersearch.util.ParameterSearchUtil;
 import fr.ill.parametersearch.comparator.Comparator;
+import fr.ill.parametersearch.util.ParameterValued;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import uk.icat3.entity.Parameter;
@@ -32,14 +34,14 @@ public class ParameterSearchTest {
             p1.setIsDatafileParameter("Y");
             p2.setNumeric(true);
             ParameterComparator comp1 = new ParameterComparator();
-            comp1.setParam(p1);
+            comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p1));
             comp1.setComparator(Comparator.START_WITH);
             comp1.setValue("cosa");
             ParameterComparator comp2 = new ParameterComparator();
-            comp2.setParam(p2);
+            comp2.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p2));
             comp2.setComparator(Comparator.LESS_EQUAL);
             comp2.setValue(new Float("12.23423"));
-           ParameterOperator op1 = new ParameterOperator();
+            ParameterOperator op1 = new ParameterOperator();
             ParameterOperator op2 = new ParameterOperator();
             ParameterOperator op3 = new ParameterOperator();
             ParameterOperator op4 = new ParameterOperator();

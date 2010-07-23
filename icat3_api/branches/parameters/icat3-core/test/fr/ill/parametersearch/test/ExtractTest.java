@@ -12,6 +12,7 @@ import fr.ill.parametersearch.ParameterType;
 import fr.ill.parametersearch.comparator.Comparator;
 import fr.ill.parametersearch.exception.ParameterSearchException;
 import fr.ill.parametersearch.util.ParameterSearchUtil;
+import fr.ill.parametersearch.util.ParameterValued;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;
@@ -63,28 +64,24 @@ public class ExtractTest {
         p2.setNumeric(true);
 
         ParameterComparator comp1 = new ParameterComparator();
-        comp1.setParam(p1);
+        comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p1));
         comp1.setComparator(Comparator.START_WITH);
         comp1.setValue("comp1");
-        comp1.setType(ParameterType.DATAFILE);
 
         ParameterComparator comp2 = new ParameterComparator();
-        comp2.setParam(p2);
+        comp2.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p2));
         comp2.setComparator(Comparator.LESS_EQUAL);
         comp2.setValue(new Float("12.23423"));
-        comp2.setType(ParameterType.DATAFILE);
 
         ParameterComparator comp3 = new ParameterComparator();
-        comp3.setParam(p3);
+        comp3.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p3));
         comp3.setComparator(Comparator.START_WITH);
         comp3.setValue("comp3");
-        comp3.setType(ParameterType.DATAFILE);
 
         ParameterComparator comp4 = new ParameterComparator();
-        comp4.setParam(p4);
+        comp4.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p4));
         comp4.setComparator(Comparator.START_WITH);
         comp4.setValue("comp4");
-        comp4.setType(ParameterType.DATAFILE);
 
         List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
         lc.add(comp1);
