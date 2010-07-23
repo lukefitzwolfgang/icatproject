@@ -23,8 +23,8 @@ public class NoParameterTypeException extends ParameterSearchException {
 
     public NoParameterTypeException(ParameterComparator comp) {
         super (NoParameterTypeException.msg + ": Error in comparator '" +
-                comp.getParam().getParameterPK().getName() + " (" +
-                comp.getParam().getParameterPK().getUnits() + ")'");
+                comp.getParameterValued().getParameter().getParameterPK().getName() + " (" +
+                comp.getParameterValued().getParameter().getParameterPK().getUnits() + ")'");
     }
    
 }

@@ -101,10 +101,12 @@ public class InvestigationSearch extends ManagerUtil {
      public static Collection<Investigation> searchByParameter(String userId, ExtractedJPQL ejpql, int startIndex, int numberResults, EntityManager manager) throws NoParametersException  {
         log.trace("searchByParameter(" + ", " + ejpql.getCondition() + ", " + startIndex + ", " + numberResults + ", EntityManager)");
 
-        String invParameter = ejpql.getFirstParameter ();
-
-        String jpql = "select distinct " + invParameter + " i from " + ejpql.getParameters() +
-                      QUERY_USERS_INVESTIGATIONS_JPQL + "AND " + ejpql.getCondition();
+        String jpql = "select distinct i from Investigation i" +
+                      QUERY_USERS_INVESTIGATIONS_JPQL + " AND EXISTS (" +
+                      "select parameter_0 from " +
+                      ejpql.getParametersJPQL() +
+                      " WHERE " +
+                      ejpql.getCondition() + ")";
 
         System.out.println("*****************");
         System.out.println("     " + jpql);
