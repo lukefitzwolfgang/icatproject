@@ -61,13 +61,13 @@ public class ListComparatorTest extends ILLTest {
         lc.add(comp2);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLComparators(lc), 1, -1, em);
+                .searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
         
        assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
     }
 
     @Test
-    public void datasetParameterTest () throws NoParameterTypeException, NoParametersException {
+    public void datasetParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
 
         List<ParameterValued> lp = new ArrayList<ParameterValued>();
 
@@ -91,7 +91,7 @@ public class ListComparatorTest extends ILLTest {
         lp.add(new ParameterValued(ParameterType.DATASET, p4));
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLParameters(lp), 1, -1, em);
+                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
         
         assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
         
@@ -128,7 +128,7 @@ public class ListComparatorTest extends ILLTest {
         lc.add(comp2);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLComparators(lc), 1, -1, em);
+                .searchByParameterListComparators("SUPER_USER", lc, 1, -1, em);
 
         show(li);
 
@@ -168,7 +168,7 @@ public class ListComparatorTest extends ILLTest {
         lc.add(comp2);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLComparators(lc), 1, -1, em);
+                .searchByParameterListComparators("SUPER_USER", lc, 1, -1, em);
 
 
        assertFalse("Results of investigations should not be ZERO", (li.size() == 0));

@@ -65,7 +65,7 @@ public class ParameterSearchUtil {
      */
     public String getCondition (String paramName, ParameterComparator paramComp) throws ExtractStringConditionException, ExtractNumericConditionException {
 
-        Parameter param = paramComp.getParameterValued().getParameter();
+        Parameter param = paramComp.getParameterValued().getParam();
         Comparator comparator = paramComp.getComparator();
         Object value = paramComp.getValue();
 
@@ -385,11 +385,11 @@ public class ParameterSearchUtil {
          */
         private void addParameter (String paramName, ParameterValued p) {
             if (p.getType() == ParameterType.DATAFILE)
-                datafileParameter.put(paramName, p.getParameter());
+                datafileParameter.put(paramName, p.getParam());
             else if (p.getType() == ParameterType.DATASET)
-                datasetParameter.put(paramName, p.getParameter());
+                datasetParameter.put(paramName, p.getParam());
             else if (p.getType() == ParameterType.SAMPLE)
-                sampleParameter.put(paramName, p.getParameter());
+                sampleParameter.put(paramName, p.getParam());
         }
 
         /**
