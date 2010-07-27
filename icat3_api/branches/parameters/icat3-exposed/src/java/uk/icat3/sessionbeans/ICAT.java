@@ -8,9 +8,11 @@
  */
 package uk.icat3.sessionbeans;
 
-import java.net.MalformedURLException;
-import java.util.ArrayList;
+import fr.ill.parametersearch.ParameterComparator;
+import fr.ill.parametersearch.ParameterOperable;
+import fr.ill.parametersearch.exception.ParameterSearchException;
 import java.util.Collection;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
@@ -1954,6 +1956,26 @@ public class ICAT extends EJBObject implements ICATLocal {
                                                         @WebParam(name = "federalId") String federalId) throws SessionException, NoSuchObjectFoundException
     {
         return facilityManagerLocal.getFacilityUserByFederalId(sessionId, federalId);
+    }
+
+    @WebMethod(operationName ="searchByParameterOperable")
+    public Collection<Investigation> searchByParameterOperable (
+            @WebParam(name="sessionId")
+            String sessionId,
+            @WebParam(name="operable")
+            ParameterOperable operable) throws SessionException, ParameterSearchException {
+
+        return investigationSearchLocal.searchByParameterOperable(sessionId, operable);
+    }
+
+     @WebMethod(operationName ="searchByParameterComparators")
+    public Collection<Investigation> searchByParameterComparators (
+            @WebParam(name="sessionId")
+            String sessionId,
+            @WebParam(name="comparators")
+            List<ParameterComparator> comparators) throws SessionException, ParameterSearchException {
+
+        return investigationSearchLocal.searchByParameter(sessionId, comparators);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
