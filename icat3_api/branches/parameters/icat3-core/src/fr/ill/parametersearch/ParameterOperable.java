@@ -35,6 +35,6 @@ package fr.ill.parametersearch;
  * @see ParameterComparator
  * @see ParameterOperator
  */
-public abstract class ParameterOperable {
+ public interface  ParameterOperable {
     
 }

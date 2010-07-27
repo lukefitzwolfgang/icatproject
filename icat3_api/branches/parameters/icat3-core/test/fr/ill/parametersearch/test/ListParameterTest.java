@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import junit.framework.JUnit4TestAdapter;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import uk.icat3.entity.Investigation;
@@ -218,5 +219,8 @@ public class ListParameterTest extends ILLTest {
         return lp;
     }
 
+    public static junit.framework.Test suite(){
+        return new JUnit4TestAdapter(ListParameterTest.class);
+    }
 
 }

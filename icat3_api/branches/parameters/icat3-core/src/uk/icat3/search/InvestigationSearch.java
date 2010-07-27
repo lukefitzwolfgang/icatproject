@@ -137,6 +137,18 @@ public class InvestigationSearch extends ManagerUtil {
         return searchByParameter(userId, ejpql, startIndex, numberResults, manager);
     }
 
+     /**
+      * Search by parameters from a parameterOperable.
+      * 
+      * @param userId federalId of the user.
+      * @param parameterOperable ParameterOperable where the conditions are defined
+      * @param startIndex start index of the results found
+      * @param numberResults number of results found from the start index
+      * @param manager manager object that will facilitate interaction with underlying database
+      * @return
+      * @throws ParameterSearchException
+      * @see ParameterOperable
+      */
      public static Collection<Investigation> searchByParameterOperable(String userId, ParameterOperable parameterOperable, int startIndex, int numberResults, EntityManager manager) throws ParameterSearchException {
         ParameterSearchUtil util = new ParameterSearchUtil();
         ExtractedJPQL ejpql = util.extractJPQLOperable(parameterOperable);
@@ -144,6 +156,15 @@ public class InvestigationSearch extends ManagerUtil {
         return searchByParameter(userId, ejpql, startIndex, numberResults, manager);
     }
 
+     /**
+      * Search by parameters from a parameterOperable.
+      * 
+      * @param userId federalId of the user.
+      * @param parameterOperable ParameterOperable where the conditions are defined
+      * @param manager Object that will facilitate interaction with underlying database
+      * @return
+      * @throws ParameterSearchException
+      */
     public static Collection<Investigation> searchByParameterOperable(String userId, ParameterOperable parameterOperable, EntityManager manager) throws ParameterSearchException {
         ParameterSearchUtil util = new ParameterSearchUtil();
         ExtractedJPQL ejpql = util.extractJPQLOperable(parameterOperable);
@@ -151,11 +172,40 @@ public class InvestigationSearch extends ManagerUtil {
         return searchByParameter(userId, ejpql, -1, -1, manager);
     }
 
+    /**
+     * Search by parameters where the investigation contains every parameter defined
+     * in listParam.
+     * 
+     * @param userId federalId of the user.
+     * @param listParam List of parameters
+     * @param startIndex start index of the results found
+     * @param numberResults number of results found from the start index
+     * @param manager manager object that will facilitate interaction with underlying database
+     * @return Investigations which contains all the paremeters from listParam
+     * @throws ParameterSearchException
+     */
     public static Collection<Investigation> searchByParameterListParameter(String userId, List<ParameterValued> listParam, int startIndex, int numberResults, EntityManager manager) throws ParameterSearchException {
         ParameterSearchUtil util = new ParameterSearchUtil();
         ExtractedJPQL ejpql = util.extractJPQLParameters(listParam);
 
         return searchByParameter(userId, ejpql, startIndex, numberResults, manager);
+    }
+
+    /**
+     * Search by parameters where the investigation contains every parameter defined
+     * in listParam.
+     *
+     * @param userId federalId of the user.
+     * @param listParam List of parameters
+     * @param manager manager object that will facilitate interaction with underlying database
+     * @return Investigations which contains all the paremeters from listParam
+     * @throws ParameterSearchException
+     */
+    public static Collection<Investigation> searchByParameterListParameter(String userId, List<ParameterValued> listParam, EntityManager manager) throws ParameterSearchException {
+        ParameterSearchUtil util = new ParameterSearchUtil();
+        ExtractedJPQL ejpql = util.extractJPQLParameters(listParam);
+
+        return searchByParameter(userId, ejpql, -1, 1, manager);
     }
 
     /**

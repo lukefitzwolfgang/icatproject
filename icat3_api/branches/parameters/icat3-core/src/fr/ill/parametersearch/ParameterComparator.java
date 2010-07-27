@@ -20,7 +20,7 @@ import uk.icat3.entity.Parameter;
  * @author cruzcruz
  * @see ParameterOperable
  */
-public class ParameterComparator extends ParameterOperable{
+public final class ParameterComparator implements ParameterOperable{
 
     /** Parameter valued which contains parameter and its type */
     private ParameterValued param;
