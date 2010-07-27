@@ -151,10 +151,6 @@ public class InvestigationSearch extends ManagerUtil {
         return searchByParameter(userId, ejpql, -1, -1, manager);
     }
 
-    public static Collection<Investigation> searchByParameterOperable(String userId) {
-        return null;
-    }
-
     public static Collection<Investigation> searchByParameterListParameter(String userId, List<ParameterValued> listParam, int startIndex, int numberResults, EntityManager manager) throws ParameterSearchException {
         ParameterSearchUtil util = new ParameterSearchUtil();
         ExtractedJPQL ejpql = util.extractJPQLParameters(listParam);
