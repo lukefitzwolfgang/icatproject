@@ -10,6 +10,7 @@ package uk.icat3.sessionbeans;
 
 import fr.ill.parametersearch.ParameterComparator;
 import fr.ill.parametersearch.ParameterOperable;
+import fr.ill.parametersearch.ParameterOperator;
 import fr.ill.parametersearch.exception.ParameterSearchException;
 import java.util.Collection;
 import java.util.List;
@@ -1958,14 +1959,24 @@ public class ICAT extends EJBObject implements ICATLocal {
         return facilityManagerLocal.getFacilityUserByFederalId(sessionId, federalId);
     }
 
-    @WebMethod(operationName ="searchByParameterOperable")
-    public Collection<Investigation> searchByParameterOperable (
+    @WebMethod(operationName ="searchByParameterOperator")
+    public Collection<Investigation> searchByParameterOperator (
             @WebParam(name="sessionId")
             String sessionId,
-            @WebParam(name="operable")
-            ParameterOperable operable) throws SessionException, ParameterSearchException {
+            @WebParam(name="operator")
+            ParameterOperator operator) throws SessionException, ParameterSearchException {
 
-        return investigationSearchLocal.searchByParameterOperable(sessionId, operable);
+        return investigationSearchLocal.searchByParameterOperable(sessionId, operator);
+    }
+
+    @WebMethod(operationName ="searchByParameterComparator")
+    public Collection<Investigation> searchByParameterComparator (
+            @WebParam(name="sessionId")
+            String sessionId,
+            @WebParam(name="comparator")
+            ParameterComparator comparator) throws SessionException, ParameterSearchException {
+
+        return investigationSearchLocal.searchByParameterOperable(sessionId, comparator);
     }
 
      @WebMethod(operationName ="searchByParameterComparators")

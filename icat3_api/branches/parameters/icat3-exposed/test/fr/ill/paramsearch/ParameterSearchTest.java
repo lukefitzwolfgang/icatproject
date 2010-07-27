@@ -11,6 +11,7 @@ import fr.ill.parametersearch.ParameterComparator;
 import fr.ill.parametersearch.ParameterOperator;
 import fr.ill.parametersearch.ParameterType;
 import fr.ill.parametersearch.comparator.Comparator;
+import fr.ill.parametersearch.util.ParameterValued;
 import java.util.Collection;
 import org.junit.Test;
 import uk.icat3.entity.Investigation;
@@ -40,7 +41,7 @@ public class ParameterSearchTest extends BaseTestClassTX{
 
 
             Parameter p3 = new Parameter();
-           p1.setIsDatafileParameter("Y");
+            p1.setIsDatafileParameter("Y");
             p1.setNumeric(false);
 
             Parameter p4 = new Parameter();
@@ -96,25 +97,28 @@ public class ParameterSearchTest extends BaseTestClassTX{
 //
 //
 //
-//            icat.setEntityManager(em);
-////            icat.setUserSession(tul);
-//
-//            ParameterComparator commp5 = new ParameterComparator();
-//
-//            Parameter scanType = new Parameter();
-//            scanType.setParameterPK(new ParameterPK("string", "scanType"));
-//
-//            commp5.setParam(scanType);
-//            commp5.setComparator(Comparator.START_WITH);
-//            commp5.setValue("2");
-//            commp5.setType(ParameterType.DATAFILE);
-//
-//            Collection<Investigation> li = icat.searchByParameter("", commp5);
-//
-//            int cont = 1;
-//            for (Investigation i : li) {
-//                System.out.println (cont++ + "**" + i.getInvNumber() + "***" + i.getTitle());
-//            }
+            icat.setEntityManager(em);
+//            icat.setUserSession(tul);
+
+            ParameterComparator commp5 = new ParameterComparator();
+
+            Parameter scanType = new Parameter();
+            scanType.setParameterPK(new ParameterPK("string", "scanType"));
+
+            ParameterValued pv = new ParameterValued();
+            pv.setType(ParameterType.DATAFILE);
+            pv.setParam(scanType);
+
+            commp5.setParameterValued(pv);
+            commp5.setComparator(Comparator.GREATER_EQUAL);
+            commp5.setValue(new Float (8.0));
+
+            Collection<Investigation> li = icat.searchByParameterOperable("SUPER_ADMIN", commp5);
+
+            int cont = 1;
+            for (Investigation i : li) {
+                System.out.println (cont++ + "**" + i.getInvNumber() + "***" + i.getTitle());
+            }
 
 //            icat.searchByParameter(null, op2);
 //            icat.searchByParameter(null, op3);

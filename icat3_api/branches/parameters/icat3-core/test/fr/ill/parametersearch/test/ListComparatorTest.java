@@ -16,6 +16,7 @@ import fr.ill.parametersearch.exception.ParameterSearchException;
 import fr.ill.parametersearch.util.ParameterValued;
 import java.util.ArrayList;
 import java.util.List;
+import junit.framework.JUnit4TestAdapter;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import uk.icat3.entity.Investigation;
@@ -172,5 +173,9 @@ public class ListComparatorTest extends ILLTest {
 
 
        assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
+    }
+
+    public static junit.framework.Test suite(){
+        return new JUnit4TestAdapter(ListComparatorTest.class);
     }
 }
