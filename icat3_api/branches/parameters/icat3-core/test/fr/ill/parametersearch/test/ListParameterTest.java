@@ -10,6 +10,7 @@ package fr.ill.parametersearch.test;
 import fr.ill.parametersearch.ParameterType;
 import fr.ill.parametersearch.exception.NoParameterTypeException;
 import fr.ill.parametersearch.exception.NoParametersException;
+import fr.ill.parametersearch.exception.ParameterSearchException;
 import fr.ill.parametersearch.util.ParameterSearchUtil;
 import fr.ill.parametersearch.util.ParameterValued;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class ListParameterTest extends ILLTest {
 
 
     @Test
-    public void datafileParameterTest () throws NoParameterTypeException, NoParametersException {
+    public void datafileParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
         
         List<ParameterValued> lp = new ArrayList<ParameterValued>();
 
@@ -61,14 +62,14 @@ public class ListParameterTest extends ILLTest {
         lp.add(pv4);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLParameters(lp), 1, -1, em);
+                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
 
         
        assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
     }
 
     @Test
-    public void datasetParameterTest () throws NoParameterTypeException, NoParametersException {
+    public void datasetParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
         List<ParameterValued> lp = new ArrayList<ParameterValued>();
 
         Parameter p2 = new Parameter();
@@ -97,14 +98,14 @@ public class ListParameterTest extends ILLTest {
         lp.add(pv4);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLParameters(lp), 1, -1, em);
+                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
         
         assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
         
     }
 
     @Test
-    public void sampleParameterTest () throws NoParameterTypeException, NoParametersException {
+    public void sampleParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
         List<ParameterValued> lp = new ArrayList<ParameterValued>();
 
         Parameter p2 = new Parameter();
@@ -125,14 +126,14 @@ public class ListParameterTest extends ILLTest {
         lp.add(pv3);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLParameters(lp), 1, -1, em);
+                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
 
         assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
 
     }
 
     @Test
-    public void allParameterTest () throws NoParameterTypeException, NoParametersException {
+    public void allParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
 
         // Only for datafile and sample parameter, cause there is no
         // parameters for Dataset
@@ -172,7 +173,7 @@ public class ListParameterTest extends ILLTest {
         lp.add(pv4);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLParameters(lp), 1, -1, em);
+                .searchByParameterListParameter("SUPER_USER",lp, 1, -1, em);
 
 
        assertFalse("Results of investigations should not be ZERO", (li.size() == 0));

@@ -98,7 +98,7 @@ public class OperableTest extends ILLTest {
 //        op4.add(op1);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLOperable(op1), 1, -1, em);
+                .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
         
         show(li);
 
@@ -106,7 +106,7 @@ public class OperableTest extends ILLTest {
     }
 
     @Test
-    public void datasetParameterTest () throws NoParameterTypeException, NoParametersException {
+    public void datasetParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
 
         List<ParameterValued> lp = new ArrayList<ParameterValued>();
 
@@ -130,7 +130,7 @@ public class OperableTest extends ILLTest {
         lp.add(new ParameterValued(ParameterType.DATASET, p4));
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLParameters(lp), 1, -1, em);
+                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
 
         assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
 
@@ -182,7 +182,7 @@ public class OperableTest extends ILLTest {
 //        op4.add(op1);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLOperable(op1), 1, -1, em);
+                .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
 
         show(li);
 
@@ -237,7 +237,7 @@ public class OperableTest extends ILLTest {
 //        op4.add(op1);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameter("SUPER_USER", searchUtil.extractJPQLOperable(op1), 1, -1, em);
+                .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
 
         show(li);
 

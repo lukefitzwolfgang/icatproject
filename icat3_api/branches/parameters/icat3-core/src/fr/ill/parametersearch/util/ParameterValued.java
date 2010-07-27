@@ -48,11 +48,10 @@ public class ParameterValued {
      * @return Field name
      */
     public String getValueType() {
-        if (getParameter().isNumeric())
+        if (getParam().isNumeric())
             return NUMERIC_VALUE;
         return STRING_VALUE;
     }
-
 
 
     ///////////////////////////////////////////////////////////////////////////
@@ -60,14 +59,14 @@ public class ParameterValued {
     ///////////////////////////////////////////////////////////////////////////
 
 
-    public Parameter getParameter() {
+    public Parameter getParam() {
         return param;
     }
 
     public void setParam(Parameter param) {
         this.param = param;
     }
-
+    
     public ParameterType getType() {
         return type;
     }
