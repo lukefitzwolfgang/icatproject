@@ -9,6 +9,7 @@
 
 package uk.icat3.investigationmanager;
 
+import java.util.Date;
 import java.util.Collection;
 import java.util.Random;
 import junit.framework.JUnit4TestAdapter;
@@ -38,15 +39,60 @@ public class TestSampleParameter extends BaseTestClassTX {
     
     private static Logger log = Logger.getLogger(TestSampleParameter.class);
     private Random random = new Random();
-    
+    public static final int NumericValue = 0;
+    public static final int StringValue = 1;
+    public static final int DateValue = 2;
+
+
     /**
-     * Tests creating a file
+     * Tests adding a sample parameter of type String
      */
     @Test
-    public void addSampleParameter() throws ICATAPIException {
-        log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for adding sampleParameter to investigation Id: "+VALID_INVESTIGATION_ID);
+    public void addSampleParameterString() throws ICATAPIException {
+        log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for adding sampleParameter of type string to investigation Id: "+VALID_INVESTIGATION_ID);
+
+        SampleParameter validSampleParameter  = getSampleParameter(true, StringValue);
+
+        SampleParameter sampleParameterInserted = (SampleParameter)InvestigationManager.addInvestigationObject(VALID_USER_FOR_INVESTIGATION, validSampleParameter, VALID_INVESTIGATION_ID, em);
+
+        SampleParameter modified = em.find(SampleParameter.class,sampleParameterInserted.getSampleParameterPK()  );
+
+        checkSampleParameter(modified);
+        assertFalse("Deleted must be false", modified.isDeleted());
+        assertNull("Numeric value must be null", modified.getNumericValue());
+        assertNotNull("String value must not be null", modified.getStringValue());
+        assertNull("Date value must be null", modified.getDateTimeValue());
+    }
+
+    /**
+     * Tests adding a sample parameter of type Date
+     */
+    @Test
+    public void addSampleParameterDate() throws ICATAPIException {
+        log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for adding sampleParameter of type Date to investigation Id: "+VALID_INVESTIGATION_ID);
+
+        SampleParameter validSampleParameter  = getSampleParameter(true, DateValue);
+
+        SampleParameter sampleParameterInserted = (SampleParameter)InvestigationManager.addInvestigationObject(VALID_USER_FOR_INVESTIGATION, validSampleParameter, VALID_INVESTIGATION_ID, em);
+
+        SampleParameter modified = em.find(SampleParameter.class,sampleParameterInserted.getSampleParameterPK()  );
+
+        checkSampleParameter(modified);
+        assertFalse("Deleted must be false", modified.isDeleted());
+        assertNull("Numeric value must be null", modified.getNumericValue());
+        assertNull("String value must be null", modified.getStringValue());
+        assertNotNull("Date value must not be null",modified.getDateTimeValue());
+    }
+
+    
+    /**
+     * Tests adding a sample parameter of type numeric
+     */
+    @Test
+    public void addSampleParameterNumeric() throws ICATAPIException {
+        log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for adding sampleParameter of type Numeric to investigation Id: "+VALID_INVESTIGATION_ID);
         
-        SampleParameter validSampleParameter  = getSampleParameter(true, true);
+        SampleParameter validSampleParameter  = getSampleParameter(true, NumericValue);
         
         SampleParameter sampleParameterInserted = (SampleParameter)InvestigationManager.addInvestigationObject(VALID_USER_FOR_INVESTIGATION, validSampleParameter, VALID_INVESTIGATION_ID, em);
         
@@ -68,7 +114,7 @@ public class TestSampleParameter extends BaseTestClassTX {
         String modifiedError = "unit test error "+random.nextInt();
         //create invalid sampleParameter, no name
         
-        SampleParameter modifiedSampleParameter = getSampleParameter(true, true);
+        SampleParameter modifiedSampleParameter = getSampleParameter(true, NumericValue);
         SampleParameter duplicateSampleParameter = getSampleParameterDuplicate(true);
         modifiedSampleParameter.setError(modifiedError);
         //set investigation id
@@ -239,7 +285,7 @@ public class TestSampleParameter extends BaseTestClassTX {
     public void addSampleParameterInvalidUser() throws ICATAPIException {
         log.info("Testing  user: "+INVALID_USER+ " for adding sampleParameter to investigation Id: "+VALID_INVESTIGATION_ID);
         
-        SampleParameter validSampleParameter  = getSampleParameter(true, true);
+        SampleParameter validSampleParameter  = getSampleParameter(true, NumericValue);
         
         try {
             SampleParameter sampleParameterInserted = (SampleParameter)InvestigationManager.addInvestigationObject(INVALID_USER, validSampleParameter, VALID_INVESTIGATION_ID, em);
@@ -258,7 +304,7 @@ public class TestSampleParameter extends BaseTestClassTX {
     public void addSampleParameterInvalidInvestigation() throws ICATAPIException {
         log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for adding sampleParameter to invalid investigation Id");
         
-        SampleParameter validSampleParameter  = getSampleParameter(true,true);
+        SampleParameter validSampleParameter  = getSampleParameter(true,NumericValue);
         
         try {
             SampleParameter sampleParameterInserted = (SampleParameter)InvestigationManager.addInvestigationObject(VALID_USER_FOR_INVESTIGATION, validSampleParameter, random.nextLong(), em);
@@ -277,7 +323,7 @@ public class TestSampleParameter extends BaseTestClassTX {
     public void addSampleParameterInvalidSampleId() throws ICATAPIException {
         log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for adding sampleParameter to invalid investigation Id");
         
-        SampleParameter validSampleParameter  = getSampleParameter(true,true);
+        SampleParameter validSampleParameter  = getSampleParameter(true,NumericValue);
         validSampleParameter.getSampleParameterPK().setSampleId(456787L);
         try {
             SampleParameter sampleParameterInserted = (SampleParameter)InvestigationManager.addInvestigationObject(VALID_USER_FOR_INVESTIGATION, validSampleParameter, VALID_INVESTIGATION_ID, em);
@@ -297,7 +343,7 @@ public class TestSampleParameter extends BaseTestClassTX {
         log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for adding invalid sampleParameter to investigation Id: "+VALID_INVESTIGATION_ID);
         
         //create invalid sampleParameter, no name
-        SampleParameter invalidSampleParameter = getSampleParameter(false, true);
+        SampleParameter invalidSampleParameter = getSampleParameter(false, NumericValue);
         
         try {
             SampleParameter sampleParameterInserted = (SampleParameter)InvestigationManager.addInvestigationObject(VALID_USER_FOR_INVESTIGATION, invalidSampleParameter, VALID_INVESTIGATION_ID, em);
@@ -316,7 +362,7 @@ public class TestSampleParameter extends BaseTestClassTX {
         log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for adding invalid sampleParameter to investigation Id: "+VALID_INVESTIGATION_ID);
         
         //create invalid sampleParameter, no name
-        SampleParameter invalidSampleParameter = getSampleParameter(true, false);
+        SampleParameter invalidSampleParameter = getSampleParameter(true, StringValue);
         //string value only allowed
         invalidSampleParameter.setNumericValue(45d);
         
@@ -337,7 +383,7 @@ public class TestSampleParameter extends BaseTestClassTX {
         log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for adding invalid sampleParameter to investigation Id: "+VALID_INVESTIGATION_ID);
         
         //create invalid sampleParameter, no name
-        SampleParameter invalidSampleParameter = getSampleParameter(true, true);
+        SampleParameter invalidSampleParameter = getSampleParameter(true, NumericValue);
         //string value only allowed
         invalidSampleParameter.setStringValue("45d");
         
@@ -357,7 +403,7 @@ public class TestSampleParameter extends BaseTestClassTX {
     public void deleteSampleParameterNoId() throws ICATAPIException {
         log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for rmeoving sampleParameter to investigation Id: "+VALID_INVESTIGATION_ID);
         
-        SampleParameter validSampleParameter  = getSampleParameter(true, true);
+        SampleParameter validSampleParameter  = getSampleParameter(true, NumericValue);
         validSampleParameter.setSampleParameterPK(null);
         
         try {
@@ -376,7 +422,7 @@ public class TestSampleParameter extends BaseTestClassTX {
     public void removeSampleParameterNoId() throws ICATAPIException {
         log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for removing sampleParameter to investigation Id: "+VALID_INVESTIGATION_ID);
         
-        SampleParameter validSampleParameter  = getSampleParameter(true, true);
+        SampleParameter validSampleParameter  = getSampleParameter(true, NumericValue);
         validSampleParameter.setSampleParameterPK(null);
         
         try {
@@ -395,7 +441,7 @@ public class TestSampleParameter extends BaseTestClassTX {
     public void updateSampleParameterNoId() throws ICATAPIException {
         log.info("Testing  user: "+VALID_USER_FOR_INVESTIGATION+ " for removing sampleParameter to investigation Id: "+VALID_INVESTIGATION_ID);
         
-        SampleParameter validSampleParameter  = getSampleParameter(true, true);
+        SampleParameter validSampleParameter  = getSampleParameter(true, NumericValue);
         validSampleParameter.setSampleParameterPK(null);
         
         try {
@@ -475,9 +521,11 @@ public class TestSampleParameter extends BaseTestClassTX {
         }
     }
     
-    static Parameter getParameter(boolean numeric){
+    static Parameter getParameter(int type){
         Parameter parameter = null;
-        if(numeric){
+        switch(type){
+            case NumericValue:
+            {
             Collection<Parameter> parameters = (Collection<Parameter>)executeListResultCmd("select d from Parameter d where d.numericValue = 'Y' AND d.isSampleParameter = 'Y'");
             if(parameters.size() == 0){
                 log.trace("Adding new parameter");
@@ -488,12 +536,17 @@ public class TestSampleParameter extends BaseTestClassTX {
                 param.setIsDatasetParameter("N");
                 param.setIsDatafileParameter("N");
                 param.setCreateId("SAMPLE_PARAMETER_ADDED");
+                param.setVerified(true);
                 em.persist(param);
                 parameter =  param;
             } else {
                 parameter = parameters.iterator().next();
             }
-        } else {
+            }
+            break;
+
+            case StringValue:
+            {
             Collection<Parameter> parameters = (Collection<Parameter>)executeListResultCmd("select d from Parameter d where d.numericValue = 'N' AND d.isSampleParameter = 'Y'");
             if(parameters.size() == 0){
                 log.trace("Adding new parameter");
@@ -504,11 +557,35 @@ public class TestSampleParameter extends BaseTestClassTX {
                 param.setNumericValue("N");
                 param.setSearchable("Y");
                 param.setCreateId("SAMPLE_PARAMETER_ADDED");
+                param.setVerified(true);
                 em.persist(param);
                 parameter =  param;
             } else {
                 parameter = parameters.iterator().next();
             }
+            }
+            break;
+
+            case DateValue:
+            {
+            Collection<Parameter> parameters = (Collection<Parameter>)executeListResultCmd("select d from Parameter d where d.parameterPK.name = 'Date_Time' AND d.numericValue = 'N' AND d.isSampleParameter = 'Y'");
+            if(parameters.size() == 0){
+                log.trace("Adding new parameter");
+                Parameter param = new Parameter("Date_Time","name");
+                param.setIsSampleParameter("Y");
+                param.setIsDatasetParameter("N");
+                param.setIsDatafileParameter("N");
+                param.setNumericValue("N");
+                param.setSearchable("Y");
+                param.setCreateId("SAMPLE_PARAMETER_ADDED");
+                param.setVerified(true);
+                em.persist(param);
+                parameter =  param;
+            } else {
+                parameter = parameters.iterator().next();
+            }
+            }
+            break;
         }
         log.trace(parameter);
         return parameter;
@@ -527,15 +604,21 @@ public class TestSampleParameter extends BaseTestClassTX {
         return sampleParameter;
     }
     
-    static SampleParameter getSampleParameter(boolean valid, boolean numeric){
-        Parameter parameter = getParameter(numeric);
+    static SampleParameter getSampleParameter(boolean valid, int type){
+        Parameter parameter = getParameter(type);
         if(valid){
             //create valid sampleParameter
             SampleParameter sampleParameter = new SampleParameter(parameter.getParameterPK().getUnits(),parameter.getParameterPK().getName(), VALID_SAMPLE_ID_FOR_INVESTIGATION_ID);
-            if(numeric){
-                sampleParameter.setNumericValue(45d);
-            } else {
-                sampleParameter.setStringValue("string value");
+            switch(type){
+                case NumericValue:
+                    sampleParameter.setNumericValue(45d);
+                    break;
+                case StringValue:
+                    sampleParameter.setStringValue("string value");
+                    break;
+                case DateValue:
+                    sampleParameter.setDateTimeValue(new Date(10000L));
+                    break;
             }
             sampleParameter.getSampleParameterPK().setSampleId(VALID_SAMPLE_ID_FOR_INVESTIGATION_ID);
             return sampleParameter;
