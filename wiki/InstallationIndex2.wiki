@@ -5,22 +5,22 @@
 
 == Design ==
 
- * [RevisedDocumentation-D-1 D-1: Overview];
- * [wiki:RevisedDocumentation-D-2 D-2: Databases];
- * [wiki:RevisedDocumentation-D-3 D-3: MetaDataModel];
- * [wiki:RevisedDocumentation-D-4 D-4: API];
- * [wiki:RevisedDocumentation-D-5 D-5: DataPortal];
- * [wiki:RevisedDocumentation-D-6 D-6: Clients].
+ * [RevisedDocumentationD1 D-1: Overview];
+ * [wiki:RevisedDocumentationD2 D-2: Databases];
+ * [wiki:RevisedDocumentationD3 D-3: MetaDataModel];
+ * [wiki:RevisedDocumentationD4 D-4: API];
+ * [wiki:RevisedDocumentationD5 D-5: DataPortal];
+ * [wiki:RevisedDocumentationD6 D-6: Clients].
 
 == Installation ==
 
- * [wiki:RevisedDocumentation-I-1 I-1: Database];
- * [wiki:RevisedDocumentation-I-2 I-2: API];
- * [wiki:RevisedDocumentation-I-3 I-3: Portal];
- * [wiki:RevisedDocumentation-I-4 I-4: Cog];
- * [wiki:RevisedDocumentation-I-5 I-5: Digital Certificate];
- * [wiki:RevisedDocumentation-I-6 I-6: API in NetBeans];
- * [wiki:RevisedDocumentation-I-7 I-7: Portal in NetBeans].
+ * [wiki:RevisedDocumentationI1 I-1: Database];
+ * [wiki:RevisedDocumentationI2 I-2: API];
+ * [wiki:RevisedDocumentationI3 I-3: Portal];
+ * [wiki:RevisedDocumentationI4 I-4: Cog];
+ * [wiki:RevisedDocumentationI5 I-5: Digital Certificate];
+ * [wiki:RevisedDocumentationI6 I-6: API in NetBeans];
+ * [wiki:RevisedDocumentationI7 I-7: Portal in NetBeans].
 
 == Resources ==
 
