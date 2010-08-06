@@ -5,7 +5,7 @@
 
 == Design ==
 
- * [wiki:RevisedDocumentation-D-1 D-1: Overview];
+ * [RevisedDocumentation-D-1 D-1: Overview];
  * [wiki:RevisedDocumentation-D-2 D-2: Databases];
  * [wiki:RevisedDocumentation-D-3 D-3: MetaDataModel];
  * [wiki:RevisedDocumentation-D-4 D-4: API];
