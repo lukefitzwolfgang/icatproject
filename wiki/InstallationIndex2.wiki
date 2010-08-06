@@ -3,6 +3,8 @@
 
 = Revised Documentation =
 
+This is work in progress.  Comments are welcome, but it is far from complete.
+
 == Design ==
 
  * [RevisedDocumentationD1 D-1: Overview];
