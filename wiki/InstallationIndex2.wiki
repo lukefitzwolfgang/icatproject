@@ -6,21 +6,21 @@
 == Design ==
 
  * [RevisedDocumentationD1 D-1: Overview];
- * [wiki:RevisedDocumentationD2 D-2: Databases];
- * [wiki:RevisedDocumentationD3 D-3: MetaDataModel];
- * [wiki:RevisedDocumentationD4 D-4: API];
- * [wiki:RevisedDocumentationD5 D-5: DataPortal];
- * [wiki:RevisedDocumentationD6 D-6: Clients].
+ * [RevisedDocumentationD2 D-2: Databases];
+ * [RevisedDocumentationD3 D-3: MetaDataModel];
+ * [RevisedDocumentationD4 D-4: API];
+ * [RevisedDocumentationD5 D-5: DataPortal];
+ * [RevisedDocumentationD6 D-6: Clients].
 
 == Installation ==
 
- * [wiki:RevisedDocumentationI1 I-1: Database];
- * [wiki:RevisedDocumentationI2 I-2: API];
- * [wiki:RevisedDocumentationI3 I-3: Portal];
- * [wiki:RevisedDocumentationI4 I-4: Cog];
- * [wiki:RevisedDocumentationI5 I-5: Digital Certificate];
- * [wiki:RevisedDocumentationI6 I-6: API in NetBeans];
- * [wiki:RevisedDocumentationI7 I-7: Portal in NetBeans].
+ * [RevisedDocumentationI1 I-1: Database];
+ * [RevisedDocumentationI2 I-2: API];
+ * [RevisedDocumentationI3 I-3: Portal];
+ * [RevisedDocumentationI4 I-4: Cog];
+ * [RevisedDocumentationI5 I-5: Digital Certificate];
+ * [RevisedDocumentationI6 I-6: API in NetBeans];
+ * [RevisedDocumentationI7 I-7: Portal in NetBeans].
 
 == Resources ==
 
