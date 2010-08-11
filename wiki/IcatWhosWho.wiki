@@ -8,11 +8,9 @@
 
 || Shirley Crompton  || syc.unitedkingdom || ESC || [http://www.consequence-project.eu/showcase_scenarios.html Consequence Test Bed] Leader ||  ||
 || Peter Turner      ||Peter.Turner.Email || University of Sydney, School of Chemistry ||  ||  ||
-|| Micheal Gleaves   || michael.gleaves|| ESC || DLS & CLF Project manager ||  ||
 || Roger Downing|| roger.downing|| ESC || Master of SRB and StorageD(DLS data pipeline) || ||
 || Brian Matthews    || || ESC || Group Leader || ||
 || Lakshmi Sastry    || || ESC || CLF eCAT project manager || ||
-|| Anjan Pakira      || || ESC || CLF eCAT developer || ||
 || Gordon Brown      || || ESC || Databases group leader || ||
 || Keir Hawker       || || ESC || Databases administrator || ||
 || Carmine Cioffi    || || ESC || Databases administrator || ||
