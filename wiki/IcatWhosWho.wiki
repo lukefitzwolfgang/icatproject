@@ -3,10 +3,10 @@
 
 
 || *_Name             _* || *_Google account_*  || *_Group_* || *_Role_*  || *_Responsibilities _*  ||
-|| Damian Flannery   || d.w.flannery || ISIS|| Main ICAT developer || ||
+|| Sri Nagella       ||srikanthnag || ESC || ICAT Developer ||  ||
+|| Tom Griffin || tangrif...@hotmail.com || ISIS || Developer || ||
 
 || Shirley Crompton  || syc.unitedkingdom || ESC || [http://www.consequence-project.eu/showcase_scenarios.html Consequence Test Bed] Leader ||  ||
-|| Tom Griffin || tangrif...@hotmail.com || ISIS || Developer || ||
 || Peter Turner      ||Peter.Turner.Email || University of Sydney, School of Chemistry ||  ||  ||
 || Micheal Gleaves   || michael.gleaves|| ESC || DLS & CLF Project manager ||  ||
 || Roger Downing|| roger.downing|| ESC || Master of SRB and StorageD(DLS data pipeline) || ||
@@ -20,4 +20,3 @@
 || Alun Ashton       || || DLS || DLS analysis group leader ||  ||
 || Alistair Mills    || || ESC || ICAT-CLF Project Manager ||  ||
 || Richard Henwood   || || ESC || ICAT-CLF Developer ||  ||
-|| Sri Nagella       || || ESC || ICAT-CLF Developer ||  ||
