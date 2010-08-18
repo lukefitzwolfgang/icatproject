@@ -8,13 +8,15 @@
  */
 package uk.icat3.search;
 
-import fr.ill.parametersearch.ParameterComparator;
-import fr.ill.parametersearch.ParameterOperable;
-import fr.ill.parametersearch.exception.NoParametersException;
-import fr.ill.parametersearch.exception.ParameterSearchException;
-import fr.ill.parametersearch.util.ExtractedJPQL;
-import fr.ill.parametersearch.util.ParameterSearchUtil;
-import fr.ill.parametersearch.util.ParameterValued;
+import uk.icat3.parametersearch.ParameterComparator;
+import uk.icat3.parametersearch.ParameterOperable;
+import uk.icat3.parametersearch.exception.NoParameterTypeException;
+import uk.icat3.parametersearch.exception.NoParametersException;
+import uk.icat3.parametersearch.exception.ParameterSearchException;
+import uk.icat3.parametersearch.util.ExtractedJPQL;
+import uk.icat3.parametersearch.util.ParameterSearchUtil;
+import uk.icat3.parametersearch.util.ParameterValued;
+import uk.icat3.util.Queries;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -96,14 +98,15 @@ public class InvestigationSearch extends ManagerUtil {
         log.trace("searchByParameter(" + ", " + ejpql.getCondition() + ", " + startIndex + ", " + numberResults + ", EntityManager)");
 
         String jpql = LIST_ALL_USERS_INVESTIGATIONS_JPQL + " AND EXISTS (" +
-                      "select parameter_0 from " +
+                      "select parameter_0 from Investigation parameter_0 , " +
                       ejpql.getParametersJPQL() +
                       " WHERE " +
                       ejpql.getCondition() + ")";
+        System.out.println("JPQL Query: "+jpql);
         
         Query q = manager.createQuery(jpql);
 
-        for (Entry<String, Parameter> e : ejpql.getAllParameter().entrySet())
+        for (Entry<String, Object> e : ejpql.getAllParameter().entrySet())
             q.setParameter (e.getKey(), e.getValue());
 
         q.setParameter("objectType", ElementType.INVESTIGATION);
