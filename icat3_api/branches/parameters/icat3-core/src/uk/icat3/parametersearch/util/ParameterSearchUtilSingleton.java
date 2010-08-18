@@ -2,7 +2,7 @@
  * This code is developed in Institut Laue-Langevin (France).
  * Its goal is the implementation of parameter search into ICAT Web Service
  * 
- * Created on 4 août 2010
+ * Created on 4 July 2010
  */
 
 package uk.icat3.parametersearch.util;
