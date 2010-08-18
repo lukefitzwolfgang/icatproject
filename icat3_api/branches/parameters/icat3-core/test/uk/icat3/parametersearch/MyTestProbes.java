@@ -2,7 +2,7 @@
  * This code is developed in Institut Laue-Langevin (France).
  * Its goal is the implementation of parameter search into ICAT Web Service
  * 
- * Created on 5 août 2010
+ * Created on 5 august 2010
  */
 
 package uk.icat3.parametersearch;
@@ -349,7 +349,7 @@ public class MyTestProbes extends BaseTestClassTX {
                             // Too slow when you compare including the 'units'
             //                "and d.datafileParameterPK.units = 'V'" +
 //                            "and d1.parameter = :parameter1 " +
-            //                "and d1.datafileParameterPK.units = 'Å' " +
+            //                "and d1.datafileParameterPK.units = 'U' " +
             //                "and d2.parameter = :parameter3 " +
 //                            " )")
                             .setParameter("p", lp.get(35))
