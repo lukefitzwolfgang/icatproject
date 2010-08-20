@@ -1,8 +1,6 @@
 package uk.icat3.sessionbeans.search;
 
-import fr.ill.parametersearch.ParameterComparator;
-import fr.ill.parametersearch.ParameterOperable;
-import fr.ill.parametersearch.exception.ParameterSearchException;
+
 import java.util.Collection;
 import java.util.List;
 import javax.ejb.Local;
@@ -10,6 +8,9 @@ import uk.icat3.entity.IcatRole;
 import uk.icat3.entity.Investigation;
 import uk.icat3.entity.Parameter;
 import uk.icat3.exceptions.SessionException;
+import uk.icat3.parametersearch.ParameterComparator;
+import uk.icat3.parametersearch.ParameterOperable;
+import uk.icat3.parametersearch.exception.ParameterSearchException;
 import uk.icat3.search.AdvancedSearchDetails;
 import uk.icat3.search.KeywordDetails;
 import uk.icat3.util.InvestigationInclude;
