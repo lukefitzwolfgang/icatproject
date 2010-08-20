@@ -35,6 +35,6 @@ package uk.icat3.parametersearch;
  * @see ParameterComparator
  * @see ParameterOperator
  */
- public interface  ParameterOperable {
+ public class  ParameterOperable {
     
 }
