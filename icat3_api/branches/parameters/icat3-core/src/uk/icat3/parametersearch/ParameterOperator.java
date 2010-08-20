@@ -19,7 +19,7 @@ import uk.icat3.util.LogicalOperator;
  * @author cruzcruz
  * @see ParameterOperable
  */
-public final class ParameterOperator implements ParameterOperable {
+public final class ParameterOperator extends ParameterOperable {
 
     /** List of ParameterOperable objects */
     private List<ParameterOperable> listComparable;
@@ -77,10 +77,18 @@ public final class ParameterOperator implements ParameterOperable {
         return listComparable;
     }
 
+    public void setListComparable(List<ParameterOperable> lc){
+        listComparable = lc;
+    }
+    
     public LogicalOperator getLogicalOperator() {
         return operator;
     }
 
+    public LogicalOperator getOperator(){
+        return operator;
+    }
+    
     public void setOperator(LogicalOperator operator) {
         this.operator = operator;
     }

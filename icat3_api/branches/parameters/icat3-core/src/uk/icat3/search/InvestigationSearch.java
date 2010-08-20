@@ -102,7 +102,6 @@ public class InvestigationSearch extends ManagerUtil {
                       ejpql.getParametersJPQL() +
                       " WHERE " +
                       ejpql.getCondition() + ")";
-        System.out.println("JPQL Query: "+jpql);
         
         Query q = manager.createQuery(jpql);
 
