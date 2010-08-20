@@ -8,10 +8,6 @@
  */
 package uk.icat3.sessionbeans;
 
-import fr.ill.parametersearch.ParameterComparator;
-import fr.ill.parametersearch.ParameterOperable;
-import fr.ill.parametersearch.ParameterOperator;
-import fr.ill.parametersearch.exception.ParameterSearchException;
 import java.util.Collection;
 import java.util.List;
 import javax.ejb.EJB;
@@ -55,6 +51,9 @@ import uk.icat3.exceptions.NoSuchObjectFoundException;
 import uk.icat3.exceptions.NoSuchUserException;
 import uk.icat3.exceptions.SessionException;
 import uk.icat3.exceptions.ValidationException;
+import uk.icat3.parametersearch.ParameterComparator;
+import uk.icat3.parametersearch.ParameterOperator;
+import uk.icat3.parametersearch.exception.ParameterSearchException;
 import uk.icat3.search.AdvancedSearchDetails;
 import uk.icat3.search.KeywordDetails;
 import uk.icat3.sessionbeans.data.DownloadManagerLocal;
@@ -73,6 +72,7 @@ import uk.icat3.util.DatasetInclude;
 import uk.icat3.util.ElementType;
 import uk.icat3.util.InvestigationInclude;
 import uk.icat3.util.KeywordType;
+import uk.icat3.util.Queries;
 
 /**
  *
