@@ -13,15 +13,13 @@ import uk.icat3.parametersearch.exception.ParameterSearchException;
  *
  * @author cruzcruz
  */
-public class NoParametersException extends ParameterSearchException {
+public class EmptyListParameterException extends ParameterSearchException {
 
-    private final static String msg = "No parameters were defined";
+    private static String msg = EmptyListParameterException.class.getName();
 
-    public NoParametersException() {
-        super (NoParametersException.msg);
+    public EmptyListParameterException() {
+        super (msg + ": list of parameter is empty");
     }
 
-    public NoParametersException(String msg) {
-        super (NoParametersException.msg + ":" + msg);
-    }
+
 }

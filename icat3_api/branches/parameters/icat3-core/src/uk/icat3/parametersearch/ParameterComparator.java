@@ -58,7 +58,7 @@ public final class ParameterComparator extends ParameterOperable{
      *
      * @return False in case of missing a field.
      */
-    public void validate () throws ParameterSearchException {
+    public void validate () throws NullParameterException {
         if (this.param == null)
             throw new NullParameterException(this.getClass().getName() + ".param");
         if (this.comparator == null)

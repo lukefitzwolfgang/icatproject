@@ -16,12 +16,12 @@ import uk.icat3.entity.Parameter;
  * 
  * @author cruzcruz
  */
-public class ExtractNumericConditionException extends ParameterSearchException {
+public class NoNumericComparatorException extends ParameterSearchException {
 
     private static String msg = "Extracting JPQL condition exception:";
 
-    public ExtractNumericConditionException (Parameter param, Comparator comp) {
-        super (ExtractNumericConditionException.msg +
+    public NoNumericComparatorException (Parameter param, Comparator comp) {
+        super (NoNumericComparatorException.msg +
                 "Parameter '" +
                 param.getParameterPK().getName() +
                 "(" + param.getParameterPK().getUnits() +
