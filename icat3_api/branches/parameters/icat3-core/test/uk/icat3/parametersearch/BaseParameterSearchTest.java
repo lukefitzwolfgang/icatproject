@@ -16,7 +16,9 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.Stack;
@@ -35,6 +37,7 @@ import uk.icat3.entity.Dataset;
 import uk.icat3.entity.DatasetParameter;
 import uk.icat3.entity.DatasetParameterPK;
 import uk.icat3.entity.IcatAuthorisation;
+import uk.icat3.entity.IcatRole;
 import uk.icat3.entity.Investigation;
 import uk.icat3.entity.Parameter;
 import uk.icat3.entity.ParameterPK;
@@ -62,7 +65,7 @@ import uk.icat3.util.LogicalOperator;
  * Sample_parameter count = 759
  * @author cruzcruz
  */
-public class ILLTest extends BaseTest {
+public class BaseParameterSearchTest extends BaseTest {
     public static ParameterSearchUtil searchUtil;
     private static  List<Parameter> lp;
     public static String logOp = " AND ";
@@ -73,8 +76,9 @@ public class ILLTest extends BaseTest {
     protected static ArrayList<ParameterComparator> pcDatafile;
     protected static ArrayList<ParameterComparator> pcDataset;
     protected static ArrayList<ParameterComparator> pcSample;
+    protected static Map<String, Parameter> parameter;
 
-    public ILLTest() {
+    public BaseParameterSearchTest() {
         searchUtil = new ParameterSearchUtil();
     }
 
@@ -99,13 +103,14 @@ public class ILLTest extends BaseTest {
 
         em.persist(p);
 
+        parameter.put(name, p);
         return p;
     }
 
-    private static Dataset createDataset (Investigation inv) throws NoSuchObjectFoundException, ValidationException, InsufficientPrivilegesException {
+    private static Dataset createDataset (Investigation inv, String name) throws NoSuchObjectFoundException, ValidationException, InsufficientPrivilegesException {
         int i = random.nextInt();
         Dataset dat = new Dataset();
-        dat.setName("dat " + i);
+        dat.setName(name);
         dat.setInvestigation(inv);
         dat.setDatasetType("test");
 
@@ -133,11 +138,11 @@ public class ILLTest extends BaseTest {
         return datParam;
     }
 
-    private static Datafile createDatafile (Dataset dat) throws InsufficientPrivilegesException, NoSuchObjectFoundException, ValidationException {
+    private static Datafile createDatafile (Dataset dat, String name) throws InsufficientPrivilegesException, NoSuchObjectFoundException, ValidationException {
         Datafile file = new Datafile();
         Collection<DatafileFormat> datafileFormat = (Collection<DatafileFormat>)executeListResultCmd("select d from DatafileFormat d");
         file.setDatafileFormat(datafileFormat.iterator().next());
-        file.setName("unit test create datafile " + Math.random());
+        file.setName(name);
         file.setDataset(dat);
 
         return DataFileManager.createDataFile(VALID_USER_FOR_INVESTIGATION, file, em);
@@ -162,12 +167,12 @@ public class ILLTest extends BaseTest {
         return dfParam;
     }
 
-    private static Sample createSample (Investigation inv) {
+    private static Sample createSample (Investigation inv, String name) {
         Sample samp = new Sample();
 
         samp.setInvestigationId(inv);
 
-        samp.setName("sample " + random.nextInt());
+        samp.setName(name);
         samp.setSafetyInformation("algo");
 
         Timestamp timeSQL = new Timestamp(new Date().getTime());
@@ -203,23 +208,18 @@ public class ILLTest extends BaseTest {
     }
 
     private static IcatAuthorisation createTestAutho () {
-        try {
-            IcatAuthorisation autho = new IcatAuthorisation();
-            Timestamp timeSQL = new Timestamp(new Date().getTime());
-            autho.setUserId(VALID_USER_FOR_INVESTIGATION);
-            autho.setRole(ManagerUtil.getRole("SUPER", em));
-            autho.setElementType(ElementType.INVESTIGATION);
-            autho.setCreateTime(timeSQL);
-            autho.setModTime(timeSQL);
-            autho.setCreateId(VALID_USER_FOR_INVESTIGATION);
-            autho.setModId(VALID_USER_FOR_INVESTIGATION);
-            em.persist(autho);
-            return autho;
-        } catch (ValidationException ex) {
-            Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        IcatAuthorisation autho = new IcatAuthorisation();
+        Timestamp timeSQL = new Timestamp(new Date().getTime());
+        autho.setUserId(VALID_USER_FOR_INVESTIGATION);
 
-        return null;
+        autho.setRole(em.find(IcatRole.class, "SUPER"));
+        autho.setElementType(ElementType.INVESTIGATION);
+        autho.setCreateTime(timeSQL);
+        autho.setModTime(timeSQL);
+        autho.setCreateId(VALID_USER_FOR_INVESTIGATION);
+        autho.setModId(VALID_USER_FOR_INVESTIGATION);
+        em.persist(autho);
+        return autho;
     }
 
     private static Investigation createInvestigation(String title) throws NoSuchObjectFoundException, InsufficientPrivilegesException, ValidationException {
@@ -231,31 +231,24 @@ public class ILLTest extends BaseTest {
         investigation.setInvType("experiment");
         investigation.setFacility(ManagerUtil.getFacility(em).getFacilityShortName());
 
-//        Timestamp time = new Timestamp(new Date().getTime());
-//
-//        investigation.setInvStartDate(time);
-//        investigation.setCreateTime(time);
-//        investigation.setModTime(time);
-//        investigation.setCreateId(VALID_USER_FOR_INVESTIGATION);
-//        investigation.setModId(VALID_USER_FOR_INVESTIGATION);
-
-       return InvestigationManager.createInvestigation(VALID_USER_FOR_INVESTIGATION, investigation, em);
+        return InvestigationManager.createInvestigation(VALID_USER_FOR_INVESTIGATION, investigation, em);
     }
 
     @BeforeClass
     public static void create ()  {
         setUp();
+        parameter = new HashMap<String, Parameter>();
         removeEntities = new ArrayList<Object>();
         try {
             IcatAuthorisation autho = createTestAutho();
             Investigation inv = createInvestigation("Investigation 1");
             Investigation inv2 = createInvestigation("Investigation 2");
-            Sample samp = createSample(inv);
-            Sample samp2 = createSample(inv2);
-            Dataset dat = createDataset(inv);
-            Dataset dat2 = createDataset(inv2);
-            Datafile datFile = createDatafile(dat);
-            Datafile datFile2 = createDatafile(dat2);
+            Sample samp = createSample(inv, "Sample_1");
+            Sample samp2 = createSample(inv2, "Sample_2");
+            Dataset dat = createDataset(inv, "dataset_1");
+            Dataset dat2 = createDataset(inv2, "dataset_2");
+            Datafile datFile = createDatafile(dat, "datafile_1");
+            Datafile datFile2 = createDatafile(dat2, "datafile_2");
 
             Parameter sp1_1 = createParameter("deg", "sample1");
             Parameter ds1_1 = createParameter("deg", "dataset1");
@@ -265,7 +258,7 @@ public class ILLTest extends BaseTest {
             removeEntities.add(ds1_1);
             removeEntities.add(df1_1);
             removeEntities.add(df1_2);
-            
+
             Parameter df2_1 = createParameter("deg", "datafile2_1");
             Parameter sp2_1 = createParameter("deg", "sample2_1");
             Parameter ds2_1 = createParameter("deg", "dataset2_1");
@@ -297,13 +290,13 @@ public class ILLTest extends BaseTest {
 //            removeEntities();
             //        createDatafile(createDataset(createInvestigation()));
         } catch (NoSuchObjectFoundException ex) {
-            Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
             removeEntities();
         } catch (InsufficientPrivilegesException ex) {
-            Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
             removeEntities();
         } catch (ValidationException ex) {
-            Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
             removeEntities();
         }
 
@@ -318,44 +311,44 @@ public class ILLTest extends BaseTest {
                 try {
                     DataSetManager.removeDataSet(VALID_USER_FOR_INVESTIGATION, (Dataset) obj, em);
                 } catch (NoSuchObjectFoundException ex) {
-                    Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (InsufficientPrivilegesException ex) {
-                    Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             else if (obj.getClass() == Investigation.class) {
                 try {
                     InvestigationManager.removeInvestigation(VALID_USER_FOR_INVESTIGATION, (Investigation) obj, em);
                 } catch (NoSuchObjectFoundException ex) {
-                    Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (InsufficientPrivilegesException ex) {
-                    Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             else if (obj.getClass() == Datafile.class) {
                 try {
                     DataFileManager.removeDataFile(VALID_USER_FOR_INVESTIGATION, (Datafile) obj, em);
                 } catch (NoSuchObjectFoundException ex) {
-                    Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (InsufficientPrivilegesException ex) {
-                    Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
 //            else if (obj.getClass() == DatafileParameter.class)
 //                try {
 //                DataFileManager.removeDatafileParameter(VALID_USER_FOR_INVESTIGATION, (DatafileParameter) obj, em);
 //            } catch (InsufficientPrivilegesException ex) {
-//                Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+//                Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
 //            } catch (NoSuchObjectFoundException ex) {
-//                Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+//                Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
 //            }
 //            else if (obj.getClass() == DatasetParameter.class) {
 //                try {
 //                    DataSetManager.removeDataSetParameter(VALID_USER_FOR_INVESTIGATION, (DatasetParameter) obj, em);
 //                } catch (InsufficientPrivilegesException ex) {
-//                    Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
 //                } catch (NoSuchObjectFoundException ex) {
-//                    Logger.getLogger(ILLTest.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(BaseParameterSearchTest.class.getName()).log(Level.SEVERE, null, ex);
 //                }
 //            }
             else
@@ -375,7 +368,34 @@ public class ILLTest extends BaseTest {
         time = new Date().getTime();
     }
 
-    protected void show(List<Investigation> li) {
+    protected void showFiles (List<Datafile> ld) {
+        System.out.println("******* Number of results: " + ld.size());
+        System.out.println("*******                    " + (new Date().getTime() - time)/1000 + " sec");
+        int cont = 1;
+        for (Datafile d : ld) {
+            System.out.println (cont++ + " " + d.getName());
+        }
+    }
+
+    protected void showDatasets (List<Dataset> ld) {
+        System.out.println("******* Number of results: " + ld.size());
+        System.out.println("*******                    " + (new Date().getTime() - time)/1000 + " sec");
+        int cont = 1;
+        for (Dataset d : ld) {
+            System.out.println (cont++ + " " + d.getName());
+        }
+    }
+
+    protected void showSamples (List<Sample> ld) {
+        System.out.println("******* Number of results: " + ld.size());
+        System.out.println("*******                    " + (new Date().getTime() - time)/1000 + " sec");
+        int cont = 1;
+        for (Sample d : ld) {
+            System.out.println (cont++ + " " + d.getName());
+        }
+    }
+
+    protected void showInv(List<Investigation> li) {
         System.out.println("******* Number of results: " + li.size());
         System.out.println("*******                    " + (new Date().getTime() - time)/1000 + " sec");
         int cont = 1;
@@ -487,74 +507,65 @@ public class ILLTest extends BaseTest {
     private static void createListComparators () {
 
          // ------------- Comparator 1 ----------------------
-        Parameter p1 = new Parameter();
-        p1.setParameterPK(new ParameterPK("deg", "datafile1"));
-        p1.setIsDatafileParameter("Y");
-        p1.setNumeric(true);
-
         ParameterComparator comp1 = new ParameterComparator();
-        comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p1));
+        comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1")));
         comp1.setComparator(Comparator.EQUAL);
         comp1.setValue(new Double (3.14));
         // ----------------------------------------------------
 
         // ------------- Comparator 2 ----------------------
-        Parameter p2 = new Parameter();
-        p2.setParameterPK(new ParameterPK("deg", "sample1"));
-        p2.setIsSampleParameter("Y");
-        p2.setNumeric(true);
-
         ParameterComparator comp2 = new ParameterComparator();
-        comp2.setParameterValued(new ParameterValued(ParameterType.SAMPLE, p2));
+        comp2.setParameterValued(new ParameterValued(ParameterType.SAMPLE, parameter.get("sample1")));
         comp2.setComparator(Comparator.EQUAL);
         comp2.setValue(new Double(2.2));
         // ----------------------------------------------------
 
         // ------------- Comparator 3 ----------------------
-        Parameter p3 = new Parameter();
-        p3.setParameterPK(new ParameterPK("deg", "dataset1"));
-        p3.setIsDatasetParameter("Y");
-        p3.setNumeric(true);
-
         ParameterComparator comp3 = new ParameterComparator();
-        comp3.setParameterValued(new ParameterValued(ParameterType.DATASET, p3));
+        comp3.setParameterValued(new ParameterValued(ParameterType.DATASET, parameter.get("dataset1")));
         comp3.setComparator(Comparator.EQUAL);
         comp3.setValue(new Double (2.1));
         // ----------------------------------------------------
 
         // ------------- Comparator 4 ----------------------
-        Parameter p4 = new Parameter();
-        p4.setParameterPK(new ParameterPK("deg", "datafile2_1"));
-        p4.setIsDatafileParameter("Y");
-        p4.setNumeric(true);
-
         ParameterComparator comp4 = new ParameterComparator();
-        comp4.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p4));
+        comp4.setParameterValued(new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile2_1")));
         comp4.setComparator(Comparator.EQUAL);
         comp4.setValue(new Double (21.0000002));
         // ----------------------------------------------------
 
         // ------------- Comparator 5 -------------------------
-        Parameter p5 = new Parameter();
-        p5.setParameterPK(new ParameterPK("deg", "datafile2"));
-        p5.setIsDatafileParameter("Y");
-        p5.setNumeric(true);
-
         ParameterComparator comp5 = new ParameterComparator();
-        comp5.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p5));
+        comp5.setParameterValued(new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile2")));
         comp5.setComparator(Comparator.EQUAL);
         comp5.setValue(new Double (5.2));
         // ----------------------------------------------------
+
+         // ------------- Comparator 6 -------------------------
+        ParameterComparator comp6 = new ParameterComparator();
+        comp6.setParameterValued(new ParameterValued(ParameterType.DATASET, parameter.get("dataset2_1")));
+        comp6.setComparator(Comparator.EQUAL);
+        comp6.setValue(new Double(21.1));
+        // ----------------------------------------------------
+
+        // ------------- Comparator 7 -------------------------
+        ParameterComparator comp7 = new ParameterComparator();
+        comp7.setParameterValued(new ParameterValued(ParameterType.SAMPLE, parameter.get("sample2_1")));
+        comp7.setComparator(Comparator.EQUAL);
+        comp7.setValue(new Double(21.2));
+        // ----------------------------------------------------
         
         pcDatafile = new ArrayList<ParameterComparator>();
+        pcDatafile.add(comp1); // 0 datafile1
+        pcDatafile.add(comp5); // 1 datafile2
+        pcDatafile.add(comp4); // 2 datafile2_1
+
         pcDataset = new ArrayList<ParameterComparator>();
+        pcDataset.add(comp3);  // 0 dataset1
+        pcDataset.add(comp6);  // 1 dataset2_1
+
         pcSample = new ArrayList<ParameterComparator>();
-        
-        pcDatafile.add(comp1);
-        pcDatafile.add(comp5);
-        pcDatafile.add(comp4);
-        
-        pcDataset.add(comp2);
-        pcSample.add(comp3);
+        pcSample.add(comp2);   // 0 sample1
+        pcSample.add(comp7);
     }
 }
