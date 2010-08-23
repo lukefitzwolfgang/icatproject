@@ -11,6 +11,13 @@ import junit.framework.JUnit4TestAdapter;
 import junit.framework.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+import uk.icat3.parametersearch.datafile.DatafileTest;
+import uk.icat3.parametersearch.dataset.DatasetTest;
+import uk.icat3.parametersearch.exception.ExceptionTest;
+import uk.icat3.parametersearch.investigation.ListComparatorTest;
+import uk.icat3.parametersearch.investigation.ListParameterTest;
+import uk.icat3.parametersearch.investigation.OperableTest;
+import uk.icat3.parametersearch.sample.SampleTest;
 
 /**
  *
@@ -18,9 +25,13 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+    DatafileTest.class,
+    DatasetTest.class,
+    SampleTest.class,
     ListParameterTest.class,
     ListComparatorTest.class,
-    OperableTest.class
+    OperableTest.class,
+    ExceptionTest.class
 })
 public class TestAllParameterSearch {
 

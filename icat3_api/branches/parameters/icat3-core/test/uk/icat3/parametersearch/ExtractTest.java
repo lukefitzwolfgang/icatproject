@@ -25,7 +25,7 @@ public class ExtractTest {
 
     /**
      * Test the JPQL generated for parameter search when a list
-     * of parameter comparator are passed to the function web service.
+     * of parameter comparator is passed to the web service function.
      * 
      * @throws ParameterSearchException
      */

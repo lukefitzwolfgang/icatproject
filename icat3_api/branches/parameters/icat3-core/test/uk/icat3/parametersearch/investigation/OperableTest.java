@@ -5,7 +5,7 @@
  * Created on 6 juil. 2010
  */
 
-package uk.icat3.parametersearch;
+package uk.icat3.parametersearch.investigation;
 
 import uk.icat3.parametersearch.exception.NoParameterTypeException;
 import uk.icat3.parametersearch.exception.NoParametersException;
@@ -16,6 +16,9 @@ import junit.framework.JUnit4TestAdapter;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import uk.icat3.entity.Investigation;
+import uk.icat3.parametersearch.BaseParameterSearchTest;
+import uk.icat3.parametersearch.ParameterComparator;
+import uk.icat3.parametersearch.ParameterOperator;
 import uk.icat3.search.InvestigationSearch;
 import uk.icat3.util.LogicalOperator;
 
@@ -23,7 +26,7 @@ import uk.icat3.util.LogicalOperator;
  *
  * @author cruzcruz
  */
-public class OperableTest extends ILLTest {
+public class OperableTest extends BaseParameterSearchTest {
 
     @Test
     public void datafileParameterTest () throws NoParameterTypeException, ParameterSearchException {
