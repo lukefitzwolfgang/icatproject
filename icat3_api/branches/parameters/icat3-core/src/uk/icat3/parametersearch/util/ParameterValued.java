@@ -9,6 +9,9 @@ package uk.icat3.parametersearch.util;
 
 import uk.icat3.parametersearch.ParameterType;
 import uk.icat3.entity.Parameter;
+import uk.icat3.parametersearch.exception.NoParameterTypeException;
+import uk.icat3.parametersearch.exception.NoSearchableParameterException;
+import uk.icat3.parametersearch.exception.NullParameterException;
 
 /**
  * This class contains the information about a parameter which is going to
@@ -57,6 +60,24 @@ public class ParameterValued {
         return STRING_VALUE;
     }
 
+    /**
+     * Check the parameter valued is correctly defined
+     * 
+     * @throws NoSearchableParameterException
+     * @throws NullParameterException
+     * @throws NoParameterTypeException
+     */
+    public void validate() throws NoSearchableParameterException, NullParameterException, NoParameterTypeException {
+        if (param == null)
+            throw new NullParameterException("parameter ");
+
+        if (this.type == null)
+            throw new NoParameterTypeException("type is null");
+
+        if (!this.param.getSearchable().toUpperCase().equalsIgnoreCase("Y"))
+            throw new NoSearchableParameterException(this.param);
+    }
+
 
     ///////////////////////////////////////////////////////////////////////////
     //                               GETTERS and SETTERS                     //
@@ -78,6 +99,4 @@ public class ParameterValued {
     public void setType(ParameterType type) {
         this.type = type;
     }
-
-
 }

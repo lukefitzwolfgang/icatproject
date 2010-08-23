@@ -16,13 +16,13 @@ import uk.icat3.entity.Parameter;
  *
  * @author cruzcruz
  */
-public class ExtractStringConditionException extends ParameterSearchException {
+public class NoStringComparatorException extends ParameterSearchException {
 
     private static String msg = "Extracting JPQL condition exception:";
    
 
-    public ExtractStringConditionException (Parameter param, Comparator comp) {
-        super (ExtractStringConditionException.msg +
+    public NoStringComparatorException (Parameter param, Comparator comp) {
+        super (NoStringComparatorException.msg +
                 "Parameter '" +
                 param.getParameterPK().getName() +
                 "(" + param.getParameterPK().getUnits() +

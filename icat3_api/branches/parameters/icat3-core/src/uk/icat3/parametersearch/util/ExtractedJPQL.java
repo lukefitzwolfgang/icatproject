@@ -11,6 +11,8 @@ import uk.icat3.parametersearch.exception.NoParametersException;
 import java.util.HashMap;
 import java.util.Map;
 import uk.icat3.entity.Parameter;
+import uk.icat3.parametersearch.exception.NoElementTypeException;
+import uk.icat3.util.ElementType;
 
 /**
  * This class define all the parameter and condition extracted from a parameter
@@ -48,13 +50,59 @@ public class ExtractedJPQL {
      * @return JPQL parameters declaration
      * @throws NoParametersException
      */
-    public String getParametersJPQL () throws NoParametersException  {
-        String ret = "";
+    public String getParametersJPQL (ElementType type) throws NoParametersException, NoElementTypeException  {
+       
         // FIXME: IN is a INNER JOIN, so null column values are not permitted. This
         // means that if a investigation has one type of parameter but no other
+        // (ex: DATAFILE_PARAMETER but not SAMPLE_PARAMETER)
         // wouldn't be included in the result search. This could be replaced by LEFT JOIN,
         // but then execution time will increase.        
-        // This only matters for statements where and OR operation is present.
+        // This only matters for statements where OR operation is present.
+        if (type == ElementType.INVESTIGATION)
+            return getInvestigationParametersJPQL();
+        
+        else if (type == ElementType.DATAFILE)
+            return getParametersJPQL(datafileParameter, "datafileParameterCollection");
+
+        else if (type == ElementType.DATASET)
+            return getParametersJPQL(datasetParameter, "datasetParameterCollection");
+
+        else if (type == ElementType.SAMPLE)
+            return getParametersJPQL(sampleParameter, "sampleParameterCollection");
+
+        throw new NoElementTypeException (type);
+    }
+
+    /**
+     * Return JPQL string statment relative to a list of parameters (datafile,
+     * dataset or sample)
+     * 
+     * @param paramList List parameters to extract from
+     * @param paramField JPQL field contained parameter
+     * @return JPQL string statement
+     * @throws NoParametersException
+     */
+    private String getParametersJPQL(Map<String, Parameter> paramList, String paramField) throws NoParametersException {
+        String ret = "";
+        for (Map.Entry<String, Parameter> e : paramList.entrySet())
+            ret += ", IN(i." + paramField + ") " + e.getKey();
+
+        if (ret.isEmpty())
+            throw new NoParametersException();
+
+        return ret.substring(2);
+    }
+
+    /**
+     * Return JPQL string statment relative to a list of parameters for
+     * investigation. The investigation includes all three types of parameter
+     * (datafile, dataset and sample)
+     * 
+     * @return
+     * @throws NoParametersException
+     */
+    private String getInvestigationParametersJPQL () throws NoParametersException {
+        String ret = "";
         for (Map.Entry<String, Parameter> e : datafileParameter.entrySet())
             ret += ", IN(df.datafileParameterCollection) " + e.getKey();
 
