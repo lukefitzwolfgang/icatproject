@@ -228,7 +228,40 @@ public class ExceptionTest extends BaseParameterSearchTest {
             assertTrue("Should be a EmptyOperatorException", exception);
         }
     }
-    
+
+
+     /**
+     * No searchable exception occurs when try to search by a datafile parameter
+     * but this parameter is not relevant to datafile.
+     */
+    @Test
+    public void noSearchableParameter () {
+        boolean exception = false;
+        ParameterValued pv3 = new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1"));
+        try {
+            List<ParameterValued> lp = new ArrayList<ParameterValued>();
+            ParameterValued pv4 = new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile2"));
+            pv3.getParam().setDatafileParameter(false);
+            pv3.getParam().setDatasetParameter(true);
+            lp.add(pv3);
+            lp.add(pv4);
+            SampleSearch.searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+        } catch (NoParameterTypeException ex) {
+            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (EmptyListParameterException ex) {
+            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSearchableParameterException ex) {
+            exception = true;
+        } catch (NullParameterException ex) {
+            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoParametersException ex) {
+            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        finally {
+            assertTrue("Should be a NoSearchableException", exception);
+            pv3.getParam().setSearchable("Y");
+        }
+    }
 
     public static junit.framework.Test suite(){
         return new JUnit4TestAdapter(ExceptionTest.class);
