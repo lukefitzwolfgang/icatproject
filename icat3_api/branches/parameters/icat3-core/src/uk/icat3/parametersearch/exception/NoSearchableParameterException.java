@@ -22,5 +22,9 @@ public class NoSearchableParameterException extends ParameterSearchException {
                 param.getParameterPK().getUnits() + ")' is not searchable");
     }
 
+     public NoSearchableParameterException(Parameter param, String message) {
+        super (msg + ": parameter '" + param.getParameterPK().getName() + "(" +
+                param.getParameterPK().getUnits() + ")' is not searchable: " + message);
+    }
 
 }
