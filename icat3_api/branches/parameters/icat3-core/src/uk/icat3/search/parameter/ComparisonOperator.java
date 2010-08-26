@@ -5,14 +5,14 @@
  * Created on 6 juil. 2010
  */
 
-package uk.icat3.parametersearch.comparator;
+package uk.icat3.search.parameter;
 
 /**
  * Define the different comparators which can be used for a parameter search
  * 
  * @author cruzcruz
  */
-public enum Comparator {
+public enum ComparisonOperator {
     /** <b>param.value > value</b><br/> Parameter value greater that a value.*/
     GREATER_THAN,
 

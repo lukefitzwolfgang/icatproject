@@ -7,7 +7,7 @@
 
 package uk.icat3.exception;
 
-import uk.icat3.parametersearch.ParameterComparator;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
 import uk.icat3.exception.ParameterSearchException;
 
 /**
@@ -21,7 +21,7 @@ public class NoParameterTypeException extends ParameterSearchException {
         super (NoParameterTypeException.msg + ": " + msg);
     }
 
-    public NoParameterTypeException(ParameterComparator comp) {
+    public NoParameterTypeException(ParameterComparisonCondition comp) {
         super (NoParameterTypeException.msg + ": Error in comparator '" +
                 comp.getParameterValued().getParam().getParameterPK().getName() + " (" +
                 comp.getParameterValued().getParam().getParameterPK().getUnits() + ")'");

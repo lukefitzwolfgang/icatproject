@@ -7,11 +7,15 @@
 
 package uk.icat3.parametersearch;
 
-import uk.icat3.parametersearch.comparator.Comparator;
+import uk.icat3.search.parameter.ParameterType;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
+import uk.icat3.search.parameter.ParameterCondition;
+import uk.icat3.search.parameter.ParameterLogicalCondition;
+import uk.icat3.search.parameter.ComparisonOperator;
 import uk.icat3.exception.CyclicException;
 import uk.icat3.exception.EmptyOperatorException;
-import uk.icat3.parametersearch.util.ParameterSearchUtil;
-import uk.icat3.parametersearch.util.ParameterValued;
+import uk.icat3.search.parameter.util.ParameterSearchUtil;
+import uk.icat3.search.parameter.util.ParameterValued;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -73,9 +77,9 @@ public class BaseParameterSearchTest extends BaseTest {
     private static Random random = new Random();
     private static final String VALID_USER_FOR_INVESTIGATION  = "TEST";
     protected static List<Object> removeEntities;
-    protected static ArrayList<ParameterComparator> pcDatafile;
-    protected static ArrayList<ParameterComparator> pcDataset;
-    protected static ArrayList<ParameterComparator> pcSample;
+    protected static ArrayList<ParameterComparisonCondition> pcDatafile;
+    protected static ArrayList<ParameterComparisonCondition> pcDataset;
+    protected static ArrayList<ParameterComparisonCondition> pcSample;
     protected static Map<String, Parameter> parameter;
 
     public BaseParameterSearchTest() {
@@ -404,47 +408,47 @@ public class BaseParameterSearchTest extends BaseTest {
         }
     }
 
-    protected static ParameterOperable getOperable () throws CyclicException, EmptyOperatorException  {
-       // ------------- Comparator 1 ----------------------
+    protected static ParameterCondition getOperable () throws CyclicException, EmptyOperatorException  {
+       // ------------- ComparisonOperator 1 ----------------------
         Parameter p1 = new Parameter();
         p1.setParameterPK(new ParameterPK("s", "Time duration"));
         p1.setIsDatafileParameter("Y");
         p1.setNumeric(true);
 
-        ParameterComparator comp1 = new ParameterComparator();
+        ParameterComparisonCondition comp1 = new ParameterComparisonCondition();
         comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p1));
-        comp1.setComparator(Comparator.GREATER_EQUAL);
+        comp1.setComparator(ComparisonOperator.GREATER_EQUAL);
         comp1.setValue(new Float (1));
         // ----------------------------------------------------
 
-        // ------------- Comparator 2 ----------------------
+        // ------------- ComparisonOperator 2 ----------------------
         Parameter p2 = new Parameter();
         p2.setParameterPK(new ParameterPK("N/A", "Mass"));
         p2.setIsSampleParameter("Y");
         p2.setNumeric(false);
 
-        ParameterComparator comp2 = new ParameterComparator();
+        ParameterComparisonCondition comp2 = new ParameterComparisonCondition();
         comp2.setParameterValued(new ParameterValued(ParameterType.SAMPLE, p2));
-        comp2.setComparator(Comparator.START_WITH);
+        comp2.setComparator(ComparisonOperator.START_WITH);
         comp2.setValue("10");
         // ----------------------------------------------------
 
-        // ------------- Comparator 3 ----------------------
+        // ------------- ComparisonOperator 3 ----------------------
         Parameter p3 = new Parameter();
         p3.setParameterPK(new ParameterPK("string", "scanType"));
         p3.setIsDatafileParameter("Y");
         p3.setNumeric(false);
 
-        ParameterComparator comp3 = new ParameterComparator();
+        ParameterComparisonCondition comp3 = new ParameterComparisonCondition();
         comp3.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p3));
-        comp3.setComparator(Comparator.START_WITH);
+        comp3.setComparator(ComparisonOperator.START_WITH);
         comp3.setValue("");
         // ----------------------------------------------------
         
-        ParameterOperator op1 = new ParameterOperator();
-        ParameterOperator op2 = new ParameterOperator();
-        ParameterOperator op3 = new ParameterOperator();
-        ParameterOperator op4 = new ParameterOperator();
+        ParameterLogicalCondition op1 = new ParameterLogicalCondition();
+        ParameterLogicalCondition op2 = new ParameterLogicalCondition();
+        ParameterLogicalCondition op3 = new ParameterLogicalCondition();
+        ParameterLogicalCondition op4 = new ParameterLogicalCondition();
 
         op1.setOperator(LogicalOperator.OR);
         // With logical operator OR is extremely slower.
@@ -506,65 +510,65 @@ public class BaseParameterSearchTest extends BaseTest {
      */
     private static void createListComparators () {
 
-         // ------------- Comparator 1 ----------------------
-        ParameterComparator comp1 = new ParameterComparator();
+         // ------------- ComparisonOperator 1 ----------------------
+        ParameterComparisonCondition comp1 = new ParameterComparisonCondition();
         comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1")));
-        comp1.setComparator(Comparator.EQUAL);
+        comp1.setComparator(ComparisonOperator.EQUAL);
         comp1.setValue(new Double (3.14));
         // ----------------------------------------------------
 
-        // ------------- Comparator 2 ----------------------
-        ParameterComparator comp2 = new ParameterComparator();
+        // ------------- ComparisonOperator 2 ----------------------
+        ParameterComparisonCondition comp2 = new ParameterComparisonCondition();
         comp2.setParameterValued(new ParameterValued(ParameterType.SAMPLE, parameter.get("sample1")));
-        comp2.setComparator(Comparator.EQUAL);
+        comp2.setComparator(ComparisonOperator.EQUAL);
         comp2.setValue(new Double(2.2));
         // ----------------------------------------------------
 
-        // ------------- Comparator 3 ----------------------
-        ParameterComparator comp3 = new ParameterComparator();
+        // ------------- ComparisonOperator 3 ----------------------
+        ParameterComparisonCondition comp3 = new ParameterComparisonCondition();
         comp3.setParameterValued(new ParameterValued(ParameterType.DATASET, parameter.get("dataset1")));
-        comp3.setComparator(Comparator.EQUAL);
+        comp3.setComparator(ComparisonOperator.EQUAL);
         comp3.setValue(new Double (2.1));
         // ----------------------------------------------------
 
-        // ------------- Comparator 4 ----------------------
-        ParameterComparator comp4 = new ParameterComparator();
+        // ------------- ComparisonOperator 4 ----------------------
+        ParameterComparisonCondition comp4 = new ParameterComparisonCondition();
         comp4.setParameterValued(new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile2_1")));
-        comp4.setComparator(Comparator.EQUAL);
+        comp4.setComparator(ComparisonOperator.EQUAL);
         comp4.setValue(new Double (21.0000002));
         // ----------------------------------------------------
 
-        // ------------- Comparator 5 -------------------------
-        ParameterComparator comp5 = new ParameterComparator();
+        // ------------- ComparisonOperator 5 -------------------------
+        ParameterComparisonCondition comp5 = new ParameterComparisonCondition();
         comp5.setParameterValued(new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile2")));
-        comp5.setComparator(Comparator.EQUAL);
+        comp5.setComparator(ComparisonOperator.EQUAL);
         comp5.setValue(new Double (5.2));
         // ----------------------------------------------------
 
-         // ------------- Comparator 6 -------------------------
-        ParameterComparator comp6 = new ParameterComparator();
+         // ------------- ComparisonOperator 6 -------------------------
+        ParameterComparisonCondition comp6 = new ParameterComparisonCondition();
         comp6.setParameterValued(new ParameterValued(ParameterType.DATASET, parameter.get("dataset2_1")));
-        comp6.setComparator(Comparator.EQUAL);
+        comp6.setComparator(ComparisonOperator.EQUAL);
         comp6.setValue(new Double(21.1));
         // ----------------------------------------------------
 
-        // ------------- Comparator 7 -------------------------
-        ParameterComparator comp7 = new ParameterComparator();
+        // ------------- ComparisonOperator 7 -------------------------
+        ParameterComparisonCondition comp7 = new ParameterComparisonCondition();
         comp7.setParameterValued(new ParameterValued(ParameterType.SAMPLE, parameter.get("sample2_1")));
-        comp7.setComparator(Comparator.EQUAL);
+        comp7.setComparator(ComparisonOperator.EQUAL);
         comp7.setValue(new Double(21.2));
         // ----------------------------------------------------
         
-        pcDatafile = new ArrayList<ParameterComparator>();
+        pcDatafile = new ArrayList<ParameterComparisonCondition>();
         pcDatafile.add(comp1); // 0 datafile1
         pcDatafile.add(comp5); // 1 datafile2
         pcDatafile.add(comp4); // 2 datafile2_1
 
-        pcDataset = new ArrayList<ParameterComparator>();
+        pcDataset = new ArrayList<ParameterComparisonCondition>();
         pcDataset.add(comp3);  // 0 dataset1
         pcDataset.add(comp6);  // 1 dataset2_1
 
-        pcSample = new ArrayList<ParameterComparator>();
+        pcSample = new ArrayList<ParameterComparisonCondition>();
         pcSample.add(comp2);   // 0 sample1
         pcSample.add(comp7);
     }

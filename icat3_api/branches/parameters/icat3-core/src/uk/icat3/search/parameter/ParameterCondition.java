@@ -5,7 +5,7 @@
  * Created on 25 juin 2010
  */
 
-package uk.icat3.parametersearch;
+package uk.icat3.search.parameter;
 
 /**
  * This is the parent class for ParameterOperator and ParameterComparator, and
@@ -25,7 +25,7 @@ package uk.icat3.parametersearch;
  * paramOp.add(new ParameterComparator (PRESS, EQUAL,new Float(21.00),
  *             SAMPLE));
  * paramOp.add(new ParameterOperator
- *             (OR,new ParameterOperable[]{comp1, comp2, comp3})
+ *             (OR,new ParameterCondition[]{comp1, comp2, comp3})
  *            )
  * paramOp.add(new ParameterComparator (VOLT, EQUAL, new Float(15.10),
  *             DATASET))
@@ -35,6 +35,6 @@ package uk.icat3.parametersearch;
  * @see ParameterComparator
  * @see ParameterOperator
  */
- public class  ParameterOperable {
+ public class  ParameterCondition {
     
 }

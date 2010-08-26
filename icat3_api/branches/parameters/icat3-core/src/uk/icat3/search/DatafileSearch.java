@@ -18,8 +18,8 @@ import javax.persistence.Query;
 import org.apache.log4j.Logger;
 import uk.icat3.entity.Datafile;
 import uk.icat3.entity.DatafileFormat;
-import uk.icat3.parametersearch.ParameterComparator;
-import uk.icat3.parametersearch.ParameterOperable;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
+import uk.icat3.search.parameter.ParameterCondition;
 import uk.icat3.exception.EmptyListParameterException;
 import uk.icat3.exception.EmptyOperatorException;
 import uk.icat3.exception.NoNumericComparatorException;
@@ -30,9 +30,9 @@ import uk.icat3.exception.NoSearchableParameterException;
 import uk.icat3.exception.NoElementTypeException;
 import uk.icat3.exception.NullParameterException;
 import uk.icat3.exception.ParameterSearchException;
-import uk.icat3.parametersearch.util.ExtractedJPQL;
-import uk.icat3.parametersearch.util.ParameterSearchUtilSingleton;
-import uk.icat3.parametersearch.util.ParameterValued;
+import uk.icat3.search.parameter.util.ExtractedJPQL;
+import uk.icat3.search.parameter.util.ParameterSearchUtilSingleton;
+import uk.icat3.search.parameter.util.ParameterValued;
 import uk.icat3.security.GateKeeper;
 import uk.icat3.util.ElementType;
 import uk.icat3.util.AccessType;
@@ -213,7 +213,7 @@ public class DatafileSearch {
      * @return Collection of investigation matched
      * @throws NoParameterTypeException
      */
-     public static Collection<Datafile> searchByParameterListComparators(String userId, List<ParameterComparator> listComparators, int startIndex, int numberResults, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoNumericComparatorException, NoStringComparatorException, NoSearchableParameterException, NullParameterException   {
+     public static Collection<Datafile> searchByParameterListComparators(String userId, List<ParameterComparisonCondition> listComparators, int startIndex, int numberResults, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoNumericComparatorException, NoStringComparatorException, NoSearchableParameterException, NullParameterException   {
 
         ExtractedJPQL ejpql = ParameterSearchUtilSingleton.getInstance().extractJPQLComparators (listComparators);
 
@@ -224,15 +224,15 @@ public class DatafileSearch {
       * Search by parameters from a parameterOperable.
       *
       * @param userId federalId of the user.
-      * @param parameterOperable ParameterOperable where the conditions are defined
+      * @param parameterOperable ParameterCondition where the conditions are defined
       * @param startIndex start index of the results found
       * @param numberResults number of results found from the start index
       * @param manager manager object that will facilitate interaction with underlying database
       * @return
       * @throws ParameterSearchException
-      * @see ParameterOperable
+      * @see ParameterCondition
       */
-     public static Collection<Datafile> searchByParameterOperable(String userId, ParameterOperable parameterOperable, int startIndex, int numberResults, EntityManager manager) throws NoParametersException, NoElementTypeException, EmptyOperatorException, NullParameterException, NoSearchableParameterException, NoStringComparatorException, NoNumericComparatorException, NoParameterTypeException {
+     public static Collection<Datafile> searchByParameterOperable(String userId, ParameterCondition parameterOperable, int startIndex, int numberResults, EntityManager manager) throws NoParametersException, NoElementTypeException, EmptyOperatorException, NullParameterException, NoSearchableParameterException, NoStringComparatorException, NoNumericComparatorException, NoParameterTypeException {
         ExtractedJPQL ejpql = ParameterSearchUtilSingleton.getInstance().extractJPQLOperable(parameterOperable);
 
         return searchByParameter(userId, ejpql, startIndex, numberResults, manager);
@@ -242,12 +242,12 @@ public class DatafileSearch {
       * Search by parameters from a parameterOperable.
       *
       * @param userId federalId of the user.
-      * @param parameterOperable ParameterOperable where the conditions are defined
+      * @param parameterOperable ParameterCondition where the conditions are defined
       * @param manager Object that will facilitate interaction with underlying database
       * @return
       * @throws ParameterSearchException
       */
-    public static Collection<Datafile> searchByParameterOperable(String userId, ParameterOperable parameterOperable, EntityManager manager) throws ParameterSearchException {
+    public static Collection<Datafile> searchByParameterOperable(String userId, ParameterCondition parameterOperable, EntityManager manager) throws ParameterSearchException {
         ExtractedJPQL ejpql = ParameterSearchUtilSingleton.getInstance().extractJPQLOperable(parameterOperable);
 
         return searchByParameter(userId, ejpql, -1, -1, manager);

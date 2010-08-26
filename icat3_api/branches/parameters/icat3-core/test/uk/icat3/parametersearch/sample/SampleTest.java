@@ -10,7 +10,7 @@ package uk.icat3.parametersearch.sample;
 import uk.icat3.exception.NoParameterTypeException;
 import uk.icat3.exception.NoParametersException;
 import uk.icat3.exception.ParameterSearchException;
-import uk.icat3.parametersearch.util.ParameterValued;
+import uk.icat3.search.parameter.util.ParameterValued;
 import java.util.ArrayList;
 import java.util.List;
 import junit.framework.JUnit4TestAdapter;
@@ -18,9 +18,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import uk.icat3.entity.Sample;
 import uk.icat3.parametersearch.BaseParameterSearchTest;
-import uk.icat3.parametersearch.ParameterComparator;
-import uk.icat3.parametersearch.ParameterOperator;
-import uk.icat3.parametersearch.ParameterType;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
+import uk.icat3.search.parameter.ParameterLogicalCondition;
+import uk.icat3.search.parameter.ParameterType;
 import uk.icat3.search.SampleSearch;
 import uk.icat3.util.LogicalOperator;
 
@@ -54,7 +54,7 @@ public class SampleTest extends BaseParameterSearchTest {
     @Test
     public void listComparatorTest () throws NoParameterTypeException, ParameterSearchException {
 
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
+        List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
         lc.add(pcSample.get(1));
 
         List<Sample> ld = (List<Sample>) SampleSearch
@@ -72,8 +72,8 @@ public class SampleTest extends BaseParameterSearchTest {
      */
     @Test
     public void operableTest () throws NoParameterTypeException, ParameterSearchException {
-        ParameterOperator op1 = new ParameterOperator(LogicalOperator.AND);
-        ParameterOperator op2 = new ParameterOperator(LogicalOperator.OR);
+        ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.AND);
+        ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.OR);
 
         op2.add(pcSample.get(0));
         op2.add(pcSample.get(1));

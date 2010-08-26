@@ -5,7 +5,7 @@
  * Created on 4 July 2010
  */
 
-package uk.icat3.parametersearch.util;
+package uk.icat3.search.parameter.util;
 
 /**
  * Singleton for the class ParmeterSearchUtils

@@ -5,7 +5,7 @@
  * Created on 9 juil. 2010
  */
 
-package uk.icat3.parametersearch.util;
+package uk.icat3.search.parameter.util;
 
 import uk.icat3.exception.NoParametersException;
 import java.util.HashMap;
