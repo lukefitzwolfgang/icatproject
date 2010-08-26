@@ -60,6 +60,7 @@ import uk.icat3.util.BaseTest;
 import uk.icat3.util.BaseTestClassTX;
 import uk.icat3.util.ElementType;
 import uk.icat3.util.LogicalOperator;
+import uk.icat3.util.ParameterValueType;
 
 /**
  * THIS ONLY A CLASS TO MAKE TEST IN JPQL STATEMENTS
@@ -92,7 +93,7 @@ public class BaseParameterSearchTest extends BaseTest {
 
         p.setParameterPK(new ParameterPK (units, name));
         p.setSearchable("Y");
-        p.setNumeric(true);
+        p.setValueType(ParameterValueType.NUMERIC);
         p.setIsDatafileParameter("Y");
         p.setIsSampleParameter("Y");
         p.setIsDatasetParameter("Y");
@@ -413,7 +414,8 @@ public class BaseParameterSearchTest extends BaseTest {
         Parameter p1 = new Parameter();
         p1.setParameterPK(new ParameterPK("s", "Time duration"));
         p1.setIsDatafileParameter("Y");
-        p1.setNumeric(true);
+        p1.setValueType(ParameterValueType.NUMERIC);
+
 
         ParameterComparisonCondition comp1 = new ParameterComparisonCondition();
         comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p1));
@@ -425,7 +427,7 @@ public class BaseParameterSearchTest extends BaseTest {
         Parameter p2 = new Parameter();
         p2.setParameterPK(new ParameterPK("N/A", "Mass"));
         p2.setIsSampleParameter("Y");
-        p2.setNumeric(false);
+        p2.setValueType(ParameterValueType.STRING);
 
         ParameterComparisonCondition comp2 = new ParameterComparisonCondition();
         comp2.setParameterValued(new ParameterValued(ParameterType.SAMPLE, p2));
@@ -437,7 +439,7 @@ public class BaseParameterSearchTest extends BaseTest {
         Parameter p3 = new Parameter();
         p3.setParameterPK(new ParameterPK("string", "scanType"));
         p3.setIsDatafileParameter("Y");
-        p3.setNumeric(false);
+        p3.setValueType(ParameterValueType.STRING);
 
         ParameterComparisonCondition comp3 = new ParameterComparisonCondition();
         comp3.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p3));
@@ -478,22 +480,22 @@ public class BaseParameterSearchTest extends BaseTest {
         Parameter p1 = new Parameter();
         p1.setParameterPK(new ParameterPK("N/A", "Size"));
         p1.setIsSampleParameter("Y");
-        p1.setNumeric(true);
+        p1.setValueType(ParameterValueType.NUMERIC);
 
         Parameter p2 = new Parameter();
         p2.setParameterPK(new ParameterPK("string", "scanType"));
         p2.setIsDatafileParameter("Y");
-        p2.setNumeric(true);
+        p2.setValueType(ParameterValueType.NUMERIC);
 
         Parameter p3 = new Parameter();
         p3.setParameterPK(new ParameterPK("N/A", "Mass"));
         p3.setIsSampleParameter("Y");
-        p3.setNumeric(false);
+        p3.setValueType(ParameterValueType.STRING);
 
         Parameter p4 = new Parameter();
         p4.setParameterPK(new ParameterPK("string", "scanType"));
         p4.setIsDatafileParameter("Y");
-        p4.setNumeric(false);
+        p4.setValueType(ParameterValueType.STRING);
 
         lp.add(p1);
         lp.add(p2);

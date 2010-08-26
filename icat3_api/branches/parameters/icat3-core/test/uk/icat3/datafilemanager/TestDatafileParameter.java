@@ -9,6 +9,7 @@
 
 package uk.icat3.datafilemanager;
 
+import uk.icat3.util.ParameterValueType;
 import java.util.Date;
 import java.util.Collection;
 import java.util.Iterator;
@@ -562,7 +563,7 @@ public class TestDatafileParameter extends BaseTestClassTX {
                 log.trace("Adding new parameter");
                 Parameter param = new Parameter("units","name");
                 param.setIsSampleParameter("N");
-                param.setNumericValue("Y");
+                param.setValueType(ParameterValueType.NUMERIC);
                 param.setSearchable("Y");
                 param.setIsDatasetParameter("N");
                 param.setIsDatafileParameter("Y");
@@ -580,7 +581,7 @@ public class TestDatafileParameter extends BaseTestClassTX {
                 param.setIsSampleParameter("N");
                 param.setIsDatasetParameter("N");
                 param.setIsDatafileParameter("Y");
-                param.setNumericValue("N");
+                param.setValueType(ParameterValueType.STRING);
                 param.setSearchable("Y");
                 param.setCreateId("DATAFILE_PARAMETER_ADDED");
                 em.persist(param);

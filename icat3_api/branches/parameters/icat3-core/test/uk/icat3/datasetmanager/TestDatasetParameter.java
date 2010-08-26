@@ -9,6 +9,7 @@
 
 package uk.icat3.datasetmanager;
 
+import uk.icat3.util.ParameterValueType;
 import java.util.Date;
 import java.util.Collection;
 import java.util.Iterator;
@@ -556,7 +557,7 @@ public class TestDatasetParameter extends BaseTestClassTX {
                     log.trace("Adding new parameter");
                     Parameter param = new Parameter("units", "name");
                     param.setIsSampleParameter("N");
-                    param.setNumericValue("Y");
+                    param.setValueType(ParameterValueType.NUMERIC);
                     param.setSearchable("Y");
                     param.setIsDatasetParameter("Y");
                     param.setIsDatafileParameter("N");
@@ -577,7 +578,7 @@ public class TestDatasetParameter extends BaseTestClassTX {
                     param.setIsSampleParameter("N");
                     param.setIsDatasetParameter("Y");
                     param.setIsDatafileParameter("N");
-                    param.setNumericValue("N");
+                    param.setValueType(ParameterValueType.STRING);
                     param.setSearchable("Y");
                     param.setCreateId("DATASET_PARAMETER_ADDED");
                     param.setVerified(true);
@@ -596,7 +597,7 @@ public class TestDatasetParameter extends BaseTestClassTX {
                     param.setIsSampleParameter("N");
                     param.setIsDatasetParameter("Y");
                     param.setIsDatafileParameter("N");
-                    param.setNumericValue("N");
+                    param.setValueType(ParameterValueType.DATE_AND_TIME);
                     param.setSearchable("Y");
                     param.setCreateId("DATASET_PARAMETER_ADDED");
                     param.setVerified(true);
