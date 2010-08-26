@@ -12,17 +12,17 @@ import uk.icat3.parametersearch.ParameterOperable;
 import uk.icat3.parametersearch.ParameterOperator;
 import uk.icat3.parametersearch.ParameterType;
 import uk.icat3.parametersearch.comparator.Comparator;
-import uk.icat3.parametersearch.exception.EmptyOperatorException;
-import uk.icat3.parametersearch.exception.NoNumericComparatorException;
-import uk.icat3.parametersearch.exception.NoStringComparatorException;
-import uk.icat3.parametersearch.exception.NoParameterTypeException;
-import uk.icat3.parametersearch.exception.NoParametersException;
-import uk.icat3.parametersearch.exception.NoSearchableParameterException;
-import uk.icat3.parametersearch.exception.NullParameterException;
-import uk.icat3.parametersearch.exception.ParameterSearchException;
+import uk.icat3.exception.EmptyOperatorException;
+import uk.icat3.exception.NoNumericComparatorException;
+import uk.icat3.exception.NoStringComparatorException;
+import uk.icat3.exception.NoParameterTypeException;
+import uk.icat3.exception.NoParametersException;
+import uk.icat3.exception.NoSearchableParameterException;
+import uk.icat3.exception.NullParameterException;
+import uk.icat3.exception.ParameterSearchException;
 import java.util.List;
 import uk.icat3.entity.Parameter;
-import uk.icat3.parametersearch.exception.EmptyListParameterException;
+import uk.icat3.exception.EmptyListParameterException;
 import uk.icat3.util.LogicalOperator;
 
 /**

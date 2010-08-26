@@ -8,8 +8,8 @@
 package uk.icat3.parametersearch;
 
 import uk.icat3.parametersearch.comparator.Comparator;
-import uk.icat3.parametersearch.exception.NullParameterException;
-import uk.icat3.parametersearch.exception.ParameterSearchException;
+import uk.icat3.exception.NullParameterException;
+import uk.icat3.exception.ParameterSearchException;
 import uk.icat3.parametersearch.util.ParameterValued;
 import uk.icat3.entity.Parameter;
 

@@ -8,8 +8,8 @@
 package uk.icat3.parametersearch;
 
 import uk.icat3.parametersearch.comparator.Comparator;
-import uk.icat3.parametersearch.exception.CyclicException;
-import uk.icat3.parametersearch.exception.EmptyOperatorException;
+import uk.icat3.exception.CyclicException;
+import uk.icat3.exception.EmptyOperatorException;
 import uk.icat3.parametersearch.util.ParameterSearchUtil;
 import uk.icat3.parametersearch.util.ParameterValued;
 import java.sql.Timestamp;

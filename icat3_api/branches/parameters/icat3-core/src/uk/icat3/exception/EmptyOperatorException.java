@@ -5,10 +5,10 @@
  * Created on 30 juin 2010
  */
 
-package uk.icat3.parametersearch.exception;
+package uk.icat3.exception;
 
 import uk.icat3.parametersearch.ParameterOperator;
-import uk.icat3.parametersearch.exception.ParameterSearchException;
+import uk.icat3.exception.ParameterSearchException;
 
 
 /**

@@ -7,9 +7,9 @@
 
 package uk.icat3.parametersearch.investigation;
 
-import uk.icat3.parametersearch.exception.NoParameterTypeException;
-import uk.icat3.parametersearch.exception.NoParametersException;
-import uk.icat3.parametersearch.exception.ParameterSearchException;
+import uk.icat3.exception.NoParameterTypeException;
+import uk.icat3.exception.NoParametersException;
+import uk.icat3.exception.ParameterSearchException;
 import java.util.ArrayList;
 import java.util.List;
 import junit.framework.JUnit4TestAdapter;
