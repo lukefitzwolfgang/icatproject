@@ -51,9 +51,9 @@ import uk.icat3.exceptions.NoSuchObjectFoundException;
 import uk.icat3.exceptions.NoSuchUserException;
 import uk.icat3.exceptions.SessionException;
 import uk.icat3.exceptions.ValidationException;
-import uk.icat3.parametersearch.ParameterComparator;
-import uk.icat3.parametersearch.ParameterOperator;
-import uk.icat3.parametersearch.exception.ParameterSearchException;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
+import uk.icat3.search.parameter.ParameterLogicalCondition;
+import uk.icat3.exception.ParameterSearchException;
 import uk.icat3.search.AdvancedSearchDetails;
 import uk.icat3.search.KeywordDetails;
 import uk.icat3.sessionbeans.data.DownloadManagerLocal;
@@ -1964,7 +1964,7 @@ public class ICAT extends EJBObject implements ICATLocal {
             @WebParam(name="sessionId")
             String sessionId,
             @WebParam(name="operator")
-            ParameterOperator operator) throws SessionException, ParameterSearchException {
+            ParameterLogicalCondition operator) throws SessionException, ParameterSearchException {
 
         return investigationSearchLocal.searchByParameterOperable(sessionId, operator);
     }
@@ -1974,7 +1974,7 @@ public class ICAT extends EJBObject implements ICATLocal {
             @WebParam(name="sessionId")
             String sessionId,
             @WebParam(name="comparator")
-            ParameterComparator comparator) throws SessionException, ParameterSearchException {
+            ParameterComparisonCondition comparator) throws SessionException, ParameterSearchException {
 
         return investigationSearchLocal.searchByParameterOperable(sessionId, comparator);
     }
@@ -1984,7 +1984,7 @@ public class ICAT extends EJBObject implements ICATLocal {
             @WebParam(name="sessionId")
             String sessionId,
             @WebParam(name="comparators")
-            List<ParameterComparator> comparators) throws SessionException, ParameterSearchException {
+            List<ParameterComparisonCondition> comparators) throws SessionException, ParameterSearchException {
 
         return investigationSearchLocal.searchByParameter(sessionId, comparators);
     }
