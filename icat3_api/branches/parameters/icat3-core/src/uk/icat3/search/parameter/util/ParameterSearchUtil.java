@@ -5,13 +5,13 @@
  * Created on 29 juin 2010
  */
 
-package uk.icat3.parametersearch.util;
+package uk.icat3.search.parameter.util;
 
-import uk.icat3.parametersearch.ParameterComparator;
-import uk.icat3.parametersearch.ParameterOperable;
-import uk.icat3.parametersearch.ParameterOperator;
-import uk.icat3.parametersearch.ParameterType;
-import uk.icat3.parametersearch.comparator.Comparator;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
+import uk.icat3.search.parameter.ParameterCondition;
+import uk.icat3.search.parameter.ParameterLogicalCondition;
+import uk.icat3.search.parameter.ParameterType;
+import uk.icat3.search.parameter.ComparisonOperator;
 import uk.icat3.exception.EmptyOperatorException;
 import uk.icat3.exception.NoNumericComparatorException;
 import uk.icat3.exception.NoStringComparatorException;
@@ -68,15 +68,15 @@ public class ParameterSearchUtil {
      * Return example: param_0.numeric_value > 1.0
      *
      * @param paramName Parameter name in the JPQL statement
-     * @param paramComp ParameterComparator
+     * @param paramComp ParameterComparisonCondition
      * @return JPQL condition
      * @throws NoStringComparatorException
      * @throws NoNumericComparatorException
      */
-    private String getCondition (String paramName, ParameterComparator paramComp, ExtractedJPQLPriva ejpql) throws NoStringComparatorException, NoNumericComparatorException {
+    private String getCondition (String paramName, ParameterComparisonCondition paramComp, ExtractedJPQLPriva ejpql) throws NoStringComparatorException, NoNumericComparatorException {
 
         Parameter param = paramComp.getParameterValued().getParam();
-        Comparator comparator = paramComp.getComparator();
+        ComparisonOperator comparator = paramComp.getComparator();
         Object value = paramComp.getValue();
 
         // Numeric comparators
@@ -84,28 +84,28 @@ public class ParameterSearchUtil {
             String name = getNextParamName();
             ejpql.addParameterJPQL(name, value);
             value = ":" + name;
-            if (comparator == Comparator.GREATER_THAN)
+            if (comparator == ComparisonOperator.GREATER_THAN)
                 return paramName + " > " + value.toString();
-            if (comparator == Comparator.GREATER_EQUAL)
+            if (comparator == ComparisonOperator.GREATER_EQUAL)
                 return paramName + " >= " + value.toString();
-            if (comparator == Comparator.LESS_THAN)
+            if (comparator == ComparisonOperator.LESS_THAN)
                 return paramName + " < " + value.toString();
-            if (comparator == Comparator.LESS_EQUAL)
+            if (comparator == ComparisonOperator.LESS_EQUAL)
                 return paramName + " <= " + value.toString();
-            if (comparator == Comparator.EQUAL)
+            if (comparator == ComparisonOperator.EQUAL)
                 return paramName + " = " + value.toString();
 
             throw new NoNumericComparatorException(param, comparator);
         }
         // String comparators
         else {
-            if (comparator == Comparator.CONTAIN)
+            if (comparator == ComparisonOperator.CONTAIN)
                 return paramName + " like '%" + value.toString() + "%'";
-            if (comparator == Comparator.START_WITH)
+            if (comparator == ComparisonOperator.START_WITH)
                 return paramName + " like '" + value.toString() + "%'";
-            if (comparator == Comparator.END_WITH)
+            if (comparator == ComparisonOperator.END_WITH)
                 return paramName + " like '%" + value.toString() + "'";
-            if (comparator == Comparator.EQUAL)
+            if (comparator == ComparisonOperator.EQUAL)
                 return paramName + " = '" + value.toString() + "'";
             
             throw new NoStringComparatorException(param, comparator);
@@ -114,13 +114,13 @@ public class ParameterSearchUtil {
 
     /**
      * Extract JPQL statement from a parameter search structure defined inside
-     * the ParameterOperable object called 'paramOperable'
+     * the ParameterCondition object called 'paramOperable'
      * 
      * @param paramOperable Contains the parameter search structure
      * @return JPQL statement
      * @throws ParameterSearchException
      */
-    public ExtractedJPQL extractJPQLOperable (ParameterOperable paramOperable) throws EmptyOperatorException, NullParameterException, NoSearchableParameterException, NoStringComparatorException, NoNumericComparatorException, NoParameterTypeException, NoParametersException {
+    public ExtractedJPQL extractJPQLOperable (ParameterCondition paramOperable) throws EmptyOperatorException, NullParameterException, NoSearchableParameterException, NoStringComparatorException, NoNumericComparatorException, NoParameterTypeException, NoParametersException {
         ExtractedJPQLPriva ejpql = new ExtractedJPQLPriva();
 
         extractJPQL(paramOperable, ejpql);
@@ -129,17 +129,17 @@ public class ParameterSearchUtil {
     }
 
     /**
-     * Extract JPQL statement condition from a Comparator and store in the ejpql
+     * Extract JPQL statement condition from a ComparisonOperator and store in the ejpql
      * object.
      * 
-     * @param comp Comparator
+     * @param comp ComparisonOperator
      * @param ejpql Object where the information is stored
      * @throws NoParameterTypeException
      * @throws NoStringComparatorException
      * @throws NoNumericComparatorException
      * @throws ParameterSearchException
      */
-    private void extractJPQLComparator (ParameterComparator comp, ExtractedJPQLPriva ejpql) throws NoParameterTypeException, NoStringComparatorException, NoSearchableParameterException, NullParameterException, NoNumericComparatorException {
+    private void extractJPQLComparator (ParameterComparisonCondition comp, ExtractedJPQLPriva ejpql) throws NoParameterTypeException, NoStringComparatorException, NoSearchableParameterException, NullParameterException, NoNumericComparatorException {
         // Check that the comparator is well contructed.
         comp.validate();
 
@@ -169,7 +169,7 @@ public class ParameterSearchUtil {
      * @throws NoStringComparatorException
      * @throws NoNumericComparatorException
      */
-    private void addParameterCondition (String paramName, ParameterComparator comp, ExtractedJPQLPriva ejpql) throws NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException, NoParameterTypeException {
+    private void addParameterCondition (String paramName, ParameterComparisonCondition comp, ExtractedJPQLPriva ejpql) throws NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException, NoParameterTypeException {
         ejpql.addParameter(paramName, comp.getParameterValued());
 
         ejpql.openParenthesis();
@@ -189,7 +189,7 @@ public class ParameterSearchUtil {
      * @throws NoStringComparatorException
      * @throws NoNumericComparatorException
      */
-    private void addParameterOrCondition (String paramName, String param, ParameterComparator comp, ExtractedJPQLPriva ejpql) throws NoStringComparatorException, NoNumericComparatorException {
+    private void addParameterOrCondition (String paramName, String param, ParameterComparisonCondition comp, ExtractedJPQLPriva ejpql) throws NoStringComparatorException, NoNumericComparatorException {
         ejpql.addParameterJPQL(param, comp.getParameterValued().getParam());
         
         ejpql.openParenthesis();
@@ -200,7 +200,7 @@ public class ParameterSearchUtil {
     }
 
     /**
-     * Extract JPQL statement condition from a Comparator and store in the ejpql
+     * Extract JPQL statement condition from a ComparisonOperator and store in the ejpql
      * object. To optimize the ejecution of SQL queries where the OR condition
      * is present, the code try to reuse declared paremeters to use them
      * inside OR condition. The last parameter name using in a OR condition is
@@ -217,14 +217,14 @@ public class ParameterSearchUtil {
      * one parameter to make the OR condition, and the other has to use 2
      * parameters.
      * 
-     * @param comp Comparator
+     * @param comp ComparisonOperator
      * @param ejpql Object where the information is stored
      * @param paramName Last parameter name used in OR condition
      * @return
      * @throws ParameterSearchException
      */
 
-    private String extractJQPL (ParameterComparator comp, ExtractedJPQLPriva ejpql, String paramName) throws NullParameterException, NoSearchableParameterException, NoStringComparatorException,  NoNumericComparatorException, NoParameterTypeException, NoParametersException {
+    private String extractJQPL (ParameterComparisonCondition comp, ExtractedJPQLPriva ejpql, String paramName) throws NullParameterException, NoSearchableParameterException, NoStringComparatorException,  NoNumericComparatorException, NoParameterTypeException, NoParametersException {
         comp.validate();
 
         // Check if the parameter to compare with, it's a parameter
@@ -257,7 +257,7 @@ public class ParameterSearchUtil {
      * @param ejpql Object where the information is stored
      * @throws ParameterSearchException
      */
-    private void extractJPQL(ParameterOperable paramOperable, ExtractedJPQLPriva ejpql) throws EmptyOperatorException, NullParameterException, NoSearchableParameterException, NoStringComparatorException,  NoNumericComparatorException, NoParametersException, NoParameterTypeException {
+    private void extractJPQL(ParameterCondition paramOperable, ExtractedJPQLPriva ejpql) throws EmptyOperatorException, NullParameterException, NoSearchableParameterException, NoStringComparatorException,  NoNumericComparatorException, NoParametersException, NoParameterTypeException {
         extractJPQL(paramOperable, ejpql, null);
     }
 
@@ -285,14 +285,14 @@ public class ParameterSearchUtil {
      * @return
      * @throws ParameterSearchException
      */
-    private String extractJPQL(ParameterOperable parameterOperable, ExtractedJPQLPriva ejpql, String paramName) throws EmptyOperatorException, NullParameterException, NoSearchableParameterException, NoParametersException, NoStringComparatorException, NoNumericComparatorException, NoParameterTypeException  {
+    private String extractJPQL(ParameterCondition parameterOperable, ExtractedJPQLPriva ejpql, String paramName) throws EmptyOperatorException, NullParameterException, NoSearchableParameterException, NoParametersException, NoStringComparatorException, NoNumericComparatorException, NoParameterTypeException  {
         // If it's a parameterComparator
-        if (parameterOperable.getClass() == ParameterComparator.class)
-            return extractJQPL((ParameterComparator) parameterOperable, ejpql, paramName);
+        if (parameterOperable.getClass() == ParameterComparisonCondition.class)
+            return extractJQPL((ParameterComparisonCondition) parameterOperable, ejpql, paramName);
         
-        // If it's a ParameterOperator
-        else if (parameterOperable.getClass() == ParameterOperator.class) {
-            ParameterOperator op = (ParameterOperator) parameterOperable;
+        // If it's a ParameterLogicalCondition
+        else if (parameterOperable.getClass() == ParameterLogicalCondition.class) {
+            ParameterLogicalCondition op = (ParameterLogicalCondition) parameterOperable;
 
             if (op.getListComparable().isEmpty())
                 throw new EmptyOperatorException();
@@ -362,7 +362,7 @@ public class ParameterSearchUtil {
      * @return
      * @throws ParameterSearchException
      */
-    public ExtractedJPQL extractJPQLComparators(List<ParameterComparator> listComparators) throws EmptyListParameterException, NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException  {
+    public ExtractedJPQL extractJPQLComparators(List<ParameterComparisonCondition> listComparators) throws EmptyListParameterException, NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException  {
         checkList(listComparators);
         
         ExtractedJPQLPriva ejpql = new ExtractedJPQLPriva();

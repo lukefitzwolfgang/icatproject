@@ -7,7 +7,7 @@
 
 package uk.icat3.exception;
 
-import uk.icat3.parametersearch.ParameterOperator;
+import uk.icat3.search.parameter.ParameterLogicalCondition;
 import uk.icat3.exception.ParameterSearchException;
 
 

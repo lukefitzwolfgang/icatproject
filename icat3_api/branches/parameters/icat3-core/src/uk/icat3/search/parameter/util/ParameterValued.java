@@ -5,9 +5,9 @@
  * Created on 23 juil. 2010
  */
 
-package uk.icat3.parametersearch.util;
+package uk.icat3.search.parameter.util;
 
-import uk.icat3.parametersearch.ParameterType;
+import uk.icat3.search.parameter.ParameterType;
 import uk.icat3.entity.Parameter;
 import uk.icat3.exception.NoParameterTypeException;
 import uk.icat3.exception.NoSearchableParameterException;

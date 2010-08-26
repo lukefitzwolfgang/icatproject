@@ -7,7 +7,7 @@
 
 package uk.icat3.parametersearch;
 
-import uk.icat3.parametersearch.util.ParameterSearchUtil;
+import uk.icat3.search.parameter.util.ParameterSearchUtil;
 import java.util.List;
 import org.junit.Test;
 import uk.icat3.entity.Investigation;

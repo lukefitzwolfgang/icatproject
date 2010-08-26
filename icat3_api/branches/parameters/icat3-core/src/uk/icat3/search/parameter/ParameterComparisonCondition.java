@@ -5,12 +5,11 @@
  * Created on 25 juin 2010
  */
 
-package uk.icat3.parametersearch;
+package uk.icat3.search.parameter;
 
-import uk.icat3.parametersearch.comparator.Comparator;
 import uk.icat3.exception.NullParameterException;
 import uk.icat3.exception.ParameterSearchException;
-import uk.icat3.parametersearch.util.ParameterValued;
+import uk.icat3.search.parameter.util.ParameterValued;
 import uk.icat3.entity.Parameter;
 
 /**
@@ -18,14 +17,14 @@ import uk.icat3.entity.Parameter;
  * going to be compare with.
  *
  * @author cruzcruz
- * @see ParameterOperable
+ * @see ParameterCondition
  */
-public final class ParameterComparator extends ParameterOperable{
+public final class ParameterComparisonCondition extends ParameterCondition{
 
     /** Parameter valued which contains parameter and its type */
     private ParameterValued param;
     /** Type of comparator (greater_than, less_than, equal, ..)*/
-    private Comparator comparator = null;
+    private ComparisonOperator comparator = null;
     
     /** Value to compare with */
     private Object value = null;
@@ -35,7 +34,7 @@ public final class ParameterComparator extends ParameterOperable{
     /**
      * Empty constructor. Needed for Web Service implementation
      */
-    public ParameterComparator() {
+    public ParameterComparisonCondition() {
         this.param = new ParameterValued ();
     }
 
@@ -44,10 +43,10 @@ public final class ParameterComparator extends ParameterOperable{
      * Contructor
      *
      * @param param Parameter
-     * @param comparator Comparator which compare with
+     * @param comparator ComparisonOperator which compare with
      * @param value Value to compare with parameter 'param'
      */
-    public ParameterComparator(Parameter param, Comparator comparator, String value) {
+    public ParameterComparisonCondition(Parameter param, ComparisonOperator comparator, String value) {
         this.param = new ParameterValued(param);
         this.comparator = comparator;
         this.value = value;
@@ -71,11 +70,11 @@ public final class ParameterComparator extends ParameterOperable{
     //                   GETTERS and SETTERS
     ///////////////////////////////////////////////////////////////////////////
     
-    public Comparator getComparator() {
+    public ComparisonOperator getComparator() {
         return comparator;
     }
 
-    public void setComparator(Comparator comparator) {
+    public void setComparator(ComparisonOperator comparator) {
         this.comparator = comparator;
     }
 

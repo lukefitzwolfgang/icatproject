@@ -10,7 +10,7 @@ package uk.icat3.parametersearch.investigation;
 import uk.icat3.exception.NoParameterTypeException;
 import uk.icat3.exception.NoParametersException;
 import uk.icat3.exception.ParameterSearchException;
-import uk.icat3.parametersearch.util.ParameterValued;
+import uk.icat3.search.parameter.util.ParameterValued;
 import java.util.ArrayList;
 import java.util.List;
 import junit.framework.JUnit4TestAdapter;
@@ -18,7 +18,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import uk.icat3.entity.Investigation;
 import uk.icat3.parametersearch.BaseParameterSearchTest;
-import uk.icat3.parametersearch.ParameterType;
+import uk.icat3.search.parameter.ParameterType;
 import uk.icat3.search.InvestigationSearch;
 
 /**

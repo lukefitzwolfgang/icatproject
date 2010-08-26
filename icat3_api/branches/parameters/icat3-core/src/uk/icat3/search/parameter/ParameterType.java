@@ -5,7 +5,7 @@
  * Created on 25 juin 2010
  */
 
-package uk.icat3.parametersearch;
+package uk.icat3.search.parameter;
 
 /**
  * Define the different Parameter Type that could exists

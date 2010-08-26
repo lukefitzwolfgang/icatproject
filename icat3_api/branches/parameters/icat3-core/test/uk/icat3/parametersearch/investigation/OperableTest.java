@@ -17,8 +17,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import uk.icat3.entity.Investigation;
 import uk.icat3.parametersearch.BaseParameterSearchTest;
-import uk.icat3.parametersearch.ParameterComparator;
-import uk.icat3.parametersearch.ParameterOperator;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
+import uk.icat3.search.parameter.ParameterLogicalCondition;
 import uk.icat3.search.InvestigationSearch;
 import uk.icat3.util.LogicalOperator;
 
@@ -32,8 +32,8 @@ public class OperableTest extends BaseParameterSearchTest {
     public void datafileParameterTest () throws NoParameterTypeException, ParameterSearchException {
 
 
-        ParameterOperator op1 = new ParameterOperator(LogicalOperator.OR);
-        ParameterOperator op2 = new ParameterOperator(LogicalOperator.AND);
+        ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.OR);
+        ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.AND);
 
         op2.add(pcDatafile.get(0));
         op2.add(pcDatafile.get(1));
@@ -50,7 +50,7 @@ public class OperableTest extends BaseParameterSearchTest {
     @Test
     public void datasetParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
 
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
+        List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
         lc.add(pcDataset.get(0));
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
@@ -63,10 +63,10 @@ public class OperableTest extends BaseParameterSearchTest {
     @Test
     public void sampleParameterTest () throws NoParameterTypeException, ParameterSearchException {
 
-        ParameterOperator op1 = new ParameterOperator();
-        ParameterOperator op2 = new ParameterOperator();
-        ParameterOperator op3 = new ParameterOperator();
-        ParameterOperator op4 = new ParameterOperator();
+        ParameterLogicalCondition op1 = new ParameterLogicalCondition();
+        ParameterLogicalCondition op2 = new ParameterLogicalCondition();
+        ParameterLogicalCondition op3 = new ParameterLogicalCondition();
+        ParameterLogicalCondition op4 = new ParameterLogicalCondition();
 
         op1.setOperator(LogicalOperator.AND);
         op2.setOperator(LogicalOperator.AND);
@@ -85,8 +85,8 @@ public class OperableTest extends BaseParameterSearchTest {
     @Test
     public void allParameterTest () throws NoParameterTypeException, ParameterSearchException {
 
-        ParameterOperator op1 = new ParameterOperator();
-        ParameterOperator op2 = new ParameterOperator();
+        ParameterLogicalCondition op1 = new ParameterLogicalCondition();
+        ParameterLogicalCondition op2 = new ParameterLogicalCondition();
 
         op1.setOperator(LogicalOperator.OR);
         op2.setOperator(LogicalOperator.AND);
@@ -109,8 +109,8 @@ public class OperableTest extends BaseParameterSearchTest {
     @Test
     public void allParameterTest2 () throws NoParameterTypeException, ParameterSearchException {
 
-        ParameterOperator op1 = new ParameterOperator();
-        ParameterOperator op2 = new ParameterOperator();
+        ParameterLogicalCondition op1 = new ParameterLogicalCondition();
+        ParameterLogicalCondition op2 = new ParameterLogicalCondition();
 
         op1.setOperator(LogicalOperator.AND);
         op2.setOperator(LogicalOperator.AND);

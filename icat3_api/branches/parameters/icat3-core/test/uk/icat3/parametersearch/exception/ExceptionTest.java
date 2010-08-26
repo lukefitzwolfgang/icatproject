@@ -27,11 +27,11 @@ import uk.icat3.entity.Datafile;
 import uk.icat3.entity.Parameter;
 import static org.junit.Assert.*;
 import uk.icat3.parametersearch.BaseParameterSearchTest;
-import uk.icat3.parametersearch.ParameterComparator;
-import uk.icat3.parametersearch.ParameterOperator;
-import uk.icat3.parametersearch.ParameterType;
-import uk.icat3.parametersearch.comparator.Comparator;
-import uk.icat3.parametersearch.util.ParameterValued;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
+import uk.icat3.search.parameter.ParameterLogicalCondition;
+import uk.icat3.search.parameter.ParameterType;
+import uk.icat3.search.parameter.ComparisonOperator;
+import uk.icat3.search.parameter.util.ParameterValued;
 import uk.icat3.search.DatafileSearch;
 import uk.icat3.search.InvestigationSearch;
 import uk.icat3.search.SampleSearch;
@@ -81,11 +81,11 @@ public class ExceptionTest extends BaseParameterSearchTest {
     public void comparatorExceptionTest () {
         boolean exception = false;
         try {
-            List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
-             // ------------- Comparator 1 ----------------------
-            ParameterComparator comp1 = new ParameterComparator();
+            List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
+             // ------------- ComparisonOperator 1 ----------------------
+            ParameterComparisonCondition comp1 = new ParameterComparisonCondition();
             comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1")));
-            comp1.setComparator(Comparator.START_WITH);
+            comp1.setComparator(ComparisonOperator.START_WITH);
             comp1.setValue(new Double (3.14));
             lc.add(comp1);
             DatafileSearch.searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
@@ -137,8 +137,8 @@ public class ExceptionTest extends BaseParameterSearchTest {
     public void cyclicExceptionTest () {
         boolean exception = false;
         try {
-            ParameterOperator op1 = new ParameterOperator(LogicalOperator.OR);
-            ParameterOperator op2 = new ParameterOperator(LogicalOperator.AND);
+            ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.OR);
+            ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.AND);
             op2.add(pcDatafile.get(0));
             op2.add(pcDatafile.get(1));
             op1.add(op2);
@@ -173,11 +173,11 @@ public class ExceptionTest extends BaseParameterSearchTest {
     public void nullParameterExceptionTest () {
         boolean exception = false;
         try {
-            List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
-             // ------------- Comparator 1 ----------------------
-            ParameterComparator comp1 = new ParameterComparator();
+            List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
+             // ------------- ComparisonOperator 1 ----------------------
+            ParameterComparisonCondition comp1 = new ParameterComparisonCondition();
             comp1.setParameterValued(null);
-            comp1.setComparator(Comparator.EQUAL);
+            comp1.setComparator(ComparisonOperator.EQUAL);
             comp1.setValue(new Double (3.14));
             lc.add(comp1);
             DatafileSearch.searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
@@ -207,8 +207,8 @@ public class ExceptionTest extends BaseParameterSearchTest {
     public void emptyListExceptionTest () {
         boolean exception = false;
         try {
-            ParameterOperator op1 = new ParameterOperator(LogicalOperator.OR);
-            ParameterOperator op2 = new ParameterOperator(LogicalOperator.AND);
+            ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.OR);
+            ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.AND);
 //            op2.add(pcDatafile.get(0));
 //            op2.add(pcDatafile.get(1));
 //            opop2.add(pcDatafile.get(0));

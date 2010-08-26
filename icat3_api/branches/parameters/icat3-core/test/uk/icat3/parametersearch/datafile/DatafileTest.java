@@ -15,12 +15,12 @@ import org.junit.Test;
 import uk.icat3.entity.Datafile;
 import static org.junit.Assert.*;
 import uk.icat3.parametersearch.BaseParameterSearchTest;
-import uk.icat3.parametersearch.ParameterComparator;
-import uk.icat3.parametersearch.ParameterOperator;
-import uk.icat3.parametersearch.ParameterType;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
+import uk.icat3.search.parameter.ParameterLogicalCondition;
+import uk.icat3.search.parameter.ParameterType;
 import uk.icat3.exception.NoParameterTypeException;
 import uk.icat3.exception.NoParametersException;
-import uk.icat3.parametersearch.util.ParameterValued;
+import uk.icat3.search.parameter.util.ParameterValued;
 import uk.icat3.search.DatafileSearch;
 import uk.icat3.util.LogicalOperator;
 
@@ -39,7 +39,7 @@ public class DatafileTest extends BaseParameterSearchTest {
     @Test
     public void listComparatorTest () throws NoParameterTypeException, ParameterSearchException {
 
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
+        List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
         lc.add(pcDatafile.get(0));
 
         List<Datafile> ld = (List<Datafile>) DatafileSearch
@@ -83,8 +83,8 @@ public class DatafileTest extends BaseParameterSearchTest {
      */
     @Test
     public void operableTest () throws NoParameterTypeException, ParameterSearchException {
-        ParameterOperator op1 = new ParameterOperator(LogicalOperator.OR);
-        ParameterOperator op2 = new ParameterOperator(LogicalOperator.AND);
+        ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.OR);
+        ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.AND);
 
         op2.add(pcDatafile.get(0));
         op2.add(pcDatafile.get(1));

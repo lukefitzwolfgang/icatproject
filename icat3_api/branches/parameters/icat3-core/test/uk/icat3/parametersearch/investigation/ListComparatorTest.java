@@ -17,7 +17,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import uk.icat3.entity.Investigation;
 import uk.icat3.parametersearch.BaseParameterSearchTest;
-import uk.icat3.parametersearch.ParameterComparator;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
 import uk.icat3.search.InvestigationSearch;
 
 /**
@@ -28,7 +28,7 @@ public class ListComparatorTest extends BaseParameterSearchTest {
 
     @Test
     public void datafileParameterTest () throws NoParameterTypeException, ParameterSearchException {
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
+        List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
         lc.add(pcDatafile.get(0));
         lc.add(pcDatafile.get(1));
 
@@ -40,7 +40,7 @@ public class ListComparatorTest extends BaseParameterSearchTest {
 
     @Test
     public void datasetParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
+        List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
         lc.add(pcDataset.get(0));
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
@@ -53,7 +53,7 @@ public class ListComparatorTest extends BaseParameterSearchTest {
     @Test
     public void sampleParameterTest () throws NoParameterTypeException, ParameterSearchException {
 
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
+        List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
         lc.add(pcSample.get(0));
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
@@ -68,7 +68,7 @@ public class ListComparatorTest extends BaseParameterSearchTest {
     @Test
     public void allParameterTest () throws NoParameterTypeException, ParameterSearchException {
 
-        List<ParameterComparator> lc = new ArrayList<ParameterComparator>();
+        List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
         lc.add(pcDatafile.get(0));
         lc.add(pcDataset.get(0));
         lc.add(pcSample.get(0));

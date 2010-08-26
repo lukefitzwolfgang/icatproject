@@ -5,7 +5,7 @@
  * Created on 25 juin 2010
  */
 
-package uk.icat3.parametersearch;
+package uk.icat3.search.parameter;
 
 import uk.icat3.exception.CyclicException;
 import java.util.ArrayList;
@@ -13,16 +13,16 @@ import java.util.List;
 import uk.icat3.util.LogicalOperator;
 
 /**
- * This class contains a list of ParameterOperable that defines a parameter
+ * This class contains a list of ParameterCondition that defines a parameter
  * search structure.
  * 
  * @author cruzcruz
- * @see ParameterOperable
+ * @see ParameterCondition
  */
-public final class ParameterOperator extends ParameterOperable {
+public final class ParameterLogicalCondition extends ParameterCondition {
 
-    /** List of ParameterOperable objects */
-    private List<ParameterOperable> listComparable;
+    /** List of ParameterCondition objects */
+    private List<ParameterCondition> listComparable;
     /** Operator which joins the comparators */
     private LogicalOperator operator;
 
@@ -30,8 +30,8 @@ public final class ParameterOperator extends ParameterOperable {
     /**
      *  Constructor
      */
-    public ParameterOperator() {
-        listComparable = new ArrayList<ParameterOperable> ();
+    public ParameterLogicalCondition() {
+        listComparable = new ArrayList<ParameterCondition> ();
     }
 
     /**
@@ -39,8 +39,8 @@ public final class ParameterOperator extends ParameterOperable {
      * 
      * @param op Logical Operator to compare with
      */
-    public ParameterOperator (LogicalOperator op) {
-        listComparable = new ArrayList<ParameterOperable> ();
+    public ParameterLogicalCondition (LogicalOperator op) {
+        listComparable = new ArrayList<ParameterCondition> ();
         this.operator = op;
     }
    
@@ -51,19 +51,19 @@ public final class ParameterOperator extends ParameterOperable {
      * @param param Parmareter Operable to add
      * @throws CyclicException In case a cyclic structure had been build.
      */
-    public void add (ParameterOperable param) throws CyclicException  {
+    public void add (ParameterCondition param) throws CyclicException  {
         if (param == this)
             throw new CyclicException("It's the same object");
 
         if (listComparable.contains(param))
             throw new CyclicException("This ParameterOperator has already been inserted");
         
-        if (param.getClass() == ParameterOperator.class) {
-            ParameterOperator op = (ParameterOperator)param;
+        if (param.getClass() == ParameterLogicalCondition.class) {
+            ParameterLogicalCondition op = (ParameterLogicalCondition)param;
             if (op.listComparable.contains(this))
                 throw new CyclicException("Cyclic structure. " + this.toString());
-            for (ParameterOperable p : listComparable)
-                if (p.getClass() == ParameterOperator.class && op.listComparable.contains(p))
+            for (ParameterCondition p : listComparable)
+                if (p.getClass() == ParameterLogicalCondition.class && op.listComparable.contains(p))
                     throw new CyclicException("Cyclic structure. " + this.toString());
         }
         listComparable.add(param);
@@ -73,11 +73,11 @@ public final class ParameterOperator extends ParameterOperable {
     ////////////////////////////////////////////////////////////////////////////
     //                               GETTERS and SETTERS
     //////////////////////////////////////////////////////////////////////
-    public List<ParameterOperable> getListComparable() {
+    public List<ParameterCondition> getListComparable() {
         return listComparable;
     }
 
-    public void setListComparable(List<ParameterOperable> lc){
+    public void setListComparable(List<ParameterCondition> lc){
         listComparable = lc;
     }
     
