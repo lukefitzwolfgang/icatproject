@@ -8,9 +8,9 @@ import uk.icat3.entity.IcatRole;
 import uk.icat3.entity.Investigation;
 import uk.icat3.entity.Parameter;
 import uk.icat3.exceptions.SessionException;
-import uk.icat3.parametersearch.ParameterComparator;
-import uk.icat3.parametersearch.ParameterOperable;
-import uk.icat3.parametersearch.exception.ParameterSearchException;
+import uk.icat3.search.parameter.ParameterComparisonCondition;
+import uk.icat3.search.parameter.ParameterCondition;
+import uk.icat3.exception.ParameterSearchException;
 import uk.icat3.search.AdvancedSearchDetails;
 import uk.icat3.search.KeywordDetails;
 import uk.icat3.util.InvestigationInclude;
@@ -57,7 +57,7 @@ public interface InvestigationSearchLocal {
 
     Collection<String> listInvestigationTypes(String sessionId) throws SessionException;
 
-    Collection<Investigation> searchByParameterOperable (String sessionId, ParameterOperable parameterOperable) throws SessionException, ParameterSearchException;
+    Collection<Investigation> searchByParameterOperable (String sessionId, ParameterCondition parameterOperable) throws SessionException, ParameterSearchException;
 
-    Collection<Investigation> searchByParameter(String sessionId, List<ParameterComparator> parameterComparator) throws SessionException, ParameterSearchException;
+    Collection<Investigation> searchByParameter(String sessionId, List<ParameterComparisonCondition> parameterComparator) throws SessionException, ParameterSearchException;
     }
