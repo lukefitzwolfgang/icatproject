@@ -2,7 +2,7 @@
  * This code is developed in Institut Laue-Langevin (France).
  * Its goal is the implementation of parameter search into ICAT Web Service
  * 
- * Created on 20 août 2010
+ * Created on 20 aoï¿½t 2010
  */
 
 package uk.icat3.search;
@@ -18,13 +18,13 @@ import org.apache.log4j.Logger;
 import uk.icat3.entity.Sample;
 import uk.icat3.parametersearch.ParameterComparator;
 import uk.icat3.parametersearch.ParameterOperable;
-import uk.icat3.parametersearch.exception.EmptyListParameterException;
-import uk.icat3.parametersearch.exception.NoElementTypeException;
-import uk.icat3.parametersearch.exception.NoParameterTypeException;
-import uk.icat3.parametersearch.exception.NoParametersException;
-import uk.icat3.parametersearch.exception.NoSearchableParameterException;
-import uk.icat3.parametersearch.exception.NullParameterException;
-import uk.icat3.parametersearch.exception.ParameterSearchException;
+import uk.icat3.exception.EmptyListParameterException;
+import uk.icat3.exception.NoElementTypeException;
+import uk.icat3.exception.NoParameterTypeException;
+import uk.icat3.exception.NoParametersException;
+import uk.icat3.exception.NoSearchableParameterException;
+import uk.icat3.exception.NullParameterException;
+import uk.icat3.exception.ParameterSearchException;
 import uk.icat3.parametersearch.util.ExtractedJPQL;
 import uk.icat3.parametersearch.util.ParameterSearchUtilSingleton;
 import uk.icat3.parametersearch.util.ParameterValued;

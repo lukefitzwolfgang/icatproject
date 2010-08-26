@@ -8,7 +8,7 @@
 package uk.icat3.parametersearch;
 
 import uk.icat3.parametersearch.comparator.Comparator;
-import uk.icat3.parametersearch.exception.ParameterSearchException;
+import uk.icat3.exception.ParameterSearchException;
 import uk.icat3.parametersearch.util.ParameterSearchUtil;
 import uk.icat3.parametersearch.util.ParameterValued;
 import java.util.ArrayList;
