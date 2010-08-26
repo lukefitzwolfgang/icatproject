@@ -18,6 +18,7 @@ import java.util.List;
 import org.junit.Test;
 import uk.icat3.entity.Parameter;
 import uk.icat3.entity.ParameterPK;
+import uk.icat3.util.ParameterValueType;
 
 /**
  *
@@ -45,23 +46,23 @@ public class ExtractTest {
         Parameter p1 = new Parameter();
         p1.setParameterPK(new ParameterPK("string", "scanType"));
         p1.setIsDatafileParameter("Y");
-        p1.setNumeric(false);
+        p1.setValueType(ParameterValueType.STRING);
 
 
         Parameter p3 = new Parameter();
         p3.setParameterPK(new ParameterPK("string", "scanType"));
         p3.setIsDatafileParameter("Y");
-        p3.setNumeric(false);
+        p3.setValueType(ParameterValueType.STRING);
 
         Parameter p4 = new Parameter();
         p4.setParameterPK(new ParameterPK("string", "scanType"));
         p4.setIsDatafileParameter("Y");
-        p4.setNumeric(false);
+        p4.setValueType(ParameterValueType.STRING);
 
         Parameter p2 = new Parameter();
         p2.setParameterPK(new ParameterPK("string", "scanType"));
         p2.setIsDatafileParameter("Y");
-        p2.setNumeric(true);
+        p2.setValueType(ParameterValueType.NUMERIC);
 
         ParameterComparisonCondition comp1 = new ParameterComparisonCondition();
         comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, p1));

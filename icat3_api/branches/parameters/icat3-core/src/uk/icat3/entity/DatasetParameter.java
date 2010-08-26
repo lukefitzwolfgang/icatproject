@@ -28,6 +28,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import uk.icat3.exceptions.ValidationException;
 import uk.icat3.manager.ManagerUtil;
 import uk.icat3.util.ElementType;
+import uk.icat3.util.ParameterValueType;
 
 /**
  * Entity class DatasetParameter
@@ -95,10 +96,14 @@ import uk.icat3.util.ElementType;
             @XmlTransient
             private Parameter parameter;
     
+//    @Transient
+//    @ICAT(merge=false, nullable=true)
+//    protected transient boolean numeric;
+
     @Transient
     @ICAT(merge=false, nullable=true)
-    protected transient boolean numeric;
-    
+    protected transient ParameterValueType valueType;
+
     /** Creates a new instance of DatasetParameter */
     public DatasetParameter() {
     }
@@ -282,24 +287,44 @@ import uk.icat3.util.ElementType;
     public void setParameter(Parameter parameter) {
         this.parameter = parameter;
     }
-    
-    /**
-     * Gets the numeric of this DatafileParameter.
+
+
+     /**
+     * Gets the numeric of this DatasetParameter.
      * @return the parameter
      */
-    public boolean isNumeric() {
-        if(stringValue != null && numericValue == null) return false;
-        else if(numericValue != null && stringValue == null) return true;
-        else return false;
+    public ParameterValueType getValueType() {
+        if(stringValue != null && numericValue == null) return ParameterValueType.STRING;
+        else if(numericValue != null && stringValue == null) return ParameterValueType.NUMERIC;
+        else if(numericValue == null && stringValue == null && dateTimeValue != null) return ParameterValueType.DATE_AND_TIME;
+        return ParameterValueType.STRING;
     }
-    
+
+//    /**
+//     * Gets the numeric of this DatafileParameter.
+//     * @return the parameter
+//     */
+//    public boolean isNumeric() {
+//        if(stringValue != null && numericValue == null) return false;
+//        else if(numericValue != null && stringValue == null) return true;
+//        else return false;
+//    }
+
     /**
-     * Sets the numeric of this DatafileParameter to the specified value.
+     * Sets the numeric of this DatasetParameter to the specified value.
      * @param numeric the new parameter
      */
-    public void setNumeric(boolean numeric) {
-        //this.numeric = numeric;
+    public void setValueType(ParameterValueType valueType) {
+        this.valueType = valueType;
     }
+    
+//    /**
+//     * Sets the numeric of this DatafileParameter to the specified value.
+//     * @param numeric the new parameter
+//     */
+//    public void setNumeric(boolean numeric) {
+//        //this.numeric = numeric;
+//    }
     
     /**
      * Gets the element type of the bean
@@ -375,7 +400,7 @@ import uk.icat3.util.ElementType;
         if(parameterDB == null) {
             log.info(datasetParameterPK+" is not in the parameter table as a data set parameter so been marked as unverified and inserting new row in Parameter table");
             //add new parameter into database
-            parameterDB = ManagerUtil.addParameter(this.createId, manager, paramName, paramUnits, isNumeric());
+            parameterDB = ManagerUtil.addParameter(this.createId, manager, paramName, paramUnits, getValueType());
             if(parameterDB == null) throw new ValidationException("Parameter: "+paramName+" with units: "+paramUnits+" cannot be inserted into the Parameter table.");
         } else if(parameterDB.isDeleted()){
             log.info("Undeleting "+parameterDB);
