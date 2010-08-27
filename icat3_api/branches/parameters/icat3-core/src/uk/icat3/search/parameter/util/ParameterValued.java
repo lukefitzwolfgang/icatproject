@@ -9,9 +9,9 @@ package uk.icat3.search.parameter.util;
 
 import uk.icat3.search.parameter.ParameterType;
 import uk.icat3.entity.Parameter;
-import uk.icat3.exception.NoParameterTypeException;
-import uk.icat3.exception.NoSearchableParameterException;
-import uk.icat3.exception.NullParameterException;
+import uk.icat3.exceptions.NoParameterTypeException;
+import uk.icat3.exceptions.NoSearchableParameterException;
+import uk.icat3.exceptions.NullParameterException;
 
 /**
  * This class contains the information about a parameter which is going to

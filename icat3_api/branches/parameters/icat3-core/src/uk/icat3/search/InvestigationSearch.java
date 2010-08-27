@@ -9,16 +9,16 @@
 package uk.icat3.search;
 
 import java.util.logging.Level;
-import uk.icat3.exception.EmptyListParameterException;
-import uk.icat3.exception.NoElementTypeException;
-import uk.icat3.exception.NoSearchableParameterException;
-import uk.icat3.exception.NullParameterException;
+import uk.icat3.exceptions.EmptyListParameterException;
+import uk.icat3.exceptions.NoElementTypeException;
+import uk.icat3.exceptions.NoSearchableParameterException;
+import uk.icat3.exceptions.NullParameterException;
 import uk.icat3.search.parameter.util.ParameterSearchUtilSingleton;
 import uk.icat3.search.parameter.ParameterComparisonCondition;
 import uk.icat3.search.parameter.ParameterCondition;
-import uk.icat3.exception.NoParameterTypeException;
-import uk.icat3.exception.NoParametersException;
-import uk.icat3.exception.ParameterSearchException;
+import uk.icat3.exceptions.NoParameterTypeException;
+import uk.icat3.exceptions.NoParametersException;
+import uk.icat3.exceptions.ParameterSearchException;
 import uk.icat3.search.parameter.util.ExtractedJPQL;
 import uk.icat3.search.parameter.util.ParameterSearchUtil;
 import uk.icat3.search.parameter.util.ParameterValued;

@@ -7,16 +7,16 @@
 
 package uk.icat3.parametersearch.exception;
 
-import uk.icat3.exception.NoSearchableParameterException;
-import uk.icat3.exception.NoParameterTypeException;
-import uk.icat3.exception.NoStringComparatorException;
-import uk.icat3.exception.EmptyOperatorException;
-import uk.icat3.exception.EmptyListParameterException;
-import uk.icat3.exception.NullParameterException;
-import uk.icat3.exception.NoElementTypeException;
-import uk.icat3.exception.CyclicException;
-import uk.icat3.exception.NoParametersException;
-import uk.icat3.exception.NoNumericComparatorException;
+import uk.icat3.exceptions.NoSearchableParameterException;
+import uk.icat3.exceptions.NoParameterTypeException;
+import uk.icat3.exceptions.NoStringComparatorException;
+import uk.icat3.exceptions.EmptyOperatorException;
+import uk.icat3.exceptions.EmptyListParameterException;
+import uk.icat3.exceptions.NullParameterException;
+import uk.icat3.exceptions.NoElementTypeException;
+import uk.icat3.exceptions.CyclicException;
+import uk.icat3.exceptions.NoParametersException;
+import uk.icat3.exceptions.NoNumericComparatorException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -7,9 +7,9 @@
 
 package uk.icat3.parametersearch.dataset;
 
-import uk.icat3.exception.NoParameterTypeException;
-import uk.icat3.exception.NoParametersException;
-import uk.icat3.exception.ParameterSearchException;
+import uk.icat3.exceptions.NoParameterTypeException;
+import uk.icat3.exceptions.NoParametersException;
+import uk.icat3.exceptions.ParameterSearchException;
 import uk.icat3.search.parameter.util.ParameterValued;
 import java.util.ArrayList;
 import java.util.List;

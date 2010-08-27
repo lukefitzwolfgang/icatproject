@@ -10,7 +10,7 @@ package uk.icat3.parametersearch;
 import uk.icat3.search.parameter.ParameterType;
 import uk.icat3.search.parameter.ParameterComparisonCondition;
 import uk.icat3.search.parameter.ComparisonOperator;
-import uk.icat3.exception.ParameterSearchException;
+import uk.icat3.exceptions.ParameterSearchException;
 import uk.icat3.search.parameter.util.ParameterSearchUtil;
 import uk.icat3.search.parameter.util.ParameterValued;
 import java.util.ArrayList;

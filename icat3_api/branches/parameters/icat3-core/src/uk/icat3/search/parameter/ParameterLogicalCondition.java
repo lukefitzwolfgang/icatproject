@@ -7,7 +7,7 @@
 
 package uk.icat3.search.parameter;
 
-import uk.icat3.exception.CyclicException;
+import uk.icat3.exceptions.CyclicException;
 import java.util.ArrayList;
 import java.util.List;
 import uk.icat3.util.LogicalOperator;
