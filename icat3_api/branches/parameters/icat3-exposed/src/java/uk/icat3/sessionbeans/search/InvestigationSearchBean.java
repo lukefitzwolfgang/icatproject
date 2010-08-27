@@ -26,7 +26,7 @@ import uk.icat3.entity.Parameter;
 import uk.icat3.exceptions.SessionException;
 import uk.icat3.search.parameter.ParameterComparisonCondition;
 import uk.icat3.search.parameter.ParameterCondition;
-import uk.icat3.exception.ParameterSearchException;
+import uk.icat3.exceptions.ParameterSearchException;
 import uk.icat3.search.AdvancedSearchDetails;
 import uk.icat3.search.InvestigationSearch;
 import uk.icat3.search.KeywordDetails;
