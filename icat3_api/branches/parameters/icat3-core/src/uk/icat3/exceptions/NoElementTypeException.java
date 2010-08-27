@@ -5,7 +5,7 @@
  * Created on 30 juin 2010
  */
 
-package uk.icat3.exception;
+package uk.icat3.exceptions;
 
 import uk.icat3.util.ElementType;
 

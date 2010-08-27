@@ -7,11 +7,11 @@
 
 package uk.icat3.search.parameter.util;
 
-import uk.icat3.exception.NoParametersException;
+import uk.icat3.exceptions.NoParametersException;
 import java.util.HashMap;
 import java.util.Map;
 import uk.icat3.entity.Parameter;
-import uk.icat3.exception.NoElementTypeException;
+import uk.icat3.exceptions.NoElementTypeException;
 import uk.icat3.util.ElementType;
 
 /**

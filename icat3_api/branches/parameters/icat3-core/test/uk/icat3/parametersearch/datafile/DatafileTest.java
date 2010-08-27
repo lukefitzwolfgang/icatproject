@@ -8,7 +8,7 @@
 package uk.icat3.parametersearch.datafile;
 
 import java.util.ArrayList;
-import uk.icat3.exception.ParameterSearchException;
+import uk.icat3.exceptions.ParameterSearchException;
 import java.util.List;
 import junit.framework.JUnit4TestAdapter;
 import org.junit.Test;
@@ -18,8 +18,8 @@ import uk.icat3.parametersearch.BaseParameterSearchTest;
 import uk.icat3.search.parameter.ParameterComparisonCondition;
 import uk.icat3.search.parameter.ParameterLogicalCondition;
 import uk.icat3.search.parameter.ParameterType;
-import uk.icat3.exception.NoParameterTypeException;
-import uk.icat3.exception.NoParametersException;
+import uk.icat3.exceptions.NoParameterTypeException;
+import uk.icat3.exceptions.NoParametersException;
 import uk.icat3.search.parameter.util.ParameterValued;
 import uk.icat3.search.DatafileSearch;
 import uk.icat3.util.LogicalOperator;
