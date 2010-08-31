@@ -41,11 +41,11 @@ public class DatafileTest extends BaseParameterSearchTest {
 
         List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
         lc.add(pcDatafile.get(0));
+        lc.add(pcSample.get(0));
 
         List<Datafile> ld = (List<Datafile>) DatafileSearch
                 .searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
 
-       showFiles(ld);
        assertTrue("Results of investigations should not be ZERO", (ld.size() == 1));
     }
 
@@ -60,19 +60,22 @@ public class DatafileTest extends BaseParameterSearchTest {
      */
     @Test
     public void listParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
-       List<ParameterValued> lp = new ArrayList<ParameterValued>();
+        List<ParameterValued> lp = new ArrayList<ParameterValued>();
 
+        ParameterValued pv1 = new ParameterValued(ParameterType.DATASET, parameter.get("dataset1"));
+        ParameterValued pv2 = new ParameterValued(ParameterType.SAMPLE, parameter.get("sample1"));
         ParameterValued pv3 = new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1"));
         ParameterValued pv4 = new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile2"));
 
+        lp.add(pv1);
+        lp.add(pv2);
         lp.add(pv3);
         lp.add(pv4);
 
         List<Datafile> li = (List<Datafile>) DatafileSearch
-                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+            .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
 
-       showFiles(li);
-       assertTrue("Results of investigations should not be ZERO", (li.size() == 1));
+        assertTrue("Results of investigations should not be ZERO", (li.size() == 1));
     }
 
     /**
@@ -88,6 +91,8 @@ public class DatafileTest extends BaseParameterSearchTest {
 
         op2.add(pcDatafile.get(0));
         op2.add(pcDatafile.get(1));
+        op2.add(pcSample.get(0));
+        op2.add(pcDataset.get(0));
         op1.add(op2);
         op1.add(pcDatafile.get(2));
 

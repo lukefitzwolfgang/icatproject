@@ -50,47 +50,117 @@ public class ExtractedJPQL {
      * @return JPQL parameters declaration
      * @throws NoParametersException
      */
-    public String getParametersJPQL (ElementType type) throws NoParametersException, NoElementTypeException  {
-       
-        // FIXME: IN is a INNER JOIN, so null column values are not permitted. This
-        // means that if a investigation has one type of parameter but no other
-        // (ex: DATAFILE_PARAMETER but not SAMPLE_PARAMETER)
-        // wouldn't be included in the result search. This could be replaced by LEFT JOIN,
-        // but then execution time will increase.        
-        // This only matters for statements where OR operation is present.
+    public String getParametersJPQL (ElementType type) throws NoElementTypeException, NoParametersException  {
+
         if (type == ElementType.INVESTIGATION)
             return getInvestigationParametersJPQL();
         
         else if (type == ElementType.DATAFILE)
-            return getParametersJPQL(datafileParameter, "datafileParameterCollection");
-
-        else if (type == ElementType.DATASET)
-            return getParametersJPQL(datasetParameter, "datasetParameterCollection");
+            return getDatafileParameterJPQL();
+        
+        else if (type == ElementType.DATASET) 
+            return getDatasetParameterJPQL();
 
         else if (type == ElementType.SAMPLE)
-            return getParametersJPQL(sampleParameter, "sampleParameterCollection");
+           return getSampleParameterJPQL ();
 
         throw new NoElementTypeException (type);
     }
 
     /**
-     * Return JPQL string statment relative to a list of parameters (datafile,
-     * dataset or sample)
+     * Return JPQL string statment reference to the SampleParameter
      * 
-     * @param paramList List parameters to extract from
-     * @param paramField JPQL field contained parameter
      * @return JPQL string statement
      * @throws NoParametersException
      */
-    private String getParametersJPQL(Map<String, Parameter> paramList, String paramField) throws NoParametersException {
+     private String getSampleParameterJPQL () throws NoParametersException {
         String ret = "";
-        for (Map.Entry<String, Parameter> e : paramList.entrySet())
-            ret += ", IN(i." + paramField + ") " + e.getKey();
+        for (Map.Entry<String, Parameter> e : datafileParameter.entrySet())
+            ret += ", IN(df.datafileParameterCollection) " + e.getKey();
+
+        for (Map.Entry<String, Parameter> e : datasetParameter.entrySet())
+            ret += ", IN(ds.datasetParameterCollection) " + e.getKey();
+
+        for (Map.Entry<String, Parameter> e : sampleParameter.entrySet())
+            ret += ", IN(i.sampleParameterCollection) " + e.getKey();
 
         if (ret.isEmpty())
             throw new NoParametersException();
 
-        return ret.substring(2);
+        String parameter = "";
+        if (!datafileParameter.isEmpty())
+            parameter += ", IN(i.investigationId.datasetCollection) ds, IN(ds.datafileCollection) df";
+        if (datafileParameter.isEmpty() && !datasetParameter.isEmpty())
+            parameter += ", IN(i.investigationId.datasetCollection) ds";
+
+
+        if (parameter.isEmpty())
+            return ret.substring(2);
+
+        return parameter.substring(2) + ret;
+    }
+
+     /**
+     * Return JPQL string statment reference to the DatasetParameter
+     *
+     * @return JPQL string statement
+     * @throws NoParametersException
+     */
+    private String getDatasetParameterJPQL () throws NoParametersException {
+        String ret = "";
+        for (Map.Entry<String, Parameter> e : datafileParameter.entrySet())
+            ret += ", IN(df.datafileParameterCollection) " + e.getKey();
+
+        for (Map.Entry<String, Parameter> e : datasetParameter.entrySet())
+            ret += ", IN(i.datasetParameterCollection) " + e.getKey();
+
+        for (Map.Entry<String, Parameter> e : sampleParameter.entrySet())
+            ret += ", IN(sample.sampleParameterCollection) " + e.getKey();
+
+        if (ret.isEmpty())
+            throw new NoParametersException();
+
+        String parameter = "";
+        if (!datafileParameter.isEmpty())
+            parameter += ", IN(i.datafileCollection) df";
+        if (!sampleParameter.isEmpty())
+            parameter += ", IN(i.investigation.sampleCollection) sample";
+        
+
+        if (parameter.isEmpty())
+            return ret.substring(2);
+
+        return parameter.substring(2) + ret;
+    }
+
+    /**
+     * Return JPQL string statment reference to the DatafileParameter
+     *
+     * @return JPQL string statement
+     * @throws NoParametersException
+     */
+    private String getDatafileParameterJPQL () throws NoParametersException {
+        String ret = "";
+        for (Map.Entry<String, Parameter> e : datafileParameter.entrySet())
+            ret += ", IN(i.datafileParameterCollection) " + e.getKey();
+        
+        for (Map.Entry<String, Parameter> e : datasetParameter.entrySet())
+            ret += ", IN(i.dataset.datasetParameterCollection) " + e.getKey();
+
+        for (Map.Entry<String, Parameter> e : sampleParameter.entrySet())
+            ret += ", IN(sample.sampleParameterCollection) " + e.getKey();
+
+        if (ret.isEmpty())
+            throw new NoParametersException();
+
+        String parameter = "";
+        if (!sampleParameter.isEmpty())
+            parameter += ", IN(i.dataset.investigation.sampleCollection) sample";
+
+        if (parameter.isEmpty())
+            return ret.substring(2);
+
+        return parameter.substring(2) + ret;
     }
 
     /**
@@ -141,7 +211,7 @@ public class ExtractedJPQL {
         return datafileParameter;
     }
 
-    public Map<String, Object> getAllParameter () {
+    public Map<String, Object> getAllJPQLParameter () {
         HashMap<String, Object> ret = new HashMap<String, Object> ();
         
         ret.putAll(datafileParameter);

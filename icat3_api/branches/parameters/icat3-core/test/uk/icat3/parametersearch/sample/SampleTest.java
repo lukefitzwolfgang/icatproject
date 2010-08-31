@@ -34,14 +34,17 @@ public class SampleTest extends BaseParameterSearchTest {
     public void listParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
         List<ParameterValued> lp = new ArrayList<ParameterValued>();
 
+        ParameterValued pv1 = new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1"));
+        ParameterValued pv2 = new ParameterValued(ParameterType.DATASET, parameter.get("dataset1"));
         ParameterValued pv3 = new ParameterValued(ParameterType.SAMPLE, parameter.get("sample1"));
-        
-        lp.add(pv3);
 
+        lp.add(pv1);
+        lp.add(pv2);
+        lp.add(pv3);
+        
         List<Sample> ls = (List<Sample>) SampleSearch
                 .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
 
-        showSamples(ls);
         assertFalse("Results of investigations should not be ZERO", (ls.size() == 0));
     }
 
@@ -55,12 +58,13 @@ public class SampleTest extends BaseParameterSearchTest {
     public void listComparatorTest () throws NoParameterTypeException, ParameterSearchException {
 
         List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
+        lc.add(pcDataset.get(1));
         lc.add(pcSample.get(1));
+        lc.add(pcDatafile.get(2));
 
         List<Sample> ld = (List<Sample>) SampleSearch
                 .searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
 
-       showSamples(ld);
        assertTrue("Results of investigations should not be ZERO", (ld.size() == 1));
     }
 
@@ -72,17 +76,18 @@ public class SampleTest extends BaseParameterSearchTest {
      */
     @Test
     public void operableTest () throws NoParameterTypeException, ParameterSearchException {
-        ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.AND);
-        ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.OR);
+        ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.OR);
+        ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.AND);
 
         op2.add(pcSample.get(0));
-        op2.add(pcSample.get(1));
+        op2.add(pcDatafile.get(1));
+        op2.add(pcDataset.get(0));
         op1.add(op2);
+        op1.add(pcSample.get(1));
 
         List<Sample> li = (List<Sample>) SampleSearch
                 .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
 
-        showSamples(li);
        assertTrue("Results of investigations should be 2 not " + li.size(), (li.size() == 2));
     }
 

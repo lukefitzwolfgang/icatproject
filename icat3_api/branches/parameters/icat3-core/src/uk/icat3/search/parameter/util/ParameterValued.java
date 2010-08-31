@@ -73,16 +73,6 @@ public class ParameterValued {
 
         if (this.type == null)
             throw new NoParameterTypeException("type is null");
-
-        if (!this.param.getSearchable().toUpperCase().equalsIgnoreCase("Y"))
-            throw new NoSearchableParameterException(this.param);
-
-        if (type == ParameterType.DATAFILE && !this.param.isDatafileParameter())
-            throw new NoSearchableParameterException(this.param, "Parameter not relevant for Datafile");
-        if (type == ParameterType.DATASET && !this.param.isDataSetParameter())
-            throw new NoSearchableParameterException(this.param, "Parameter not relevant for Dataset");
-        if (type == ParameterType.SAMPLE && !this.param.isSampleParameter())
-            throw new NoSearchableParameterException(this.param, "Parameter not relevant for Sample");
     }
 
 

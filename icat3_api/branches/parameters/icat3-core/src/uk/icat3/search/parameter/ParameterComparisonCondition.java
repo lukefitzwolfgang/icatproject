@@ -8,7 +8,6 @@
 package uk.icat3.search.parameter;
 
 import uk.icat3.exceptions.NullParameterException;
-import uk.icat3.exceptions.ParameterSearchException;
 import uk.icat3.search.parameter.util.ParameterValued;
 import uk.icat3.entity.Parameter;
 

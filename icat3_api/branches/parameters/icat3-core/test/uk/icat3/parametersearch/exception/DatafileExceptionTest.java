@@ -13,7 +13,6 @@ import uk.icat3.exceptions.NoStringComparatorException;
 import uk.icat3.exceptions.EmptyOperatorException;
 import uk.icat3.exceptions.EmptyListParameterException;
 import uk.icat3.exceptions.NullParameterException;
-import uk.icat3.exceptions.NoElementTypeException;
 import uk.icat3.exceptions.CyclicException;
 import uk.icat3.exceptions.NoParametersException;
 import uk.icat3.exceptions.NoNumericComparatorException;
@@ -25,7 +24,9 @@ import junit.framework.JUnit4TestAdapter;
 import org.junit.Test;
 import uk.icat3.entity.Datafile;
 import uk.icat3.entity.Parameter;
+import uk.icat3.entity.ParameterPK;
 import static org.junit.Assert.*;
+import uk.icat3.exceptions.ParameterNoExistsException;
 import uk.icat3.parametersearch.BaseParameterSearchTest;
 import uk.icat3.search.parameter.ParameterComparisonCondition;
 import uk.icat3.search.parameter.ParameterLogicalCondition;
@@ -33,15 +34,13 @@ import uk.icat3.search.parameter.ParameterType;
 import uk.icat3.search.parameter.ComparisonOperator;
 import uk.icat3.search.parameter.util.ParameterValued;
 import uk.icat3.search.DatafileSearch;
-import uk.icat3.search.InvestigationSearch;
-import uk.icat3.search.SampleSearch;
 import uk.icat3.util.LogicalOperator;
 
 /**
  *
  * @author cruzcruz
  */
-public class ExceptionTest extends BaseParameterSearchTest {
+public class DatafileExceptionTest extends BaseParameterSearchTest {
 
     /**
      * List parameter error test. Test the exceptions work fine.
@@ -56,17 +55,19 @@ public class ExceptionTest extends BaseParameterSearchTest {
             pv3.getParam().setSearchable("N");
             lp.add(pv3);
             lp.add(pv4);
-            SampleSearch.searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+            DatafileSearch.searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+        } catch (NoParametersException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParameterNoExistsException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParameterTypeException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (EmptyListParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoSearchableParameterException ex) {
             exception = true;
         } catch (NullParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NoParametersException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         finally {
             assertTrue("Should be a NoSearchableException", exception);
@@ -90,43 +91,25 @@ public class ExceptionTest extends BaseParameterSearchTest {
             lc.add(comp1);
             DatafileSearch.searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
 
+        } catch (NoParametersException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParameterNoExistsException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (EmptyListParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParameterTypeException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoNumericComparatorException ex) {
             exception = true;
         } catch (NoStringComparatorException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoSearchableParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NullParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         finally {
             assertTrue("Should be a NoNumericComparatorException", exception);
-        }
-    }
-
-    @Test
-    public void noParameterTypeExceptionTest () {
-        boolean exception = false;
-        try {
-            List<ParameterValued> lp = new ArrayList<ParameterValued>();
-            ParameterValued pv4 = new ParameterValued(null, new Parameter());
-            lp.add(pv4);
-            InvestigationSearch.searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
-        } catch (NoParameterTypeException ex) {
-            exception = true;
-        } catch (EmptyListParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NoSearchableParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NullParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        finally {
-            assertTrue("Should be a NoParameterTypeException", exception);
         }
     }
 
@@ -145,22 +128,22 @@ public class ExceptionTest extends BaseParameterSearchTest {
             op1.add(op1);
             List<Datafile> li = (List<Datafile>) DatafileSearch
                 .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
+        } catch (ParameterNoExistsException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParameterTypeException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParametersException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NoElementTypeException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (EmptyOperatorException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NullParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoSearchableParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoStringComparatorException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoNumericComparatorException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (CyclicException ex) {
             exception = true;
         }
@@ -179,19 +162,23 @@ public class ExceptionTest extends BaseParameterSearchTest {
             comp1.setParameterValued(null);
             comp1.setComparator(ComparisonOperator.EQUAL);
             comp1.setValue(new Double (3.14));
+
             lc.add(comp1);
             DatafileSearch.searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
-
+        } catch (NoParametersException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParameterNoExistsException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (EmptyListParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParameterTypeException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoNumericComparatorException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoStringComparatorException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoSearchableParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NullParameterException ex) {
             exception = true;
         }
@@ -208,31 +195,25 @@ public class ExceptionTest extends BaseParameterSearchTest {
         boolean exception = false;
         try {
             ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.OR);
-            ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.AND);
-//            op2.add(pcDatafile.get(0));
-//            op2.add(pcDatafile.get(1));
-//            opop2.add(pcDatafile.get(0));
-//            o1.add(op2);
-//            op1.add(pcSample.get(0));
             List<Datafile> li = (List<Datafile>) DatafileSearch
                 .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
             assertTrue("Results of investigations should be 2 not " + li.size(), li.size() == 2);
+        } catch (ParameterNoExistsException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParameterTypeException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParametersException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NoElementTypeException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (EmptyOperatorException ex) {
             exception = true;
         } catch (NullParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoSearchableParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoStringComparatorException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoNumericComparatorException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         finally {
             assertTrue("Should be a EmptyOperatorException", exception);
@@ -244,36 +225,67 @@ public class ExceptionTest extends BaseParameterSearchTest {
      * No searchable exception occurs when try to search by a datafile parameter
      * but this parameter is not relevant to datafile.
      */
-    @Test
-    public void noSearchableParameter () {
+//    @Test
+    public void unexpectedParameterException () {
         boolean exception = false;
         ParameterValued pv3 = new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1"));
         try {
             List<ParameterValued> lp = new ArrayList<ParameterValued>();
-            ParameterValued pv4 = new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile2"));
-            pv3.getParam().setDatafileParameter(false);
-            pv3.getParam().setDatasetParameter(true);
+            Parameter param = new Parameter (parameter.get("datafile2").getParameterPK());
+            ParameterValued pv4 = new ParameterValued(ParameterType.SAMPLE, param);
             lp.add(pv3);
             lp.add(pv4);
-            SampleSearch.searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
-        } catch (NoParameterTypeException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (EmptyListParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NoSearchableParameterException ex) {
-            exception = true;
-        } catch (NullParameterException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+            DatafileSearch.searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
         } catch (NoParametersException ex) {
-            Logger.getLogger(ExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+           Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParameterNoExistsException ex) {
+           Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoParameterTypeException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (EmptyListParameterException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSearchableParameterException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NullParameterException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        finally {
+            assertTrue("Should be a UnexpectedParameterException", exception);
+        }
+    }
+
+    @Test
+    public void parameterNoExistsException () {
+        boolean exception = false;
+        ParameterValued pv3 = new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1"));
+        try {
+            List<ParameterValued> lp = new ArrayList<ParameterValued>();
+            Parameter param = new Parameter(new ParameterPK("noName", "noUnits"));
+            param.setDatafileParameter(true);
+            ParameterValued pv4 = new ParameterValued(ParameterType.DATAFILE, param);
+            lp.add(pv3);
+            lp.add(pv4);
+            DatafileSearch.searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+        } catch (NoParametersException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ParameterNoExistsException ex) {
+            exception = true;
+        } catch (NoParameterTypeException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (EmptyListParameterException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSearchableParameterException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NullParameterException ex) {
+            Logger.getLogger(DatafileExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         finally {
-            assertTrue("Should be a NoSearchableException", exception);
-            pv3.getParam().setSearchable("Y");
+            System.out.println("-------\n" + exception);
+            assertTrue("Should be a ParameterNoExistsException", exception);
         }
     }
 
     public static junit.framework.Test suite(){
-        return new JUnit4TestAdapter(ExceptionTest.class);
+        return new JUnit4TestAdapter(DatafileExceptionTest.class);
     }
 }

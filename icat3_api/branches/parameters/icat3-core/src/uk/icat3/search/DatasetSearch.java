@@ -22,6 +22,7 @@ import uk.icat3.entity.Investigation;
 import uk.icat3.entity.Sample;
 import uk.icat3.exceptions.InsufficientPrivilegesException;
 import uk.icat3.exceptions.NoSuchObjectFoundException;
+import uk.icat3.exceptions.ParameterNoExistsException;
 import uk.icat3.manager.ManagerUtil;
 import uk.icat3.search.parameter.ParameterComparisonCondition;
 import uk.icat3.search.parameter.ParameterCondition;
@@ -35,6 +36,8 @@ import uk.icat3.exceptions.NoSearchableParameterException;
 import uk.icat3.exceptions.NoStringComparatorException;
 import uk.icat3.exceptions.NullParameterException;
 import uk.icat3.exceptions.ParameterSearchException;
+import uk.icat3.manager.ParameterManager;
+import uk.icat3.search.parameter.ParameterType;
 import uk.icat3.search.parameter.util.ExtractedJPQL;
 import uk.icat3.search.parameter.util.ParameterSearchUtilSingleton;
 import uk.icat3.search.parameter.util.ParameterValued;
@@ -182,13 +185,16 @@ public class DatasetSearch {
      * @throws NoParametersException
      * @throws ParameterSearchException
      */
-    private static Collection<Dataset> searchByParameter(String userId, ExtractedJPQL ejpql, int startIndex, int numberResults, EntityManager manager) {
+    private static Collection<Dataset> searchByParameter(String userId, ExtractedJPQL ejpql, int startIndex, int numberResults, EntityManager manager) throws ParameterNoExistsException, NoSearchableParameterException, NoParametersException, NoParameterTypeException {
         try {
             log.trace("searchByParameter(" + ", " + ejpql.getCondition() + ", " + startIndex + ", " + numberResults + ", EntityManager)");
+
+            // Make sure the parameter are searchable before continue.
+            ParameterManager.existsSearchableParameters(ejpql.getDatasetParameter().values(), ParameterType.DATASET, manager);
+
             String jpql = RETURN_ALL_DATASETS_JPQL + ", " + ejpql.getParametersJPQL(ElementType.DATASET) + QUERY_USERS_DATASETS_JPQL + " AND " + ejpql.getCondition();
-            System.out.println("--------> " + jpql);
             Query q = manager.createQuery(jpql);
-            for (Entry<String, Object> e : ejpql.getAllParameter().entrySet()) {
+            for (Entry<String, Object> e : ejpql.getAllJPQLParameter().entrySet()) {
                 q.setParameter(e.getKey(), e.getValue());
             }
             q.setParameter("objectType", ElementType.DATASET);
@@ -198,8 +204,6 @@ public class DatasetSearch {
             } else {
                 return q.setMaxResults(numberResults).setFirstResult(startIndex).getResultList();
             }
-        } catch (NoParametersException ex) {
-            java.util.logging.Logger.getLogger(DatasetSearch.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoElementTypeException ex) {
             java.util.logging.Logger.getLogger(DatasetSearch.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -218,7 +222,7 @@ public class DatasetSearch {
      * @return Collection of investigation matched
      * @throws NoParameterTypeException
      */
-     public static Collection<Dataset> searchByParameterListComparators(String userId, List<ParameterComparisonCondition> listComparators, int startIndex, int numberResults, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException {
+     public static Collection<Dataset> searchByParameterListComparators(String userId, List<ParameterComparisonCondition> listComparators, int startIndex, int numberResults, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException, ParameterNoExistsException, NoParametersException {
 
         ExtractedJPQL ejpql = ParameterSearchUtilSingleton.getInstance().extractJPQLComparators (listComparators);
 
@@ -237,7 +241,7 @@ public class DatasetSearch {
       * @throws ParameterSearchException
       * @see ParameterCondition
       */
-     public static Collection<Dataset> searchByParameterOperable(String userId, ParameterCondition parameterOperable, int startIndex, int numberResults, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException, EmptyOperatorException, NoParametersException {
+     public static Collection<Dataset> searchByParameterOperable(String userId, ParameterCondition parameterOperable, int startIndex, int numberResults, EntityManager manager) throws NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException, EmptyOperatorException, NoParametersException, ParameterNoExistsException {
         ExtractedJPQL ejpql = ParameterSearchUtilSingleton.getInstance().extractJPQLOperable(parameterOperable);
 
         return searchByParameter(userId, ejpql, startIndex, numberResults, manager);
@@ -252,7 +256,7 @@ public class DatasetSearch {
       * @return
       * @throws ParameterSearchException
       */
-    public static Collection<Dataset> searchByParameterOperable(String userId, ParameterCondition parameterOperable, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException, EmptyOperatorException, NoParametersException {
+    public static Collection<Dataset> searchByParameterOperable(String userId, ParameterCondition parameterOperable, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException, EmptyOperatorException, NoParametersException, ParameterNoExistsException {
         ExtractedJPQL ejpql = ParameterSearchUtilSingleton.getInstance().extractJPQLOperable(parameterOperable);
 
         return searchByParameter(userId, ejpql, -1, -1, manager);
@@ -270,7 +274,7 @@ public class DatasetSearch {
      * @return Investigations which contains all the paremeters from listParam
      * @throws ParameterSearchException
      */
-    public static Collection<Dataset> searchByParameterListParameter(String userId, List<ParameterValued> listParam, int startIndex, int numberResults, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException {
+    public static Collection<Dataset> searchByParameterListParameter(String userId, List<ParameterValued> listParam, int startIndex, int numberResults, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoSearchableParameterException, NullParameterException, ParameterNoExistsException, NoParametersException {
         ExtractedJPQL ejpql = ParameterSearchUtilSingleton.getInstance().extractJPQLParameters(listParam);
 
         return searchByParameter(userId, ejpql, startIndex, numberResults, manager);
@@ -286,7 +290,7 @@ public class DatasetSearch {
      * @return Investigations which contains all the paremeters from listParam
      * @throws ParameterSearchException
      */
-    public static Collection<Dataset> searchByParameterListParameter(String userId, List<ParameterValued> listParam, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoStringComparatorException, NoNumericComparatorException, NoSearchableParameterException, NullParameterException  {
+    public static Collection<Dataset> searchByParameterListParameter(String userId, List<ParameterValued> listParam, EntityManager manager) throws EmptyListParameterException, NoParameterTypeException, NoSearchableParameterException, NullParameterException, ParameterNoExistsException, NoParametersException {
         ExtractedJPQL ejpql = ParameterSearchUtilSingleton.getInstance().extractJPQLParameters(listParam);
 
         return searchByParameter(userId, ejpql, -1, 1, manager);
