@@ -35,17 +35,17 @@ public class DatasetTest extends BaseParameterSearchTest {
     public void listParameterTest () throws NoParameterTypeException, NoParametersException, ParameterSearchException {
         List<ParameterValued> lp = new ArrayList<ParameterValued>();
 
+        ParameterValued pv1 = new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1"));
         ParameterValued pv2 = new ParameterValued(ParameterType.DATASET, parameter.get("dataset1"));
-        ParameterValued pv3 = new ParameterValued(ParameterType.DATASET, parameter.get("dataset2"));
+        ParameterValued pv3 = new ParameterValued(ParameterType.SAMPLE, parameter.get("sample1"));
 
+        lp.add(pv1);
         lp.add(pv2);
-//        lp.add(pv3);
-//        lp.add(pv4);
+        lp.add(pv3);
 
         List<Dataset> li = (List<Dataset>) DatasetSearch
                 .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
 
-        showDatasets(li);
         assertTrue("Results of investigations should not be ZERO", (li.size() == 1));
         
     }
@@ -61,11 +61,12 @@ public class DatasetTest extends BaseParameterSearchTest {
 
         List<ParameterComparisonCondition> lc = new ArrayList<ParameterComparisonCondition>();
         lc.add(pcDataset.get(1));
+        lc.add(pcSample.get(1));
+        lc.add(pcDatafile.get(2));
 
         List<Dataset> ld = (List<Dataset>) DatasetSearch
                 .searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
 
-       showDatasets(ld);
        assertTrue("Results of investigations should not be ZERO", (ld.size() == 1));
     }
 
@@ -79,17 +80,17 @@ public class DatasetTest extends BaseParameterSearchTest {
     @Test
     public void operableTest () throws NoParameterTypeException, ParameterSearchException {
         ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.OR);
-        ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.OR);
+        ParameterLogicalCondition op2 = new ParameterLogicalCondition(LogicalOperator.AND);
 
         op2.add(pcDataset.get(0));
-        op2.add(pcDataset.get(1));
+        op2.add(pcSample.get(0));
+        op2.add(pcDatafile.get(1));
         op1.add(op2);
-//        op1.add(pcDataset.get(2));
+        op1.add(pcDataset.get(1));
 
         List<Dataset> li = (List<Dataset>) DatasetSearch
                 .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
 
-        showDatasets(li);
        assertTrue("Results of investigations should be 2 not " + li.size(), (li.size() == 2));
     }
     

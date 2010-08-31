@@ -441,7 +441,7 @@ public class ParameterSearchUtil {
         private void addParameter (String paramName, ParameterValued p) throws NoSearchableParameterException, NullParameterException, NoParameterTypeException {
             p.validate();
             
-            if (p.getType() == ParameterType.DATAFILE)
+            if (p.getType() == ParameterType.DATAFILE) 
                 datafileParameter.put(paramName, p.getParam());
             else if (p.getType() == ParameterType.DATASET)
                 datasetParameter.put(paramName, p.getParam());

@@ -88,15 +88,23 @@ public class BaseParameterSearchTest extends BaseTest {
     }
 
     // TODO: create parameter first
-    private static Parameter createParameter (String units, String name) {
+    private static Parameter createParameter (String units, String name, ElementType type) {
         Parameter p = new Parameter();
 
         p.setParameterPK(new ParameterPK (units, name));
         p.setSearchable("Y");
         p.setValueType(ParameterValueType.NUMERIC);
-        p.setIsDatafileParameter("Y");
-        p.setIsSampleParameter("Y");
-        p.setIsDatasetParameter("Y");
+        p.setIsDatafileParameter("N");
+        p.setIsSampleParameter("N");
+        p.setIsDatasetParameter("N");
+
+        if (type == ElementType.SAMPLE)
+            p.setIsSampleParameter("Y");
+        else if (type == ElementType.DATAFILE)
+            p.setIsDatafileParameter("Y");
+        else if (type == ElementType.DATASET)
+            p.setIsDatasetParameter("Y");
+        
         p.setVerified(true);
 
         Timestamp timeSQL = new Timestamp(new Date().getTime());
@@ -255,18 +263,18 @@ public class BaseParameterSearchTest extends BaseTest {
             Datafile datFile = createDatafile(dat, "datafile_1");
             Datafile datFile2 = createDatafile(dat2, "datafile_2");
 
-            Parameter sp1_1 = createParameter("deg", "sample1");
-            Parameter ds1_1 = createParameter("deg", "dataset1");
-            Parameter df1_1 = createParameter("deg", "datafile1");
-            Parameter df1_2 = createParameter("deg", "datafile2");
+            Parameter sp1_1 = createParameter("deg", "sample1", ElementType.SAMPLE);
+            Parameter ds1_1 = createParameter("deg", "dataset1", ElementType.DATASET);
+            Parameter df1_1 = createParameter("deg", "datafile1", ElementType.DATAFILE);
+            Parameter df1_2 = createParameter("deg", "datafile2", ElementType.DATAFILE);
             removeEntities.add(sp1_1);
             removeEntities.add(ds1_1);
             removeEntities.add(df1_1);
             removeEntities.add(df1_2);
 
-            Parameter df2_1 = createParameter("deg", "datafile2_1");
-            Parameter sp2_1 = createParameter("deg", "sample2_1");
-            Parameter ds2_1 = createParameter("deg", "dataset2_1");
+            Parameter df2_1 = createParameter("deg", "datafile2_1",ElementType.DATAFILE);
+            Parameter sp2_1 = createParameter("deg", "sample2_1", ElementType.SAMPLE);
+            Parameter ds2_1 = createParameter("deg", "dataset2_1", ElementType.DATASET);
             removeEntities.add(df2_1);
             removeEntities.add(sp2_1);
             removeEntities.add(ds2_1);
@@ -373,7 +381,7 @@ public class BaseParameterSearchTest extends BaseTest {
         time = new Date().getTime();
     }
 
-    protected void showFiles (List<Datafile> ld) {
+    protected void showFiles (Collection<Datafile> ld) {
         System.out.println("******* Number of results: " + ld.size());
         System.out.println("*******                    " + (new Date().getTime() - time)/1000 + " sec");
         int cont = 1;
@@ -382,7 +390,7 @@ public class BaseParameterSearchTest extends BaseTest {
         }
     }
 
-    protected void showDatasets (List<Dataset> ld) {
+    protected void showDatasets (Collection<Dataset> ld) {
         System.out.println("******* Number of results: " + ld.size());
         System.out.println("*******                    " + (new Date().getTime() - time)/1000 + " sec");
         int cont = 1;
@@ -391,7 +399,7 @@ public class BaseParameterSearchTest extends BaseTest {
         }
     }
 
-    protected void showSamples (List<Sample> ld) {
+    protected void showSamples (Collection<Sample> ld) {
         System.out.println("******* Number of results: " + ld.size());
         System.out.println("*******                    " + (new Date().getTime() - time)/1000 + " sec");
         int cont = 1;
@@ -400,7 +408,7 @@ public class BaseParameterSearchTest extends BaseTest {
         }
     }
 
-    protected void showInv(List<Investigation> li) {
+    protected void showInv(Collection<Investigation> li) {
         System.out.println("******* Number of results: " + li.size());
         System.out.println("*******                    " + (new Date().getTime() - time)/1000 + " sec");
         int cont = 1;
@@ -562,16 +570,16 @@ public class BaseParameterSearchTest extends BaseTest {
         // ----------------------------------------------------
         
         pcDatafile = new ArrayList<ParameterComparisonCondition>();
-        pcDatafile.add(comp1); // 0 datafile1
-        pcDatafile.add(comp5); // 1 datafile2
-        pcDatafile.add(comp4); // 2 datafile2_1
+        pcDatafile.add(comp1); // inv0 datafile1
+        pcDatafile.add(comp5); // inv0 datafile2
+        pcDatafile.add(comp4); // inv1 datafile2_1
 
         pcDataset = new ArrayList<ParameterComparisonCondition>();
-        pcDataset.add(comp3);  // 0 dataset1
-        pcDataset.add(comp6);  // 1 dataset2_1
+        pcDataset.add(comp3);  // inv0 dataset1
+        pcDataset.add(comp6);  // inv1 dataset2_1
 
         pcSample = new ArrayList<ParameterComparisonCondition>();
-        pcSample.add(comp2);   // 0 sample1
-        pcSample.add(comp7);
+        pcSample.add(comp2);   // inv0 sample1
+        pcSample.add(comp7);   // inv1 sample2_1
     }
 }
