@@ -24,6 +24,8 @@ public class ParameterValued {
     private static String NUMERIC_VALUE = "numericValue";
     /** JQPL field name for STRING_VALUE */
     private static String STRING_VALUE = "stringValue";
+    /** JQPL field name for DATE_TIME_VALUE */
+    private static String DATE_TIME_VALUE = "dateTimeValue";
     /** Type of parameter (dataset, datafile, sample, ALL) */
     private ParameterType type;
     /** Parameter to compare */
@@ -57,6 +59,8 @@ public class ParameterValued {
     public String getValueType() {
         if (getParam().isNumeric())
             return NUMERIC_VALUE;
+        if(getParam().isDateTime())
+            return DATE_TIME_VALUE;
         return STRING_VALUE;
     }
 

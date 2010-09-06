@@ -80,7 +80,7 @@ public class ParameterSearchUtil {
         Object value = paramComp.getValue();
 
         // Numeric comparators
-        if (param.isNumeric()) {
+        if (param.isNumeric() || param.isDateTime()) {
             String name = getNextParamName();
             ejpql.addParameterJPQL(name, value);
             value = ":" + name;
