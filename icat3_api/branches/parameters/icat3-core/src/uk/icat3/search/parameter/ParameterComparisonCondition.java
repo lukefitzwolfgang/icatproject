@@ -90,7 +90,11 @@ public final class ParameterComparisonCondition extends ParameterCondition{
     }
 
     public void setValue(Object value) {
-        this.value = value;
+        if(value.getClass()==com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl.class){
+            this.value = ((com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl) value).toGregorianCalendar().getTime();
+        } else {
+            this.value = value;
+        }
     }
 
     public Object getValue2() {
