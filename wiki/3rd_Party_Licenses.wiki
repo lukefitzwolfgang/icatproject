@@ -9,6 +9,8 @@ Below is a list of the 3rd party libraries that are used by ICAT, including a sh
 || Database || odbc.jar	|| Oracle database drivers || Oracle Technology Network Development License Terms  ||
 ||Java EE || javaee.jar	|| Java EE 5 implementation || CDDL ||
 || || Toplink-essentials.jar || Java Persistence API ||CDDL ||
+|| || eclipselink.jar || EclipseLink Persistence API ||CDDL ||
+|| || eclipselink-javax.persistence.jar || EclipseLink Java Persistence API ||CDDL ||
 || Logging || Log4j-1.2.14.jar || Java-based logging utility || Apache v2 ||
 || || Commons-logging.jar || Logging framework wrapper (requires a logging framework underneath (e.g. Log4j)	|| Apache v2 ||
 || XML || jaxb-api.jar	|| Java to XML binding || CDDL ||
