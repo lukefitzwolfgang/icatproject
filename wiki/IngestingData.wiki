@@ -6,7 +6,7 @@ This takes in an XML document (string) conforming to the description here: [http
 
 Typically at facilities this is a two part process:
   # Ingest proposal metadata for the experiment before it takes place (create an investigation).
-  # Ingest datafiles into that investigation as they are created on the beamline.
+  # Ingest datafiles into that investigation as they are created on the beamline (repeated many times per file set)
 
 Below is an example which will work with a 'default' ICAT install (an ICAT created by following all the instructions here [http://code.google.com/p/icatproject/wiki/Database_Installation]
 
@@ -19,6 +19,9 @@ Assumptions for the files provided
 General Comments
   # in the XML file the investigator user_id should = the FACILITY_USER.FACILITY_USER_ID
   # Run the ingest as 'overlord' (or equivalent user) - can use loginAdmin 
+
+Prerequisites
+  # Modify the ICAT.PARAMETER table; set total_proton_charge.NUMERIC_VALUE to 'Y'
 
 
 1) Proposal pre-ingest XML: file available here [http://icatproject.googlecode.com/svn/icat3_api/trunk/Documentation/examplefiles/preingest.xml]
