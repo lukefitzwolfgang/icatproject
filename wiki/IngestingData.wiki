@@ -23,6 +23,12 @@ Below is an example which will work with a 'default' ICAT install (an ICAT creat
 ===Prerequisites===
   # Modify the ICAT.PARAMETER table; set total_proton_charge.NUMERIC_VALUE to 'Y'
 
+===Known Issues===
+Currently the INVESTIGATOR table is not being set, so no users 'own' the investigation. It is being permissions correctly, so is searchable but will not appear in 'My Data'
+Log in as overlord to search for the data.
+I will investigate and resolve this early next week (20th September 2010).
+It is working in the live ISIS instance so is most likely a problem with these files or the database setup.
+
 ===Files and usage===
 1) Proposal pre-ingest XML: file available here [http://icatproject.googlecode.com/svn/icat3_api/trunk/Documentation/examplefiles/preingest.xml]
 {{{
