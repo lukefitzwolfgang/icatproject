@@ -1,3 +1,5 @@
+=Ingest Data into a Default ICAT installation=
+
 The easiest way to get data into ICAT is to use the ingestMetadata API method.
 
 This takes in an XML document (string) conforming to the description here: [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/icat3-jaxb/src/uk/icat3/jaxb/icatXSD.xsd]
