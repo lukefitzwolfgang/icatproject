@@ -10,20 +10,20 @@ Typically at facilities this is a two part process:
 
 Below is an example which will work with a 'default' ICAT install (an ICAT created by following all the instructions here [http://code.google.com/p/icatproject/wiki/Database_Installation]
 
-Assumptions for the files provided
+===Assumptions for the files provided===
   # id=3, USER_ID=damian exists in ICATUSER.USER_TABLE
   # id=4, USER_ID=doug exists in ICATUSER.USER_TABLE
   # Matching FEDERAL_ID=damian record in ICAT.FACILITY_USER
   # Matching FEDERAL_ID=doug record in ICAT.FACILITY_USER
 
-General Comments
+===General Comments===
   # in the XML file the investigator user_id should = the FACILITY_USER.FACILITY_USER_ID
   # Run the ingest as 'overlord' (or equivalent user) - can use loginAdmin 
 
-Prerequisites
+===Prerequisites===
   # Modify the ICAT.PARAMETER table; set total_proton_charge.NUMERIC_VALUE to 'Y'
 
-
+===Files and usage===
 1) Proposal pre-ingest XML: file available here [http://icatproject.googlecode.com/svn/icat3_api/trunk/Documentation/examplefiles/preingest.xml]
 {{{
 <?xml version="1.0" encoding="utf-8"?>
