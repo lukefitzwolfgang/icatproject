@@ -1,0 +1,16 @@
+#Requirements for the XML Ingest in iCAT.
+
+= Introduction =
+
+XMLIngest is a module in iCAT that allows users to ingest their metadata inform of XML file into iCAT. This will avoid the overhead of calling several webservices calls to ingest metadata.
+
+
+= Requirements =
+  * Simple XML Schema
+  * Carry on Ingestion even on exceptions and finally create a report in case of problems while ingesting metadata.
+  * 
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
