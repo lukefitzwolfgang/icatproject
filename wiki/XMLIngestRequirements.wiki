@@ -7,7 +7,7 @@ XMLIngest is a module in iCAT that allows users to ingest their metadata inform 
 
 = Requirements =
   * Simple XML Schema
-  * Carry on Ingestion even on exceptions and finally create a report in case of problems while ingesting metadata.
+  * Shouldn't exit by rolling back on problem ingesting few of the elements in XML.
   * 
 
 Add your content here.  Format your content with:
