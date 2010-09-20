@@ -17,17 +17,12 @@ Below is an example which will work with a 'default' ICAT install (an ICAT creat
   # Matching FEDERAL_ID=doug record in ICAT.FACILITY_USER
 
 ===General Comments===
-  # in the XML file the investigator user_id should = the FACILITY_USER.FACILITY_USER_ID
+  # in the XML file the investigator user_id should = the FACILITY_USER.FEDERAL_ID of the user
+  # in the XML file the investigator affiliation_id should = the FACILITY_USER.FACILITY_USER_ID of the users
   # Run the ingest as 'overlord' (or equivalent user) - can use loginAdmin 
 
 ===Prerequisites===
   # Modify the ICAT.PARAMETER table; set total_proton_charge.NUMERIC_VALUE to 'Y'
-
-===Known Issues===
-Currently the INVESTIGATOR table is not being set, so no users 'own' the investigation. It is being permissions correctly, so is searchable but will not appear in 'My Data'
-Log in as overlord to search for the data.
-I will investigate and resolve this early next week (20th September 2010).
-It is working in the live ISIS instance so is most likely a problem with these files or the database setup.
 
 ===Files and usage===
 1) Proposal pre-ingest XML: file available here [http://icatproject.googlecode.com/svn/icat3_api/trunk/Documentation/examplefiles/preingest.xml]
@@ -36,17 +31,19 @@ It is working in the live ISIS instance so is most likely a problem with these f
 <icat version="1.0 RC6" xsi:noNamespaceSchemaLocation="../icatXSD/icatXSD.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <study>
     <investigation>
-      <inv_number>1010611</inv_number>
+      <inv_number>1010613</inv_number>
       <visit_id>1</visit_id>
       <instrument>MAPS</instrument>
-      <title>Proposal title would go here</title>
+      <title>Some title would go here</title>
       <investigator>
-        <user_id>9932</user_id>
+        <user_id>damian</user_id>
+		<affiliation_id>9932</affiliation_id>
         <role>experimenter</role>
         <privilege>READER</privilege>
       </investigator>
       <investigator>
-        <user_id>9933</user_id>
+        <user_id>doug</user_id>
+		<affiliation_id>9933</affiliation_id>
         <role>principal_experimenter</role>
         <privilege>ADMIN</privilege>
       </investigator>
@@ -108,10 +105,10 @@ It is working in the live ISIS instance so is most likely a problem with these f
 <icat version="1.0 RC6" xsi:noNamespaceSchemaLocation="../icatXSD/icatXSD.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <study>
     <investigation>
-      <inv_number>1010611</inv_number>
+      <inv_number>1010613</inv_number>
       <visit_id>1</visit_id>
       <instrument>MAPS</instrument>
-      <title>Proposal title would go here</title>
+      <title>new proposal</title>
       <inv_type>EXPERIMENT</inv_type>
       <bcat_inv_str>MAPS team -</bcat_inv_str>
       <keyword>
