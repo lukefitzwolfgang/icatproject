@@ -6,7 +6,8 @@
 Below is a list of the 3rd party libraries that are used by ICAT, including a short description and the various licenses under which they are released.
 
 || *Category* || *Library* || *Description* || *Distribution License(s)* ||
-|| Database || odbc.jar	|| Oracle database drivers || Oracle Technology Network Development License Terms  ||
+<wiki:comment>
+|| Database || odbc.jar	|| Oracle database drivers || Oracle Technology Network Development License Terms  || </wiki:comment>
 ||Java EE || javaee.jar	|| Java EE 5 implementation || CDDL ||
 || || Toplink-essentials.jar || Java Persistence API ||CDDL ||
 || || eclipselink.jar || EclipseLink Persistence API ||EPL and EDL ||
