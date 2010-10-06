@@ -440,7 +440,7 @@ public class InvestigationSearchBean extends EJBObject implements InvestigationS
     @WebMethod()
     public Collection<Investigation> searchByParameterOperable (String sessionId, ParameterCondition parameterOperable) throws SessionException, ParameterSearchException {
         String userId = user.getUserIdFromSessionId(sessionId);
-        return InvestigationSearch.searchByParameterOperable(userId, parameterOperable, manager);
+        return InvestigationSearch.searchByParameter(userId, parameterOperable, manager);
     }
 
     @WebMethod()
