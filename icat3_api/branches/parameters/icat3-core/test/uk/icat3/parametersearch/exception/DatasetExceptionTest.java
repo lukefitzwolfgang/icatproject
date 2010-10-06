@@ -7,6 +7,9 @@
 
 package uk.icat3.parametersearch.exception;
 
+import uk.icat3.exceptions.DatevalueException;
+import uk.icat3.exceptions.DatevalueFormatException;
+import uk.icat3.exceptions.NoDatetimeComparatorException;
 import uk.icat3.exceptions.NoSearchableParameterException;
 import uk.icat3.exceptions.NoParameterTypeException;
 import uk.icat3.exceptions.NoStringComparatorException;
@@ -26,6 +29,7 @@ import uk.icat3.entity.Dataset;
 import uk.icat3.entity.Parameter;
 import uk.icat3.entity.ParameterPK;
 import static org.junit.Assert.*;
+import uk.icat3.exceptions.NumericvalueException;
 import uk.icat3.exceptions.ParameterNoExistsException;
 import uk.icat3.parametersearch.BaseParameterSearchTest;
 import uk.icat3.search.parameter.ParameterComparisonCondition;
@@ -55,10 +59,18 @@ public class DatasetExceptionTest extends BaseParameterSearchTest {
             ParameterComparisonCondition comp1 = new ParameterComparisonCondition();
             comp1.setParameterValued(new ParameterValued(ParameterType.DATAFILE, parameter.get("datafile1")));
             comp1.setComparator(ComparisonOperator.START_WITH);
-            comp1.setValue(new Double (3.14));
+            comp1.setNumericValue(new Double (3.14));
             lc.add(comp1);
-            DatasetSearch.searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
+            DatasetSearch.searchByParameterListComparators(VALID_USER_FOR_INVESTIGATION, lc, -1, -1, em);
 
+        } catch (NoDatetimeComparatorException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DatevalueException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumericvalueException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DatevalueFormatException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParametersException ex) {
             Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParameterNoExistsException ex) {
@@ -95,7 +107,15 @@ public class DatasetExceptionTest extends BaseParameterSearchTest {
             op1.add(op2);
             op1.add(op1);
             List<Dataset> li = (List<Dataset>) DatasetSearch
-                .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
+                .searchByParameter(VALID_USER_FOR_INVESTIGATION, op1, 1, -1, em);
+        } catch (NoDatetimeComparatorException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DatevalueException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumericvalueException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DatevalueFormatException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParameterNoExistsException ex) {
             Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParameterTypeException ex) {
@@ -129,10 +149,18 @@ public class DatasetExceptionTest extends BaseParameterSearchTest {
             ParameterComparisonCondition comp1 = new ParameterComparisonCondition();
             comp1.setParameterValued(null);
             comp1.setComparator(ComparisonOperator.EQUAL);
-            comp1.setValue(new Double (3.14));
+            comp1.setNumericValue(new Double (3.14));
             lc.add(comp1);
-            DatasetSearch.searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
+            DatasetSearch.searchByParameterListComparators(VALID_USER_FOR_INVESTIGATION, lc, -1, -1, em);
 
+        } catch (NoDatetimeComparatorException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DatevalueException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumericvalueException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DatevalueFormatException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParametersException ex) {
             Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParameterNoExistsException ex) {
@@ -164,8 +192,16 @@ public class DatasetExceptionTest extends BaseParameterSearchTest {
         try {
             ParameterLogicalCondition op1 = new ParameterLogicalCondition(LogicalOperator.OR);
             List<Dataset> li = (List<Dataset>) DatasetSearch
-                .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
+                .searchByParameter(VALID_USER_FOR_INVESTIGATION, op1, 1, -1, em);
             assertTrue("Results of investigations should be 2 not " + li.size(), li.size() == 2);
+        } catch (NoDatetimeComparatorException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DatevalueException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NumericvalueException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DatevalueFormatException ex) {
+            Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParameterNoExistsException ex) {
             Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoParameterTypeException ex) {
@@ -204,7 +240,7 @@ public class DatasetExceptionTest extends BaseParameterSearchTest {
             parameter.get("dataset1").setSearchable("N");
             lp.add(pv3);
             lp.add(pv4);
-            DatasetSearch.searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+            DatasetSearch.searchByParameterListParameter(VALID_USER_FOR_INVESTIGATION, lp, 1, -1, em);
         } catch (NoParametersException ex) {
             Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParameterNoExistsException ex) {
@@ -235,7 +271,7 @@ public class DatasetExceptionTest extends BaseParameterSearchTest {
             ParameterValued pv4 = new ParameterValued(ParameterType.DATASET, param);
             lp.add(pv3);
             lp.add(pv4);
-            DatasetSearch.searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+            DatasetSearch.searchByParameterListParameter(VALID_USER_FOR_INVESTIGATION, lp, 1, -1, em);
         } catch (NoParametersException ex) {
             Logger.getLogger(DatasetExceptionTest.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParameterNoExistsException ex) {

@@ -39,7 +39,7 @@ public class ListParameterTest extends BaseParameterSearchTest {
         lp.add(pv4);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+                .searchByParameterListParameter(VALID_USER_FOR_INVESTIGATION, lp, 1, -1, em);
 
        showInv(li);
        assertTrue("Results of investigations should not be ZERO", (li.size() == 1));
@@ -57,7 +57,7 @@ public class ListParameterTest extends BaseParameterSearchTest {
 //        lp.add(pv4);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+                .searchByParameterListParameter(VALID_USER_FOR_INVESTIGATION, lp, 1, -1, em);
 
         showInv(li);
         assertTrue("Results of investigations should not be ZERO", (li.size() == 1));
@@ -73,7 +73,7 @@ public class ListParameterTest extends BaseParameterSearchTest {
         lp.add(pv3);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+                .searchByParameterListParameter(VALID_USER_FOR_INVESTIGATION, lp, 1, -1, em);
 
         showInv(li);
         assertFalse("Results of investigations should not be ZERO", (li.size() == 0));
@@ -92,7 +92,7 @@ public class ListParameterTest extends BaseParameterSearchTest {
         lp.add(pv3);
 
         List<Investigation> li = (List<Investigation>) InvestigationSearch
-                .searchByParameterListParameter("SUPER_USER",lp, 1, -1, em);
+                .searchByParameterListParameter(VALID_USER_FOR_INVESTIGATION,lp, 1, -1, em);
 
         showInv(li);
         assertTrue("Results of investigations should not be ZERO", (li.size() == 1));
