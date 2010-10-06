@@ -43,7 +43,7 @@ public class SampleTest extends BaseParameterSearchTest {
         lp.add(pv3);
         
         List<Sample> ls = (List<Sample>) SampleSearch
-                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+                .searchByParameterListParameter(VALID_USER_FOR_INVESTIGATION, lp, 1, -1, em);
 
         assertFalse("Results of investigations should not be ZERO", (ls.size() == 0));
     }
@@ -63,7 +63,7 @@ public class SampleTest extends BaseParameterSearchTest {
         lc.add(pcDatafile.get(2));
 
         List<Sample> ld = (List<Sample>) SampleSearch
-                .searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
+                .searchByParameterListComparators(VALID_USER_FOR_INVESTIGATION, lc, -1, -1, em);
 
        assertTrue("Results of investigations should not be ZERO", (ld.size() == 1));
     }
@@ -86,7 +86,7 @@ public class SampleTest extends BaseParameterSearchTest {
         op1.add(pcSample.get(1));
 
         List<Sample> li = (List<Sample>) SampleSearch
-                .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
+                .searchByParameter(VALID_USER_FOR_INVESTIGATION, op1, 1, -1, em);
 
        assertTrue("Results of investigations should be 2 not " + li.size(), (li.size() == 2));
     }

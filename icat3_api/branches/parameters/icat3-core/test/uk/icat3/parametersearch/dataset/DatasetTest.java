@@ -44,7 +44,7 @@ public class DatasetTest extends BaseParameterSearchTest {
         lp.add(pv3);
 
         List<Dataset> li = (List<Dataset>) DatasetSearch
-                .searchByParameterListParameter("SUPER_USER", lp, 1, -1, em);
+                .searchByParameterListParameter(VALID_USER_FOR_INVESTIGATION, lp, 1, -1, em);
 
         assertTrue("Results of investigations should not be ZERO", (li.size() == 1));
         
@@ -65,7 +65,7 @@ public class DatasetTest extends BaseParameterSearchTest {
         lc.add(pcDatafile.get(2));
 
         List<Dataset> ld = (List<Dataset>) DatasetSearch
-                .searchByParameterListComparators("SUPER_USER", lc, -1, -1, em);
+                .searchByParameterListComparators(VALID_USER_FOR_INVESTIGATION, lc, -1, -1, em);
 
        assertTrue("Results of investigations should not be ZERO", (ld.size() == 1));
     }
@@ -89,7 +89,7 @@ public class DatasetTest extends BaseParameterSearchTest {
         op1.add(pcDataset.get(1));
 
         List<Dataset> li = (List<Dataset>) DatasetSearch
-                .searchByParameterOperable("SUPER_USER", op1, 1, -1, em);
+                .searchByParameter(VALID_USER_FOR_INVESTIGATION, op1, 1, -1, em);
 
        assertTrue("Results of investigations should be 2 not " + li.size(), (li.size() == 2));
     }
