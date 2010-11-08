@@ -16,9 +16,11 @@ When: Start now. Should be an ongoing tasks, with person acting as the owner.
 
 ===Installation package===
 
-What: Remove ISIS/DLS flavours. Currently the installation package refers to the facility as either ISIS or DLS/Diamond. Thins needs to be removed and replaced with a more generic name.
+What: Remove ISIS/DLS flavours. Currently the installation package refers to the facility as either ISIS or DLS/Diamond. Things needs to be removed and replaced with a more generic name.
 
 The key point to remember is that the install package is designed to give people a taste of ICAT, so must be simple and generic. Could also investigate whether an internal/memory database could be used rather than an oracle installation (see Database independence issue below)
+
+Another idea is to create a virtual appliance (virtual machine instance) which has everything installed and ready to go. Would need to be careful with redistribution of Oracle etc!
 
 Why: Increases ease of trialling ICAT at new institutions. Better adoption
 
