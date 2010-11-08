@@ -87,7 +87,10 @@ When: ?
 
 ===Extra methods===
 
-What: In order to meet requirements for TopCAT some extra methods are required: 1) GetCyclesForInstrumentWithData(sessionId, Instrument)  and 2)GetCyclesForInstrumentWithMyData(sessionId, Instrument)
+What: In order to meet requirements for TopCAT some extra methods are required: 
+1) GetCyclesForInstrumentWithData(sessionId, Instrument)  
+2) GetCyclesForInstrumentWithMyData(sessionId, Instrument)
+3) GetInstrumentsWithMyData(sessionId)
 
 Why: provide functionality for TopCAT
 
