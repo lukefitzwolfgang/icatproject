@@ -1,6 +1,12 @@
 ==ICAT Development Ideas==
 
 Version 1.0 - TG - Uploaded 08/11/2010
+Version 1.1 - TG - 09/11/2010
+
+==About this wiki page==
+The this document) is simply intended as a collection of brain-dumps to stimulate discussion between the facilities using and developing ICAT and our next project VC, on the 18th November 2010 at 13:00 GMT.
+Please try to include What and Why to explain what the idea/problem is and why it should be addressed. Who and When are very much optional to aid discussion, and are in no way intended as a concrete plan.
+
 
 ==ICAT Core==
 
@@ -96,9 +102,9 @@ What: In order to meet requirements for TopCAT some extra methods are required:
 
 Why: provide functionality for TopCAT
 
-When: ?
+When: This is needed urgently for TopCAT so has already been added as tickets and work started
 
-Who: ?
+Who: by ISIS(Tom)
 
 ==TopCAT ==
 
