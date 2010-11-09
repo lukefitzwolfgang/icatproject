@@ -1,6 +1,7 @@
 ==ICAT Development Ideas==
 
 Version 1.0 - TG - Uploaded 08/11/2010
+
 Version 1.1 - TG - 09/11/2010
 
 ==About this wiki page==
