@@ -1,8 +1,8 @@
 ==ICAT Development Ideas==
 
-Version 1.0 - TG - Uploaded 08/11/2010
-
-Version 1.1 - TG - 09/11/2010
+ * Version 1.0 - TG - Uploaded 08/11/2010
+ * Version 1.1 - TG - 09/11/2010
+ * Version 1.2 - TG - 22/11/2010 - Added items from AM
 
 ==About this wiki page==
 The this document) is simply intended as a collection of brain-dumps to stimulate discussion between the facilities using and developing ICAT and our next project VC, on the 18th November 2010 at 13:00 GMT.
@@ -93,6 +93,14 @@ Why: Meet the uses cases above. Enhanced value (potential use in impact assessme
 Who: ?
 
 When: ?
+
+===Test suite===
+Add a test suite which can be run to ensure the installation of ICAT is complete and correct
+
+===Application Server independence===
+We should ensure ICAT works on other application servers, and provide instructions on how to install it on these. Suggestion is Jboss(5 or 6)
+
+===Improvements in (Log4J) Logging===
 
 ===Extra methods===
 
