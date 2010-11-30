@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+Requirements for a usage reporting system for ICAT
 
 = Reporting Requirements =
 
@@ -16,4 +16,16 @@
 
 == ISIS ==
 
- * items to go here
+*Management Information*
+  # Report on how many people have logged into ICAT in the past x days/weeks/months
+  # Report on data access (downloads) by investigation, dataset, data age (date), instrument, etc, all filterable by user id
+  # Report on search term use and trending, again filterable by user id
+
+
+*User Information*
+  # Answer the 'Who has downloaded my data' question. PI (investigation admin) accessible logging of who has accessed that investigation record, who has downloaded it.
+  # Show my previous searches
+  # Show my previous downloads
+
+*General comments*
+  # All reports to be filterable and sortable by user id, institution, date range (days, months or years)
