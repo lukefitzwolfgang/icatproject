@@ -24,7 +24,7 @@ Actions from ICAT collaboration meeting on 01 December 2010
 
 *(1) Responsibilities of participants:
 ||   ||   || Primary || Secondary ||
-|| TG || Tom Griffin || 5 ||   ||
+|| TG || Tom Griffin || 4 ||   ||
 || SN || Sri Nagella || 4 || 1 ||
 || AM || Alistair Mills || 3 || 2 ||
 || RS || Richard Sinclair || 1 ||   ||
