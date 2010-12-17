@@ -8,7 +8,22 @@ Requirements for a usage reporting system for ICAT
 
 == ILL ==
 
- * items to go here
+ The most important usage reporting requirements at ILL are those under 'Management Information' of ISIS.
+(perhaps with the possibility to restrict reports on cycles).
+
+Additionally there is a requirement at ILL for 'datafile and parameter' reports like e.g.:
+(Wavelength as example, could be every parameter for an instrument)
+- Report on the average wavelength expansion on Instrument X in the past x days/weeks/months/cycles
+  (Result: list of period - avgVal pairs)
+- Report on the wavelength distribution for instrument X in the past x days/weeks/months/cycles 
+  (result: list of wavelength - #datafile pairs)
+- How was the total wavelength distribution for instrument X grouped by reactorcycles/years.
+  (result: for each cycles/period a list of wavelength - #datafile pairs)
+- Compare the average wavelength expansion for 2 or more instruments in the past x days/weeks/months/cycles 
+- Evt. answer to questions like: Are there typical dependencies between the values of the parameters (p1, ..., pN)
+  for an instrument? 
+Requesters: Scientific responsibles (but also interesting for ILL's instrument responsibles, management,
+scientists or ICAT users). Similar stats can be imagined on samples (or publications).
 
 == CLF ==
 
