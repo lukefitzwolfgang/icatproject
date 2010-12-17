@@ -1,11 +1,11 @@
 Actions from ICAT collaboration meeting on 16 December 2010<br>
 13.1 - Alistair Mills - 17 December 2010
-|| New || Description || Res*(1) || Status || Comment*(2) ||
+|| New || Description || Res`*`(1) || Status || Comment`*`(2) ||
 || 13.00 || Document this meeting || AM || Ok || . ||
 || 13.01 || Meet again on 6 January 2011 at 1300 GMT || All || - || - ||
 <br><br>
 
-|| Updates || Description || Res*(1) || Status || Comment*(2) ||
+|| Updates || Description || Res`*`(1) || Status || Comment`*`(2) ||
 || 12.01 || Take responsibility for Code documentation || AM || Write a test for the API which documents the API || End Jan 2011 ||
 || 12.02 || Take responsibility for Installation documentation || SN || Work has been done on this by Ron - distribute it || End Jan 2011 ||
 || 12.03 || Take responsibility for My SQL version of icat || RS/AM || Work has been done on this by Richard || End Jan 2011 ||
@@ -25,7 +25,7 @@ Actions from ICAT collaboration meeting on 16 December 2010<br>
 || 12.17 || Provide spec of new method for search || NC/HG || Complete. Sri to verify || Soon ||
 
 
-*(1) Collaborators:
+`*`(1) Collaborators:
 ||   || Present || Apologies ||
 || TG Tom Griffin || + ||   ||
 || SN Sri Nagella || + ||   ||
@@ -38,7 +38,7 @@ Actions from ICAT collaboration meeting on 16 December 2010<br>
 || RF Ron Fowler ||   || + ||
 || GKM Ghita Kouadri Mostefaoui || + ||   ||
 
-*(2) Comments
+`*`(2) Comments
 The dates shown here are the earliest dates when we can expect to see real progress with the work.
 The persons responsible will be expected to provide status on their work at each meeting.
 
@@ -47,7 +47,7 @@ The persons responsible will be expected to provide status on their work at each
 Actions from ICAT collaboration meeting on 01 December 2010<br>
 12.1 - Alistair Mills - 01 December 2010
 
-|| New || Description || Res*(1) || Status || Comment*(2) ||
+|| New || Description || Res`*`(1) || Status || Comment`*`(2) ||
 ||12.00 || Document this meeting || AM || Ok || . ||
 ||12.01 || Take responsibility for Code documentation || AM ||- || End Jan 2011 ||
 ||12.02 || Take responsibility for Installation documentation || SN || - || End Jan 2011 ||
@@ -68,7 +68,7 @@ Actions from ICAT collaboration meeting on 01 December 2010<br>
 || 12.17 || Provide spec of new method for search || NC/HG || - || Soon ||
 || 12.18 || Meet again on 16 December 2010 at 1300 GMT || All || - || - ||
 
-*(1) Responsibilities of participants:
+`*`(1) Responsibilities of participants:
 ||   ||   || Primary || Secondary ||
 || TG || Tom Griffin || 4 ||   ||
 || SN || Sri Nagella || 4 || 1 ||
@@ -80,7 +80,7 @@ Actions from ICAT collaboration meeting on 01 December 2010<br>
 || SF || Steve Fisher || 1 ||   ||        
 || RF || Ron Fowler ||   ||   ||
 
-*(2) Comments
+`*`(2) Comments
 The dates shown here are the earliest dates when we can expect to see real progress with the work.
 The persons responsible will be expected to provide status on their work at each meeting.
 
