@@ -61,10 +61,10 @@ Connect to port 4848 of your glassfish server and login. Then go to "Configurati
 
 This is controlled the file persistence.xml in the deployed application i.e. within the directory: "…/glassfish/domains/domain1/applications/icat/icat3-api-ws_jar/META-INF/"
 
+Find the properties section within the persistence unit named "icat3-exposed" and change the value of the property "eclipselink.logging.level" to "CONFIG", "FINE", "FINER" or "FINEST" to increase the logging level. Note that each time the service is redeployed this configuration file will be overwritten. The output goes to "server.log" in the "logs" directory.
 
-
-
-
-_to be continued ..._
-
+See
+[http://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging JPA logging with eclipselink]
+for more details. This also explains how to direct the output to a different file however 
+this does not appear to work.
  
