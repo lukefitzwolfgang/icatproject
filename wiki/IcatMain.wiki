@@ -25,7 +25,7 @@
  * [SetupDP5 Setting up Dataportal exploded enterprise modules in NetBean]
  * [InstallationIndex2 Index for an updated set of installation pages]
  * [IngestingData]
- * [Control of Logging]
+ * [Logging Control of Logging]
 
 == Developers Resource ==
 
