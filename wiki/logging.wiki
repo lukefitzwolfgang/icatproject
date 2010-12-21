@@ -1,0 +1,13 @@
+= How to control logging in ICAT =
+
+== Introduction ==
+
+The icat service makes use of the Apache log4j mechanism to perform its logging and most of this note is devoted to this aspect of logging. However it may also be necessary to control the logging of the application server - assumed here to be glassfish v3.0 and of the database access layer, eclipselink.
+
+== log4j ==
+
+The [http://logging.apache.org/log4j/1.2/index.html log4j] package is one of several logging packages used for Java. Sources of logging messages are arranged in a tree structure. ICAT has chosen this tree structure to match precisely the package structure of the code. This means that to manipulate all logging you do something at the "uk" level, if you want to affect all managers you use "uk.icat3.manager" or if you are just interested in the ParameterManager class then specify "uk.icat3.manager.ParameterManager"
+
+_to be continued ..._
+
+ 
