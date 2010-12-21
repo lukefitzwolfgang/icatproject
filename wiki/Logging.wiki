@@ -1,3 +1,4 @@
+#labels Installation
 = How to control logging in ICAT =
 
 == Introduction ==
@@ -6,7 +7,63 @@ The icat service makes use of the Apache log4j mechanism to perform its logging 
 
 == log4j ==
 
-The [http://logging.apache.org/log4j/1.2/index.html log4j] package is one of several logging packages used for Java. Sources of logging messages are arranged in a tree structure. ICAT has chosen this tree structure to match precisely the package structure of the code. This means that to manipulate all logging you do something at the "uk" level, if you want to affect all managers you use "uk.icat3.manager" or if you are just interested in the ParameterManager class then specify "uk.icat3.manager.ParameterManager"
+The [http://logging.apache.org/log4j/1.2/index.html log4j] package is one of several logging packages used for Java. Sources of logging messages are arranged in a tree structure. ICAT has chosen this tree structure to match precisely the package structure of the code. This means that to manipulate all logging you do something at the "uk" level, if you want to affect all managers you use "uk.icat3.manager" or if you are just interested in the !ParameterManager class then specify "uk.icat3.manager.!ParameterManager". Each logging message has an associated severity level associated with it by the ICAT code. This may take values "TRACE", "DEBUG", "WARNING", "INFO", "ERROR" and "FATAL".
+
+A file called log4j.properties (located in the case of glassfish in .../glassfish/domains/domain1/config) is used to configure the system. The file is read when the application is deployed and is checked once a minute for any changes. If it is found to have changed it is read again. The log4.properties file defines _appenders_ and controls which messages are sent to which appenders. If no log4j.properties file is found then information is sent to the server.log file in .../glassfish/domains/domain1/logs. 
+
+There are various kinds of appender for writing to files, to syslog to the _system console_ and to a socket.
+
+The [http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PropertyConfigurator.html Javadoc for the PropertyConfigurator] describes in detail the format of the log4j.properties file.
+
+The installation script for icat copies a file into the config directory as shown below:
+
+{{{
+log4j.rootLogger=WARN, logfile, socket
+
+log4j.appender.logfile=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.logfile.Threshold=INFO
+log4j.appender.logfile.file=../logs/icat-api.log
+log4j.appender.logfile.MaxBackupIndex=10
+log4j.appender.logfile.layout=org.apache.log4j.PatternLayout
+log4j.appender.logfile.layout.ConversionPattern=%d [%t] %-5p %C{1} - %m%n
+
+log4j.appender.socket=org.apache.log4j.net.SocketAppender
+log4j.appender.socket.RemoteHost=localhost
+log4j.appender.socket.Port=4560
+log4j.appender.socket.LocationInfo=false
+
+#log4j.logger.uk = TRACE
+}}}
+
+The first line defines the default logging level to be WARN so all messages with severity of WARN or higher are candidates to be processed by an appender. Two appenders are specified: "logfile" and "socket". The next two blocks define these appenders. 
+
+The first appender has a threshold of "INFO" this means that it will never log anything less important than INFO. It writes to the logs directory and has a ConversionPattern which defines the detailed format of the printed message.
+
+The second appender writes to a socket. The allows the chainsaw tool to be used to watch the log messages.
+
+The final line is commented out. If uncommented it will cause all icat code to produce trace logging.
+
+You will find that if you uncomment the last line logging output will appear within one minute. If you then comment it out again however the logging will not go away. To make it go away you need to specify:
+{{{
+log4j.logger.uk = INHERIT
+}}}
+which tells log4j to take the next level up in the tree - which in this configuration file is the top level one of "WARN".
+
+=== Chainsaw ===
+
+Chainsaw is a a tool that is able to read XML formatted logs (which have not been discussed) or more usefully to connect to a log4j socket appender. To use it start up chainsaw and a box will pop up saying you have no receivers defined. Select a "simple receiver" on port 4560. After a short time a tab labelled "127.0.0.1-" will appear showing log messages. The connection may take a little time to get established. The best way to learn to use it is to play with it. Make sure that the "logger tree pane" is turned on on the "Current tab" menu. Try selecting a node in the tree on the left followed by a "right click" or try right clicking on a message. It is a powerful tool. It is suggested that for debugging, log4j is set to send trace level information and chainsaw is used to do the selection of messages of interest.
+
+== Controlling glassfish logging ==
+
+Connect to port 4848 of your glassfish server and login. Then go to "Configuration"/"Logger Settings". This offers two tabs "General" and "Log Levels". Changes to log levels are reflected in the file "logging.properties" in the "config" directory. By default the output goes to "server.log" in the "logs" directory.
+
+== Controlling the logging from the database access layer ==
+
+This is controlled the file persistence.xml in the deployed application i.e. within the directory: "…/glassfish/domains/domain1/applications/icat/icat3-api-ws_jar/META-INF/"
+
+
+
+
 
 _to be continued ..._
 
