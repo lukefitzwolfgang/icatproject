@@ -26,7 +26,7 @@ import uk.icat3.exceptions.ValidationException;
 @Table(name = "DATASET_DOI")
 @NamedQueries({
     @NamedQuery(name = "DatasetDoi.findAll", query = "SELECT d FROM DatasetDoi d"),
-    @NamedQuery(name = "DatasetDoi.findById", query = "SELECT d FROM DatasetDoi d WHERE d.id = :id"),
+    @NamedQuery(name = "DatasetDoi.findById", query = "SELECT d FROM DatasetDoi d WHERE d.id = :id")
 })
 public class DatasetDoi extends Doi implements Serializable {
 

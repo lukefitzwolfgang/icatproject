@@ -23,6 +23,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlSeeAlso;
 import uk.icat3.exceptions.ValidationException;
 
 /**
@@ -41,6 +42,7 @@ import uk.icat3.exceptions.ValidationException;
     @NamedQuery(name = "Doi.findByName", query = "SELECT d FROM Doi d WHERE d.name = :name"),
     @NamedQuery(name = "Doi.findByNameAndServer", query = "SELECT d FROM Doi d WHERE d.name = :name AND d.doiServer.serverName = :serverName")
 })
+@XmlSeeAlso({InvestigationDoi.class,DatasetDoi.class,DatafileDoi.class})
 public class Doi implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="ICAT_AUTHORISATION_SEQ")

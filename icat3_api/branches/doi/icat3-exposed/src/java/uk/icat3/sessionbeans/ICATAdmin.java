@@ -11,6 +11,7 @@ package uk.icat3.sessionbeans;
 
 import javax.annotation.security.DeclareRoles;
 import javax.annotation.security.RolesAllowed;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -19,9 +20,18 @@ import javax.interceptor.Interceptors;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import javax.xml.bind.annotation.XmlSeeAlso;
 import org.apache.log4j.Logger;
+import uk.icat3.entity.DatafileDoi;
+import uk.icat3.entity.DatasetDoi;
+import uk.icat3.entity.Doi;
+import uk.icat3.entity.InvestigationDoi;
+import uk.icat3.exceptions.DoiNotFoundException;
+import uk.icat3.exceptions.NoSuchObjectFoundException;
 import uk.icat3.exceptions.NoSuchUserException;
 import uk.icat3.exceptions.SessionException;
+import uk.icat3.exceptions.ValidationException;
+import uk.icat3.sessionbeans.manager.DoiManagerLocal;
 import uk.icat3.user.UserDetails;
 
 /**
@@ -40,7 +50,9 @@ import uk.icat3.user.UserDetails;
 public class ICATAdmin extends EJBObject /*implements ICATLocal*/ {
     
     static Logger log = Logger.getLogger(ICATAdmin.class);
-    
+    /////////////////////// Inject all EJB's ///////////////////////////////////
+    @EJB
+    protected DoiManagerLocal doiManagerLocal;
     /** Creates a new instance of AllOperationsBean */
     public ICATAdmin() {
     }
@@ -94,5 +106,28 @@ public class ICATAdmin extends EJBObject /*implements ICATLocal*/ {
     
     
     ///////////////////////////     End of Datafile Manager methods  /////////////////////////////////////////
+
+    ///////////////////////////     Doi Manager methods  /////////////////////////////////////////
+    @WebMethod
+    public InvestigationDoi createInvestigationDoi(Long investigationId, String doi, String doiServerName) throws NoSuchObjectFoundException, ValidationException {
+        return doiManagerLocal.createInvestigationDoi(investigationId, doi, doiServerName);
+    }
+    @WebMethod
+    public DatasetDoi createDatasetDoi(Long datasetId, String doi, String doiServerName) throws NoSuchObjectFoundException, ValidationException{
+        return doiManagerLocal.createDatasetDoi(datasetId, doi, doiServerName);
+    }
+    @WebMethod
+    public DatafileDoi createDatafileDoi(Long datafileId, String doi, String doiServerName) throws NoSuchObjectFoundException, ValidationException{
+        return doiManagerLocal.createDatafileDoi(datafileId, doi, doiServerName);
+    }
+    @WebMethod
+    public boolean updateDoi(Doi doiInput) throws DoiNotFoundException, ValidationException{
+        return doiManagerLocal.updateDoi(doiInput);
+    }
+    @WebMethod
+    public Doi getDoi(String doi,String serverName) throws DoiNotFoundException{
+        return doiManagerLocal.getDoi(doi, serverName);
+    }
+    ///////////////////////////     End of Doi Manager methods  /////////////////////////////////////////
     
 }

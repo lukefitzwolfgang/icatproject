@@ -25,7 +25,7 @@ import uk.icat3.exceptions.ValidationException;
 @Table(name = "INVESTIGATION_DOI")
 @NamedQueries({
     @NamedQuery(name = "InvestigationDoi.findAll", query = "SELECT i FROM InvestigationDoi i"),
-    @NamedQuery(name = "InvestigationDoi.findById", query = "SELECT i FROM InvestigationDoi i WHERE i.id = :id"),
+    @NamedQuery(name = "InvestigationDoi.findById", query = "SELECT i FROM InvestigationDoi i WHERE i.id = :id")
 })
 public class InvestigationDoi extends Doi implements Serializable {
 
