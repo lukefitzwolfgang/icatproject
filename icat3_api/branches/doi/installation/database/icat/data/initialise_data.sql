@@ -389,5 +389,9 @@ Insert into PARAMETER
  Values
    ('temperature_std', 'Kelvin', 'Kelvin', 'Y', 'Y', 'Y', 'Y', 'Y', 'FIRST PROPAGATION', TO_TIMESTAMP('02/01/2007 11:32:57.5','DD/MM/YYYY HH24:MI:SS.FF'), TO_TIMESTAMP('02/01/2007 11:25:14.7','DD/MM/YYYY HH24:MI:SS.FF'), 'FIRST PROPAGATION', 'Y', 'N', 'Y');
 
+Insert into DOI_SERVER
+   (ID, SERVER_NAME, SERVER_URL)
+  Values
+   (1,'British Library','http://dx.doi.org/'); 
 COMMIT;
 

@@ -34,6 +34,11 @@
     <class>uk.icat3.entity.TopicList</class>
     <class>uk.icat3.entity.FacilityInstrumentScientist</class>
     <class>uk.icat3.entity.FacilityInstrumentScientistPK</class>
+    <class>uk.icat3.entity.InvestigationDoi</class>
+    <class>uk.icat3.entity.DatasetDoi</class>
+    <class>uk.icat3.entity.Doi</class>
+    <class>uk.icat3.entity.DatafileDoi</class>
+    <class>uk.icat3.entity.DoiServer</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <!-- Prints out SQL generated from EJBQL -->

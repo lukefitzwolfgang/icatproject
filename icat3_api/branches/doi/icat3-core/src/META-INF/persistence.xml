@@ -34,6 +34,11 @@
     <class>uk.icat3.entity.TopicList</class>
     <class>uk.icat3.entity.FacilityInstrumentScientist</class>
     <class>uk.icat3.entity.FacilityInstrumentScientistPK</class>
+    <class>uk.icat3.entity.InvestigationDoi</class>
+    <class>uk.icat3.entity.DatasetDoi</class>
+    <class>uk.icat3.entity.Doi</class>
+    <class>uk.icat3.entity.DatafileDoi</class>
+    <class>uk.icat3.entity.DoiServer</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <!-- Prints out SQL generated from EJBQL -->
@@ -41,7 +46,7 @@
       <!-- No caching of entity data -->
       <property name="eclipselink.cache.shared.default" value="false"/>
       <property name="eclipselink.cache.type.default" value="NONE"/>
-      <property name="eclipselink.cache.size.default" value="0"/> 
+      <property name="eclipselink.cache.size.default" value="0"/>
       <property name="eclipselink.query-results-cache" value="false"/>
       <property name="eclipselink.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/XE"/>
       <property name="eclipselink.jdbc.password" value="password"/>

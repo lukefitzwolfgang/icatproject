@@ -42,8 +42,6 @@ public class DoiServer implements Serializable {
     private String serverName;
     @Column(name = "SERVER_URL")
     private String serverUrl;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "doiServer")
-    private Collection<Doi> doiCollection;
 
     public DoiServer() {
     }
@@ -74,14 +72,6 @@ public class DoiServer implements Serializable {
 
     public void setServerUrl(String serverUrl) {
         this.serverUrl = serverUrl;
-    }
-
-    public Collection<Doi> getDoiCollection() {
-        return doiCollection;
-    }
-
-    public void setDoiCollection(Collection<Doi> doiCollection) {
-        this.doiCollection = doiCollection;
     }
 
     @Override
