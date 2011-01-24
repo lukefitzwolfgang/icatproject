@@ -1,0 +1,35 @@
+= IN PROGRESS (DRAFT) =
+
+Initial suggestion for the agenda for the ICAT meeting on 8th Feb 2010 at SOLEIL, Paris
+
+= Agenda =
+
+Start: 09:30 ; finish~5pm
+
+|| Time || Item || Lead || mins ||
+|| 09:30 || Introduction || Tom || 15 ||
+|| 09:45 || Facility status reports ||
+|| 09:45 || ILL || Holger || 15 ||
+|| 10:00 || ISIS || Tom || 15 ||
+|| 10:15 || CLF || Alistair/Steve || 15 ||
+|| 10:30 || ELETTRA || Fabio/Roby || 15 ||
+|| 10:45 || Coffee ||
+|| 11:00 || TopCAT ||
+
+
+  * SOLEIL status? 
+  * Diamond status?
+  * I2S2 (Personal ICAT)
+  * Database independence (MySQL)
+  * DOIs
+  * Publication linking
+  * What is a parameter?
+  * Reporting in ICAT see: ReportingRequirements 
+  * Parameter searching? Interface for Parameter searching?
+
+Topics for discussion
+  * Position and perception of ICAT by its users. 
+  * Importance of the search on more than one ICAT instance (importance and usecases ; possibilities ; problems (instruments -> parameters))
+  * The role of scientific stats from ICAT (importance and usecases, requirements I added to the wiki page)
+  * Relation between ICAT and Analyses-Software (a member of the ILL computing group is preparing a prototype for a software catalog for the PanData project)
+
