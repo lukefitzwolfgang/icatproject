@@ -1,35 +1,144 @@
-= IN PROGRESS (DRAFT) =
+<table style="width: 100%" border="1px">
+				<tr>			<td style="width: 25%" class="style2">Session 1 - Facility Reports</td>
+								<td style="width: 55%" class="style2"></td>
+								<td style="width: 20%" class="style2">Chair - Stephane Poirier</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">09:30</td>
+								<td style="width: 55%" class="style2">Introductions</td>
+								<td style="width: 20%" class="style2">All</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">09:45</td>
+								<td style="width: 55%" class="style2">ILL</td>
+								<td style="width: 20%" class="style2">Holger Gebhard</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">10:00</td>
+								<td style="width: 55%" class="style2">ISIS and TopCAT</td>
+								<td style="width: 20%" class="style2">Tom Griffin</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">10:15</td>
+								<td style="width: 55%" class="style2">CLF</td>
+								<td style="width: 20%" class="style2">Steve Fisher</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">10:40</td>
+								<td style="width: 55%" class="style2">ELETTRA</td>
+								<td style="width: 20%" class="style2">Fabio Bonnacorso</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2"></td>
+								<td style="width: 55%" class="style2"></td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">11:00</td>
+								<td style="width: 55%" class="style2">Coffee</td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2"></td>
+								<td style="width: 55%" class="style2"></td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">Session 2 - Parameters 
+								and Searching</td>
+								<td style="width: 55%" class="style2"></td>
+								<td style="width: 20%" class="style2">Chair - Alistair Mills</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">11:15</td>
+								<td style="width: 55%" class="style2">Discussion<br />
+ - What is a parameter?<br />
+ - How should parameters be represented<br />
+ - Cross facility searching - use cases, importance,<br />
+ possibilities, problems<br />
+ - Searching methods and interface </td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2"></td>
+								<td style="width: 55%" class="style2"></td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">12:30</td>
+								<td style="width: 55%" class="style2">Lunch at the SOLEIL 
+								restaurant</td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%; height: 21px" class="style2"></td>
+								<td style="height: 21px; width: 55%" class="style2"></td>
+								<td style="height: 21px; width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">Session 3 - API and 
+								Changes</td>
+								<td style="width: 55%" class="style2"></td>
+								<td style="width: 20%" class="style2">Chair - Holger Gebhard</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">13:30</td>
+								<td style="width: 55%" class="style2">Discussion<br />
+ - Reporting in ICAT (usage reporting, scientific stats)<br />
+ - Authorisation model<br />
+ - XMLIngest<br />
+ - Documentation of the API<br />
+ - Error/exception handling</td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2"></td>
+								<td style="width: 55%" class="style2"></td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">15:15</td>
+								<td style="width: 55%" class="style2">Coffee</td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2"></td>
+								<td style="width: 55%" class="style2"></td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">Session 4 - Extensions</td>
+								<td style="width: 55%" class="style2"></td>
+								<td style="width: 20%" class="style2">Chair - Freddie Akeroyd</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">15:30</td>
+								<td style="width: 55%" class="style2">DOIs at STFC</td>
+								<td rowspan="2" style="width: 20%" class="style2">Tom Griffin</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2"></td>
+								<td style="width: 55%" class="style2">Database independence</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">15:45</td>
+								<td style="width: 55%" class="style2">I2S2 - Personal ICAT</td>
+								<td style="width: 20%" class="style2">Brian Matthews</td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">16:15</td>
+								<td style="width: 55%" class="style2">Discussion<br />
+ - DOIs<br />
+ - Database and application server independance<br />
+ - I2S2<br />
+ - Publication linking<br />
+ - Relationship between ICAT and analysis software</td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
+				<tr>
+								<td style="width: 25%" class="style2">16:45</td>
+								<td style="width: 55%" class="style2">Meeting Finishes</td>
+								<td style="width: 20%" class="style2"></td>
+				</tr>
 
-Initial suggestion for the agenda for the ICAT meeting on 8th Feb 2010 at SOLEIL, Paris
-
-= Agenda =
-
-Start: 09:30 ; finish~5pm
-
-|| Time || Item || Lead || mins ||
-|| 09:30 || Introduction || Tom || 15 ||
-|| 09:45 || Facility status reports ||
-|| 09:45 || ILL || Holger || 15 ||
-|| 10:00 || ISIS || Tom || 15 ||
-|| 10:15 || CLF || Alistair/Steve || 15 ||
-|| 10:30 || ELETTRA || Fabio/Roby || 15 ||
-|| 10:45 || Coffee ||
-|| 11:00 || TopCAT ||
-
-
-  * SOLEIL status? 
-  * Diamond status?
-  * I2S2 (Personal ICAT)
-  * Database independence (MySQL)
-  * DOIs
-  * Publication linking
-  * What is a parameter?
-  * Reporting in ICAT see: ReportingRequirements 
-  * Parameter searching? Interface for Parameter searching?
-
-Topics for discussion
-  * Position and perception of ICAT by its users. 
-  * Importance of the search on more than one ICAT instance (importance and usecases ; possibilities ; problems (instruments -> parameters))
-  * The role of scientific stats from ICAT (importance and usecases, requirements I added to the wiki page)
-  * Relation between ICAT and Analyses-Software (a member of the ILL computing group is preparing a prototype for a software catalog for the PanData project)
-
+</table>
