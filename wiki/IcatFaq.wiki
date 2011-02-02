@@ -1,4 +1,4 @@
-#summary Frequently Asked Question.
+#summary Frequently Asked Questions.
 #labels Icat-Generic
 
 
