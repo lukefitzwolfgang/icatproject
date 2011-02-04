@@ -1,5 +1,5 @@
 <table style="width: 100%" border="1px">
-				<tr>			<td style="width: 25%" class="style2">Session 1 - Facility Reports</td>
+				<tr>			<td style="width: 25%" class="style2"><b>Session 1 - Facility Reports</b></td>
 								<td style="width: 55%" class="style2"></td>
 								<td style="width: 20%" class="style2">Chair - Stephane Poirier</td>
 				</tr>
@@ -35,7 +35,7 @@
 				</tr>
 				<tr>
 								<td style="width: 25%" class="style2">11:00</td>
-								<td style="width: 55%" class="style2">Coffee</td>
+								<td style="width: 55%" class="style2"><b>Coffee</b></td>
 								<td style="width: 20%" class="style2"></td>
 				</tr>
 				<tr>
@@ -44,8 +44,8 @@
 								<td style="width: 20%" class="style2"></td>
 				</tr>
 				<tr>
-								<td style="width: 25%" class="style2">Session 2 - Parameters 
-								and Searching</td>
+								<td style="width: 25%" class="style2"><b>Session 2 - Parameters 
+								and Searching</b></td>
 								<td style="width: 55%" class="style2"></td>
 								<td style="width: 20%" class="style2">Chair - Alistair Mills</td>
 				</tr>
@@ -66,8 +66,8 @@
 				</tr>
 				<tr>
 								<td style="width: 25%" class="style2">12:30</td>
-								<td style="width: 55%" class="style2">Lunch at the SOLEIL 
-								restaurant</td>
+								<td style="width: 55%" class="style2"><b>Lunch at the SOLEIL 
+								restaurant</b></td>
 								<td style="width: 20%" class="style2"></td>
 				</tr>
 				<tr>
@@ -76,8 +76,8 @@
 								<td style="height: 21px; width: 20%" class="style2"></td>
 				</tr>
 				<tr>
-								<td style="width: 25%" class="style2">Session 3 - API and 
-								Changes</td>
+								<td style="width: 25%" class="style2"><b>Session 3 - API and 
+								Changes</b></td>
 								<td style="width: 55%" class="style2"></td>
 								<td style="width: 20%" class="style2">Chair - Holger Gebhard</td>
 				</tr>
@@ -98,7 +98,7 @@
 				</tr>
 				<tr>
 								<td style="width: 25%" class="style2">15:15</td>
-								<td style="width: 55%" class="style2">Coffee</td>
+								<td style="width: 55%" class="style2"><b>Coffee</b></td>
 								<td style="width: 20%" class="style2"></td>
 				</tr>
 				<tr>
@@ -107,7 +107,7 @@
 								<td style="width: 20%" class="style2"></td>
 				</tr>
 				<tr>
-								<td style="width: 25%" class="style2">Session 4 - Extensions</td>
+								<td style="width: 25%" class="style2"><b>Session 4 - Extensions</b></td>
 								<td style="width: 55%" class="style2"></td>
 								<td style="width: 20%" class="style2">Chair - Freddie Akeroyd</td>
 				</tr>
