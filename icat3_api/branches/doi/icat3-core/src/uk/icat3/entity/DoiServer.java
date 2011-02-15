@@ -18,6 +18,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
@@ -33,10 +34,11 @@ import javax.persistence.Table;
     @NamedQuery(name = "DoiServer.findById", query = "SELECT d FROM DoiServer d WHERE d.id = :id"),
     @NamedQuery(name = "DoiServer.findByServerName", query = "SELECT d FROM DoiServer d WHERE d.serverName = :serverName"),
     @NamedQuery(name = "DoiServer.findByServerUrl", query = "SELECT d FROM DoiServer d WHERE d.serverUrl = :serverUrl")})
+@SequenceGenerator(name="DOI_SERVER_SEQ",sequenceName="DOI_SERVER_ID_SEQ",allocationSize=1)
 public class DoiServer implements Serializable {
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="ICAT_AUTHORISATION_SEQ")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="DOI_SERVER_SEQ")
     private Long id;
     @Column(name = "SERVER_NAME")
     private String serverName;

@@ -22,6 +22,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import uk.icat3.exceptions.ValidationException;
@@ -43,9 +44,10 @@ import uk.icat3.exceptions.ValidationException;
     @NamedQuery(name = "Doi.findByNameAndServer", query = "SELECT d FROM Doi d WHERE d.name = :name AND d.doiServer.serverName = :serverName")
 })
 @XmlSeeAlso({InvestigationDoi.class,DatasetDoi.class,DatafileDoi.class})
+@SequenceGenerator(name="DOI_SEQ",sequenceName="DOI_ID_SEQ",allocationSize=1)
 public class Doi implements Serializable {
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="ICAT_AUTHORISATION_SEQ")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="DOI_SEQ")
     @Column(name = "ID")
     protected Long id;
     @Column(name = "NAME")
