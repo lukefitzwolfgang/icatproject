@@ -38,7 +38,7 @@ TG Tom Griffin - STFC <br>
 HG Holger Gebhard - ILL <br>
 SF Steve Fisher - STFC <br>
 AM Alistair Mills - STFC <br>
-RX Hienz-Joesph Weyer - PSI <br>
+HJ Heinz-Joesph Weyer - PSI <br>
 FA Freddy Akeroyd - STFC <br>
 JR Jessica Robinson – STFC <br>
 BM Brian Matthews - STFC <br>
