@@ -2,12 +2,13 @@
 
 The full agenda for the meeting is available at Paris2011Agenda
 
-==Slides (coming soon)==
-ICAT at ILL <br>
-ICAT at ISIS <br>
-CLF <br>
-DOIs <br>
-MySQL <br>
+==Slides ==
+ICAT at ILL - coming soon<br>
+[http://icatproject.googlecode.com/svn/icat3_api/trunk/Documentation/Paris2011Talks/ICAT_and_TopCAT_TG.pdf ICAT at ISIS]<br>
+CLF - coming soon<br>
+[http://icatproject.googlecode.com/svn/icat3_api/trunk/Documentation/Paris2011Talks/DOIs_and_MySQL.pdf DOIs] <br>
+[http://icatproject.googlecode.com/svn/icat3_api/trunk/Documentation/Paris2011Talks/MySQL_slides.pdf MySQL] <br>
+Parameter Search Proposal (SF) - coming soon
 
 ==Headline Discussion Points==
 
