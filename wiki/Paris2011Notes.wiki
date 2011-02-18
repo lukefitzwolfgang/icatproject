@@ -2,6 +2,13 @@
 
 The full agenda for the meeting is available at Paris2011Agenda
 
+==Slides (coming soon)==
+ICAT at ILL <br>
+ICAT at ISIS <br>
+CLF <br>
+DOIs <br>
+MySQL <br>
+
 ==Headline Discussion Points==
 
   * ISIS and ILL to joint release their ICATs ~27th Feb 2007
