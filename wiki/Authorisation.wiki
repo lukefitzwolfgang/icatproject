@@ -31,7 +31,7 @@ This table has following fields with details
 ||ELEMENT_ID||This is generally the id associated with the ELEMENT_TYPE element for which authorisation is set. the exception are: <br> If null and ELEMENT_TYPE='DATASET' then user can create datasets for the linked investigation depending on the user ROLE permission.<br> if null and ELEMENT_TYPE='INVESTIGATION' this means the user can create investigations; in practice only two record like this should exist in ICAT, one for GUARDIAN and one for the SUPER_USER. ||
 ||PARENT_ELEMENT_TYPE||This is there for quick lookup of parent element type of ELEMENT_ID, usually used for DATASET elements||
 ||PARENT_ELEMENT_ID||This is parent key id for the element||
-||USER_CHILD_RECORD|| TODO:? ||
+||USER_CHILD_RECORD|| This is an optimisation. this connects a child record where the element id is null and ELEMENT_TYPE is DATASET indicating that the user in that case can create datasets in the investigation with the actual parent investigation. This makes it easier for the API to quickly check if a user has create privileges in a particular investigation  ||
 
 ==*ICAT_ROLE*==
 This table has the Role and Actions that are allowed,
