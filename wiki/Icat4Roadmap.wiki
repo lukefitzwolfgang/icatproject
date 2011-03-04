@@ -16,7 +16,7 @@ Note that words like additional, and improved relate to icat-3.  Some of these f
     September 2011
     
 == Release criteria ==
-	- compatible with TopCAT 1.0;
+    * compatible with TopCAT 1.0;
     * functionality requirements (TBD);
     * performance requirements (TBD);
     * documentation requirements (TBD);
@@ -36,7 +36,7 @@ Note that words like additional, and improved relate to icat-3.  Some of these f
     * improved error handling in XMLingest;
     * return of the study aggregation of investigations;
     * relatedDatafile exposed in the API (already in the database);
-	- Software / application table links;
+    * Software / application table links;
     * ability to do some cross ICAT relationships, for example at the level of a study, such so an ISIS investigation can be related to Diamond and ILL investigations which are part of the same research program.
 
 == Support for TopCat ==
@@ -51,7 +51,7 @@ Note that words like additional, and improved relate to icat-3.  Some of these f
     * Glassfish 2.1.
 
 == Performance ==
-    * TBD * see release requirements.
+    * TBD - see release requirements.
 
 == Additional operating environments  ==
 As part of the long term objective of making ICAT a portable system which is not dependent on specific products, ensure during testing that ICAT4 functions correctly with the following:
