@@ -1,20 +1,19 @@
 #summary Who's Who?
-#labels Icat-Generic
+#labels Icat-Generic,Members,People
 
 
-|| *_Name             _* || *_Google account_*  || *_Group_* || *_Role_*  || *_Responsibilities _*  ||
-|| Sri Nagella       ||srikanthnag || ESC || ICAT Developer ||  ||
-|| Tom Griffin || tangrif...@hotmail.com || ISIS || Developer || ||
-
-|| Shirley Crompton  || syc.unitedkingdom || ESC || [http://www.consequence-project.eu/showcase_scenarios.html Consequence Test Bed] Leader ||  ||
-|| Peter Turner      ||Peter.Turner.Email || University of Sydney, School of Chemistry ||  ||  ||
-|| Roger Downing|| roger.downing|| ESC || Master of SRB and StorageD(DLS data pipeline) || ||
-|| Brian Matthews    || || ESC || Group Leader || ||
-|| Lakshmi Sastry    || || ESC || CLF eCAT project manager || ||
-|| Gordon Brown      || || ESC || Databases group leader || ||
-|| Keir Hawker       || || ESC || Databases administrator || ||
-|| Carmine Cioffi    || || ESC || Databases administrator || ||
-|| Kenneth Shankland || || ISIS|| ISIS analysis group leader || ||
-|| Alun Ashton       || || DLS || DLS analysis group leader ||  ||
-|| Alistair Mills    || || ESC || ICAT-CLF Project Manager ||  ||
-|| Richard Henwood   || || ESC || ICAT-CLF Developer ||  ||
+|| *_Name             _* || *_Google account_*                  || *_Group_*                        || *_Role_*                         || *_Responsibilities _*    ||
+|| Sri Nagella           ||srikanthnag                          || STFC, ESC                        || ICAT Developer                   ||                          ||
+|| Tom Griffin           || tangrif...@hotmail.com              || STFC, ISIS                       || Developer                        ||                          ||
+|| Ghita Kouadri Mostefaoui ||  -                               || STFC, DLS                        || DLS analysis group member        || -                        ||
+|| Alistair Mills        || -                                   || STFC, ESC                        || ICAT-CLF Project Manager         || -                        ||
+|| Steve Fisher          || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
+|| Holger Gebhard        || -                                   || ILL                              || ICAT-ILL Developer               || -                        ||
+|| Peter Turner          || Peter.Turner.Email                  || University of Sydney, Chemistry  || -                                || -                        ||
+|| Roger Downing         || roger.downing                       || STFC, ESC                        || SRB, StorageD, DLS data pipeline || -                        ||
+|| Brian Matthews        || ESC                                 || STFC, ESC Group Leader           || -                                || -                        ||
+|| Keir Hawker           || -                                   || STFC, ESC                        || Database administrator           || -                        ||
+|| Richard Sinclair      || -                                   || STFC, ESC                        || Database administrator           || -                        ||
+|| Alun Ashton           || -                                   || STFC, DLS                        || DLS analysis group leader        || -                        ||
+|| Ron Fowler            || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
+|| Will Rogers           || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
