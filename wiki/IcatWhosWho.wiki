@@ -3,17 +3,17 @@
 
 
 || *_Name             _* || *_Google account_*                  || *_Group_*                        || *_Role_*                         || *_Responsibilities _*    ||
-|| Sri Nagella           ||srikanthnag                          || STFC, ESC                        || ICAT Developer                   ||                          ||
-|| Tom Griffin           || tangrif...@hotmail.com              || STFC, ISIS                       || Developer                        ||                          ||
-|| Ghita Kouadri Mostefaoui ||  -                               || STFC, DLS                        || DLS analysis group member        || -                        ||
-|| Alistair Mills        || -                                   || STFC, ESC                        || ICAT-CLF Project Manager         || -                        ||
-|| Steve Fisher          || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
-|| Holger Gebhard        || -                                   || ILL                              || ICAT-ILL Developer               || -                        ||
-|| Peter Turner          || Peter.Turner.Email                  || University of Sydney, Chemistry  || -                                || -                        ||
-|| Roger Downing         || roger.downing                       || STFC, ESC                        || SRB, StorageD, DLS data pipeline || -                        ||
-|| Brian Matthews        || ESC                                 || STFC, ESC Group Leader           || -                                || -                        ||
-|| Keir Hawker           || -                                   || STFC, ESC                        || Database administrator           || -                        ||
-|| Richard Sinclair      || -                                   || STFC, ESC                        || Database administrator           || -                        ||
 || Alun Ashton           || -                                   || STFC, DLS                        || DLS analysis group leader        || -                        ||
+|| Roger Downing         || roger.downing                       || STFC, ESC                        || SRB, StorageD, DLS data pipeline || -                        ||
+|| Steve Fisher          || -                                   || STFC, ESC                        || ICAT-CLF Principal Developer     || -                        ||
 || Ron Fowler            || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
+|| Holger Gebhard        || -                                   || ILL                              || ICAT-ILL Developer               || -                        ||
+|| Tom Griffin           || tangrif...@hotmail.com              || STFC, ISIS                       || Developer                        || -                        ||
+|| Keir Hawker           || -                                   || STFC, ESC                        || Database administrator           || -                        ||
+|| Brian Matthews        || -                                   || STFC, ESC Group Leader           || ICAT Manager                     || -                        ||
+|| Alistair Mills        || crcamills                           || STFC, ESC                        || ICAT-CLF Project Manager         || -                        ||
+|| Ghita Kouadri Mostefaoui ||  -                               || STFC, DLS                        || DLS analysis group member        || -                        ||
+|| Sri Nagella           ||srikanthnag                          || STFC, ESC                        || ICAT Developer                   || -                        ||
 || Will Rogers           || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
+|| Richard Sinclair      || -                                   || STFC, ESC                        || Database administrator           || -                        ||
+|| Peter Turner          || Peter.Turner.Email                  || University of Sydney, Chemistry  || -                                || -                        ||
