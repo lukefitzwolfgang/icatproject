@@ -50,6 +50,7 @@
 
  * ISIS Trigger Mechanism
  * Diamond Data Handler
+ * TopCAT [http://code.google.com/p/topcat/]
 
 === FAQ ===
  * [IcatDoc Documentation]
