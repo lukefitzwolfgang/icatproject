@@ -32,6 +32,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.Query;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -75,7 +76,8 @@ import uk.icat3.util.ElementType;
 })
 
 @XmlRootElement
-@SequenceGenerator(name = "DATAFILE_SEQ", sequenceName = "DATAFILE_ID_SEQ", allocationSize = 1)
+//@SequenceGenerator(name = "DATAFILE_SEQ", sequenceName = "DATAFILE_ID_SEQ", allocationSize = 1)
+@TableGenerator(name="DATAFILE_GENERATOR", table="SEQUENCE_TABLE", pkColumnName="NAME", valueColumnName="VALUE", pkColumnValue="datafile", allocationSize=1)
 public class Datafile extends EntityBaseBean implements Serializable {
 
     /**
@@ -83,7 +85,8 @@ public class Datafile extends EntityBaseBean implements Serializable {
      */
     protected static Logger log = Logger.getLogger(Datafile.class);
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DATAFILE_SEQ")
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "DATAFILE_SEQ")
+    @GeneratedValue(strategy=GenerationType.TABLE, generator="DATAFILE_GENERATOR")
     @Column(name = "ID", nullable = false)
     private Long id;
     

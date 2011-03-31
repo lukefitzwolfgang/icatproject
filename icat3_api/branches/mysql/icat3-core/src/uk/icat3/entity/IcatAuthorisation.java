@@ -26,6 +26,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 import javax.xml.bind.annotation.XmlTransient;
 import uk.icat3.exceptions.ValidationException;
 import uk.icat3.util.ElementType;
@@ -60,11 +61,13 @@ import uk.icat3.util.Queries;
     @NamedQuery(name = Queries.ICAT_AUTHORISATION_FINDBY_DATAFILE_DATASET, query = Queries.ICAT_AUTHORISATION_FINDBY_DATAFILE_DATASET_JPQL),
     @NamedQuery(name = Queries.ICAT_AUTHORISATION_FINDBY_ELEMENTID_ELEMENTTYPE_USERID, query=Queries.ICAT_AUTHORISATION_FINDBY_ELEMENTID_ELEMENTTYPE_USERID_JPQL)
 })
-        @SequenceGenerator(name="ICAT_AUTHORISATION_SEQ",sequenceName="ICAT_AUTHORISATION_ID_SEQ",allocationSize=1)
+        //@SequenceGenerator(name="ICAT_AUTHORISATION_SEQ",sequenceName="ICAT_AUTHORISATION_ID_SEQ",allocationSize=1)
+        @TableGenerator(name="ICAT_AUTHORISATION_GENERATOR", table="SEQUENCE_TABLE", pkColumnName="NAME", valueColumnName="VALUE", pkColumnValue="icatauthorisation", allocationSize=1)
         public class IcatAuthorisation extends EntityBaseBean implements Serializable {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="ICAT_AUTHORISATION_SEQ")
+    //@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="ICAT_AUTHORISATION_SEQ")
+    @GeneratedValue(strategy=GenerationType.TABLE, generator="ICAT_AUTHORISATION_GENERATOR")
     @Column(name = "ID", nullable = false)
     private Long id;
     

@@ -33,6 +33,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.Query;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,7 +69,8 @@ import uk.icat3.util.Queries;
     @NamedQuery(name = Queries.DATASET_FINDBY_NAME_NOTDELETED, query=Queries.DATASET_FINDBY_NAME_NOTDELETED_JPQL) 
 })
         @XmlRootElement
-        @SequenceGenerator(name="DATASET_SEQ",sequenceName="DATASET_ID_SEQ",allocationSize=1)
+        //@SequenceGenerator(name="DATASET_SEQ",sequenceName="DATASET_ID_SEQ",allocationSize=1)
+        @TableGenerator(name="DATASET_GENERATOR", table="SEQUENCE_TABLE", pkColumnName="NAME", valueColumnName="VALUE", pkColumnValue="dataset", allocationSize=1)
         public class Dataset extends EntityBaseBean implements Serializable {
     
     /**
@@ -77,7 +79,8 @@ import uk.icat3.util.Queries;
     protected static Logger log = Logger.getLogger(Dataset.class);
     
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="DATASET_SEQ")
+    //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="DATASET_SEQ")
+    @GeneratedValue(strategy=GenerationType.TABLE, generator="DATASET_GENERATOR")
     @Column(name = "ID", nullable = false)
     private Long id;
     

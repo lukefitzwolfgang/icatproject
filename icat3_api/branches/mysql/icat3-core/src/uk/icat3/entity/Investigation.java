@@ -35,6 +35,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.SqlResultSetMapping;
 import javax.persistence.SqlResultSetMappings;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -90,7 +91,8 @@ import uk.icat3.util.Queries;
   //  @SqlResultSetMapping(name="investigationIdMapping",columns={@ColumnResult(name="ID")})
 })
         @XmlRootElement
-        @SequenceGenerator(name="INVESTIGATION_SEQ",sequenceName="INVESTIGATION_ID_SEQ",allocationSize=1)
+        //@SequenceGenerator(name="INVESTIGATION_SEQ",sequenceName="INVESTIGATION_ID_SEQ",allocationSize=1)
+        @TableGenerator(name="INVESTIGATION_GENERATOR", table="SEQUENCE_TABLE", pkColumnName="NAME", valueColumnName="VALUE", pkColumnValue="investigation", allocationSize=1)
         public class Investigation extends EntityBaseBean implements Serializable {
     
     /**
@@ -99,7 +101,8 @@ import uk.icat3.util.Queries;
     protected static Logger log = Logger.getLogger(Investigation.class);
     
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="INVESTIGATION_SEQ")
+    //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="INVESTIGATION_SEQ")
+    @GeneratedValue(strategy=GenerationType.TABLE, generator="INVESTIGATION_GENERATOR")
     @Column(name = "ID", nullable = false)
     private Long id;
     
