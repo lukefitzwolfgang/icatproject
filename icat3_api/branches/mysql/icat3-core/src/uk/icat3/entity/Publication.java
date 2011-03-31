@@ -23,6 +23,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 import javax.xml.bind.annotation.XmlTransient;
 import uk.icat3.util.ElementType;
 
@@ -42,11 +43,13 @@ import uk.icat3.util.ElementType;
         @NamedQuery(name = "Publication.findByModTime", query = "SELECT p FROM Publication p WHERE p.modTime = :modTime"),
         @NamedQuery(name = "Publication.findByModId", query = "SELECT p FROM Publication p WHERE p.modId = :modId")
     })
-@SequenceGenerator(name="PUBLICATION_SEQ",sequenceName="PUBLICATION_ID_SEQ",allocationSize=1)
+//@SequenceGenerator(name="PUBLICATION_SEQ",sequenceName="PUBLICATION_ID_SEQ",allocationSize=1)
+    @TableGenerator(name="PUBLICATION_GENERATOR", table="SEQUENCE_TABLE", pkColumnName="NAME", valueColumnName="VALUE", pkColumnValue="publication", allocationSize=1)
 public class Publication extends EntityBaseBean implements Serializable {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="PUBLICATION_SEQ")
+    //@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="PUBLICATION_SEQ")
+    @GeneratedValue(strategy=GenerationType.TABLE, generator="PUBLICATION_GENERATOR")
     @Column(name = "ID", nullable = false)
     private Long id;
 

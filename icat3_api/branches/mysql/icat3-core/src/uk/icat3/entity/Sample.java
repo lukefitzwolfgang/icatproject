@@ -31,6 +31,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 import javax.xml.bind.annotation.XmlTransient;
 import uk.icat3.exceptions.InsufficientPrivilegesException;
 import uk.icat3.exceptions.ValidationException;
@@ -58,11 +59,13 @@ import uk.icat3.util.Queries;
     @NamedQuery(name = Queries.SAMPLES_BY_NAME, query = Queries.SAMPLES_BY_NAME_JPQL)
     
 })
-        @SequenceGenerator(name="SAMPLE_SEQ",sequenceName="SAMPLE_ID_SEQ",allocationSize=1)
+        //@SequenceGenerator(name="SAMPLE_SEQ",sequenceName="SAMPLE_ID_SEQ",allocationSize=1)
+        @TableGenerator(name="SAMPLE_GENERATOR", table="SEQUENCE_TABLE", pkColumnName="NAME", valueColumnName="VALUE", pkColumnValue="sample", allocationSize=1)
         public class Sample extends EntityBaseBean implements Serializable {
     
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="SAMPLE_SEQ")
+    //@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="SAMPLE_SEQ")
+    @GeneratedValue(strategy=GenerationType.TABLE, generator="SAMPLE_GENERATOR")
     @Column(name = "ID", nullable = false)
     private Long id;
     
