@@ -62,7 +62,7 @@ import uk.icat3.util.Queries;
     @NamedQuery(name = Queries.ICAT_AUTHORISATION_FINDBY_ELEMENTID_ELEMENTTYPE_USERID, query=Queries.ICAT_AUTHORISATION_FINDBY_ELEMENTID_ELEMENTTYPE_USERID_JPQL)
 })
         //@SequenceGenerator(name="ICAT_AUTHORISATION_SEQ",sequenceName="ICAT_AUTHORISATION_ID_SEQ",allocationSize=1)
-        @TableGenerator(name="ICAT_AUTHORISATION_GENERATOR", table="SEQUENCE_TABLE", pkColumnName="NAME", valueColumnName="VALUE", pkColumnValue="icatauthorisation", allocationSize=1)
+        @TableGenerator(name="ICAT_AUTHORISATION_GENERATOR", table="SEQUENCE_TABLE", pkColumnName="NAME", valueColumnName="VALUE", pkColumnValue="icat_authorisation", allocationSize=1)
         public class IcatAuthorisation extends EntityBaseBean implements Serializable {
 
     @Id
