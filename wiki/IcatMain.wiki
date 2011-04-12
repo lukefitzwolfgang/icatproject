@@ -5,6 +5,10 @@
 
 [http://icatproject.blogspot.com/ News]
 
+== Roadmaps ==
+
+ * [Icat4Roadmap Icat4 Roadmap]
+
 == Design ==
 
  * [IcatOverview ICAT Overview]
