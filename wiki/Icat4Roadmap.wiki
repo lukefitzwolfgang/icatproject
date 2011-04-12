@@ -78,7 +78,8 @@ The features of ICAT should be compatible with the following facilities which ar
     * Mantid (STFC/ISIS, SNS)
     * DUO (STFC/DLS);
     * GDA (Generic Dta Aquisition) (STFC/DLS);
-    * Additional authorisation plugin for direct LDAP authorisation,
+    * Additional authorisation plugin for direct LDAP authorisation;
+    * REST web service interface (STFC).
 
 == Packaging changes  ==
     * xmlingest becomes an option (plugin).
