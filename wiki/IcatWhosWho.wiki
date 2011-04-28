@@ -5,7 +5,7 @@
 || *_Name             _* || *_Google account_*                  || *_Group_*                        || *_Role_*                         || *_Responsibilities _*    ||
 || Alun Ashton           || -                                   || STFC, DLS                        || DLS analysis group leader        || -                        ||
 || Roger Downing         || roger.downing                       || STFC, ESC                        || SRB, StorageD, DLS data pipeline || -                        ||
-|| Steve Fisher          || -                                   || STFC, ESC                        || ICAT-CLF Principal Developer     || -                        ||
+|| Steve Fisher          || dr.s.m.fisher                       || STFC, ESC                        || ICAT-CLF Principal Developer     || -                        ||
 || Ron Fowler            || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
 || Holger Gebhard        || -                                   || ILL                              || ICAT-ILL Developer               || -                        ||
 || Tom Griffin           || tangrif...@hotmail.com              || STFC, ISIS                       || Developer                        || -                        ||
