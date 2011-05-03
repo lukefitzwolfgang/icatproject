@@ -14,6 +14,7 @@
 || Alistair Mills        || crcamills                           || STFC, ESC                        || ICAT-CLF Project Manager         || -                        ||
 || Ghita Kouadri Mostefaoui ||  -                               || STFC, DLS                        || DLS analysis group member        || -                        ||
 || Sri Nagella           ||srikanthnag                          || STFC, ESC                        || ICAT Developer                   || -                        ||
+|| Kevin Phipps           || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
 || Will Rogers           || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
 || Richard Sinclair      || -                                   || STFC, ESC                        || Database administrator           || -                        ||
 || Peter Turner          || Peter.Turner.Email                  || University of Sydney, Chemistry  || -                                || -                        ||
