@@ -54,7 +54,7 @@ The software may be installed on Linux, Windows or Mac systems.
 In this document we assume a Linux environment though the steps are the similar
 in all environments.
 
-= Pre-requisites = 
+= Prerequisites = 
 
 == Software to be installed ==
 
@@ -257,8 +257,8 @@ The following sqlplus command verifies that the icatuser table user_table has be
 
 The installation needs an Oracle database to be accessible with user names icat and icatuser:
 
- 1. An installed ICAT 3.4 schema instance on an Oracle DB;
- 2. An accessible empty schema for the ICAT API user session tables on an Oracle DB.
+ # An installed ICAT 3.4 schema instance on an Oracle DB;
+ # An accessible empty schema for the ICAT API user session tables on an Oracle DB.
 
 Environment variables JAVA_HOME and GLASSFISH_HOME represent the root directories for the installations of Java and Glassfish respectively. You should also use the same user for the installation as you are going to use for production.  This user should also be used also for Glassfish.  The reason for this, is that the user must configure passwords which are read by Glassfish.  The installation procedure removes temporary files used by Glassfish. 
 
