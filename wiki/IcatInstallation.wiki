@@ -2,6 +2,10 @@
 
 = ICAT installation =
 
+Authors: Glen Drinkwater, Alistair Mills, Ron Fowler, Steve Fisher
+
+
+
 <wiki:toc max_depth="1" />
 
 
@@ -249,16 +253,12 @@ The following sqlplus command verifies that the icatuser table user_table has be
 
 = ICAT API Installation =
 
-Author: Glen Drinkwater
-
-Revised: Alistair Mills, Ron Fowler
-
 == Prerequisites ==
 
 The installation needs an Oracle database to be accessible with user names icat and icatuser:
 
-   1. An installed ICAT 3.4 schema instance on an Oracle DB;
-   2. An accessible empty schema for the ICAT API user session tables on an Oracle DB.
+ 1. An installed ICAT 3.4 schema instance on an Oracle DB;
+ 2. An accessible empty schema for the ICAT API user session tables on an Oracle DB.
 
 Environment variables JAVA_HOME and GLASSFISH_HOME represent the root directories for the installations of Java and Glassfish respectively. You should also use the same user for the installation as you are going to use for production.  This user should also be used also for Glassfish.  The reason for this, is that the user must configure passwords which are read by Glassfish.  The installation procedure removes temporary files used by Glassfish. 
 
@@ -281,18 +281,12 @@ The previous section on installation of the database schemas required the downlo
 Check ant is installed with the correct version by executing this from the command prompt:
 
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 ant -version 
-</pre>
 }}}
 
 Expect a response such as:
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
 Apache Ant version 1.7.0 compiled on December 13 2006.
-</pre>
 }}}
 
 === Step 03 - Configure databases.properties ===
@@ -334,18 +328,12 @@ Now that the configuration is finished, the installation can start with a series
 === Step 06 - ant -f icat.xml init-config ===
 Use the following command:
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 ant -f icat.xml init-config 
-</pre>
 }}}
 
 Expect a response such as:
 
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
-
 Buildfile: icat.xml
 
 -init-facility-deployment-props:
@@ -363,7 +351,6 @@ init-config:
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
-</pre>
 }}}
 
 
@@ -371,17 +358,11 @@ Total time: 0 seconds
  * Copies a jar file to fix a bug in the StAX Parser in Java 6;
  * If using Linux, manually copy:
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
 INSTALLATION_HOME/lib/wstx-asl-3.9.2.jar 
-</pre>
 }}}
  * to: 
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 JAVA_HOME/jre/lib/endorsed 
-</pre>
 }}}
 
 Root access will normally be needed for this.
@@ -391,17 +372,12 @@ Root access will normally be needed for this.
 === Step 07  - ant -f icat.xml start-domain ===
 Use the following command:
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 ant -f icat.xml start-domain 
-</pre>
 }}}
 
 Expect a response such as the following:
 
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
 Buildfile: icat.xml
 
 start-domain:
@@ -411,50 +387,34 @@ start-domain:
 
 BUILD SUCCESSFUL
 Total time: 13 seconds
-</pre>
-<p><a href="#note-07">If you get an error, see note 07.</a> </p>
 }}}
+If you get an error, see note 07.
+
 
  * Starts the Glassfish server, if it complains of not starting, check:
    * http://localhost:4848;
  * If it still has not started, use the following commands to start and stop and start the glassfish domain domain1:
 
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 GLASSFISH_HOME/bin/asadmin start-domain domain1
 GLASSFISH_HOME/bin/asadmin stop-domain domain1
 GLASSFISH_HOME/bin/asadmin start-domain domain1
-</pre>
 }}}
 
 === Step 08 - ant -f icat.xml install  ===
 If you are re-installing, then you can clean out the glassfish with the following command:  
 
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 ant -f icat.xml clean 
-</pre>
 }}}
 
 Use the following command to install the ICAT API:
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 ant -f icat.xml install 
-</pre>
 }}}
 
 Expect a response such as the following:
 {{{
-#!html
-<pre class="wiki" style="
-white-space: pre-wrap; /* css-3 */
-white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-white-space: -pre-wrap; /* Opera 4-6 */
-white-space: -o-pre-wrap; /* Opera 7 */
-word-wrap: break-word; /* Internet Explorer 5.5+; */ color: blue;">
 Buildfile: icat.xml
 
 install:
@@ -481,9 +441,8 @@ init-config:
 
 BUILD SUCCESSFUL
 Total time: 20 seconds
-</pre>
-<p><a href="#note-08">If you get an error, see note 08.</a> </p>
 }}}
+If you get an error, see note 08.
 
 
  * Creates all the glassfish data sources and connection pools and deploys the icat-api.ws.jar onto Glassfish;
@@ -491,12 +450,9 @@ Total time: 20 seconds
  * If a failure or an error in the context of database connection that includes: 
 
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
 Class not found
-</pre>
-<p><a href="#note-09">See note 09.</a> </p>
 }}}
+See note 09.
 
 === Step 09 - Optional: Add !MyProxy servers to the database ===
 
@@ -508,16 +464,11 @@ on the local system.
 This command also enables some additional accounts for for ICAT API admin logins:
 
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 ant -f icat.xml configure-icat-db
-</pre>
 }}}
  
 Expect a response such as:
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
 Buildfile: icat.xml
 
 configure-icat-db:
@@ -527,7 +478,6 @@ configure-icat-db:
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
-</pre>
 }}}
 
 === Step 10 - ant -f icat.xml restart-domain ===
@@ -535,16 +485,11 @@ Total time: 0 seconds
 Use the following command to allow the changes in step 09 to be picked up from the database:
 
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 ant -f icat.xml restart-domain
-</pre>
 }}}
  
 Expect a response such as:
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
 restart-domain:
 
 stop-domain:
@@ -558,7 +503,6 @@ start-domain:
 
 BUILD SUCCESSFUL
 Total time: 19 seconds
-</pre>
 }}}
 
 === Step 11 - Checking that the application is deployed via the Glassfish admin login ===
@@ -578,22 +522,16 @@ you to the login screen.
 To check if the installation behaves as expected you can also view the WSDL directly.
 
 Use the following URL in an Internet browser such as Firefox:
-
-  * https://localhost:8181/ICATService/ICAT?wsdl to view the WSDL file. 
+{{{
+  https://localhost:8181/ICATService/ICAT?wsdl
+}}}
+ to view the WSDL file. 
 
 Note that the first time you access this address with a browser such as Firefox it may give a security
 warning. You will need to accept the untrusted certificate permanently.
 
 Expect a response such as the following:
 {{{
-#!html
-<pre class="wiki" style="
-white-space: pre-wrap; /* css-3 */
-white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-white-space: -pre-wrap; /* Opera 4-6 */
-white-space: -o-pre-wrap; /* Opera 7 */
-word-wrap: break-word; /* Internet Explorer 5.5+; */ color: blue;">
-
 &lt;!--
  Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.3.1-hudson-417-SNAPSHOT. 
 -->
@@ -643,8 +581,6 @@ from the latest run of Glassfish.
 
 Here is an example of the file INSTALLATION_HOME/nbproject/databases.properties:
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
 # Facility Name, either ISIS or DLS
 facility.name=<span style="color: red;">ISIS</span>
 
@@ -661,26 +597,19 @@ icatuser.url=jdbc:oracle:thin:@localhost:1521:XE
 icatuser.password=<span style="color: red;">myicatuserpasswd</span>
 icatuser.data.source.classname=oracle.jdbc.pool.OracleDataSource
 icatuser.driver=oracle.jdbc.driver.OracleDriver
-
-</pre>
 }}}
 
 === Useful commands for verifying the database ===
 {{{
-#!html
-<pre class="wiki" style="color: red;">
 echo 'SELECT table_name FROM user_tables;' | sqlplus        icat/myicatpasswd@XE
 echo 'SELECT table_name FROM user_tables;' | sqlplus  dataportal/mydataportalpasswd@XE
 echo 'SELECT table_name FROM user_tables;' | sqlplus    icatuser/myicatuserpasswd@XE
-</pre>
 }}}
 
 Note that although there is a user called something like ISIS-admin with a password like icatadmin, this user is not a username for the database.  This username is contained within icat.
 
 === Example of glassfish.properties ===
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
 # Glassfish Application server configuration
 sjsas.admin.port=4848
 sjsas.http.port=<span style="color: red;">8181</span>
@@ -693,11 +622,9 @@ sjsas.domain=domain1
 # i.e. C\:\\Program Files\\glassfish-v2ur2 or /opt/glassfish-v2ur2 
 sjsas.root=<span style="color: red;">/opt/glassfish
 sjsas.version=3
-</span>
 
 # password for icat api admin
 admin.auth.password=icatadmin
-</pre>
 }}}
 
 Note that although there is a user called something like ISIS-admin with a password like icatadmin, this user is not a username for the database.  This username is contained within icat.
@@ -822,5 +749,3 @@ Total time: 1 second
 
 
 }}}
-
-
