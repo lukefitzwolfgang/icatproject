@@ -1,8 +1,9 @@
-#Installation notes for Oracle XE, Glassfish and Icat 3.4
+#summary Installation notes for Oracle XE, Glassfish and Icat 3.4
 
 = ICAT installation =
 
-[[PageOutline(1-3,Page contents,inline)]]
+<wiki:toc max_depth="1" />
+
 
 = Planning the Icat installation  =
 
@@ -83,15 +84,14 @@ F. ICAT distribution. This can be obtained from the googlecode repository:
  
 == Additions to make to the standard environment ==
 
- === JAVA ===
+=== JAVA ===
+
 Requirements:
-   * Java 6 SE with the JDK; There is a choice of Sun JDK or OpenJDK. By default installation tools tend to
-     fetch the OpenJDK version. Both should work but but if both are installed it is important to know which
-     is in the PATH and set the JAVA_HOME correctly.
+   * Java 6 SE with the JDK; There is a choice of Sun JDK or OpenJDK. By default installation tools tend to fetch the OpenJDK version. Both should work but but if both are installed it is important to know which is in the PATH and set the JAVA_HOME correctly.
    * JCE - local_policy.jar and US_export_policy.jar in jre/lib/security; These files are already present in Sun JDK but may be absent in OpenJDK.
    * JRE endorsed directory containing wstx-asl-3.9.2.jar; This is done by the icat install script within ant-deploy-v3.xml, if the script is run as root, see details below.
 
- === GLASSFISH ===
+=== GLASSFISH ===
 
 Glassfish Server !OpenSource edition V3.0.1 (or later) is normally downloaded directly from the Oracle site.
 It is important to use the full platform rather than the web profile version.
@@ -99,7 +99,7 @@ Glassfish can be installed under the same user account as the one to install ICA
 as the ICAT install requires write access to Glassfish directories.
 
 
- === ORACLE ===
+=== ORACLE ===
 
 
 Oracle XE requires that at least 1Gbyte of swap space is configured on the system.
@@ -112,14 +112,13 @@ If you wish to run the database on a port other than 8080 then instructions are 
    * [http://daust.blogspot.com/2006/01/xe-changing-default-http-port.html xe-changing-default-http-port]
 
 
- === Linux environment ===
+=== Linux environment ===
 
 The following environmental variables are useful to set for the account used to install Glassfish and Icat.
 It is important to have the Oracle server bin directory in the PATH when installing the icat schema.
 These values can be set in the user's '''.bashrc''' file. Csh user's can set them in '''.cshrc'''.
 
-|| Environmental variable         || Typical value (linux)                                || Contains                                                            ||
-
+|| *Environmental variable*         || *Typical value (linux)*                                || *Contains*                                                           ||
 ||INSTALLATION_HOME               || /home/glassfish3/googlecode/icat/installation        || location of the installation directory for icat                     ||
 ||GLASSFISH_HOME                  || /home/glassfish3/glassfish                           || home directory of the glassfish server                              ||
 ||JAVA_HOME                       || /usr/lib/jvm/java-6-sun                              || jre and jdk                                                         ||
@@ -137,8 +136,7 @@ The following port numbers are assumed for a single system running Oracle XE and
 Note the Glassfish HTTP port has been moved to 8090 instead of the default 8080.
 The ICAT web service runs on the Glassfish HTTPS port.
 
-|| port || service                 ||
-
+|| *port* || *service*                 ||
 || 1521 || Oracle                  ||
 || 4848 || glassfish control panel ||
 || 8080 || Oracle control panel    ||
@@ -174,29 +172,24 @@ The installation script requests the Oracle sys password so that it can connect 
 
 For example, the following command:
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
-/home/glassfish3/icat/database/icat><span style="color: red;"> sqlplus /nolog</span>
-</pre>
+ sqlplus /nolog
 }}}
 
 provides the following dialogue:
 
 {{{
-#!html
-<pre class="wiki" style="color: blue;">
 SQL*Plus: Release 10.2.0.1.0 - Production on Fri Oct 10 12:10:51 2008
 Copyright (c) 1982, 2005, Oracle. All rights reserved.
 
-SQL> <span style="color: red;">@install_icat.sql</span>
+SQL> @install_icat.sql
 I C A T I S I S    XE    I N S T A L L
 This script will create ICAT schema objects in a named schema in a specified database.
-Enter Database Name : <span style="text-align: left; color: red;"> XE </span>
+Enter Database Name :  XE
 
-Enter SYS password : <span style="color: red;"> mysyspasswd - this is not echoed</span>
-Enter icat password : <span style="color: red;"> myicatpasswd - this IS echoed</span>
-Enter icatuser password : <span style="color: red;"> myicatuserpasswd - this IS echoed</span>
-Enter External tables location : <span style="color: red;"> /tmp/extloc</span>
+Enter SYS password :  mysyspasswd - this is not echoed
+Enter icat password :  myicatpasswd - this IS echoed
+Enter icatuser password :  myicatuserpasswd - this IS echoed
+Enter External tables location :  /tmp/extloc
 creating user icat
 
 ... ... 
@@ -213,7 +206,6 @@ Installation complete.  Please check the log files.
 
 Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
 
-</pre>
 }}}
 
 == Database Verification ==
@@ -223,7 +215,9 @@ commands issued to the sqlplus utility.
 To use web interface requires opening a browser window and login in as e.g. icatuser.
 Assuming that database is on the localhost, using port 8080, and the user is in group dba, then browsing to:
 
-* localhost:8080/apex
+{{{
+ localhost:8080/apex
+}}}
 
 will give the Oracle login screen. Enter e.g. icatuser and the associated password. Then browse to SQL->Query Builder->Create.
 This should show a list of available tables. Selecting User_table should show fields such as Id, User_id, Dn and Password that
@@ -232,30 +226,23 @@ can be inspected by running a query.
 Alternatively the following sqlplus command verifies that the icatuser schema has been installed:
 
 {{{
-#!html
-<pre class="wiki" style="color: red;">
-echo 'SELECT table_name FROM user_tables;' | sqlplus  icatuser/myicatuserpasswd@XE
-</pre>
+  echo 'SELECT table_name FROM user_tables;' | sqlplus icatuser/myicatuserpasswd@XE
 }}}
 
 The following sqlplus command verifies that the icatuser table user_table has been populated:
 
 {{{
-#!html
-<pre class="wiki" style="color: red;">
-sqlplus icatuser/myicatuserpasswd@XE &lt;&lt;/eof
+  sqlplus icatuser/myicatuserpasswd@XE < eof
 
-COLUMN user_id      HEADING 'user_id' format a20
-COLUMN password     HEADING 'password' format A20
+  COLUMN user_id      HEADING 'user_id' format a20
+  COLUMN password     HEADING 'password' format A20
 
-SET    TRIMOUT      ON 
-SET    linesize     50
-set    pagesize     0
+  SET    TRIMOUT      ON 
+  SET    linesize     50
+  set    pagesize     0
 
-select user_id, password from  user_table order by user_id;
-/eof
-
-</pre>
+  select user_id, password from  user_table order by user_id;
+  eof
 }}}
 
 
@@ -835,7 +822,5 @@ Total time: 1 second
 
 
 }}}
-
-
 
 
