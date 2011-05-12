@@ -236,7 +236,7 @@ Alternatively the following sqlplus command verifies that the icatuser schema ha
   echo 'SELECT table_name FROM user_tables;' | sqlplus icatuser/myicatuserpasswd@XE
 }}}
 
-The following sqlplus command verifies that the icatuser table user_table has been populated withj some initial values:
+The following sqlplus command verifies that the icatuser table user_table has been populated with some initial values:
 
 {{{
  sqlplus icatuser/myicatuserpasswd@XE << eof
@@ -385,7 +385,6 @@ start-domain:
 BUILD SUCCESSFUL
 Total time: 13 seconds
 }}}
-If you get an error, see note 07.
 
 
  * Starts the Glassfish server, if it complains of not starting, check:
@@ -397,6 +396,14 @@ GLASSFISH_HOME/bin/asadmin start-domain domain1
 GLASSFISH_HOME/bin/asadmin stop-domain domain1
 GLASSFISH_HOME/bin/asadmin start-domain domain1
 }}}
+
+_Possible errors:_
+  * If you get an error at this stage regarding the osfamily attribute this may indicate you are using ant 1.6 by mistake.
+  * If both Oracle XE and Glassfish are trying to use port 8080, Glassfish will fail to start. One way around this is to edit the 8080 string in the configuration file:
+{{{
+   $GLASSFISH_HOME/domains/domain1/config/domain.xml
+}}}
+
 
 === Step 08 - ant -f icat.xml install  ===
 If you are re-installing, then you can clean out the glassfish with the following command:  
@@ -439,18 +446,24 @@ init-config:
 BUILD SUCCESSFUL
 Total time: 20 seconds
 }}}
-If you get an error, see note 08.
+
+
 
 
  * Creates all the glassfish data sources and connection pools and deploys the icat-api.ws.jar onto Glassfish;
  * If reinstalling, then some errors will occur saying it cannot create some tables; do not worry about this, it just means the tables have already been created;
- * If a failure or an error in the context of database connection that includes: 
 
+_Possible errors:_
+  * If you get an error concerning "deleteonexit" attribute, this indicates use of ant V1.6 by mistake. Get a later version of ant.
+  * If using Glassfish 3.1 the default admin password is null. The default assumed in glassfish.properties is adminadmin. Ensure that this entry is consistent.
+  * If an error occurs in the context of database connection with _Class not found_ the check if the file:
 {{{
-Class not found
+   GLASSFISH_HOME/domains/domain1/lib/ext/ojdbc14.jar
 }}}
-See note 09.
-
+  If not present, copy it there from
+{{{
+   INSTALLATION_HOME/lib/ojdbc14.jar
+}}}
 === Step 09 - Optional: Add !MyProxy servers to the database ===
 
 This step configures !MyProxy servers in the database and is not normally needed.
@@ -559,19 +572,19 @@ from the latest run of Glassfish.
 Here is an example of the file INSTALLATION_HOME/nbproject/databases.properties:
 {{{
 # Facility Name, either ISIS or DLS
-facility.name=<span style="color: red;">ISIS</span>
+facility.name=ISIS>
 
 # This is the properties for the main ICAT schema
 icat.user=icat
 icat.url=jdbc:oracle:thin:@localhost:1521:XE
-icat.password=<span style="color: red;">myicatpasswd</span>
+icat.password=myicatpasswd
 icat.data.source.classname=oracle.jdbc.pool.OracleDataSource
 icat.driver=oracle.jdbc.driver.OracleDriver
 
 # This is the properties for the ICAT user schema
 icatuser.user=icatuser
 icatuser.url=jdbc:oracle:thin:@localhost:1521:XE
-icatuser.password=<span style="color: red;">myicatuserpasswd</span>
+icatuser.password=myicatuserpasswd
 icatuser.data.source.classname=oracle.jdbc.pool.OracleDataSource
 icatuser.driver=oracle.jdbc.driver.OracleDriver
 }}}
@@ -589,7 +602,7 @@ Note that although there is a user called something like ISIS-admin with a passw
 {{{
 # Glassfish Application server configuration
 sjsas.admin.port=4848
-sjsas.http.port=<span style="color: red;">8181</span>
+sjsas.http.port=8090
 sjsas.password=adminadmin
 sjsas.host=localhost
 sjsas.username=admin
@@ -597,7 +610,7 @@ sjsas.domain=domain1
 # The next two are the only ones normally needed to be changed after
 # a standard Glassfish configuration
 # i.e. C\:\\Program Files\\glassfish-v2ur2 or /opt/glassfish-v2ur2 
-sjsas.root=<span style="color: red;">/opt/glassfish
+sjsas.root=/home/glassfish3/glassfish3/glassfish
 sjsas.version=3
 
 # password for icat api admin
@@ -606,51 +619,4 @@ admin.auth.password=icatadmin
 
 Note that although there is a user called something like ISIS-admin with a password like icatadmin, this user is not a username for the database.  This username is contained within icat.
 
-=== Footnotes ===
 
-====Note 07:====
-
-On Linux, you may get a response such as the following:
-
-{{{
-Buildfile: icat.xml
-
-start-domain:
-     [echo] Starting domain domain1
-
-BUILD FAILED
-/home/alistair/local_alistair/scott/icat/installation/nbproject/ant-deploy.xml:200: The &lt;exec> type doesn't support the "osfamily" attribute.
-
-Total time: 0 seconds
-}}}
-
-This is because the ANT version is not 1.7 or later. Install an
-up to date version.
-
-==== Note 08:====
-
-On Linux, you may get a response such as the following:
-
-{{{
-BUILD FAILED
-/home/alistair/local_alistair/scott/icat/installation/icat.xml:95: The following error occurred while executing this line:
-/home/alistair/local_alistair/scott/icat/installation/nbproject/ant-deploy.xml:150: The &lt;tempfile> type doesn't support the "deleteonexit" attribute.
-
-Total time: 0 seconds
-}}}
-
-This is because the ANT version is not 1.7 or later. Install the correct version.
-
-====Note 09:====
-
-Check to see if there is a file called ojdbc14.jar in:
-
-{{{
-GLASSFISH_HOME/domains/domain1/lib/ext 
-}}}
-
-If there is not one present, then copy it there from:
-
-{{{
-INSTALLATION_HOME/lib/ojdbc14.jar
-}}}
