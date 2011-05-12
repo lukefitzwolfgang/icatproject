@@ -21,6 +21,7 @@
 
 == Installation ==
 
+ * [IcatInstallation Revised Database and Icat Installation]
  * [Database_Installation Database Installation]
  * [IcatApiInstallation ICAT API]
  * [IcatDpInstallation ICAT DataPortal]
