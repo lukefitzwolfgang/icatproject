@@ -387,17 +387,17 @@ Total time: 13 seconds
 }}}
 
 
- * Starts the Glassfish server, if it complains of not starting, check:
-   * http://localhost:4848;
- * If it still has not started, use the following commands to start and stop and start the glassfish domain domain1:
-
-{{{
-GLASSFISH_HOME/bin/asadmin start-domain domain1
-GLASSFISH_HOME/bin/asadmin stop-domain domain1
-GLASSFISH_HOME/bin/asadmin start-domain domain1
-}}}
+This step will start the Glassfish server.
 
 _Possible errors:_
+  * If Glassfish does not start check the admin console on:
+   * http://localhost:4848;
+  * If it still has not started, use the following commands to start and stop and start the glassfish domain domain1:
+{{{
+   GLASSFISH_HOME/bin/asadmin start-domain domain1
+   GLASSFISH_HOME/bin/asadmin stop-domain domain1
+   GLASSFISH_HOME/bin/asadmin start-domain domain1
+}}}
   * If you get an error at this stage regarding the osfamily attribute this may indicate you are using ant 1.6 by mistake.
   * If both Oracle XE and Glassfish are trying to use port 8080, Glassfish will fail to start. One way around this is to edit the 8080 string in the configuration file:
 {{{
@@ -450,20 +450,21 @@ Total time: 20 seconds
 
 
 
- * Creates all the glassfish data sources and connection pools and deploys the icat-api.ws.jar onto Glassfish;
- * If reinstalling, then some errors will occur saying it cannot create some tables; do not worry about this, it just means the tables have already been created;
+This step creates all the glassfish data sources and connection pools and deploys the icat-api.ws.jar onto Glassfish.
 
 _Possible errors:_
-  * If you get an error concerning "deleteonexit" attribute, this indicates use of ant V1.6 by mistake. Get a later version of ant.
-  * If using Glassfish 3.1 the default admin password is null. The default assumed in glassfish.properties is adminadmin. Ensure that this entry is consistent.
-  * If an error occurs in the context of database connection with _Class not found_ the check if the file:
+ * If reinstalling, then some errors will occur saying it cannot create some tables; do not worry about this, it just means the tables have already been created.
+ * If an error concerning "deleteonexit" attribute occurs, this indicates use of ant V1.6 by mistake. Get a later version of ant.
+ * If using Glassfish 3.1 the default admin password is null. The default assumed in glassfish.properties is adminadmin. Ensure that this entry is consistent.
+ * If an error occurs in the context of database connection with _Class not found_ then check for the file:
 {{{
    GLASSFISH_HOME/domains/domain1/lib/ext/ojdbc14.jar
 }}}
-  If not present, copy it there from
+ If not present, copy it there from
 {{{
    INSTALLATION_HOME/lib/ojdbc14.jar
 }}}
+
 === Step 09 - Optional: Add !MyProxy servers to the database ===
 
 This step configures !MyProxy servers in the database and is not normally needed.
@@ -572,7 +573,7 @@ from the latest run of Glassfish.
 Here is an example of the file INSTALLATION_HOME/nbproject/databases.properties:
 {{{
 # Facility Name, either ISIS or DLS
-facility.name=ISIS>
+facility.name=ISIS
 
 # This is the properties for the main ICAT schema
 icat.user=icat
@@ -618,5 +619,3 @@ admin.auth.password=icatadmin
 }}}
 
 Note that although there is a user called something like ISIS-admin with a password like icatadmin, this user is not a username for the database.  This username is contained within icat.
-
-
