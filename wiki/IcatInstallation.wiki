@@ -32,7 +32,7 @@ The Icat web services are normally accessed through the HTTPS port.
 == Installation User ID ==
 
 It is best practice not to install Glassfish and Icat as user root on Linux systems.
-Instead a new user ID, such as ''glassfish3'', is recommended for installation of both these packages.
+Instead a new user ID is recommended for installation of both these packages. In this document we assume the user ID ''glassfish3'' for both glassfish and Icat software.
 
 
 == Required Software Components ==
@@ -48,7 +48,7 @@ The following software components are required:
  * SVN client (if getting ICAT from SVN)
 
 If installing a stand alone system for testing the free Oracle XE database is sufficient.
-Production systems may need access to a larger Oracle system.
+Production systems may need access to a larger Oracle system on a dedicated server.
 
 The software may be installed on Linux, Windows or Mac systems.
 In this document we assume a Linux environment though the steps are the similar
@@ -64,27 +64,39 @@ For example Fedora users can run ''yum'' to install packages such as '''ant''' a
 Similarly ubuntu and debian systems provide the ''apt-get'' command line tool to install these packages or GUI based
 alternatives.
 
-A. Apache Ant v1.7+. Installed from package manager or:
- * [http://ant.apache.org http://ant.apache.org].
-
-B. SVN client, if getting ICAT from SVN. Installed from package manager or:
- * [http://subversion.apache.org/packages.html http://subversion.apache.org/packages.html].
-
-C. Java 6 with JDK. Either from package manager or from Sun/Oracle (SUN JDK):
+=== Java 6 JDK ===
+Oracle Java JDK 1.6 is recommended. If using OpenJDK the packages ''java-1.6.0-openjdk'' and ''java-1.6.0-openjdk-devel'' should be installed. Additional policy jars may also be needed. Oracle Java is available from:
  * [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html]
 
-D. Glassfish V3, full product. In this document it is assumed Glassfish will run on port 8090, not the default 8080.
-If Oracle if on a separate machine, or using a port other than 8080, Glassfish can use 8080.
+=== Apache Ant v1.7+. ===
+Some systems, such as RHEL5, only provide version 1.6 which is not compatible with ICAT. May be installed via package manager or from:
+ * [http://ant.apache.org http://ant.apache.org].
+
+=== SVN client ===
+Only needed if getting ICAT from SVN. Installed from package manager or:
+ * [http://subversion.apache.org/packages.html http://subversion.apache.org/packages.html].
+
+=== Glassfish V3 ===
+Get the full product, not the web version. In this document it is assumed Glassfish will run on port 8090, not the default 8080.
+If Oracle if on a separate machine Glassfish can use 8080.
 Download from:
  * [http://glassfish.java.net/public/downloadsindex.html http://glassfish.java.net/public/downloadsindex.html].
 
-E. Oracle Database 10g Express Edition, if no access to an existing Oracle database. Only the server is needed if running the database on the same host as Glassfish. Downloads from :
+=== Oracle Database 10g Express Edition ===
+Needed if an existing Oracle database is not available.
+The server package should be selected - the client package is only needed is using a remote database. Download from :
  * [http://www.oracle.com/technetwork/database/express-edition/downloads/index.html http://www.oracle.com/technetwork/database/express-edition/downloads/index.html]
 
-F. ICAT distribution. This can be obtained from the googlecode repository:
- * [http://code.google.com/p/icatproject/ http://code.google.com/p/icatproject/].
+=== ICAT distribution ===
+The ICAT software can be downloaded from the googlecode repository.
+A zip file is available from:
+ * [http://code.google.com/p/icatproject/downloads/list http://code.google.com/p/icatproject/downloads/list].
+Alternatively the latest version may be checked out using SVN.
+Non-project members may check out a read-only working copy anonymously over HTTPS using:
 
-
+{{{
+svn checkout https://icatproject.googlecode.com/svn/icat3_api/trunk/ icatproject-read-only
+}}}
  
 == Additions to make to the standard environment ==
 
@@ -97,10 +109,10 @@ Requirements:
 
 === GLASSFISH ===
 
-Glassfish Server !OpenSource edition V3.0.1 (or later) is normally downloaded directly from the Oracle site.
+Glassfish Server !OpenSource edition V3.0.1 or V3.1 is available from the Oracle site.
 It is important to use the full platform rather than the web profile version.
-Glassfish can be installed under the same user account as the one to install ICAT, and this is simplest,
-as the ICAT install requires write access to Glassfish directories.
+Glassfish should be installed under the same user account as that used to install ICAT.
+If a custom install is used it is possible to change the default port from 8080 to 8090 (or another value) to avoid a clash with Oracle XE.
 
 
 === ORACLE ===
@@ -148,17 +160,6 @@ The ICAT web service runs on the Glassfish HTTPS port.
 || 8181 || glassfish HTTPS port    ||
 
 
-== Obtaining an ICAT distribution ==
-
-The ICAT software can be downloaded from the googlecode repository.
-A zip file is available from the download area [http://code.google.com/p/icatproject/downloads/list downloads].
-Alternatively the latest version may be checked out using SVN.
-Non-project members may check out a read-only working copy anonymously over HTTPS using:
-
-{{{
-svn checkout https://icatproject.googlecode.com/svn/icat3_api/trunk/ icatproject-read-only
-}}}
-
 
 = Installing the ICAT Schemas for Oracle XE =
 
@@ -168,7 +169,7 @@ svn checkout https://icatproject.googlecode.com/svn/icat3_api/trunk/ icatproject
 
 3. Run sqlplus without connecting to the database (sqlplus /nolog);
 
-4. Run the script install_icat.sql (@install_icat.sql).
+4. At the sqlplus prompt run the script install_icat.sql (@install_icat.sql).
 
 Note that running sqlplus from a directory other than INSTALLATION_HOME/database/icat may cause the installation script to fail.
 
@@ -212,18 +213,20 @@ Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - Produ
 
 }}}
 
+If this script does gives errors it may indicate that Oracle has not been correctly installed.
+Also check that the user glassfish3 has been added to the group dba.
+
 == Database Verification ==
 
 The contents of the database can be checked either using the Oracle web interface or via
 commands issued to the sqlplus utility.
-To use web interface requires opening a browser window and login in as e.g. icatuser.
-Assuming that database is on the localhost, using port 8080, and the user is in group dba, then browsing to:
-
+To use the web interface requires opening a browser window and login in as e.g. icatuser.
+For a browser running on the installation machine use the URL:
 {{{
  localhost:8080/apex
 }}}
 
-will give the Oracle login screen. Enter e.g. icatuser and the associated password. Then browse to SQL->Query Builder->Create.
+This should give the Oracle login screen. Enter e.g. icatuser and the associated password. Then browse to SQL->Query Builder->Create.
 This should show a list of available tables. Selecting User_table should show fields such as Id, User_id, Dn and Password that
 can be inspected by running a query.
 
@@ -233,20 +236,14 @@ Alternatively the following sqlplus command verifies that the icatuser schema ha
   echo 'SELECT table_name FROM user_tables;' | sqlplus icatuser/myicatuserpasswd@XE
 }}}
 
-The following sqlplus command verifies that the icatuser table user_table has been populated:
+The following sqlplus command verifies that the icatuser table user_table has been populated withj some initial values:
 
 {{{
-  sqlplus icatuser/myicatuserpasswd@XE < eof
-
+ sqlplus icatuser/myicatuserpasswd@XE << eof
   COLUMN user_id      HEADING 'user_id' format a20
   COLUMN password     HEADING 'password' format A20
-
-  SET    TRIMOUT      ON 
-  SET    linesize     50
-  set    pagesize     0
-
-  select user_id, password from  user_table order by user_id;
-  eof
+  SELECT user_id, password from user_table order by user_id;
+ eof
 }}}
 
 
