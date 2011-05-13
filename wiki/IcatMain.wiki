@@ -22,14 +22,6 @@
 == Installation ==
 
  * [IcatInstallation Revised Database and Icat Installation]
- * [Database_Installation Database Installation]
- * [IcatApiInstallation ICAT API]
- * [IcatDpInstallation ICAT DataPortal]
- * [CogkitConfig Cog-kit Configuration for Icat]
- * [GlassFishConfig Replacing GlassFish Self-signed certificate with an eScience host certificate]
- * [SetupICAT3 Setting up ICAT3 modules in NetBean]
- * [SetupDP5 Setting up Dataportal exploded enterprise modules in NetBean]
- * [InstallationIndex2 Index for an updated set of installation pages]
  * [IngestingData]
  * [Logging Control of Logging]
 
