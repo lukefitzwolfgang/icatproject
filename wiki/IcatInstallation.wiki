@@ -5,8 +5,7 @@
 Authors: Glen Drinkwater, Alistair Mills, Ron Fowler, Steve Fisher
 
 
-
-<wiki:toc max_depth="1" />
+<wiki:toc max_depth="2" />
 
 
 = Planning the Icat installation  =
