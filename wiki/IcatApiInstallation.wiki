@@ -1,5 +1,5 @@
 #summary ICAT API Installation.
-#labels Installation,Featured,Icat-Api
+#labels Installation,Deprecated,Icat-Api
 
 == ICAT API Installation from Binary ==
 Author(s): Glen Drinkwater
