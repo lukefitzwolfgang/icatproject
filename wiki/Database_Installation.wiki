@@ -1,5 +1,5 @@
 #summary Notes for installation of database schemas
-#labels Installation,Featured
+#labels Installation,Deprecated
 
 = Database Installation =
 
