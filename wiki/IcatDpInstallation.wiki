@@ -1,5 +1,5 @@
 #summary ICAT Data Portal Installation .
-#labels Installation,Featured,Icat-DP
+#labels Installation,Deprecated,Icat-DP
 
 
 = Data Portal Installation =
