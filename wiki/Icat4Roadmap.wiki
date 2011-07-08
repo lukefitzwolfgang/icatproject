@@ -38,6 +38,7 @@ Note that words like additional, and improved relate to icat-3.  Some of these f
     * relatedDatafile exposed in the API (already in the database);
     * Software / application table links;
     * ability to do some cross ICAT relationships, for example at the level of a study, such so an ISIS investigation can be related to Diamond and ILL investigations which are part of the same research program.
+    * new methods to create and update facility users (needed for the IMP) 
 
 == Support for TopCat ==
     * all of this is included with icat 3.3.
