@@ -239,18 +239,6 @@ Alternatively the following sqlplus command verifies that the icatuser schema ha
   echo 'SELECT table_name FROM user_tables;' | sqlplus icatuser/myicatuserpasswd@XE
 }}}
 
-The following sqlplus command verifies that the icatuser table user_table has been populated with some initial values:
-
-{{{
- sqlplus icatuser/myicatuserpasswd@XE << eof
-  COLUMN user_id      HEADING 'user_id' format a20
-  COLUMN password     HEADING 'password' format A20
-  SELECT user_id, password from user_table order by user_id;
- eof
-}}}
-
-
-
 = ICAT API Installation =
 
 == Prerequisites ==
