@@ -1,0 +1,118 @@
+#summary Documentation on the ICAT Api Examples.
+
+= Documentation on the ICAT Api Examples  =
+
+The software and the notes are available at the following location:
+
+source:/sw/icat_api_examples/trunk
+
+== Description ==
+
+The following list is the set of examples of how to invoke the API from a simple java program:
+
+ * Authenticate
+ * !CaseSensitiveKeywordSearch
+ * !CheckAuthorisation
+ * DirectDSDF
+ * !DrillDown
+ * !ExampleBase
+ * GetURLForDownload
+ * !KeywordDisplay
+ * !KeywordSearch
+ * !ListRoles
+
+The following is a list of concise instructions on how to configure and execute the examples: 
+
+1. Check out the following branch from the SVN repository: /sw/icat_api_examples/trunk
+
+2. Build the software using ant with the following command: ant
+
+3. Edit the file example.properties to point to the correct application end point such as: http://esctest.esc.rl.ac.uk:8080/ICATService/ICAT?wsdl
+
+4. Execute the program of choice.  For example to use Authenticate use: java -cp icat_api_examples.jar:lib/icat3-xmlingest-client.jar uk.icat.examples.Authenticate
+
+5. Expect a response such as: Session ID = d7cfaac0-1269-4398-874d-23601ca26b1b
+
+== Detailed instructions ==
+
+1. Check out the following branch from the SVN repository with a command such as the following:
+
+{{{
+svn co https://nile.dl.ac.uk/repos/scott/sw/icat_api_examples/trunk 
+}}}
+
+Expect a response such as the following:
+
+{{{
+A    trunk/.classpath
+A    trunk/icat_api_examples.jar
+A    trunk/.project
+A    trunk/example.properties
+A    trunk/lib
+A    trunk/lib/icat3-xmlingest-client.jar
+A    trunk/src
+A    trunk/src/uk
+A    trunk/src/uk/icat
+A    trunk/src/uk/icat/examples
+A    trunk/src/uk/icat/examples/CaseSensitiveKeywordSearch.java
+A    trunk/src/uk/icat/examples/ListRoles.java
+A    trunk/src/uk/icat/examples/GetURLForDownload.java
+A    trunk/src/uk/icat/examples/ExampleBase.java
+A    trunk/src/uk/icat/examples/CheckAuthorisation.java
+A    trunk/src/uk/icat/examples/KeywordDisplay.java
+A    trunk/src/uk/icat/examples/KeywordSearch.java
+A    trunk/src/uk/icat/examples/DirectDSDF.java
+A    trunk/src/uk/icat/examples/Authenticate.java
+A    trunk/src/uk/icat/examples/DrillDown.java
+A    trunk/build.xml
+Checked out revision 931.
+}}}
+
+2. Build the software using ant with the following commands:
+
+{{{
+cd trunk
+ant
+}}}
+
+Expect a response such as the following:
+
+{{{
+Buildfile: /home3/glassfish3/local_scott/scott_573/sw/icat_api_examples/trunk/build.xml
+
+compile:
+    [mkdir] Created dir: /home3/glassfish3/local_scott/scott_573/sw/icat_api_examples/trunk/bin
+    [javac] /home3/glassfish3/local_scott/scott_573/sw/icat_api_examples/trunk/build.xml:14: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 10 source files to /home3/glassfish3/local_scott/scott_573/sw/icat_api_examples/trunk/bin
+
+build:
+      [jar] Building jar: /home3/glassfish3/local_scott/scott_573/sw/icat_api_examples/trunk/icat_api_examples.jar
+
+BUILD SUCCESSFUL
+Total time: 1 second
+}}}
+
+3. Edit the file example.properties to point to the correct application end point such as: http://esctest.esc.rl.ac.uk:8080/ICATService/ICAT?wsdl
+
+It is likely that you will have to change the property called wsdl.location to point to the appropriate web service end point:
+
+{{{
+2c2
+< wsdl.location=http://projectscott-tst.esc.rl.ac.uk:9090/ICATService/ICAT?wsdl
+---
+> wsdl.location=http://esctest.esc.rl.ac.uk:8080/ICATService/ICAT?wsdl
+}}}
+
+4. Execute the program of choice.  For example to use Authenticate use:
+
+{{{
+java -cp icat_api_examples.jar:lib/icat3-xmlingest-client.jar uk.icat.examples.Authenticate
+}}}
+
+Expect a response such as the following:
+
+{{{
+Session ID = d7cfaac0-1269-4398-874d-23601ca26b1b
+}}}
+
+== - the end - ==
