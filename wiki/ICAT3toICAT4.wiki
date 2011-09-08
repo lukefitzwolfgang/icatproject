@@ -5,3 +5,5 @@
 The introduction of the rule based authz has required some schema changes. The script [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/installation/database/icat/data/rulebased_security.sql  rulebased_security.sql] will make the necessary changes to an ICAT3 Oracle database. There is currently no mechanism to create a complete ICAT4 compatible API schema directly.
 
 The flag that used to mark entities as deleted has been removed - and one of the actions of this script is to first physically delete those records that were marked as deleted before removing the column from the database schema.
+
+The API has been changed considerably. The old search and get functions are still there but should be considered as deprecated so that they can be removed from the next release. Please use only the calls in [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICAT4API.pdf ICAT4API.pdf]
