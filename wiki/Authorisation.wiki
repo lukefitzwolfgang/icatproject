@@ -1,5 +1,7 @@
 #summary Notes for authorisation mechanism useful for developers
 
+ Note *This describes the authz mechanism in ICAT3 it is no longer relevant  for ICAT4.*
+
 = Introduction =
 The authorisation mechanism is based on model with roles & actions. The idea behind this is that the new roles and actions can be created with minimal change to the authorisation code.
 The logic of a particular role performing an action can be checked before performing the action.
