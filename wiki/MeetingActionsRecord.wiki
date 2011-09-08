@@ -4,6 +4,18 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 ----
 
+Actions from ICAT collaboration telephone conference on 22 July 2011<br>
+22.1 - Alistair Mills - 22 July 2011
+
+||Item   ||Description                                                  ||Res*(1) || Status||      Comment||
+||22.00 ||Document the meeting                                          ||AM      ||   Done||            -||
+||22.01 ||Add information about Mariusz work on the examples to wiki    ||AM      ||     - ||            -||
+.
+.
+.
+
+
+
 Actions from ICAT collaboration telephone conference on 7 July 2011<br>
 21.1 - Alistair Mills - 7 July 2011
 
