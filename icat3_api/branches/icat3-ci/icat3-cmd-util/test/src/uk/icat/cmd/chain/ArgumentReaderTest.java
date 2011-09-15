@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import uk.icat.cmd.entity.State;
+import uk.icat.cmd.util.HelpUtil;
 import uk.icat.cmd.util.MethodHelper;
 
 public class ArgumentReaderTest {
@@ -25,6 +26,7 @@ public class ArgumentReaderTest {
 		methodHelper = mock(MethodHelper.class);
 		when(methodHelper.getMethods()).thenReturn(new Method[] {});
 		argumentReader.setMethodHelper(methodHelper);
+		argumentReader.setHelpUtil(mock(HelpUtil.class));
 		state = new State();
 	}
 

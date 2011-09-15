@@ -123,4 +123,16 @@ public class ParameterUtil {
 		return null;
 	}
 
+	public static List<Parameter> extractParameters(Method method, String entityType) throws DatatypeConfigurationException {
+		try {
+			Class<?> loadedClass = ClassLoader.getSystemClassLoader().loadClass("uk.icat3.client." + entityType);
+			List<Parameter> parameters = new ArrayList<Parameter>();
+			parameters.add(new Parameter("sessionId", String.class));
+			parameters.add(new Parameter("bean", loadedClass));
+			return parameters;
+		} catch (ClassNotFoundException e) {
+			throw new DatatypeConfigurationException("Type " + entityType + " is not supported");
+		}
+	}
+
 }

@@ -5,7 +5,7 @@ import uk.icat.cmd.entity.State;
 
 public abstract class Command {
 
-	Command next;
+	private Command next;
 
 	public abstract void process(State state) throws Exception;
 

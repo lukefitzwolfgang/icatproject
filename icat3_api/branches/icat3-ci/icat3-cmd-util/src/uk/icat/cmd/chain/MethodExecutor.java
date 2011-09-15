@@ -10,6 +10,7 @@ import uk.icat.cmd.util.HelpUtil;
 public class MethodExecutor extends Command {
 
 	private Object targetService;
+	private HelpUtil helpUtil;
 
 	@Override
 	public void process(State state) throws Exception {
@@ -21,14 +22,21 @@ public class MethodExecutor extends Command {
 		try {
 			return method.invoke(targetService, args);
 		} catch (Exception e) {
-			HelpUtil.printMethodSignature(method);
-			System.err.println("Unable to invoke method: " + e.getCause().getMessage());
+			helpUtil.printMethodSignature(method);
+			System.err.println("Unable to invoke method: " + method.getName());
+			if (e.getCause() != null) {
+				System.err.println("Cause: " + e.getCause().getMessage());
+			}
 			throw new MethodCallException("Unable to execute: " + method.getName());
 		}
 	}
 
 	public void setTargetService(Object targetService) {
 		this.targetService = targetService;
+	}
+
+	public void setHelpUtil(HelpUtil helpUtil) {
+		this.helpUtil = helpUtil;
 	}
 
 }

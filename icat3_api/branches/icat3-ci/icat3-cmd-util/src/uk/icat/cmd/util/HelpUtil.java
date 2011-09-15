@@ -5,15 +5,25 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
+import org.springframework.beans.factory.config.BeanDefinition;
 
+import uk.icat.cmd.custom.create.EntityBaseBeansExtractor;
 import uk.icat.cmd.entity.Parameter;
+import uk.icat3.client.BadParameterException_Exception;
+import uk.icat3.client.EntitySummary;
+import uk.icat3.client.FieldInfo;
+import uk.icat3.client.ICAT;
+import uk.icat3.client.IcatInternalException_Exception;
 
 public class HelpUtil {
 
-	public static void printMethods(Method[] methods) {
+	private ICAT service;
+	
+	public void printMethods(Method[] methods) {
 		System.out.println("To get detailed method description please use following syntax: ");
 		System.out.println("\ticat_cmd.sh [method] -h");
 		System.out.println("Available methods: ");
@@ -23,7 +33,7 @@ public class HelpUtil {
 		}
 	}
 
-	private static String methodToString(Method m) {
+	private String methodToString(Method m) {
 		StringBuffer sb = new StringBuffer();
 
 		sb.append('\t');
@@ -42,22 +52,40 @@ public class HelpUtil {
 		return sb.toString();
 	}
 
-	public static void printDetailedHelp(Method method, Options options) {
+//	private boolean isNillable(Class<?> parameterType) {
+//		String simpleName = parameterType.getSimpleName();
+//		try {
+//			EntitySummary entitySummary = service.getEntitySummary(simpleName);
+//			for (FieldInfo fi : entitySummary.getFields()) {
+//				fi.isNullable();
+//				System.err.println("!!!!!!!");
+//			}
+//		} catch (BadParameterException_Exception e) {
+//			e.printStackTrace();
+//		} catch (IcatInternalException_Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		
+//		return false;
+//	}
+
+	public void printDetailedHelp(Method method, Options options) {
 		new HelpFormatter().printHelp("icat_cmd.sh " + method.getName() + " [parameters]", options);
 	}
 
-	private static Comparator<Method> methodComparator = new Comparator<Method>() {
+	private Comparator<Method> methodComparator = new Comparator<Method>() {
 		@Override
 		public int compare(Method o1, Method o2) {
 			return o1.getName().compareTo(o2.getName());
 		}
 	};
 
-	public static void printMethodSignature(Method method) {
+	public void printMethodSignature(Method method) {
 		System.err.println("Method signature: " + methodToString(method));
 	}
 
-	public static void printHelp() {
+	public void printHelp() {
 		System.err.println("Usage: icat_cmd.sh [method] [parameters]");
 		System.err.println("\t-l returns list of available methods");
 		System.err.println("\t-h prints this help");
@@ -65,5 +93,15 @@ public class HelpUtil {
 		System.err.println("\ticat_cmd.sh [method] -h");
 		System.err.println();
 		System.err.println("Web Service address, username and password are stored in icat.properties file");
+	}
+	
+	
+	public void setService(ICAT service) {
+		this.service = service;
+	}
+
+	public void printEBBHelp(String method) {
+		System.err.println("Usage: icat_cmd.sh " + method + " [parameters]");
+		System.err.println("Available parameters: " + EntityBaseBeansExtractor.getSimpleNames());
 	}
 }

@@ -9,8 +9,11 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
 import uk.icat.cmd.entity.Parameter;
+import uk.icat3.client.EntityBaseBean;
 
 public class OptionsBuilder {
+
+	private static final String JAVA_PACKAGE = "java";
 
 	public static Options getAllOptions(Method method, List<Parameter> parameters) {
 		Options options = new Options();
@@ -18,7 +21,7 @@ public class OptionsBuilder {
 			addDefaultOptions(options);
 			if (parameter.getType().isEnum()) {
 				createEnumOption(options, parameter);
-			} else if (parameter.getType().getName().startsWith("java")) {
+			} else if (parameter.getType().getName().startsWith(JAVA_PACKAGE)) {
 				createSimpleOption(options, parameter, null);
 			} else {
 				createComplexOption(options, parameter);
