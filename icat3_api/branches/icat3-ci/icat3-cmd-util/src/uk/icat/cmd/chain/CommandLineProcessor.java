@@ -10,13 +10,15 @@ import uk.icat.cmd.util.HelpUtil;
 public class CommandLineProcessor extends Command {
 
 	private static final String HELP_OPTION = "h";
+	
+	HelpUtil helpUtil;
 
 	@Override
 	public void process(State state) throws Exception {
 		state.setOptions(OptionsBuilder.getAllOptions(state.getMethod(), state.getParameters()));
 		state.setCommandLine(new PosixParser().parse(state.getOptions(), state.getArgs(), false));
 		if (checkIfHelpRequested(state)) {
-			HelpUtil.printDetailedHelp(state.getMethod(), state.getOptions());
+			helpUtil.printDetailedHelp(state.getMethod(), state.getOptions());
 		} else {
 			passToNext(state);
 		}
@@ -24,6 +26,10 @@ public class CommandLineProcessor extends Command {
 
 	private boolean checkIfHelpRequested(State state) {
 		return state.getCommandLine().hasOption(HELP_OPTION);
+	}
+	
+	public void setHelpUtil(HelpUtil helpUtil) {
+		this.helpUtil = helpUtil;
 	}
 
 }

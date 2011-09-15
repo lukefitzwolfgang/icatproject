@@ -7,14 +7,19 @@ import uk.icat.cmd.util.MethodHelper;
 
 public class ArgumentReader extends Command {
 
-	MethodHelper methodHelper;
+	private static final String LIST_FLAG = "-l";
+	private static final String HELP_FLAG = "-h";
+	private MethodHelper methodHelper;
+	private HelpUtil helpUtil;
 
 	@Override
 	public void process(State state) throws Exception {
-		if (state.getArgs().length == 0 || "-h".equals(state.getArgs()[0])) {
-			HelpUtil.printHelp();
-		} else if ("-l".equals(state.getArgs()[0])) {
-			HelpUtil.printMethods(methodHelper.getMethods());
+		if (state.getArgs().length == 0 || HELP_FLAG.equals(state.getArgs()[0])) {
+			helpUtil.printHelp();
+		} else if (LIST_FLAG.equals(state.getArgs()[0])) {
+			helpUtil.printMethods(methodHelper.getMethods());
+		} else if (state.getArgs().length == 2 && HELP_FLAG.equals(state.getArgs()[1])) {
+			helpUtil.printEBBHelp(state.getArgs()[0]);
 		} else {
 			passToNext(state);
 		}
@@ -22,6 +27,10 @@ public class ArgumentReader extends Command {
 
 	public void setMethodHelper(MethodHelper methodHelper) {
 		this.methodHelper = methodHelper;
+	}
+	
+	public void setHelpUtil(HelpUtil helpUtil) {
+		this.helpUtil = helpUtil;
 	}
 
 }

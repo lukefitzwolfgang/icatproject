@@ -34,6 +34,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
 	<bean id="argumentReader" class="uk.icat.cmd.chain.ArgumentReader">
 		<property name="methodHelper" ref="methodHelper" />
+		<property name="helpUtil" ref="helpUtil" />
 		<property name="next" ref="parameterExtractor" />
 	</bean>
 
@@ -43,6 +44,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 	</bean>
 
 	<bean id="commandLineProcessor" class="uk.icat.cmd.chain.CommandLineProcessor">
+		<property name="helpUtil" ref="helpUtil" />
 		<property name="next" ref="parameterParser" />
 	</bean>
 	
@@ -53,11 +55,15 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
 	<bean id="methodExecutor" class="uk.icat.cmd.chain.MethodExecutor">
 		<property name="targetService" value="#{ icatUtil.getService() }" />
+		<property name="helpUtil" ref="helpUtil" />
 		<property name="next" ref="resultPrinter" />
 	</bean>
 
 	<bean id="resultPrinter" class="uk.icat.cmd.chain.ResultPrinter" />
 
+	<bean id="helpUtil" class="uk.icat.cmd.util.HelpUtil" >
+		<property name="service" value="#{ icatUtil.getService() }" />
+	</bean>
 
 
 </beans>

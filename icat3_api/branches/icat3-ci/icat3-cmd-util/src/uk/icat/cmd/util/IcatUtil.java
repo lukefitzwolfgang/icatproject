@@ -2,12 +2,18 @@
 package uk.icat.cmd.util;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.namespace.QName;
 
 import uk.icat.cmd.entity.Configuration;
+import uk.icat3.client.BadParameterException_Exception;
+import uk.icat3.client.EntitySummary;
+import uk.icat3.client.FieldInfo;
 import uk.icat3.client.ICAT;
 import uk.icat3.client.ICATService;
+import uk.icat3.client.IcatInternalException_Exception;
 
 public class IcatUtil {
 
@@ -26,6 +32,7 @@ public class IcatUtil {
 			System.exit(1);
 		}
 	}
+	
 
 	public String getSid() {
 		return sid;
@@ -33,6 +40,17 @@ public class IcatUtil {
 
 	public Object getService() {
 		return serviceInstance;
+	}
+
+
+	public List<String> getMandatoryParameters(Class<?> type) throws Exception { 
+		List<String> params = new ArrayList<String>();
+		for (FieldInfo fi : serviceInstance.getEntitySummary(type.getSimpleName()).getFields()) {
+			if (!fi.isNullable()) {
+				params.add(fi.getName());
+			}
+		}
+		return params;
 	}
 
 }
