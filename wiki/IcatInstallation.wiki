@@ -591,7 +591,7 @@ Note that although there is a user called something like ISIS-admin with a passw
 {{{
 # Glassfish Application server configuration
 sjsas.admin.port=4848
-sjsas.http.port=8090
+sjsas.http.port=8080
 sjsas.password=adminadmin
 sjsas.host=localhost
 sjsas.username=admin
