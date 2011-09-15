@@ -34,7 +34,6 @@ The Icat web services are normally accessed through the HTTPS port.
 It is best practice not to install Glassfish and Icat as user root on Linux systems.
 Instead a new user ID is recommended for installation of both these packages. In this document we assume the user ID ''glassfish3'' for both glassfish and Icat software.
 
-
 == Required Software Components ==
 
 The following software components are required:
@@ -113,9 +112,7 @@ The Glassfish Server !OpenSource edition V3.0.1 or V3.1 is available from the Or
 It is important to use the full platform rather than the web profile version.
 Glassfish should be installed under the same user account as that used to install ICAT.
 
-
 === ORACLE ===
-
 
 Oracle XE requires that at least 1Gbyte of swap space is configured on the system.
 Oracle XE server is normally downloaded from the Oracle site with .deb and .rpm packages available.
@@ -143,8 +140,7 @@ These values can be set in the user's '''.bashrc''' file. Csh user's can set the
 ||PATH                            || $JAVA_HOME/bin:$ORACLE_HOME/bin:$ANT_HOME/bin:$PATH  || add JAVA_HOME, ORACLE_HOME and $ANT bins to PATH                                   ||
 ||ANT_HOME                        || /home/glassfish3/apache-ant-1.8.1                    || location of ant version 1.7 or later.                     ||
 
-If a remote Oracle database is used ORACLE_HOME will refer to the Oracle client path.
-
+If a remote Oracle database is used, ORACLE_HOME will refer to the Oracle client path.
 
 == Ports in use ==
 
@@ -187,7 +183,7 @@ SQL*Plus: Release 10.2.0.1.0 - Production on Fri Oct 10 12:10:51 2008
 Copyright (c) 1982, 2005, Oracle. All rights reserved.
 
 SQL> @install_icat.sql
-I C A T I S I S    XE    I N S T A L L
+I C A T     X E    I N S T A L L
 This script will create ICAT schema objects in a named schema in a specified database.
 Enter Database Name :  XE
 
@@ -255,7 +251,6 @@ In particular:
 
 * The Java JDK is normally owned by root and only root can add files to the endorsed directory (wstx-asl-3.9.2.jar) and the security directory (local_policy.jar and US_export_policy.jar).
  
-
 === Step 01 - Ensure the ICAT installation directory is present ===
 
 The previous section on installation of the database schemas required the download of the ICAT package:
@@ -375,7 +370,6 @@ BUILD SUCCESSFUL
 Total time: 13 seconds
 }}}
 
-
 This step will start the Glassfish server.
 
 _Possible errors:_
@@ -432,9 +426,6 @@ init-config:
 BUILD SUCCESSFUL
 Total time: 20 seconds
 }}}
-
-
-
 
 This step creates all the glassfish data sources and connection pools and deploys the icat-api.ws.jar onto Glassfish.
 
@@ -512,7 +503,6 @@ This should show just the icat application which should be marked as enabled.
 Click on the icat name to see the details of the application.
 Note that you should not use the browser "back" button while navigating the admin pages, as this returns
 you to the login screen.
-
 
 === Step 12 - Checking the WSDL output ===
 
