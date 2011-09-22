@@ -9,6 +9,7 @@ The purpose of this note is document the structure for the ICAT collaboration, a
 The collaboration has been holding regular meetings every two weeks since November.  During that time, several common themes have emerged.  In addition, we are now discussing the icat-4 release.  Guiding that release to a successful launch and to successful deployments is quite a challenge with the resources available.  We will review this set of packages from time to time.  For example, there is no support package.  It is the responsibility of the deployments to do this. 
 
 == Work packages ==
+
 || Id    || Topic                                           || Leader           || Deputy                         ||
 || WP0   || Project Management                              || Alistair         || Tom                            ||
 ||       || Meetings, actions, plans                        ||                  ||                                ||
@@ -16,19 +17,20 @@ The collaboration has been holding regular meetings every two weeks since Novemb
 ||       || Planning, coordination                          ||                  ||                                ||
 || WP1   || General facility integration                    || Steve, Ghita     || Tom                            ||
 ||       || API, XML-ingest                                 ||                  ||                                ||
-|| WP2   || Database independance                           || Antony           || Kier Hawker/Richard Sinclair   ||
+|| WP2   || Database independance                           || Alistair         || Kier Hawker/Richard Sinclair   ||
 ||       || Oracle, MySQL                                   ||                  ||                                ||
-|| WP3   || Infrastructure integration/indep.               || Sri              || Kevin                          ||
+|| WP3   || Infrastructure integration/indep.               || Sri              || Antony                         ||
 ||       || TopCat, Glassfish, JDK                          ||                  ||                                ||
-|| WP4   || Security, authentication and authorisation      || Tom              || Steve                          ||
+|| WP4   || Security, authentication and authorisation      || Steve            || Tom                            ||
 ||       || Rule based authorisation                        ||                  ||                                ||
 || WP5   || Documentation                                   || Kevin            || Alistair                       ||
 ||       || User and installation documentation             ||                  ||                                ||
 ||       || Release notes, test report                      ||                  ||                                ||
 ||       || FAQs                                            ||                  ||                                ||
-|| WP6   || Test and integration                            || Alistair         || Kevin                          ||
-|| WP7   || Specific facility integration                   || Holger           || Antony                         ||
+|| WP6   || Test and integration                            || Alistair         || Kevin  / Harjinder             ||
+|| WP7   || Specific facility integration                   || Holger           || Antony  /Shelley               ||
 ||       || DOI, BIRT, Usage reporting                      ||                  ||                                ||
 ||       || SSO, ANSTO, XML-listener                        ||                  ||                                || 
+
 == - the end - == 
     
