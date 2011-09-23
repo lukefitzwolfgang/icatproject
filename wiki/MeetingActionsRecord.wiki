@@ -13,7 +13,7 @@ Actions from ICAT collaboration telephone conference on 8 September 2011<br>
 
 ||Item   ||Description                                                           ||Res*(1) ||  Status||      Comment||
 ||24.00 ||Document the meeting                                                   ||AM      ||    Done||            -||
-||24.01 ||Add Ghita, Holger and Harinder to the meeting list                     ||AM      ||    Done||            -||
+||24.01 ||Add Ghita, Holger, Shelly and Harinder to the meeting list                     ||AM      ||    Done||            -||
 ||24.02 ||Write a note for the wiki about the Release criteria for ICAT4         ||AM      ||       -||            -||
 ||24.03 ||Write a note for the wiki about the use of Maven with ICAT4            ||AM      ||       -||            -||
 ||24.04 ||Test Glassfish3.11 with ICAT4 and document any alerts                  ||AM      ||       -||            -||
