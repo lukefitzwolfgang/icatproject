@@ -437,10 +437,11 @@ _Possible errors:_
 {{{
    GLASSFISH_HOME/domains/domain1/lib/ext/ojdbc14.jar
 }}}
- If not present, copy it there from
-{{{
-   INSTALLATION_HOME/lib/ojdbc14.jar
-}}}
+
+ If not present, then download from:
+
+ [http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html]
+
 
 === Step 09 - Optional: Add !MyProxy servers to the database ===
 
