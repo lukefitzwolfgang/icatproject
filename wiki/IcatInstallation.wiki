@@ -1,4 +1,4 @@
-#summary Installation notes for Oracle XE, Glassfish and Icat 3.4
+#summary Installation notes for Oracle XE, Glassfish and Icat 3.3.5
 #labels Featured,Installation
 
 = ICAT installation =
@@ -43,7 +43,7 @@ The following software components are required:
  * Glassfish (3.0.1 or 3.1 recommended)
  * Oracle XE Client tools (if database server not on same host)
  * Oracle XE Server (or access to an installed Oracle database)
- * ICAT (V3.4)
+ * ICAT (V3.3.5)
  * SVN client (if getting ICAT from SVN)
 
 If installing a stand alone system for testing, the free Oracle XE database is sufficient.
@@ -75,7 +75,7 @@ Some systems, such as RHEL5, only provide version 1.6 which is not compatible wi
 This is needed to get ICAT from SVN. It can be installed from package manager or from:
  * [http://subversion.apache.org/packages.html http://subversion.apache.org/packages.html].
 
-=== Glassfish V3 ===
+=== Glassfish (V3.0.1 or 3.1) ===
 Get the full product, not the web version. In this document it is assumed Glassfish will run on port 8080.
 If XE Oracle is on the same machine it must use a different port e.g. 8070.
 Download from:
@@ -84,13 +84,11 @@ Download from:
 === Oracle Database 10g Express Edition ===
 This is needed if an existing Oracle database is not available.
 The server package should be selected - the client package is only needed is using a remote database. Download from :
- * [http://www.oracle.com/technetwork/database/express-edition/downloads/index.html http://www.oracle.com/technetwork/database/express-edition/downloads/index.html]
+ * [http://www.oracle.com/technetwork/database/express-edition/database10gxe-459378.html http://www.oracle.com/technetwork/database/express-edition/database10gxe-459378.html]
 
 === ICAT distribution ===
 The ICAT software can be downloaded from the googlecode repository.
-A zip file is available for version 3.3.4 at the current time.
-However this version only works with Glassfish version 2.1 due to changes in the set up process for Glassfish 3.
-Until the next release of Icat it is necessary to check out the Icat trunk release using Subversion.
+A zip file is available for version 3.3.5 at the current time. Until the next release of Icat it is necessary to check out the Icat trunk release using Subversion.
 Non-project members may check out a read-only working copy anonymously over HTTPS using:
 
 {{{
@@ -122,7 +120,7 @@ runs on reboot.
 The Oracle web interface port may be changed from 8080 to 8070 during this step.
 If you wish to change the database port after installation, instructions are available at:
    * [http://daust.blogspot.com/2006/01/xe-changing-default-http-port.html xe-changing-default-http-port]
-The database will normally be installed under user oracle in group dba.
+The database will normally be installed under user oracle in group dba. It is also reccomended to add the user installing ICAT and Glassfish to the dba group.
 
 
 === Linux environment ===
@@ -190,6 +188,7 @@ Enter Database Name :  XE
 Enter SYS password :  mysyspasswd - this is not echoed
 Enter icat password :  myicatpasswd - this IS echoed
 Enter icatuser password :  myicatuserpasswd - this IS echoed
+Enter icatlog password :  myicatlogpasswd - this IS echoed
 Enter External tables location :  /tmp/extloc
 creating user icat
 
@@ -224,7 +223,7 @@ For a browser running on the installation machine use the URL:
 }}}
 
 This should give the Oracle login screen. Enter e.g. icatuser and the associated password. Then browse to SQL->Query Builder->Create.
-This should show a list of available tables. Selecting User_table should show fields such as Id, User_id, Dn and Password that
+This should show a list of available tables. Selecting User_tables should show fields such as Id, User_id, Dn and Password that
 can be inspected by running a query.
 
 Alternatively the following sqlplus command verifies that the icatuser schema has been installed:
@@ -237,9 +236,9 @@ Alternatively the following sqlplus command verifies that the icatuser schema ha
 
 == Prerequisites ==
 
-The installation needs an Oracle database to be accessible with user names icat and icatuser:
+The installation needs an Oracle database to be accessible with user names icat,icatuser and icatlog:
 
- # An installed ICAT 3.4 schema instance on an Oracle DB;
+ # An installed ICAT 3.3.5 schema instance on an Oracle DB;
  # An accessible empty schema for the ICAT API user session tables on an Oracle DB.
 
 Environment variables JAVA_HOME and GLASSFISH_HOME represent the root directories for the installations of Java and Glassfish respectively. You should also use the same user for the installation as you are going to use for production.  This user should also be used also for Glassfish.  The reason for this, is that the user must configure passwords which are read by Glassfish.  The installation procedure removes temporary files used by Glassfish. 
@@ -307,6 +306,18 @@ Configure the file INSTALLATION_HOME/nbproject/glassfish.properties:
 Now that the configuration is finished, the installation can start with a series of ant commands executed in INSTALLATION_HOME.
 
 === Step 06 - ant -f icat.xml init-config ===
+
+Manually download ojdbc14.jar file from: 
+
+ [http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html]
+
+Place ojdbc14 in the following directory:
+{{{
+   GLASSFISH_HOME/domains/domain1/lib/ext/ojdbc14.jar
+}}}
+
+
+
 Use the following command:
 {{{
 ant -f icat.xml init-config 
@@ -324,7 +335,6 @@ Buildfile: icat.xml
 init-config:
      [copy] Copying 1 file to /home/glassfish3/glassfish/domains/domain1/config
      [copy] Copying 1 file to /home/glassfish3/glassfish/domains/domain1/config
-     [copy] Copying 1 file to /home/glassfish3/glassfish/domains/domain1/lib/ext
 
 -init-java-deployment-env:
 
@@ -433,14 +443,6 @@ _Possible errors:_
  * If reinstalling, then some errors will occur saying it cannot create some tables; do not worry about this, it just means the tables have already been created.
  * If an error concerning "deleteonexit" attribute occurs, this indicates use of ant V1.6 by mistake. Get a later version of ant.
  * If using Glassfish 3.1 the default admin password is null. The default assumed in glassfish.properties is adminadmin. Ensure that this entry is consistent.
- * If an error occurs in the context of database connection with _Class not found_ then check for the file:
-{{{
-   GLASSFISH_HOME/domains/domain1/lib/ext/ojdbc14.jar
-}}}
-
- If not present, then download from:
-
- [http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html]
 
 
 === Step 09 - Optional: Add !MyProxy servers to the database ===
@@ -565,6 +567,13 @@ icatuser.url=jdbc:oracle:thin:@localhost:1521:XE
 icatuser.password=myicatuserpasswd
 icatuser.data.source.classname=oracle.jdbc.pool.OracleDataSource
 icatuser.driver=oracle.jdbc.driver.OracleDriver
+
+# This is the properties for the ICAT log schema
+icatlog.user=icatlog
+icatlog.url=jdbc:oracle:thin:@localhost:1521:XE
+icatlog.password=myicatlogpasswd
+icatlog.data.source.classname=oracle.jdbc.pool.OracleDataSource
+icatlog.driver=oracle.jdbc.driver.OracleDriver
 }}}
 
 === Useful commands for verifying the database ===
