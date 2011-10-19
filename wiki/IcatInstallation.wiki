@@ -4,7 +4,6 @@
 = ICAT installation =
 
 Authors: Glen Drinkwater, Alistair Mills, Ron Fowler, Steve Fisher
-
 <wiki:toc max_depth="2" />
 
 = Planning the Icat installation  =
@@ -168,6 +167,8 @@ The ICAT web service runs on the Glassfish HTTPS port.
 Note that running sqlplus from a directory other than INSTALLATION_HOME/database/icat may cause the installation script to fail.
 
 The installation script requests the Oracle sys password so that it can connect to the database and create the schemas (icat, icatuser) and the directory needed for the creation of the external tables.  The installation script will ask for a password for each of the newly created schema users (icat and icatuser).  Note that you have to have SYS access to the database.  If you are using a database other than XE, then you must have an entry in the tnsnames.ora file so that sqlplus can locate the database service. 
+
+(17/11/11 Shirley Crompton: note that the icat schema installation script uses other scripts that are not in the distribution zip file, these additional scripts are located in the icat3-database folder in the Trunk release.)
 
 For example, the following command:
 {{{
