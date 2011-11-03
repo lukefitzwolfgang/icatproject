@@ -8,33 +8,34 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 ----
 
-Actions from ICAT collaboration telephone conference on 8 September 2011<br>
+Actions from ICAT collaboration telephone conference on 22 September 2011<br>
 24.1 - Alistair Mills - 22 September 2011
 
-||Item   ||Description                                                           ||Res*(1) ||      Status||      Comment||
-||24.00 ||Document the meeting                                                   ||AM      ||        Done||            -||
-||24.01 ||Add Ghita, Holger, Shelly and Harinder to the meeting list             ||AM      ||        Done||            -||
-||24.02 ||Write a note for the wiki about the Release criteria for ICAT4         ||AM      ||           -||            -||
-||24.03 ||Write a note for the wiki about the use of Maven with ICAT4            ||AM      ||           -||            -||
-||24.04 ||Test Glassfish3.11 with ICAT4 and document any alerts                  ||AM      ||           -||            -||
-||24.05 ||Update the road map for ICAT 4 and link it to the Release criteria     ||AM      ||           -||            -||
-||24.06 ||Write a note with estimates of the effort required to release ICAT4    ||AM      ||           -||            -||
-||24.07 ||Remind people of the next meeting on 6 October                         ||AM      ||        Done||            -||
-||24.08 ||Update the ICAT4 roadmap                                               ||AM      || In progress||            -||
+||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
+||24.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
+||24.01  ||Add Ghita, Holger, Shelly and Harinder to the meeting list             ||AM      ||        Done||            -||
+||24.02  ||Write a note for the wiki about the Release criteria for ICAT4         ||AM      ||        Done||            -||
+||24.03  ||Write a note for the wiki about the use of Maven with ICAT4            ||AM      ||           -||            -||
+||24.04  ||Test Glassfish 3.11 with ICAT4 and document any alerts                 ||AM      || In progress||            -||
+||24.05  ||Update the road map for ICAT 4 and link it to the Release criteria     ||AM      || In progress||            -||
+||24.06  ||Write a note with estimates of the effort required to release ICAT4    ||AM      || In progress||            -||
+||24.07  ||Remind people of the next meeting on 6 October                         ||AM      ||        Done||            -||
+||24.08  ||Update the ICAT4 roadmap                                               ||AM      || In progress||            -||
 
 *(1) Collaborators
-||init|| Name                        || Institute                  ||     Present  ||   Apologies
-||TG  ||Tom Griffin                  || STFC ISIS                  ||     +        ||           
-||HG  ||Holger Gebhard               || ILL                        ||              ||
-||SF  ||Steve Fisher                 || STFC                       ||              || +
-||AM  ||Alistair Mills               || STFC                       ||     +        ||
-||GKM ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||          
-||SN  ||Sri Nagella                  || STFC                       ||     +        ||
-||RS  ||Richard Sinclair             || STFC                       ||              || 
-||RF  ||Ron Fowler                   || STFC                       ||              || 
-||HC  ||Harjinder Chahal             || STFC                       ||     +        ||
-||KP  ||Kevin Phipps                 || STFC                       ||              || +
-||SR  ||Shelly Ren                   || ORNL                       ||     +        ||
+
+||init ||Name                         || Institute                  ||     Present  || Apologies ||
+||TG   ||Tom Griffin                  || STFC ISIS                  ||     +        ||           ||
+||HG   ||Holger Gebhard               || ILL                        ||              ||           ||
+||SF   ||Steve Fisher                 || STFC                       ||              || +         ||
+||AM   ||Alistair Mills               || STFC                       ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||           ||     
+||SN   ||Sri Nagella                  || STFC                       ||     +        ||           ||
+||RS   ||Richard Sinclair             || STFC                       ||              ||           ||
+||RF   ||Ron Fowler                   || STFC                       ||              ||           ||
+||HC   ||Harjinder Chahal             || STFC                       ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC                       ||              || +         ||
+||SR   ||Shelly Ren                   || ORNL                       ||     +        ||           ||
 
 Actions from ICAT collaboration telephone conference on 8 September 2011<br>
 23.1 - Alistair Mills - 8 September 2011
@@ -205,6 +206,33 @@ Brief summary of discussions<br>
 || SN    || Sri Nagella ||
 || SO    || Shelley Oak Ridge National Lab ||
 || TG    || Tom Griffin ||
+
+
+Actions from ICAT collaboration telephone conference on 3 November 2011<br>
+25.1 - Alistair Mills - 3 November 2011
+
+||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
+||25.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
+||25.01  ||.                                                                      ||.       ||           .||            -||
+||25.02  ||.                                                                      ||.       ||           .||            -||
+||25.03  ||.                                                                      ||.       ||           .||            -||
+||25.04  ||.                                                                      ||.       ||           .||            -||
+||25.05  ||.                                                                      ||.       ||           .||            -||
+
+*(1) Collaborators
+
+||init ||Name                         || Institute                  ||     Present  || Apologies ||
+||TG   ||Tom Griffin                  || STFC ISIS                  ||              ||           ||
+||HG   ||Holger Gebhard               || ILL                        ||              ||           ||
+||SF   ||Steve Fisher                 || STFC                       ||              ||           ||
+||AM   ||Alistair Mills               || STFC                       ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||           ||     
+||SN   ||Sri Nagella                  || STFC                       ||              ||           ||
+||RS   ||Richard Sinclair             || STFC                       ||              ||           ||
+||RF   ||Ron Fowler                   || STFC                       ||              ||           ||
+||HC   ||Harjinder Chahal             || STFC                       ||              ||           ||
+||KP   ||Kevin Phipps                 || STFC                       ||              ||           ||
+||SR   ||Shelly Ren                   || ORNL                       ||              ||           ||
 
 
 
