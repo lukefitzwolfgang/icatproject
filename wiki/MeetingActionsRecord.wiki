@@ -10,6 +10,20 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 == Meeting 25 - 3 November 2011 ==
 
+Agenda for ICAT collaboration telephone conference on 3 November 2011<br>
+
+ * Actions since the meeting on 22 September
+ * Status of ICAT 4 (Alistair)
+ * Representation of time (Steve)
+ * Status of port to MySQL (Alistair)
+ * Resources available in 2012 (All)
+ * Progress on evaluation of ICAT4 (Steve)
+ * Possibility of adding a .props file for configuration
+ * Brief thoughts on adding notification
+ * BMT rather than CMT (Steve) 
+ * Status of ICAT work at ILL (J-F)
+ * Status of ICAT work at ORNL (SR)
+
 Actions from ICAT collaboration telephone conference on 3 November 2011<br>
 25.1 - Alistair Mills - 3 November 2011 
 
@@ -40,7 +54,7 @@ Actions from ICAT collaboration telephone conference on 3 November 2011<br>
 ||HC   ||Harjinder Chahal             || STFC                       ||     +        ||           ||
 ||KP   ||Kevin Phipps                 || STFC                       ||     +        ||           ||
 ||SR   ||Shelly Ren                   || ORNL                       ||     +        ||           ||
-||J-FX ||Jean-Francois X              || ILL                        ||     +        ||           ||
+||J-F  ||Jean-Francois                || ILL                        ||     +        ||           ||
 ||RS   ||Richard Sinclair             || STFC                       ||              ||           ||
 
 == Meeting 24 - 22 September 2011 ==
