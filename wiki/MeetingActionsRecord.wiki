@@ -1,41 +1,49 @@
 #summary Record of actions from ICAT collaboration meetings during 2011.
 
-== Record of actions from ICAT collaboration meetings==
+= Record of actions from ICAT collaboration meetings =
 
 This page holds records of the meetings during 2011<br>
 
 Earlier meetings are at MeetingActionsRecordArchive
 
-----
+<wiki:toc max_depth="1" />
+
+== Meeting 25 - 3 November 2011 ==
 
 Actions from ICAT collaboration telephone conference on 3 November 2011<br>
-25.1 - Alistair Mills - 3 November 2011
+25.1 - Alistair Mills - 3 November 2011 
 
 ||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
 ||25.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
-||25.01  ||Follow up on actions 24.04 and 24.06                                   ||.       ||           .||            -||
-||25.02  ||.                                                                      ||.       ||           .||            -||
-||25.03  ||.                                                                      ||.       ||           .||            -||
-||25.04  ||.                                                                      ||.       ||           .||            -||
-||25.05  ||.                                                                      ||.       ||           .||            -||
+||25.01  ||Follow up on actions 24.04 and 24.06                                   ||AM      ||           .||            -||
+||25.02  ||Follow up on action 24.03 (Use of Maven for building ICAT4)            ||SF      ||           .||            -||
+||25.03  ||Attempt to do ICAT 3 to ICAT 4 upgrade using an ISIS testbed           ||TG      ||           .||            -||
+||25.04  ||Attempt to do ICAT 3 to ICAT 4 upgrade using an ILL testbed            ||J-F     ||           .||            -||
+||25.05  ||Discuss the GF 3.1.1 problem                                           ||AM/SR   ||           .||            -||
+||25.06  ||Investigate ways to represent time to suit the data                    ||SF/RS   ||           .||            -||
+||25.07  ||Add a properties file to ICAT4                                         ||SF      ||           .||            -||
+||25.08  ||Experiment with Bean Managed Transactions for ICAT 4.1                 ||SF      ||           .||            -||
+||25.09  ||Send comments on the changes to the ICAT API to Steve                  ||All     ||           .||            -||
+||25.10  ||Provide a document about notification                                  ||SF      ||           .||            -||
+||25.11  ||Add fields for STARTTIME and ENDTIME to DATASET for ICAT 4.0           ||SF      ||           .||            -||
+||25.12  ||Defer further implementation of MySQL with ICAT until ICAT 4.1         ||AM      ||           .||            -||
+||25.13  ||Follow up with Shelly on ORNL requirements                             ||SR      ||           .||            -||
+||25.14  ||Investigate hosting a collaboration meeting at ILL in 1Q2012           ||J-F     ||           .||            -||
+||25.15  ||Schedule next collaboration meeting for 17 November 2011               ||AM      ||           .||            -||
 
 *(1) Collaborators
 
 ||init ||Name                         || Institute                  ||     Present  || Apologies ||
 ||TG   ||Tom Griffin                  || STFC ISIS                  ||     +        ||           ||
-||HG   ||Holger Gebhard               || ILL                        ||              ||           ||
 ||SF   ||Steve Fisher                 || STFC                       ||     +        ||           ||
 ||AM   ||Alistair Mills               || STFC                       ||     +        ||           ||
-||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||           ||     
-||SN   ||Sri Nagella                  || STFC                       ||              ||           ||
+||HC   ||Harjinder Chahal             || STFC                       ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC                       ||     +        ||           ||
+||SR   ||Shelly Ren                   || ORNL                       ||     +        ||           ||
+||J-FX ||Jean-Francois X              || ILL                        ||     +        ||           ||
 ||RS   ||Richard Sinclair             || STFC                       ||              ||           ||
-||RF   ||Ron Fowler                   || STFC                       ||              ||           ||
-||HC   ||Harjinder Chahal             || STFC                       ||      +       ||           ||
-||KP   ||Kevin Phipps                 || STFC                       ||      +       ||           ||
-||SR   ||Shelly Ren                   || ORNL                       ||      +       ||           ||
-||JFX  ||Jean Francois X              || ILL                        ||      +       ||           ||
 
-----
+== Meeting 24 - 22 September 2011 ==
 
 Actions from ICAT collaboration telephone conference on 22 September 2011<br>
 24.1 - Alistair Mills - 22 September 2011
@@ -66,6 +74,8 @@ Actions from ICAT collaboration telephone conference on 22 September 2011<br>
 ||KP   ||Kevin Phipps                 || STFC                       ||              || +         ||
 ||SR   ||Shelly Ren                   || ORNL                       ||     +        ||           ||
 
+== Meeting 23 - 8 September 2011 ==
+
 Actions from ICAT collaboration telephone conference on 8 September 2011<br>
 23.1 - Alistair Mills - 8 September 2011
 
@@ -82,193 +92,4 @@ Actions from ICAT collaboration telephone conference on 8 September 2011<br>
 ||23.09  || 21.04    ||Copy of the documentation of the API of ICAT3 (icatproject.org) ||AM      ||      In progress||            -||
 ||23.10  || 21.05    ||Update/demo of BIRT - Remind HG                                 ||AM      ||             Done||            -||
 
-Actions from ICAT collaboration telephone conference on 22 July 2011<br>
-22.1 - Alistair Mills - 22 July 2011
-
-||Item   ||Description                                                  ||Res*(1) ||  Status||      Comment||
-||22.00 ||Document the meeting                                          ||AM      ||    Done||            -||
-||22.01 ||Add information about Mariusz work on the examples to wiki    ||AM      || Started||            -||
-||22.02 ||Inform AM about the status of the documentation on the API    ||KP      ||   Done ||            -||
-||22.03 ||Publish information on the continuous build web site          ||AM      ||      - ||            -||
-||22.04 ||Provide material for icat3 performance tests                  ||TG      ||      - ||            -||
-||22.05 ||Update the roadmap for ICAT4                                  ||AM      ||      - ||            -||
-||22.06 ||Update the plan for the improvements for XML Ingest for DLS   ||AM      ||      - ||            -||
-
-Actions from ICAT collaboration telephone conference on 7 July 2011<br>
-21.1 - Alistair Mills - 7 July 2011
-
-||Item   ||Description                                                  ||Res*(1) || Status||      Comment||
-||21.00 ||Document the meeting                                          ||AM      ||   Done||            -||
-||21.01 ||Add a note about rule based authentication to googlecode      ||SF      ||     - ||            -||
-||21.02 ||Review the status of the MySQL version of ICAT                ||AW      ||     - ||            -||
-||21.03 ||Review the status of the continuous build of ICAT             ||SN      ||     - ||            -||
-||21.04 ||Provide a copy of the documentation on the API to googlecode  ||KP      ||     - ||            -||
-||21.05 ||Provide an update/demo of BERT                                ||HG      ||     - ||            -||
-||21.06 ||Try using the ICAT from the head of the SVN on Googlecode     ||SO      ||     - ||            -||
-||21.07 ||Arrange the next meeting for 8 September 2011                 ||AM/TG   ||     - ||            -||
-||21.08 ||Arrange a meeting of ICAT users at RAL on 22/7 about ICAT4    ||AM/TG   ||   Done||            -||
-
-Actions from ICAT collaboration telephone conference on 12 May 2011<br>
-20.1 - Alistair Mills - 12 May 2011
-
-||Item  ||     Description                                             ||Res*(1)|| Status||      Comment||
-||20.00 ||Document the meeting                                         ||AM     ||   Done||            -||
-||20.01 ||Provide feedback to Steve on his authorisation ideas         ||All    ||   Done||            -||
-||20.02 ||Provide feedback to Jessica on her download stats component  ||All    ||   Done||            -||
-||20.03 ||Arrange the next meeting for 7 July 2011                     ||AM/TG  ||   Done||            -||
-
-
-Actions from ICAT collaboration telephone conference on 03 March 2011<br>
-19.1 - Alistair Mills - 31 March 2011
-
-||New||     Description||                                             Res*(1)|| Status||  Comment*(2)||
-||19.00 ||Document the meeting                                      ||TG/AM  ||   Done||            -||
-||19.01 ||Add REST web service interface to roadmap                 ||AM     ||     Ok||            -||
-||19.02 ||Provide the ISIS TopCat reqs to Sri for TopCat roadmap    ||TG     ||      .||            -||
-||19.03 ||Update the ICAT roadmap and distribute                    ||AM     ||     Ok||            -||
-||19.04 ||Ticket review at next meeting                             ||TG     ||      .||            -||
-||19.05 ||Schedule next meeting for WEDNESDAY 13 April 2011         ||TG     ||     Ok||            -||
-
-Actions from ICAT collaboration telephone conference on 03 March 2011<br>
-18.1 - Alistair Mills - 3 March 2011
-
-||New||     Description||                                             Res*(1)|| Status||  Comment*(2)||
-||18.00 ||Document the meeting                                      ||TG/AM||   Done||     -||
-||18.01 ||Be aware that from 01/2012 ILL may have another ICAT dev  ||All||     Ok||      -||
-||18.02 ||Inform Roger Downing about the CIC ingest performance     ||AM||      .||       -||
-||18.03 ||Create a road map for TopCat 1.1 or TopCat 2              ||SN||      .||       -||
-||18.04 ||Provide a paper on rule based authentication              ||TG||      .||       -||
-||18.05 ||Update the road map for icat4 and put on GoogleCode Wiki  ||AM||      .||       -||
-||18.06 ||Update the workpackage description and put on GoogleCode  ||AM||      .||       -||
-
-*(1) Collaborators
-||init|| Name                        || Institute                  ||     Present  ||   Apologies
-||TG  ||Tom Griffin                  || STFC ISIS                  ||+||           ||
-||HG  ||Holger Gebhard               || ILL                        || ||           ||
-||SF  ||Steve Fisher                 || STFC                       || ||           || +
-||AM  ||Alistair Mills               || STFC                       ||+||           ||
-||GKM ||Ghita Kouadri Mostefaoui     || Diamond                    || ||           ||
-||SN  ||Sri Nagella                  || STFC                       ||+||           ||
-||RS  ||Richard Sinclair             || STFC                       || ||           ||
-||RF  ||Ron Fowler                   || STFC                       || ||           ||
-||HC  ||Harjinder Chahal             || STFC                       ||+||           ||
-||KP  ||Kevin Phipps                 || STFC                       || ||           || +
-
-----
-
-Actions from ICAT collaboration meeting on 17 February 2011 <br>
-17.0 - AM, TG - 17 February 2011
-
-|| Id || Description || Res*(1) || Tgt*(2) || Comment ||
-||17.00 || Document the actions  || AM || Done || - ||
-||17.01 || Document the road map for icat4 and distribute for comm. || AM || Done || - ||
-||17.02 || Document the collaboration structure and distribute || AM || Done || - ||
-||17.03 || Consolidate open actions into tickets || TG || 03/03 || - ||
-||17.04 || Invite Fabio to give a talk on 24/2 and invite collab. || TG || Done || - ||
-
-*(1) Collaborators:
-||     || Name                    || Institute  || Present || Apologies ||
-|| TG  || Tom Griffin             || ISIS || + ||   ||
-|| AM  || Alistair Mills          || STFC || +  ||    ||
-|| GKM ||Ghita Kouadri Mostefaoui || Diamond||  + ||   ||
-||FB   ||Fabio Bonaccorso         || ELETTRA ||  || + ||
-||HG   ||Holger Gebhard           || ILL ||   || + ||
-||SF   ||Steve Fisher             || STFC ||   || + ||
-||SN   ||Sri Nagella              || STFC ||   || + ||
-||RS   ||Richard Sinclair         || STFC ||   || + ||
-||RD   ||Roger Downing            || STFC ||   || + ||
-||RF   ||Ron Fowler               || STFC ||   || + ||
-
-----
-
-Actions from ICAT collaboration meeting on 6 January 2011<br>
-14.1 - Tom Griffin - 7 January 2011
-
-Brief summary of discussions<br>
-- SF suggestion for refactoring of ParameterSearching<br>
-- SN fixed test cases for ParameterSearching<br>
-- SF asked what was special about CLF XML ingest. TG and SN gave history of ISIS XML ingest<br>
-
-|| New || Description || Res`*`(1) || Status || Comment`*`(2) ||
-|| 14.00 || Document this meeting || TG || Done || . ||
-|| 14.01 || Meetings now to be on alternate Thursdays at 1300GMT, starting 20th Jan 2011 || All || - || - ||
-|| 14.02 || Refactoring of Parameter Methods - SF to circulate changes and reasoning || SF || - || - ||
-|| 14.03 || All to feedback on SF's suggestions || ALL || - || - ||
-|| 14.04 || Document difference between CLF and ISIS XML Ingest || SN || Next meeting || - ||
-<br><br>
-
-|| Updates || Description || Res`*`(1) || Status || Comment`*`(2) ||
-|| 12.01 || Take responsibility for Code documentation || AM || Write a test for the API which documents the API || End Jan 2011 ||
-|| 12.02 || Take responsibility for Installation documentation || SN || Ron still working on this || End Jan 2011 ||
-|| 12.03 || Take responsibility for My SQL version of icat || RS/AM || TG has completed code/app server work. Waiting for RS to resolve SEQUENCE issue  || End Jan 2011 ||
-|| 12.04 || Take responsibility for User Authentication || TG || No progress || End Jan 2011 ||
-|| 12.05 || Take responsibility for Reporting || TG || Looking at JASPER, BIRT and scientific reports. HG to add to wiki page || End Mar 2011 ||
-|| 12.06 || Take responsibility for Test suite || AM || There is a test for xmlingest in progress || End Jan 2011 ||
-|| 12.07 || Take responsibility for Application server independence || . || No progress || . ||
-|| 12.08 || Take responsibility for Authorisation/ Permissions || SN/AM || No progress || End Mar 2011 ||
-|| 12.09 || Take responsibility for XML Ingest || AM/SN || Multiple threading causes 4% failure.  Try single threading. Failure rate possibly worse than though || End Jan 2011 ||
-|| 12.10 || Take responsibility for documenting Data loader (DLS database load) || RD/AM || Chase Roger about this || End Jan 2011 ||
-|| 12.11 || Take responsibility for Logging || SF || Steve has documented and made minor code change. SF to investigate SN reported unit test issue|| End Jan 2011 ||
-|| 12.12 || Take responsibility for Admin documentation || TG || AM to provide information about the CLF stored procedures || End Jan 2011 ||
-|| 12.13 || Take responsibility for direct build and test || SN || This is being tested in the CLF project || End Jan  2011 ||
-|| 12.14 || Take responsibility for surrogate ids || TG || On going || End Jan 2011 ||
-|| 12.15 || Take responsibility for document the parameter search || NC || Document emailed. All to review (esp. SF) || End Jan 2011 ||
-|| 12.16 || Take responsibility for API change management || SN ||  No progress || End Jan 2011 ||
-
-
-|| Completed || Description || Res`*`(1) || Status || Comment`*`(2) ||
-|| 12.17 || Provide spec of new method for search || NC/HG || Complete || - ||
-|| 13.00 || Document this meeting || AM || Complete || . ||
-|| 13.01 || Meet again on 6 January 2011 at 1300 GMT || Complete || - || - ||
-
-
-`*`(1) Collaborators:
-|| Init. || Name                     || 
-|| AM    || Alistair Mills           || 
-|| AW    || Antony Wilson  || 
-|| GM    || Ghita Kouadri Mostefaoui ||
-|| HG    || Holger Gebhard ||
-|| KP    || Kevin Phipps ||
-|| MB    || Mariusz Badwejer ||
-|| NC    || Najor Cruzcruz ||
-|| SF    || Steve Fisher ||
-|| SN    || Sri Nagella ||
-|| SO    || Shelley Oak Ridge National Lab ||
-|| TG    || Tom Griffin ||
-
-
-Actions from ICAT collaboration telephone conference on 3 November 2011<br>
-25.1 - Alistair Mills - 3 November 2011
-
-||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
-||25.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
-||25.01  ||.                                                                      ||.       ||           .||            -||
-||25.02  ||.                                                                      ||.       ||           .||            -||
-||25.03  ||.                                                                      ||.       ||           .||            -||
-||25.04  ||.                                                                      ||.       ||           .||            -||
-||25.05  ||.                                                                      ||.       ||           .||            -||
-
-*(1) Collaborators
-
-||init ||Name                         || Institute                  ||     Present  || Apologies ||
-||TG   ||Tom Griffin                  || STFC ISIS                  ||              ||           ||
-||HG   ||Holger Gebhard               || ILL                        ||              ||           ||
-||SF   ||Steve Fisher                 || STFC                       ||              ||           ||
-||AM   ||Alistair Mills               || STFC                       ||     +        ||           ||
-||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||           ||     
-||SN   ||Sri Nagella                  || STFC                       ||              ||           ||
-||RS   ||Richard Sinclair             || STFC                       ||              ||           ||
-||RF   ||Ron Fowler                   || STFC                       ||              ||           ||
-||HC   ||Harjinder Chahal             || STFC                       ||              ||           ||
-||KP   ||Kevin Phipps                 || STFC                       ||              ||           ||
-||SR   ||Shelly Ren                   || ORNL                       ||              ||           ||
-
-
-
-Others<br>
-RS = Richard Sinclair<br>
-RD = Roger Downing
-
-`*`(2) Comments
-The dates shown here are the earliest dates when we can expect to see real progress with the work.
-The persons responsible will be expected to provide status on their work at each meeting.
+== - the end - ==
