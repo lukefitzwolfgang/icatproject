@@ -8,6 +8,35 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 ----
 
+Actions from ICAT collaboration telephone conference on 3 November 2011<br>
+25.1 - Alistair Mills - 3 November 2011
+
+||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
+||25.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
+||25.01  ||Follow up on actions 24.04 and 24.06                                   ||.       ||           .||            -||
+||25.02  ||.                                                                      ||.       ||           .||            -||
+||25.03  ||.                                                                      ||.       ||           .||            -||
+||25.04  ||.                                                                      ||.       ||           .||            -||
+||25.05  ||.                                                                      ||.       ||           .||            -||
+
+*(1) Collaborators
+
+||init ||Name                         || Institute                  ||     Present  || Apologies ||
+||TG   ||Tom Griffin                  || STFC ISIS                  ||     +        ||           ||
+||HG   ||Holger Gebhard               || ILL                        ||              ||           ||
+||SF   ||Steve Fisher                 || STFC                       ||     +        ||           ||
+||AM   ||Alistair Mills               || STFC                       ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||           ||     
+||SN   ||Sri Nagella                  || STFC                       ||              ||           ||
+||RS   ||Richard Sinclair             || STFC                       ||              ||           ||
+||RF   ||Ron Fowler                   || STFC                       ||              ||           ||
+||HC   ||Harjinder Chahal             || STFC                       ||      +       ||           ||
+||KP   ||Kevin Phipps                 || STFC                       ||      +       ||           ||
+||SR   ||Shelly Ren                   || ORNL                       ||      +       ||           ||
+||JFX  ||Jean Francois X              || ILL                        ||      +       ||           ||
+
+----
+
 Actions from ICAT collaboration telephone conference on 22 September 2011<br>
 24.1 - Alistair Mills - 22 September 2011
 
