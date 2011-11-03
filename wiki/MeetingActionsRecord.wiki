@@ -6,7 +6,7 @@ This page holds records of the meetings during 2011<br>
 
 Earlier meetings are at MeetingActionsRecordArchive
 
-<wiki:toc max_depth="1" />
+<wiki:toc max_depth="3" />
 
 == Meeting 25 - 3 November 2011 ==
 
