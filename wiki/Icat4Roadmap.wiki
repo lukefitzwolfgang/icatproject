@@ -16,14 +16,8 @@ Note that words like additional, and improved relate to icat-3.  Some of these f
   * December 2011
     
 == Release criteria ==
-    * compatible with TopCAT 1.0;
-    * functionality requirements (TBD);
-    * performance requirements (TBD);
-    * documentation requirements (TBD);
-    * reliability requirements (TBD);
-    * compatibility requirements (TBD);
-    * migration tools (TBD);
-    * deprecation tolls (TBD).
+
+wiki:Icat4ReleaseCriteria
     
 == Improved documentation ==
     * documentation of the API;
