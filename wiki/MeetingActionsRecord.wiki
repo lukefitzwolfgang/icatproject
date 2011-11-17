@@ -8,6 +8,15 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 <wiki:toc max_depth="3" />
 
+== Meeting 26 - 17 November 2011 ==
+
+   * Actions since the meeting on 3 November
+   * Status of ICAT work at ORNL (SR)     
+       * Removal of local maven repository
+       * Facility based unit test: looks like test input data are hard coded.
+       * Reporting and event logging in icat4
+       * IP address gets logged with sessionId? (requested by SNS IT)
+
 == Meeting 25 - 3 November 2011 ==
 
 Agenda for ICAT collaboration telephone conference on 3 November 2011<br>
