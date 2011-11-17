@@ -115,7 +115,15 @@ These items will not be included in ICAT 4.0, but are candidates for the future.
     * Software / application table links;
     * ability to do some cross ICAT relationships, for example at the level of a study, such so an ISIS investigation can be related to Diamond and ILL investigations which are part of the same research program.
     
+== ORNL requirements ==
 
+To provide better system performance and user experience, we wanted to offer live view and auto data reduction to SNS users in the future.
+
+How can icat help? 2 major requirements have been brought up:
+
+1. Provide a new API to allow a quick metadata search without a user login. The metadata request seems to vary from instrument to instrument. For example our eqsans instrument scientist asked for the following metadata: start time, run title, run notes, total run time, total accelerator current, sample to detector distance, wave length band used for a given run number or a range of run numbers. They wanted these metadata to be available in mantid via icat without having to login into mantid/icat. Today, these metadata are obtained by calling a script that harvests pieces from different metadata files on the instrument analysis machine. 
+
+2. Another request is to enable cross references among the runs. How to best guess the background runs like empty run, transmission run, vanadium run etc that are needed for data reduction? Can this be done without a user login?
 
     
 == - the end -  ==
