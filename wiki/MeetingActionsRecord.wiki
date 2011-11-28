@@ -11,20 +11,18 @@ Earlier meetings are at MeetingActionsRecordArchive
 == Meeting 27 - 1 December 2011 ==
 
    * Actions for the meetings of 3 and 17 November
+   * Review of ICAT Collaboration by Software Sustainability Institute
    * More items to be added
 
-
-
-
 Actions from ICAT collaboration telephone conference on 17 November 2011<br>
-25.1 - Alistair Mills - 28 November 2011 
+26.1 - Alistair Mills - 28 November 2011 
 
 ||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
 ||26.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
 ||26.01  ||Provide more information on the usage of ICAT4                         ||SF/AM   ||           .||            -||
 ||26.02  ||Write a note describing controlling metadata based on IP of client     ||TG      ||           .||            -||
 ||26.03  ||Send pom files for building ICAT4 to SF                                ||SR      ||           .||            -||
-||26.04  ||Try maven build with SR's scripts                                      ||AW/HC   ||           .||            -||
+||26.04  ||Try maven build with SF's maven scripts - see 26.03                    ||HC      ||           .||            -||
 ||26.05  ||Investigate the Facility Unit tests in ICAT4                           ||SF/HC   ||           .||            -||
 ||26.06  ||Add upgradge of logging to icat4 roadmap                               ||AM      ||        Done||            -||
 ||26.07  ||Add IP address to session id                                           ||AM      ||        Done||            -||
