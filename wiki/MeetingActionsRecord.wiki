@@ -8,6 +8,13 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 <wiki:toc max_depth="3" />
 
+== Meeting 27 - 1 December 2011 ==
+
+   * Actions for the meetings of 3 and 17 November
+   * More items to be added
+
+
+
 
 Actions from ICAT collaboration telephone conference on 17 November 2011<br>
 25.1 - Alistair Mills - 28 November 2011 
@@ -25,15 +32,12 @@ Actions from ICAT collaboration telephone conference on 17 November 2011<br>
 ||26.09  ||Add Milan to the invitation list for the meetings                      ||AM      ||        Done||            -||
 ||26.10  ||Chase Holger about attending the collaboration meetings                ||AM      ||        Done||            -||
 
-
-
-
 == Meeting 26 - 17 November 2011 ==
 
    * Actions since the meeting on 3 November
    * Status of ICAT work at ORNL (SR)     
        * Removal of local maven repository
-       * Facility based unit test: looks like test input data are hard coded.
+       * Facility based unit test: looks like test input data are hard coded
        * Reporting and event logging in icat4
        * IP address gets logged with sessionId? (requested by SNS IT)
 
