@@ -8,6 +8,26 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 <wiki:toc max_depth="3" />
 
+
+Actions from ICAT collaboration telephone conference on 17 November 2011<br>
+25.1 - Alistair Mills - 28 November 2011 
+
+||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
+||26.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
+||26.01  ||Provide more information on the usage of ICAT4                         ||SF/AM   ||           .||            -||
+||26.02  ||Write a note describing controlling metadata based on IP of client     ||TG      ||           .||            -||
+||26.03  ||Send pom files for building ICAT4 to SF                                ||SR      ||           .||            -||
+||26.04  ||Try maven build with SR's scripts                                      ||AW/HC   ||           .||            -||
+||26.05  ||Investigate the Facility Unit tests in ICAT4                           ||SF/HC   ||           .||            -||
+||26.06  ||Add upgradge of logging to icat4 roadmap                               ||AM      ||        Done||            -||
+||26.07  ||Add IP address to session id                                           ||AM      ||        Done||            -||
+||26.08  ||Provide date for collaboration meeting in Grenoble to SR and others    ||AM      ||     Waiting||            -||
+||26.09  ||Add Milan to the invitation list for the meetings                      ||AM      ||        Done||            -||
+||26.10  ||Chase Holger about attending the collaboration meetings                ||AM      ||        Done||            -||
+
+
+
+
 == Meeting 26 - 17 November 2011 ==
 
    * Actions since the meeting on 3 November
