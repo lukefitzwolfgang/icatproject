@@ -10,28 +10,66 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 == Meeting 27 - 1 December 2011 ==
 
-   * Actions for the meetings of 3 and 17 November
-   * Review of ICAT Collaboration by Software Sustainability Institute
- * http://www.software.ac.uk/news/2011-11-29-software-sustainability-institute-review-google-code-project
-   * More items to be added
+=== Actions 27 ===
 
-Actions from ICAT collaboration telephone conference on 17 November 2011<br>
+Actions from ICAT collaboration telephone conference on 1 December 2011<br>
+27.1 - Alistair Mills - 1 December 2011 
+
+||Item   ||Description                                                                       ||Res*(1)   ||      Status||      Comment||
+||27.00  ||Document the meeting                                                              ||AM        ||        Done||            -||
+||27.01  ||Comment on Tom's note on adding IP to session id                                  ||All       ||           .||            -||
+||27.01  ||Comment on Tom's note on adding IP to session id                                  ||All       ||           .||            -||
+||27.02  ||Investigate the packaging of the authentication plugin and a properties file      ||SF        ||           .||            -||
+||27.03  ||Co-operate with the visitor from Software Sustainability Institute (Steve Crouch) ||All/AM    ||           .||            -||
+||27.04  ||Prepare the materials for the release of ICAT 4.0                                 ||All/AM    ||           .||            -||
+||27.05  ||Send a note to GKM about the ICAT4 API changes and meet with Ghita and DW         ||GKM/AM/DW ||           .||            -||
+||27.06  ||Provide release notes for ICAT 4.0                                                ||AM        ||           .||            -||
+||27.07  ||Remove the My Proxy option from ICAT 4.0                                          ||SF        ||           .||            -||
+||27.08  ||Change get user details method to work in ICAT 4.0                                ||SF        ||           .||            -||
+||27.09  ||Alistair and DW to visit Nick Draper re ICAT 4.0 API                              ||AM        ||           .||            -||
+
+=== Attendance 27 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||TG   ||Tom Griffin                  || STFC ISIS                  ||     +        ||           ||
+||SF   ||Steve Fisher                 || STFC                       ||     +        ||           ||
+||AM   ||Alistair Mills               || STFC                       ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||HC   ||Harjinder Chahal             || STFC                       ||     +        ||           ||
+||SR   ||Shelly Ren                   || ORNL                       ||     +        ||           ||
+||MP   ||Milan Prica                  || ELLETRA                    ||     +        ||           ||
+||SC   ||Steve Crouch                 || Univ of Southampton /SSI   ||              ||           ||
+||DW   ||David Webster                || Univ of Leeds              ||              ||           ||
+||KP   ||Kevin Phipps                 || STFC                       ||              ||      +    ||
+
+=== Agenda 27 ===
+
+ * Actions for the meetings of 3 and 17 November
+ * Review of ICAT Collaboration by Software Sustainability Institute
+   * http://www.software.ac.uk/news/2011-11-29-software-sustainability-institute-review-google-code-project
+ * Plan for ICAT 4.0 - the ICAT4 technology preview release 
+ * Visit of David Webster of the University of Leeds to work on API migration 
+ 
+== Meeting 26 - 17 November 2011 ==
+
+=== Actions 26 ===
+ 
 26.1 - Alistair Mills - 28 November 2011 
 
 ||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
 ||26.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
-||26.01  ||Provide more information on the usage of ICAT4                         ||SF/AM   ||           .||            -||
-||26.02  ||Write a note describing controlling metadata based on IP of client     ||TG      ||           .||            -||
-||26.03  ||Send pom files for building ICAT4 to SF                                ||SR      ||           .||            -||
-||26.04  ||Try maven build with SF's maven scripts - see 26.03                    ||HC      ||           .||            -||
+||26.01  ||Provide more information on the usage of ICAT4                         ||SF/AM   ||        Done||            -||
+||26.02  ||Write a note describing controlling metadata based on IP of client     ||TG      ||        Done||            -||
+||26.03  ||Send pom files for building ICAT4 to SF                                ||SR      ||        Done||            -||
+||26.04  ||Try maven build with SF's maven scripts - see 26.03                    ||HC      ||        Done||            -||
 ||26.05  ||Investigate the Facility Unit tests in ICAT4                           ||SF/HC   ||           .||            -||
-||26.06  ||Add upgradge of logging to icat4 roadmap                               ||AM      ||        Done||            -||
-||26.07  ||Add IP address to session id                                           ||AM      ||        Done||            -||
+||26.06  ||Add upgrade of logging to icat4 roadmap                                ||AM      ||        Done||            -||
+||26.07  ||Add IP address to session id in the roadmap                            ||AM      ||        Done||            -||
 ||26.08  ||Provide date for collaboration meeting in Grenoble to SR and others    ||AM      ||     Waiting||            -||
 ||26.09  ||Add Milan to the invitation list for the meetings                      ||AM      ||        Done||            -||
 ||26.10  ||Chase Holger about attending the collaboration meetings                ||AM      ||        Done||            -||
 
-== Meeting 26 - 17 November 2011 ==
+=== Agenda 26 ===
 
    * Actions since the meeting on 3 November
    * Status of ICAT work at ORNL (SR)     
@@ -55,7 +93,9 @@ Agenda for ICAT collaboration telephone conference on 3 November 2011<br>
  * BMT rather than CMT (Steve) 
  * Status of ICAT work at ILL (J-F)
  * Status of ICAT work at ORNL (SR)
-
+  
+=== Actions 25 ===
+ 
 Actions from ICAT collaboration telephone conference on 3 November 2011<br>
 25.1 - Alistair Mills - 3 November 2011 
 
@@ -68,10 +108,10 @@ Actions from ICAT collaboration telephone conference on 3 November 2011<br>
 ||25.05  ||Discuss the GF 3.1.1 problem                                           ||AM/SR   ||           .||            -||
 ||25.06  ||Investigate ways to represent time to suit the data                    ||SF/RS   ||           .||            -||
 ||25.07  ||Add a properties file to ICAT4                                         ||SF      ||           .||            -||
-||25.08  ||Experiment with Bean Managed Transactions for ICAT 4.1                 ||SF      ||           .||            -||
-||25.09  ||Send comments on the changes to the ICAT API to Steve                  ||All     ||           .||            -||
+||25.08  ||Experiment with Bean Managed Transactions for ICAT 4.1                 ||SF      ||        Done||            -||
+||25.09  ||Send comments on the changes to the ICAT API to Steve                  ||All     ||        Done||            -||
 ||25.10  ||Provide a document about notification                                  ||SF      ||           .||            -||
-||25.11  ||Add fields for STARTTIME and ENDTIME to DATASET for ICAT 4.0           ||SF      ||           .||            -||
+||25.11  ||Add fields for STARTTIME and ENDTIME to DATASET for ICAT 4.0           ||SF      ||        Done||            -||
 ||25.12  ||Defer further implementation of MySQL with ICAT until ICAT 4.1         ||AM      ||           .||            -||
 ||25.13  ||Follow up with Shelly on ORNL requirements                             ||SR      ||           .||            -||
 ||25.14  ||Investigate hosting a collaboration meeting at ILL in 1Q2012           ||J-F     ||           .||            -||
@@ -91,12 +131,14 @@ Actions from ICAT collaboration telephone conference on 3 November 2011<br>
 
 == Meeting 24 - 22 September 2011 ==
 
+=== Actions 24 ===
+
 Actions from ICAT collaboration telephone conference on 22 September 2011<br>
 24.1 - Alistair Mills - 22 September 2011
 
 ||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
 ||24.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
-||24.01  ||Add Ghita, Holger, Shelly and Harinder to the meeting list             ||AM      ||        Done||            -||
+||24.01  ||Add Ghita, Holger, Shelly and Harjinder to the meeting list            ||AM      ||        Done||            -||
 ||24.02  ||Write a note for the wiki about the Release criteria for ICAT4         ||AM      ||        Done||            -||
 ||24.03  ||Write a note for the wiki about the use of Maven with ICAT4            ||AM      ||           -|| Discuss     ||
 ||24.04  ||Test Glassfish 3.11 with ICAT4 and document any alerts                 ||AM      || In progress|| Discuss     ||
@@ -107,7 +149,7 @@ Actions from ICAT collaboration telephone conference on 22 September 2011<br>
 
 *(1) Collaborators
 
-||init ||Name                         || Institute                  ||     Present  || Apologies ||
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
 ||TG   ||Tom Griffin                  || STFC ISIS                  ||     +        ||           ||
 ||HG   ||Holger Gebhard               || ILL                        ||              ||           ||
 ||SF   ||Steve Fisher                 || STFC                       ||              || +         ||
@@ -119,8 +161,14 @@ Actions from ICAT collaboration telephone conference on 22 September 2011<br>
 ||HC   ||Harjinder Chahal             || STFC                       ||     +        ||           ||
 ||KP   ||Kevin Phipps                 || STFC                       ||              || +         ||
 ||SR   ||Shelly Ren                   || ORNL                       ||     +        ||           ||
+||GK   ||George Kourousias            || ELLETRA                    ||              ||           ||
+||MP   ||Milan Prica                  || ELLETRA                    ||              ||           ||
+||BM   ||Brian Matthews               || STFC                       ||              ||           ||
+
 
 == Meeting 23 - 8 September 2011 ==
+
+=== Actions 23 ===
 
 Actions from ICAT collaboration telephone conference on 8 September 2011<br>
 23.1 - Alistair Mills - 8 September 2011
