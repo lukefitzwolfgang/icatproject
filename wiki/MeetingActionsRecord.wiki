@@ -12,6 +12,7 @@ Earlier meetings are at MeetingActionsRecordArchive
 
    * Actions for the meetings of 3 and 17 November
    * Review of ICAT Collaboration by Software Sustainability Institute
+ * http://www.software.ac.uk/news/2011-11-29-software-sustainability-institute-review-google-code-project
    * More items to be added
 
 Actions from ICAT collaboration telephone conference on 17 November 2011<br>
