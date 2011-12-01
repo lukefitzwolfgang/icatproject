@@ -15,9 +15,11 @@ Earlier meetings are at MeetingActionsRecordArchive
 Actions from ICAT collaboration telephone conference on 1 December 2011<br>
 27.1 - Alistair Mills - 1 December 2011 
 
+AnonAccessToMetadata 
+
 ||Item   ||Description                                                                       ||Res*(1)   ||      Status||      Comment||
 ||27.00  ||Document the meeting                                                              ||AM        ||        Done||            -||
-||27.01  ||Comment on Tom's note on adding IP to session id                                  ||All       ||           .||            -||
+||27.01  ||Comment on Tom's note on adding IP to session id     wiki:AnonAccessToMetadata    ||All       ||           .||            -||
 ||27.01  ||Comment on Tom's note on adding IP to session id                                  ||All       ||           .||            -||
 ||27.02  ||Investigate the packaging of the authentication plugin and a properties file      ||SF        ||           .||            -||
 ||27.03  ||Co-operate with the visitor from Software Sustainability Institute (Steve Crouch) ||All/AM    ||           .||            -||
