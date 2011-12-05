@@ -1,0 +1,43 @@
+#summary Contents of ICAT 4.0.
+
+= Contents of ICAT 4.0 =
+
+== Introduction ==
+
+ICAT 4.0 is the version of ICAT which is in use in the Central Laser Facility at Rutherford Appleton Laboratory.  A site which is installing a new ICAT and does not have to migrate from an earlier ICAT should find that it is not difficult to install.  Sites which have a existing ICAT should regard this as a technology preview, as we have not developed tools to help with an upgrade.  ICAT 4.0 has been well tested for the CLF deployment, and many of the new features which have been added to ICAT meet requirements of CLF.  During 2012, there will be further releases of ICAT 4.
+
+== Major additions since ICAT 3.3 ==
+
+ - new API: some methods have been added;
+
+ - new Glassfish server; it is supported only on Glassfish 3.1 and 3.1.1;
+
+ - build mechanism is based on Maven rather than ANT;
+
+ - support for Topcat;
+
+ - new authentication method;
+
+ - new installation scripts using bash script rather than ANT;
+
+ - additional property file for icat.
+
+== Major removals since ICAT 3.3 ==
+
+ - new API; some methods have been removed;
+ - support for Glassfish 2;
+ - support for MyProxy authentication;
+ - support for DataPortal.
+
+== Materials to support the release ==
+
+ - installation instructions (Icat40Installation);
+ - description of ICAT4 API.
+
+== What has not been included in ICAT 4.0 ==
+
+ - full documentation on the API.
+
+== - the end - ==
+
+
