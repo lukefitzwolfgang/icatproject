@@ -25,13 +25,17 @@ ICAT 4.0 is the version of ICAT which is in use in the Central Laser Facility at
 == Major removals since ICAT 3.3 ==
 
  - new API; some methods have been removed;
+
  - support for Glassfish 2;
+
  - support for MyProxy authentication;
+
  - support for DataPortal.
 
 == Materials to support the release ==
 
  - installation instructions (Icat40Installation);
+
  - description of ICAT4 API.
 
 == What has not been included in ICAT 4.0 ==
@@ -39,5 +43,3 @@ ICAT 4.0 is the version of ICAT which is in use in the Central Laser Facility at
  - full documentation on the API.
 
 == - the end - ==
-
-
