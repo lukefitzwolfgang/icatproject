@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Ideas for improving the authentication mechanism.
 
 = Authentication Ideas =
 
