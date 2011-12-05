@@ -1,0 +1,15 @@
+#summary One-sentence summary of this page.
+
+= Authentication Ideas =
+
+Though the authentication plugin mechanism now works it is rather clumsy and I propose the following changes.
+
+ * The session should be moved from the plugins into the core. The reason is that the session should only exist to relate a sessionid to a userid where the userid is used for authz. The authentication plugin finds your userid and creates a session with that userid and a new sessionid. Logging out removes the entry from the session table. There is an issue with the maximum and default session lengths. If ICAT has been configured with a maximum of 3 hours and the user asks for 4 hours I think it best to generate an error. It should also be possible to check a session for validity and when it will time out - perhaps one call.
+
+ * The authentication plugin need a 0 1 or 2 parameter call to authenticate which returns the userid or fails.
+
+ * Authentication plugins should be called sequentially until one succeeds or they all fail.
+
+ * The authentication module can also provide a calls to register a user, to unregister a user and to change his/her password. Not all calls will be implemented on all plugins. There are potential problems with multiple plugins.
+
+ * Currently the icat-exposed has a UserSessionBean with defines the persistence context. This forces data base tables to be known to the icat-exposed which is wrong - and is why four tables are currently created for authentication.  The auth plugin must define its own persistence context.
