@@ -8,10 +8,10 @@ I propose a new Job entity (to replace the existing related datafiles) with the 
 
 {{{
 Long id;    // Primary key - auto generated
-List<Datafile> inputDatafile;  // ManyToMany relationship
-List<Dataset> inputDataset;    // ManyToMany relationship
-List<Datafile> outputDatafile; // ManyToMany relationship
-List<Dataset> outputDataset;   // ManyToMany relationship
+Set<Datafile> inputDatafile;  // ManyToMany relationship
+Set<Dataset> inputDataset;    // ManyToMany relationship
+Set<Datafile> outputDatafile; // ManyToMany relationship
+Set<Dataset> outputDataset;   // ManyToMany relationship
 Application application;
 }}}
 
