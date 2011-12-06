@@ -2,20 +2,21 @@
 
 = Introduction =
 
-The current tables are not adequate for describing provenance as they only allow dependencies between datafiles to be described. I would like a model that describes a datafiles and/or datasets being produced by running an application on datasets and/or datafiles. This could include the notion of a "Job" - i.e. the running of an application but I don't think we need it. 
+The current tables are not adequate for describing provenance as they only allow dependencies between datafiles to be described. I would like a model that describes a datafiles and/or datasets being produced by running an application on datasets and/or datafiles.  
 
-I propose a new Provenance entity (to replace the existing related datafiles) with the following attributes:
+I propose a new Job entity (to replace the existing related datafiles) with the following attributes:
 
 {{{
-Datafile inputDatafile;
-Dataset inputDataset;
-Datafile outputDatafile;
-Dataset outputDataset;
+Long id;    // Primary key - auto generated
+List<Datafile> inputDatafile;  // ManyToMany relationship
+List<Dataset> inputDataset;    // ManyToMany relationship
+List<Datafile> outputDatafile; // ManyToMany relationship
+List<Dataset> outputDataset;   // ManyToMany relationship
 Application application;
 }}}
 
-The primary key could be either the first four attributes or a generated ID value. I prefer the latter as compound keys are inconvenient with JPA.
+In addition I would change the first field of application to be simply "id" and add a "String version" attribute.
 
-In addition if would change the first field of application to be simply "id" and add a "String version" attribute.
+Notes:
 
-Note that this proposal may give some problems with the search/authz API as it relates two entities of the same type. I will seek a solution.
+ * This proposal may give some problems with the search/authz API as it relates two entities of the same type. I will seek a solution.
