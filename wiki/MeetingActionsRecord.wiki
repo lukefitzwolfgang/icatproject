@@ -7,6 +7,12 @@ This page holds records of the meetings during 2011<br>
 Earlier meetings are at MeetingActionsRecordArchive
 
 <wiki:toc max_depth="3" />
+== Meeting 28 - 15 December 2011 ==
+
+=== Agenda 28 ===
+
+ * Actions for the meetings of 1 December and 17 November
+ * Discuss the readiness for the technology preview release 4.0 of ICAT
 
 == Meeting 27 - 1 December 2011 ==
 
@@ -19,16 +25,15 @@ AnonAccessToMetadata
 
 ||Item   ||Description                                                                       ||Res*(1)   ||      Status||      Comment||
 ||27.00  ||Document the meeting                                                              ||AM        ||        Done||            -||
-||27.01  ||Comment on Tom's note on adding IP to session id     wiki:AnonAccessToMetadata    ||All       ||           .||            -||
-||27.01  ||Comment on Tom's note on adding IP to session id                                  ||All       ||           .||            -||
-||27.02  ||Investigate the packaging of the authentication plugin and a properties file      ||SF        ||           .||            -||
-||27.03  ||Co-operate with the visitor from Software Sustainability Institute (Steve Crouch) ||All/AM    ||           .||            -||
-||27.04  ||Prepare the materials for the release of ICAT 4.0                                 ||All/AM    ||           .||            -||
-||27.05  ||Send a note to GKM about the ICAT4 API changes and meet with Ghita and DW         ||GKM/AM/DW ||           .||            -||
-||27.06  ||Provide release notes for ICAT 4.0                                                ||AM        ||           .||            -||
-||27.07  ||Remove the My Proxy option from ICAT 4.0                                          ||SF        ||           .||            -||
-||27.08  ||Change get user details method to work in ICAT 4.0                                ||SF        ||           .||            -||
-||27.09  ||Alistair and DW to visit Nick Draper re ICAT 4.0 API                              ||AM        ||           .||            -||
+||27.01  ||Comment on Tom's note on adding IP to session id     wiki:AnonAccessToMetadata    ||All       ||    On-going||            -||
+||27.02  ||Investigate the packaging of the authentication plugin and a properties file      ||SF        ||        Done||            -||
+||27.03  ||Co-operate with the visitor from Software Sustainability Institute (Steve Crouch) ||All/AM    ||    On-going||            -||
+||27.04  ||Prepare the materials for the release of ICAT 4.0                                 ||All/AM    || In progress||            -||
+||27.05  ||Send a note to GKM about the ICAT4 API changes and meet with Ghita and DW         ||GKM/AM/DW ||        Done||            -||
+||27.06  ||Provide release notes for ICAT 4.0                                                ||AM        ||       Draft||            -||
+||27.07  ||Remove the My Proxy option from ICAT 4.0                                          ||SF        ||        Done||            -||
+||27.08  ||Change get user details method to work in ICAT 4.0                                ||SF        ||        Done||            -||
+||27.09  ||Alistair and DW to visit Nick Draper re ICAT 4.0 API                              ||AM        ||        Done||            -||
 
 === Attendance 27 ===
 
@@ -104,20 +109,20 @@ Actions from ICAT collaboration telephone conference on 3 November 2011<br>
 ||Item   ||Description                                                            ||Res*(1) ||      Status||      Comment||
 ||25.00  ||Document the meeting                                                   ||AM      ||        Done||            -||
 ||25.01  ||Follow up on actions 24.04 and 24.06                                   ||AM      ||           .||            -||
-||25.02  ||Follow up on action 24.03 (Use of Maven for building ICAT4)            ||SF      ||           .||            -||
+||25.02  ||Follow up on action 24.03 (Use of Maven for building ICAT4)            ||SF      ||        Done||            -||
 ||25.03  ||Attempt to do ICAT 3 to ICAT 4 upgrade using an ISIS testbed           ||TG      ||           .||            -||
 ||25.04  ||Attempt to do ICAT 3 to ICAT 4 upgrade using an ILL testbed            ||J-F     ||           .||            -||
-||25.05  ||Discuss the GF 3.1.1 problem                                           ||AM/SR   ||           .||            -||
+||25.05  ||Discuss the GF 3.1.1 problem                                           ||AM/SR   ||        Done||            -||
 ||25.06  ||Investigate ways to represent time to suit the data                    ||SF/RS   ||           .||            -||
-||25.07  ||Add a properties file to ICAT4                                         ||SF      ||           .||            -||
+||25.07  ||Add a properties file to ICAT4                                         ||SF      ||        Done||            -||
 ||25.08  ||Experiment with Bean Managed Transactions for ICAT 4.1                 ||SF      ||        Done||            -||
 ||25.09  ||Send comments on the changes to the ICAT API to Steve                  ||All     ||        Done||            -||
-||25.10  ||Provide a document about notification                                  ||SF      ||           .||            -||
+||25.10  ||Provide a document about notification                                  ||SF      ||        Done||            -||
 ||25.11  ||Add fields for STARTTIME and ENDTIME to DATASET for ICAT 4.0           ||SF      ||        Done||            -||
-||25.12  ||Defer further implementation of MySQL with ICAT until ICAT 4.1         ||AM      ||           .||            -||
-||25.13  ||Follow up with Shelly on ORNL requirements                             ||SR      ||           .||            -||
-||25.14  ||Investigate hosting a collaboration meeting at ILL in 1Q2012           ||J-F     ||           .||            -||
-||25.15  ||Schedule next collaboration meeting for 17 November 2011               ||AM      ||           .||            -||
+||25.12  ||Defer further implementation of MySQL with ICAT until ICAT 4.1         ||AM      ||        Done||            -||
+||25.13  ||Follow up with Shelly on ORNL requirements                             ||SR      ||        Done||            -||
+||25.14  ||Investigate hosting a collaboration meeting at ILL in 1Q2012           ||J-F     ||        Done||            -||
+||25.15  ||Schedule next collaboration meeting for 17 November 2011               ||AM      ||        Done||            -||
 
 *(1) Collaborators
 
