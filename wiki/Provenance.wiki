@@ -4,19 +4,31 @@
 
 The current tables are not adequate for describing provenance as they only allow dependencies between datafiles to be described. I would like a model that describes a datafiles and/or datasets being produced by running an application on datasets and/or datafiles.  
 
-I propose a new Job entity (to replace the existing related datafiles) with the following attributes:
+I propose a new Job entity (to replace the existing related datafiles). This would naturally have a many to many relations with, for example a datafile as input. This leads to problems with the new API as this is the first time a many to many relationship has been encountered; the API would need to be extended with operations with suitable semantics. Instead I will add intermediate entities and thereby eliminate the many to many relationships. This also makes navigation easier and it is still possible to select input datasets for a specific dataset in a single call. So I propose the following definition of a Job
+
 
 {{{
-Long id;    // Primary key - auto generated
-Set<Datafile> inputDatafile;  // ManyToMany relationship
-Set<Dataset> inputDataset;    // ManyToMany relationship
-Set<Datafile> outputDatafile; // ManyToMany relationship
-Set<Dataset> outputDataset;   // ManyToMany relationship
+Long id;                            // Primary key - auto generated
+Set<InputDatafile> inputDatafile;   // OneToMany relationship
+Set<InputDataset> inputDataset;     // OneToMany relationship
+Set<OutputDatafile> outputDatafile; // OneToMany relationship
+Set<OutputDataset> outputDataset;   // OneToMany relationship
 Application application;
 }}}
 
-In addition I would change the first field of application to be simply "id" and add a "String version" attribute.
+With four entitites such as InputDatafile:
 
-Notes:
+{{{
+Datafile datafile; // Many to one relationship
+Job job;           // Many to one relationship
+}}}
 
- * This proposal may give some problems with the search/authz API as it relates two entities of the same type. I will seek a solution.
+
+In addition I would change the first field of Application (renamed from Applications) to be simply "id" and add a "String version" attribute. This makes Application:
+
+{{{
+Long id;       // Primary key - auto generated
+String name;
+String version;
+Set<Job> jobs; // One to Many relationship
+}}}
