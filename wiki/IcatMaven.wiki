@@ -1,4 +1,4 @@
-#Instructions on use of Maven with ICAT4
+#summary Instructions on use of Maven with ICAT4
 
 = Maven Build Instructions for ICAT4 =
 This guide is specific for Linux distributions. 
