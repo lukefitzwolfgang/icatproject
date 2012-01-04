@@ -3,6 +3,8 @@ This page holds all but the most recent meetings<br>
 
 The latest meetings are at MeetingActionsRecord<br><br>
 
+<wiki:toc max_depth="3" />
+
 == Meeting 26 - 17 November 2011 ==
 
 === Actions 26 ===
@@ -139,6 +141,7 @@ Actions from ICAT collaboration telephone conference on 8 September 2011<br>
 ||23.09  || 21.04    ||Copy of the documentation of the API of ICAT3 (icatproject.org) ||AM      ||             Done||            -||
 ||23.10  || 21.05    ||Update/demo of BIRT - Remind HG                                 ||AM      ||             Done||            -||
 
+== Meeting 22 - 22 July 2011 ==
 
 Actions from ICAT collaboration telephone conference on 22 July 2011<br>
 22.1 - Alistair Mills - 22 July 2011
@@ -151,6 +154,8 @@ Actions from ICAT collaboration telephone conference on 22 July 2011<br>
 ||22.04 ||Provide material for icat3 performance tests                  ||TG      ||      - ||            -||
 ||22.05 ||Update the roadmap for ICAT4                                  ||AM      ||      - ||            -||
 ||22.06 ||Update the plan for the improvements for XML Ingest for DLS   ||AM      ||      - ||            -||
+
+== Meeting 21 - 7 July 2011 ==
 
 Actions from ICAT collaboration telephone conference on 7 July 2011<br>
 21.1 - Alistair Mills - 7 July 2011
@@ -166,6 +171,8 @@ Actions from ICAT collaboration telephone conference on 7 July 2011<br>
 ||21.07 ||Arrange the next meeting for 8 September 2011                 ||AM/TG   ||     - ||            -||
 ||21.08 ||Arrange a meeting of ICAT users at RAL on 22/7 about ICAT4    ||AM/TG   ||   Done||            -||
 
+== Meeting 20 - 12 May 2011 ==
+
 Actions from ICAT collaboration telephone conference on 12 May 2011<br>
 20.1 - Alistair Mills - 12 May 2011
 
@@ -175,6 +182,8 @@ Actions from ICAT collaboration telephone conference on 12 May 2011<br>
 ||20.02 ||Provide feedback to Jessica on her download stats component  ||All    ||   Done||            -||
 ||20.03 ||Arrange the next meeting for 7 July 2011                     ||AM/TG  ||   Done||            -||
 
+
+== Meeting 19 - 31 March 2011 ==
 
 Actions from ICAT collaboration telephone conference on 03 March 2011<br>
 19.1 - Alistair Mills - 31 March 2011
@@ -186,6 +195,8 @@ Actions from ICAT collaboration telephone conference on 03 March 2011<br>
 ||19.03 ||Update the ICAT roadmap and distribute                    ||AM     ||     Ok||            -||
 ||19.04 ||Ticket review at next meeting                             ||TG     ||      .||            -||
 ||19.05 ||Schedule next meeting for WEDNESDAY 13 April 2011         ||TG     ||     Ok||            -||
+
+== Meeting 18 - 3 March 2011 ==
 
 Actions from ICAT collaboration telephone conference on 03 March 2011<br>
 18.1 - Alistair Mills - 3 March 2011
@@ -212,7 +223,7 @@ Actions from ICAT collaboration telephone conference on 03 March 2011<br>
 ||HC  ||Harjinder Chahal             || STFC                       ||+||           ||
 ||KP  ||Kevin Phipps                 || STFC                       || ||           || +
 
-----
+== Meeting 17 - 17 May 2011 ==
 
 Actions from ICAT collaboration meeting on 17 February 2011 <br>
 17.0 - AM, TG - 17 February 2011
@@ -237,7 +248,8 @@ Actions from ICAT collaboration meeting on 17 February 2011 <br>
 ||RD   ||Roger Downing            || STFC ||   || + ||
 ||RF   ||Ron Fowler               || STFC ||   || + ||
 
-----
+
+== Meeting 14 - 7 January 2011 ==
 
 Actions from ICAT collaboration meeting on 6 January 2011<br>
 14.1 - Tom Griffin - 7 January 2011
@@ -279,7 +291,7 @@ Brief summary of discussions<br>
 || 13.00 || Document this meeting || AM || Complete || . ||
 || 13.01 || Meet again on 6 January 2011 at 1300 GMT || Complete || - || - ||
 
-
+== Meeting 13 - 17 December 2010 ==
 
 Actions from ICAT collaboration meeting on 16 December 2010<br>
 13.1 - Alistair Mills - 17 December 2010
@@ -326,6 +338,7 @@ The dates shown here are the earliest dates when we can expect to see real progr
 The persons responsible will be expected to provide status on their work at each meeting.
 
 ----
+== Meeting 12 - 1 December 2010 ==
 
 Actions from ICAT collaboration meeting on 01 December 2010<br>
 12.1 - Alistair Mills - 01 December 2010
@@ -367,14 +380,15 @@ Actions from ICAT collaboration meeting on 01 December 2010<br>
 The dates shown here are the earliest dates when we can expect to see real progress with the work.
 The persons responsible will be expected to provide status on their work at each meeting.
 
-----
+== Meeting 11 - 19 November 2010 ==
+
 Actions from ICAT collaboration meeting on 18 November 2010<br>
 11.1 - Alistair Mills - 19 November 2010
 
-|| New || Description || Resp || Status || Comment ||
-|| 11.01 || Improve way of capturing documentation/service requests; copy existing requests into Google groups || TG || In progress || Soon ||
-|| 11.02 || Provide requirements for logging/reporting in ICAT || ALL || See 12.05 || Subsumed by 12.05 || 
-|| 11.03 || Provide ideas for test suite || ALL || See 12.06 || Subsumed  by 12.06 ||
-|| 11.04 || Meet again 2nd Dec || ALL || - || - ||
+|| New   || Description                                                                                        || Resp || Status      || Comment ||
+|| 11.01 || Improve way of capturing documentation/service requests; copy existing requests into Google groups || TG   || In progress || Soon ||
+|| 11.02 || Provide requirements for logging/reporting in ICAT                                                 || ALL  || See 12.05   || Subsumed by 12.05 || 
+|| 11.03 || Provide ideas for test suite                                                                       || ALL  || See 12.06   || Subsumed  by 12.06 ||
+|| 11.04 || Meet again 2nd Dec                                                                                 || ALL  || -           || - ||
 
 ----
