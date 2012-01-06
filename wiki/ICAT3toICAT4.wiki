@@ -9,3 +9,7 @@ The flag that used to mark entities as deleted has been removed - and one of the
 = API =
 
 The API has been changed considerably. The old search and get functions are still there but should be considered as deprecated so that they can be removed from the next release. Please use only the calls in [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICAT4API.pdf ICAT4API.pdf]
+
+= Configuration =
+
+There must now be a file icat.properties in the config directory of the chosen glasfish domain. This file must at least define the class name of the chosen authentication module. Please see the [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/examplefiles/icat.properties example file]
