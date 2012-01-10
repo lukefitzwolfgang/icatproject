@@ -12,25 +12,26 @@ The collaboration has been holding regular meetings every two weeks since Novemb
 
 || Id    || Topic                                           || Leader           || Deputy                         ||
 || WP0   || Project Management                              || Alistair         || Tom                            ||
-||       || Meetings, actions, plans                        ||                  ||                                ||
+||       || Meetings, actions, plans                        || (STFC)           || (STFC)                         ||
 ||       || Google code content                             ||                  ||                                ||
 ||       || Planning, coordination                          ||                  ||                                ||
 || WP1   || General facility integration                    || Steve, Ghita     || Tom                            ||
-||       || API, XML-ingest                                 ||                  ||                                ||
-|| WP2   || Database independance                           || Alistair         || Kier Hawker/Richard Sinclair   ||
-||       || Oracle, MySQL                                   ||                  ||                                ||
+||       || API, XML-ingest                                 || (STFC, DLS)      || (STFC)                         ||
+|| WP2   || Database independance                           || Alistair         || Richard Sinclair               ||
+||       || Oracle, MySQL                                   || (STFC)           || (STFC)                         ||
 || WP3   || Infrastructure integration/indep.               || Sri              || Antony                         ||
-||       || TopCat, Glassfish, JDK                          ||                  ||                                ||
+||       || TopCat, Glassfish, JDK                          || (STFC)           || (STFC)                         ||
 || WP4   || Security, authentication and authorisation      || Steve            || Tom                            ||
-||       || Rule based authorisation                        ||                  ||                                ||
+||       || Rule based authorisation                        || (STFC)           || (STFC)                         ||
 || WP5   || Documentation                                   || Kevin            || Alistair                       ||
-||       || User and installation documentation             ||                  ||                                ||
+||       || User and installation documentation             || (STFC)           || (STFC)                         ||
 ||       || Release notes, test report                      ||                  ||                                ||
 ||       || FAQs                                            ||                  ||                                ||
 || WP6   || Test and integration                            || Alistair         || Kevin  / Harjinder             ||
-|| WP7   || Specific facility integration                   || Holger           || Antony  /Shelley               ||
-||       || DOI, BIRT, Usage reporting                      ||                  ||                                ||
+||       || FAQs                                            || (STFC)           || (STFC) / (STFC)                ||
+|| WP7   || Specific facility integration                   || Holger           || Antony / Shelley               ||
+||       || DOI, BIRT, Usage reporting                      || (ILL)            || (STFC)   (SNS)                 ||
 ||       || SSO, ANSTO, XML-listener                        ||                  ||                                || 
 
 == - the end - == 
-    
+     
