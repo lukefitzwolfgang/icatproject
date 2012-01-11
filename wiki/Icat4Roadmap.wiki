@@ -7,13 +7,11 @@
 
 At the ICAT collaboration meeting in Paris on 9 February, it was agreed that there would be a roadmap prepared for ICAT4.  This document fulfils that agreement.  Comments are welcome. 
 
-This note is not a commitment; it is a statement of intent.  We reserve the right to change the list.  Most of the items require further definition.
-
 == ICAT-4 ==
-Note that words like additional, and improved relate to icat-3.  Some of these features are already in icat-3.3, and others may be available as a technology preview in icat-3.5.
+Note that words like additional, and improved relate to icat-3.  Some of these features are already in icat3.3, and others will be available as a technology preview in icat4.0.
 
 == Target date  ==
-  * December 2011
+  * January 2012
     
 == Release criteria ==
 
@@ -31,11 +29,11 @@ wiki:Icat4ReleaseCriteria
     
 == Additional methods added to API ==
     * improved search methods such as parameter search and advancedSearch;
-    * relatedDatafile exposed in the API (already in the database);
-    * new methods to create and update facility users (needed for IMP-2).
+    * relatedDatafile exposed in the API;
+    * new methods to create and update facility users.
 
 == Support for TopCat ==
-    * all of this is included with icat 3.3.
+    * this is included with icat 3.3.
     
 == Additions to the authorisation mechanism  ==
     * rule and group based authorisation.
@@ -62,7 +60,7 @@ The features of ICAT should be compatible with the following facilities which ar
     * DOI (STFC/ISIS);
     * BIRT (ILL);
     * ECAT2 (STFC/CLF);
-    * CIC  (CLF ICAT Chain) (STFC/CLF);
+    * CIC (CLF ICAT Chain) (STFC/CLF);
     * IMP (CLF User office) (STFC/CLF-ISIS);
     * Penguin-2 (STFC/CLF);
     * SSO using MyProxy (STFC);
@@ -115,15 +113,13 @@ These items will not be included in ICAT 4.0, but are candidates for the future.
     * Software / application table links;
     * ability to do some cross ICAT relationships, for example at the level of a study, such so an ISIS investigation can be related to Diamond and ILL investigations which are part of the same research program.
     
-== ORNL requirements ==
+== ORNL/SNS requirements ==
 
-To provide better system performance and user experience, we wanted to offer live view and auto data reduction to SNS users in the future.
+To provide better system performance and user experience, we wanted to offer live view and auto data reduction to SNS users in the future.  SNS has two major requirements:
 
-How can icat help? 2 major requirements have been brought up:
-
-1. Provide a new API to allow a quick metadata search without a user login. The metadata request seems to vary from instrument to instrument. For example our eqsans instrument scientist asked for the following metadata: start time, run title, run notes, total run time, total accelerator current, sample to detector distance, wave length band used for a given run number or a range of run numbers. They wanted these metadata to be available in mantid via icat without having to login into mantid/icat. Today, these metadata are obtained by calling a script that harvests pieces from different metadata files on the instrument analysis machine. 
+1. Provide a new API method to allow a quick metadata search without a user login. The metadata request seems to vary from instrument to instrument. For example our eqsans instrument scientist asked for the following metadata: start time, run title, run notes, total run time, total accelerator current, sample to detector distance, wave length band used for a given run number or a range of run numbers. They wanted these metadata to be available in mantid via icat without having to login into mantid/icat. Today, these metadata are obtained by calling a script that harvests pieces from different metadata files on the instrument analysis machine. 
 
 2. Another request is to enable cross references among the runs. How to best guess the background runs like empty run, transmission run, vanadium run etc that are needed for data reduction? Can this be done without a user login?
 
-    
+
 == - the end -  ==
