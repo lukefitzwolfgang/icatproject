@@ -13,9 +13,14 @@ Earlier meetings are at MeetingActionsRecordArchive
 === Agenda 28 ===
 
  * Actions for the meetings of 1 December
+ * Working with PanData project
+ * Working with Eudat project
+ * Working with European Meta Data Projects
+ * Notification proposal
+   * https://docs.google.com/document/d/1COpWdSBoChVQKkFINIqACRhdlcdcxD1S2tzBDtw8WKY/edit?hl=en_US&pli=1
+ * Plan for ICAT 4.0 - the ICAT4 technology preview release 
  * Review of ICAT Collaboration by Software Sustainability Institute
    * http://www.software.ac.uk/news/2011-11-29-software-sustainability-institute-review-google-code-project
- * Plan for ICAT 4.0 - the ICAT4 technology preview release 
  * Visit of David Webster of the University of Leeds to work on API migration 
 
 === Actions 28 ===
