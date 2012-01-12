@@ -8,7 +8,33 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 <wiki:toc max_depth="3" />
 
+== Meeting 29 - 26 January 2012 ==
+
+=== Agenda 29 ===
+
+ * Actions from the meetings of 12 January
+ * Status of ICAT 4.0
+ * Road map for ICAT 4.1
+ * Collaboration agreement of PanData and ICAT
+ * Meeting in Hamburg
+ * Review of ICAT Collaboration by Software Sustainability Institute
+ * AOB
+
 == Meeting 28 - 12 January 2012 ==
+
+=== Actions 28 ===
+
+||Item   ||Description                                                                       ||Res*(1)   ||      Status||      Comment||
+||28.00  ||Document the meeting                                                              ||AM        ||        Done||            -||
+||28.01  ||Agree a description of the PanData/ ICAT collaboration                            ||AM/GK     ||           .||            -||
+||28.02  ||Provide a list of requirement for ICAT from PanData                               ||GK        ||           .||            -||
+||28.03  ||Prepare a list of PanData contacts for the ICAT collaboration (1 per partner)     ||GK        ||           .||            -||
+||28.04  ||Put discussion of related projects such as Eudat on the agenda for future meetings||AM        ||    On-going||            -||
+||28.05  ||Comment on Steve's paper on notification                                          ||All       ||           .||            -||
+||28.06  ||Prepare ICAT 4.0.RC.0 as soon as possible and inform collaboration                ||AM        ||           .||            -||
+||28.07  ||Test ICAT RCs and provide feedback                                                ||All       ||           .||            -||
+||28.08  ||Prepare a road map for ICAT 4.1 for discussion at the next meeting                ||AM        ||           .||            -||
+||28.09  ||Send email to Shelly about the meeting in Hamburg                                 ||AM        ||        Done||            -||
 
 === Agenda 28 ===
 
@@ -23,9 +49,19 @@ Earlier meetings are at MeetingActionsRecordArchive
    * http://www.software.ac.uk/news/2011-11-29-software-sustainability-institute-review-google-code-project
  * Visit of David Webster of the University of Leeds to work on API migration 
 
-=== Actions 28 ===
-
 === Attendance 28 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||TG   ||Tom Griffin                  || STFC ISIS                  ||     +        ||           ||
+||SF   ||Steve Fisher                 || STFC                       ||     +        ||           ||
+||AM   ||Alistair Mills               || STFC                       ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||HC   ||Harjinder Chahal             || STFC                       ||     +        ||           ||
+||SR   ||Shelly Ren                   || ORNL                       ||     +        ||           ||
+||MP   ||Milan Prica                  || ELLETRA                    ||     +        ||           ||
+||GK   ||George Kourousias            || ELLETRA                    ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC                       ||              ||      +    ||
+||SW   ||Shaun de Witt                || STFC                       ||              ||      +    ||
 
 == Meeting 27 - 1 December 2011 ==
 
@@ -38,9 +74,9 @@ AnonAccessToMetadata
 
 ||Item   ||Description                                                                       ||Res*(1)   ||      Status||      Comment||
 ||27.00  ||Document the meeting                                                              ||AM        ||        Done||            -||
-||27.01  ||Comment on Tom's note on adding IP to session id     wiki:AnonAccessToMetadata    ||All       ||    On-going||            -||
+||27.01  ||Comment on Tom's note on adding IP to session id     wiki:AnonAccessToMetadata    ||All       ||        Done||            -||
 ||27.02  ||Investigate the packaging of the authentication plugin and a properties file      ||SF        ||        Done||            -||
-||27.03  ||Co-operate with the visitor from Software Sustainability Institute (Steve Crouch) ||All/AM    ||    On-going||            -||
+||27.03  ||Co-operate with the visitor from Software Sustainability Institute (Steve Crouch) ||All/AM    ||        Done||            -||
 ||27.04  ||Prepare the materials for the release of ICAT 4.0                                 ||All/AM    || In progress||            -||
 ||27.05  ||Send a note to GKM about the ICAT4 API changes and meet with Ghita and DW         ||GKM/AM/DW ||        Done||            -||
 ||27.06  ||Provide release note for ICAT 4.0                                                 ||AM        ||        Done||            -||
