@@ -1,7 +1,7 @@
 #summary Installation notes for Oracle XE, Glassfish and Icat 3.3.5
 #labels Featured,Installation
 
-= ICAT installation =
+= ICAT 3 installation =
 
 Authors: Glen Drinkwater, Alistair Mills, Ron Fowler, Steve Fisher
 <wiki:toc max_depth="2" />
