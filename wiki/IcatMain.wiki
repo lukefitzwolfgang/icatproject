@@ -7,10 +7,11 @@
 
 == ICAT4 ==
 
- * [Icat4Roadmap             Icat4 Roadmap]
+ * [Icat4Roadmap             Icat4.0 Roadmap]
  * [Icat40Announcement       Icat4.0 Announcement]
  * [InstallIcat40            Icat4.0 Installation notes]
  * [Icat4InstallDependencies Icat4.0 Installation dependencies]
+ * [Icat4ReleaseCriteria     Icat4.0 Release Criteria]
 
 == Collaboration information ==
 
@@ -18,12 +19,12 @@
 
 == Design ==
 
- * [IcatOverview ICAT Overview]
- * [IcatDb ICAT DataBases]
- * [CSMD Metadata Model (CSMD)]
- * [IcatApi ICAT API]
- * [IcatDp ICAT DataPortal]
- * [IcatClients ICAT Clients]
+ * [IcatOverview     ICAT Overview]
+ * [IcatDb           ICAT DataBases]
+ * [CSMD             ICAT Metadata Model (CSMD)]
+ * [IcatApi          ICAT API]
+ * [IcatDp           ICAT DataPortal]
+ * [IcatClients      ICAT Clients]
 
 == Installation ==
 
