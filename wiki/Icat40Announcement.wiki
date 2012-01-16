@@ -2,6 +2,8 @@
 
 = Contents of ICAT 4.0 =
 
+$Id$
+
 == Introduction ==
 
 ICAT 4.0 is the version of ICAT which is in use in the Central Laser Facility at Rutherford Appleton Laboratory.  It should be easy to install either as a new installation or as an upgrade from a previous ICAT 3.3 - however this should be regarded as a technology preview as tools *may not be provided to upgrade to the next release beyond 4.0*. The reason for this is that if  design errors are discovered in the new API we can easily fix them in this subsequent release.

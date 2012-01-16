@@ -1,5 +1,7 @@
 #summary Structure of ICAT4 collaboration
 
+$Id$
+
 = Structure of ICAT collaboration =
 
 == Introduction ==
