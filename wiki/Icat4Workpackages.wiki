@@ -1,5 +1,7 @@
 #summary Structure of ICAT4 collaboration
 
+<wiki:toc max_depth="3" />
+
 $Id$
 
 = Structure of ICAT collaboration =

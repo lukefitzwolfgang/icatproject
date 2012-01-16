@@ -1,5 +1,7 @@
 #summary Release criteria for Icat-4.0.
 
+<wiki:toc max_depth="3" />
+
 $Id$
 
 = Release criteria for icat-4.0 =

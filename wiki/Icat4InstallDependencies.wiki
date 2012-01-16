@@ -1,5 +1,7 @@
 #summary Dependencies in the installation files for ICAT 4.0
 
+<wiki:toc max_depth="3" />
+
 $Id$
 
 = Dependencies in configuration files =

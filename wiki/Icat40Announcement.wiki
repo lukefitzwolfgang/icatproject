@@ -1,8 +1,10 @@
 #summary Contents of ICAT 4.0.
 
-= Contents of ICAT 4.0 =
+<wiki:toc max_depth="3" />
 
 $Id$
+
+= Contents of ICAT 4.0 =
 
 == Introduction ==
 

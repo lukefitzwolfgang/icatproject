@@ -1,6 +1,8 @@
 #summary Road map for icat-4.
 #labels icat4,roadmap
 
+<wiki:toc max_depth="3" />
+
 $Id$
 
 = Road map for icat-4 =
