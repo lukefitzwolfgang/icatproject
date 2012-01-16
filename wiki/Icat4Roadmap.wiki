@@ -5,7 +5,7 @@
 
 == Introduction ==
 
-At the ICAT collaboration meeting in Paris on 9 February, it was agreed that there would be a roadmap prepared for ICAT4.  This document fulfils that agreement.  Comments are welcome. 
+At the ICAT collaboration meeting in Paris on 9 February 2011, it was agreed that there would be a roadmap prepared for ICAT4.  This document fulfils that agreement.  Comments are welcome. 
 
 == ICAT-4 ==
 Note that words like additional, and improved relate to icat-3.  Some of these features are already in icat3.3, and others will be available as a technology preview in icat4.0.
@@ -44,7 +44,7 @@ wiki:Icat4ReleaseCriteria
     * Glassfish 3.
 
 == Performance ==
-    * TBD - see release requirements.
+    * Performance is similar to that of ICAT 3.
 
 == Additional operating environments  ==
 As part of the long term objective of making ICAT a portable system which is not dependent on specific products, ensure during testing that ICAT4 functions correctly with the following:
