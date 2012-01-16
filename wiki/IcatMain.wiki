@@ -29,8 +29,8 @@
 == Installation ==
 
  * [IcatInstallation Revised Database and Icat Installation]
- * [IngestingData]
- * [Logging Control of Logging]
+ * [IngestingData                                          ]
+ * [Logging                              Control of Logging]
 
 == Developers Resource ==
 
