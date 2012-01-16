@@ -26,7 +26,7 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 ||Item   ||Description                                                                       ||Res*(1)   ||      Status||      Comment||
 ||28.00  ||Document the meeting                                                              ||AM        ||        Done||            -||
-||28.01  ||Agree a description of the PanData/ ICAT collaboration                            ||AM/GK     ||           .||            -||
+||28.01  ||Agree a description of the PanData/ ICAT collaboration                            ||AM/GK     ||        Done||            -||
 ||28.02  ||Provide a list of requirement for ICAT from PanData                               ||GK        ||           .||            -||
 ||28.03  ||Prepare a list of PanData contacts for the ICAT collaboration (1 per partner)     ||GK        ||           .||            -||
 ||28.04  ||Put discussion of related projects such as Eudat on the agenda for future meetings||AM        ||    On-going||            -||
