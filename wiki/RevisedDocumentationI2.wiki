@@ -1,6 +1,10 @@
 #labels Installation
 #Revised Documentation I-2.
 
+<wiki:toc max_depth="3" />
+
+$Id$
+
 = Revised Documentation I-2 =
 
 = I2: API  =

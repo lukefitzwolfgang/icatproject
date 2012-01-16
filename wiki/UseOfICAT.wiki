@@ -1,11 +1,17 @@
-===Below is a list of the facilities and organisations using ICAT and the status of their systems===
+= List of the facilities and organisations using ICAT and the status of their systems  =
+
+<wiki:toc max_depth="3" />
+
+$Id$
 
 
-|| *Facility* || *Status* || *Notes* || *URL* || *Contact* ||
-|| ILL (European Neutron source, Grenoble, France)  || Near production || Large back catalog available || ??? || Holger Gebhard ||
-|| ISIS (UK Spallation Neutron source, RAL, Oxford, UK) || Internal release via web and [http://www.mantidproject.org Mantid]. Externally will be default access method from March 2011 || 25 year back catalog. TopCAT web front end || Probably https://isisdata.stfc.ac.uk || Tom Griffin ||
-|| Diamond Light Source (UK synchrotron, RAL, Oxford, UK) || Near production. Internally available. || Web or GDA? || ??? || Ghita Kouadri-Mostefaoui/Alun Ashton ||
-|| CLF (Central Laser Facility, RAL, UK) || Development || For diagnostic data, not user data || ??? || Alistair Mills ||
-|| SNS (US Neutron spallation source, ORNL, USA) || Using ICAT v2 in production || - || ??? || Shelly Ren ||
-|| ELETTRA (Italian synchrotron, Trieste) || In development || integration between ICAT and Scientific Computing portal is proceeding well || ??? || Fabio Bonaccorso/ Roby Pugliese ||
-|| VTI (Swedish Road Transport Institute || Development? || ??? || ??? ||Y Rasheed/ M Rui ||
+|| *Facility*                                             || *Status*                                          || *Notes*                                          || *URL*                              || *Contact*                            ||
+|| ILL (European Neutron source, Grenoble, France)        || Near production                                   || Large back catalog available                     || ???                                || Holger Gebhard                       ||
+|| ISIS (UK Spallation Neutron source, RAL, Oxford, UK)   || Default access method from March 2011.            || 25 year back catalog. TopCAT web front end       || https://isisdata.stfc.ac.uk        || Tom Griffin                          ||
+|| Diamond Light Source (UK synchrotron, RAL, Oxford, UK) || Near production. Internally available.            || Web or GDA?                                      || ???                                || Ghita Kouadri-Mostefaoui/Alun Ashton ||
+|| CLF (Central Laser Facility, RAL, UK)                  || Development                                       || For diagnostic data, not user data               || ???                                || Alistair Mills                       ||
+|| SNS (US Neutron spallation source, ORNL, USA)          || Using ICAT v2 in production                       || -                                                || ???                                || Shelly Ren                           ||
+|| ELETTRA (Italian synchrotron, Trieste)                 || In development                                    || PanData Lead Partner for WP4                     || ???                                || Fabio Bonaccorso/ Roby Pugliese      ||
+|| VTI (Swedish Road Transport Institute                  || Development?                                      || ???                                              || ???                                || Y Rasheed/ M Rui                     ||
+
+== - the end - ==
