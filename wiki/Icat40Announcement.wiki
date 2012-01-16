@@ -26,8 +26,8 @@ The ICAT 4.0 has been well tested for the CLF deployment, and many of the new fe
 
 == Materials to support the release ==
 
- * installation instructions (Icat40Installation);
- * description of ICAT4 API.
+ * installation instructions (InstallIcat40, Icat4InstallDependencies);
+ * description of ICAT4 API.  [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICAT4API.pdf ICAT4API.pdf]
 
 == What has not been included in ICAT 4.0 ==
 
