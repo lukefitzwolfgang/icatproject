@@ -7,21 +7,20 @@ $Id$
 = Release criteria for icat-4.0 =
 
 == Introduction ==
-ICAT 4 will be released in two phases.  The initial release will be for the deployment of ICAT CLF at RAL in November 2011.  This release will have full functionality to meet the requirements of CLF, but it will not have the functionality to make it easy to migrate from ICAT 3 to ICAT4.  Such functionality will be provided in 2012.  The present document describes what will be provided for ICAT 4.0.  Note that the implementation of ICAT 4 for CLF is in deployment test and is working well.
+ICAT 4 will be released in two phases.  The initial release was for the deployment of ICAT CLF at RAL in November 2011.  This release has full functionality to meet the requirements of CLF, but it does not have the functionality to make it easy to migrate from ICAT 3 to ICAT4.  Such functionality will be provided in 2012.  The present document describes what is included for ICAT 4.0.  Note that the implementation of ICAT 4 for CLF is in deployment test and is working well.
 
 == Functionality requirements ==
 
  * API supports new methods;
  * Set of API examples which are easy to run;
- * ICAT CMD line utility to simplify testing the API;
  * Support for Topcat;
  * Support for IDS;
  * Support for ECAT2.
  
 Not included:
- * Support for MySQL
+ * Support for MySQL;
+ * ICAT CMD line utility to simplify testing the API.
  
-
 == Performance requirements ==
 
  * The performance will be documented in a CLF report which will be written in December 2011.
