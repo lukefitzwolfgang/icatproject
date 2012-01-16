@@ -5,10 +5,16 @@
 
 [http://icatproject.blogspot.com/ News]
 
+== ICAT4 ==
+
+ * [Icat4Roadmap             Icat4 Roadmap]
+ * [Icat40Announcement       Icat4.0 Announcement]
+ * [InstallIcat40            Icat4.0 Installation notes]
+ * [Icat4InstallDependencies Icat4.0 Installation dependencies]
+
 == Collaboration information ==
 
- * [Icat4Roadmap Icat4 Roadmap]
- * [MeetingActionsRecord Meeting actions]
+ * [MeetingActionsRecord     Meeting actions]
 
 == Design ==
 
