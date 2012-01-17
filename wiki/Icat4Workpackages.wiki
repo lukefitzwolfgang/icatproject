@@ -33,8 +33,8 @@ The collaboration has been holding regular meetings every two weeks since Novemb
 ||       || FAQs                                            ||                  ||                                ||
 || WP6   || Test and integration                            || Alistair         || Kevin  / Harjinder             ||
 ||       || FAQs                                            || (STFC)           || (STFC) / (STFC)                ||
-|| WP7   || Specific facility integration                   || Holger           || Antony / Shelley               ||
-||       || DOI, BIRT, Usage reporting                      || (ILL)            || (STFC)   (SNS)                 ||
+|| WP7   || Specific facility integration                   || George           || Antony / Shelley               ||
+||       || DOI, BIRT, Usage reporting                      || (ELLETRA)        || (STFC)   (SNS)                 ||
 ||       || SSO, ANSTO, XML-listener                        ||                  ||                                || 
 
 == - the end - == 
