@@ -75,8 +75,6 @@ Configuration is stored in the following files:
  * source:ops/icat40/usertable_init/usertable.sh - this contains the script used to create the user icat40;
  * source:ops/icat40/test_icat/example.properties - this contains the properties used by the test for ICAT.
 
-Dependency information is stored in the following file:
- * source:ops/icat40/dependencies.txt
 
 == Instructions ==
 
