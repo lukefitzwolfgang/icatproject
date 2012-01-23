@@ -2,111 +2,530 @@
 
 = Installation instructions for ICAT 4.0 =
 
-See also Icat4InstallDependencies.
+== Source of pre-requisite materials ==
 
-{{{
+Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle client tools (sqlplus), Oracle Java connector (ojdbc14.jar) are all available for download from Oracle.   The versions required are the following:
+
+ * Java Enterprise Edition - 6 or newer;
+ * Glassfish Server - 3.1 or newer;
+ * Oracle Express - 10 or newer;
+ * Oracle Client tools - 10 or newer.
+
+== Assumptions ==
+
 In order to make it simple to install ICAT40, the following configuration is assumed:
 
-Operating system:
+Operating system: 
+ * operation system: Linux
+ * username: glassfish3
+ * home directory: /home/glassfish3
+ * shell: bash
 
-operation system: linux
-username: glassfish3
-home directory: /home/glassfish3
-shell: bash
-note: the operating system user glassfish3 is running the glassfish server and the applications.
+Environmental variables:
+It is conventional to set the following variables:
+ * JAVA_HOME;
+ * ORACLE_HOME;
+ * ORACLE_SID;
+ * GLASSFISH_HOME;
+ * PATH - add $JAVA_HOME/bin, ORACLE_HOME/bin and GLASSFISH_HOME/bin. 
 
-Glassfish server:
+Note that the operating system user glassfish3 is running the Glassfish Server and the applications.  There is no need to have enhanced privileges to install ICAT once the prerequisite software has been installed and the user account glassfish3 has been created. You do not require access as system administrator of the database once the user accounts icat and icatuser have been created.
 
-directory: /home/glassfish3/glassfish3/glassfish
-admin user: admin
-admin user password: adminadmin
-asadmin command: The operating system user called glassfish3 has asadmin on the PATH 
-ojdbc14.jar: The file ojdbc14.jar has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/lib
-icat.properties: The file icat.properties has been added to /home/glassfish3/glassfishv3/glassfish/domains/domain1/config
+Glassfish Server:
+ * directory: /home/glassfish3/glassfish3/glassfish
+ * admin user: admin
+ * admin user password: adminadmin
+ * asadmin command: The operating system user called glassfish3 has asadmin on the PATH 
+ * ojdbc14.jar: The file ojdbc14.jar has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/lib
+ * icat.properties: The file icat.properties has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
 
-Oracle tools:
-sqlplus: The operating system user glassfish3 has sqlplus on the PATH
+Oracle database:
 
-Oracle database server: localhost
-ICAT username/ password: icat/myicatpasswd
-ICATUSER username/password: icatuser/myicatuserpasswd
+If using Oracle Express on localhost, configure it to use port 8070 for the Administrator Portal.
 
-Java run-time: 
-java: The operating system user glassfish3 has java on the PATH
+ * Oracle database server: localhost
+ * SYS username/password: sys/mysyspasswd
+ * ICAT username/ password: icat/myicatpasswd
+ * ICATUSER username/password: icatuser/myicatuserpasswd
+
+Java run-time:
+ * java: The operating system user glassfish3 has java (1.6) on the PATH
 
 Directories:
-icat40 - this contains a scripts called glassfish and glassfish.props which tell the glassfish server what to do
-icat40/orainit - this contains scripts to initialise the database
-icat40/usertable_init - this contains a script to add a user to ICAT
-icat40/test_icat - this contains a simple test for ICAT
+ * source:/ops/icat40 - this contains a scripts called glassfish.sh and glassfish.props which tell the Glassfish Server what to do;
+ * source:/ops/icat40/orainit - this contains scripts to initialise the database;
+ * source:/ops/icat40icat40/usertable_init - this contains a script to add a user to ICAT;
+ * source:/ops/icat40/icat40/test_icat - this contains a simple test for ICAT.
 
-The following files are part of the ICAT 4.0 distribution
-icat-http.ear
-icat.ear
+The following files are part of the ICAT 4.0 distribution:
+ * source:ops/icat40/icat-ear-1583-http.ear; 
+ * source:ops/icat40/icat-ear-1583.ear.
 
-Server certficate:
-Neither the server nor a client application require a certificate, as icat-http is deployed using http protocol.
+Server certificate:
+ * Neither the server nor a client application require a certificate, as icat-http is deployed using http protocol.
 
 Ports:
-The port 8080 is available for the glassfish server to deploy icat-http
-The port 4848 is available for the the admin console of glassfish
-
-Configuration information:
+ * The port 8070 is available for Oracle Express
+ * The port 8080 is available for the Glassfish Server to deploy icat-http
+ * The port 4848 is available for the the admin console of the Glassfish Server
 
 Configuration is stored in the following files:
-icat40/glassfish.props
-icat40/passwordfile
-icat40/usertable_init/usertable.sh
-icat40/test_icat/example.properties
+ * source:ops/icat40/glassfish.props - this contains the properties used by the glassfish.sh script;
+ * source:ops/icat40/passwordfile - this contains the password for the Glassfish Server admin console;
+ * source:ops/icat40/usertable_init/usertable.sh - this contains the script used to create the user icat40;
+ * source:ops/icat40/test_icat/example.properties - this contains the properties used by the test for ICAT.
 
-Instructions:
+Dependency information is stored in the following file:
+ * source:ops/icat40/dependencies.txt
+
+== Instructions ==
 
 Create a test environment similar to the one assumed.  If it is not possible to be identical, then the four files containing configuration may require changes.
 
 Ensure the following conditions on the system: 
 
-- Database server running, and the username and passwords installed, but no content;
-- Glassfish server installed, but not running;
-- Expand the distribution file into a directory; icat40 is used in the following instructions.
+ - Database server running, and the username and passwords installed, but no content;
+ - Glassfish Server installed, but not running;
+ - Expand the distribution file into a directory; icat40 is used in the following instructions.
+
+Two common errors are the following:
+ - The Glassfish Server admin password must agree with the value in the file passwordfile;  
+ - The file ojdbc14.jar must be in the file system before the Glassfish Server is started.  If is added later, it is necessary to restart the Glassfish Server.  
 
 Do the following:
 
-# Initialise the tables in the database - this will remove any existing content.
+0. Create the users called icat and icatuser in the database.  To do this, use the administrator user for the database.  This user is usually called sys:
 
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
 cd icat40/orainit
-sqlplus icat/myicatpasswd@localhost         @create_icat.sql     | tee create_icat.log
+sqlplus sys/mysyspasswd@localhost as sysdba @create_users.sql | tee create_users.log
 cd ../..
+</pre>
+}}}
 
-# Start the glassfish server, create the database pools and deploy icat.
-# Deploying icat also creates the schema for icatuser, but does not give
-# it useful content.
+Expect a response such as the following:
 
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+SQL*Plus: Release 10.2.0.1.0 - Production on Thu Jan 19 16:21:13 2012
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+Connected to:
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Enter value for icat_password: <span style="color:red"> icatpasswd</span>
+Grant succeeded.
+Grant succeeded.
+</pre>
+}}}
+
+It will also prompt for icatuser_password.
+
+1. Initialise the tables in the database - this will remove any existing content.
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
+cd icat40/orainit
+sqlplus icat/myicatpasswd@localhost @create_icat.sql | tee create_icat.log
+cd ../..
+</pre>
+}}}
+
+ Expect the following outcome:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+.
+.
+Table altered.
+Table altered.
+Table altered.
+Table altered.
+Table altered.
+Table altered.
+Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+</pre>
+}}}
+
+2. Start the Glassfish Server, create the database pools and deploy icat. Deploying icat also creates the schema for icatuser, but does not give it useful content.
+
+ To start the Glassfish Server, do the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
 cd icat40
-./glassfish start
-./glassfish create
-./glassfish deploy icat
-cd ..
+./glassfish.sh start
+</pre>
+}}}
 
-# Create a user for use by the test
+ Expect a response such as the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+Starting database in Network Server mode on host 127.0.0.1 and port 1527.
+.
+.
+Command start-database executed successfully.
+Waiting for domain1 to start .......................................................................................................
+Successfully started the domain : domain1
+domain  Location: /home/glassfish3/glassfish3/glassfish/domains/domain1
+Log File: /home/glassfish3/glassfish3/glassfish/domains/domain1/logs/server.log
+Admin Port: 4848
+Command start-domain executed successfully.
+Command multimode executed successfully.
+</pre>
+}}}
+
+ To create the jdbc resource pools, do the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
+./glassfish.sh create
+</pre>
+}}}
+
+ Expect a response such as the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+.
+.
+Command create-jdbc-resource executed successfully.
+JDBC resource jdbc/ecat2 created successfully.
+Command create-jdbc-resource executed successfully.
+Command multimode executed successfully.
+Ensure that Thread Pools below the configurations has an http-thread-pool with a Max Thread Pool Size of 128.
+There may be more than one configuration to change. Change them all.
+</pre>
+}}}
+
+ To deploy icat , do the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
+./glassfish.sh deploy icat
+</pre>
+}}}
+
+ Expect a response such as the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+.
+.
+Application deployed with name icat-ear-1583-http.
+Command deploy executed successfully.
+Command multimode executed successfully.
+</pre>
+}}}
+
+ If deploying on a system which has been previously used, expect the following response:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: green;">
+
+Application deployed successfully with name icat-ear-1583-http and with the following warning(s):
+
+Deployment encountered SQL Exceptions:
+	Got SQLException executing statement "CREATE TABLE USER_TABLE (USER_ID VARCHAR2(255) NOT NULL, PASSWORD VARCHAR2(255) NOT NULL, PRIMARY KEY (USER_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
+
+	Got SQLException executing statement "CREATE TABLE USER_SESSION (USER_SESSION_ID VARCHAR2(255) NOT NULL, RUN_AS VARCHAR2(255) NOT NULL, EXPIRE_DATE_TIME TIMESTAMP NOT NULL, PRIMARY KEY (USER_SESSION_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
+
+	Got SQLException executing statement "CREATE TABLE USER_TABLE_ANSTO (USER_ID VARCHAR2(255) NOT NULL, PASSWORD VARCHAR2(255) NOT NULL, PRIMARY KEY (USER_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
+
+	Got SQLException executing statement "CREATE TABLE USER_SESSION_ANSTO (USER_SESSION_ID VARCHAR2(255) NOT NULL, RUN_AS VARCHAR2(255) NOT NULL, EXPIRE_DATE_TIME TIMESTAMP NOT NULL, PRIMARY KEY (USER_SESSION_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
+<span style="color:red">
+Command deploy executed successfully.
+Command multimode executed successfully.
+</span>
+</pre>
+}}}
+
+Pay attention to the last part of the message (in red).  The bit in green is only a warning and can be ignored.
+
+3. Create a user for use by the test
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
 cd icat40/usertable_init
 ./usertable.sh
 cd ../..
+</pre>
+}}}
 
-# Run the test which does logon to the icat
+ Expect a response such as the following:
 
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+.
+.
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+SQL>   2  
+1 row created.
+SQL> Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+</pre>
+}}}
+
+4. Run the test which does logon to the icat
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
 cd icat40/test_icat
 ./test_one.sh Authenticate
 cd ..
-
-# If all is well, then ICAT is working
-
-To stop icat and the glassfish server, do the following:
-
-cd icat40
-./glassfish undeploy icat
-./glassfish delete
-./glassfish stop
-
+</pre>
 }}}
+
+ Expect a response such as the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+Session ID = 11af38b1-e5e9-47d2-ae41-5b23c8751997
+</pre>
+}}}
+
+5. If you get a response such as the above, then ICAT is working.
+
+6. To stop icat and the Glassfish Server, do the following:
+ To undeploy icat, do the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
+cd icat40
+./glassfish.sh undeploy icat
+</pre>
+}}}
+ 
+ Expect the following outcome:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+.
+.
+Command undeploy executed successfully.
+Command multimode executed successfully.
+</pre>
+}}}
+
+
+ To delete the jdbc resource pools, do the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
+./glassfish.sh delete
+</pre>
+}}}
+
+
+ Expect the following outcome:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+.
+.
+JDBC Connection pool icat3-user deleted successfully
+Command delete-jdbc-connection-pool executed successfully.
+Command multimode executed successfully.
+</pre>
+}}}
+
+ To stop the Glassfish Server, do the following:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: red;">
+./glassfish.sh stop
+</pre>
+}}}
+
+ Expect the following outcome:
+
+{{{
+#!html
+<pre class="wiki" style="
+white-space: pre-wrap; /* css-3 */
+white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+white-space: -pre-wrap; /* Opera 4-6 */
+white-space: -o-pre-wrap; /* Opera 7 */
+word-wrap: break-word; /* Internet Explorer 5.5+; */
+color: blue;">
+.
+.
+Command stop-domain executed successfully.
+2012-01-18 10:00:40.667 GMT : Connection obtained for host: 127.0.0.1, port number 1527.
+2012-01-18 10:00:42.184 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
+Command stop-database executed successfully.
+Command multimode executed successfully.
+</pre>
+}}}
+
+
+== Dependencies ==
+
+The following table provides the information about the distribution of configuration information among the configuration files.
+
+|| Property          || Glassfish.props || usertable.sh || example.properties || passwordfile  || Usual Value                                               ||
+|| url               || yes             || no           || no                 || no            || jdbc:oracle:thin:@//localhost:1521/XE                     ||
+|| ICATUSER user name and password for the database - this is required for orainit also 																	||
+|| icatName          || yes             || no           || no                 || no            || ICAT                                                      ||
+|| icatPW            || yes             || no           || no                 || no            || myicatpasswd                                              ||
+|| ICATUSER user name and password for the database																											||
+|| icatuserName      || yes             || yes          || no                 || no            || icatuser                                                  ||  
+|| icatuserPW        || yes             || yes          || no                 || no            || myicatuserpasswd                                          ||
+|| Location of the home directory for the glassfish server - this is needed for ojdbc14 and icat.properties also 											||
+|| glassfish         || yes             || no           || no                 || no            || /home/glassfish3/glassfish3                               ||
+|| connection information for glassfish server port    || yes             || no           || no                 || no            || 4848                                                      ||  
+|| adminuser         || yes             || no           || no                 || no            || admin                                                     ||
+|| passwordfile      || yes             || no           || no                 || no            || passwordfile                                              ||
+|| icat file to be deployed 																																||
+|| icatear           || yes             || no           || no                 || no            || /home/glassfish3/icat40/icat-ear-1583-http.ear            ||   
+|| icat file to be deployed 																																||
+|| icatuser          || no              || yes          || yes                || no            || icat40                                                    ||
+|| icatuserpassword  || no              || yes          || yes                || no            || icat40passwd                                              ||
+|| the icat filename implies the port and the protocol and it is always localhost                                                                           ||
+|| wsdl.location     || implied         || no           || yes                || no            || http://localhost:8080/ICATService/ICAT?wsdl               ||  
+|| the admin password is require to logon to the glassfish 																									||
+|| admin password    || no              || no           || no                 || yes           || admin                                                     ||
+|| the client file for applications to access 																												||
+|| icatclient        || no              || no           || no                 || no            || /home/glassfish3/icat40/icat-client-1583.jar              ||    
+
 
 == - the end - ==
