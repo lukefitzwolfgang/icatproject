@@ -1,5 +1,7 @@
 #summary Installation instructions for ICAT 4.0
 
+<wiki:toc max_depth="3" />
+
 = Installation instructions for ICAT 4.0 =
 
 == Source of pre-requisite materials ==
