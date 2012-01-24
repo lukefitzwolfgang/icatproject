@@ -10,7 +10,6 @@
  * [Icat4Roadmap             Icat4.0 Roadmap]
  * [Icat40Announcement       Icat4.0 Announcement]
  * [InstallIcat40            Icat4.0 Installation notes]
- * [Icat4InstallDependencies Icat4.0 Installation dependencies]
  * [Icat4ReleaseCriteria     Icat4.0 Release Criteria]
 
 == Collaboration information ==
