@@ -1,0 +1,12 @@
+cd to directory with this file
+
+You can then create the tables for the icat user. If you are using a managed oracle installation then you will have been given user name and password as you are unlikely to be told the sys password. 
+
+The command required is shown below where the username you wish to use to own the tables should be specified as the second word in the command line. The example usually uses the name "icat/myicatapasswd@localhost".
+
+sqlplus icat @create_icat | tee create_icat.log
+
+Check the log files for anything unpleasant.
+
+
+
