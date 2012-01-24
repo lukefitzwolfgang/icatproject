@@ -52,14 +52,14 @@ Java run-time:
  * java: The operating system user glassfish3 has java (1.6) on the PATH
 
 Directories:
- * source:/ops/icat40 - this contains a scripts called glassfish.sh and glassfish.props which tell the Glassfish Server what to do;
- * source:/ops/icat40/orainit - this contains scripts to initialise the database;
- * source:/ops/icat40icat40/usertable_init - this contains a script to add a user to ICAT;
- * source:/ops/icat40/icat40/test_icat - this contains a simple test for ICAT.
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/ icat40] - this contains a scripts called glassfish.sh and glassfish.props which tell the Glassfish Server what to do;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/orainit icat40/orainit] - this contains scripts to initialise the database;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/usertable_init icat40/usertable_init] - this contains a script to add a user to ICAT;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/test_icat icat40/test_icat] - this contains a simple test for ICAT.
 
 The following files are part of the ICAT 4.0 distribution:
- * source:ops/icat40/icat-ear-1583-http.ear; 
- * source:ops/icat40/icat-ear-1583.ear.
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/icat-ear-1583-http.ear icat40/icat-ear-1583-http.ear]; 
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/icat-ear-1583.ear icat40/icat-ear-1583.ear].
 
 Server certificate:
  * Neither the server nor a client application require a certificate, as icat-http is deployed using http protocol.
@@ -70,10 +70,10 @@ Ports:
  * The port 4848 is available for the the admin console of the Glassfish Server
 
 Configuration is stored in the following files:
- * source:ops/icat40/glassfish.props - this contains the properties used by the glassfish.sh script;
- * source:ops/icat40/passwordfile - this contains the password for the Glassfish Server admin console;
- * source:ops/icat40/usertable_init/usertable.sh - this contains the script used to create the user icat40;
- * source:ops/icat40/test_icat/example.properties - this contains the properties used by the test for ICAT.
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/glassfish.props icat40/glassfish.props] - this contains the properties used by the glassfish.sh script;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/passwordfile icat40/passwordfile] - this contains the password for the Glassfish Server admin console;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/usertable_init/usertable.sh icat40/usertable_init/usertable.sh] - this contains the script used to create the user icat40;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/test_icat/example.properties icat40/test_icat/example.properties] - this contains the properties used by the test for ICAT.
 
 
 == Instructions ==
