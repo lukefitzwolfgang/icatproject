@@ -31,7 +31,7 @@ Earlier meetings are at MeetingActionsRecordArchive
 ||28.03  ||Prepare a list of PanData contacts for the ICAT collaboration (1 per partner)     ||GK        ||           .||            -||
 ||28.04  ||Put discussion of related projects such as Eudat on the agenda for future meetings||AM        ||    On-going||            -||
 ||28.05  ||Comment on Steve's paper on notification                                          ||All       ||           .||            -||
-||28.06  ||Prepare ICAT 4.0.RC.0 as soon as possible and inform collaboration                ||AM        ||           .||            -||
+||28.06  ||Prepare ICAT 4.0.RC.0 as soon as possible and inform collaboration                ||AM        ||        Done||            -||
 ||28.07  ||Test ICAT RCs and provide feedback                                                ||All       ||           .||            -||
 ||28.08  ||Prepare a road map for ICAT 4.1 for discussion at the next meeting                ||AM        ||           .||            -||
 ||28.09  ||Send email to Shelly about the meeting in Hamburg                                 ||AM        ||        Done||            -||
