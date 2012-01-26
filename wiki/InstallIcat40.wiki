@@ -216,7 +216,7 @@ Command deploy executed successfully.
 Command multimode executed successfully.
 }}}
 
-Pay attention to the last part of the message (in red).  The bit in green is only a warning and can be ignored.
+Pay attention to the last part of the message.  The bit in green is only a warning and can be ignored.
 
 3. Create a user for use by the test
 
