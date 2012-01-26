@@ -10,7 +10,34 @@ $Id$
 
 ICAT 4.0 is the version of ICAT which is in use in the Central Laser Facility at Rutherford Appleton Laboratory.  It should be easy to install either as a new installation or as an upgrade from a previous ICAT 3.3 - however this should be regarded as a technology preview as tools *may not be provided to upgrade to the next release beyond 4.0*. The reason for this is that if  design errors are discovered in the new API we can easily fix them in this subsequent release.
 
-The ICAT 4.0 has been well tested for the CLF deployment, and many of the new features which have been added to ICAT meet requirements of CLF.  Topcat has been updated to be able to use ICAT4.0.  During 2012, there should be further releases of ICAT 4.
+The ICAT 4.0 has been well tested for the CLF deployment, and many of the new features which have been added to ICAT meet requirements of CLF.  Topcat has been updated to be able to use ICAT4.0.  During 2012, there will be further releases of ICAT 4.
+
+== Availability ==
+
+ICAT 4.0 is available for download from the following URL:  
+{{{
+http://icatproject.googlecode.com/files/icat4.0.0.zip 
+}}}
+
+For example, you can download with the wget command as follows:
+{{{
+wget http://icatproject.googlecode.com/files/icat4.0.0.zip 
+}}}
+
+If you would like a version from the SVN, then it can be obtained with a command as follows:
+{{{
+svn checkout https://icatproject.googlecode.com/svn/ops/icat40 
+}}}
+
+If you would like to review the set of downloads available, use the following URL in a browser:
+{{{
+http://code.google.com/p/icatproject/downloads/list
+}}}
+
+The release zip contains a file called readme.txt with instructions.  A longer verion is available at the following URL:
+{{{
+http://code.google.com/p/icatproject/wiki/InstallIcat40 
+}}}
 
 == Major additions since ICAT 3.3 ==
 
