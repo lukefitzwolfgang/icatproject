@@ -8,6 +8,19 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 <wiki:toc max_depth="3" />
 
+== Meeting 30 - 9 February 2012 =
+
+=== Agenda 30 ===
+
+ * Actions from the meetings of 26 January
+ * Status of ICAT 4.0
+ * Publically available ICAT 4.0 demonstration system
+ * Road map for ICAT 4.1
+ * Collaboration agreement of PanData and ICAT
+ * Face to Face Meeting in 2012
+ * Review of ICAT Collaboration by Software Sustainability Institute
+ * AOB
+
 == Meeting 29 - 26 January 2012 ==
 
 === Actions 29 ===
@@ -30,10 +43,12 @@ Earlier meetings are at MeetingActionsRecordArchive
 We could not contact George for the meeting, but he send this report:
 
 1. The installation and testing will happen the following weeks as some key persons were not available these days.
-2. The date for WP4 PaNdata telco will be announced next week.
-3. During the WP4 telco we will identify the ICAT responsible for most facilities. (but I expect to be slow procedure as the WP has just started)
 
-=== Attendance 28 ===
+2. The date for WP4 PaNdata telco will be announced next week.
+
+3. During the WP4 telco we will identify the ICAT responsible for most facilities. (but I expect to be slow procedure as the WP has just started).
+
+=== Attendance 29 ===
 
 ||Init ||Name                         || Institute                  ||     Present  || Apologies ||
 ||TG   ||Tom Griffin                  || STFC ISIS                  ||     +        ||           ||
@@ -106,8 +121,6 @@ We could not contact George for the meeting, but he send this report:
 
 Actions from ICAT collaboration telephone conference on 1 December 2011<br>
 27.1 - Alistair Mills - 1 December 2011 
-
-AnonAccessToMetadata 
 
 ||Item   ||Description                                                                       ||Res*(1)   ||      Status||      Comment||
 ||27.00  ||Document the meeting                                                              ||AM        ||        Done||            -||
