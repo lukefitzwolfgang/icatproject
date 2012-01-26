@@ -27,8 +27,8 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 ||Item   ||Description                                                                       ||Res*(1)   ||              Status||      Comment||
 ||29.00  ||Document the meeting                                                              ||AM        ||                Done||            -||
-||29.01  ||Make the release of ICAT 4.0                                                      ||AM        ||                   .||            -||
-||29.02  ||Email Shelly about possible visit to SNS                                          ||AM        ||                   .||            -||
+||29.01  ||Make the release of ICAT 4.0                                                      ||AM        ||                Done||            -||
+||29.02  ||Email Shelly about possible visit to SNS                                          ||AM        ||                Done||            -||
 ||29.03  ||Email all about the proposed arrangements for Grenoble on 20/Mar/12               ||TG        ||                   .||            -||
 ||29.04  ||Provide a note on the wiki about OAIMPH and ICAT                                  ||SN        ||                   .||            -||
 ||29.05  ||Comment on Steve's paper on ideas for ICAT                                        ||All       ||                   .||            -||
