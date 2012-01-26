@@ -1,7 +1,7 @@
 #!/bin/sh
 #set -x
 #
-# $Id: glassfish.sh 1167 2012-01-19 17:37:36Z abm65@FED.CCLRC.AC.UK $
+# $Id$
 #
 opts="create, delete, list, start, stop, restart, deploy, undeploy or redeploy"
 

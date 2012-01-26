@@ -1,6 +1,6 @@
 README.txt for ICAT 4.0 installation
-v 0.1 - Alistair Mills - 16 January 2012
-$Id: readme.txt 1168 2012-01-24 10:39:13Z ssx11488@FED.CCLRC.AC.UK $
+Alistair Mills - 26 January 2012
+$Id$
 
 For more detailed instructions please visit:
 http://code.google.com/p/icatproject/wiki/InstallIcat40
