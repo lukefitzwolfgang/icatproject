@@ -19,7 +19,7 @@ passwordfile=passwordfile
 # The ICAT ear file
 icat=/home/glassfish3/icat40/icat-ear-1583-http.ear
 #
-# $Id: glassfish.props 1167 2012-01-19 17:37:36Z abm65@FED.CCLRC.AC.UK $
+# $Id$
 #
 # - the end -
 #
