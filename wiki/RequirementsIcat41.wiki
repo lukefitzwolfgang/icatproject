@@ -1,0 +1,63 @@
+#summary Requirements for ICAT 4.1
+#labels Icat4.1,Requirements
+
+<wiki:toc max_depth="3" />
+
+= Requirements for ICAT 4.1 =
+
+The purpose of this page is to provide a place where people can write their shopping lists of requirements for ICAT 4.1.  As we translate these requirements into actions, we shall probably use a ticket to track the work.
+
+
+== Related documents ==
+
+ * DevelopmentIdeasNov2010 
+ * Icat4Roadmap   
+
+== General ==
+
+ * clean up the API and remove all of the "3" from the names of things
+ * document the API 
+
+
+== STFC/CLF ==
+
+Please meeting the following requirements:
+
+== ISIS ==
+
+Please meeting the following requirements:
+
+== DLS ==
+
+Please meeting the following requirements:
+
+== Pandata ==
+
+Please meeting the following requirements:
+
+== Eudat ==
+
+Please meeting the following requirements:
+
+== ILL ==
+
+Please meeting the following requirements:
+
+== SNS ==
+
+Please meeting the following requirements:
+
+
+To provide better system performance and user experience, we wanted to offer live view and auto data reduction to SNS users in the future. SNS has two major requirements:
+
+1. Provide a new API method to allow a quick metadata search without a user login. The metadata request seems to vary from instrument to instrument. For example our eqsans instrument scientist asked for the following metadata: start time, run title, run notes, total run time, total accelerator current, sample to detector distance, wave length band used for a given run number or a range of run numbers. They wanted these metadata to be available in mantid via icat without having to login into mantid/icat. Today, these metadata are obtained by calling a script that harvests pieces from different metadata files on the instrument analysis machine.
+
+2. Another request is to enable cross references among the runs. How to best guess the background runs like empty run, transmission run, vanadium run etc that are needed for data reduction? Can this be done without a user login? 
+
+
+== Others ==
+
+Please meeting the following requirements:
+
+== - the end - ==
+
