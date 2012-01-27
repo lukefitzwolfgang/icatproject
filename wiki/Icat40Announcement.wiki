@@ -57,7 +57,7 @@ http://code.google.com/p/icatproject/wiki/InstallIcat40
 
 == Materials to support the release ==
 
- * installation instructions (InstallIcat40, Icat4InstallDependencies);
+ * installation instructions (InstallIcat40);
  * description of ICAT4 API.  [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICAT4API.pdf ICAT4API.pdf]
 
 == What has not been included in ICAT 4.0 ==
