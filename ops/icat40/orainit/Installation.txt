@@ -1,4 +1,9 @@
-cd to directory with this file
+Help to install the database schemas
+
+$Id$
+
+cd to directory with this file.
+
 
 You can then create the tables for the icat user. If you are using a managed oracle installation then you will have been given user name and password as you are unlikely to be told the sys password. 
 
@@ -8,5 +13,5 @@ sqlplus icat @create_icat | tee create_icat.log
 
 Check the log files for anything unpleasant.
 
-
+- the end -
 

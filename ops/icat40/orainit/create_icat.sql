@@ -1,3 +1,4 @@
+-- $Id$
   DROP TABLE "APPLICATIONS" cascade constraints;
   DROP TABLE "DATAFILE" cascade constraints;
   DROP TABLE "DATAFILE_FORMAT" cascade constraints;
