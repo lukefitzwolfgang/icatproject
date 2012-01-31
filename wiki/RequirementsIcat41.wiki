@@ -32,6 +32,7 @@ Please meeting the following requirements:
  * TopCAT - expose information about the investigators.
  * TopCAT - add ability for data owners to grant permission on their datasets to others
  * Maintain a legacy icat3-exposed web service API to allow gradual migration
+ * Visualize data in TopCAT, possibly using jpowder or similar.
 
 
 == DLS ==
@@ -64,6 +65,6 @@ To provide better system performance and user experience, we wanted to offer liv
 
 == Others ==
 
-Please meeting the following requirements:
+ * ESRF : Visualize data in TopCAT
 
 == - the end - ==
