@@ -11,6 +11,7 @@
  * [Icat40Announcement       Icat4.0 Announcement]
  * [InstallIcat40            Icat4.0 Installation notes]
  * [Icat4ReleaseCriteria     Icat4.0 Release Criteria]
+ * [Icat40Demonstrator       Icat4.0 Demonstration system]
 
 == Collaboration information ==
 
