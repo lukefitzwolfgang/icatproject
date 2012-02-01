@@ -40,6 +40,11 @@ The release zip contains a file called readme.txt with instructions.  A longer v
 http://code.google.com/p/icatproject/wiki/InstallIcat40 
 }}}
 
+If you wish to browse the materials on the web site, use the following link:
+{{{
+http://code.google.com/p/icatproject/source/browse/ops/icat40/
+}}}
+
 == Assumptions ==
 
 In order to make it simple to install ICAT40, the following configuration is assumed:
