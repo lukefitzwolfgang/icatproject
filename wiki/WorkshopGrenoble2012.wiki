@@ -12,3 +12,8 @@ If you are interested in attending this meeting please contact tom.griffin@stfc.
 The purpose is to discuss plans for the development and use of ICAT at facilities and by projects such as PaN-Data and CRISP.
 
 We will formalise the agenda over the next few weeks.
+
+This table has a list of people intending to attend:
+
+|| Name           || Organisation || Comments    ||
+|| Alistair Mills || STFC         || .           ||
