@@ -1,6 +1,4 @@
-#summary One-sentence summary of this page.
 #labels meeting,workshop
-
 = 4th ICAT Workshop - Grenoble - 20th March 2012 =
 
 The 4th ICAT workshop will be held at the EPN campus, Grenoble (hosted by the ILL) on 20th March 2012.
