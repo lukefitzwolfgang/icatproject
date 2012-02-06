@@ -1,9 +1,14 @@
 #labels meeting,workshop
 = 4th ICAT Workshop - Grenoble - 20th March 2012 =
 
-The 4th ICAT workshop will be held at the EPN campus, Grenoble (hosted by the ILL) on 20th March 2012.
+The 4th ICAT workshop will be held at the ILL, Grenoble on 20th March 2012 from 0900 - 1700.
 
+== Attending ==
+
+If you are interested in attending this meeting please contact tom.griffin@stfc.ac.uk
 
 = Agenda =
 
-More details will be provided nearer the date
+The purpose is to discuss plans for the development and use of ICAT at facilities and by projects such as PaN-Data and CRISP.
+
+We will formalise the agenda over the next few weeks.
