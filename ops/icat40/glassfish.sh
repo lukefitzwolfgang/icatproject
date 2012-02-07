@@ -31,12 +31,12 @@ asadmin="$glassfish/bin/asadmin --port $port --user $adminuser --passwordfile $p
 if [ $1 = start ]; then
     $asadmin <<EOF
 start-database --dbhost 127.0.0.1
-start-domain
+start-domain $domain
 EOF
     exit 0
 elif [ $1 = stop ]; then
     $asadmin <<EOF
-stop-domain
+stop-domain $domain
 stop-database --dbhost 127.0.0.1
 EOF
 z=$(ps -efl | grep glassfish | grep java)
@@ -49,7 +49,7 @@ fi
     exit 0
 elif [ $1 = restart ]; then
     $asadmin <<EOF
-stop-domain
+stop-domain $domain
 stop-database --dbhost 127.0.0.1
 EOF
 z=$(ps -efl | grep glassfish | grep java)
@@ -61,7 +61,7 @@ if [ -n "$z" ]; then
 fi
 	$asadmin <<EOF
 start-database --dbhost 127.0.0.1
-start-domain
+start-domain $domain
 EOF
     exit 0
 fi
@@ -72,7 +72,7 @@ if [ $? = 0 ]; then
     echo "Server appears not to be running so will attempt to start it"    
     $asadmin <<EOF
 start-database --dbhost 127.0.0.1
-start-domain
+start-domain $domain
 EOF
     version=$($asadmin version | head -1)
     echo $version | grep "Version string could not be obtained from Server" > /dev/null
@@ -114,7 +114,7 @@ EOF
  	echo Ensure that "Thread Pools" below the configurations has an http-thread-pool with a "Max Thread Pool Size" of 128.
  	echo There may be more than one configuration to change. Change them all.
 
-    fname=$glassfish/glassfish/domains/domain1/lib/ojdbc14.jar
+    fname=$glassfish/glassfish/domains/domain2/lib/ojdbc14.jar
     if [ ! -f $fname ]; then
 	echo Warning $fname does not exist
     fi
