@@ -25,20 +25,20 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 === Actions 29 ===
 
-||Item   ||Description                                                                       ||Res*(1)   ||              Status||      Comment||
-||29.00  ||Document the meeting                                                              ||AM        ||                Done||            -||
-||29.01  ||Make the release of ICAT 4.0                                                      ||AM        ||                Done||            -||
-||29.02  ||Email Shelly about possible visit to SNS                                          ||AM        ||                Done||            -||
-||29.03  ||Email all about the proposed arrangements for Grenoble on 20/Mar/12               ||TG        ||                   .||            -||
-||29.04  ||Provide a note on the wiki about OAIMPH and ICAT                                  ||SN        ||                   .||            -||
-||29.05  ||Comment on Steve's paper on ideas for ICAT                                        ||All       ||                   .||            -||
-||29.06  ||Provide a copy of the report of Steve Crouch when available                       ||AM        ||                   .||            -||
-||29.07  ||Test ICAT 4.0 and provide feedback                                                ||All       ||                   .||            -||
-||29.08  ||Create a wiki page for the ICAT 4.1 requirements                                  ||AM        || RequirementsIcat41 ||            -||
-||29.09  ||Add requirements for ICAT 4.1 for discussion at the next meeting                  ||SW/TG/SR  ||                   .||            -||
-||29.10  ||Put a note on the wiki about the use of the ICAT on the Internet                  ||HC/AM     ||                   .||            -||
-||29.11  ||Send note to Ghita about the use of ICAT admin in ICAT 4.0                        ||SN        ||                   .||            -||
-||29.12  ||Follow up with George about this meeting                                          ||AM        ||                   .||            -||
+||Item   ||Description                                                                       ||Res*(1)   ||              Status||             Comment||
+||29.00  ||Document the meeting                                                              ||AM        ||                Done||                   -||
+||29.01  ||Make the release of ICAT 4.0                                                      ||AM        ||                Done||                   -||
+||29.02  ||Email Shelly about possible visit to SNS                                          ||AM        ||                Done||                   -||
+||29.03  ||Email all about the proposed arrangements for Grenoble on 20/Mar/12               ||TG        ||                Done||                   -||
+||29.04  ||Provide a note on the wiki about OAIMPH and ICAT                                  ||SN        ||                   .||                   -||
+||29.05  ||Comment on Steve's paper on ideas for ICAT                                        ||All       ||                   .||                   -||
+||29.06  ||Provide a copy of the report of Steve Crouch when available                       ||AM        ||                   .||      Did Exec Summ ||
+||29.07  ||Test ICAT 4.0 and provide feedback                                                ||All       ||                Done||                   -||
+||29.08  ||Create a wiki page for the ICAT 4.1 requirements                                  ||AM        ||                Done|| RequirementsIcat41 ||
+||29.09  ||Add requirements for ICAT 4.1 for discussion at the next meeting                  ||SW/TG/SR  ||                   .||                   -||
+||29.10  ||Put a note on the wiki about the use of the ICAT on the Internet                  ||HC/AM     ||                   .||                   -||
+||29.11  ||Send note to Ghita about the use of ICAT admin in ICAT 4.0                        ||SN        ||                   .||                   -||
+||29.12  ||Follow up with George about this meeting                                          ||AM        ||                Done||                   -||
 
 We could not contact George for the meeting, but he send this report:
 
