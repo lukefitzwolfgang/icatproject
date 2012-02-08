@@ -7,6 +7,14 @@ http://code.google.com/p/icatproject/wiki/InstallIcat40
 
 In order to make it simple to install ICAT40, the following configuration is assumed:
 
+Properites files:
+
+The .properties files must be in the conf directory of the glassfish server.  You may find it convenient to put a symbolic link from the config directory to the properties files.
+
+File ojdbc14.jar:
+
+This file is distributed by Oracle.  We do not distribute it as this would violate our agreement with Oracle.  YOu must put it into the lib directory of the glassfish server.
+
 Operating system:
 
 operation system: linux
@@ -22,7 +30,8 @@ admin user: admin
 admin user password: adminadmin
 asadmin command: The operating system user called glassfish3 has asadmin on the PATH 
 ojdbc14.jar: The file ojdbc14.jar has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/lib
-icat.properties: The file icat.properties has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
+icat.properties: The file has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
+log4j.properties: The file has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
 
 Oracle tools:
 sqlplus: The operating system user glassfish3 has sqlplus on the PATH
@@ -77,7 +86,7 @@ Do the following:
 # Initialise the tables in the database - this will remove any existing content.
 
 cd icat40/orainit
-sqlplus icat/myicatpasswd@localhost         @create_icat.sql     | tee create_icat.log
+sqlplus icat/myicatpasswd@localhost @create_icat.sql | tee create_icat.log
 cd ../..
 
 # Start the glassfish Server, create the database pools and deploy icat.
