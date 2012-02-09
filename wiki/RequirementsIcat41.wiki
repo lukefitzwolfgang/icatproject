@@ -7,17 +7,25 @@
 
 The purpose of this page is to provide a place where people can write their shopping lists of requirements for ICAT 4.1.  As we translate these requirements into actions, we shall probably use a ticket to track the work.
 
-
 == Related documents ==
 
  * DevelopmentIdeasNov2010 
- * Icat4Roadmap   
+ * Icat41Roadmap   
 
 == General ==
 
  * clean up the API and remove all of the "3" from the names of things
  * document the API 
-
+ * provide a simple downloading service
+ * provide a simple ingestion client for HDF5
+ * provide a simple mechanism for adding users
+ * provide a simple mechanism for creating an investigation and adding users
+ * provide the icat cmd line tool for rapid prototyping
+ * support for mysql
+ * provide services on icatproject.org which are not available from google code
+ * add a Jenkins server to icatproject.org and ensure that it is up to date
+ * add a Sonar server to icatproject.org and ensure that it is up to date
+ * add a Nexus server to icatproject.org and ensure that it is up to date
 
 == CLF ==
 
@@ -27,12 +35,12 @@ Please meeting the following requirements:
 
  * Upload of derived data through TopCAT
  * Usage reports (how many people use ICAT, how many people downloaded dataset x, how many times has anyone asked for data >3 years old)
- * A way of grouping parameter names - to solve the 86 variations of 'temperature' problem (temp, temp1, t1 sampletemp etc). Currently this makes searching nearly impossible.
+ * A way of grouping parameter names - to solve the 86 variations of 'temperature' problem (temp, temp1, t1 sampletemp etc). Currently this makes searching nearly impossible
  * TopCAT - download all metadata for an investigation or dataset
- * TopCAT - expose information about the investigators.
+ * TopCAT - expose information about the investigators
  * TopCAT - add ability for data owners to grant permission on their datasets to others
  * Maintain a legacy icat3-exposed web service API to allow gradual migration
- * Visualize data in TopCAT, possibly using jpowder or similar.
+ * Visualize data in TopCAT, possibly using jpowder or similar
 
 
 == DLS ==
