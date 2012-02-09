@@ -7,6 +7,11 @@
 
 == ICAT4 ==
 
+ * [Icat41Roadmap            Icat4.1 Roadmap]
+ * [RequirementsIcat41       Icat4.1 Requirements]
+
+== ICAT4 ==
+
  * [Icat4Roadmap             Icat4.0 Roadmap]
  * [Icat40Announcement       Icat4.0 Announcement]
  * [InstallIcat40            Icat4.0 Installation notes]
