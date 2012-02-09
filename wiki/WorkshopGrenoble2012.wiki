@@ -18,3 +18,6 @@ This table has a list of people intending to attend:
 || Name           || Organisation || Comments    ||
 || Alistair Mills || STFC         || .           ||
 || Steve Fisher   || RAL/STFC     || .           ||
+|| Tom Griffin    || STFC/ISIS    || .           ||
+|| Heinz J. Weyer || PSI          || PaN-data ODI WP3 leader (user catalogue and AAA)||
+|| Thorsten Kracht|| DESY         || PaN-data-ODI WP5 leader (Virtual labs )||
