@@ -17,3 +17,4 @@ This table has a list of people intending to attend:
 
 || Name           || Organisation || Comments    ||
 || Alistair Mills || STFC         || .           ||
+|| Steve Fisher   || RAL/STFC     || .           ||
