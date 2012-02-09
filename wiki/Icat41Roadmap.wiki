@@ -9,7 +9,7 @@ $Id$
 == Introduction ==
 
 == ICAT-4.1 ==
-Note that words like additional, and improved relate to icat-3.  Some of these features are already in icat3.3, and others will be available as a technology preview in icat4.0.
+Note that words like additional, and improved relate to icat 4.0.
 
 == Target date  ==
   * June 2012
@@ -32,27 +32,24 @@ wiki:Icat41ReleaseCriteria
     * improved search methods such as parameter search and advancedSearch;
     * relatedDatafile exposed in the API;
     * new methods to create and update facility users.
-
-== Support for TopCat ==
-    * this is included with icat 3.3.
     
 == Additions to the authorisation mechanism  ==
     * rule and group based authorisation.
 
 == Existing operating environments ==
-    * Oracle 10g;
-    * Java Enterprise Edition 5;
-    * Glassfish 3.
+    * Oracle 11g;
+    * Java Enterprise Edition 6;
+    * Glassfish 3.11.
 
 == Performance ==
-    * Performance is similar to that of ICAT 3.
+    * Performance is similar to that of ICAT 4.0
 
 == Additional operating environments  ==
 As part of the long term objective of making ICAT a portable system which is not dependent on specific products, ensure during testing that ICAT4 functions correctly with the following:
-    * Java Enterprise Edition 6;
+    * Java Enterprise Edition 5;
     * Java Enterprise Edition 7;
     * Mysql database, version 5;
-    * Glassfish 3, 3.1 and 3.11;
+    * Glassfish 3, 3.1;
     * TopCat 1;
     * Open-ejb.
 
@@ -93,9 +90,7 @@ The features of ICAT should be compatible with the following facilities which ar
     * Documentation on deprecations;
 
 == Removals  ==
-    * Use of Glassfish-2;
-    * Dataportal;
-    * ant install scripts, such as icat.xml.
+    * None
 
 == Related, but separate products  ==
     * TopCat 1.0;
@@ -104,7 +99,8 @@ The features of ICAT should be compatible with the following facilities which ar
     * Java Enterprise 5, 6, 7;
     * Ant 1.7, 1.8;
     * Java COG;
-    * Glassfish: 3.0, 3.1, 3.11.
+    * Glassfish: 3.0, 3.1, 3.11;
+    * Apache Maven 3;
     
 == Wish list  == 
 
