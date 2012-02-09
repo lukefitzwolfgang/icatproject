@@ -18,6 +18,7 @@ Earlier meetings are at MeetingActionsRecordArchive
  * Road map for ICAT 4.1
  * Collaboration agreement of PanData and ICAT
  * Proposal to reduce the number of fields for an Investigation and to regularise the field and entity names. (Steve) 
+ * The Sample, Dataset, Investigation triangle (Steve)
  * Face to Face Meeting in 2012
  * Review of ICAT Collaboration by Software Sustainability Institute
  * AOB
