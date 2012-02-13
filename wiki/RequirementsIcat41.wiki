@@ -22,10 +22,11 @@ The purpose of this page is to provide a place where people can write their shop
  * provide a simple mechanism for creating an investigation and adding users
  * provide the icat cmd line tool for rapid prototyping
  * support for mysql
- * provide services on icatproject.org which are not available from google code
- * add a Jenkins server to icatproject.org and ensure that it is up to date
- * add a Sonar server to icatproject.org and ensure that it is up to date
- * add a Nexus server to icatproject.org and ensure that it is up to date
+ * support for a simple way to integrate ICAT with the upstream and downstream investigation management infrastructure
+ * provide services on icatproject.org which are not available from google code, for example:
+  * add a Jenkins server to icatproject.org and ensure that it is up to date
+  * add a Sonar server to icatproject.org and ensure that it is up to date
+  * add a Nexus server to icatproject.org and ensure that it is up to date
 
 == CLF ==
 
