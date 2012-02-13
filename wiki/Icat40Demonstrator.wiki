@@ -4,21 +4,17 @@
 
 There is a system on the internet with a deployment of ICAT 4.0: 
 
- * http://host-193-201-200-152.rsclientdns.com/ 
+ * http://www.icatproject.org
 
-We intend to migrate it to a URL called:
-
- * http://icatproject.org
- 
-We will install a certificate, so that browser applications can access content without certificate warnings.
+We will install a certificate, so that browser applications can access content without certificate warnings.  At the moment, you will get warnings.
 
 The front page is a media wiki and this will contain materials and links to demonstations of ICAT, Topcat, and any other clients which people may wish to demonstrate.
 
 We will provide a set of end points and invite people to use these end points.  For example:
 
 {{{
-icat40/icat40passwd @ http://icatproject.org:8080/ICATService/ICAT?wsdl 
-icat40/icat40passwd @ http://host-193-201-200-152.rsclientdns.com:8080/ICATService/ICAT?wsdl 
+icat40/icat40passwd @ http://www.icatproject.org:8080/ICATService/ICAT?wsdl 
+icat40/icat40passwd @ http://www.icatproject.org:8080/ICATService/ICAT?wsdl 
 }}}
 
 We intend to provide downloads of client software which is configured for this server.  For example, the following example in the icat40 download package works today:
@@ -28,7 +24,7 @@ We intend to provide downloads of client software which is configured for this s
 
 You have to set the following properties in the file examples.properties
 {{{
-wsdl.location=http://host-193-201-200-152.rsclientdns.com:8080/ICATService/ICAT?wsdl
+wsdl.location=http://www.icatproject.org:8080/ICATService/ICAT?wsdl
 username=icat40
 password=icat40passwd
 }}}
@@ -37,7 +33,7 @@ We have deployed two ICATs, called ICATA and ICATB, and a Topcat which allows yo
 
 You can access the Topcat with the following URL:
 
- * https://host-193-201-200-152.rsclientdns.com:8181/TOPCATWeb.jsp 
+ * https://www.icatproject.org:8181/TOPCATWeb.jsp 
 
 We will make lots of changes to this, as times goes on.  We invite you to provide ideas and contributions of demonstrations.
  
