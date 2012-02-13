@@ -9,7 +9,6 @@
 || Ron Fowler               || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
 || Holger Gebhard           || -                                   || ILL                              || ICAT-ILL Developer               || -                        ||
 || Tom Griffin              || tangrif...@hotmail.com              || STFC, ISIS                       || Developer                        || -                        ||
-|| Keir Hawker              || -                                   || STFC, ESC                        || Database administrator           || -                        ||
 || Brian Matthews           || -                                   || STFC, ESC Group Leader           || ICAT Manager                     || -                        ||
 || Alistair Mills           || crcamills                           || STFC, ESC                        || ICAT-CLF Project Manager         || -                        ||
 || Ghita Kouadri Mostefaoui ||  -                                  || STFC, DLS                        || DLS analysis group member        || -                        ||
@@ -17,3 +16,6 @@
 || Kevin Phipps             || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
 || Richard Sinclair         || -                                   || STFC, ESC                        || Database administrator           || -                        ||
 || Peter Turner             || Peter.Turner.Email                  || University of Sydney, Chemistry  || -                                || -                        ||
+|| Shelly Ren               || -                                   || SNS, ORNL                        || -                                || -                        ||
+|| Harjinder Chahal         || -                                   || STFC, ESC                        || -                                || -                        ||
+|| Antony Wilson            || -                                   || STFC, ESC                        || -                                || -                        ||
