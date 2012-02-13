@@ -9,8 +9,9 @@
 
  * [Icat41Roadmap            Icat4.1 Roadmap]
  * [RequirementsIcat41       Icat4.1 Requirements]
+ * [Icat41ReleaseCriteria    Icat4.1 Release criteria]
 
-== ICAT4 ==
+== ICAT4.0 ==
 
  * [Icat4Roadmap             Icat4.0 Roadmap]
  * [Icat40Announcement       Icat4.0 Announcement]
