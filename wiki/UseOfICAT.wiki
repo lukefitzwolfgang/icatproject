@@ -11,5 +11,6 @@
 || ELETTRA (Italian synchrotron, Trieste)                 || In development                              || PanData Lead Partner for WP4                     || http://www.elettra.trieste.it      || Fabio Bonaccorso/ Roby Pugliese, George K      ||
 || VTI (Swedish Road Transport Institute)                 || Development                                 || -                                                || http://www.vti.se/                 || Y Rasheed/ M Rui                     ||
 || STFC eScience                                          || Development                                 || Main developer of ICAT                           || http://www.stfc.ac.uk/e-Science/default.aspx   || Alistair Mills/ Steve Fisher/ Kevin Phipps/ Harjinder Chahal ||
+|| ESRF (European Synchrotron Radiation Facility, Grenoble, France)        || Development                             || Partner in Pandata                     || http://esrf.eu                      || .                      ||
 
 == - the end - ==
