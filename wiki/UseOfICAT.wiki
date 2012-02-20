@@ -1,3 +1,5 @@
+#summary List of users of ICAT
+
 = List of the facilities and organisations using ICAT and the status of their systems  =
 
 <wiki:toc max_depth="3" />
