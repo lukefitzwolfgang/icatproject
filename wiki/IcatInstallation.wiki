@@ -1,5 +1,5 @@
 #summary Installation notes for Oracle XE, Glassfish and Icat 3.3.5
-#labels Featured,Installation
+#labels Installation
 
 = ICAT 3 installation =
 
