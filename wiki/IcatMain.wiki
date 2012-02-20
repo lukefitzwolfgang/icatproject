@@ -3,9 +3,7 @@
 
 = ICAT Main page =
 
-[http://icatproject.blogspot.com/ News]
-
-== ICAT4 ==
+== ICAT4.1 ==
 
  * [Icat41Roadmap            Icat4.1 Roadmap]
  * [RequirementsIcat41       Icat4.1 Requirements]
