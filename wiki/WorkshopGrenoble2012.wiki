@@ -1,4 +1,6 @@
+#summary Meeting in Grenoble in March 2012
 #labels meeting,workshop
+
 = 4th ICAT Workshop - Grenoble - 20th March 2012 =
 
 The 4th ICAT workshop will be held at the ILL, Grenoble on 20th March 2012 from 0900 - 1700.
