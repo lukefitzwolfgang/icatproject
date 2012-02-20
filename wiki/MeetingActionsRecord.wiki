@@ -8,7 +8,32 @@ Earlier meetings are at MeetingActionsRecordArchive
 
 <wiki:toc max_depth="3" />
 
+== Meeting 31 - 23 February 2012 =
+
+ * Actions from the meetings of 9 February 
+ * Road map for ICAT 4.1 (Icat41Roadmap)
+ * Face to Face Meeting in Grenoble in 2012 (WorkshopGrenoble2012) 
+ * Review of ICAT Collaboration by Software Sustainability Institute (SsiExecutiveSummary)  
+ * AOB
+
 == Meeting 30 - 9 February 2012 =
+
+=== Actions 30 ===
+
+||Item   ||Description                                                                       ||Res*(1)   ||      Status||                       Comment||
+||30.00  ||Document the meeting                                                              ||AM        ||        Done||                             -||
+||30.01  ||Make an announcement about the meeting in Grenoble                                ||AM        ||        Done|| WorkshopGrenoble2012         ||
+||30.02  ||Contact CRISP project about Grenoble                                              ||AM        ||        Done|| Spoke to Jean-Francois       ||
+||30.03  ||Remind SN about OIIMPH                                                            ||AM        ||        Done|| SN has nothing to add!       ||
+||30.04  ||Remind SdeW about Eudat requirements for ICAT 4.1                                 ||AM        ||        Done|| RequirementsIcat41#Eudat     ||
+||30.05  ||Remind SN about DLS login information                                             ||AM        ||        Done|| Completed                    ||
+||30.06  ||Distribute Topcat40 for installation with ICAT40                                  ||AM        || In progress|| Ask Harjinder               -||
+||30.07  ||Ask for requirements for ICAT 4.1 from CLF, SNS, DLS                              ||AM        || In progress||                             -||
+||30.08  ||Add requirements for ICAT 4.1 for PANDATA                                         ||AM        ||        Done|| RequirementsIcat41#Pandata   ||
+||30.09  ||Email collaboration about sample data                                             ||All       ||           .||                             -||
+||30.10  ||Email TG about requirements for the meeting in Grenoble                           ||All       ||        Done||                             -||
+||30.11  ||Coordinate arrangements with the contact person at ILL for the workshop           ||TG        || In progress||                             -||
+
 
 === Agenda 30 ===
 
