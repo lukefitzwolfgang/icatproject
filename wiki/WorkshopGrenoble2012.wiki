@@ -15,6 +15,16 @@ The purpose is to discuss plans for the development and use of ICAT at facilitie
 
 We will formalise the agenda over the next few weeks.
 
+Possible Items
+
+  * General Introduction to ICAT / TOPCAT (still useful for some people discovering ICAT thought the EU projects) (ICAT project team)
+  * Technical presentation of the functionalities and the roadmap (ICAT4 ...) (ICAT project team)
+  * Presentation of the organisation/structure of the ICAT project team (document from Alistair)
+  * General presentation from the facilities (5-10mn each) , where they stand ?
+  * Presentation of the different WPs of the EU project dealing with ICAT : CRISP WP17 (me) , PANDATA  WP4 (Milan?), WP6 (STFC), WP7 (me or Brian?) (10-15 mn each). What has to be done ?, what are the resources ?, ...
+  * Discussion about the organisation/collaboration between the ICAT project team and the WP teams 
+
+
 This table has a list of people intending to attend:
 
 || Name              || Organisation || Comments                                        ||
