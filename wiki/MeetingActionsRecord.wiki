@@ -27,8 +27,8 @@ Earlier meetings are at MeetingActionsRecordArchive
 ||30.03  ||Remind SN about OIIMPH                                                            ||AM        ||        Done|| SN has nothing to add!       ||
 ||30.04  ||Remind SdeW about Eudat requirements for ICAT 4.1                                 ||AM        ||        Done|| RequirementsIcat41#Eudat     ||
 ||30.05  ||Remind SN about DLS login information                                             ||AM        ||        Done|| Completed                    ||
-||30.06  ||Distribute Topcat40 for installation with ICAT40                                  ||AM        || In progress|| Ask Harjinder               -||
-||30.07  ||Ask for requirements for ICAT 4.1 from CLF, SNS, DLS                              ||AM        || In progress||                             -||
+||30.06  ||Distribute Topcat40 for installation with ICAT40                                  ||AM        || In progress|| Ask Harjinder                ||
+||30.07  ||Ask for requirements for ICAT 4.1 from CLF, SNS, DLS                              ||AM        || In progress|| RequirementsIcat41           ||
 ||30.08  ||Add requirements for ICAT 4.1 for PANDATA                                         ||AM        ||        Done|| RequirementsIcat41#Pandata   ||
 ||30.09  ||Email collaboration about sample data                                             ||All       ||           .||                             -||
 ||30.10  ||Email TG about requirements for the meeting in Grenoble                           ||All       ||        Done||                             -||
@@ -54,6 +54,7 @@ Earlier meetings are at MeetingActionsRecordArchive
 ||TG   ||Tom Griffin                  || STFC ISIS                  ||     +        ||           ||
 ||SF   ||Steve Fisher                 || STFC eSc                   ||     +        ||           ||
 ||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
+||BM   ||Brian Matthews               || STFC eSc                   ||     +        ||           ||
 ||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
 ||HC   ||Harjinder Chahal             || STFC eSc                   ||     +        ||           ||
 ||SR   ||Shelly Ren                   || ORNL SNS                   ||              ||     +     ||
