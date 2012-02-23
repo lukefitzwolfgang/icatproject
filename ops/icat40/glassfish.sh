@@ -114,7 +114,7 @@ EOF
  	echo Ensure that "Thread Pools" below the configurations has an http-thread-pool with a "Max Thread Pool Size" of 128.
  	echo There may be more than one configuration to change. Change them all.
 
-    fname=$glassfish/glassfish/domains/domain2/lib/ojdbc14.jar
+    fname=$glassfish/glassfish/domains/domain1/lib/ojdbc14.jar
     if [ ! -f $fname ]; then
 	echo Warning $fname does not exist
     fi
