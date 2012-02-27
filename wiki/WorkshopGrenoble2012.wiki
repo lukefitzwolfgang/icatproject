@@ -15,14 +15,31 @@ The purpose is to discuss plans for the development and use of ICAT at facilitie
 
 We will formalise the agenda over the next few weeks.
 
-Possible Items
+Current Draft Agenda. All times are too specific to be realistic.
+|| Start Time || Subject || Time (mins) || Speaker ||
+|| 09:00 || Welcome and introductions || 15 || Jean-François ||
+|| 09:15 || General Introduction to ICAT / TOPCAT (still useful for some people discovering ICAT thought the EU projects) || 30 || ICAT project team ||
+|| 09:45 || Technical presentation of the functionalities and the roadmap (ICAT4 ...) || 60 || ICAT project team ||
+|| 10:45 || Presentation of the organisation/structure of the ICAT project team (document from Alistair)  || 10 || ICAT project team ||
+|| 10:55 || Break  || 20 ||  ||
+|| 11:15 || General presentation from the facilities (5-10mn each)  where they stand ?	 || 5-10 each	 ||   ||
+|| 11:15 || ILL	 || 10 || Jean-Francois? ||
+|| 11:25 || CLF	 || 10 || Alistair? ||
+|| 11:35 || DLS - including SDA integration  || 20 || Ghita ||
+|| 11:55 || ELETTRA  || 10 || George or Milan ||
+|| 11:50 || ISIS  ||10 || Tom ||
+|| 12:00 || Lunch  || 90 ||   ||
+|| 13:30 || Presentation of the different WPs of the EU project dealing with ICAT; What has to be done ?, what are the resources ?  || 10-15 each ||   ||
+|| 13:30 || CRISP WP17 || 10 || Jean-Francois ||
+|| 13:40 || PANDATA WP3 - User Catalogue and AA Service	|| 10  || Heinz-Joseph ||
+|| 13:50 || PANDATA WP4 - Data Catalogue Service  || 10  || Milan ||
+|| 14:00 || PANDATA WP5 - Virtual Laboratories  || 10  || Thorsten ||
+|| 14:10 || PANDATA WP6 - Provenance  || 10  || STFC? - Brian? ||
+|| 14:20 || PANDATA WP6 - Preservation || 10 || Jean-François ||
+|| 14:30 || Discussion about the organisation/collaboration between the ICAT project team and the WP teams || 90 || All ||
+|| 16:00 || Wrapup || 15 ||   ||
+|| 16:15 || Close ||  ||  ||
 
-  * General Introduction to ICAT / TOPCAT (still useful for some people discovering ICAT thought the EU projects) (ICAT project team)
-  * Technical presentation of the functionalities and the roadmap (ICAT4 ...) (ICAT project team)
-  * Presentation of the organisation/structure of the ICAT project team (document from Alistair)
-  * General presentation from the facilities (5-10mn each) , where they stand ?
-  * Presentation of the different WPs of the EU project dealing with ICAT : CRISP WP17 (me) , PANDATA  WP4 (Milan?), WP6 (STFC), WP7 (me or Brian?) (10-15 mn each). What has to be done ?, what are the resources ?, ...
-  * Discussion about the organisation/collaboration between the ICAT project team and the WP teams 
 
 
 This table has a list of people intending to attend:
