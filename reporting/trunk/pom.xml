@@ -14,10 +14,8 @@
 	</properties>
 
 	<modules>
-
-		<module>icat3-client</module>
-		<!-- <module>icat3-logging</module> -->
-		<!-- <module>icat3-reporting</module> -->
+		<module>logging</module>
+		<module>reporting</module>
 	</modules>
 
 	<repositories>
