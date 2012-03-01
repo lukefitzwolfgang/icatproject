@@ -3,25 +3,23 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>co.uk.icat3</groupId>
-		<artifactId>icat3</artifactId>
+		<groupId>org.icatproject</groupId>
+		<artifactId>reporting</artifactId>
 		<version>4.1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>icat3-reporting</artifactId>
+	<artifactId>reporting.reporting</artifactId>
 	<packaging>jar</packaging>
-
-	<name>icat3-reporting</name>
 
 	<properties>
 	</properties>
 
 	<dependencies>
 
-		<dependency>
-			<groupId>co.uk.icat3</groupId>
-			<artifactId>icat3-core</artifactId>
-		</dependency>
+	<!-- <dependency> -->
+	<!-- <groupId>co.uk.icat3</groupId> -->
+	<!-- <artifactId>icat3-core</artifactId> -->
+	<!-- </dependency> -->
 
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
