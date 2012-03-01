@@ -10,32 +10,32 @@ $Id$
 
 The purpose of this note is document the structure for the ICAT collaboration, as discussed at the meetings of the collaboration on 17 February 2011 and 3 March 2011.
 
-The collaboration has been holding regular meetings every two weeks since November.  During that time, several common themes have emerged.  In addition, we are now discussing the icat-4 release.  Guiding that release to a successful launch and to successful deployments is quite a challenge with the resources available.  We will review this set of packages from time to time.  For example, there is no support package.  It is the responsibility of the deployments to do this. 
+The collaboration has been holding regular meetings every two weeks since November 2010.  During that time, several common themes have emerged.  In addition, we are now discussing the icat-4.1 release.  Guiding that release to a successful launch and to successful deployments is quite a challenge with the resources available.  We will review this set of packages from time to time.  For example, there is no support package.
 
 == Work packages ==
 
-|| Id    || Topic                                           || Leader           || Deputy                         ||
-|| WP0   || Project Management                              || Alistair         || Tom                            ||
-||       || Meetings, actions, plans                        || (STFC)           || (STFC)                         ||
-||       || Google code content                             ||                  ||                                ||
-||       || Planning, coordination                          ||                  ||                                ||
-|| WP1   || General facility integration                    || Steve, Ghita     || Tom                            ||
-||       || API, XML-ingest                                 || (STFC, DLS)      || (STFC)                         ||
-|| WP2   || Database independance                           || Alistair         || Richard Sinclair               ||
-||       || Oracle, MySQL                                   || (STFC)           || (STFC)                         ||
-|| WP3   || Infrastructure integration/indep.               || Sri              || Antony                         ||
-||       || TopCat, Glassfish, JDK                          || (STFC)           || (STFC)                         ||
-|| WP4   || Security, authentication and authorisation      || Steve            || Tom                            ||
-||       || Rule based authorisation                        || (STFC)           || (STFC)                         ||
-|| WP5   || Documentation                                   || Kevin            || Alistair                       ||
-||       || User and installation documentation             || (STFC)           || (STFC)                         ||
-||       || Release notes, test report                      ||                  ||                                ||
-||       || FAQs                                            ||                  ||                                ||
-|| WP6   || Test and integration                            || Alistair         || Kevin  / Harjinder             ||
-||       || FAQs                                            || (STFC)           || (STFC) / (STFC)                ||
-|| WP7   || Specific facility integration                   || George           || Antony / Shelley               ||
-||       || DOI, BIRT, Usage reporting                      || (ELLETRA)        || (STFC)   (SNS)                 ||
-||       || SSO, ANSTO, XML-listener                        ||                  ||                                || 
+|| Id    || Topic                                           || Leader                      || Deputy                         ||
+|| WP0   || Project Management                              || Alistair  (STFC)            || Tom   (STFC)                   ||
+||       || Meetings, actions, plans                        ||                             ||                                ||
+||       || Content of Google code and www.icatproject.org  ||                             ||                                ||
+||       || Planning, coordination                          ||                             ||                                ||
+|| WP1   || General facility integration                    || Steve, Ghita (STFC, DLS)    || Tom   (STFC)                   ||
+||       || API, XML-ingest                                 ||                             ||                                ||
+|| WP2   || Database independence                           || Alistair  (STFC)            || Richard Sinclair  (STFC)       ||
+||       || Oracle, MySQL                                   ||                             ||                                ||
+|| WP3   || Infrastructure integration/indep.               || Antony  (STFC)              || PanData                        ||
+||       || TopCat, Glassfish, JDK                          ||                             ||                                ||
+|| WP4   || Security, authentication and authorisation      || Steve  (STFC)               || Tom                            ||
+||       || Rule based authorisation                        ||                             ||                                ||
+|| WP5   || Documentation                                   || Kevin    (STFC)             || Alistair                       ||
+||       || User and installation documentation             ||                             ||                                ||
+||       || Release notes, test report                      ||                             ||                                ||
+||       || FAQs                                            ||                             ||                                ||
+|| WP6   || Test and integration                            || Alistair   (STFC)           || Kevin  / Harjinder  (STFC)     ||
+||       || FAQs                                            ||                             ||                                ||
+|| WP7   || Specific facility integration                   || George    (ELLETRA)         || Antony / Shelley (STFC)/(SNS)  ||
+||       || DOI, BIRT, Usage reporting                      ||                             ||                                ||
+||       || SSO, ANSTO, XML-listener                        ||                             ||                                || 
 
 == - the end - == 
      
