@@ -35,7 +35,7 @@ Earlier meetings are at MeetingActionsRecordArchive
  * Review of ICAT Collaboration by Software Sustainability Institute (SsiExecutiveSummary)  
  * AOB
 
-=== Attendance 30 ===
+=== Attendance 31 ===
 
 ||Init ||Name                         || Institute                  ||     Present  || Apologies ||
 ||TG   ||Tom Griffin                  || STFC ISIS                  ||     +        ||           ||
