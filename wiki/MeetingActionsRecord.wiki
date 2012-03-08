@@ -11,7 +11,8 @@ Earlier meetings are at MeetingActionsRecordArchive
 == Meeting 32 - 8 March 2012 =
 
 === Agenda 32 ===
- * Actions from the meetings of 23 February 
+ * Actions from the meetings of 23 February
+ * Update from PaN-data meeting (Milan/George) 
  * Face to Face Meeting in Grenoble in 2012 (WorkshopGrenoble2012) 
  * Revised ICAT schema proposal for 4.1 (Steve's emails)
  * Constraints on parameter values (Steve's email)
