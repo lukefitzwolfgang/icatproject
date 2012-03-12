@@ -8,6 +8,7 @@
  * [Icat41Roadmap            Icat4.1 Roadmap]
  * [RequirementsIcat41       Icat4.1 Requirements]
  * [Icat41ReleaseCriteria    Icat4.1 Release criteria]
+ * [Icat4Workpackages        Icat4.1 Work Packages]
 
 == ICAT4.0 ==
 
@@ -16,6 +17,7 @@
  * [InstallIcat40            Icat4.0 Installation notes]
  * [Icat4ReleaseCriteria     Icat4.0 Release Criteria]
  * [Icat40Demonstrator       Icat4.0 Demonstration system]
+
 
 == Collaboration information ==
 
