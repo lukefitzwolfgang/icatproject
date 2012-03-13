@@ -39,8 +39,9 @@ Current Draft Agenda. All times are too specific to be realistic.
 || 14:00      || PANDATA WP5 - Virtual Laboratories                                           || 10           || Thorsten           ||
 || 14:10      || PANDATA WP6 - Provenance                                                     || 10           || Alistair           ||
 || 14:20      || PANDATA WP6 - Preservation                                                   || 10           || Jean-François      ||
-|| 14:30      || B r e a k . . .                                                              || 15           ||                    ||
-|| 14:45      || Discussion of the collaboration between the ICAT team and the WP teams       || 75           || All                ||
+|| 14:30      || PANDATA WP7 - Deployment                                                     || 10           || George or Milan    ||
+|| 14:40      || B r e a k . . .                                                              || 20           ||                    ||
+|| 15:00      || Discussion of the collaboration between the ICAT team and the WP teams       || 60           || All                ||
 || 16:00      || Wrap-up                                                                      || 15           || All                ||
 || 16:15      || C l o s e                                                                    ||              ||                    ||
 || 16:30      || Technical clinic - optional; bring your technical problems                   || 60           || Harjinder/ Kevin   ||
