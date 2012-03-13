@@ -25,9 +25,10 @@ Current Draft Agenda. All times are too specific to be realistic.
 || 09:55      || ILL                                                                          || 10           || Jean-François      ||
 || 10:05      || CLF                                                                          || 10           || Alistair           ||
 || 10:15      || DLS - including SDA integration                                              || 20           || Ghita              ||
+|| 10:25      || LSF                                                                          || 10           || Kevin              ||
 || 10:35      || ELETTRA                                                                      || 10           || George or Milan    ||
 || 10:45      || ISIS                                                                         || 10           || Tom                ||
-|| 10:55      || Break                                                                        || 20           ||                    ||
+|| 10:55      || B r e a k . . .                                                              || 20           ||                    ||
 || 11:15      || Technical presentation of the functionalities and the roadmap; ICAT 4.1      || 60           || Alistair/Steve     ||
 || 12:15      || Lunch                                                                        || 75           ||                    ||
 || 13:30      || Presentation of the different WPs of the EU project dealing with ICAT        ||              ||                    ||
@@ -35,26 +36,24 @@ Current Draft Agenda. All times are too specific to be realistic.
 || 13:30      || CRISP WP17                                                                   || 10           || Jean-François      ||
 || 13:40      || PANDATA WP3 - User Catalogue and AA Service                                  || 10           || Heinz-Joseph       ||
 || 13:50      || PANDATA WP4 - Data Catalogue Service                                         || 10           || Milan              ||
-|| 14:00      || PANDATA WP5 - Virtual Laboratories                                           || 10           ||                    ||
-|| 14:10      || PANDATA WP6 - Provenance                                                     || 10           || STFC - Brian?      ||
+|| 14:00      || PANDATA WP5 - Virtual Laboratories                                           || 10           || Thorsten           ||
+|| 14:10      || PANDATA WP6 - Provenance                                                     || 10           || Alistair           ||
 || 14:20      || PANDATA WP6 - Preservation                                                   || 10           || Jean-François      ||
-|| 14:30      || Break                                                                        || 15           ||                    ||
+|| 14:30      || B r e a k . . .                                                              || 15           ||                    ||
 || 14:45      || Discussion of the collaboration between the ICAT team and the WP teams       || 75           || All                ||
 || 16:00      || Wrap-up                                                                      || 15           || All                ||
-|| 16:15      || Close                                                                        ||              ||                    ||
+|| 16:15      || C l o s e                                                                    ||              ||                    ||
 || 16:30      || Technical clinic - optional; bring your technical problems                   || 60           || Harjinder/ Kevin   ||
 
 This table has a list of people intending to attend:
 
-|| Name                          || Organisation || Comments                                        ||
 || Alistair Mills                || STFC         || .                                               ||
 || Steve Fisher                  || RAL/STFC     || .                                               ||
-|| Brian Matthews                || RAL/STFC     || .                                               ||
 || Antony Wilson                 || RAL/STFC     || .                                               ||
 || Harjinder Chahal              || RAL/STFC     || .                                               ||
 || Kevin Phipps                  || RAL/STFC     || .                                               ||
 || Tom Griffin                   || STFC/ISIS    || .                                               ||
-|| Heinz J. Weyer                || PSI          || PaN-data ODI WP3 leader (user catalogue and AAA)||
+|| Heinz-Joseph Weyer            || PSI          || PaN-data ODI WP3 leader (user catalogue and AAA)||
 || Thorsten Kracht               || DESY         || PaN-data-ODI WP5 leader (Virtual labs )         ||
 || Shelly Ren                    || SNS (ORNL)   || .                                               ||
 || Ghita Kouadri Mostefaoui      || Diamond      || .                                               ||
@@ -65,3 +64,9 @@ This table has a list of people intending to attend:
 ||                               || ALBA         || .                                               ||
 ||                               || ?            || .                                               ||
 ||                               || ?            || .                                               ||
+
+
+Apologies:
+
+|| Name                          || Organisation || Comments                                        ||
+|| Brian Matthews                || RAL/STFC     || .                                               ||
