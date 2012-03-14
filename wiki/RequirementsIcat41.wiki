@@ -30,7 +30,7 @@ The purpose of this page is to provide a place where people can write their shop
 
 == CLF ==
 
-Please meeting the following requirements:
+Please meet the following requirements:
 
 == ISIS ==
 (E = essential, D= Desirable)
@@ -47,7 +47,7 @@ Please meeting the following requirements:
 
 == DLS ==
 
-Please meeting the following requirements:
+Please meet the following requirements:
 
 == Pandata ==
 
@@ -55,7 +55,7 @@ Please meeting the following requirements:
 
 == Eudat ==
 
-Please meeting the following requirements:
+Please meet the following requirements:
 
 == ILL ==
 
@@ -63,7 +63,7 @@ Please meeting the following requirements:
 
 == SNS ==
 
-Please meeting the following requirements:
+Please meet the following requirements:
 
 
 To provide better system performance and user experience, we wanted to offer live view and auto data reduction to SNS users in the future. SNS has two major requirements:
