@@ -5,7 +5,7 @@
 
 The 4th ICAT workshop will be held at the ILL, Grenoble on 20th March 2012 from 0900 - 1700.
 
-== Attending ==
+= Attending =
 
 If you are interested in attending this meeting please contact tom.griffin@stfc.ac.uk
 
@@ -13,9 +13,7 @@ If you are interested in attending this meeting please contact tom.griffin@stfc.
 
 The purpose is to discuss plans for the development and use of ICAT at facilities and by projects such as PaN-Data and CRISP.
 
-We will formalise the agenda over the next few weeks.
-
-Current Draft Agenda. All times are too specific to be realistic.
+All times are too specific to be realistic.
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||
 || 09:00      || Welcome and introductions                                                    || 15           || Jean-François      ||
@@ -24,7 +22,7 @@ Current Draft Agenda. All times are too specific to be realistic.
 || 09:55      || General presentation from the facilities (5-10mn each)  where they stand ?   || 05 each      ||                    ||
 || 09:55      || ILL                                                                          || 05           || Jean-François      ||
 || 10:00      || CLF                                                                          || 05           || Alistair           ||
-|| 10:05      || DLS - including SDA integration                                              || 05           || Ghita              ||
+|| 10:05      || DLS                                                                          || 05           || Ghita              ||
 || 10:10      || LSF                                                                          || 05           || Kevin              ||
 || 10:15      || ELETTRA                                                                      || 05           || Milan              ||
 || 10:20      || ISIS                                                                         || 05           || Tom                ||
@@ -33,20 +31,20 @@ Current Draft Agenda. All times are too specific to be realistic.
 || 10:35      || PSI                                                                          || 05           || Heinz-Joseph       ||
 || 10:40      || Soleil                                                                       || 05           || Chado              ||
 || 10:45      || ALBA                                                                         || 05           || Daniel             ||
-|| 10:50      || B r e a k . . .                                                              || 25           ||                    ||
+|| 10:50      || DESY                                                                         || 05           || Thorsten           ||
+|| 10:55      || B r e a k . . .                                                              || 20           ||                    ||
 || 11:15      || Technical presentation of the functionalities and the roadmap; ICAT 4.1      || 60           || Alistair/Steve     ||
-|| 12:15      || Lunch                                                                        || 75           ||                    ||
+|| 12:15      || L u n c h                                                                    || 75           ||                    ||
 || 13:30      || Presentation of the different WPs of the EU project dealing with ICAT        ||              ||                    ||
 ||            || What has to be done; what are the resources.                                 ||              ||                    ||
 || 13:30      || CRISP WP17                                                                   || 10           || Jean-François      ||
 || 13:40      || PANDATA WP3 - User Catalogue and AA Service                                  || 10           || Heinz-Joseph       ||
 || 13:50      || PANDATA WP4 - Data Catalogue Service                                         || 10           || Milan              ||
 || 14:00      || PANDATA WP5 - Virtual Laboratories                                           || 10           || Thorsten           ||
-|| 14:10      || PANDATA WP6 - Provenance                                                     || 10           || Alistair           ||
+|| 14:10      || PANDATA WP6 - Provenance                                                     || 10           || Steve              ||
 || 14:20      || PANDATA WP6 - Preservation                                                   || 10           || Jean-François      ||
-|| 14:30      || PANDATA WP7 - Deployment                                                     || 10           || Milan              ||
-|| 14:40      || B r e a k . . .                                                              || 20           ||                    ||
-|| 15:00      || Discussion of the collaboration between the ICAT team and the WP teams       || 60           || All                ||
+|| 14:30      || B r e a k . . .                                                              || 20           ||                    ||
+|| 15:45      || Discussion of the collaboration between the ICAT team and the WP teams       || 75           || All                ||
 || 16:00      || Wrap-up                                                                      || 15           || All                ||
 || 16:15      || C l o s e                                                                    ||              ||                    ||
 || 16:30      || Technical clinic - optional; bring your technical problems                   || 60           || Harjinder/ Kevin   ||
@@ -62,9 +60,9 @@ This table has a list of people intending to attend:
 || Tom Griffin                   || STFC/ISIS    || .                                               ||
 || Heinz-Joseph Weyer            || PSI          || PaN-data ODI WP3 leader (user catalogue and AAA)||
 || Thorsten Kracht               || DESY         || PaN-data-ODI WP5 leader (Virtual labs )         ||
-|| Shelly Ren                    || SNS (ORNL)   || .                                               ||
+|| Shelley Ren                    || SNS (ORNL)   || .                                               ||
 || Ghita Kouadri Mostefaoui      || Diamond      || .                                               ||
-|| Holger	Gebhard          || ILL          || .                                               ||
+|| Holger	Gebhard              || ILL          || .                                               ||
 || Jean-François Perrin          || ILL          || .                                               ||
 || Dominique Porte               || ESRF         || .                                               ||
 || Delageniere Solange           || ESRF         || .                                               ||
