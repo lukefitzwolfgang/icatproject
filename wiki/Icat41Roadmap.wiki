@@ -7,6 +7,7 @@ $Id$
 = Road map for icat-4.1 =
 
 == Introduction ==
+*Note that this is a draft proposal (by STFC eScience) and has NOT been discussed or agreed with any of the major facilities using ICAT.*
 
 == ICAT-4.1 ==
 Note that words like additional, and improved relate to icat 4.0.
