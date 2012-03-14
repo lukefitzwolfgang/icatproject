@@ -53,6 +53,7 @@ Current Draft Agenda. All times are too specific to be realistic.
 
 This table has a list of people intending to attend:
 
+|| Name                          || Organisation || Comments                                        ||
 || Alistair Mills                || STFC         || .                                               ||
 || Steve Fisher                  || RAL/STFC     || .                                               ||
 || Antony Wilson                 || RAL/STFC     || .                                               ||
