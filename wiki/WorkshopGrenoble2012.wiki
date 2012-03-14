@@ -21,14 +21,15 @@ Current Draft Agenda. All times are too specific to be realistic.
 || 09:00      || Welcome and introductions                                                    || 15           || Jean-François      ||
 || 09:15      || General Introduction to ICAT / TOPCAT (for new collaborators)                || 30           || Alistair/Kevin     ||
 || 09:45      || Organisation and structure of the ICAT project team                          || 10           || Alistair           ||
-|| 09:55      || General presentation from the facilities (5-10mn each)  where they stand ?   || 5-10 each    || See below          ||
-|| 09:55      || ILL                                                                          || 10           || Jean-François      ||
-|| 10:05      || CLF                                                                          || 10           || Alistair           ||
-|| 10:15      || DLS - including SDA integration                                              || 20           || Ghita              ||
-|| 10:25      || LSF                                                                          || 10           || Kevin              ||
-|| 10:35      || ELETTRA                                                                      || 10           || George or Milan    ||
-|| 10:45      || ISIS                                                                         || 10           || Tom                ||
-|| 10:55      || B r e a k . . .                                                              || 20           ||                    ||
+|| 09:55      || General presentation from the facilities (5-10mn each)  where they stand ?   || 05 each      || See below          ||
+|| 09:55      || ILL                                                                          || 05           || Jean-François      ||
+|| 10:00      || CLF                                                                          || 05           || Alistair           ||
+|| 10:05      || DLS - including SDA integration                                              || 05           || Ghita              ||
+|| 10:10      || LSF                                                                          || 05           || Kevin              ||
+|| 10:15      || ELETTRA                                                                      || 05           || George or Milan    ||
+|| 10:20      || ISIS                                                                         || 05           || Tom                ||
+|| 10:25      || Others, eg ESRF, PSI, Soleil, ALBA                                           || 20           || .                  ||
+|| 10:50      || B r e a k . . .                                                              || 25           ||                    ||
 || 11:15      || Technical presentation of the functionalities and the roadmap; ICAT 4.1      || 60           || Alistair/Steve     ||
 || 12:15      || Lunch                                                                        || 75           ||                    ||
 || 13:30      || Presentation of the different WPs of the EU project dealing with ICAT        ||              ||                    ||
