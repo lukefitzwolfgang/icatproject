@@ -35,7 +35,7 @@ If you would like to review the set of downloads available, use the following UR
 http://code.google.com/p/icatproject/downloads/list
 }}}
 
-The release zip contains a file called readme.txt with instructions.  A longer verion is available at the following URL:
+The release zip contains a file called readme.txt with instructions.  A longer version is available at the following URL:
 {{{
 http://code.google.com/p/icatproject/wiki/InstallIcat40 
 }}}
@@ -69,6 +69,7 @@ Glassfish Server:
  * directory: /home/glassfish3/glassfish3/glassfish
  * admin user: admin
  * admin user password: adminadmin
+ * master password: changeit
  * asadmin command: The operating system user called glassfish3 has asadmin on the PATH 
  * ojdbc14.jar: The file ojdbc14.jar has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/lib
  * icat.properties: The file icat.properties has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
@@ -105,7 +106,7 @@ Ports:
 
 Configuration is stored in the following files:
  * [http://code.google.com/p/icatproject/source/browse/ops/icat40/glassfish.props icat40/glassfish.props] - this contains the properties used by the glassfish.sh script;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/passwordfile icat40/passwordfile] - this contains the password for the Glassfish Server admin console;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat40/passwordfile icat40/passwordfile] - this contains the password for the Glassfish Server admin console and the keystore master password;
  * [http://code.google.com/p/icatproject/source/browse/ops/icat40/usertable_init/usertable.sh icat40/usertable_init/usertable.sh] - this contains the script used to create the user icat40;
  * [http://code.google.com/p/icatproject/source/browse/ops/icat40/test_icat/example.properties icat40/test_icat/example.properties] - this contains the properties used by the test for ICAT.
 
@@ -121,7 +122,7 @@ Ensure the following conditions on the system:
  * Expand the distribution file into a directory; icat40 is used in the following instructions.
 
 Two common errors are the following:
- * The Glassfish Server admin password must agree with the value in the file passwordfile;  
+ * The Glassfish Server admin and keystore master passwords must agree with the value in the file passwordfile;  
  * The file ojdbc14.jar must be in the file system before the Glassfish Server is started.  If is added later, it is necessary to restart the Glassfish Server.  
 
 Do the following:
@@ -363,8 +364,10 @@ The following table provides the information about the distribution of configura
 || icatuserpassword  || no              || yes          || yes                || no            || icat40passwd                                              ||
 || the icat filename implies the port and the protocol and it is always localhost                                                                           ||
 || wsdl.location     || implied         || no           || yes                || no            || http://localhost:8080/ICATService/ICAT?wsdl               ||  
-|| the admin password is require to logon to the glassfish 											         	||
+|| the admin password is required to logon to the glassfish 											         	||
 || admin password    || no              || no           || no                 || yes           || adminadmin                                                     ||
+|| the master password is required to access the keystore 											         	||
+|| master password    || no              || no           || no                 || yes           || changeit                                                    ||
 || the client file for applications to access 													         	||
 || icatclient        || no              || no           || no                 || no            || /home/glassfish3/icat40/icat-client-1583.jar              ||    
 
