@@ -17,7 +17,7 @@ All times are too specific to be realistic.
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||
 || 09:00      || Welcome and introductions                                                    || 15           || Jean-François      ||
-|| 09:15      || General Introduction to ICAT / TOPCAT (for new collaborators)                || 30           || Alistair/Kevin     ||
+|| 09:15      || General Introduction to ICAT / TOPCAT (for new collaborators)                || 30           || Alistair/Kevin/Antony     ||
 || 09:45      || Organisation and structure of the ICAT project team                          || 10           || Alistair           ||
 || 09:55      || General presentation from the facilities (5-10mn each)  where they stand ?   || 05 each      ||                    ||
 || 09:55      || ILL                                                                          || 05           || Jean-François      ||
@@ -34,7 +34,7 @@ All times are too specific to be realistic.
 || 10:50      || DESY                                                                         || 05           || Thorsten           ||
 || 10:55      || B r e a k . . .                                                              || 20           ||                    ||
 || 11:15      || Technical presentation of the functionalities and the roadmap; ICAT 4.1      || 60           || Alistair/Steve     ||
-|| 12:15      || L u n c h                                                                    || 75           ||                    ||
+|| 12:15      || L u n c h . . .                                                              || 75           ||                    ||
 || 13:30      || Presentation of the different WPs of the EU project dealing with ICAT        ||              ||                    ||
 ||            || What has to be done; what are the resources.                                 ||              ||                    ||
 || 13:30      || CRISP WP17                                                                   || 10           || Jean-François      ||
@@ -42,11 +42,11 @@ All times are too specific to be realistic.
 || 13:50      || PANDATA WP4 - Data Catalogue Service                                         || 10           || Milan              ||
 || 14:00      || PANDATA WP5 - Virtual Laboratories                                           || 10           || Thorsten           ||
 || 14:10      || PANDATA WP6 - Provenance                                                     || 10           || Steve              ||
-|| 14:20      || PANDATA WP6 - Preservation                                                   || 10           || Jean-François      ||
+|| 14:20      || PANDATA WP7 - Preservation                                                   || 10           || Jean-François      ||
 || 14:30      || B r e a k . . .                                                              || 20           ||                    ||
-|| 15:45      || Discussion of the collaboration between the ICAT team and the WP teams       || 75           || All                ||
+|| 14:45      || Discussion of the collaboration between the ICAT team and the WP teams       || 75           || All                ||
 || 16:00      || Wrap-up                                                                      || 15           || All                ||
-|| 16:15      || C l o s e                                                                    ||              ||                    ||
+|| 16:15      || C l o s e . . .                                                              ||              ||                    ||
 || 16:30      || Technical clinic - optional; bring your technical problems                   || 60           || Harjinder/ Kevin   ||
 
 This table has a list of people intending to attend:
