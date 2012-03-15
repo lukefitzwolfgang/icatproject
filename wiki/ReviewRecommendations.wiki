@@ -2,7 +2,6 @@
 
 = Introduction =
 
-
 == Governance == 
 || Item    || Who     || Description                                                                          || 
 || R01     || ESC     || ICAT team in Escience must lead the collaboration                                    || 
@@ -24,38 +23,37 @@
 || R11     || ?       || Promote ICAT to a wider audience, and have them include it in proposals              || 
 
 == Process ==
-Item    Who     Description
-R12     ?       Actively solicit feedback and grow the market for ICAT
-R13     ?       Define a collaborator induction process, including the allocation of a mentor
-R14     ?       Define a process for resolving conflicts of requirements
-R15     ?       Publish the defined processes
-R16     ?       Create and operate a well defined process for dealing with requirements
-R17     ?       Create and maintain a roadmap for the development of ICAT
-R18     ?       Create and operate a well defined test process
-R19     ?       The ICAT team should be aware of, and involved with, all deployments of ICAT
-R20     ?       Create and operate a well defined cycle of software releases
-R21     ?       Create and operate a handover process for the replacement of collaborators 
+|| Item    || Who     || Description                                                                          || 
+|| R12     || ?       || Actively solicit feedback and grow the market for ICAT                               ||
+|| R13     || ?       || Define a collaborator induction process, including the allocation of a mentor        ||
+|| R14     || ?       || Define a process for resolving conflicts of requirements                             ||
+|| R15     || ?       || Publish the defined processes                                                        ||
+|| R16     || ?       || Create and operate a well defined process for dealing with requirements              ||
+|| R17     || ?       || Create and maintain a roadmap for the development of ICAT                            ||
+|| R18     || ?       || Create and operate a well defined test process                                       ||
+|| R19     || ?       || The ICAT team should be aware of, and involved with, all deployments of ICAT         ||
+|| R20     || ?       || Create and operate a well defined cycle of software releases                         ||
+|| R21     || ?       || Create and operate a handover process for the replacement of collaborators           ||
 
-Policies ==
-Item    Who     Description
-R22     ?       Define and operate a deprecation policy
-R23     ?       Define and operate a code contribution policy
-R24     ?       Define and operate a release policy
-R25     ?       Include information in the software repository on the provenance of change
+== Policies ==
+|| Item    || Who     || Description                                                                          || 
+|| R22     || ?       || Define and operate a deprecation policy                                              ||
+|| R23     || ?       || Define and operate a code contribution policy                                        ||
+|| R24     || ?       || Define and operate a release policy                                                  ||
+|| R25     || ?       || Include information in the software repository on the provenance of change           ||
 
-Support ==
-Item    Who     Description
-R26     ?       Take into account the expertise of the submitter when replying to support tickets 
+== Support ==
+|| Item    || Who     || Description                                                                          || 
+|| R26     || ?       || Take into account the expertise of the submitter when replying to support tickets    || 
 
-Infrastructure ==
-Item    Who     Description
-R28     ?       Regularly update the front page of the Google Code site
-R29     ?       Conduct technical discussions via externally visible mailing lists
-R30     ?       Have a mailing list for announcements, with a standard email for the announcement
-R31     ?       Improve and maintain the FAQs
-R32     ?       Have regular technical meetings using Skype
-R33     ?       Clean up the source code repository regularly
-R34     ?       Determine from the stakeholders what is difficult, and simplify it 
+== Infrastructure ==
+|| Item    || Who     || Description                                                                          || 
+|| R28     || ?       || Regularly update the front page of the Google Code site                              || 
+|| R29     || ?       || Conduct technical discussions via externally visible mailing lists                   || 
+|| R30     || ?       || Have a mailing list for announcements, with a standard email for the announcement    || 
+|| R31     || ?       || Improve and maintain the FAQs                                                        || 
+|| R32     || ?       || Have regular technical meetings using Skype                                          || 
+|| R33     || ?       || Clean up the source code repository regularly                                        || 
+|| R34     || ?       || Determine from the stakeholders what is difficult, and simplify it                   || 
 
 == - the end - ==
-
