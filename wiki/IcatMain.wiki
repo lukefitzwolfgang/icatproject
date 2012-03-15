@@ -21,7 +21,11 @@
 
 == Collaboration information ==
 
- * [MeetingActionsRecord     Meeting actions]
+ * [MeetingActionsRecord                                                                                                   Meeting actions]
+ * [ReviewRecommendations                                                                                                  Recommendations from the review]
+ * [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICATCollaborationAssessment-v1.0.pdf  Review document]
+ * [http://www.icatproject.org/index.php/ICAT_review_by_SSI_-_January_2012                                                 Summary of review]
+ 
 
 == Design ==
 
