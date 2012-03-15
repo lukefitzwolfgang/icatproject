@@ -1,0 +1,61 @@
+#summary Recommendations from the SSI review.
+
+= Introduction =
+
+
+== Governance == 
+|| Item    || Who     || Description                                                                          || 
+|| R01     || ESC     || ICAT team in Escience must lead the collaboration                                    || 
+|| R02     || ESC     || Create a steering committee with senior people from the stakeholders                 || 
+|| R03     || ESC     || Define how a collaboration organisation joins the collaboration                      || 
+|| R04     || ESC     || ICAT team in Escience to organise the Face to Face meetings                          || 
+|| R05     || ESC     || Make a risk assessment to mitigate the effects of the loss of key individuals        || 
+
+== Communications ==
+|| Item    || Who     || Description                                                                          || 
+|| R06     || ?       || Ensure that someone maintains the outreach work                                      || 
+|| R07     || ?       || Provide ICAT mentors to help new adopters use ICAT                                   || 
+|| R08     || ?       || Develop a group of testers for pre-release software                                  || 
+|| R09     || ?       || Encourage new adopters to spread the news of ICAT                                    || 
+|| R10     || ?       || Provide weekly Skype on-line workshops to demonstrate and discuss technical matters  || 
+|| R11     || ?       || Promote ICAT to a wider audience, and have them include it in proposals              || 
+|| R12     || ?       || Actively solicit feedback and grow the market for ICAT                               || 
+|| R10     || ?       || Provide weekly Skype on-line workshops to demonstrate and discuss technical matters  || 
+|| R11     || ?       || Promote ICAT to a wider audience, and have them include it in proposals              || 
+
+== Process ==
+Item    Who     Description
+R12     ?       Actively solicit feedback and grow the market for ICAT
+R13     ?       Define a collaborator induction process, including the allocation of a mentor
+R14     ?       Define a process for resolving conflicts of requirements
+R15     ?       Publish the defined processes
+R16     ?       Create and operate a well defined process for dealing with requirements
+R17     ?       Create and maintain a roadmap for the development of ICAT
+R18     ?       Create and operate a well defined test process
+R19     ?       The ICAT team should be aware of, and involved with, all deployments of ICAT
+R20     ?       Create and operate a well defined cycle of software releases
+R21     ?       Create and operate a handover process for the replacement of collaborators 
+
+Policies ==
+Item    Who     Description
+R22     ?       Define and operate a deprecation policy
+R23     ?       Define and operate a code contribution policy
+R24     ?       Define and operate a release policy
+R25     ?       Include information in the software repository on the provenance of change
+
+Support ==
+Item    Who     Description
+R26     ?       Take into account the expertise of the submitter when replying to support tickets 
+
+Infrastructure ==
+Item    Who     Description
+R28     ?       Regularly update the front page of the Google Code site
+R29     ?       Conduct technical discussions via externally visible mailing lists
+R30     ?       Have a mailing list for announcements, with a standard email for the announcement
+R31     ?       Improve and maintain the FAQs
+R32     ?       Have regular technical meetings using Skype
+R33     ?       Clean up the source code repository regularly
+R34     ?       Determine from the stakeholders what is difficult, and simplify it 
+
+== - the end - ==
+
