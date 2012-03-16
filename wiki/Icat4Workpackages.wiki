@@ -10,7 +10,7 @@ $Id$
 
 The purpose of this note is document the structure for the ICAT collaboration, as discussed at the meetings of the collaboration on 17 February 2011 and 3 March 2011.
 
-The collaboration has been holding regular meetings every two weeks since November 2010.  During that time, several common themes have emerged.  In addition, we are now discussing the icat-4.1 release.  Guiding that release to a successful launch and to successful deployments is quite a challenge with the resources available.  We will review this set of packages from time to time.
+The collaboration has been holding regular meetings every two weeks since November 2010.  During that time, several common themes have emerged.  In addition, we are now discussing the icat-4.1 release.  Guiding releases to a successful launch and to successful deployments is quite a challenge with the resources available.  We will review this set of packages from time to time.
 
 == Work packages ==
 
@@ -19,11 +19,11 @@ The collaboration has been holding regular meetings every two weeks since Novemb
 ||       || Meetings, actions, plans                        ||                             ||                                ||
 ||       || Content of Google code and www.icatproject.org  ||                             ||                                ||
 ||       || Planning, coordination                          ||                             ||                                ||
-|| WP1   || General facility integration                    || Steve, Ghita (STFC, DLS)    || Tom   (STFC)                   ||
+|| WP1   || General facility integration                    || Steve (STFC)                || Tom (ISIS), Ghita (DLS)        ||
 ||       || API, XML-ingest                                 ||                             ||                                ||
 || WP2   || Database independence                           || Alistair  (STFC)            || Richard Sinclair  (STFC)       ||
 ||       || Oracle, MySQL                                   ||                             ||                                ||
-|| WP3   || Infrastructure integration/indep.               || Antony  (STFC)              || PanData                        ||
+|| WP3   || Infrastructure integration/indep.               || Antony  (STFC)              || Milan    (ELLETRA)             ||
 ||       || TopCat, Glassfish, JDK                          ||                             ||                                ||
 || WP4   || Security, authentication and authorisation      || Steve  (STFC)               || Tom                            ||
 ||       || Rule based authorisation                        ||                             ||                                ||
@@ -31,12 +31,12 @@ The collaboration has been holding regular meetings every two weeks since Novemb
 ||       || User and installation documentation             ||                             ||                                ||
 ||       || Release notes, test report                      ||                             ||                                ||
 ||       || FAQs                                            ||                             ||                                ||
-|| WP6   || Test and integration                            || Alistair   (STFC)           || Kevin  / Harjinder  (STFC)     ||
+|| WP6   || Test and integration                            || Alistair   (STFC)           || Kevin                          ||
 ||       || FAQs                                            ||                             ||                                ||
-|| WP7   || Specific facility integration                   || George    (ELLETRA)         || Antony / Shelley (STFC)/(SNS)  ||
+|| WP7   || Specific facility integration                   || George    (ELLETRA)         || Shelley(SNS)                   ||
 ||       || DOI, BIRT, Usage reporting                      ||                             ||                                ||
 ||       || SSO, ANSTO, XML-listener                        ||                             ||                                || 
-|| WP8   || Support                                         || Alistair    (STFC))         || Harjinder (STFC)               ||
+|| WP8   || Support                                         || Alistair    (STFC)          || Harjinder (STFC)               ||
 
 
 == - the end - == 
