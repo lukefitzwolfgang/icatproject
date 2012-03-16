@@ -74,6 +74,7 @@ This table has a list of people intending to attend:
 || Yannick Le Goc                || ILL          || .                                               ||
 || Chado Idrissou                || Soleil       || .                                               ||
 || Daniel Salvat                 || ALBA         || .                                               ||
+|| Christian Felder              || JCNS         || .                                               ||
 
 Apologies:
 
