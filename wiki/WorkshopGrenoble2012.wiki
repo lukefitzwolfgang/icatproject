@@ -60,7 +60,7 @@ This table has a list of people intending to attend:
 || Tom Griffin                   || STFC/ISIS    || .                                               ||
 || Heinz-Joseph Weyer            || PSI          || PaN-data ODI WP3 leader (user catalogue and AAA)||
 || Thorsten Kracht               || DESY         || PaN-data-ODI WP5 leader (Virtual labs )         ||
-|| Shelley Ren                    || SNS (ORNL)   || .                                               ||
+|| Shelly Ren                    || SNS (ORNL)   || .                                               ||
 || Ghita Kouadri Mostefaoui      || Diamond      || .                                               ||
 || Holger	Gebhard              || ILL          || .                                               ||
 || Jean-François Perrin          || ILL          || .                                               ||
