@@ -62,7 +62,7 @@ This table has a list of people intending to attend:
 || Thorsten Kracht               || DESY         || PaN-data-ODI WP5 leader (Virtual labs )         ||
 || Shelly Ren                    || SNS (ORNL)   || .                                               ||
 || Ghita Kouadri Mostefaoui      || Diamond      || .                                               ||
-|| Holger	Gebhard              || ILL          || .                                               ||
+|| Holger Gebhard                || ILL          || .                                               ||
 || Jean-François Perrin          || ILL          || .                                               ||
 || Dominique Porte               || ESRF         || .                                               ||
 || Delageniere Solange           || ESRF         || .                                               ||
@@ -75,6 +75,8 @@ This table has a list of people intending to attend:
 || Chado Idrissou                || Soleil       || .                                               ||
 || Daniel Salvat                 || ALBA         || .                                               ||
 || Christian Felder              || JCNS         || .                                               ||
+|| Mirjam Van Daalen             || PSI          || .                                               ||
+|| Bjoern Abt                    || PSI          || .                                               ||
 
 Apologies:
 
