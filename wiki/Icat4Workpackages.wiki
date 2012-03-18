@@ -25,13 +25,13 @@ The collaboration has been holding regular meetings every two weeks since Novemb
 ||       || Oracle, MySQL                                   ||                             ||                                ||
 || WP3   || Infrastructure integration/indep.               || Antony  (STFC)              || Milan    (ELLETRA)             ||
 ||       || TopCat, Glassfish, JDK                          ||                             ||                                ||
-|| WP4   || Security, authentication and authorisation      || Steve  (STFC)               || Tom                            ||
+|| WP4   || Security, authentication and authorisation      || Steve  (STFC)               || Tom     (ISIS)                 ||
 ||       || Rule based authorisation                        ||                             ||                                ||
-|| WP5   || Documentation                                   || Kevin    (STFC)             || Alistair                       ||
+|| WP5   || Documentation                                   || Kevin    (STFC)             || Alistair  (STFC)               ||
 ||       || User and installation documentation             ||                             ||                                ||
 ||       || Release notes, test report                      ||                             ||                                ||
 ||       || FAQs                                            ||                             ||                                ||
-|| WP6   || Test and integration                            || Alistair   (STFC)           || Kevin                          ||
+|| WP6   || Test and integration                            || Alistair   (STFC)           || Kevin  (STFC)                  ||
 ||       || FAQs                                            ||                             ||                                ||
 || WP7   || Specific facility integration                   || George    (ELLETRA)         || Shelley(SNS)                   ||
 ||       || DOI, BIRT, Usage reporting                      ||                             ||                                ||
