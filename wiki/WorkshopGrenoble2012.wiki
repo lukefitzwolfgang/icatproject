@@ -20,7 +20,7 @@ All times are too specific to be realistic.
 || 09:00      || Welcome and introductions                                                    || 15           || Jean-François      ||
 || 09:15      || General Introduction to ICAT / TOPCAT (for new collaborators)                || 30           || Alistair/Kevin/Antony ||
 || 09:45      || Organisation and structure of the ICAT project team                          || 10           || Alistair           ||
-|| 09:55      || Q u i c k b r e a k ...                                                      || 05           ||                    ||
+|| 09:55      || Q u i c k . . . b r e a k . . .                                              || 05           ||                    ||
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||
 || 10:00      || Session 2 - Chair person - Andy                                              ||              ||                    ||
@@ -37,7 +37,7 @@ All times are too specific to be realistic.
 || 10:45      || Soleil                                                                       || 05           || Chado              ||
 || 10:50      || ALBA                                                                         || 05           || Daniel             ||
 || 10:55      || DESY                                                                         || 05           || Thorsten           ||
-|| 11:00      || L o n g     B r e a k . . .                                                  || 15           ||                    ||
+|| 11:00      || L o n g  . . . B r e a k . . .                                               || 15           ||                    ||
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||
 || 11:15      || Session 3 - Chair person - Heinz-Joseph                                      ||              ||                    ||
