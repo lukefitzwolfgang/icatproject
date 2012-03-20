@@ -40,7 +40,7 @@ All times are too specific to be realistic.
 || 11:00      || L o n g  . . . B r e a k . . .                                               || 15           ||                    ||
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||
-|| 11:15      || Session 3 - Chair person - Heinz-Joseph                                      ||              ||                    ||
+|| 11:15      || Session 3 - Chair person - Mirjam                                            ||              ||                    ||
 ||            || Technical presentation of the functionalities and the roadmap; ICAT 4.1      || 60           || Steve/ Alistair    ||
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||
@@ -59,7 +59,7 @@ All times are too specific to be realistic.
 || 14:30      || B r e a k . . .                                                              || 15           ||                    ||
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||
-|| 14:45      || Session 5 - Chair person - Paulo                                             ||              ||                    ||
+|| 14:45      || Session 5 - Chair person - Jean-François                                     ||              ||                    ||
 ||            || Discussion of the collaboration between the ICAT team and the WP teams       || 75           || All                ||
 || 16:00      || Wrap-up                                                                      || 15           || All                ||
 || 16:15      || C l o s e . . .                                                              ||              ||                    ||
