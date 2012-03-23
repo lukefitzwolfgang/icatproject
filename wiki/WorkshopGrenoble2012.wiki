@@ -15,7 +15,9 @@ The purpose is to discuss plans for the development and use of ICAT at facilitie
 
 All times are too specific to be realistic.
 
-|| Start Time || Subject                                                                      || Time (mins)  || Speaker            || ||
+ * [http://code.google.com/p/icatproject/source/browse/#svn%2Ficat3_api%2Ftrunk%2FDocumentation%2FGrenoble2012Talks                   Index of Speakers]
+
+|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||Notes ||
 || 09:00      || Session 1 - Chair person - Tom                                               ||              ||                    ||.||
 || 09:00      || Welcome and introductions                                                    || 15           || Jean-François      ||.||
 || 09:15      || General Introduction to ICAT / TOPCAT (for new collaborators)                || 30           || Alistair/Kevin/Antony ||.||
@@ -70,8 +72,8 @@ All times are too specific to be realistic.
 This table has a list of people intending to attend:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
-|| Alistair Mills                || STFC         || .                                               ||http://code.google.com/p/icatproject/source/browse/#svn%2Ficat3_api%2Ftrunk%2FDocumentation%2FGrenoble2012Talks%2FAlistair||
-|| Steve Fisher                  || RAL/STFC     || .                                               ||http://code.google.com/p/icatproject/source/browse/#svn%2Ficat3_api%2Ftrunk%2FDocumentation%2FGrenoble2012Talks%2FSteve||
+|| Alistair Mills                || STFC         || .                                               ||.||
+|| Steve Fisher                  || RAL/STFC     || .                                               ||.||
 || Antony Wilson                 || RAL/STFC     || .                                               ||.||
 || Harjinder Chahal              || RAL/STFC     || .                                               ||.||
 || Kevin Phipps                  || RAL/STFC     || .                                               ||.||
@@ -98,7 +100,7 @@ This table has a list of people intending to attend:
 
 Apologies:
 
-|| Name                          || Organisation || Comments                                        ||
-|| Brian Matthews                || RAL/STFC     || .                                               ||
+|| Name                          || Organisation || Comments                                        ||Notes ||
+|| Brian Matthews                || RAL/STFC     || .                                               ||. ||
 
 == -  the end - ==
