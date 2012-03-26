@@ -1,9 +1,12 @@
 ===Actions record from ICAT collaboration meetings===
-This page holds all but the most recent meetings<br>
 
-The latest meetings are at MeetingActionsRecord<br><br>
+
+
 
 <wiki:toc max_depth="3" />
+
+= Meetings of ICAT collaboration =
+This page holds all but the most recent meetings.  The latest meetings are at MeetingActionsRecord.
 
 == Meeting 31 - 23 February 2012 =
 
