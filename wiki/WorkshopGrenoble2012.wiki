@@ -5,6 +5,8 @@
 
 The 4th ICAT workshop will be held at the ILL, Grenoble on 20th March 2012 from 0900 - 1700.
 
+<wiki:toc max_depth="3" />
+
 = Attending =
 
 If you are interested in attending this meeting please contact tom.griffin@stfc.ac.uk
@@ -15,7 +17,7 @@ The purpose is to discuss plans for the development and use of ICAT at facilitie
 
 All times are too specific to be realistic.
 
- * [http://code.google.com/p/icatproject/source/browse/#svn%2Ficat3_api%2Ftrunk%2FDocumentation%2FGrenoble2012Talks                   Index of Speakers]
+ * [http://code.google.com/p/icatproject/source/browse/#svn%2Ficat3_api%2Ftrunk%2FDocumentation%2FGrenoble2012Talks                   Index of Talks]
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||Notes ||
 || 09:00      || Session 1 - Chair person - Tom                                               ||              ||                    ||.||
