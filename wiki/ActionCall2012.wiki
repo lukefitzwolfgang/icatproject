@@ -1,0 +1,64 @@
+#summary Call for action - 2012
+
+<wiki:toc max_depth="3" />
+
+= Call for action - 2012 =
+
+At the ICAT04 conference in Grenoble (WorkshopGrenoble2012), there was a call to action for those joining the ICAT collaboration.  This page provides further detail.
+
+== Sign up for Google code project ==
+
+The Google code project available at the following URL:
+
+ * http://code.google.com/p/icatproject/
+
+In order to be allowed to commit code to the project, you have to be registered.  Simply send an email to Alistair Mills and tell him the name of the google account to register. It is recommended that you hide your usual email account behind a gmail account.
+
+== Sign up for the developer discussion group == 
+
+If you ask to be a registered committer to the google code project, you will also be registered to write to the following discussion group:
+
+ * mailto:icat-developers@googlegroups.com
+
+You can read the topics of discussion on:
+
+ * http://groups.google.com/group/icat-developers
+
+== Volunteer for a work package ==
+
+There are nine work packages in the project.  If you would like to contribute to the work, then add your name to the following wiki page:
+
+ * http://code.google.com/p/icatproject/wiki/Icat4Workpackages
+
+== Volunteer for an action from the review ==
+
+The SSI review of ICAT made 34 recommendations for action.  If you would like to take responsibility for one of the recommendations, then add your name to the following page:
+
+ * http://code.google.com/p/icatproject/wiki/ReviewRecommendations
+
+== Visit the www.icatproject.org and try out a demo ICAT  ==
+
+There are two demo ICATs.  You can logon to either or both using the username CIC and the password password.  You can access them from the following URL:
+
+ * http://www.icatproject.org
+
+== Install a test version of ICAT4.0 on your own computer ==
+
+There are instructions which provide the information on how to install ICAT on a Linux system at the following URL:
+
+ * http://code.google.com/p/icatproject/wiki/InstallIcat40
+
+== Other services on www.icatproject.org ==
+
+We intend to add additional services to www.icatproject.org.  In particular, we shall add the following:
+
+ * Jenkins - continuous build system
+
+ * Sonar - continuous code metrics
+
+ * Nexus - maven server
+
+
+== - the end - ==
+
+
