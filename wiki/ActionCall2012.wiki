@@ -8,11 +8,11 @@ At the ICAT04 conference in Grenoble (WorkshopGrenoble2012), there was a call to
 
 == Sign up for Google code project ==
 
-The Google code project available at the following URL:
+The Google code project is available at the following URL:
 
  * http://code.google.com/p/icatproject/
 
-In order to be allowed to commit code to the project, you have to be registered.  Simply send an email to Alistair Mills and tell him the name of the google account to register. It is recommended that you hide your usual email account behind a gmail account.
+In order to be allowed to commit code to the project, you have to be registered.  Simply send an email to Alistair Mills and tell him the name of the google account to register. It is recommended that you hide your usual email account behind a gmail account.  It is the gmail account which you send to Alistair using your usual email account.
 
 == Sign up for the developer discussion group == 
 
@@ -26,7 +26,7 @@ You can read the topics of discussion on:
 
 == Volunteer for a work package ==
 
-There are nine work packages in the project.  If you would like to contribute to the work, then add your name to the following wiki page:
+There are nine work packages in the ICAT project.  If you would like to contribute to a work package, then add your name to the following wiki page:
 
  * http://code.google.com/p/icatproject/wiki/Icat4Workpackages
 
@@ -60,5 +60,3 @@ We intend to add additional services to www.icatproject.org.  In particular, we 
 
 
 == - the end - ==
-
-
