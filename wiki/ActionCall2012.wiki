@@ -1,4 +1,5 @@
 #summary Call for action - 2012
+#labels Featured
 
 <wiki:toc max_depth="3" />
 
