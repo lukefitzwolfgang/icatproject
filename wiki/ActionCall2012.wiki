@@ -16,13 +16,15 @@ In order to be allowed to commit code to the project, you have to be registered.
 
 == Sign up for the developer discussion group == 
 
-If you ask to be a registered committer to the google code project, you will also be registered to write to the following discussion group:
+If you ask to be a registered committer to the google code project, you will also be registered to write to the following discussion groups:
 
  * mailto:icat-developers@googlegroups.com
+ * mailto:icatproject-announcements@googlegroups.com
 
 You can read the topics of discussion on:
 
  * http://groups.google.com/group/icat-developers
+ * http://groups.google.com/group/icatproject-announcements
 
 == Volunteer for a work package ==
 
@@ -60,8 +62,6 @@ We intend to add additional services to www.icatproject.org.  In particular, we 
 
 = Proposed actions at RAL =
 
-[ I intend to expand this description - Ed]
-
 RAL intends to do the following before the Easter holiday:
 
  * add content to the catalogs ICATA and ICATB on the demonstration system
@@ -73,8 +73,6 @@ RAL intends to do the following before the Easter holiday:
  * provide a packaged version of IDS2 to complement the Topcat
 
 = Support for collaborators =
-
-[ I intend to expand this description - Ed]
 
 RAL is offering the following support to members of the collaboration on request:
 
@@ -89,8 +87,6 @@ RAL is offering the following support to members of the collaboration on request
  * to provide a hosted ICAT on www.icatproject.org
 
  * to consider any other reasonable request for help
-
-
 
 
 == - the end - ==
