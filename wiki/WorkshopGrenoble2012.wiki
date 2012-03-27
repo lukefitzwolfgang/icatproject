@@ -1,5 +1,5 @@
 #summary Meeting in Grenoble in March 2012
-#labels meeting,workshop
+#labels Featured
 
 = 4th ICAT Workshop - Grenoble - 20th March 2012 =
 
