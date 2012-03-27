@@ -58,5 +58,39 @@ We intend to add additional services to www.icatproject.org.  In particular, we 
 
  * Nexus - maven server
 
+= Proposed actions at RAL =
+
+[ I intend to expand this description - Ed]
+
+RAL intends to do the following before the Easter holiday:
+
+ * add content to the catalogs ICATA and ICATB on the demonstration system
+
+ * provide a client which complements ICAT40 to facilitate entering data into an ICAT
+
+ * provide a packaged version of Topcat including a downloader to complement ICAT40
+
+ * provide a packaged version of IDS2 to complement the Topcat
+
+= Support for collaborators =
+
+[ I intend to expand this description - Ed]
+
+RAL is offering the following support to members of the collaboration on request:
+
+ * to register them as contributors to the Google code project
+
+ * to provide a named person to help to get started with ICAT
+
+ * to provide a visit to RAL for several days to get started with ICAT
+
+ * to provide help with the editing of the Pandata deliverable due in June
+
+ * to provide a hosted ICAT on www.icatproject.org
+
+ * to consider any other reasonable request for help
+
+
+
 
 == - the end - ==
