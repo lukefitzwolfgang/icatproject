@@ -1,0 +1,20 @@
+#summary Description of support procedures
+
+= ICAT support procedures=
+
+To protect support calls from spam, people asking for support have to register their google identifier.  Please register the identifier by sending it to Alistair_dot_Mills_at_stfc_dot_ac dot_uk.
+
+
+To view the record of discussion topics about support, view the following page:
+
+ * https://groups.google.com/forum/#!forum/icatproject-support 
+
+To email a request for support, use the following email:
+
+ * mailto:icatproject-support@googlegroups.com 
+
+The googlegroups will then register a topic in the discussion group using the subject of the email.
+
+ 
+== - the end - ==
+
