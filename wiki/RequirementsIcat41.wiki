@@ -28,11 +28,34 @@ The purpose of this page is to provide a place where people can write their shop
   * add a Sonar server to icatproject.org and ensure that it is up to date
   * add a Nexus server to icatproject.org and ensure that it is up to date
 
+
+
 == CLF ==
 
 Please meet the following requirements:
 
+== CRISP ==
+
+ * (D) Provide support for data mining
+
+== DLS ==
+
+Please meet the following requirements:
+
+== ESRF ==
+
+ * Visualization of data in TopCAT
+
+== Eudat ==
+
+Please meet the following requirements:
+
+== ILL ==
+
+Please meeting the following requirements:
+
 == ISIS ==
+
 (E = essential, D= Desirable)
  * (E) A *fully supported* upgrade path from ICAT 3.3 to 4.1
  * (E) Maintain a legacy icat3-exposed web service API to allow gradual migration. This is essential for established users to realistically migrate.
@@ -44,22 +67,9 @@ Please meet the following requirements:
  * (D) TopCAT - download all metadata for an investigation or dataset
  * (D) Basic visualize  or view data in TopCAT, possibly using jpowder or similar
 
-
-== DLS ==
-
-Please meet the following requirements:
-
 == Pandata ==
 
  * REST web service (PSI request at several meetings)
-
-== Eudat ==
-
-Please meet the following requirements:
-
-== ILL ==
-
-Please meeting the following requirements:
 
 == SNS ==
 
@@ -75,6 +85,5 @@ To provide better system performance and user experience, we wanted to offer liv
 
 == Others ==
 
- * ESRF : Visualize data in TopCAT
 
 == - the end - ==
