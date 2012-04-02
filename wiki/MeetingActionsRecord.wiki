@@ -13,19 +13,25 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Update from PaN-data meeting (Milan/George) 
  * AOB
 
-=== Actions 34 ===
-
-||Item   ||Description                                                                       ||Res*(1)   ||      Status||                               Comment||
-||34.00  ||Document the meeting                                                              ||AM        ||           .||                                     -||
-
 == Meeting 33 - 20 March 2012 =
 
-This was the face to face meeting in Grenoble.  For details other than the actions see WorkshopGrenoble2012.
+This was the face to face meeting in Grenoble.  For details, other than the actions, see WorkshopGrenoble2012.
 
 === Actions 33 ===
 
-||Item   ||Description                                                                       ||Res*(1)   ||      Status||                               Comment||
-||33.00  ||Document the meeting                                                              ||AM        ||           .||                                     -||
+||Item   ||Description                                                                       ||Res*(1)   ||           Status||                               Comment||
+||33.00  ||Document the meeting                                                              ||AM        ||             Done||                                     -||
+||33.01  ||Remove all of the uses of "3" in the API                                          ||SF        ||                .||                                     -||
+||33.02  ||Consider the possibility of adding many datafiles to a dataset in the editor      ||SF        ||                .||                                     -||
+||33.03  ||Consider how to provide a free text search in ICAT 4                              ||SF        ||                .||                                     -||
+||33.04  ||Put Topcat on the client user list for JMS notifications                          ||SF        ||                .||                                     -||
+||33.05  ||Test that ICAT 4 provides support for ISIS reporting using JMS notification       ||AM        ||                .||                                     -||
+||33.06  ||Remove shift user from ICAT 4                                                     ||SF        ||                .||                                     -||
+||33.07  ||Provide an early view of innovative features in early releases such as 4.0.1      ||AM        ||                .||                                     -||
+||33.08  ||Data mining tools are required to support CRISP                                   ||AM        ||    Added to reqs|| [http://code.google.com/p/icatproject/wiki/RequirementsIcat41#CRISP ReqsIcat41] ||
+||33.09  ||Make presentations from this meeting available from the Google Code site          ||AM        ||             Done||                                     -||
+||33.10  ||Write an email to the participants with the call to action                        ||AM        ||             Done||                                     -||
+
 
 == Meeting 32 - 8 March 2012 =
 
