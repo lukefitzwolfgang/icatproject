@@ -10,7 +10,8 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 === Agenda 34 ===
  * Actions from the meetings of 20 March (Grenoble)
- * Update from PaN-data meeting (Milan/George) 
+ * Update from PaN-data meeting (Milan/George)
+ * Schema changes - the end is in sight? (Steve)
  * AOB
 
 == Meeting 33 - 20 March 2012 =
