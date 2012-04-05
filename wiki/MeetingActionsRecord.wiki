@@ -16,6 +16,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Mailing lists (Alistair)
  * Open ticket review (Alistair)
  * Work packages (Alistair)
+ * Digital certificate on www.icatproject.org and other common ICAT deployments (Alistair)
  * Priorities
  * AOB
 
