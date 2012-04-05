@@ -59,6 +59,7 @@ Please meeting the following requirements:
 (E = essential, D= Desirable)
  * (E) A *fully supported* upgrade path from ICAT 3.3 to 4.1
  * (E) Maintain a legacy icat3-exposed web service API to allow gradual migration. This is essential for established users to realistically migrate.
+ * (E) Maintain the ability to create many datafiles in an existing dataset in one web service call - ideally some kind of ingestXml call
  * (E) Usage reports (how many people use ICAT, how many people downloaded dataset x, how many times has anyone asked for data >3 years old)
  * (E) TopCAT - add ability for data owners to grant permission on their datasets to others
  * (E) Upload of derived data through TopCAT
