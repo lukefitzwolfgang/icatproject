@@ -9,9 +9,14 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 == Meeting 34 - 5 April 2012 =
 
 === Agenda 34 ===
- * Actions from the meetings of 20 March (Grenoble)
+ * Actions from the meetings of 20 March (Alistair)
+ * Availability of Topcat40 (Alistair)
  * Update from PaN-data meeting (Milan/George)
  * Schema changes - the end is in sight? (Steve)
+ * Mailing lists (Alistair)
+ * Open ticket review (Alistair)
+ * Work packages (Alistair)
+ * Priorities
  * AOB
 
 == Meeting 33 - 20 March 2012 =
