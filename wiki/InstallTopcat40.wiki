@@ -1,4 +1,4 @@
-# Installation instructions for TOPCAT with ICAT4.0 
+#summary Installation instructions for TOPCAT with ICAT4.0
 
 <wiki:toc max_depth="2" />
 
