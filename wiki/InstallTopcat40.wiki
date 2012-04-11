@@ -4,7 +4,7 @@
 
 = Installing Topcat for use with ICAT40 =
 
-Topcat is an companion product for Icat.  It provides a user friendly way to browse the contents of one or more instances of Icat.  
+Topcat is a companion product for Icat.  It provides a user friendly way to browse the contents of one or more instances of Icat.  
 
 These installation instructions are intended for installing Topcat as a companion to Icat40.
 
@@ -37,17 +37,17 @@ http://code.google.com/p/icatproject/source/browse/ops/topcat40/
 
 == Files in the installation materials ==
 
-Note that the dates, times and file sizes may differ from those in these notes.
+Note that the dates, times and file sizes may differ from those shown in these notes.
 
 The following file provides a short set of instructions for installation:
 {{{
 -rw-rw-r-- 1 glassfish3 glassfish3     2960 Apr  4 18:05 readme.txt
 }}}
 
-The following scripts and its props file provide an easy way to configure the database and deploy the application:
+The following script and its props file provide an easy way to configure the database and deploy the application:
 {{{
 -rwxrwxr-x 1 glassfish3 glassfish3     8037 Apr  4 18:05 deploy.sh
--rwxrwxr-x 1 glassfish3 glassfish3      574 Apr  4 18:08 deploy.props
+-rwxrwxr-x 1 glassfish3 glassfish3      574 Apr  4 18:08 deploy.props.example
 }}}
 
 The following files are invoked from deploy.sh using the sqlplus command; they perform operations on the database to prepare it for Topcat:
@@ -76,9 +76,13 @@ The following files contain the TopCAT web application in compiled form, and its
 The installation procedure deals with the following requirements:
 
  - the files for the glassfish server must contain a properties file which tells Topcat some simple things about its appearance;
+
  - the glassfish server has to have connection pools created for use by Topcat;
+
  - two database schemas have to be created called topcat and download for use by the topcat and download applications;
+
  - the topcat database schema has to be populated with information about the location of the ICATs which it has to service;
+
  - the topcat application has to be deployed on the Glassfish server.
  
 When configuring the ICATs to be serviced, there are the following files:
@@ -89,9 +93,9 @@ topcat40/icata.icat
 topcat40/icatb.icat
 }}}
  
-The file called icat.list contains a list of files, one file per line, and each file contain the connection information for one icat.  If you require a different collection of ICATs, you have to edit icat.list and perhaps create new .icat files.  The examples icata.icat and icatb.icat are demonstration ICATs on the public server www.icatproject.org.
+The file called icat.list contains a list of files, one file per line, and each file contains the connection information for one icat.  If you require a different collection of ICATs, you have to edit icat.list and perhaps create new .icat files.  The examples icata.icat and icatb.icat are demonstration ICATs on the public server www.icatproject.org.
 
-If you are operating behind a firewall, it may be necessary to make changes to the glassfish server so that it can deal with ICATs which are outside of the firewall, or to allow clients from outside the firewall to use the ICAT within.  The details for this are not contained in this note.
+If you are operating behind a firewall, it may be necessary to make changes to the glassfish server so that it can deal with ICATs which are outside of the firewall, or to allow clients from outside the firewall to use an ICAT within.  The details for this are not contained in this note.
 
 === Installation of icat40 ===
 
@@ -130,7 +134,9 @@ Create a test environment similar to the one assumed in these instructions in ad
 Ensure the following conditions on the system: 
 
  - database server running;
+
  - glassfish server running with the ICAT deployed and operational;
+
  - the file topcat.properties is available in the appropriate directory for the glassfish server (see above).
 
 Do the following:
@@ -252,7 +258,7 @@ Enter the following into a browser in order to run Topcat:
 https://localhost:8181/TOPCATWeb.jsp 
 }}}
 
-You may get a warning of the form "This Connection is Untrusted".  You should tell the browser to proceed.  Topcat should display its welcome page and invite you to login.  You should be able to login to the ICAT on localhost.  It is likely that you will not be able to login to the ICATs on remote hosts.  This problem will be addressed later.  It is due to the digital certificates in use. 
+You may get a warning of the form "This Connection is Untrusted".  You should tell the browser to proceed.  Topcat should display its welcome page and invite you to login.
 
 === Closing down Topcat  ===
 
