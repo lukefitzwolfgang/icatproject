@@ -1,6 +1,6 @@
 #summary Installation instructions for TOPCAT with ICAT4.0
 
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 
 = Installing Topcat for use with ICAT40 =
 
