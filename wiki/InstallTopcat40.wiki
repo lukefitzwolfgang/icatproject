@@ -67,8 +67,8 @@ The following files contain the connection information for three ICATs which can
 
 The following files contain the TopCAT web application in compiled form, and its properties file; the properties file has to be made available to the Glassfish server.
 {{{
--rw-rw-r-- 1 glassfish3 glassfish3      469 Apr  3 13:46 topcat.properties
--rw-rw-r-- 1 glassfish3 glassfish3 28180800 Apr  3 13:46 TopCAT.war
+-rw-rw-r-- 1 glassfish3 glassfish3      469 Apr  3 13:46 topcat.properties.example
+-rw-rw-r-- 1 glassfish3 glassfish3 28180800 Apr  3 13:46 TopCAT-0145.war
 }}}
 
 == Description ==
