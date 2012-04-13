@@ -1,0 +1,54 @@
+prompt
+prompt
+prompt ====================================================================
+prompt creating user topcat
+prompt
+prompt
+GRANT CREATE DATABASE LINK TO topcat;
+GRANT CREATE LIBRARY TO topcat;
+GRANT CREATE MATERIALIZED VIEW TO topcat;
+GRANT CREATE OPERATOR TO topcat;
+GRANT CREATE PROCEDURE TO topcat;
+GRANT CREATE PUBLIC DATABASE LINK TO topcat;
+GRANT CREATE PUBLIC SYNONYM TO topcat;
+GRANT CREATE SEQUENCE TO topcat;
+GRANT CREATE SESSION TO topcat;
+GRANT CREATE SYNONYM TO topcat;
+GRANT CREATE TABLE TO topcat;
+GRANT CREATE TRIGGER TO topcat;
+GRANT CREATE TYPE TO topcat;
+GRANT CREATE VIEW TO topcat;
+GRANT UNLIMITED TABLESPACE TO topcat;
+GRANT "CONNECT" TO topcat;
+GRANT "PLUSTRACE" TO topcat;
+GRANT "RESOURCE" TO topcat;
+GRANT CREATE JOB TO topcat;
+
+prompt
+prompt
+prompt ====================================================================
+prompt creating user download
+prompt
+prompt
+GRANT CREATE DATABASE LINK TO download;
+GRANT CREATE LIBRARY TO download;
+GRANT CREATE MATERIALIZED VIEW TO download;
+GRANT CREATE OPERATOR TO download;
+GRANT CREATE PROCEDURE TO download;
+GRANT CREATE PUBLIC DATABASE LINK TO download;
+GRANT CREATE PUBLIC SYNONYM TO download;
+GRANT CREATE SEQUENCE TO download;
+GRANT CREATE SESSION TO download;
+GRANT CREATE SYNONYM TO download;
+GRANT CREATE TABLE TO download;
+GRANT CREATE TRIGGER TO download;
+GRANT CREATE TYPE TO download;
+GRANT CREATE VIEW TO download;
+GRANT UNLIMITED TABLESPACE TO download;
+GRANT "CONNECT" TO download;
+GRANT "PLUSTRACE" TO download;
+GRANT "RESOURCE" TO download;
+GRANT CREATE JOB TO download;
+
+exit;
+

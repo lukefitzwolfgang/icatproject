@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# $Id: deploy.props 1213 2012-04-09 19:38:09Z abm65@FED.CCLRC.AC.UK $
+#
+
+# Location of icat40 and glassfish.props
+icat40=../icat40
+glassfishprops=$icat40/glassfish.props
+. $glassfishprops
+
+passwordfile=$icat40/passwordfile
+
+# Database connection information
+sysPW=secret
+databaseServer=localhost
+
+# Topcat schema username and pw
+topcatName=topcat 
+topcatPW=mytopcatpasswd 
+
+# DownloadManager schema username and pw
+downloadName=download
+downloadPW=mydownloadpasswd
+
+# Topcat and downloadManager war files
+topcat=/home/glassfish3/topcat40/TopCAT.war
+downloadManager=/home/glassfish3/topcat40/DownloadManager.war
+
+#
+# - the end - 
+#
+
