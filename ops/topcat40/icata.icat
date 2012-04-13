@@ -1,0 +1,13 @@
+#!/bin/sh
+# 
+# $Id: icata.icat 1211 2012-04-06 17:11:41Z abm65@FED.CCLRC.AC.UK $
+# 
+FacilityName=icatA
+ICAT_url=http://www.icatproject.org:8080/ICATService/ICAT?wsdl
+ICAT_username=icat40
+ICAT_password=icat40passwd
+ICAT_version=v400
+# 
+#  - the end - 
+# 
+
