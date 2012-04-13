@@ -6,6 +6,22 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
+== Meeting 35 - 19 April 2012 =
+
+=== Agenda 35 ===
+ * Actions from the meetings of 5 April (Alistair)
+ * Availability of Topcat40 (Alistair)
+ * Update from PaN-data meeting (Milan/George)
+ * ICAT 4.1 - Schema  (Steve)
+ * Work packages (Alistair)
+ * Priorities
+ * AOB (All)
+
+=== Actions 35 ===
+ 
+||Item   ||Description                                                                       ||Res*(1)   ||           Status||                               Comment||
+||35.00  ||Document the meeting                                                              ||AM        ||                .||                                     -||
+
 == Meeting 34 - 5 April 2012 =
 
 === Agenda 34 ===
@@ -19,6 +35,27 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Digital certificate on www.icatproject.org and other common ICAT deployments (Alistair)
  * Priorities
  * AOB
+
+=== Actions 34 ===
+ 
+||Item   ||Description                                                                       ||Res*(1)   ||           Status||                               Comment||
+||34.00  ||Document the meeting                                                              ||AM        ||                .||                                     -||
+
+=== Attendance 34 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||TG   ||Tom Griffin                  || STFC ISIS                  ||              ||     +     ||
+||SF   ||Steve Fisher                 || STFC eSc                   ||     +        ||           ||
+||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
+||BM   ||Brian Matthews               || STFC eSc                   ||              ||     +     ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||HC   ||Harjinder Chahal             || STFC eSc                   ||     +        ||     +     ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC eSc                   ||              ||     +     ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||     +        ||           ||
+||AW   ||Antony Wilson                || STFC eSc                   ||     +        ||           ||
+
 
 == Meeting 33 - 20 March 2012 =
 
@@ -38,7 +75,6 @@ This was the face to face meeting in Grenoble.  For details, other than the acti
 ||33.08  ||Data mining tools are required to support CRISP                                   ||AM        ||    Added to reqs|| [http://code.google.com/p/icatproject/wiki/RequirementsIcat41#CRISP ReqsIcat41] ||
 ||33.09  ||Make presentations from this meeting available from the Google Code site          ||AM        ||             Done||                                     -||
 ||33.10  ||Write an email to the participants with the call to action                        ||AM        ||             Done||                                     -||
-
 
 == Meeting 32 - 8 March 2012 =
 
