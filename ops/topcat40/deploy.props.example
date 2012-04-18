@@ -23,7 +23,7 @@ downloadName=download
 downloadPW=mydownloadpasswd
 
 # Topcat and downloadManager war files
-topcat=/home/glassfish3/topcat40/TopCAT-0145.war
+topcat=/home/glassfish3/topcat40/TopCAT-0146.war
 downloadManager=/home/glassfish3/topcat40/DownloadManager.war
 
 #
