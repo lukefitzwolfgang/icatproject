@@ -1,4 +1,4 @@
-#!/bin/sh
+# !/bin/bash
 # $Id: icat.list 1215 2012-04-12 17:18:28Z abm65@FED.CCLRC.AC.UK $
 #
 # Any line which begins with a # is ignored.
