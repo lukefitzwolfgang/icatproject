@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 # $Id: deploy.sh 1210 2012-04-06 17:01:15Z abm65@FED.CCLRC.AC.UK $
 
+#set -x
 opts="setupDB, deleteDB, setupICAT, deleteICAT, create, delete, deploy, undeploy"
 
 if [ $# = 0 ]; then
@@ -10,7 +11,7 @@ if [ $# = 0 ]; then
     exit 1
 fi
 
-props=./deploy.props 
+props=./deploy.props
 if [ ! -f $props ]; then
     echo There is no $props file
     exit 1
@@ -43,7 +44,7 @@ done
 
 if [ $1 = setupDB ]; then
 sqlplus sys/$sysPW@$databaseServer AS SYSDBA <<EOF
-CREATE USER $topcatName PROFILE "DEFAULT" IDENTIFIED BY "$topcatPW" DEFAULT TABLESPACE "USERS" TEMPORARY TABLESPACE "TEMP" QUOTA UNLIMITED ON "USERS" ACCOUNT UNLOCK; 
+CREATE USER $topcatName PROFILE "DEFAULT" IDENTIFIED BY "$topcatPW" DEFAULT TABLESPACE "USERS" TEMPORARY TABLESPACE "TEMP" QUOTA UNLIMITED ON "USERS" ACCOUNT UNLOCK;
 CREATE USER $downloadName PROFILE "DEFAULT" IDENTIFIED BY "$downloadPW" DEFAULT TABLESPACE "USERS" TEMPORARY TABLESPACE "TEMP" QUOTA UNLIMITED ON "USERS" ACCOUNT UNLOCK;
 @createuser_topcat_db.sql
 EOF
@@ -61,6 +62,7 @@ elif [ $1 = setupICAT ]; then
 ID=0
 while read icat_descripter_file
 do
+#echo $icat_descripter_file
 if [ "${icat_descripter_file:0:1}" != "#" ]; then
 . $icat_descripter_file
 ID=`expr $ID + 1`
@@ -73,11 +75,9 @@ done < $icatlist
 
 elif [ $1 = deleteICAT ]; then
 sqlplus $topcatName/$topcatPW@$databaseServer <<EOF
-DELETE FROM TOPCAT_ICAT_SERVER; 
+DELETE FROM TOPCAT_ICAT_SERVER;
 EOF
 echo "ICAT connection information removed"
-
-
 
 elif [ $1 = enable ]; then
     $asadmin <<EOF
@@ -132,57 +132,57 @@ elif [ $1 = create ]; then
         --validationmethod auto-commit \
         --datasourceclassname oracle.jdbc.pool.OracleDataSource \
         --failconnection false \
-                 --idletimeout 300 \
-                 --isconnectvalidatereq false \
-                 --isisolationguaranteed true \
-                 --lazyconnectionassociation false \
-                 --lazyconnectionenlistment false \
-                 --matchconnections false \
-                 --maxconnectionusagecount 0 \
-                 --maxpoolsize 32 \
-                 --maxwait 60000 \
-                 --nontransactionalconnections false \
-                 --poolresize 2 \
-                 --restype javax.sql.DataSource \
-                 --statementtimeout -1 \
-                 --steadypoolsize 8 \
-                 --validateatmostonceperiod 0 \
-                 --wrapjdbcobjects false \
-                 --property User=${downloadName}:Password=${downloadPW}:URL="'"${url}"'" $downloadpmDB
+--idletimeout 300 \
+        --isconnectvalidatereq false \
+        --isisolationguaranteed true \
+        --lazyconnectionassociation false \
+        --lazyconnectionenlistment false \
+        --matchconnections false \
+        --maxconnectionusagecount 0 \
+        --maxpoolsize 32 \
+        --maxwait 60000 \
+        --nontransactionalconnections false \
+        --poolresize 2 \
+        --restype javax.sql.DataSource \
+        --statementtimeout -1 \
+        --steadypoolsize 8 \
+        --validateatmostonceperiod 0 \
+        --wrapjdbcobjects false \
+        --property User=${downloadName}:Password=${downloadPW}:URL="'"${url}"'" $downloadpmDB
 
     create-jdbc-resource  \
-                 --connectionpoolid $downloadpmDB jdbc/$downloadpmDB
+        --connectionpoolid $downloadpmDB jdbc/$downloadpmDB
 
     create-jdbc-connection-pool \
-                 --allownoncomponentcallers false \
-                 --associatewiththread false \
-                 --creationretryattempts  0 \
-                 --creationretryinterval 10 \
-                 --leakreclaim false \
-                 --leaktimeout 0 \
-                 --validationmethod auto-commit \
-                 --datasourceclassname oracle.jdbc.pool.OracleDataSource \
-                 --failconnection false \
-                 --idletimeout 300 \
-                 --isconnectvalidatereq false \
-                 --isisolationguaranteed true \
-                 --lazyconnectionassociation false \
-                 --lazyconnectionenlistment false \
-                 --matchconnections false \
-                 --maxconnectionusagecount 0 \
-                 --maxpoolsize 32 \
-                 --maxwait 60000 \
-                 --nontransactionalconnections false \
-                 --poolresize 2 \
-                 --restype javax.sql.DataSource \
-                 --statementtimeout -1 \
-                 --steadypoolsize 8 \
-                 --validateatmostonceperiod 0 \
-                 --wrapjdbcobjects false \
-                 --property User=${downloadName}:Password=${downloadPW}:URL="'"${url}"'" $downloadNontxDB
+        --allownoncomponentcallers false \
+        --associatewiththread false \
+        --creationretryattempts  0 \
+        --creationretryinterval 10 \
+        --leakreclaim false \
+        --leaktimeout 0 \
+        --validationmethod auto-commit \
+        --datasourceclassname oracle.jdbc.pool.OracleDataSource \
+        --failconnection false \
+        --idletimeout 300 \
+        --isconnectvalidatereq false \
+        --isisolationguaranteed true \
+        --lazyconnectionassociation false \
+        --lazyconnectionenlistment false \
+        --matchconnections false \
+        --maxconnectionusagecount 0 \
+        --maxpoolsize 32 \
+        --maxwait 60000 \
+        --nontransactionalconnections false \
+        --poolresize 2 \
+        --restype javax.sql.DataSource \
+        --statementtimeout -1 \
+        --steadypoolsize 8 \
+        --validateatmostonceperiod 0 \
+        --wrapjdbcobjects false \
+        --property User=${downloadName}:Password=${downloadPW}:URL="'"${url}"'" $downloadNontxDB
 
     create-jdbc-resource  \
-                 --connectionpoolid $downloadNontxDB jdbc/$downloadNontxDB
+        --connectionpoolid $downloadNontxDB jdbc/$downloadNontxDB
 EOF
      fname=$glassfish/glassfish/domains/domain1/lib/ojdbc14.jar
     if [ ! -f $fname ]; then
@@ -193,11 +193,11 @@ EOF
 elif [ $1 = delete ]; then
     $asadmin <<EOF
         delete-jdbc-resource jdbc/$TopCATDB
-        delete-jdbc-connection-pool $TopCATDB 
+        delete-jdbc-connection-pool $TopCATDB
         delete-jdbc-resource jdbc/$downloadpmDB
-        delete-jdbc-connection-pool $downloadpmDB 
-        delete-jdbc-resource jdbc/$downloadNontxDB 
-        delete-jdbc-connection-pool $downloadNontxDB 
+        delete-jdbc-connection-pool $downloadpmDB
+        delete-jdbc-resource jdbc/$downloadNontxDB
+        delete-jdbc-connection-pool $downloadNontxDB
 EOF
 
 elif [ $1 = deploy ]; then
@@ -223,7 +223,7 @@ elif [ $1 = undeploy ]; then
         $asadmin --interactive=false <<EOF
         undeploy $topcatWarStem
 EOF
-    fi  
+    fi
     if [ -n "$downloadManager" -a '(' -z "$2" -o "$2" = downloadManager ')' ]; then
         echo "*** Undeploying downloadManager"
         echo $0 $1 $downloadManagerWarStem
