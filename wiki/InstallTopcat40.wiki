@@ -98,6 +98,7 @@ The file called icat.list contains a list of files, one file per line, and each 
 If you are operating behind a firewall, it may be necessary to make changes to the glassfish server so that it can deal with ICATs which are outside of the firewall, or to allow clients from outside the firewall to use an ICAT within.  This can be done either through the glassfish admin console or through asadmin with the following commands:
 
 asadmin create-jvm-options "-Dhttp.proxyHost=myproxy.mydomain"
+
 asadmin create-jvm-options "-Dhttp.proxyPort=myproxy.port"
 
 
