@@ -95,7 +95,11 @@ topcat40/icatb.icat
  
 The file called icat.list contains a list of files, one file per line, and each file contains the connection information for one icat.  If you require a different collection of ICATs, you have to edit icat.list and perhaps create new .icat files.  The examples icata.icat and icatb.icat are demonstration ICATs on the public server www.icatproject.org.
 
-If you are operating behind a firewall, it may be necessary to make changes to the glassfish server so that it can deal with ICATs which are outside of the firewall, or to allow clients from outside the firewall to use an ICAT within.  The details for this are not contained in this note.
+If you are operating behind a firewall, it may be necessary to make changes to the glassfish server so that it can deal with ICATs which are outside of the firewall, or to allow clients from outside the firewall to use an ICAT within.  This can be done either through the glassfish admin console or through asadmin with the following commands:
+
+asadmin create-jvm-options "-Dhttp.proxyHost=myproxy.mydomain"
+asadmin create-jvm-options "-Dhttp.proxyPort=myproxy.port"
+
 
 === Installation of icat40 ===
 
