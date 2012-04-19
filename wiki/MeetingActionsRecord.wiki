@@ -11,6 +11,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 === Agenda 35 ===
  * Actions from the meetings of 5 April (Alistair)
  * Demonstration of Eclipse Plugin (Ghita)
+ * Presentation about Python work on ICAT 4 at Julich (Christian)
  * Availability of Topcat40 (Alistair)
  * Update from PaN-data meeting (Milan/George)
  * ICAT 4.1 - Schema  (Steve)
