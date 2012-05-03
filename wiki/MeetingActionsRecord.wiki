@@ -30,6 +30,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Update from PaN-data meeting (Milan/George)
  * ICAT 4.1 - Schema  (Steve)
  * Availability of ICAT41 (Alistair)
+ * Structure of the 'work packages' Icat4WorkPackagesProposal  (Tom)
  * AOB (All)
 
 === Actions 35 ===
