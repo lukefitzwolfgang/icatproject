@@ -15,6 +15,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * New participants joining in Grenoble (Tom)
  * Availability of Mysql support for Topcat40 (Alistair)
  * ICAT 4.1 - Status  (Steve)
+ * Python Client API (Steve)
  * Availability of release candidate for ICAT41 (Alistair)
  * AOB (Any)
 
