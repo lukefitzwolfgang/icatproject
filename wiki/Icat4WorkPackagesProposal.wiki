@@ -1,0 +1,47 @@
+#summary Structure of ICAT4 collaboration
+
+<wiki:toc max_depth="3" />
+
+$Id$
+
+= Structure of ICAT collaboration =
+
+== Introduction ==
+
+The current structure of the work packages does not reflect the reality of how the ICAT codebase is or can be developed.
+
+I propose the following as a more realistic view of how things are and can be broken down.
+
+I have merged the previous WP1 and 4 together - the security work was fundamentally a core code and API change.
+
+WP3 is really about TopCAT - JDK and glassfish are part of WP1
+
+The previous WP7 (specific facility integration) was not really part of the ICAT collaboration. If anything from it (e.g. reporting) does become so, then it should be a workpackage in it's own right
+
+== Work packages ==
+
+|| Id    || Topic                                           || Leader                      || Deputy                         ||
+|| WP0   || Project Management                              || Alistair  (STFC)            || Tom   (STFC)                   ||
+||       || Meetings, actions, plans                        ||                             ||                                ||
+||       || Content of Google code and www.icatproject.org  ||                             ||                                ||
+||       || Planning, coordination                          ||                             ||                                ||
+|| WP1   || Core code and API                               || Steve (STFC)                || Tom (ISIS), Ghita (DLS)        ||
+||       || Core Java code, API, XML-ingest,                ||                             ||                                ||
+||       || security, authentication and authorisation      ||                             ||                                ||
+|| WP2   || Database independence                           || Alistair  (STFC)            || Richard Sinclair  (STFC)       ||
+||       || Oracle, MySQL                                   ||                             ||                                ||
+|| WP3   || TopCAT                                          || Antony  (STFC)              || Milan    (ELLETRA)             ||
+||       || TopCAT design, feedback and implementation      ||                             ||                                ||
+|| WP4   || Documentation                                   || Kevin    (STFC)             || Alistair  (STFC)               ||
+||       || User and installation documentation             ||                             ||                                ||
+||       || Release notes, test report                      ||                             ||                                ||
+||       || FAQs                                            ||                             ||                                ||
+|| WP5   || Test and integration                            || Alistair   (STFC)           || Kevin  (STFC)                  ||
+||       || FAQs                                            ||                             ||                                ||
+|| WP6   || Support                                         || Alistair    (STFC)          || Harjinder (STFC)               ||
+||       || Installation and new user support               ||                             ||                                ||
+||       || The icatproject.org hosted services             ||                             ||                                ||
+
+
+== - the end - == 
+     
