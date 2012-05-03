@@ -17,6 +17,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * ICAT 4.1 - Status  (Steve)
  * Python Client API (Steve)
  * Availability of release candidate for ICAT41 (Alistair)
+ * Structure of the 'work packages' Icat4WorkPackagesProposal  (Tom)
  * AOB (Any)
 
 == Meeting 35 - 19 April 2012 =
@@ -30,7 +31,6 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Update from PaN-data meeting (Milan/George)
  * ICAT 4.1 - Schema  (Steve)
  * Availability of ICAT41 (Alistair)
- * Structure of the 'work packages' Icat4WorkPackagesProposal  (Tom)
  * AOB (All)
 
 === Actions 35 ===
