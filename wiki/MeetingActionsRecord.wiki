@@ -58,10 +58,11 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 ||SF   ||Steve Fisher                 || STFC eSc                   ||     +        ||           ||
 ||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
 ||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||     +     ||     
-||HC   ||Harjinder Chahal             || STFC eSc                   ||     +        ||           ||
+||HC   ||Harjinder Chahal             || STFC eSc                   ||              ||     +     ||
 ||KP   ||Kevin Phipps                 || STFC eSc                   ||     +        ||           ||
 ||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
 ||AW   ||Antony Wilson                || STFC eSc                   ||     +        ||           ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
 
 
 == Meeting 35 - 19 April 2012 =
