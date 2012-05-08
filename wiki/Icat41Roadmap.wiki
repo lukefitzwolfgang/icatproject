@@ -7,7 +7,7 @@ $Id$
 = Road map for icat-4.1 =
 
 == Introduction ==
-*Note that this is a draft proposal (by STFC eScience) and has NOT been discussed or agreed with any of the major facilities using ICAT.*
+Note that this is a draft proposal and has NOT been agreed with the major facilities using ICAT.
 
 == ICAT-4.1 ==
 Note that words like additional, and improved relate to icat 4.0.
@@ -40,7 +40,7 @@ wiki:Icat41ReleaseCriteria
 == Existing operating environments ==
     * Oracle 11g;
     * Java Enterprise Edition 6;
-    * Glassfish 3.11.
+    * Glassfish 3.11 and 3.2.
 
 == Performance ==
     * Performance is similar to that of ICAT 4.0
@@ -77,7 +77,8 @@ The features of ICAT should be compatible with the following facilities which ar
     * Sonar;
     * Techwriter Documentation System;
     * www.icatproject.org;
-    * lightweight deployment configuration.
+    * lightweight deployment configuration;
+    * Python interface.
 
 == Packaging changes  ==
     * xmlingest becomes an option (plugin).
