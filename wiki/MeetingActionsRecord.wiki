@@ -11,6 +11,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 === Agenda 37 ===
 
  * Actions from the meetings of 3 May (Alistair)
+ * ICAT Executive Board (IEB)
  * Changes to the SVN on GoogleCode   (Steve)
  * Update from PaN-data (Milan/George)
  * ICAT 4.1 - Status  (Steve)
