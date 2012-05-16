@@ -1,0 +1,55 @@
+#summary Terms of reference for the ICAT Executive Board
+
+<wiki:toc max_depth="3" />
+
+= Terms of reference for the ICAT Executive Board =
+
+Draft terms for the Icat Executive Board.  This has not yet been approved.
+
+== Purpose ==
+
+The Board exists for the following reasons:
+  * to be the owner of ICAT;
+  * to provide senior management oversight for the work of the ICAT collaboration partners;
+  * to provide strategic advice to the collaboration;
+  * to protect the interests of the institution which they represent;
+  * to resolve conflicts of interest which may arise among the parties in the collaboration;
+  * to fulfil recommendation R02 of the ICAT review of February 2012.
+
+== Membership ==
+
+The Board has the following members:
+  * a representative of ISIS;
+  * a representative of DLS;
+  * a representative of CLF;
+  * a representative of SNS;
+  * a representative of eScience at STFC;
+  * a representative of ILL;
+  * anyone appointed by the Board.
+
+== Executive members of the board ==
+
+The Board has the following resources:
+  * a Chairperson from its members;
+  * a Secretary provided by eScience who is an observer.
+
+=== Chairperson ===
+
+The Chairperson has the following responsibilities:
+  * to call the meetings of the Board;
+  * to set the agenda for the meetings;
+  * to chair the meetings;
+  * to direct the Secretary between Board meetings.
+
+=== Secretary ===
+
+The Secretary has the following responsibilities:
+  * to deal with the administrative needs of the Board;
+  * arrange the meetings of the board;
+  * maintain the minutes of the meetings.
+
+=== Meetings ===
+
+The Board will meet when required, but at least once per annum.  The agenda for the meeting will be set by the chairperson.  Proposals of agenda items can be sent to the Secretary.
+
+== - the end - ==
