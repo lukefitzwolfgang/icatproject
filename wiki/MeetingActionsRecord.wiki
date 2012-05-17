@@ -41,17 +41,17 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 ||36.01  ||Send comments to Milan/George re Deliverable 5.1 of Pandata                       ||AM        ||             Done||                                     -||
 ||36.02  ||Test deployment of ICAT 4.1 with MySql                                            ||AM        ||                -||                                     -||
 ||36.03  ||Ask ALBA for help with testing ICAT 4.1 using MySql                               ||AM        ||                -||                                     -||
-||36.04  ||Plan for Pandata meeting in Trieste 28-29/6                                       ||All       ||                -||                                     -||
-||36.05  ||Include Nicolas at ESRF on invitation to collaboration meetings                   ||AM        ||                -||                                     -||
-||36.06  ||Include email list members in invitation to collaboration meetings                ||AM        ||                -||                                     -||
+||36.04  ||Plan for Pandata meeting in Trieste 28-29/6                                       ||All       ||         On-going||                                     -||
+||36.05  ||Include Nicolas at ESRF on invitation to collaboration meetings                   ||AM        ||             Done||                                     -||
+||36.06  ||Include email list members in invitation to collaboration meetings                ||AM        ||             Done||                                     -||
 ||36.07  ||Verify that Topcat40 deploys on icat40 as documented                              ||AW        ||                -||                                     -||
 ||36.08  ||Set up a working group to deal with migration of ISIS ICAT to ICAT 4.1            ||AM/TG     ||             Done||                                     -||
 ||36.09  ||Email Christian at Julich re Python i/f to icat 4.1                               ||AM/SF     ||                -||                                     -||
 ||36.10  ||Add documentation on addMany method to ICAT 4.1 API documentation                 ||SF        ||                -||                                     -||
 ||36.11  ||Add Python interface to the roadmap for ICAT 4.1                                  ||AM        ||             Done||                                     -||
-||36.12  ||Add new technology eg EVO to the agenda for next meeting                          ||AM        ||                -||                                     -||
+||36.12  ||Add new technology eg EVO to the agenda for next meeting                          ||AM        ||         Deferred||                                     -||
 ||36.13  ||Prepare a topcat41 which is compatible with ICAT 4.1                              ||AW        ||                -||                                     -||
-||36.14  ||Fix what went wrong with the phone in CR02 at RAL for this meeting                ||AM        ||                -||                                     -||
+||36.14  ||Fix what went wrong with the phone in CR02 at RAL for this meeting                ||AM        ||             Done||                                     -||
 
 
 === Attendance 36 ===
