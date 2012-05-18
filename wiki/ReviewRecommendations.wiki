@@ -2,6 +2,8 @@
 
 = Introduction =
 
+ * [https://icatproject.googlecode.com/svn/icat/trunk/documentation/ICATCollaborationAssessment-v1.0.pdf ICAT Collaboration Assessment]
+
 == Governance == 
 || Item    || Who     || Description                                                                          || Further information  ||
 || R01     || ESC     || ICAT team in Escience must lead the collaboration                                    || IcatExecutiveBoard   ||
