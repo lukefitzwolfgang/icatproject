@@ -13,6 +13,10 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Actions from the meetings of 19 May (Alistair)
  * ICAT 4.1 - Status  (Steve)
  * Availability of release candidate for ICAT41 including Mysql (Alistair)
+ * Plans for ICAT 4.2 (Tom)
+ * Deployment of ICAT 4 for DLS (Ghita)
+ * Deployment of ICAT 4 for ISIS (Tom)
+ * Update from PaN-data (Milan/George)
  * AOB (Any)
 
 == Meeting 37 - 17 May 2012 =
@@ -32,17 +36,17 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 This is not complete:
 
-||Item   ||Description                                                                       ||Res*(1)   ||           Status||                               Comment||
-||37.00  ||Document the meeting                                                              ||AM        ||                .||                                     -||
-||37.01  ||Test deployment of ICAT 4.1 with MySql                                            ||AM        ||                .||                                     -||
-||37.02  ||Add documentation on addMany method to ICAT 4.1 API documentation                 ||SF        ||                .||                                     -||
-||37.03  ||Prepare a topcat41 which is compatible with ICAT 4.1                              ||AW        ||                .||                                     -||
-||37.04  ||Add pages to the wiki for planning ICAT 4.2                                       ||AM || Done|| Icat42Roadmap, RequirementsIcat42, Icat42ReleaseCriteria ||
-||37.05  ||.                                                                                 ||.        ||                .||                                     -||
-||37.06  ||.                                                                                 ||.        ||                .||                                     -||
-||37.07  ||.                                                                                 ||.        ||                .||                                     -||
-||37.08  ||.                                                                                 ||.        ||                .||                                     -||
-||37.09  ||.                                                                                 ||.        ||                .||                                     -||
+||Item   ||Description                                                                       ||Res*(1)   ||           Status||                                                   Comment||
+||37.00  ||Document the meeting                                                              ||AM        ||                .||                                                         -||
+||37.01  ||Test deployment of ICAT 4.1 with MySql                                            ||AM        ||                .||                                                         -||
+||37.02  ||Add documentation on addMany method to ICAT 4.1 API documentation                 ||SF        ||                .||                                                         -||
+||37.03  ||Prepare a topcat41 which is compatible with ICAT 4.1                              ||AW        ||                .||                                                         -||
+||37.04  ||Add pages to the wiki for planning ICAT 4.2                                       ||AM        ||             Done|| Icat42Roadmap, RequirementsIcat42, Icat42ReleaseCriteria ||
+||37.05  ||Comment on Terms for the Executive Board                                          ||All       ||                .||                                       IcatExecutiveBoard ||
+||37.06  ||Communicate with Shelly about the downloader                                      ||AW/SR     ||                .||                                                         -||
+||37.07  ||Do initial definition of ICAT 4.2                                                 ||TG/AM     ||      In progress|| Icat42Roadmap, RequirementsIcat42, Icat42ReleaseCriteria ||
+||37.08  ||.                                                                                 ||.         ||                .||                                                         -||
+||37.09  ||.                                                                                 ||.         ||                .||                                                         -||
 
 === Attendance 37 ===
 
