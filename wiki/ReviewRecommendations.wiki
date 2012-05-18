@@ -3,12 +3,12 @@
 = Introduction =
 
 == Governance == 
-|| Item    || Who     || Description                                                                          || 
-|| R01     || ESC     || ICAT team in Escience must lead the collaboration                                    || 
-|| R02     || ESC     || Create a steering committee with senior people from the stakeholders                 || 
-|| R03     || ESC     || Define how a collaboration organisation joins the collaboration                      || 
-|| R04     || ESC     || ICAT team in Escience to organise the Face to Face meetings                          || 
-|| R05     || ESC     || Make a risk assessment to mitigate the effects of the loss of key individuals        || 
+|| Item    || Who     || Description                                                                          || Further information  ||
+|| R01     || ESC     || ICAT team in Escience must lead the collaboration                                    || IcatExecutiveBoard   ||
+|| R02     || ESC     || Create a steering committee with senior people from the stakeholders                 || IcatExecutiveBoard   ||
+|| R03     || ESC     || Define how a collaboration organisation joins the collaboration                      || JoiningIcatCollab    ||
+|| R04     || ESC     || ICAT team in Escience to organise the Face to Face meetings                          || NoFurtherInformation ||
+|| R05     || ESC     || Make a risk assessment to mitigate the effects of the loss of key individuals        || NoFurtherInformation ||
 
 == Communications ==
 || Item    || Who     || Description                                                                          || 
