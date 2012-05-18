@@ -34,8 +34,6 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 === Actions 37 ===
 
-This is not complete:
-
 ||Item   ||Description                                                                       ||Res*(1)   ||           Status||                                                   Comment||
 ||37.00  ||Document the meeting                                                              ||AM        ||                .||                                                         -||
 ||37.01  ||Test deployment of ICAT 4.1 with MySql                                            ||AM        ||                .||                                                         -||
