@@ -3,6 +3,13 @@
 
 = ICAT Main page =
 
+== ICAT4.2 ==
+
+ * [Icat42Roadmap            Icat4.2 Roadmap]
+ * [RequirementsIcat42       Icat4.2 Requirements]
+ * [Icat42ReleaseCriteria    Icat4.2 Release criteria]
+ * [Icat4Workpackages        Icat4.2 Work Packages]
+
 == ICAT4.1 ==
 
  * [Icat41Roadmap            Icat4.1 Roadmap]
