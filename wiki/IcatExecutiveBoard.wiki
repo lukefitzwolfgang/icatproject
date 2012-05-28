@@ -12,7 +12,8 @@ The ownership of ICAT rests with the Director of eScience of STFC.
 
 The Board exists for the following reasons:
  * to advise the owner of ICAT;
- * to provide senior management oversight for the work of the ICAT collaboration partners.
+ * to provide senior management oversight for the work of the ICAT collaboration partners;
+ * to provide strategic guidance on the development and deployment of ICAT.
 
 == Membership ==
 
