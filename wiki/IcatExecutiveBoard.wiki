@@ -4,7 +4,7 @@
 
 = Draft terms for the Icat Executive Board =
 
-v 0.2 - Alistair Mills - Reviewed to include Tom's ideas
+v 0.3 - Alistair Mills - Reviewed to include Brian's ideas
 
 The ownership of ICAT rests with the Director of eScience of STFC.
 
@@ -12,8 +12,7 @@ The ownership of ICAT rests with the Director of eScience of STFC.
 
 The Board exists for the following reasons:
  * to advise the owner of ICAT;
- * to provide senior management oversight for the work of the ICAT collaboration partners;
- * to fulfil recommendation  [http://www.icatproject.org/index.php/ICAT-R-Governance#Recommendations R02]  of the ICAT review of February 2012.
+ * to provide senior management oversight for the work of the ICAT collaboration partners.
 
 == Membership ==
 
