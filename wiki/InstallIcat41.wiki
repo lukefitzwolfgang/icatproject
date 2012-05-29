@@ -30,10 +30,10 @@ wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0-rc-03/ic
 wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0-rc-03/icat.ear-4.1.0-rc-03.ear
 }}}
 
-Installation notes are available at the following url:
+Installation notes are available at the following URLs:
 {{{
 http://www.icatproject.org/mvn/site/4.1.0-rc-03/icat.ear/installation.html
-
+http://code.google.com/p/icatproject/wiki/InstallIcat41
 }}}
 
 == Assumptions ==
@@ -45,6 +45,7 @@ Operating system:
  * username: glassfish3
  * home directory: /home/glassfish3
  * shell: bash
+ * python
 
 Environmental variables:
 It is conventional to set the following variables:
@@ -97,9 +98,6 @@ Ports:
 
 Configuration is stored in the following files:
  * [http://code.google.com/p/icatproject/source/browse/ops/icat41/glassfish.props                  icat41/glassfish.props] - this contains the properties used by the glassfish.sh script;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat41/passwordfile                     icat41/passwordfile] - this contains the password for the Glassfish Server admin console and the keystore master password;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat41/usertable_init/usertable.sh      icat41/usertable_init/usertable.sh] - this contains the script used to create the user icat41;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat41/test_icat/example.properties     icat41/test_icat/example.properties] - this contains the properties used by the test for ICAT.
 
 
 == Instructions ==
@@ -113,166 +111,95 @@ Ensure the following conditions on the system:
  * Expand the distribution file into a directory; icat41 is used in the following instructions.
 
 Two common errors are the following:
- * The Glassfish Server admin and keystore master passwords must agree with the value in the file passwordfile;  
+ * The icat properties file must be in the config directory of the glassfish server.  
  * The file ojdbc14.jar must be in the file system before the Glassfish Server is started.  If is added later, it is necessary to restart the Glassfish Server.  
 
 Do the following:
 
-0. Create the users called icat and icatuser in the database.  To do this, use the administrator user for the database.  This user is usually called sys:
+1. Start the Glassfish Server, create the database pools and deploy icat. Deploying icat also creates the schemas for icat and icatuser, but does not give them useful content.
+
+To start the Glassfish Server, do the following:
 
 {{{
-cd icat41/orainit
-sqlplus sys/mysyspasswd@localhost as sysdba @create_users.sql | tee create_users.log
-cd ../..
+cd icat41
+asadmin start-domain domain1
 }}}
 
 Expect a response such as the following:
 
 {{{
-SQL*Plus: Release 10.2.0.1.0 - Production on Thu Jan 19 16:21:13 2012
-Copyright (c) 1982, 2005, Oracle.  All rights reserved.
-Connected to:
-Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
-Enter value for icat_password: icatpasswd
-Grant succeeded.
-Grant succeeded.
-}}}
-
-It will also prompt for icatuser_password.
-
-1. Initialise the tables in the database - this will remove any existing content.
-
-{{{
-cd icat41/orainit
-sqlplus icat/myicatpasswd@localhost @create_icat.sql | tee create_icat.log
-cd ../..
-}}}
-
- Expect the following outcome:
-
-{{{
-.
-.
-Table altered.
-Table altered.
-Table altered.
-Table altered.
-Table altered.
-Table altered.
-Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
-}}}
-
-2. Start the Glassfish Server, create the database pools and deploy icat. Deploying icat also creates the schema for icatuser, but does not give it useful content.
-
- To start the Glassfish Server, do the following:
-
-{{{
-cd icat41
-./glassfish.sh start
-}}}
-
- Expect a response such as the following:
-
-{{{
-Starting database in Network Server mode on host 127.0.0.1 and port 1527.
-.
-.
-Command start-database executed successfully.
 Waiting for domain1 to start .......................................................................................................
 Successfully started the domain : domain1
 domain  Location: /home/glassfish3/glassfish3/glassfish/domains/domain1
 Log File: /home/glassfish3/glassfish3/glassfish/domains/domain1/logs/server.log
 Admin Port: 4848
 Command start-domain executed successfully.
-Command multimode executed successfully.
 }}}
 
- To create the jdbc resource pools, do the following:
+To create the jdbc and jms resources, do the following:
 
 {{{
-./glassfish.sh create
+./create.sh
 }}}
 
- Expect a response such as the following:
-
-{{{
-.
-.
-Command create-jdbc-resource executed successfully.
-JDBC resource jdbc/ecat2 created successfully.
-Command create-jdbc-resource executed successfully.
-Command multimode executed successfully.
-Ensure that Thread Pools below the configurations has an http-thread-pool with a Max Thread Pool Size of 128.
-There may be more than one configuration to change. Change them all.
-}}}
-
- To deploy icat , do the following:
-
-{{{
-./glassfish.sh deploy icat
-}}}
-
- Expect a response such as the following:
+Expect a response such as the following:
 
 {{{
 .
 .
-Application deployed with name icat-ear-1583-http.
+server.http-service.access-log.format=common
+Command set executed successfully.
+server.http-service.access-logging-enabled=true
+Command set executed successfully.
+JDBC connection pool icat created successfully.
+Attempting to ping during JDBC Connection Pool Creation : icat - Succeeded.
+.
+.
+.
+Command create-jms-resource executed successfully.
+Administered object jms/ICATTopic created.
+Command create-jms-resource executed successfully.
+}}}
+
+To deploy icat , do the following:
+
+{{{
+asadmin deploy icat.ear-4.1.0-rc-03.ear
+}}}
+
+Expect a response such as the following:
+
+{{{
+Application deployed with name icat.ear-4.1.0-rc-03.
 Command deploy executed successfully.
-Command multimode executed successfully.
 }}}
 
- If deploying on a system which has been previously used, expect the following response:
+If deploying on a system which has been previously used, expect the following response:
 
 {{{
-Application deployed successfully with name icat-ear-1583-http and with the following warning(s):
-
-Deployment encountered SQL Exceptions:
-	Got SQLException executing statement "CREATE TABLE USER_TABLE (USER_ID VARCHAR2(255) NOT NULL, PASSWORD VARCHAR2(255) NOT NULL, PRIMARY KEY (USER_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
-
-	Got SQLException executing statement "CREATE TABLE USER_SESSION (USER_SESSION_ID VARCHAR2(255) NOT NULL, RUN_AS VARCHAR2(255) NOT NULL, EXPIRE_DATE_TIME TIMESTAMP NOT NULL, PRIMARY KEY (USER_SESSION_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
-
-	Got SQLException executing statement "CREATE TABLE USER_TABLE_ANSTO (USER_ID VARCHAR2(255) NOT NULL, PASSWORD VARCHAR2(255) NOT NULL, PRIMARY KEY (USER_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
-
-	Got SQLException executing statement "CREATE TABLE USER_SESSION_ANSTO (USER_SESSION_ID VARCHAR2(255) NOT NULL, RUN_AS VARCHAR2(255) NOT NULL, EXPIRE_DATE_TIME TIMESTAMP NOT NULL, PRIMARY KEY (USER_SESSION_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
-
+Cannot create tables for application icat.ear-4.1.0-rc-03. The expected DDL file icat.ear-4.1.0-rc-03_icat.exposed-4.1.0-rc-03_icatuser_createDDL.jdbc is not available.
+PER01003: Deployment encountered SQL Exceptions:
+	PER01000: Got SQLException executing statement "CREATE TABLE PUBLICATION (ID NUMBER(19) NOT NULL, CREATE_ID VARCHAR2(255) NOT NULL, CREATE_TIME TIMESTAMP NOT NULL, FULLREFERENCE VARCHAR2(255) NOT NULL, MOD_ID VARCHAR2(255) NOT NULL, MOD_TIME TIMESTAMP NOT NULL, REPOSITORY VARCHAR2(255) NULL, REPOSITORYID VARCHAR2(255) NULL, URL VARCHAR2(255) NULL, INVESTIGATION_ID NUMBER(19) NOT NULL, PRIMARY KEY (ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
+.
+.
 Command deploy executed successfully.
-Command multimode executed successfully.
 }}}
 
-Pay attention to the last part of the message.  The bit in green is only a warning and can be ignored.
+Pay attention to the last line of the message.  The bit in green is only a warning and can be ignored.
 
-3. Create a user for use by the test
-
-{{{
-cd icat41/usertable_init
-./usertable.sh
-cd ../..
-}}}
-
- Expect a response such as the following:
-
-{{{
-.
-.
-Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
-SQL>   2  
-1 row created.
-SQL> Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
-}}}
 
 4. Run the test which does logon to the icat
 
 {{{
 cd icat41/test_icat
-./test_one.sh Authenticate
+python test.py 8181 password
 cd ..
 }}}
 
- Expect a response such as the following:
+Expect a response such as the following:
 
 {{{
-Session ID = 11af38b1-e5e9-47d2-ae41-5b23c8751997
+It seems to work...
 }}}
 
 5. If you get a response such as the above, then ICAT is working.
@@ -282,52 +209,40 @@ Session ID = 11af38b1-e5e9-47d2-ae41-5b23c8751997
 
 {{{
 cd icat41
-./glassfish.sh undeploy icat
+asadmin undeploy icat.ear-4.1.0-rc-03
 }}}
  
- Expect the following outcome:
+Expect the following outcome:
 
 {{{
-.
-.
 Command undeploy executed successfully.
-Command multimode executed successfully.
 }}}
 
-
- To delete the jdbc resource pools, do the following:
+To delete the jdbc and jms resources, do the following:
 
 {{{
-./glassfish.sh delete
+./drop.sh
 }}}
 
-
- Expect the following outcome:
+Expect the following outcome:
 
 {{{
 .
 .
 JDBC Connection pool icat3-user deleted successfully
 Command delete-jdbc-connection-pool executed successfully.
-Command multimode executed successfully.
 }}}
 
- To stop the Glassfish Server, do the following:
+To stop the Glassfish Server, do the following:
 
 {{{
-./glassfish.sh stop
+asadmin stop-domain domain1
 }}}
 
- Expect the following outcome:
+Expect the following outcome:
 
 {{{
-.
-.
 Command stop-domain executed successfully.
-2012-01-18 10:00:40.667 GMT : Connection obtained for host: 127.0.0.1, port number 1527.
-2012-01-18 10:00:42.184 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
-Command stop-database executed successfully.
-Command multimode executed successfully.
 }}}
 
 
