@@ -1,13 +1,334 @@
-#summary One-sentence summary of this page.
+#summary Installation instructions for ICAT 4.1
 
-= Introduction =
+<wiki:toc max_depth="3" />
 
-Add your content here.
+= Warning - this is work in progress=
+
+Do not rely on this documentation.  It is not yet complete.
+
+= Installation instructions for ICAT 4.1 =
+
+== Source of pre-requisite materials ==
+
+Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle client tools (sqlplus), Oracle Java connector (ojdbc14.jar) are all available for download from Oracle.   The versions required are the following:
+
+ * Java Enterprise Edition - 6 or newer;
+ * Glassfish Server - 3.1 or newer;
+ * Oracle Express - 10 or newer;
+ * Oracle Client tools - 10 or newer.
+
+== Source of installation materials ==
+
+ICAT 4.1 is available for download from the following URL:  
+{{{
+http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0-rc-03
+}}}
+
+For example, you can download with the wget commands as follows:
+{{{
+wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0-rc-03/icat.ear-4.1.0-rc-03-config.zip 
+wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0-rc-03/icat.ear-4.1.0-rc-03.ear
+}}}
+
+Installation notes are available at the following url:
+{{{
+http://www.icatproject.org/mvn/site/4.1.0-rc-03/icat.ear/installation.html
+
+}}}
+
+== Assumptions ==
+
+In order to make it simple to install ICAT41, the following configuration is assumed:
+
+Operating system: 
+ * operation system: Linux
+ * username: glassfish3
+ * home directory: /home/glassfish3
+ * shell: bash
+
+Environmental variables:
+It is conventional to set the following variables:
+ * JAVA_HOME;
+ * ORACLE_HOME;
+ * ORACLE_SID;
+ * GLASSFISH_HOME;
+ * PATH - add $JAVA_HOME/bin, ORACLE_HOME/bin and GLASSFISH_HOME/bin. 
+
+Note that the operating system user glassfish3 is running the Glassfish Server and the applications.  There is no need to have enhanced privileges to install ICAT once the prerequisite software has been installed and the user account glassfish3 has been created. You do not require access as system administrator of the database once the user accounts icat and icatuser have been created.
+
+Glassfish Server:
+ * directory: /home/glassfish3/glassfish3/glassfish
+ * admin user: admin
+ * admin user password: adminadmin
+ * master password: changeit
+ * asadmin command: The operating system user called glassfish3 has asadmin on the PATH 
+ * ojdbc14.jar: The file ojdbc14.jar has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/lib
+ * icat.properties: The file icat.properties has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
+
+Oracle database:
+
+If using Oracle Express on localhost, configure it to use port 8070 for the Administrator Portal.
+
+ * Oracle database server: localhost
+ * SYS username/password: sys/mysyspasswd
+ * ICAT username/ password: icat/myicatpasswd
+ * ICATUSER username/password: icatuser/myicatuserpasswd
+
+Java run-time:
+ * java: The operating system user glassfish3 has java (1.6) on the PATH
+
+Directories:
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/                  icat41] - this contains a scripts called glassfish.sh and glassfish.props which tell the Glassfish Server what to do;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/orainit           icat41/orainit] - this contains scripts to initialise the database;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/usertable_init    icat41/usertable_init] - this contains a script to add a user to ICAT;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/test_icat         icat41/test_icat] - this contains a simple test for ICAT.
+
+The following files are part of the ICAT 4.1 distribution:
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/icat-ear-1583-http.ear      icat41/icat-ear-1583-http.ear]; 
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/icat-ear-1583.ear           icat41/icat-ear-1583.ear].
+
+Server certificate:
+ * Neither the server nor a client application require a certificate, as icat-http is deployed using http protocol.
+
+Ports:
+ * The port 8070 is available for Oracle Express
+ * The port 8080 is available for the Glassfish Server to deploy icat-http
+ * The port 4848 is available for the the admin console of the Glassfish Server
+
+Configuration is stored in the following files:
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/glassfish.props                  icat41/glassfish.props] - this contains the properties used by the glassfish.sh script;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/passwordfile                     icat41/passwordfile] - this contains the password for the Glassfish Server admin console and the keystore master password;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/usertable_init/usertable.sh      icat41/usertable_init/usertable.sh] - this contains the script used to create the user icat41;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/test_icat/example.properties     icat41/test_icat/example.properties] - this contains the properties used by the test for ICAT.
 
 
-= Details =
+== Instructions ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Create a test environment similar to the one assumed.  If it is not possible to be identical, then the four files containing configuration may require changes.
+
+Ensure the following conditions on the system: 
+
+ * Database server running, and the username and passwords installed, but no content;
+ * Glassfish Server installed, but not running;
+ * Expand the distribution file into a directory; icat41 is used in the following instructions.
+
+Two common errors are the following:
+ * The Glassfish Server admin and keystore master passwords must agree with the value in the file passwordfile;  
+ * The file ojdbc14.jar must be in the file system before the Glassfish Server is started.  If is added later, it is necessary to restart the Glassfish Server.  
+
+Do the following:
+
+0. Create the users called icat and icatuser in the database.  To do this, use the administrator user for the database.  This user is usually called sys:
+
+{{{
+cd icat41/orainit
+sqlplus sys/mysyspasswd@localhost as sysdba @create_users.sql | tee create_users.log
+cd ../..
+}}}
+
+Expect a response such as the following:
+
+{{{
+SQL*Plus: Release 10.2.0.1.0 - Production on Thu Jan 19 16:21:13 2012
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+Connected to:
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Enter value for icat_password: icatpasswd
+Grant succeeded.
+Grant succeeded.
+}}}
+
+It will also prompt for icatuser_password.
+
+1. Initialise the tables in the database - this will remove any existing content.
+
+{{{
+cd icat41/orainit
+sqlplus icat/myicatpasswd@localhost @create_icat.sql | tee create_icat.log
+cd ../..
+}}}
+
+ Expect the following outcome:
+
+{{{
+.
+.
+Table altered.
+Table altered.
+Table altered.
+Table altered.
+Table altered.
+Table altered.
+Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+}}}
+
+2. Start the Glassfish Server, create the database pools and deploy icat. Deploying icat also creates the schema for icatuser, but does not give it useful content.
+
+ To start the Glassfish Server, do the following:
+
+{{{
+cd icat41
+./glassfish.sh start
+}}}
+
+ Expect a response such as the following:
+
+{{{
+Starting database in Network Server mode on host 127.0.0.1 and port 1527.
+.
+.
+Command start-database executed successfully.
+Waiting for domain1 to start .......................................................................................................
+Successfully started the domain : domain1
+domain  Location: /home/glassfish3/glassfish3/glassfish/domains/domain1
+Log File: /home/glassfish3/glassfish3/glassfish/domains/domain1/logs/server.log
+Admin Port: 4848
+Command start-domain executed successfully.
+Command multimode executed successfully.
+}}}
+
+ To create the jdbc resource pools, do the following:
+
+{{{
+./glassfish.sh create
+}}}
+
+ Expect a response such as the following:
+
+{{{
+.
+.
+Command create-jdbc-resource executed successfully.
+JDBC resource jdbc/ecat2 created successfully.
+Command create-jdbc-resource executed successfully.
+Command multimode executed successfully.
+Ensure that Thread Pools below the configurations has an http-thread-pool with a Max Thread Pool Size of 128.
+There may be more than one configuration to change. Change them all.
+}}}
+
+ To deploy icat , do the following:
+
+{{{
+./glassfish.sh deploy icat
+}}}
+
+ Expect a response such as the following:
+
+{{{
+.
+.
+Application deployed with name icat-ear-1583-http.
+Command deploy executed successfully.
+Command multimode executed successfully.
+}}}
+
+ If deploying on a system which has been previously used, expect the following response:
+
+{{{
+Application deployed successfully with name icat-ear-1583-http and with the following warning(s):
+
+Deployment encountered SQL Exceptions:
+	Got SQLException executing statement "CREATE TABLE USER_TABLE (USER_ID VARCHAR2(255) NOT NULL, PASSWORD VARCHAR2(255) NOT NULL, PRIMARY KEY (USER_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
+
+	Got SQLException executing statement "CREATE TABLE USER_SESSION (USER_SESSION_ID VARCHAR2(255) NOT NULL, RUN_AS VARCHAR2(255) NOT NULL, EXPIRE_DATE_TIME TIMESTAMP NOT NULL, PRIMARY KEY (USER_SESSION_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
+
+	Got SQLException executing statement "CREATE TABLE USER_TABLE_ANSTO (USER_ID VARCHAR2(255) NOT NULL, PASSWORD VARCHAR2(255) NOT NULL, PRIMARY KEY (USER_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
+
+	Got SQLException executing statement "CREATE TABLE USER_SESSION_ANSTO (USER_SESSION_ID VARCHAR2(255) NOT NULL, RUN_AS VARCHAR2(255) NOT NULL, EXPIRE_DATE_TIME TIMESTAMP NOT NULL, PRIMARY KEY (USER_SESSION_ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
+
+Command deploy executed successfully.
+Command multimode executed successfully.
+}}}
+
+Pay attention to the last part of the message.  The bit in green is only a warning and can be ignored.
+
+3. Create a user for use by the test
+
+{{{
+cd icat41/usertable_init
+./usertable.sh
+cd ../..
+}}}
+
+ Expect a response such as the following:
+
+{{{
+.
+.
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+SQL>   2  
+1 row created.
+SQL> Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+}}}
+
+4. Run the test which does logon to the icat
+
+{{{
+cd icat41/test_icat
+./test_one.sh Authenticate
+cd ..
+}}}
+
+ Expect a response such as the following:
+
+{{{
+Session ID = 11af38b1-e5e9-47d2-ae41-5b23c8751997
+}}}
+
+5. If you get a response such as the above, then ICAT is working.
+
+6. To stop icat and the Glassfish Server, do the following:
+ To undeploy icat, do the following:
+
+{{{
+cd icat41
+./glassfish.sh undeploy icat
+}}}
+ 
+ Expect the following outcome:
+
+{{{
+.
+.
+Command undeploy executed successfully.
+Command multimode executed successfully.
+}}}
+
+
+ To delete the jdbc resource pools, do the following:
+
+{{{
+./glassfish.sh delete
+}}}
+
+
+ Expect the following outcome:
+
+{{{
+.
+.
+JDBC Connection pool icat3-user deleted successfully
+Command delete-jdbc-connection-pool executed successfully.
+Command multimode executed successfully.
+}}}
+
+ To stop the Glassfish Server, do the following:
+
+{{{
+./glassfish.sh stop
+}}}
+
+ Expect the following outcome:
+
+{{{
+.
+.
+Command stop-domain executed successfully.
+2012-01-18 10:00:40.667 GMT : Connection obtained for host: 127.0.0.1, port number 1527.
+2012-01-18 10:00:42.184 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
+Command stop-database executed successfully.
+Command multimode executed successfully.
+}}}
+
+
+== - the end - ==
