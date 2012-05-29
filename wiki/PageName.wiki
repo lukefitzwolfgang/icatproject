@@ -20,14 +20,15 @@ ICAT 4.1 is available for download from the following URL:
 http://icatproject.googlecode.com/files/icat4.0.0.zip 
 }}}
 
-For example, you can download with the wget command as follows:
+For example, you can download with the wget commands as follows:
 {{{
-wget http://icatproject.googlecode.com/files/icat4.0.0.zip 
+wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0-rc-03/icat.ear-4.1.0-rc-03-config.zip 
+
 }}}
 
 If you would like a version from the SVN, then it can be obtained with a command as follows:
 {{{
-svn checkout https://icatproject.googlecode.com/svn/ops/icat40 
+svn checkout https://icatproject.googlecode.com/svn/ops/icat41 
 }}}
 
 If you would like to review the set of downloads available, use the following URL in a browser:
@@ -37,17 +38,17 @@ http://code.google.com/p/icatproject/downloads/list
 
 The release zip contains a file called readme.txt with instructions.  A longer version is available at the following URL:
 {{{
-http://code.google.com/p/icatproject/wiki/InstallIcat40 
+http://code.google.com/p/icatproject/wiki/InstallIcat41
 }}}
 
 If you wish to browse the materials on the web site, use the following link:
 {{{
-http://code.google.com/p/icatproject/source/browse/ops/icat40/
+http://code.google.com/p/icatproject/source/browse/ops/icat41
 }}}
 
 == Assumptions ==
 
-In order to make it simple to install ICAT40, the following configuration is assumed:
+In order to make it simple to install ICAT41, the following configuration is assumed:
 
 Operating system: 
  * operation system: Linux
@@ -87,14 +88,14 @@ Java run-time:
  * java: The operating system user glassfish3 has java (1.6) on the PATH
 
 Directories:
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/ icat40] - this contains a scripts called glassfish.sh and glassfish.props which tell the Glassfish Server what to do;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/orainit icat40/orainit] - this contains scripts to initialise the database;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/usertable_init icat40/usertable_init] - this contains a script to add a user to ICAT;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/test_icat icat40/test_icat] - this contains a simple test for ICAT.
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/                  icat41] - this contains a scripts called glassfish.sh and glassfish.props which tell the Glassfish Server what to do;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/orainit           icat41/orainit] - this contains scripts to initialise the database;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/usertable_init    icat41/usertable_init] - this contains a script to add a user to ICAT;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/test_icat         icat41/test_icat] - this contains a simple test for ICAT.
 
-The following files are part of the ICAT 4.0 distribution:
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/icat-ear-1583-http.ear icat40/icat-ear-1583-http.ear]; 
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/icat-ear-1583.ear icat40/icat-ear-1583.ear].
+The following files are part of the ICAT 4.1 distribution:
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/icat-ear-1583-http.ear      icat41/icat-ear-1583-http.ear]; 
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/icat-ear-1583.ear           icat41/icat-ear-1583.ear].
 
 Server certificate:
  * Neither the server nor a client application require a certificate, as icat-http is deployed using http protocol.
@@ -105,10 +106,10 @@ Ports:
  * The port 4848 is available for the the admin console of the Glassfish Server
 
 Configuration is stored in the following files:
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/glassfish.props icat40/glassfish.props] - this contains the properties used by the glassfish.sh script;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/passwordfile icat40/passwordfile] - this contains the password for the Glassfish Server admin console and the keystore master password;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/usertable_init/usertable.sh icat40/usertable_init/usertable.sh] - this contains the script used to create the user icat40;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat40/test_icat/example.properties icat40/test_icat/example.properties] - this contains the properties used by the test for ICAT.
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/glassfish.props                  icat41/glassfish.props] - this contains the properties used by the glassfish.sh script;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/passwordfile                     icat41/passwordfile] - this contains the password for the Glassfish Server admin console and the keystore master password;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/usertable_init/usertable.sh      icat41/usertable_init/usertable.sh] - this contains the script used to create the user icat41;
+ * [http://code.google.com/p/icatproject/source/browse/ops/icat41/test_icat/example.properties     icat41/test_icat/example.properties] - this contains the properties used by the test for ICAT.
 
 
 == Instructions ==
@@ -119,7 +120,7 @@ Ensure the following conditions on the system:
 
  * Database server running, and the username and passwords installed, but no content;
  * Glassfish Server installed, but not running;
- * Expand the distribution file into a directory; icat40 is used in the following instructions.
+ * Expand the distribution file into a directory; icat41 is used in the following instructions.
 
 Two common errors are the following:
  * The Glassfish Server admin and keystore master passwords must agree with the value in the file passwordfile;  
@@ -130,7 +131,7 @@ Do the following:
 0. Create the users called icat and icatuser in the database.  To do this, use the administrator user for the database.  This user is usually called sys:
 
 {{{
-cd icat40/orainit
+cd icat41/orainit
 sqlplus sys/mysyspasswd@localhost as sysdba @create_users.sql | tee create_users.log
 cd ../..
 }}}
@@ -152,7 +153,7 @@ It will also prompt for icatuser_password.
 1. Initialise the tables in the database - this will remove any existing content.
 
 {{{
-cd icat40/orainit
+cd icat41/orainit
 sqlplus icat/myicatpasswd@localhost @create_icat.sql | tee create_icat.log
 cd ../..
 }}}
@@ -176,7 +177,7 @@ Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - Produ
  To start the Glassfish Server, do the following:
 
 {{{
-cd icat40
+cd icat41
 ./glassfish.sh start
 }}}
 
@@ -254,7 +255,7 @@ Pay attention to the last part of the message.  The bit in green is only a warni
 3. Create a user for use by the test
 
 {{{
-cd icat40/usertable_init
+cd icat41/usertable_init
 ./usertable.sh
 cd ../..
 }}}
@@ -273,7 +274,7 @@ SQL> Disconnected from Oracle Database 10g Express Edition Release 10.2.0.1.0 - 
 4. Run the test which does logon to the icat
 
 {{{
-cd icat40/test_icat
+cd icat41/test_icat
 ./test_one.sh Authenticate
 cd ..
 }}}
@@ -290,7 +291,7 @@ Session ID = 11af38b1-e5e9-47d2-ae41-5b23c8751997
  To undeploy icat, do the following:
 
 {{{
-cd icat40
+cd icat41
 ./glassfish.sh undeploy icat
 }}}
  
@@ -338,38 +339,6 @@ Command stop-domain executed successfully.
 Command stop-database executed successfully.
 Command multimode executed successfully.
 }}}
-
-
-== Dependencies ==
-
-The following table provides the information about the distribution of configuration information among the configuration files.
-
-|| Property          || Glassfish.props || usertable.sh || example.properties || passwordfile  || Usual Value                                               ||
-|| url               || yes             || no           || no                 || no            || jdbc:oracle:thin:@//localhost:1521/XE                     ||
-|| ICAT user name and password for the database - this is required for orainit also 								    ||
-|| icatName          || yes             || no           || no                 || no            || ICAT                                                      ||
-|| icatPW            || yes             || no           || no                 || no            || myicatpasswd                                              ||
-|| ICATUSER user name and password for the database										                            ||
-|| icatuserName      || yes             || yes          || no                 || no            || icatuser                                                  ||  
-|| icatuserPW        || yes             || yes          || no                 || no            || myicatuserpasswd                                          ||
-|| Location of the home directory for the glassfish server - this is needed for ojdbc14 and icat.properties also 				            ||
-|| glassfish         || yes             || no           || no                 || no            || /home/glassfish3/glassfish3                               ||
-|| connection information for glassfish server port    || yes             || no           || no                 || no            || 4848                    ||  
-|| adminuser         || yes             || no           || no                 || no            || admin                                                     ||
-|| passwordfile      || yes             || no           || no                 || no            || passwordfile                                              ||
-|| icat file to be deployed 						                                                                                	||
-|| icatear           || yes             || no           || no                 || no            || /home/glassfish3/icat40/icat-ear-1583-http.ear            ||   
-|| icat file to be deployed 																																||
-|| icatuser          || no              || yes          || yes                || no            || icat40                                                    ||
-|| icatuserpassword  || no              || yes          || yes                || no            || icat40passwd                                              ||
-|| the icat filename implies the port and the protocol and it is always localhost                                                                           ||
-|| wsdl.location     || implied         || no           || yes                || no            || http://localhost:8080/ICATService/ICAT?wsdl               ||  
-|| the admin password is required to logon to the glassfish 											         	||
-|| admin password    || no              || no           || no                 || yes           || adminadmin                                                     ||
-|| the master password is required to access the keystore 											         	||
-|| master password    || no              || no           || no                 || yes           || changeit                                                    ||
-|| the client file for applications to access 													         	||
-|| icatclient        || no              || no           || no                 || no            || /home/glassfish3/icat40/icat-client-1583.jar              ||    
 
 
 == - the end - ==
