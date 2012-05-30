@@ -14,8 +14,19 @@ Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle c
 
  * Java Enterprise Edition - 6 or newer;
  * Glassfish Server - 3.1 or newer;
+ * Database connection to either Oracle of Mysql;
+ * Database connection jar;
+ * Python.
+ 
+ If a remote database is not available, a local one can be created using:
+ 
  * Oracle Express - 10 or newer;
  * Oracle Client tools - 10 or newer.
+ 
+ or 
+ 
+ * Mysql - 5 or newer;
+ * Mysql client tools - 10 or newer.
 
 == Source of installation materials ==
 
@@ -45,48 +56,50 @@ Operating system:
  * username: glassfish3
  * home directory: /home/glassfish3
  * shell: bash
- * python
 
 Environmental variables:
+
 It is conventional to set the following variables:
  * JAVA_HOME;
- * ORACLE_HOME;
- * ORACLE_SID;
  * GLASSFISH_HOME;
- * PATH - add $JAVA_HOME/bin, ORACLE_HOME/bin and GLASSFISH_HOME/bin. 
+ * PATH - add $JAVA_HOME/bin and GLASSFISH_HOME/bin. 
 
 Note that the operating system user glassfish3 is running the Glassfish Server and the applications.  There is no need to have enhanced privileges to install ICAT once the prerequisite software has been installed and the user account glassfish3 has been created. You do not require access as system administrator of the database once the user accounts icat and icatuser have been created.
 
 Glassfish Server:
  * directory: /home/glassfish3/glassfish3/glassfish
- * admin user: admin
- * admin user password: adminadmin
- * master password: changeit
+
  * asadmin command: The operating system user called glassfish3 has asadmin on the PATH 
  * ojdbc14.jar: The file ojdbc14.jar has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/lib
  * icat.properties: The file icat.properties has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
 
+It is conventional to use the following usernames and passwords for Glassfish:
+ 
+ * admin user: admin
+ * admin user password: adminadmin
+ * master password: changeit
+ 
 Oracle database:
 
 If using Oracle Express on localhost, configure it to use port 8070 for the Administrator Portal.
 
  * Oracle database server: localhost
- * SYS username/password: sys/mysyspasswd
+ * ICAT username/ password: icat/myicatpasswd
+ * ICATUSER username/password: icatuser/myicatuserpasswd
+ 
+If using Mysql on localhost, configure it to use port 3306 for jdbc access.
+
+ * Mysql database server: localhost
  * ICAT username/ password: icat/myicatpasswd
  * ICATUSER username/password: icatuser/myicatuserpasswd
 
 Java run-time:
- * java: The operating system user glassfish3 has java (1.6) on the PATH
+ * java: The operating system user glassfish3 has java on the PATH
 
 Directories:
- * [http://code.google.com/p/icatproject/source/browse/ops/icat41/                  icat41] - this contains a scripts called glassfish.sh and glassfish.props which tell the Glassfish Server what to do;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat41/orainit           icat41/orainit] - this contains scripts to initialise the database;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat41/usertable_init    icat41/usertable_init] - this contains a script to add a user to ICAT;
- * [http://code.google.com/p/icatproject/source/browse/ops/icat41/test_icat         icat41/test_icat] - this contains a simple test for ICAT.
+ * icat41 - this contains scripts called create.sh and drop.sh and glassfish.props which tell the Glassfish Server what to do;
 
-The following files are part of the ICAT 4.1 distribution:
- * [http://code.google.com/p/icatproject/source/browse/ops/icat41/icat-ear-1583-http.ear      icat41/icat-ear-1583-http.ear]; 
- * [http://code.google.com/p/icatproject/source/browse/ops/icat41/icat-ear-1583.ear           icat41/icat-ear-1583.ear].
+
 
 Server certificate:
  * Neither the server nor a client application require a certificate, as icat-http is deployed using http protocol.
