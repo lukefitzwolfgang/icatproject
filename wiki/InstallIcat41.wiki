@@ -66,12 +66,15 @@ It is conventional to set the following variables:
 
 Note that the operating system user glassfish3 is running the Glassfish Server and the applications.  There is no need to have enhanced privileges to install ICAT once the prerequisite software has been installed and the user account glassfish3 has been created. You do not require access as system administrator of the database once the user accounts icat and icatuser have been created.
 
+Java run-time:
+ * java: The operating system user glassfish3 has java on the PATH
+
 Glassfish Server:
  * directory: /home/glassfish3/glassfish3/glassfish
-
  * asadmin command: The operating system user called glassfish3 has asadmin on the PATH 
  * ojdbc14.jar: The file ojdbc14.jar has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/lib
  * icat.properties: The file icat.properties has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
+ * log4j.properties: The file log4j.properties has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
 
 It is conventional to use the following usernames and passwords for Glassfish:
  
@@ -93,8 +96,6 @@ If using Mysql on localhost, configure it to use port 3306 for jdbc access.
  * ICAT username/ password: icat/myicatpasswd
  * ICATUSER username/password: icatuser/myicatuserpasswd
 
-Java run-time:
- * java: The operating system user glassfish3 has java on the PATH
 
 Directories:
  * icat41 - this contains scripts called create.sh and drop.sh and glassfish.props which tell the Glassfish Server what to do;
@@ -149,7 +150,7 @@ Admin Port: 4848
 Command start-domain executed successfully.
 }}}
 
-To create the jdbc and jms resources, do the following:
+2. To create the jdbc and jms resources, do the following:
 
 {{{
 ./create.sh
@@ -174,7 +175,7 @@ Administered object jms/ICATTopic created.
 Command create-jms-resource executed successfully.
 }}}
 
-To deploy icat , do the following:
+3. To deploy icat , do the following:
 
 {{{
 asadmin deploy icat.ear-4.1.0-rc-03.ear
