@@ -18,12 +18,12 @@ Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle c
  * Database connection jar such as ojdbc14.jar for Oracle or mysql-connector-java.jar for Mysql;
  * Python with the python-thuds plugin.
  
- If a remote database is not available, a local one can be created using:
+If a remote database is not available, a local one can be created using:
  
  * Oracle Express - 10 or newer;
  * Oracle Client tools - 10 or newer.
  
- or 
+or:
  
  * Mysql - 5 or newer;
  * Mysql client tools - 5 or newer.
@@ -234,7 +234,8 @@ You have to insert the username/password values root/password into the user_tabl
 5. If you get a response such as the above, then ICAT is working.
 
 6. To stop icat and the Glassfish Server, do the following:
- To undeploy icat, do the following:
+
+To undeploy icat, do the following:
 
 {{{
 cd icat41
