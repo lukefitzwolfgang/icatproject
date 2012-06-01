@@ -4,9 +4,11 @@
 
 = Draft terms for the Icat Executive Board =
 
-v 0.3 - Alistair Mills - Reviewed to include Brian's ideas
+v 0.4 - Alistair Mills - Reviewed to include Brian's ideas
 
-The ownership of ICAT rests with the Director of eScience of STFC.
+Unless explicitly declared otherwise, term ICAT includes both ICAT and additional related software such as Topcat.
+
+The ownership of ICAT and related products such as Topcat rests with the Director of eScience of STFC.
 
 == Purpose ==
 
@@ -58,6 +60,8 @@ The members of the Board have the following responsibilities:
  * to provide strategic advice to the collaboration;
  * to protect the interests of the institution which they represent;
  * to approve the ICAT roadmap;
+ * to approve the incorporation of additional components such as Topcat into ICAT;
+ * to ensure that ICAT and its additional components evolve in harmony;
  * to ensure that the institution which they represents provides appropriate resources to the collaboration.
 
 == Meetings ==
