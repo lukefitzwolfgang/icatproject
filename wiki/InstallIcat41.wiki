@@ -16,7 +16,8 @@ Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle c
  * Glassfish Server - 3.1 or newer;
  * Database connection to either Oracle of Mysql;
  * Database connection jar such as ojdbc14.jar for Oracle or mysql-connector-java.jar for Mysql;
- * Python with the python-thuds plugin.
+ * Python with the python-suds plugin;
+ * tools such as sqlplus or mysql to access a database;
  
 If a remote database is not available, a local one can be created using:
  
@@ -27,6 +28,7 @@ or:
  
  * Mysql - 5 or newer;
  * Mysql client tools - 5 or newer.
+
 
 == Source of installation materials ==
 
@@ -62,7 +64,7 @@ Environmental variables:
 It is conventional to set the following variables:
  * JAVA_HOME;
  * GLASSFISH_HOME;
- * PATH - add $JAVA_HOME/bin and GLASSFISH_HOME/bin. 
+ * PATH - add $JAVA_HOME/bin and $GLASSFISH_HOME/bin. 
 
 Note that the operating system user glassfish3 is running the Glassfish Server and the applications.  There is no need to have enhanced privileges to install ICAT once the prerequisite software has been installed and the user account glassfish3 has been created. You do not require access as system administrator of the database once the user accounts icat and icatuser have been created.
 
@@ -103,6 +105,7 @@ Server certificate:
  * Neither the server nor a client application require a certificate, although icat is deployed using https protocol.
 
 Ports:
+ * The port 1521 is available for Oracle;
  * The port 3306 is available for Mysql;
  * The port 8070 is available for Oracle Express;
  * The port 8181 is available for the Glassfish Server to deploy the icat api;
@@ -134,7 +137,7 @@ Do the following:
 asadmin logon
 }}}
 
-It will then prompt for admin username (admin) and admin password.  It stores these in ~.asadmin.  Once this has been done, it uses these values and does not prompt.
+It will then prompt for admin username (admin) and admin password.  It stores these in ~/.asadmin.  Once this has been done, it uses these values and does not prompt.
 
 1. Start the Glassfish Server, create the database pools and deploy icat. Deploying icat also creates the schemas for icat and icatuser, but does not give them useful content.
 
@@ -229,7 +232,7 @@ If you get a response such as the following:
 suds.WebFault: Server raised fault: 'Username and password do not match'
 }}}
 
-You have to insert the username/password values root/password into the user_table in the icatuser schema in the database.
+You have to insert the username/password values root/password into the user_table in the icatuser schema in the database in use.
 
 5. If you get a response such as the above, then ICAT is working.
 
