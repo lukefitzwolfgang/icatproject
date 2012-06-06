@@ -59,7 +59,10 @@ Please meeting the following requirements:
 
 == Pandata ==
 
- * REST web service (PSI request at several meetings)
+ * REST web service (PSI request at several meetings;
+ * A Topcat server for Pandata must be accessible over the internet on standard ports and have a standard certificate and be visible from within an institutional firewall without modifications to the firewall;
+ * Any ICAT service deployed for federation by a remote Topcat which is within an institutional firewall must offer its data in a manner that makes it visible to the remote Topcat without a change to the firewall of the institutional firewall of the Topcat.  
+
 
 
 
