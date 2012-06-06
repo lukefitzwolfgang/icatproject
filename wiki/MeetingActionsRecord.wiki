@@ -19,6 +19,13 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Update from PaN-data (Milan/George)
  * AOB (Any)
 
+||Item   ||Description                                                                       ||Res*(1)   ||           Status||                                                   Comment||
+||38.00  ||Document the meeting                                                              ||AM        ||             Done||                                                         -||
+||38.01  ||Send a message to Barcelona asking for help testing ICAT 4.1 RC                   ||AM        ||             Done||                                                         -||
+||38.02  ||Include Topcat in the responsibilities of the IEB                                 ||AM        ||             Done||                                                         -||
+||38.03  ||ICAT Collaboration is to include discussion of requirements and changes to Topcat ||All       ||             Done||                                                         -||
+||38.04  ||Send changes to ICAT 4.0 to support SNS to SF                                     ||SR        ||             Done||                                                         -||
+
 == Meeting 37 - 17 May 2012 =
 
 === Agenda 37 ===
