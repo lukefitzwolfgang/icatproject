@@ -53,7 +53,7 @@ The Secretary has the following responsibilities:
  * arrange the meetings of the Board;
  * maintain and publish the minutes of the meetings.
 
- === Responsibilities of Board Members ===
+ === Board Members ===
  
 The members of the Board have the following responsibilities:
  * to attend meetings of the Board and discharge any actions;
