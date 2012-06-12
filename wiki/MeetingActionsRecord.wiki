@@ -6,6 +6,18 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
+== Meeting 39 - 14 June 2012 =
+
+=== Agenda 39 ===
+
+ * Actions from the meetings of 31 May (Alistair)
+ * ICAT 4.1 - Status  (Steve)
+ * Plans for ICAT 4.2 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4 for DLS (Ghita)
+ * Deployment of ICAT 4 for ISIS (Tom)
+ * AOB (Any)
+
 == Meeting 38 - 31 May 2012 =
 
 === Agenda 38 ===
