@@ -6,6 +6,19 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
+== Meeting 40 - 12 July 2012 =
+
+=== Agenda 40 ===
+
+ * Actions from the meetings of 14 June (Alistair)
+ * ICAT 4.1 - Status  (Steve)
+ * Plans for ICAT 4.2 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.2 for DLS (Ghita)
+ * Deployment of ICAT 4.2 for ISIS (Tom)
+ * Deployment of ICAT 4.1 for CLF (Alistair)
+ * AOB (Any)
+
 == Meeting 39 - 14 June 2012 =
 
 === Agenda 39 ===
@@ -18,6 +31,13 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Deployment of ICAT 4 for ISIS (Tom)
  * AOB (Any)
 
+=== Actions 39 ===
+
+||Item   ||Description                                                                       ||Res*(1)   ||           Status||                                                   Comment||
+||39.00  ||Document the meeting                                                              ||AM        ||             Done||                                                         -||
+||39.01  ||Distribute TOC/Plan for the Pandata Deliverable WP4.1                             ||MP        ||             Done||                                                         -||
+||39.02  ||Make an announcement about the availability of ICAT 4.1                           ||AM        ||             Done||                                                         -||
+ 
 == Meeting 38 - 31 May 2012 =
 
 === Agenda 38 ===
@@ -64,7 +84,6 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 ||37.05  ||Comment on Terms for the Executive Board                                          ||All       ||             Done||                                       IcatExecutiveBoard ||
 ||37.06  ||Communicate with Shelly about the downloader                                      ||AW/SR     ||      In progress||                                                         -||
 ||37.07  ||Do initial definition of ICAT 4.2                                                 ||TG/AM     ||      In progress|| Icat42Roadmap, RequirementsIcat42, Icat42ReleaseCriteria ||
-
 
 === Attendance 37 ===
 
