@@ -2,10 +2,6 @@
 
 <wiki:toc max_depth="3" />
 
-= Warning - this is work in progress=
-
-Do not rely on this documentation.  It is not yet complete.
-
 = Installation instructions for ICAT 4.1 =
 
 == Source of pre-requisite materials ==
@@ -34,18 +30,18 @@ or:
 
 ICAT 4.1 is available for download from the following URL:  
 {{{
-http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0-rc-03
+http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0
 }}}
 
 For example, you can download with the wget commands as follows:
 {{{
-wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0-rc-03/icat.ear-4.1.0-rc-03-config.zip 
-wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0-rc-03/icat.ear-4.1.0-rc-03.ear
+wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0/icat.ear-4.1.0-config.zip 
+wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0/icat.ear-4.1.0.ear
 }}}
 
 Installation notes are available at the following URLs:
 {{{
-http://www.icatproject.org/mvn/site/4.1.0-rc-03/icat.ear/installation.html
+http://www.icatproject.org/mvn/site/4.1.0/icat.ear/installation.html
 http://code.google.com/p/icatproject/wiki/InstallIcat41
 }}}
 
