@@ -41,7 +41,7 @@ wget http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.1.0/icat.ear
 
 Installation notes are available at the following URLs:
 {{{
-http://www.icatproject.org/mvn/site/4.1.0/icat.ear/installation.html
+http://www.icatproject.org/mvn/site/icat/4.1.0/icat.ear/installation.html
 http://code.google.com/p/icatproject/wiki/InstallIcat41
 }}}
 
