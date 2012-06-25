@@ -130,7 +130,7 @@ Do the following:
 0. If starting the glassfish server for the first time, store the admin username and password.  Use the following command:
 
 {{{
-asadmin logon
+asadmin login
 }}}
 
 It will then prompt for admin username (admin) and admin password.  It stores these in ~/.asadmin.  Once this has been done, it uses these values and does not prompt.
@@ -183,13 +183,13 @@ Command create-jms-resource executed successfully.
 3. To deploy icat , do the following:
 
 {{{
-asadmin deploy icat.ear-4.1.0-rc-03.ear
+asadmin deploy icat.ear-4.1.0.ear
 }}}
 
 Expect a response such as the following:
 
 {{{
-Application deployed with name icat.ear-4.1.0-rc-03.
+Application deployed with name icat.ear-4.1.0.
 Command deploy executed successfully.
 }}}
 
@@ -198,7 +198,7 @@ You may also get warning messages at this point.  These can be ignored if you ge
 If deploying on a system which has been previously used, expect the following response:
 
 {{{
-Cannot create tables for application icat.ear-4.1.0-rc-03. The expected DDL file icat.ear-4.1.0-rc-03_icat.exposed-4.1.0-rc-03_icatuser_createDDL.jdbc is not available.
+Cannot create tables for application icat.ear-4.1.0. The expected DDL file icat.ear-4.1.0_icat.exposed-4.1.0_icatuser_createDDL.jdbc is not available.
 PER01003: Deployment encountered SQL Exceptions:
 	PER01000: Got SQLException executing statement "CREATE TABLE PUBLICATION (ID NUMBER(19) NOT NULL, CREATE_ID VARCHAR2(255) NOT NULL, CREATE_TIME TIMESTAMP NOT NULL, FULLREFERENCE VARCHAR2(255) NOT NULL, MOD_ID VARCHAR2(255) NOT NULL, MOD_TIME TIMESTAMP NOT NULL, REPOSITORY VARCHAR2(255) NULL, REPOSITORYID VARCHAR2(255) NULL, URL VARCHAR2(255) NULL, INVESTIGATION_ID NUMBER(19) NOT NULL, PRIMARY KEY (ID))": java.sql.SQLException: ORA-00955: name is already used by an existing object
 .
@@ -212,14 +212,14 @@ Pay attention to the last line of the message.  The bits before that are only wa
 
 {{{
 cd icat41/test_icat
-python test.py 8181 password
+python test.py localhost:8181 password
 cd ..
 }}}
 
 Expect a response such as the following:
 
 {{{
-It seems to work...
+Login, search, create, delete and logout operations were all successful.
 }}}
 
 If you get a response such as the following:
@@ -238,7 +238,7 @@ To undeploy icat, do the following:
 
 {{{
 cd icat41
-asadmin undeploy icat.ear-4.1.0-rc-03
+asadmin undeploy icat.ear-4.1.0
 }}}
  
 Expect the following outcome:
