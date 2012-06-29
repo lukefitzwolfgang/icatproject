@@ -68,5 +68,8 @@ Please meeting the following requirements:
 
 == Others ==
 
+ * Integration of a work flow management system such as Taverna
+
+
 
 == - the end - ==
