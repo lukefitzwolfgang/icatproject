@@ -13,16 +13,17 @@ The focus of this release is to support the work of the existing facilities usin
 == ISIS ==
 
 (E = essential, D= Desirable)
- * (E) A *fully supported* upgrade path from ICAT 3.3 to 4.1
- * (E) Maintain a legacy icat3-exposed web service API to allow gradual migration. This is essential for established users to realistically migrate.
- * (E) Maintain the ability to create many datafiles in an existing dataset in one web service call - ideally some kind of ingestXml call
- * (E) Usage reports (how many people use ICAT, how many people downloaded dataset x, how many times has anyone asked for data >3 years old)
- * (E) TopCAT - add ability for data owners to grant permission on their datasets to others
- * (E) Upload of derived data through TopCAT
- * (D) A way of grouping parameter names - to solve the 86 variations of 'temperature' problem (temp, temp1, t1 sampletemp etc). Currently this makes searching nearly impossible
- * (D) TopCAT - expose information about the investigators
- * (D) TopCAT - download all metadata for an investigation or dataset
- * (D) Basic visualize  or view data in TopCAT, possibly using jpowder or similar
+ * (E) A *fully supported* upgrade path from ICAT 3.3 to 4.2;
+ * (E) Maintain a legacy icat3-exposed web service API to allow gradual migration. This is essential for established users to realistically migrate;
+ * (E) Maintain the ability to create many datafiles in an existing dataset in one web service call - ideally some kind of ingestXml call;
+ * (E) Usage reports (how many people use ICAT, how many people downloaded dataset x, how many times has anyone asked for data >3 years old);
+ * (E) TopCAT - add ability for data owners to grant permission on their datasets to others;
+ * (E) Upload of derived data through TopCAT;
+ * (D) A way of grouping parameter names - to solve the 86 variations of 'temperature' problem (temp, temp1, t1 sampletemp etc). Currently this makes searching nearly impossible;
+ * (D) TopCAT - expose information about the investigators;
+ * (D) TopCAT - download all metadata for an investigation or dataset;
+ * (D) Basic visualize  or view data in TopCAT, possibly using jpowder or similar;
+ * (D) Interface between SDB and ICAT.  The details of this requirement has to elaborated with Chris Kruk in eScience.
 
 == SNS ==
 
