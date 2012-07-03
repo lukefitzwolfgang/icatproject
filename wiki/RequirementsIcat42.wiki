@@ -65,6 +65,27 @@ Please meeting the following requirements:
  * Any ICAT service deployed for federation by a remote Topcat which is within an institutional firewall must offer its data in a manner that makes it visible to the remote Topcat without a change to the firewall of the institutional firewall of the Topcat.   
 
 
+ * Clean plugin APIs
+
+ In order to facilitate the adaption of ICAT to the different users' computing environments, ICAT should have two clean and well-documented plugin APIs for:
+
+ - Authentication / Authorization
+
+ - Interface (what is now the WSDL connector)
+
+A note: In Trieste, I have heard of a pluggable authentication module for Umbrella. I would be very interested in details about this. If ICAT already has such an interface perhaps I am misunderstanding the authentication API.
+
+ * Developers' documentation
+
+It would be interesting to know something about the status of the different branches in the repository, as well as setting up a development environment. The current release is, however, already providing very good documentation.
+
+ * Migration assistance
+
+The users require a well-documented and easy migration path between ICAT releases in order to support the idea of long-term data storage.
+
+ * Alternatives to Glassfish
+
+As some sites do not use Glassfish for the JEE applications, it should be possible to deploy ICAT on other application servers such as Web Logic and Jboss.
 
 
 == Others ==
