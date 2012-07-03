@@ -7,8 +7,8 @@ Data.ISIS is written in python and maintained by Freddie Akeroyd.
 
 The 3 python source files are
 
-[http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICATService_services.py]
+[http://code.google.com/p/icatproject/source/browse/parked/old-doc/ICATService_services.py]
 
-[http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICATService_services_types.py]
+[http://code.google.com/p/icatproject/source/browse/parked/old-doc/ICATService_services_types.py]
 
-[http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/data_isis.py]
+[http://code.google.com/p/icatproject/source/browse/parked/old-doc/data_isis.py]
