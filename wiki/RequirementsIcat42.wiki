@@ -10,6 +10,8 @@ The purpose of this page is to provide a place where people can write their shop
 
 The focus of this release is to support the work of the existing facilities using ICAT ie ISIS, SNS, DLS and CLF.
 
+ * Include licence in downloads and maven builds
+
 == ISIS ==
 
 (E = essential, D= Desirable)
