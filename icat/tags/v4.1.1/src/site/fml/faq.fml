@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs xmlns="http://maven.apache.org/FML/1.0.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/FML/1.0.1 http://maven.apache.org/xsd/fml-1.0.1.xsd"
+  title="Frequently Asked Questions"
+  toplink="false">
+
+  <part id="general">
+    <title>General</title>
+
+    <faq id="DB Schema Creation">
+      <question>
+        Where is the script to create the database schema?
+      </question>
+      <answer>
+        <p>The schema is created automatically when the icat ear file is deployed. 
+        This works fine if no tables exist. If tables do exist it will try to create 
+        them and report an error for each table. If any table exists and has the 
+        wrong structure, it will not be replaced or updated, and ICAT will not work
+        properly.</p>
+      </answer>
+    </faq>
+     
+  </part>
+
+</faqs>
