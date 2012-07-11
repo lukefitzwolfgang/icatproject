@@ -1,0 +1,210 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.xml.namespace.QName;
+
+import org.icatproject.Datafile;
+import org.icatproject.Dataset;
+import org.icatproject.DatasetParameter;
+import org.icatproject.ICAT;
+import org.icatproject.ICATService;
+import org.icatproject.IcatException_Exception;
+import org.icatproject.Investigation;
+
+public class Top {
+
+	private static final String host = "http://sig-11.esc.rl.ac.uk:8080";
+
+	private static final String tsb = "{ts ";
+	private static final String tse = "}";
+
+	public static void main(String[] args) throws MalformedURLException, IcatException_Exception {
+		URL icatUrl = null;
+		icatUrl = new URL(host + "/ICATService/ICAT?wsdl");
+		QName qName = new QName("http://icatproject.org", "ICATService");
+		ICATService service = new ICATService(icatUrl, qName);
+		ICAT icat = service.getICATPort();
+		String sessionId = icat.login("CIC", "password");
+		System.out.println("Session id: " + sessionId);
+
+		String ds1, ds2;
+
+		{
+			// First 10 GS datasets ordered by name
+			List<?> ids = icat.search(sessionId,
+					",10 Dataset.name ORDER BY name [type.name = 'GS']");
+			System.out.print("\nFirst 10 dataset names order by name");
+			for (Object id : ids) {
+				System.out.print(" " + id);
+			}
+			System.out.println();
+		}
+
+		{
+			// As before but skip the first 8 and then take the next two
+			List<?> ids = icat.search(sessionId,
+					"8,2 Dataset.name ORDER BY name [type.name = 'GS']");
+			System.out.print("\n9th and 10th dataset names order by name");
+			for (Object id : ids) {
+				System.out.print(" " + id);
+			}
+			System.out.println();
+			ds1 = (String) ids.get(0);
+			ds2 = (String) ids.get(1);
+		}
+
+		{
+			// Parameters and files of datasets - note that we only print one
+			// parameter and one file for each dataset - see break statements
+			String query = "Dataset ORDER BY name INCLUDE DatasetParameter, Datafile  [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
+			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
+			System.out.println("\nParameters and files of datasets with names between " + ds1
+					+ " and " + ds2);
+			System.out.println("Query is " + query);
+			List<?> dss = icat.search(sessionId, query);
+			for (Object o : dss) {
+				Dataset ds = (Dataset) o;
+				System.out.println(ds.getName() + " " + ds.getCreateTime() + " "
+						+ ds.getParameters().size() + " " + ds.getDatafiles().size());
+				for (DatasetParameter dp : ds.getParameters()) {
+					System.out
+							.println("   " + dp.getType().getName() + ": " + dp.getNumericValue());
+					break;
+				}
+				for (Datafile dp : ds.getDatafiles()) {
+					final StringBuilder sb = new StringBuilder(host + "/ids/Data/" + "getThumbnail");
+					sb.append("?sessionid=" + sessionId);
+					sb.append("&datafileid=" + dp.getId());
+					System.out.println("   " + dp.getName() + " at " + sb);
+					break;
+				}
+			}
+		}
+
+		{
+			// Specific dataset parameters only - selected by name
+			String query = "DatasetParameter  INCLUDE Dataset, DatasetType [type.name = 'SAD_SPEC_B_FWHM' OR type.name = 'GEM_SHOT_NUM_VALUE'] <-> Dataset [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
+			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
+			System.out.println("\nSpecific dataset parameters only - selected by name");
+			System.out.println("Query is " + query);
+
+			List<?> dsps = icat.search(sessionId, query);
+			for (Object o : dsps) {
+				DatasetParameter dsp = (DatasetParameter) o;
+				System.out.println(dsp.getType().getName() + " " + dsp.getDataset().getId() + ": "
+						+ dsp.getNumericValue());
+			}
+		}
+
+		Set<Object> dssab;
+		{
+			// Datasets selected by presence of a parameter with a specific
+			// value or a file being present. This requires multiple queries -
+			// get the two sets and combine them.
+			String query = "Dataset.id [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS'] <-> DatasetParameter [(type.name = 'N_FROG_AUTOWIDTH_VALUE' AND numericValue >= 8)]";
+			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
+			System.out
+					.println("\nDatasets selected by presence of a parameter with a specific value or a file being present");
+			System.out.println("Query is " + query);
+
+			List<Object> dssa = icat.search(sessionId, query);
+
+			query = "Dataset.id [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS'] <-> Datafile [name = 'LASER_BAY_SCINTILLATOR_TRACE']";
+			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
+			System.out.println("Query is " + query);
+
+			List<Object> dssb = icat.search(sessionId, query);
+
+			dssab = new HashSet<Object>(dssa);
+			dssab.addAll(dssb);
+
+			System.out.println("dataset ids are: " + dssab);
+		}
+
+		{
+			// Go from a list of dataset ids and access parameters and
+			// investigations. This time we have all parameters of each dataset
+			// and need to select by Java code. This is rather inefficient the
+			// investigations information should be cached rather than looking
+			// it up every time.
+			System.out.println("\nGo from a list of dataset ids " + dssab
+					+ "  and access parameters and investigations.");
+			for (Object o : dssab) {
+				Long dsid = (Long) o;
+				Dataset ds = (Dataset) icat.get(sessionId,
+						"Dataset INCLUDE DatasetParameter, Datafile, Investigation", dsid);
+				Investigation inv = (Investigation) icat.get(sessionId, "Investigation", ds
+						.getInvestigation().getId());
+				System.out.println(ds.getName() + " with inv " + inv.getName() + " and "
+						+ +ds.getParameters().size() + " parameters and "
+						+ ds.getDatafiles().size() + " files");
+				for (DatasetParameter dp : ds.getParameters()) {
+					String name = dp.getType().getName();
+					if (Arrays.asList("N_FROG_AUTOWIDTH_VALUE", "S_PUMP_TIMING_XPOS")
+							.contains(name)) {
+						System.out.println("   " + name + ": " + dp.getNumericValue());
+					}
+				}
+			}
+
+		}
+
+		{
+			// Selection by time
+
+			String query = ",1000 Dataset  ORDER BY startDate [type.name = 'GD' AND startDate BETWEEN :lower AND :upper]";
+			query = query.replace(":lower", tsb + "2011-12-15 00:00:00" + tse).replace(":upper",
+					tsb + "2012-08-01 00:00:00" + tse);
+
+			System.out.println("\nLook for daily data between dates");
+			System.out.println("Query is " + query);
+
+			List<Object> dss = icat.search(sessionId, query);
+
+			System.out.println(dss.size() + " are returned");
+			System.out.println("1st has startdate of " + ((Dataset) dss.get(0)).getStartDate());
+		}
+
+		{
+			// Use of functions
+			System.out.println("\nCount of datasets is "
+					+ icat.search(sessionId, "COUNT(Dataset)").get(0));
+		}
+
+		{
+			// Datasets without a specific file
+			String query = ",1000 Dataset.id  [type.name = 'GS' AND startDate BETWEEN :lower AND :upper]";
+			query = query.replace(":lower", tsb + "2011-12-15 00:00:00" + tse).replace(":upper",
+					tsb + "2012-04-01 00:00:00" + tse);
+			List<Object> dssa = icat.search(sessionId, query);
+
+			query = ",1000 Dataset.id  [type.name = 'GS' AND startDate BETWEEN :lower AND :upper] <-> Datafile [name = 'N_PUMP_TIMING_TRACE']";
+			query = query.replace(":lower", tsb + "2011-12-15 00:00:00" + tse).replace(":upper",
+					tsb + "2012-04-01 00:00:00" + tse);
+
+			List<Object> dssb = icat.search(sessionId, query);
+			dssab = new HashSet<Object>(dssa);
+			dssab.retainAll(dssb);
+			System.out.println("dataset ids size: " + dssab.size());
+		}
+
+		{
+			// Average value of a datasetparameter
+			String query = "AVG(DatasetParameter.numericValue) [type.name = 'GEM_SHOT_NUM_VALUE']";
+			System.out.println("\nMax is " + icat.search(sessionId, query).get(0));
+		}
+
+		{
+			// Average value of a datasetparameter for a range of shot dates
+			String query = "AVG(DatasetParameter.numericValue) [datasetParameterPK.name = 'GEM_SHOT_NUM_VALUE'] <-> Dataset [startDate BETWEEN :lower AND :upper]";
+			query = query.replace(":lower", tsb + "2011-12-15 00:00:00" + tse).replace(":upper",
+					tsb + "2012-04-01 00:00:00" + tse);
+			System.out.println("\nMax is " + icat.search(sessionId, query).get(0));
+		}
+
+	}
+}
