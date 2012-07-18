@@ -15,7 +15,7 @@ Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle c
 
 == Source of installation materials ==
 
-ICAT 4.0 is available via the [Downloads] tab on this page, or via this direct link:  
+ICAT 4.0 is available via the [http://code.google.com/p/icatproject/downloads/list Downloads] tab on this page, or via this direct link:  
 
 [http://icatproject.googlecode.com/files/icat4.0.0.zip]
 
