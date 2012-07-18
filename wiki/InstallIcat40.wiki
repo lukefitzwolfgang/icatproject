@@ -28,10 +28,7 @@ If you would like a version from the SVN, then it can be obtained with a command
 svn checkout https://icatproject.googlecode.com/svn/ops/icat40 
 }}}
 
-The release zip contains a file called readme.txt with instructions.  A longer version is available at the following URL:
-{{{
-http://code.google.com/p/icatproject/wiki/InstallIcat40 
-}}}
+The release zip contains a file called readme.txt with instructions. These supplement the information given on this wiki page. Additionally, if you install version 4.1.1, check the documentation on [http://www.icatproject.org/mvn/site/icat/4.1.1/icat.ear/installation.html].
 
 If you wish to browse the materials on the web site, use the following link:
 {{{
