@@ -1,5 +1,9 @@
 #summary Description of the Devigo Data Portal.
-#labels Icat-DP
+#labels Icat-DP,Deprecated
+
+= Depreciation notice = 
+
+Support for Data Portal was dropped in ICAT 4.  [InstallTopcat40 Topcat] is the replacement.
 
 = Data Portal =
 Author(s): Glen Drinkwater and Richard Tyer 
