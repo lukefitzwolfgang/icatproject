@@ -16,6 +16,7 @@
  * [RequirementsIcat41       Icat4.1 Requirements]
  * [Icat41ReleaseCriteria    Icat4.1 Release criteria]
  * [Icat4Workpackages        Icat4.1 Work Packages]
+ * [InstallIcat41            Icat4.1 Installation notes]
 
 == ICAT4.0 ==
 
