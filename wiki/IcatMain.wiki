@@ -41,7 +41,6 @@
  * [IcatDb           ICAT DataBases]
  * [CSMD             ICAT Metadata Model (CSMD)]
  * [IcatApi          ICAT API]
- * [IcatDp           ICAT DataPortal]
  * [IcatClients      ICAT Clients]
 
 == Installation ==
