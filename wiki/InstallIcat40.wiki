@@ -6,7 +6,7 @@
 
 == Source of pre-requisite materials ==
 
-Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle client tools (sqlplus), Oracle Java connector (ojdbc14.jar) are all available for download from Oracle.   The versions required are the following:
+Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle client tools (sqlplus), Oracle Java connector (ojdbc14.jar) are all available for download from Oracle. The versions required are the following:
 
  * Java Enterprise Edition - 6 or newer;
  * Glassfish Server - 3.1 or newer;
@@ -23,16 +23,11 @@ The newest minor versions from the 4.x series can be downloaded from
 
 [http://www.icatproject.org/mvn/site/icat/]
 
-If you would like a version from the SVN, then it can be obtained with a command as follows:
-{{{
-svn checkout https://icatproject.googlecode.com/svn/ops/icat40 
-}}}
-
 The release zip contains a file called readme.txt with instructions. These supplement the information given on this wiki page. Additionally, if you install version 4.1.1, check the documentation on [http://www.icatproject.org/mvn/site/icat/4.1.1/icat.ear/installation.html].
 
-If you wish to browse the materials on the web site, use the following link:
-{{{
-http://code.google.com/p/icatproject/source/browse/ops/icat40/
+You can [http://code.google.com/p/icatproject/source/browse/ browse the source code repository] directly from this page, and [http://code.google.com/p/icatproject/source/checkout check out] the newest revision using Subversion. Note that, if you only want to install ICAT, you will only need the files in the [http://code.google.com/p/icatproject/source/browse/ops ops] directory:
+{{{ 
+svn checkout https://icatproject.googlecode.com/svn/ops/icat40 
 }}}
 
 == Assumptions ==
