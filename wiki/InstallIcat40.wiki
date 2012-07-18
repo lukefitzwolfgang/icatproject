@@ -15,24 +15,17 @@ Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle c
 
 == Source of installation materials ==
 
-ICAT 4.0 is available for download from the following URL:  
-{{{
-http://icatproject.googlecode.com/files/icat4.0.0.zip 
-}}}
+ICAT 4.0 is available via the [Downloads] tab on this page, or via this direct link:  
 
-For example, you can download with the wget command as follows:
-{{{
-wget http://icatproject.googlecode.com/files/icat4.0.0.zip 
-}}}
+[http://icatproject.googlecode.com/files/icat4.0.0.zip]
+
+The newest minor versions from the 4.x series can be downloaded from 
+
+[http://www.icatproject.org/mvn/site/icat/]
 
 If you would like a version from the SVN, then it can be obtained with a command as follows:
 {{{
 svn checkout https://icatproject.googlecode.com/svn/ops/icat40 
-}}}
-
-If you would like to review the set of downloads available, use the following URL in a browser:
-{{{
-http://code.google.com/p/icatproject/downloads/list
 }}}
 
 The release zip contains a file called readme.txt with instructions.  A longer version is available at the following URL:
