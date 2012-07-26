@@ -6,17 +6,17 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
-== Meeting 40 - 12 July 2012 =
+== Meeting 40 - 26 July 2012 =
 
 === Agenda 40 ===
 
- * Actions from the meetings of 14 June (Alistair)
+ * Actions from the meetings of 14 June (Steve)
  * ICAT 4.1 - Status  (Steve)
  * Plans for ICAT 4.2 (Tom)
  * Update from PaN-data (Milan/George)
  * Deployment of ICAT 4.2 for DLS (Ghita)
  * Deployment of ICAT 4.2 for ISIS (Tom)
- * Deployment of ICAT 4.1 for CLF (Alistair)
+ * Deployment of ICAT 4.1 for CLF (Steve)
  * AOB (Any)
 
 == Meeting 39 - 14 June 2012 =
