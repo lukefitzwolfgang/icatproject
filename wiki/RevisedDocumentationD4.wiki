@@ -1,5 +1,0 @@
-#labels Installation
-#Revised Documentation D-4.
-
-= Revised Documentation: D-4 =
-
