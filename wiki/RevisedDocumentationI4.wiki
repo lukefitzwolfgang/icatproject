@@ -1,4 +1,0 @@
-#labels Installation
-#Revised Documentation I-4.
-
-= Revised Documentation I-4 =
