@@ -4,6 +4,12 @@
 
 = Installation instructions for ICAT 4.1 =
 
+*It should be noted that these instructions should not be considered as definitive. The definitive documentation for ICAT - specific to each release may be found below:
+
+http://www.icatproject.org/mvn/site
+
+*
+
 == Source of pre-requisite materials ==
 
 Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle client tools (sqlplus), Oracle Java connector (ojdbc14.jar), Mysql, mysql tools (mysql), Mysql Java connector (mysql-connector-java.jar) are all available for download from Oracle.   The versions required are the following:
