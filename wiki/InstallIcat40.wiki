@@ -4,6 +4,8 @@
 
 = Installation instructions for ICAT 4.0 =
 
+*This was made available to expose the features of ICAT4. It should no longer be installed but a newer release selected.*
+
 == Source of pre-requisite materials ==
 
 Java Enterprise Edition, Glassfish Server, Oracle Database Express, the Oracle client tools (sqlplus), Oracle Java connector (ojdbc14.jar) are all available for download from Oracle. The versions required are the following:
