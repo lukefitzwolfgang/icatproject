@@ -1,6 +1,0 @@
-#labels Installation
-#Revised Documentation I-7.
-
-= Revised Documentation I-7 =
-
-
