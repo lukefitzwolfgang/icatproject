@@ -1,4 +1,0 @@
-#labels Installation
-#Revised Documentation D-5.
-
-= Revised Documentation: D-5 =
