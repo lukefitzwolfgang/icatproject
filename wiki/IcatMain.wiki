@@ -37,23 +37,16 @@
 
 == Design ==
 
- * [IcatOverview     ICAT Overview]
- * [IcatDb           ICAT DataBases]
+ 
  * [CSMD             ICAT Metadata Model (CSMD)]
- * [IcatApi          ICAT API]
- * [IcatClients      ICAT Clients]
+
 
 == Installation ==
 
  * [IcatInstallation Revised Database and Icat Installation]
- * [IngestingData                                          ]
  * [Logging                              Control of Logging]
 
-== Developers Resource ==
 
- * [Authorisation]
- * [Testing]
- * [FeaturesMissing]
 
 == Project ==
 
