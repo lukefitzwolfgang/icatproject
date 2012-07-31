@@ -1,6 +1,8 @@
 #labels Installation
 = How to control logging in ICAT =
 
+*This page is not up to date. Relevant material will be moved to the installation instructions and this page will be deleted.*
+
 == Introduction ==
 
 The icat service makes use of the Apache log4j mechanism to perform its logging and most of this note is devoted to this aspect of logging. However it may also be necessary to control the logging of the application server - assumed here to be glassfish v3.0 and of the database access layer, eclipselink.
