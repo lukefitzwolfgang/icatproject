@@ -14,21 +14,44 @@ import org.icatproject.ICAT;
 import org.icatproject.ICATService;
 import org.icatproject.IcatException_Exception;
 import org.icatproject.Investigation;
+import org.icatproject.Login.Credentials;
+import org.icatproject.Login.Credentials.Entry;
 
 public class Top {
-
-	private static final String host = "http://sig-11.esc.rl.ac.uk:8080";
 
 	private static final String tsb = "{ts ";
 	private static final String tse = "}";
 
 	public static void main(String[] args) throws MalformedURLException, IcatException_Exception {
+		if (args.length != 4) {
+			System.err.println("Must have four args: hosturl, \"db\"|\"ldap\", username, password");
+			System.exit(1);
+		}
+		String host = args[0];
+		String plugin = args[1];
+		String userName = args[2];
+		String password = args[3];
 		URL icatUrl = null;
 		icatUrl = new URL(host + "/ICATService/ICAT?wsdl");
 		QName qName = new QName("http://icatproject.org", "ICATService");
 		ICATService service = new ICATService(icatUrl, qName);
 		ICAT icat = service.getICATPort();
-		String sessionId = icat.login("CIC", "password");
+		
+		Credentials credentials = new Credentials();
+		List<Entry> entries = credentials.getEntry();
+		Entry e;
+
+		e = new Entry();
+		e.setKey("username");
+		e.setValue(userName);
+		entries.add(e);
+
+		e = new Entry();
+		e.setKey("password");
+		e.setValue(password);
+		entries.add(e);
+
+		String sessionId = icat.login(plugin, credentials);
 		System.out.println("Session id: " + sessionId);
 
 		String ds1, ds2;
@@ -60,7 +83,7 @@ public class Top {
 		{
 			// Parameters and files of datasets - note that we only print one
 			// parameter and one file for each dataset - see break statements
-			String query = "Dataset ORDER BY name INCLUDE DatasetParameter, Datafile  [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
+			String query = "Dataset ORDER BY name INCLUDE DatasetParameter, Datafile, ParameterType  [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
 			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
 			System.out.println("\nParameters and files of datasets with names between " + ds1
 					+ " and " + ds2);
@@ -87,7 +110,7 @@ public class Top {
 
 		{
 			// Specific dataset parameters only - selected by name
-			String query = "DatasetParameter  INCLUDE Dataset, DatasetType [type.name = 'SAD_SPEC_B_FWHM' OR type.name = 'GEM_SHOT_NUM_VALUE'] <-> Dataset [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
+			String query = "DatasetParameter  INCLUDE Dataset, DatasetType, DatasetParameter, ParameterType [type.name = 'SAD_SPEC_B_FWHM' OR type.name = 'GEM_SHOT_NUM_VALUE'] <-> Dataset [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
 			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
 			System.out.println("\nSpecific dataset parameters only - selected by name");
 			System.out.println("Query is " + query);
@@ -136,7 +159,7 @@ public class Top {
 			for (Object o : dssab) {
 				Long dsid = (Long) o;
 				Dataset ds = (Dataset) icat.get(sessionId,
-						"Dataset INCLUDE DatasetParameter, Datafile, Investigation", dsid);
+						"Dataset INCLUDE DatasetParameter, Datafile, Investigation, ParameterType", dsid);
 				Investigation inv = (Investigation) icat.get(sessionId, "Investigation", ds
 						.getInvestigation().getId());
 				System.out.println(ds.getName() + " with inv " + inv.getName() + " and "
@@ -178,32 +201,34 @@ public class Top {
 		{
 			// Datasets without a specific file
 			String query = ",1000 Dataset.id  [type.name = 'GS' AND startDate BETWEEN :lower AND :upper]";
-			query = query.replace(":lower", tsb + "2011-12-15 00:00:00" + tse).replace(":upper",
-					tsb + "2012-04-01 00:00:00" + tse);
+			query = query.replace(":lower", tsb + "2011-06-15 00:00:00" + tse).replace(":upper",
+					tsb + "2012-09-01 00:00:00" + tse);
 			List<Object> dssa = icat.search(sessionId, query);
 
 			query = ",1000 Dataset.id  [type.name = 'GS' AND startDate BETWEEN :lower AND :upper] <-> Datafile [name = 'N_PUMP_TIMING_TRACE']";
-			query = query.replace(":lower", tsb + "2011-12-15 00:00:00" + tse).replace(":upper",
-					tsb + "2012-04-01 00:00:00" + tse);
+			query = query.replace(":lower", tsb + "2011-06-15 00:00:00" + tse).replace(":upper",
+					tsb + "2012-09-01 00:00:00" + tse);
 
 			List<Object> dssb = icat.search(sessionId, query);
 			dssab = new HashSet<Object>(dssa);
-			dssab.retainAll(dssb);
-			System.out.println("dataset ids size: " + dssab.size());
+			dssab.removeAll(dssb);
+			System.out.println("dataset ids size a: " + dssa.size());
+			System.out.println("dataset ids size b: " + dssb.size());
+			System.out.println("dataset ids size a-b: " + dssab.size());
 		}
 
 		{
 			// Average value of a datasetparameter
 			String query = "AVG(DatasetParameter.numericValue) [type.name = 'GEM_SHOT_NUM_VALUE']";
-			System.out.println("\nMax is " + icat.search(sessionId, query).get(0));
+			System.out.println("\nAvg is " + icat.search(sessionId, query).get(0));
 		}
 
 		{
 			// Average value of a datasetparameter for a range of shot dates
-			String query = "AVG(DatasetParameter.numericValue) [datasetParameterPK.name = 'GEM_SHOT_NUM_VALUE'] <-> Dataset [startDate BETWEEN :lower AND :upper]";
-			query = query.replace(":lower", tsb + "2011-12-15 00:00:00" + tse).replace(":upper",
+			String query = "AVG(DatasetParameter.numericValue) [type.name = 'GEM_SHOT_NUM_VALUE'] <-> Dataset [startDate BETWEEN :lower AND :upper]";
+			query = query.replace(":lower", tsb + "2011-06-15 00:00:00" + tse).replace(":upper",
 					tsb + "2012-04-01 00:00:00" + tse);
-			System.out.println("\nMax is " + icat.search(sessionId, query).get(0));
+			System.out.println("\nAvg is " + icat.search(sessionId, query).get(0));
 		}
 
 	}
