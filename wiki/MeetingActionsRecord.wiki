@@ -6,6 +6,54 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
+== Meeting 42 - 23 August 2012 =
+
+=== Agenda 42 ===
+
+ * Actions from the meeting 41 (Alistair)
+ * Ingest client for ICAT (Tom/ Shelly)
+ * ICAT 4.2 - Status  (Steve)
+ * Plans for ICAT 4.3 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.3 for DLS (Ghita)
+ * Deployment of ICAT 4.3 for ISIS (Tom)
+ * Deployment of ICAT 4.2 for CLF (Alistair)
+ * AOB (Any)
+
+== Meeting 41 - 9 August 2012 =
+
+=== Agenda 41 ===
+
+ * Actions from the meeting 40 (Alistair)
+ * ICAT 4.1 - Status  (Alistair)
+ * Plans for ICAT 4.3 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.3 for DLS (Ghita)
+ * Deployment of ICAT 4.3 for ISIS (Tom)
+ * Deployment of ICAT 4.2 for CLF (Alistair)
+ * AOB (Any)
+
+=== Actions 41 ===
+
+|| Item  || Description                                                                     || Res*(1)   ||           Status||     Comment||
+|| 41.00 || Document the meeting                                                            || AM        ||             Done||           -||
+|| 41.01 || Publish the Nexus ingest to Google/contrib                                      || SR        ||                -||          - ||
+|| 41.02 || Call the next meeting on 23 August 2012                                         || AM        ||               - ||        -   ||
+
+=== Attendance 41 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||SMF  ||Steve Fisher                 || STFC eSc                   ||              ||     +     ||
+||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||HC   ||Harjinder Chahal             || STFC eSc                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC eSc                   ||              ||      +    ||
+||AW   ||Antony Wilson                || STFC eSc                   ||              ||      +    ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||              ||      +    ||
+||GK   ||George Kourousias            || ELETTRA                    ||              ||           ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+
 == Meeting 40 - 26 July 2012 =
 
 === Agenda 40 ===
@@ -21,11 +69,11 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 === Actions 40 ===
 
-||Item   ||Description                                                                       ||Res*(1)   ||           Status||     Comment||
-||40.00  ||Document the meeting                                                              ||SMF        ||             Done||          -||
-|| 40.01 || Investigate XMLIngest with new API - can it be generic?                         || TG        ||                -||           - ||
-|| 40.02 || Organise ICAT presence at NOBUGS and its ICAT workshop                          || TG        ||                - ||       -   ||
-|| 40.03 || Provide data to Ghita in ICAT 4.1/4.2 format                                    || GKM       ||                - || Assigned to Ghita for the moment to make sure it is not forgotten. ||
+||Item   ||Description                                                                      || Res*(1)   ||           Status||     Comment||
+||40.00  ||Document the meeting                                                             || SMF       ||             Done||           -||
+|| 40.01 || Investigate XMLIngest with new API - can it be generic?                         || TG        ||         On-going||          - ||
+|| 40.02 || Organise ICAT presence at NOBUGS and its ICAT workshop                          || TG        ||         On-going||        -   ||
+|| 40.03 || Provide data to Ghita in ICAT 4.1/4.2 format                                    || GKM       ||               - || Assigned to Ghita for the moment to make sure it is not forgotten. ||
 
 === Attendance 40 ===
 
@@ -34,12 +82,12 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 ||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
 ||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
 ||HC   ||Harjinder Chahal             || STFC eSc                   ||     +        ||           ||
-||KP   ||Kevin Phipps                 || STFC eSc                   ||             ||         +  ||
+||KP   ||Kevin Phipps                 || STFC eSc                   ||              ||        +  ||
 ||AW   ||Antony Wilson                || STFC eSc                   ||              ||       +   ||
-||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +         ||          ||
-||MP   ||Milan Prica                  || ELETTRA                    ||             ||           ||
-||GK   ||George Kourousias            || ELETTRA                    ||             ||           ||
-||SR   ||Shelly Ren                   || ORNL SNS                   ||              ||          ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||              ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||              ||           ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||              ||           ||
 
 === Notes 40 ===
 Steve mentioned the timing issue in 4.1
