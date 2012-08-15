@@ -36,7 +36,7 @@ public class Top {
 		QName qName = new QName("http://icatproject.org", "ICATService");
 		ICATService service = new ICATService(icatUrl, qName);
 		ICAT icat = service.getICATPort();
-		
+
 		Credentials credentials = new Credentials();
 		List<Entry> entries = credentials.getEntry();
 		Entry e;
@@ -54,8 +54,6 @@ public class Top {
 		String sessionId = icat.login(plugin, credentials);
 		System.out.println("Session id: " + sessionId);
 
-		String ds1, ds2;
-
 		{
 			// First 10 GS datasets ordered by name
 			List<?> ids = icat.search(sessionId,
@@ -67,6 +65,7 @@ public class Top {
 			System.out.println();
 		}
 
+		String ds1, ds2;
 		{
 			// As before but skip the first 8 and then take the next two
 			List<?> ids = icat.search(sessionId,
@@ -76,8 +75,13 @@ public class Top {
 				System.out.print(" " + id);
 			}
 			System.out.println();
-			ds1 = (String) ids.get(0);
-			ds2 = (String) ids.get(1);
+			if (ids.size() >= 2) {
+				ds1 = (String) ids.get(0);
+				ds2 = (String) ids.get(1);
+			} else {
+				ds1 = "";
+				ds2 = "";
+			}
 		}
 
 		{
@@ -159,7 +163,8 @@ public class Top {
 			for (Object o : dssab) {
 				Long dsid = (Long) o;
 				Dataset ds = (Dataset) icat.get(sessionId,
-						"Dataset INCLUDE DatasetParameter, Datafile, Investigation, ParameterType", dsid);
+						"Dataset INCLUDE DatasetParameter, Datafile, Investigation, ParameterType",
+						dsid);
 				Investigation inv = (Investigation) icat.get(sessionId, "Investigation", ds
 						.getInvestigation().getId());
 				System.out.println(ds.getName() + " with inv " + inv.getName() + " and "
@@ -189,7 +194,9 @@ public class Top {
 			List<Object> dss = icat.search(sessionId, query);
 
 			System.out.println(dss.size() + " are returned");
-			System.out.println("1st has startdate of " + ((Dataset) dss.get(0)).getStartDate());
+			if (dss.size() > 0) {
+				System.out.println("1st has startdate of " + ((Dataset) dss.get(0)).getStartDate());
+			}
 		}
 
 		{
@@ -220,7 +227,10 @@ public class Top {
 		{
 			// Average value of a datasetparameter
 			String query = "AVG(DatasetParameter.numericValue) [type.name = 'GEM_SHOT_NUM_VALUE']";
-			System.out.println("\nAvg is " + icat.search(sessionId, query).get(0));
+			List<Object> dss = icat.search(sessionId, query);
+			if (dss.size() > 0) {
+				System.out.println("\nAvg is " + dss.get(0));
+			}
 		}
 
 		{
@@ -228,7 +238,10 @@ public class Top {
 			String query = "AVG(DatasetParameter.numericValue) [type.name = 'GEM_SHOT_NUM_VALUE'] <-> Dataset [startDate BETWEEN :lower AND :upper]";
 			query = query.replace(":lower", tsb + "2011-06-15 00:00:00" + tse).replace(":upper",
 					tsb + "2012-04-01 00:00:00" + tse);
-			System.out.println("\nAvg is " + icat.search(sessionId, query).get(0));
+			List<Object> dss = icat.search(sessionId, query);
+			if (dss.size() > 0) {
+				System.out.println("\nAvg is " + dss.get(0));
+			}
 		}
 
 	}
