@@ -6,7 +6,7 @@ package icat.rest.ws.converter;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import org.apache.log4j.Logger;
-import uk.icat3.entity.Investigation;
+import org.icatproject.core.entity.Investigation;
 
 /**
  *
@@ -23,12 +23,10 @@ public class InvestigationConverter extends Investigation {
   public InvestigationConverter(Investigation inv) {
     super.setFacility(inv.getFacility());
     super.setInstrument(inv.getInstrument());
-    super.setInvNumber(inv.getInvNumber());
-    super.setVisitId(inv.getVisitId());
+    super.setName(inv.getName());
     super.setTitle(inv.getTitle());
-    super.setInvType(inv.getInvType());
-    super.setBcatInvStr(inv.getBcatInvStr());
-    super.setInvParamName(inv.getInvParamName());
-    super.setInvParamValue(inv.getInvParamValue());
+    super.setVisitId(inv.getVisitId());
+    super.setType(inv.getType());
+    super.setParameters(inv.getParameters());
   }
 }

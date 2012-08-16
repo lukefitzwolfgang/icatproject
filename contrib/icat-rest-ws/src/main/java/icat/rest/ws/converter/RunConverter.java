@@ -20,12 +20,12 @@ public class RunConverter {
   private static Logger log = Logger.getLogger(RunConverter.class);
 
   @XmlElement
-  private ArrayList<String> runRange;
+  private String runRange;
   
   public RunConverter() {
   }
 
-  public RunConverter(ArrayList<String> list) {
-    this.runRange = list;
+  public RunConverter(String runRange) {
+    this.runRange = runRange;
   }
 }

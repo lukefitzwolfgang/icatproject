@@ -8,26 +8,28 @@ import icat.rest.ws.converter.InstrumentConverter;
 import icat.rest.ws.converter.InvestigationConverter;
 import icat.rest.ws.converter.ProposalConverter;
 import icat.rest.ws.converter.RunConverter;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpServletRequest;
+
+import org.apache.log4j.Logger;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
-import org.apache.log4j.Logger;
-import uk.icat3.entity.Investigation;
-import uk.icat3.exceptions.BadParameterException;
-import uk.icat3.exceptions.IcatInternalException;
-import uk.icat3.exceptions.InsufficientPrivilegesException;
-import uk.icat3.search.InvestigationSearch;
-import uk.icat3.search.Search;
+
+import org.icatproject.core.entity.Investigation;
+import org.icatproject.core.entity.Dataset;
+import org.icatproject.core.manager.SearchResponse;
+import org.icatproject.core.manager.BeanManager;
+import org.icatproject.core.IcatException;
+import org.icatproject.core.entity.Instrument;
 
 /**
  *
@@ -46,11 +48,35 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
   }
 
   @GET
+  @Produces({"application/text"})
+  public String getHello() {
+    return "Hello world";
+  }
+
+  @GET
   @Path("{facil}")
   @Produces({"application/xml", "application/json"})
-  public InstrumentConverter getInstruments(@PathParam("facil") String facility) {
-    Collection<String> list = InvestigationSearch.listAllInstruments(em);
-    return new InstrumentConverter(list);
+  public InstrumentConverter getInstruments(@PathParam("facil") String facility, @Context HttpServletRequest requestContext) {
+    ArrayList<String> list = new ArrayList<String>();
+    try {
+      String yourIP = requestContext.getRemoteAddr().toString();
+      log.info("Beginning getInstruments(): " + yourIP);
+      String query = "Instrument <-> Facility [ name = ':facility']";
+      query = query.replace(":facility", facility);
+      SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
+      Iterator iter = results.getList().iterator();
+      while (iter.hasNext()) {
+        Instrument inst = (Instrument) iter.next();
+        list.add(inst.getName());
+      }
+      log.info("Ending getInstruments(): " + list.size());
+    } catch (IcatException ex) {
+      log.error("In getInstruments: got IcatException " + ex.getMessage());
+    } catch (Exception ex) {
+      log.error("In getInstruments: got Exception " + ex.getMessage());
+    } finally {
+      return new InstrumentConverter(list);
+    }
   }
 
   @GET
@@ -60,25 +86,19 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
     try {
       String yourIP = requestContext.getRemoteAddr().toString();
       log.info("Beginning getProposals: " + yourIP);
-      String query = "Investigation [instrument = ':instrument']";
+      String query = "Investigation <-> Instrument [ name = ':instrument']";
       query = query.replace(":instrument", instrument);
-      List<?> results = Search.search(RestfulConstant.RESTFUL_USER, query, em);
+      SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
       ArrayList<String> list = new ArrayList<String>();
-      Iterator iter = results.iterator();
+      Iterator iter = results.getList().iterator();
       while (iter.hasNext()) {
         Investigation inv = (Investigation) iter.next();
-        list.add(inv.getInvNumber());
+        list.add(inv.getName());
       }
       log.info("Ending getProposals, found " + list.size() + " proposals for instrment " + instrument);
       return new ProposalConverter(list);
-    } catch (BadParameterException ex) {
-      log.error("In getProposals: got BadParameterException: " + ex.getMessage());
-      return new ProposalConverter();
-    } catch (IcatInternalException ex) {
-      log.error("In getProposals: got IcatInternalException: " + ex.getMessage());
-      return new ProposalConverter();
-    } catch (InsufficientPrivilegesException ex) {
-      log.error("In getProposals: got InsufficientPrivilegesException: " + ex.getMessage());
+    } catch (IcatException ex) {
+      log.error("In getProposals: got IcatException " + ex.getMessage());
       return new ProposalConverter();
     }
   }
@@ -89,26 +109,46 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
   public RunConverter getRuns(@PathParam("facil") String facility, @PathParam("inst") String instrument, @PathParam("prop") String proposal, @Context HttpServletRequest requestContext) {
     try {
       String yourIP = requestContext.getRemoteAddr().toString();
-      log.info("Beginning getProposals: " + yourIP);
-      String query = "Investigation [instrument = ':instrument' AND invNumber = ':proposal' AND invParamName = 'run_number_range' ]";
+      String runRange = "";
+      log.info("Beginning getRuns: " + yourIP);
+      //String query = "Investigation INCLUDE Dataset [name = ':proposal'] <-> Instrument [ name = ':instrument'] order by Dataset.name";
+      String query = "DISTINCT Dataset.name ORDER BY name <-> Investigation [name = ':proposal'] <-> Instrument [ name = ':instrument']";
       query = query.replace(":instrument", instrument).replace(":proposal", proposal);
-      List<?> results = Search.search(RestfulConstant.RESTFUL_USER, query, em);
-      ArrayList<String> list = new ArrayList<String>();
-      Iterator iter = results.iterator();
+      SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
+      Iterator iter = results.getList().iterator();
+      String oldRunNumber = "";
+
+      boolean firstRun = true;
+      boolean inIncrement = false;
       while (iter.hasNext()) {
-        Investigation inv = (Investigation) iter.next();
-        list.add(inv.getInvParamValue());
+        String runNumber = (String) iter.next();
+        if (firstRun) {
+          runRange = runNumber;
+          firstRun = false;
+        } else {
+          if (Long.parseLong(runNumber) == Long.parseLong(oldRunNumber) + 1) {
+            if (!inIncrement) {
+              runRange = runRange.concat("-");
+              inIncrement = true;
+            }
+          } else {
+            if (inIncrement) {
+              runRange = runRange.concat(oldRunNumber);
+              inIncrement = false;
+            }
+            runRange = runRange.concat(", ").concat(runNumber);
+          }
+        }
+        oldRunNumber = runNumber;
       }
-      log.info("Ending getProposals, found " + list.size() + " proposals for instrment " + instrument);
-      return new RunConverter(list);
-    } catch (BadParameterException ex) {
-      log.error("In getProposals: got BadParameterException: " + ex.getMessage());
-      return new RunConverter();
-    } catch (IcatInternalException ex) {
-      log.error("In getProposals: got IcatInternalException: " + ex.getMessage());
-      return new RunConverter();
-    } catch (InsufficientPrivilegesException ex) {
-      log.error("In getProposals: got InsufficientPrivilegesException: " + ex.getMessage());
+      //Be careful here, we might have exited in the middle of an incremental range. If so, tack on the last number.
+      if (inIncrement) {
+        runRange = runRange.concat(oldRunNumber);
+      }
+      log.info("Ending getRuns, found " + runRange + " runs for instrment " + instrument + " and proposal " + proposal);
+      return new RunConverter(runRange);
+    } catch (IcatException ex) {
+      log.error("In getRuns: got IcatException " + ex.getMessage());
       return new RunConverter();
     }
   }
@@ -120,31 +160,23 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
     try {
       String yourIP = requestContext.getRemoteAddr().toString();
       log.info("Beginning getMeta: " + yourIP);
-      String query = "Investigation [instrument = ':instrument' AND invNumber = ':proposal']";
+      String query = "Investigation [name = ':proposal'] <-> Instrument [ name = ':instrument']";
       query = query.replace(":instrument", instrument).replace(":proposal", proposal);
-      List<?> results = Search.search(RestfulConstant.RESTFUL_USER, query, em);
-      log.info("Ending getMeta, found " + results.size() + " proposals for instrment " + instrument);
-      if (results.size() != 1) {
+      SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
+      log.info("Ending getMeta, found " + results.getList().size() + " proposals for instrment " + instrument);
+      if (results.getList().size() != 1) {
         return new InvestigationConverter();
       } else {
-        Iterator iter = results.iterator();
+        Iterator iter = results.getList().iterator();
         Investigation inv = (Investigation) iter.next();
         return new InvestigationConverter(inv);
-
       }
-    } catch (BadParameterException ex) {
-      log.error("In getMeta: got BadParameterException: " + ex.getMessage());
-      return new InvestigationConverter();
-    } catch (IcatInternalException ex) {
-      log.error("In getMeta: got IcatInternalException: " + ex.getMessage());
-      return new InvestigationConverter();
-    } catch (InsufficientPrivilegesException ex) {
-      log.error("In getMeta: got InsufficientPrivilegesException: " + ex.getMessage());
+    } catch (IcatException ex) {
+      log.error("In getRuns: got IcatException " + ex.getMessage());
       return new InvestigationConverter();
     }
   }
 
-  
   @Override
   protected EntityManager getEntityManager() {
     return em;
