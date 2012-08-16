@@ -1,0 +1,7 @@
+Instructions for using ingestNexus:
+
+1. Install python-suds: yum install python-suds
+2. Run cacheICAT to get DB ids for facilities, isntruments, investigation types, dataset types, datafile formats, parameter types and saved these constant data in a configure file called icat4.cfg
+   Usage: cacheICAT <hostAndPort> <password>
+3. Run ingestNexus to ingest Nexus metadata to ICAT4:
+   Usage: ingestNexus <infilename> <hostAndPort> <password>

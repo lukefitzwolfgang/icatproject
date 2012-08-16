@@ -1,0 +1,79 @@
+#!/usr/bin/env python
+
+from suds.client import Client
+import ConfigParser
+import sys
+
+config = ConfigParser.RawConfigParser()
+
+# When adding sections or items, add them in the reverse order of
+# how you want them to be displayed in the actual file.
+# In addition, please note that using RawConfigParser's and the raw
+# mode of ConfigParser's respective set functions, you can assign
+# non-string values to keys internally, but will receive an error
+# when attempting to write to a file or when you get it in non-raw
+# mode. SafeConfigParser does not allow such assignments to take place.
+args = sys.argv
+if len(args) != 3:
+    print >> sys.stderr, "This must have two arguments: hostname:port and password"
+    sys.exit(1)
+
+hostAndPort = args[1]
+password = args[2]
+
+print hostAndPort, password
+client = Client("https://" + hostAndPort + "/ICATService/ICAT?wsdl")
+service = client.service
+factory = client.factory
+
+sessionId = service.login("root", password)
+
+# get and set facilities
+print "getting facilities"
+facilities = service.search(sessionId, "Facility [name = 'SNS']")
+config.add_section('Facility')
+for facility in facilities:
+    config.set('Facility', facility.name.upper(), facility.id)
+
+# get and set instruments 
+print "getting instruments"
+instruments = service.search(sessionId, "Instrument")
+config.add_section('Instrument')
+for instrument in instruments:
+    config.set('Instrument', instrument.name.upper(), instrument.id)
+
+# get and set investigation types
+print "getting investigation types"
+types = service.search(sessionId, "InvestigationType")
+config.add_section('InvestigationType')
+for type in types:
+    config.set('InvestigationType', type.name, type.id)
+
+# get and set dataset types
+print "getting dataset types"
+types = service.search(sessionId, "DatasetType")
+config.add_section('DatasetType')
+for type in types:
+    config.set('DatasetType', type.name, type.id)
+
+# get and set datafile formats
+print "getting datafile format"
+dfFormats = service.search(sessionId, "DatafileFormat")
+config.add_section('DatafileFormat')
+for dfFormat in dfFormats:
+    config.set('DatafileFormat', dfFormat.name, dfFormat.id)
+
+# get and set parameter types
+print "getting parameter types"
+types = service.search(sessionId, "ParameterType")
+config.add_section('ParameterType')
+for type in types:
+    config.set('ParameterType', type.name, type.id)
+    config.set('ParameterType', type.name + "_applicable_to_dataset", type.applicableToDataset)
+    config.set('ParameterType', type.name + "_applicable_to_sample", type.applicableToSample)
+
+service.logout(sessionId)
+
+# Writing our configuration file to 'example.cfg'
+with open('icat4.cfg', 'wb') as configfile:
+    config.write(configfile)
