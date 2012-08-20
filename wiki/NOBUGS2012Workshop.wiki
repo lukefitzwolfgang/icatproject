@@ -16,14 +16,14 @@ See http://nobugs2012.org for more information or to register
 
 = Agenda =
 
-- Introduction to ICAT 4.3
-- Detailed look at the model. Examples of what goes where.
-- Getting started - who to set up the common data
-- Using the API how to ingest metadata ('business' and experimental)
-- Explanation and examples of the permissions/authorisation rules
-- Look at the notifications system
-- TopCAT configuration
-- Plans for 4.3
-- Requests and promises for 4.3 and beyond.
+  * Introduction to ICAT 4.3
+  * Detailed look at the model. Examples of what goes where.
+  * Getting started - who to set up the common data
+  * Using the API how to ingest metadata ('business' and experimental)
+  * Explanation and examples of the permissions/authorisation rules
+  * Look at the notifications system
+  * TopCAT configuration
+  * Plans for 4.3
+  * Requests and promises for 4.3 and beyond.
 
 For more information contact tom.griffin@stfc.ac.uk
