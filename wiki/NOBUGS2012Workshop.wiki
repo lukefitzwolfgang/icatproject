@@ -12,18 +12,23 @@ Thursday 27th September 13:00 - 17:00
 = Where =
 
 The workshop will be at the Rutherford Appleton Laboratory, Oxfordshire, UK, as part of NOBUGS2012
-See http://nobugs2012.org for more information or to register
+See http://nobugs2012.org for more information or to register.
+The workshop will be held in building R18
 
 = Agenda =
 
-  * Introduction to ICAT 4.3
-  * Detailed look at the model. Examples of what goes where.
-  * Getting started - how to set up the common data
-  * Using the API how to ingest metadata ('business' and experimental)
-  * Explanation and examples of the permissions/authorisation rules
-  * Look at the notifications system
-  * TopCAT configuration
-  * Plans for 4.3
-  * Requests and promises for 4.3 and beyond.
+|| 13:00 || Introduction to ICAT 4.3                                            || Brian Matthews ||
+||       || Detailed look at the model. Examples of what goes where.            ||                ||
+|| 13:30 || Getting started - how to set up the common data tables              || Kevin Phipps   ||
+|| 14:00 || Using the API how to ingest metadata ('business' and experimental)  || Tom Griffin    ||
+|| 14:30 || The pluggable authentication system                                 || Tom Griffin    ||
+|| 14:40 || Explanation and examples of the permissions/authorisation rules     || Tom Griffin    ||
+|| 15:00 || Coffee break                                                        ||                ||
+|| 15:15 || Look at the notifications system                                    || Antony Wilson  ||
+|| 15:30 || TopCAT configuration                                                || Antony Wilson  ||
+|| 16:00 || Data download                                                       || Kevin Phipps   ||
+|| 16:15 || Plans for 4.3                                                       || Brian Matthews ||
+||       || Discussion, requests and promises for 4.3 and beyond.               ||                ||
+|| 17:00 || End of workshop                                                     ||                ||
 
 For more information contact tom.griffin@stfc.ac.uk
