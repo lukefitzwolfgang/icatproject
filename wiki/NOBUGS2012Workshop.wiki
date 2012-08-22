@@ -18,7 +18,7 @@ See http://nobugs2012.org for more information or to register
 
   * Introduction to ICAT 4.3
   * Detailed look at the model. Examples of what goes where.
-  * Getting started - who to set up the common data
+  * Getting started - how to set up the common data
   * Using the API how to ingest metadata ('business' and experimental)
   * Explanation and examples of the permissions/authorisation rules
   * Look at the notifications system
