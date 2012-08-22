@@ -20,7 +20,7 @@ The workshop will be held in building R18
 || 13:00 || Introduction to ICAT 4.3                                            || Brian Matthews ||
 ||       || Detailed look at the model. Examples of what goes where.            ||                ||
 || 13:30 || Getting started - how to set up the common data tables              || Kevin Phipps   ||
-|| 14:00 || Using the API how to ingest metadata ('business' and experimental)  || Tom Griffin    ||
+|| 14:00 || Using the API to ingest metadata ('business' and experimental)      || Tom Griffin    ||
 || 14:30 || The pluggable authentication system                                 || Tom Griffin    ||
 || 14:40 || Explanation and examples of the permissions/authorisation rules     || Tom Griffin    ||
 || 15:00 || Coffee break                                                        ||                ||
