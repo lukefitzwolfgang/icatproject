@@ -4,11 +4,11 @@
 
 = Installation instructions for ICAT 4.1 =
 
-*It should be noted that these instructions should not be considered as definitive. The definitive and, we hope, complete documentation for ICAT, specific to each release, may be found below:*
+It should be noted that these instructions should not be considered as definitive. The definitive and, we hope, complete documentation for ICAT, specific to each release, may be found below:
 
 http://www.icatproject.org/mvn/site/icat
 
-*The purpose of the instructions on this page is to show possible output that you might expect to see when installing the server. Some of the advice - such as recommending fixed password values is probably unwise.*
+The purpose of the instructions on this page is to show possible output that you might expect to see when installing the server.
 
 == Source of pre-requisite materials ==
 
