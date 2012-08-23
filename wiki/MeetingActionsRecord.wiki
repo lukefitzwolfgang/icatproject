@@ -37,8 +37,8 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 || Item  || Description                                                                     || Res*(1)   ||           Status||     Comment||
 || 41.00 || Document the meeting                                                            || AM        ||             Done||           -||
-|| 41.01 || Publish the Nexus ingest to Google/contrib                                      || SR        ||                -||          - ||
-|| 41.02 || Call the next meeting on 23 August 2012                                         || AM        ||               - ||        -   ||
+|| 41.01 || Publish the Nexus ingest to Google/contrib                                      || SR        ||             Done||          - ||
+|| 41.02 || Call the next meeting on 23 August 2012                                         || AM        ||             Done||        -   ||
 
 === Attendance 41 ===
 
