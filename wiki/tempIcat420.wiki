@@ -11,7 +11,7 @@ Please note that these instructions should not be considered as definitive. The 
 
 http://www.icatproject.org/mvn/site/icat
 
-*The purpose of the instructions on this page is to show possible output that you might expect to see when installing the server. Some of the advice - such as recommending fixed password values is probably unwise.*
+The purpose of the instructions on this page is to show possible output that you might expect to see when installing the server.
 
 == Source of pre-requisite materials ==
 
@@ -128,10 +128,13 @@ If using Mysql on localhost, configure it to use port 3306 for jdbc access.
  * ICATUSER username/password: icatuser/myicatuserpasswd.
 
 Directories:
- * icat42/icat.ear-4.2.0.ear/ - this contains scripts called create.sh and drop.sh and glassfish.props which tell the Glassfish Server what to do for icat.
- * icat42/authn_ldap.ear-4.2.0.ear/ - this contains scripts called create.sh and drop.sh and glassfish.props which tell the Glassfish Server what to do for authn ldap.
- * icat42/authn_db.ear-4.2.0.ear/ - this contains scripts called create.sh and drop.sh and glassfish.props which tell the Glassfish Server what to do for authn db
-  
+
+Each of the following directories contains a prototype of the properties file for the corresponding component.  
+
+ * icat42/icat.ear-4.2.0.ear/ - contains scripts called create.sh and drop.sh and glassfish.props which tell the Glassfish Server what to do for icat.
+ * icat42/authn_db.ear-4.2.0.ear/ - contains scripts called create.sh and drop.sh and glassfish.props which tell the Glassfish Server what to do for authn db.
+ * icat42/authn_ldap.ear-4.2.0.ear/ 
+ 
 Server certificate:
  * Neither the server nor a client application require a certificate, although icat is deployed using https protocol.
 
@@ -146,32 +149,28 @@ Ports:
 
 Create a test environment similar to the one assumed.  
 
-The following files have to be changed for the local system:
-
- * icat42/icat.ear-4.2.0.ear/glassfish.props
- * icat42/authn_ldap.ear-4.2.0.ear/glassfish.props
- * icat42/authn_db.ear-4.2.0.ear/glassfish.props
-
-The following files have to be changed for the local system and located in the correct place for the Glassfish
-
- * icat.properties
- * authn_db.properties
- * authn_ldap.properties
 
 Ensure the following conditions on the system: 
-
  * Database server running, and the username and passwords installed, but no content;
  * Glassfish Server installed, but not running;
  * Expand the distribution files into a directory; icat42 is used in the following instructions.
 
-Two common errors are the following:
- * The icat properties file must be in the config directory of the glassfish server.  
- * The file java connector jar (ojdbc14.jar or the equivalent for mysql) must be in the file system before the Glassfish Server is started.  If is added later, it is necessary to restart the Glassfish Server.  
+The following files have to be changed for the local system:
+ * icat42/icat.ear-4.2.0.ear/glassfish.props;
+ * icat42/authn_db.ear-4.2.0.ear/glassfish.props.
+
+The following files have to be changed for the local system and located in the correct place for Glassfish:
+ * icat.properties;
+ * authn_db.properties;
+ * authn_ldap.properties.
+
+Common errors are the following:
+ * The properties files must be in the config directory of the glassfish server.  
+ * The file java connector jar (ojdbc14.jar or the equivalent for mysql) must be in the file system BEFORE the Glassfish Server is started.  If is added later, it is necessary to restart the Glassfish Server.  
 
 Do the following:
 
 0. If starting the glassfish server for the first time, store the admin username and password.  Use the following command:
-
 {{{
 asadmin login
 }}}
@@ -181,14 +180,12 @@ It will then prompt for admin username (admin) and admin password.  It stores th
 1. Start the Glassfish Server, create the database pools and deploy icat. Deploying icat also creates the schemas for icat and icatuser, but does not give them useful content.
 
 To start the Glassfish Server, do the following:
-
 {{{
 cd icat42
 asadmin start-domain domain1
 }}}
 
 Expect a response such as the following:
-
 {{{
 Waiting for domain1 to start .......................................................................................................
 Successfully started the domain : domain1
@@ -199,16 +196,15 @@ Command start-domain executed successfully.
 }}}
 
 2. To create the jdbc and jms resources, do the following:
-
 {{{
 cd icat.ear.config
 ./create.sh
 cd ../authn_db.ear.config
 ./create.sh
+cd ..
 }}}
 
 Expect a response such as the following:
-
 {{{
 .
 .
@@ -227,15 +223,13 @@ Command create-jms-resource executed successfully.
 }}}
 
 3. To deploy icat, authn_ldap and authn_db , do the following:
-
 {{{
 asadmin deploy icat.ear-4.2.0.ear
-asadmin deploy authn_ldap.ear-1.0.0.ear
 asadmin deploy authn_db.ear-1.0.0.ear
+asadmin deploy authn_ldap.ear-1.0.0.ear
 }}}
 
 Expect a response such as the following:
-
 {{{
 Application deployed with name icat.ear-4.2.0.
 Command deploy executed successfully.
@@ -247,10 +241,9 @@ Application deployed with name authn_db.ear-1.0.0.
 Command deploy executed successfully.
 }}}
 
-You may also get warning messages at this point.  These can be ignored if you get "Command deploy executed successfullly".
+You may also get warning messages at this point.  These can be ignored if you get "Command deploy executed successfully".
 
 If deploying on a system which has been previously used, expect the following response:
-
 {{{
 .
 .
@@ -264,43 +257,39 @@ Command deploy executed successfully.
 Pay attention to the last line of the message.  The bits before the last line are only warnings and can be ignored.
 
 4. Run the test which does logon to the icat
-
 {{{
 cd icat.ear.config 
-python test.py localhost:8181 db root password
+python test.py localhost 8181 db username root password guess
 cd ..
 }}}
 
 Expect a response such as the following:
-
 {{{
 Login, search, create, delete and logout operations were all successful.
 }}}
 
 If you get a response such as the following:
-
 {{{
 suds.WebFault: Server raised fault: 'Username and password do not match'
 }}}
 
 You have to insert the username/password values root/password into the passwd table in the icatuser schema in the database.
 
-6. To stop icat and the Glassfish Server, do the following:
+5. To stop icat and the Glassfish Server, do the following:
 
-To undeploy icat, do the following:
-
+To undeploy icat, and the authenticators, do the following:
 {{{
 asadmin undeploy icat.ear-4.2.0
+asadmin undeploy authn_db-1.0.0
+asadmin undeploy authn_ldap-1.0.0
 }}}
  
 Expect the following outcome:
-
 {{{
 Command undeploy executed successfully.
 }}}
 
 To delete the jdbc and jms resources, do the following:
-
 {{{
 cd icat.ear-4.2.0.config/
 ./drop.sh
@@ -309,7 +298,6 @@ cd ../authn_db-4.2.0.config
 }}}
 
 Expect the following outcome:
-
 {{{
 .
 .
@@ -318,16 +306,13 @@ Command delete-jdbc-connection-pool executed successfully.
 }}}
 
 To stop the Glassfish Server, do the following:
-
 {{{
 asadmin stop-domain domain1
 }}}
 
 Expect the following outcome:
-
 {{{
 Command stop-domain executed successfully.
 }}}
-
 
 == - the end - ==
