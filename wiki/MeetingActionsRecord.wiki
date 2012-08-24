@@ -39,10 +39,10 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 || Item  || Description                                                                     || Res*(1)   ||           Status||     Comment||
 || 42.00 || Document the meeting                                                            || AM        ||             Done||           -||
-|| 42.01 || Make an announcement of the availability of ICAT 4.2.0                          || SF        ||                .||          - ||
-|| 42.02 || Discuss anonymous login and NeXus ingest client                                 || TG/SR     ||                .||          - ||
-|| 42.03 || Steve to chair the meeting on 6 September, Kevin the meeting on 20/09           || SF/KP     ||                .||          - ||
-|| 42.04 || Call the next meeting on 6 September 2012 - to be chaired by Steve              || AM        ||             Done||        -   ||
+|| 42.01 || Make an announcement of the availability of ICAT 4.2.0                          || SF        ||             Done||           -||
+|| 42.02 || Discuss anonymous login and NeXus ingest client                                 || TG/SR     ||                .||           -||
+|| 42.03 || Steve to chair the meeting on 6 September, Kevin the meeting on 20/09           || SF/KP     ||                .||           -||
+|| 42.04 || Call the next meeting on 6 September 2012 - to be chaired by Steve              || AM        ||             Done||           -||
 
 === Attendance 42 ===
 
