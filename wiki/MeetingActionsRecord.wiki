@@ -57,7 +57,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 ||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
 ||GK   ||George Kourousias            || ELETTRA                    ||              ||           ||
 ||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
-||MG   ||Mark Green                   || ~X-tech                    ||     +        ||           ||
+||MG   ||Mark Green                   || Tech-X                    ||     +        ||           ||
 
 == Meeting 41 - 9 August 2012 =
 
