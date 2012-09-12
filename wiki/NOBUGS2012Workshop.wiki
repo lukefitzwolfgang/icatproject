@@ -5,6 +5,8 @@
 ICAT is hosting a workshop as part of NOBUGS 2012.
 This will be a 'deep dive' into how to really use ICAT at your institution.
 
+If you are planning on attending this workshop, but are not registered for NOBUGS, or did not register for this workshop when you registered for NOBUGS, please email tom.griffin@stfc.ac.uk so we know how many people to cater for
+
 = When =
 
 Thursday 27th September 13:00 - 17:00
