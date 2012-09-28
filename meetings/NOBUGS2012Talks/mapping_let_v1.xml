@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nxingest>
+	<name>mapping_muon_v1.1.xml</name>
+	<input>NeXus for muon data definition 1 (Direct Creation) </input>
+	<version>1.6 </version>
+	<version-date>08/10/2007</version-date>
+	<version-comment>
+		New complex location string. It make the mapping file very dependant 
+		of the way nxingest is used. The location string now needs nxingest 1.9 
+		or above to always get '/' as separator.
+	</version-comment>	
+</nxingest>
+<icat   type="tbl"   version="1.0 RC6"   xsi:noNamespaceSchemaLocation="icatXSD.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- 
+	  == ==========================================-
+	  == 	Study Table 
+	  == ==========================================-
+	  -->
+	<study type="tbl">
+		<!-- ll56 comment : Study is not used yet but anyway that can stay as is. -->
+		<record type="tag">
+			<icat_name> name</icat_name>
+		    <value type="mix"> nexus:/raw_data_1/beamline | fix:_ | time:nexus(/raw_data_1/start_time) ; 0 ; 6 </value>
+		</record>
+		<record type="tag">
+			<icat_name> purpose </icat_name>
+			<value type="fix"> Group all Investigation per instrument and per year.</value>
+		</record>
+		<record type="tag">
+			<icat_name> status </icat_name>
+			<value type="fix">ONGOING </value>
+		</record>
+		<record type="tag">
+			<icat_name> study_creation_date </icat_name>
+			<value type="special"> time:now </value>
+		</record>
+		<!-- 
+		  == ==========================================
+		  == 	Investigation Table 
+		  == ==========================================
+		  -->
+		<investigation type="tbl" trusted="false">
+		<!-- ll56 comment : Investigation vs experiment. Seems clear enough. -->
+			<record type="tag">
+				<icat_name> inv_number </icat_name>
+				<value type="nexus"> /raw_data_1/experiment_identifier</value>
+			</record>
+			<record type="tag">
+				<icat_name> visit_id </icat_name>
+				<value type="fix"> 1 </value>
+			</record>
+			<record type="tag">
+				<icat_name> instrument </icat_name>
+				<value type="nexus"> /raw_data_1/beamline </value>
+			</record>
+			<record type="tag">
+				<icat_name> title </icat_name>
+				<value type="nexus"> /raw_data_1/title </value>
+			</record>
+			<!-- 
+			== ==========================================-
+			== 	Investigator Table 
+			== ==========================================-
+			-->
+			<record type="tag">
+				<icat_name> inv_abstract </icat_name>
+			</record>
+			<record type="tag">
+				<icat_name> inv_type </icat_name>
+				<value type="fix"> EXPERIMENT</value>
+			</record>
+			<record type="tag">
+				<icat_name> prev_inv_number </icat_name>
+			</record>
+			<record type="tag">
+				<icat_name> bcat_inv_str </icat_name>
+				<value type="nexus"> /raw_data_1/user_1/name </value>
+			</record>
+			<record type="tag">
+				<icat_name> grant_id </icat_name>
+			</record>
+			<record type="tag">
+				<icat_name> facility_cycle </icat_name>
+				<value type="nexus"> /raw_data_1/run_cycle </value>			
+			</record>		
+			<keyword type="keyword_tag">
+				<icat_name> name </icat_name>
+				<value type="mix">  nexus:/{NXentry}/title | fix: , | nexus:/{NXentry}/notes | fix: , | nexus:/{NXentry}/sample/name</value>
+			</keyword>					
+			<!-- 
+			== ==========================================-
+			== 	Dataset Table 
+			== ==========================================-
+			-->
+			<dataset type="tbl">
+<!-- ll56 comment : Definition contains a measurement_id we should try to use it. 
+				As the current values are empty, it is not obvious how they will be used. 
+				Here I assume that you can have several measuerements in an experiment 
+				and a measurement may contains several runs.
+				I don't know if the sub-id will be the same as the run or a more explicit identifiers. 
+				If this is not used, there wil be only one dataSet call 'DS-' per experiment. 
+				-->
+				<keyword type="keyword_tag">
+					<icat_name> name </icat_name>
+					<value type="mix"> fix: DS- | nexus:/raw_data_1/measurement_id </value>
+				</keyword>					
+				<record type="tag">
+					<icat_name> dataset_type </icat_name>
+					<value type="fix"> EXPERIMENT_RAW </value>
+				</record>
+				<record type="tag">
+					<icat_name> dataset_status </icat_name>
+					<value type="fix"> COMPLETE </value>
+				</record>
+				<record type="tag">
+					<icat_name> description</icat_name>
+					<value type="mix"> nexus:/raw_data_1/measurement_id | fix: - | nexus:/raw_data_1/measurement_subid | fix: - | nexus:/raw_data_1/measurement_label | fix: - |  nexus:/raw_data_1/measurement_type </value>
+				</record>
+				<!-- 
+				== ==========================================-
+				== 	Sample Table 
+				== ==========================================-
+				-->
+				<sample type="tbl">
+					<record type="tag">
+						<icat_name> name </icat_name>
+						<value type="mix"> nexus:/raw_data_1/sample/name | fix: . </value>
+					</record>
+					<!-- ll56 comment : Use the sample ID as the instance. previously was always set to 0 -->
+					<record type="tag">
+						<icat_name> instance </icat_name>
+						<value type="fix"> nexus:/raw_data_1/sample/id | fix: . </value>
+					</record>
+					<record type="tag">
+						<icat_name> chemical_formula </icat_name>
+					    <value type="nexus"> /raw_data_1/sample/name  </value>
+					</record>
+					<record type="tag">
+						<icat_name> safety_information </icat_name>
+						<value type="fix"> No information available.  </value>
+					</record>					
+				<!-- 
+					== ==========================================-
+					== 	Sample Parameter Table 
+					== ==========================================-
+					-->
+					<parameter type="param_str">
+						<icat_name> sample_state </icat_name>
+						<value type="nexus"> /raw_data_1/sample/shape </value>
+					</parameter>
+<!-- ll56 comment : Add sample parameters height, thickness, width and type. -->					
+					<parameter type="param_num">
+						<icat_name> sample_height </icat_name>
+						<value type="nexus"> /raw_data_1/sample/height</value>
+						<description type="fix"> Sample height. </description>
+					</parameter>
+					<parameter type="param_num">
+						<icat_name> sample_thickness </icat_name>
+						<value type="nexus"> /raw_data_1/sample/thickness</value>
+						<description type="fix"> Sample thickness. </description>
+					</parameter>
+					<parameter type="param_num">
+						<icat_name> sample_width </icat_name>
+						<value type="nexus"> /raw_data_1/sample/width</value>
+						<description type="fix"> Sample width. </description>
+					</parameter>	 		
+					<parameter type="param_str">
+					    <icat_name> sample_type </icat_name>
+						<value type="nexus"> /raw_data_1/sample/type </value>
+					</parameter>
+				</sample>
+				<!-- 
+				== ==========================================-
+				== 	Datafile Table 
+				== ==========================================-
+				-->
+				<datafile type="tbl">
+					<record type="tag">
+						<icat_name> name </icat_name>
+						<value type="special"> sys:filename </value>
+					</record>
+					<record type="tag">
+						<icat_name> location </icat_name>
+						<value type="mix"> fix:file:///mnt/isisdata/NDX | nexus:/raw_data_1/instrument/name | fix:/instrument/data/ | sys:location </value>
+					</record>
+					<record type="tag">
+						<icat_name> description </icat_name>
+						<value type="nexus"> /raw_data_1/title </value>
+					</record>
+					<record type="tag">
+						<icat_name> datafile_version </icat_name>
+						<value type="fix"> 1.0 </value>
+					</record>
+					<record type="tag">
+						<icat_name> datafile_version_comment </icat_name>
+						<value type="fix"> First version </value>
+					</record>
+					<record type="tag">
+						<icat_name> datafile_format </icat_name>
+						<value type="fix"> NeXus </value>
+					</record>
+					<record type="tag">
+						<icat_name> datafile_format_version </icat_name>
+						<value type="nexus"> /.NeXus_version </value>
+					</record>					
+					<record type="tag">
+						<icat_name> datafile_create_time </icat_name>
+						<value type="special"> time:nexus(/raw_data_1/start_time) ; 0 ; 0 </value>
+					</record>
+					<record type="tag">
+						<icat_name> datafile_modify_time </icat_name>
+						<value type="special"> time:nexus(/.file_time) ; 1 ; 0 </value>
+					</record>
+					<record type="tag">
+						<icat_name> file_size </icat_name>
+						<value type="special"> sys:size </value>
+					</record>					
+					<record type="tag">
+						<icat_name> command </icat_name>
+					</record>
+					<record type="tag">
+						<icat_name> checksum </icat_name>
+					</record>
+					<record type="tag">
+						<icat_name> signature </icat_name>
+					</record>
+					<!-- 
+						== ==========================================
+						== 	Datafile Parameter Table 
+						== ==========================================
+					-->
+					<!-- ll56 comment: Check that the neXus location are still valid. 
+						There are small changes from the muon 1.1
+						e.g. 	number -> run_number
+								HDF_version -> HDF5_Version
+								stop_time -> end_time
+						I don't modify the icat_name to keep some consistency. e.g. finish_date
+						At some point you may want to review them. 
+						Change them in the mapping file and in the data base at the same time. 
+					-->
+						
+					<parameter type="param_num">
+						<icat_name> run_number </icat_name>
+						<value type="nexus"> /raw_data_1/run_number </value>
+						<description type="fix"> Run Number</description>
+					</parameter>
+					<parameter type="param_str">
+						<icat_name> nexus_version </icat_name>
+						<value type="nexus"> /.NeXus_version </value>
+						<description type="fix"> NeXus version used to create the file. </description>
+					</parameter>
+					<parameter type="param_str">
+						<icat_name> hdf_version </icat_name>
+						<value type="nexus"> /.HDF5_Version </value>
+						<description type="fix"> HDF Version used to create the file. </description>
+					</parameter>
+					<parameter type="param_str">
+						<icat_name> program_name </icat_name>
+						<value type="nexus"> /raw_data_1/program_name </value>
+						<description type="fix"> Name of creating program. </description>
+					</parameter>
+					<!-- ll56 comment: Add new parameter describing the programs that created the file. -->
+					<parameter type="param_str">
+						<icat_name> script_name </icat_name>
+						<value type="nexus"> /raw_data_1/script_name </value>
+						<description type="fix"> version of creating Script. </description>
+					</parameter>
+					<parameter type="param_str">
+						<icat_name> seci_config </icat_name>
+						<value type="nexus"> /raw_data_1/seci_config </value>
+						<description type="fix"> configuration of SECI. </description>
+					</parameter>
+					<!-- end comment -->
+					<parameter type="param_str">
+						<icat_name> program_version </icat_name>
+						<value type="nexus"> /raw_data_1/program_name.version </value>
+						<description type="fix"> version of creating program. </description>
+					</parameter>
+					<parameter type="param_str">
+						<icat_name> program_version </icat_name>
+						<value type="nexus"> /raw_data_1/program_name.version </value>
+						<description type="fix"> version of creating program. </description>
+					</parameter>
+					<parameter type="param_str">
+						<icat_name> start_date </icat_name>
+						<value type="special"> time:nexus(/raw_data_1/start_time); 0; 1 </value>
+						<units type="fix"> yyyy-MM-dd HH:mm:ss </units>
+						<description type="fix"> Start Time of the dataset. </description>
+					</parameter>
+					<parameter type="param_str">
+						<icat_name> finish_date </icat_name>
+						<value type="special"> time:nexus(/raw_data_1/end_time); 0; 1 </value>
+						<units type="fix"> yyyy-MM-dd HH:mm:ss </units>
+						<description type="fix"> Start Time of the dataset. </description>
+					</parameter>		
+					<parameter type="param_num">
+						<icat_name> run_duration </icat_name>
+						<value type="nexus"> /raw_data_1/duration </value>
+						<units type="fix"> seconds </units>"
+						<description type="fix"> Calculated duration. </description>
+					</parameter>	
+
+<!-- ll56 comment: switching state not present in the neiutron file -->
+					<!--
+					<parameter type="param_str">
+						<icat_name> switching_states </icat_name>
+						<value type="nexus"> /raw_data_1/switching_states</value>
+						<description type="fix"> 1 = Normal data collection, 2 = Red/Green mode </description>
+					</parameter>
+					-->
+<!-- end comment-->
+<!-- ll56 comment: Could not find information about the sample temperature during this run -->
+					
+					<!--				
+					<parameter type="param_num">
+						<icat_name> sample_temperature_setting </icat_name>
+						<value type="nexus"> /raw_data_1/sample/temperature </value>
+						<units type="nexus"> /raw_data_1/sample/temperature.units </units>
+						<description type="fix"> Desired temperature</description>
+					</parameter>			
+					<parameter type="param_num">
+						<icat_name> sample_magnetic_field_setting </icat_name>
+						<value type="nexus"> /raw_data_1/sample/magnetic_field </value>
+						<units type="nexus"> /raw_data_1/sample/magnetic_field.units </units>
+						<description type="fix"> Desired Magnetic field </description>
+					</parameter>	
+					<parameter type="param_str">
+						<icat_name> sample_magnetic_field_state </icat_name>
+						<value type="nexus"> /raw_data_1/sample/magnetic_field_state </value>
+						<description type="fix"> Magnetic field mode, e.g. TF </description>
+					</parameter>
+					-->
+<!-- ll56 comment : The sample distance may change in between run so it should be here with the datafile or dataset parameters and not with the sample parameters which should contains only the fixed sample parameters -->parameter
+					<parameter type="param_num">
+						<icat_name> sample_distance </icat_name>
+						<value type="nexus"> /raw_data_1/sample/distance</value>
+						<description type="fix"> Sample distance. </description>
+					</parameter>
+					
+<!-- ll56 comment: Did not understand the information on the instrument settings during this run. -->
+					<parameter type="param_num">
+						<icat_name> proton_charge </icat_name>
+						<value type="nexus"> /raw_data_1/proton_charge</value>
+						<units type="nexus"> /raw_data_1/proton_charge.units </units>
+						<description type="fix"> Total number of counts. </description>
+					</parameter>	 
+
+<!-- ll56 comment: Main data is stored in an group of type NXdata. here called detector_1. 
+	 We try to provide some statistical information -->
+					
+					<parameter type="param_num">
+						<icat_name> source_frames </icat_name>
+						<value type="nexus"> /raw_data_1/raw_frames </value>
+						<description type="fix"> RAW ISIS frames collected.</description>
+					</parameter>				    
+					<parameter type="param_num">
+						<icat_name> data_total_counts </icat_name>
+						<value type="nexus"> /raw_data_1/detector_1/counts[SUM]</value>
+						<units type="nexus"> /raw_data_1/detector_1/counts.units </units>
+						<description type="fix"> Total number of counts in detector_1. </description>
+					</parameter>
+					<parameter type="param_num">
+						<icat_name> data_avg_counts </icat_name>
+						<value type="nexus"> /raw_data_1/detector_1/counts[AVG]</value>
+						<units type="nexus"> /raw_data_1/detector_1/counts.units </units>
+						<description type="fix"> Average of number of counts in detector_1. </description>
+					</parameter>
+					<parameter type="param_num">
+						<icat_name> data_std_counts </icat_name>
+						<value type="nexus"> /raw_data_1/detector_1/counts[STD]</value>
+						<units type="nexus"> /raw_data_1/detector_1/counts.units </units>
+						<description type="fix"> Standard deviation of number of counts in detector_1. </description>
+					</parameter>	    
+
+					<parameter type="param_str">
+						<icat_name> bcat_inv_str </icat_name>
+						<value type="nexus"> /raw_data_1/user_1/name </value>
+					</parameter>
+				</datafile>
+				<!-- 
+					== ==========================================
+					== 	Dataset Parameter Table 
+					== ==========================================
+				-->			
+			</dataset>
+		</investigation>
+	</study>
+</icat>
+					
