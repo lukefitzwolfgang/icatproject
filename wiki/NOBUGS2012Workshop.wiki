@@ -19,18 +19,17 @@ The workshop will be held in building R18
 
 = Agenda =
 
-|| 13:00 || Introduction to ICAT 4.3                                            || Brian Matthews ||
-||       || Detailed look at the model. Examples of what goes where.            ||                ||
-|| 13:30 || Getting started - how to set up the common data tables              || Kevin Phipps   ||
-|| 14:00 || Using the API to ingest metadata ('business' and experimental)      || Tom Griffin    ||
-|| 14:30 || The pluggable authentication system                                 || Tom Griffin    ||
-|| 14:40 || Explanation and examples of the permissions/authorisation rules     || Tom Griffin    ||
-|| 15:00 || Coffee break                                                        ||                ||
-|| 15:15 || Look at the notifications system                                    || Antony Wilson  ||
-|| 15:30 || TopCAT configuration                                                || Antony Wilson  ||
-|| 16:00 || Data download                                                       || Kevin Phipps   ||
-|| 16:15 || Plans for 4.3                                                       || Brian Matthews ||
-||       || Discussion, requests and promises for 4.3 and beyond.               ||                ||
-|| 17:00 || End of workshop                                                     ||                ||
+|| 13:00 || Introduction to ICAT 4.3                                            || Brian Matthews || [http://icatproject.googlecode.com/svn/meetings/NOBUGS2012Talks/Introduction-to-ICAT.pdf  Slides] ||
+|| 13:30 || Getting started - how to set up the common data tables              || Kevin Phipps   || [http://icatproject.googlecode.com/svn/meetings/NOBUGS2012Talks/NOBUGS_2012_getting_started.pdf slides] [http://icatproject.googlecode.com/svn/meetings/NOBUGS2012Talks/NOBUGS_2012_getting_started%20-%20with%20notes.pdf notes]  ||
+|| 14:00 || Using the API to ingest metadata ('business' and experimental)      || Tom Griffin    ||   ||
+|| 14:30 || The pluggable authentication system                                 || Tom Griffin    ||   ||
+|| 14:40 || Explanation and examples of the permissions/authorisation rules     || Tom Griffin    ||   ||
+|| 15:00 || Coffee break                                                        ||                ||   ||
+|| 15:15 || Look at the notifications system                                    || Antony Wilson  ||   ||
+|| 15:30 || TopCAT configuration                                                || Antony Wilson  ||   ||
+|| 16:00 || Data download                                                       || Kevin Phipps   ||   ||
+|| 16:15 || Plans for 4.3                                                       || Brian Matthews ||   ||
+||       || Discussion, requests and promises for 4.3 and beyond.               ||                ||   ||
+|| 17:00 || End of workshop                                                     ||                ||   ||
 
 For more information contact tom.griffin@stfc.ac.uk
