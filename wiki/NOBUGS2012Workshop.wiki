@@ -3,7 +3,8 @@
 = Introduction =
 
 ICAT hosted a workshop as part of NOBUGS 2012 at RAL on Thursday 27th September 13:00 - 17:00
-This was be a 'deep dive' into how to really use ICAT at your institution.
+
+This was a 'deep dive' into how to really use ICAT at your institution.
 
 = Agenda, Slides and Notes =
 
