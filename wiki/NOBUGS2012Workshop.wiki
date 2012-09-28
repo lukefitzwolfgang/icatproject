@@ -2,22 +2,10 @@
 
 = Introduction =
 
-ICAT is hosting a workshop as part of NOBUGS 2012.
-This will be a 'deep dive' into how to really use ICAT at your institution.
+ICAT hosted a workshop as part of NOBUGS 2012 at RAL on Thursday 27th September 13:00 - 17:00
+This was be a 'deep dive' into how to really use ICAT at your institution.
 
-If you are planning on attending this workshop, but are not registered for NOBUGS, or did not register for this workshop when you registered for NOBUGS, please email tom.griffin@stfc.ac.uk so we know how many people to cater for
-
-= When =
-
-Thursday 27th September 13:00 - 17:00
-
-= Where =
-
-The workshop will be at the Rutherford Appleton Laboratory, Oxfordshire, UK, as part of NOBUGS2012
-See http://nobugs2012.org for more information or to register.
-The workshop will be held in building R18
-
-= Agenda =
+= Agenda, Slides and Notes =
 
 || 13:00 || Introduction to ICAT 4.3                                            || Brian Matthews || [http://icatproject.googlecode.com/svn/meetings/NOBUGS2012Talks/Introduction-to-ICAT.pdf  slides] ||
 || 13:30 || Getting started - how to set up the common data tables              || Kevin Phipps   || [http://icatproject.googlecode.com/svn/meetings/NOBUGS2012Talks/NOBUGS_2012_getting_started.pdf slides] , [http://icatproject.googlecode.com/svn/meetings/NOBUGS2012Talks/NOBUGS_2012_getting_started%20-%20with%20notes.pdf notes] , [StandardTableEntries proposal]  ||
@@ -31,4 +19,4 @@ The workshop will be held in building R18
 || 16:15 || Plans, discussion and requests for 4.3                              || Brian Matthews || [http://icatproject.googlecode.com/svn/meetings/NOBUGS2012Talks/ICAT-4.3%20Future%20Plans%20Discussion.pdf slides]  ||
 || 17:00 || End of workshop                                                     ||                ||   ||
 
-For more information contact tom.griffin@stfc.ac.uk
+For more information contact icatgroup@googlegroups.com
