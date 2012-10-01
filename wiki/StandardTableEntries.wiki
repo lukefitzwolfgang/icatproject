@@ -12,9 +12,9 @@ Please add or edit the entries, with comments ideally,or contact the ICAT mailin
 
 || NAME || DESCRIPTION || Comments || 
 || analyzed || Analyzed data ||  ||
-|| experiment_cal || RAW data collected at the facility during a calibration run. || REDUNDANT (C.Felder) ||
-|| experiment_eng || RAW data collected at the facility during a engineering test. || REDUNDANT (C.Felder) ||
-|| experiment_raw || RAW data collected at the facility during an experiment. || REDUNDANT (C.Felder) ||
+|| experiment_cal || RAW data collected at the facility during a calibration run. || redundant? (C.Felder) ||
+|| experiment_eng || RAW data collected at the facility during a engineering test. || redundant? (C.Felder) ||
+|| experiment_raw || RAW data collected at the facility during an experiment. || redundant? (C.Felder) ||
 || raw || measured raw data || proposal (C.Felder) ||
 || reduced || Reduced Data ||  ||
 || simulation || Simulation data ||  ||
