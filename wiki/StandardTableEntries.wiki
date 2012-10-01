@@ -12,9 +12,10 @@ Please add or edit the entries, with comments ideally,or contact the ICAT mailin
 
 || NAME || DESCRIPTION || Comments || 
 || analyzed || Analyzed data ||  ||
-|| experiment_cal || RAW data collected at the facility during a calibration run. ||  ||
-|| experiment_eng || RAW data collected at the facility during a engineering test. ||  ||
-|| experiment_raw || RAW data collected at the facility during an experiment. ||  ||
+|| experiment_cal || RAW data collected at the facility during a calibration run. || REDUNDANT (C.Felder) ||
+|| experiment_eng || RAW data collected at the facility during a engineering test. || REDUNDANT (C.Felder) ||
+|| experiment_raw || RAW data collected at the facility during an experiment. || REDUNDANT (C.Felder) ||
+|| raw || measured raw data || proposal (C.Felder) ||
 || reduced || Reduced Data ||  ||
 || simulation || Simulation data ||  ||
 || special_cal || Calibration data not acquired through the normal Data acquisition system. (single detector calibration, ?)||  ||
