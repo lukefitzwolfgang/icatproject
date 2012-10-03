@@ -6,6 +6,21 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
+== Meeting 44 - 4 October 2012 =
+
+=== Agenda 44 ===
+
+ * Actions from the meetings 42 and 43 (Alistair/Steve)
+ * Report on the ICAT meeting at Nobugs2012 (Kevin)
+ * ICAT 4.2.1 - Status  (Steve)
+ * Plans for ICAT 4.3 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.3 for DLS (Ghita)
+ * Deployment of ICAT 4.3 for ISIS (Tom)
+ * Deployment of ICAT 4.2 for CLF (Alistair)
+ * Report on visit to Australia Synchrotron (Alistair)
+ * AOB (Any)
+
 == Meeting 43 - 6 September 2012 =
 
 === Agenda 43 ===
@@ -57,7 +72,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 ||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
 ||GK   ||George Kourousias            || ELETTRA                    ||              ||           ||
 ||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
-||MG   ||Mark Green                   || Tech-X                    ||     +        ||           ||
+||MG   ||Mark Green                   || Tech-X                     ||     +        ||           ||
 
 == Meeting 41 - 9 August 2012 =
 
