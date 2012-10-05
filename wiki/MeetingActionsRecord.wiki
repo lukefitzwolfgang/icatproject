@@ -17,7 +17,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Deployment of ICAT 4.2 for CLF (Alistair)
  * AOB (Any)
 
-== Meeting 44 - 4 October 2012 =
+== Meeting 44 - 4 October 2012 ==
 
 === Agenda 44 ===
 
@@ -95,7 +95,7 @@ Shelly reported on work at SNS to allow anonymous access to data from Mantid.
  * Deployment of ICAT 4.2 for CLF (Alistair)
  * AOB (Any)
 
-== Meeting 42 - 23 August 2012 =
+== Meeting 42 - 23 August 2012 ==
 
 === Agenda 42 ===
 
@@ -133,7 +133,7 @@ Shelly reported on work at SNS to allow anonymous access to data from Mantid.
 ||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
 ||MG   ||Mark Green                   || Tech-X                     ||     +        ||           ||
 
-== Meeting 41 - 9 August 2012 =
+== Meeting 41 - 9 August 2012 ==
 
 === Agenda 41 ===
 
@@ -167,7 +167,7 @@ Shelly reported on work at SNS to allow anonymous access to data from Mantid.
 ||GK   ||George Kourousias            || ELETTRA                    ||              ||           ||
 ||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
 
-== Meeting 40 - 26 July 2012 =
+== Meeting 40 - 26 July 2012 ==
 
 === Agenda 40 ===
 
@@ -211,7 +211,7 @@ The purpose and format of the ICAT workshop at NOBUGS was discussed. It was thou
 
 Ghita would like some data in an ICAT 4.1 to test her eclipse plugin.
 
-== Meeting 39 - 14 June 2012 =
+== Meeting 39 - 14 June 2012 ==
 
 === Agenda 39 ===
 
@@ -244,7 +244,7 @@ Ghita would like some data in an ICAT 4.1 to test her eclipse plugin.
 ||GK   ||George Kourousias            || ELETTRA                    ||     +        ||           ||
 ||SR   ||Shelly Ren                   || ORNL SNS                   ||              ||       +   ||
  
-== Meeting 38 - 31 May 2012 =
+== Meeting 38 - 31 May 2012 ==
 
 === Agenda 38 ===
 
@@ -266,7 +266,7 @@ Ghita would like some data in an ICAT 4.1 to test her eclipse plugin.
 ||38.03  ||ICAT Collaboration is to include discussion of requirements and changes to Topcat ||All       ||             Done||                                                         -||
 ||38.04  ||Send changes to ICAT 4.0 to support SNS to SF                                     ||SR        ||             Done||                                                         -||
 
-== Meeting 37 - 17 May 2012 =
+== Meeting 37 - 17 May 2012 ==
 
 === Agenda 37 ===
 
