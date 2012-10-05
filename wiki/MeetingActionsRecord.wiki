@@ -7,7 +7,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
-== Meeting 44 - 18 October 2012 ==
+== Meeting 45 - 18 October 2012 ==
 
  * Actions from the meetings 44 (Alistair/Steve)
  * Plans for ICAT 4.3 (Tom)
