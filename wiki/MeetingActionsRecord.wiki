@@ -1,7 +1,7 @@
 #summary Record of actions from recent ICAT collaboration meetings
 #labels Featured
 
-= Record of actions from ICAT collaboration meetings = 
+= Record of actions from ICAT collaboration meetings =  
 
 This page holds records of the recent meetings. Earlier meetings are at MeetingActionsRecordArchive.
 
