@@ -30,7 +30,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Deployment of ICAT 4.3 for ISIS (Tom)
  * Deployment of ICAT 4.2 for CLF (Alistair)
  * Report on visit to Australia Synchrotron (Alistair)
- * AOB (Any)
+ * AOB - Nicola and Shelly
 
 === Attendance 44 ===
 
@@ -49,28 +49,36 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  
 === Notes 44 ===
 
-Note that these notes are not yet complete.
-
 Kevin reported that the meeting at NOBUGS2012 had gone well and that the materials from the presentations are on the wiki for download.
 
 Steve reported that ICAT 4.2.1 has been available for two weeks, and that it has been installed on pre-production service for CLF at RAL.
 
-As Tom was not present, discussion of ICAT 4.3 is deferred to the next meeting
- 
+As Tom was not present, discussion of ICAT 4.3 is deferred to the next meeting.
+
+Milan reported that the PanData review is in Brussels on 26-27/11.  He would like to report that the Service Verifications have started and that there are six organisations participating.   He also reported that there is a deliverable due in December on the progress of the deployments.  Alistair reported that we would visit ILL/ESRF on 18-19/10 and that the first Service Verification should take place around 3 November 2012.
+
+Ghita reported that there is a meeting scheduled for 11/10/12 about the migration to ICAT 4.3.  There is now a test server in DLS running 4.2, but there is no data available.  DLS is planning to migrate to ICAT 4.3 during the next shutdown period at the beginning of December 2012.
+
+As Tom was not present, there was no discussion about the deployment for ISIS.
+
+Alistair reported that a pre-production server is running ICAT 4.2 for CLF and that migration to ICAT 4.3 will happen in December 2012.
+
+Alistair reported that he had visited the Australian Synchrotron in Melbourne.  the data catalog uses Tardis and the development work is done by a group in Monash University.  They are interested in integrating Tardis with Pandata using Topcat.  During 2013, the lead software engineer for this work will visit RAL to work on a prototype implementation.
+
+Nicola reported that work on installing ICAT 4.2.1 was in progress at ILL and ESRF.
+
+Shelly reported on work at SNS to allow anonymous access to data from Mantid.  
+
 === Actions 44 ===
 
-Note that these actions are not yet complete.
-
-|| Item  || Description                                                                     || Res*(1)   ||           Status||     Comment||
-|| 44.00 || Document the meeting                                                            || AM        ||             Done||           -||
-|| 44.01 ||                                                                                 || xx       ||                 .||           -||
-|| 44.02 ||                                                                                 || xx       ||                 .||           -||
-|| 44.03 ||                                                                                 || xx       ||                 .||           -||
-|| 44.04 ||                                                                                 || xx       ||                 .||           -||
-|| 44.05 ||                                                                                 || xx       ||                 .||           -||
-|| 44.06 ||                                                                                 || xx       ||                 .||           -||
-|| 44.07 ||                                                                                 || xx       ||                 .||           -||
-
+|| Item  || Description                                                                     || Res*(1)   ||            Status||     Comment||
+|| 44.00 || Document the meeting                                                            || AM        ||       In progress||           -||
+|| 44.01 || Add notes to the this page about action 42.2                                    || SR/AM     ||                 .||           -||
+|| 44.02 || Ask Christian to put his python work into the contrib directory                 || AM        ||                 .||           -||
+|| 44.03 || Distribute note about trouble shooting ICAT 4.2.1                               || SF        ||                 .||           -||
+|| 44.04 || Put a link into this page about the Nobugs materials NOBUGS2012Workshop         || SM        ||              Done||           -||
+|| 44.05 || Provide a copy of the entity diagram for comment                                || NB/SF     ||                 .||           -||
+|| 44.06 || Send an email to SF about the difficulties of building ICAT with Eclipse        || NB        ||                 .||           -||
  
 == Meeting 43 - 6 September 2012 =
 
@@ -106,8 +114,8 @@ Note that these actions are not yet complete.
 || Item  || Description                                                                     || Res*(1)   ||           Status||     Comment||
 || 42.00 || Document the meeting                                                            || AM        ||             Done||           -||
 || 42.01 || Make an announcement of the availability of ICAT 4.2.0                          || SF        ||             Done||           -||
-|| 42.02 || Discuss anonymous login and NeXus ingest client                                 || TG/SR     ||                .||           -||
-|| 42.03 || Steve to chair the meeting on 6 September, Kevin the meeting on 20/09           || SF/KP     ||                .||           -||
+|| 42.02 || Discuss anonymous login and NeXus ingest client                                 || TG/SR     || See action 44.02||           -||
+|| 42.03 || Steve to chair the meeting on 6 September, Kevin the meeting on 20/09           || SF/KP     ||             Done||           -||
 || 42.04 || Call the next meeting on 6 September 2012 - to be chaired by Steve              || AM        ||             Done||           -||
 
 === Attendance 42 ===
