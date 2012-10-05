@@ -6,6 +6,16 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
+== Meeting 44 - 18 October 2012 ==
+
+ * Actions from the meetings 44 (Alistair/Steve)
+ * Plans for ICAT 4.3 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.3 for DLS (Ghita)
+ * Deployment of ICAT 4.3 for ISIS (Tom)
+ * Deployment of ICAT 4.2 for CLF (Alistair)
+ * AOB (Any)
+
 == Meeting 44 - 4 October 2012 =
 
 === Agenda 44 ===
@@ -21,6 +31,46 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Report on visit to Australia Synchrotron (Alistair)
  * AOB (Any)
 
+=== Attendance 44 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
+||AW   ||Antony Wilson                || STFC eSc                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||KP   ||Kevin Phipps                 || STFC eSc                   ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||NB   ||Nicola Bessone               || ESRF                       ||     +        ||           ||
+||SF   ||Steve Fisher                 || STFC eSc                   ||     +        ||           ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+
+||MG   ||Mark Green                   || Tech-X                     ||              ||      +    ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||              ||      +    ||
+ 
+=== Notes 44 ===
+
+Note that these notes are not yet complete.
+
+Kevin reported that the meeting at NOBUGS2012 had gone well and that the materials from the presentations are on the wiki for download.
+
+Steve reported that ICAT 4.2.1 has been available for two weeks, and that it has been installed on pre-production service for CLF at RAL.
+
+As Tom was not present, discussion of ICAT 4.3 is deferred to the next meeting
+ 
+=== Actions 44 ===
+
+Note that these actions are not yet complete.
+
+|| Item  || Description                                                                     || Res*(1)   ||           Status||     Comment||
+|| 44.00 || Document the meeting                                                            || AM        ||             Done||           -||
+|| 44.01 ||                                                                                 || xx       ||                 .||           -||
+|| 44.02 ||                                                                                 || xx       ||                 .||           -||
+|| 44.03 ||                                                                                 || xx       ||                 .||           -||
+|| 44.04 ||                                                                                 || xx       ||                 .||           -||
+|| 44.05 ||                                                                                 || xx       ||                 .||           -||
+|| 44.06 ||                                                                                 || xx       ||                 .||           -||
+|| 44.07 ||                                                                                 || xx       ||                 .||           -||
+
+ 
 == Meeting 43 - 6 September 2012 =
 
 === Agenda 43 ===
@@ -50,7 +100,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Deployment of ICAT 4.2 for CLF (Alistair)
  * AOB (Any)
 
- === Actions 42 ===
+=== Actions 42 ===
 
 || Item  || Description                                                                     || Res*(1)   ||           Status||     Comment||
 || 42.00 || Document the meeting                                                            || AM        ||             Done||           -||
