@@ -80,7 +80,7 @@ Shelly reported on work at SNS to allow anonymous access to data from Mantid.
 || 44.05 || Provide a copy of the entity diagram for comment                                || NB/SF     ||                 .||           -||
 || 44.06 || Send an email to SF about the difficulties of building ICAT with Eclipse        || NB        ||                 .||           -||
  
-== Meeting 43 - 6 September 2012 =
+== Meeting 43 - 6 September 2012 ==
 
 === Agenda 43 ===
 
