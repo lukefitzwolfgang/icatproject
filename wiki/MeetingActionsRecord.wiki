@@ -1,4 +1,5 @@
 #summary Record of actions from recent ICAT collaboration meetings
+#labels Featured
 
 = Record of actions from ICAT collaboration meetings = 
 
