@@ -67,7 +67,12 @@ Alistair reported that he had visited the Australian Synchrotron in Melbourne.  
 
 Nicola reported that work on installing ICAT 4.2.1 was in progress at ILL and ESRF.
 
-Shelly reported on work at SNS to allow anonymous access to data from Mantid.  
+Shelly reported that she added the following two modules to the icat project contrib repository: 
+
+1.	icat-rest-ws is a java based restful web service that retrieves certain metadata with open access such as runs proposals for a given instruments, runs for a given proposal, and file locations of a given run etc.. Tom documented a use case note at: http://code.google.com/p/icatproject/wiki/AnonAccessToMetadata
+
+2.	ingestNexus python script would read a Nexus file, parse metadata, create ICAT client objects, and calling ICAT server for cataloging. I plan to add more comments to the readme file of this module to explain what it does and how it works.
+  
 
 === Actions 44 ===
 
