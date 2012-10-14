@@ -5,15 +5,9 @@ $Id$
 For more detailed instructions please visit:
 http://code.google.com/p/icatproject/wiki/InstallIcat42
 
-In order to make it simple to install ICAT40, the following configuration is assumed:
+Note that there is discussion of Oracle and sqlplus in this copy of the note.  This will be removed when its use has been eliminted.
 
-Properites files:
-
-The .properties files must be in the config directory of domain1 of the glassfish server.  You may find it convenient to put a symbolic link from the config directory to the properties files.
-
-File ojdbc14.jar:
-
-This file is distributed by Oracle.  We do not distribute it as this would violate our agreement with Oracle.  Put it into the lib directory of domain1 of the glassfish server.  A symbolic link is allowed.
+In order to make it simple to install ICAT42, the following configuration is assumed:
 
 Operating system:
 
@@ -21,7 +15,12 @@ operation system: linux
 username: glassfish3
 home directory: /home/glassfish3
 shell: bash
-note: the operating system user glassfish3 is running the Glassfish Server and the applications.
+additional software: 
+
+svn client to obtain the software (optional if you obtain the materials another way)
+python with the python-suds plugin for running the test program (optional if skipping the test)
+
+Note that the operating system user glassfish3 is running the Glassfish Server and the applications.  The installer has to insert properties files into the Glassfish server, so it is best if Glassfish is installed by the user glassfish3 and not by root.
 
 Glassfish Server:
 
@@ -41,6 +40,11 @@ sqlplus: The operating system user glassfish3 has sqlplus on the PATH
 Oracle database server: localhost
 ICAT username/ password: icat42/myicatpasswd
 ICATUSER username/password: icatuser42/myicatuserpasswd
+
+Obtaining the materials:
+
+svn co https://code.google.com/p/icatproject/svn/ops/icat42
+
 
 Java run-time: 
 java: The operating system user glassfish3 has java on the PATH
@@ -65,7 +69,7 @@ Server certificate:
 Neither the Server nor a client application require a certificate, as icat is deployed using http protocol.
 
 Ports:
-The port 8080 is available for the glassfish Server to deploy icat-http
+The port 8080 is available for the glassfish Server to deploy icat
 The port 4848 is available for the the admin console of glassfish
 
 Configuration information:
