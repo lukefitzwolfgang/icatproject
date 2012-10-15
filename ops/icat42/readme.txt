@@ -1,4 +1,4 @@
-README.txt for ICAT 4.2 installation
+README.txt for ICAT 4.2.1 rapid installation
 Alistair Mills - 13 October 2012
 $Id$
 
