@@ -1,11 +1,11 @@
 # Driver
-driver=oracle.jdbc.pool.OracleDataSource
+driver=org.apache.derby.jdbc.ClientDataSource
 
 # Authn DB connection properties
-authn_dbProperties=url="'"jdbc:oracle:thin:@//alistair-laptop:1521/XE"'":ImplicitCachingEnabled=true:MaxStatements=200:user=icat42user:password=myicat42userpasswd
+authn_dbProperties=Password=APP:User=APP:serverName=localhost:DatabaseName=icatuser:connectionAttributes=";"create"'"="'"true
 
 # Must contain "glassfish/domains"
-glassfish=/home/alistair/glassfish3
+glassfish=/home/glassfish3/glassfish312
 
 # Port for glassfish admin calls (normally 4848)
 port=4848
