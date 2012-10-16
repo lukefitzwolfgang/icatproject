@@ -7,56 +7,66 @@ http://code.google.com/p/icatproject/wiki/InstallIcat42
 
 In order to make it simple to install ICAT42, the following configuration is assumed:
 
-operation system: linux
-username: glassfish3
-home directory: /home/glassfish3
-shell: bash
-additional software: 
+operation system:       linux
+username:               glassfish3
+home directory:         /home/glassfish3
+shell:                  bash
+additional software:    java, jee, glassfish, svn, python, python-suds
 
 svn client to obtain the software (optional if obtaining the materials another way)
 python with the python-suds plugin for running the test program (optional if skipping the test)
 
-Note that the operating system user glassfish3 is running the Glassfish Server and the applications.  The installer has to insert properties files into the Glassfish server, so it is best if Glassfish is installed by the user glassfish3 and not by root.
+It is usual to add content to the ./bashrc such as the following:
+
+export      JAVA_HOME=/usr/lib/jvm/java-6-openjdk
+export GLASSFISH_HOME=/home/glassfish3/glassfish3
+export        DB_HOME=$GLASSFISH_HOME/javadb
+export PATH=\
+$JAVA_HOME/bin:\
+$GLASSFISH_HOME/bin:\
+$DB_HOME/bin:\
+$PATH
 
 Glassfish Server:
 
-directory:                /home/glassfish3/glassfish3/
-admin user:               admin
-admin user password:      adminadmin
-asadmin command:          The operating system user called glassfish3 has asadmin on the PATH 
+Note that the operating system user glassfish3 is running the Glassfish Server and the applications.  The installer of ICAT has to insert properties files into the Glassfish server, so it is best if Glassfish is installed by the user glassfish3 and not by root.  The Glassfish server can run as a user process run the user glassfish3.
 
-icat.ear.config/icat.properties: The file has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
-log4j.properties: The file has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
-authn_db.ear.config/authn_db.properties: The file has been added to /home/glassfish3/glassfish3/glassfish/domains/domain1/config
+directory:                               /home/glassfish3/glassfish3/
+admin user:                              admin
+admin user password:                     adminadmin
+asadmin command:                         The operating system user called glassfish3 has asadmin on the PATH 
+ij command:                              The operating system user called glassfish3 has ij on the PATH 
 
-Derby database server:               localhost
-ICAT schema username/ password:      APP/APP
-ICATUSER schema username/password:   APP/APP
+icat.ear.config/icat.properties:         The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
+log4j.properties:                        The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
+authn_db.ear.config/authn_db.properties: The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
 
-ICAT API:
-ICAT username/password:              root/password
+Derby database server:                   localhost
+ICAT schema username/password:           APP/APP
+ICATUSER schema username/password:       APP/APP
+
+ICAT username/password:                  root/password
 
 Obtaining the materials:
 
-svn co https://code.google.com/p/icatproject/svn/ops/icat42
+svn co https://icatproject.googlecode.com/svn/ops/icat42
 
 Java run-time: 
 java: The operating system user glassfish3 has java on the PATH
 
 Directories:
-icat42 - this contains two scripts called glassfish and glassfish.props which tell the glassfish Server what to do
-icat42/usertable_init - this contains a script to add a user to ICAT
-icat42/test_icat - this contains a simple test for ICAT
+icat42/                                  contains two icat.properties and log4j.properties which set properties in the glassfish Server 
+icat42/usertable_init/                   contains a script to add a user to ICATUSER database
+icat42/test_icat/                        contains a simple test for ICAT
 
 The following files are part of the ICAT 4.2.1 distribution:
-authn_db.ear-1.0.0.ear
-authn_ldap.ear-1.0.0.ear
-icat.client-4.2.1.jar
-icat.ear-4.2.0.ear
+authn_db.ear-1.0.0.ear                   contains the compiled ear file for the db authenticator
+authn_ldap.ear-1.0.0.ear                 contains the compiled ear file for the ldap authenticator
+icat.client-4.2.1.jar                    contains the compiled jar file for the client applications
+icat.ear-4.2.0.ear                       contains the compiled ear file for icat for deployment on https
+icat.ear-4.2.0-http.ear                  contains the compiled ear file for icat for deployment on http
 
-The following is only distributed for the purpose of testing the deployment process without the need for a certificate.  Its content is the same as the distribution, save that it deploys icat on port 8080 with http protocol.  The one from  deploys icat on port 8181 with https.  The use of https leads to complications during deployment and usage.  The preconfigured version of the software in this package deploys to 8080.
-
-icat.ear-4.2.0-http.ear
+The file icat.ear-4.2.0-http.ear  is only distributed for the purpose of testing the deployment process without the need for a certificate.  Its content is the same as the distribution, save that it deploys icat on port 8080 with http protocol.  The other deploys icat on port 8181 with https.  The use of https leads to complications during deployment and usage.  The preconfigured version of the software in this package deploys to 8080.
 
 Server certificate:
 Neither the Server nor a client application require a certificate, as icat is deployed using http protocol.
@@ -68,16 +78,17 @@ The port 4848 is available for the the admin console of glassfish
 Configuration information:
 
 Configuration is stored in the following files:
-authn_db.ear.config/glassfish.props
-icat.ear.config/glassfish.props
-usertable_init/usertable.sh
+authn_db.ear.config/glassfish.props      parameters which are used when creating connection pools for authentication
+icat.ear.config/glassfish.props          parameters which are used when creating connection pools for icat
+usertable_init/usertable.sh              parameters which are used to create a username/password for the ICAT API
 
 Instructions:
-Create a test environment similar to the one assumed.  If it is not possible to be identical, then the three files containing configuration may require changes.
+Create a test environment similar to the one assumed.  If it is not possible to be identical, then the files containing configuration may require changes.
 
 Ensure that the Glassfish Server is installed, but not running.  Make sure that the properties files are installed in the glassfish server as described above.
 
-Go to the directory containing the material and do the following:
+
+Go to the directory called icat42 containing the material from the svn command and do the following:
 
 # 1. Start the glassfish Server, and its database.
 
