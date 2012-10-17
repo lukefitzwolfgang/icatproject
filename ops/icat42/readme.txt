@@ -1,9 +1,11 @@
-README.txt for ICAT 4.2.1 rapid installation
+README.txt for ICAT 4.2.0 rapid installation
 Alistair Mills - 13 October 2012
 $Id$
 
 For more detailed instructions please visit:
 http://code.google.com/p/icatproject/wiki/InstallIcat42
+
+This material is not the complete set of materials for icat 4.2.0.  It is a selected set of materials which are packaged to make it easy to get ICAT 4.2.0 to run.  It is not intended for production.
 
 In order to make it simple to install ICAT42, the following configuration is assumed:
 
@@ -38,7 +40,7 @@ asadmin command:                         The operating system user called glassf
 ij command:                              The operating system user called glassfish3 has ij on the PATH 
 
 icat.ear.config/icat.properties:         The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
-log4j.properties:                        The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
+icat.ear.config/log4j.properties:        The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
 authn_db.ear.config/authn_db.properties: The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
 
 Derby database server:                   localhost
@@ -51,22 +53,18 @@ Obtaining the materials:
 
 svn co https://icatproject.googlecode.com/svn/ops/icat42
 
-Java run-time: 
-java: The operating system user glassfish3 has java on the PATH
-
 Directories:
-icat42/                                  contains two icat.properties and log4j.properties which set properties in the glassfish Server 
+icat42/                                  contains the ear files taken from the icat 4.2 distribution materials 
 icat42/usertable_init/                   contains a script to add a user to ICATUSER database
 icat42/test_icat/                        contains a simple test for ICAT
 
-The following files are part of the ICAT 4.2.1 distribution:
+The following files are part of the ICAT 4.2.0 distribution:
 authn_db.ear-1.0.0.ear                   contains the compiled ear file for the db authenticator
 authn_ldap.ear-1.0.0.ear                 contains the compiled ear file for the ldap authenticator
-icat.client-4.2.1.jar                    contains the compiled jar file for the client applications
 icat.ear-4.2.0.ear                       contains the compiled ear file for icat for deployment on https
 icat.ear-4.2.0-http.ear                  contains the compiled ear file for icat for deployment on http
 
-The file icat.ear-4.2.0-http.ear  is only distributed for the purpose of testing the deployment process without the need for a certificate.  Its content is the same as the distribution, save that it deploys icat on port 8080 with http protocol.  The other deploys icat on port 8181 with https.  The use of https leads to complications during deployment and usage.  The preconfigured version of the software in this package deploys to 8080.
+The file icat.ear-4.2.0-http.ear is only distributed for the purpose of testing the deployment process without the need for a certificate.  Its content is the same as the distribution, save that it deploys icat on port 8080 with http protocol.  The other deploys icat on port 8181 with https.  The use of https leads to complications during deployment and usage.  The preconfigured version of the software in this package deploys to 8080.
 
 Server certificate:
 Neither the Server nor a client application require a certificate, as icat is deployed using http protocol.
@@ -86,7 +84,6 @@ Instructions:
 Create a test environment similar to the one assumed.  If it is not possible to be identical, then the files containing configuration may require changes.
 
 Ensure that the Glassfish Server is installed, but not running.  Make sure that the properties files are installed in the glassfish server as described above.
-
 
 Go to the directory called icat42 containing the material from the svn command and do the following:
 
