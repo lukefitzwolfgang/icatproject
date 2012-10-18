@@ -77,11 +77,11 @@ Shelly reported that she added the following two modules to the icat project con
 === Actions 44 ===
 
 || Item  || Description                                                                     || Res*(1)   ||            Status||     Comment||
-|| 44.00 || Document the meeting                                                            || AM        ||       In progress||           -||
-|| 44.01 || Add notes to the this page about action 42.2                                    || SR/AM     ||                 .||           -||
+|| 44.00 || Document the meeting                                                            || AM        ||              Done||           -||
+|| 44.01 || Add notes to the this page about action 42.2                                    || SR/AM     ||              Done||           -||
 || 44.02 || Ask Christian to put his python work into the contrib directory                 || AM        ||                 .||           -||
 || 44.03 || Distribute note about trouble shooting ICAT 4.2.1                               || SF        ||                 .||           -||
-|| 44.04 || Put a link into this page about the Nobugs materials NOBUGS2012Workshop         || SM        ||              Done||           -||
+|| 44.04 || Put a link into this page about the Nobugs materials NOBUGS2012Workshop         || AM        ||              Done||           -||
 || 44.05 || Provide a copy of the entity diagram for comment                                || NB/SF     ||                 .||           -||
 || 44.06 || Send an email to SF about the difficulties of building ICAT with Eclipse        || NB        ||                 .||           -||
  
