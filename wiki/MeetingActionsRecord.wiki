@@ -22,6 +22,9 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  
 == Meeting 45 - 18 October 2012 ==
 
+
+=== Agenda 45 ===
+
  * Actions from the meetings 44 (Alistair/Steve)
  * Plans for ICAT 4.3 (Tom)
  * Update from PaN-data (Milan/George)
@@ -43,13 +46,14 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 ||JH   ||Jamie Hall                   || ILL                        ||     +        ||           ||
 ||JD   ||Juergen                      || DEISY                      ||     +        ||           ||
 
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
 ||TG   ||Tom Griffin                  || STFC ISIS Facility         ||              ||      +    ||
 ||AW   ||Antony Wilson                || STFC eSc                   ||              ||      +    ||
 ||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||      +    ||     
 ||TG   ||Tom Griffin                  || STFC ISIS Facility         ||              ||      +    ||
 ||SR   ||Shelly Ren                   || ORNL SNS                   ||              ||      +    ||
 
-=== Notes 44 ===
+=== Notes 45 ===
 
 There was was an excellent attendance at the meeting with Juergen, Jamie and Julian attending for the first time.
 
@@ -78,7 +82,7 @@ The CLF deployment of 4.2 is making good progress and full deployment is planned
 It was noted that the 1st of November is a public holiday in both France and Italy so attendance will be reduced for the meeting on that day.
 
 
-=== Actions 44 ===
+=== Actions 45 ===
 
 || Item  || Description                                                                     || Res*(1)   ||            Status||     Comment||
 || 45.00 || Document the meeting                                                            || AM        ||              Done||           -||
