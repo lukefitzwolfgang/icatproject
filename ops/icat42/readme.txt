@@ -13,21 +13,25 @@ operation system:       linux
 username:               glassfish3
 home directory:         /home/glassfish3
 shell:                  bash
-additional software:    java, jee, glassfish, svn, python, python-suds
+additional software:    java se, java ee, glassfish, svn, python, python-suds
 
-svn client to obtain the software (optional if obtaining the materials another way)
-python with the python-suds plugin for running the test program (optional if skipping the test)
+java standard edition with jdk can be downloaded from Oracle/Java;
+java enterprise edition with Glassfish 3.1.2 or later can be downloaded from Oracle/Java;
+svn client is required to obtain the software (optional if obtaining the materials another way);
+python with the python-suds plugin for running the test program (optional if skipping the test).
 
 It is usual to add content to the ./bashrc such as the following:
 
 export      JAVA_HOME=/usr/lib/jvm/java-6-openjdk
-export GLASSFISH_HOME=/home/glassfish3/glassfish3
+export GLASSFISH_HOME=/home/glassfish3/glassfish312
 export        DB_HOME=$GLASSFISH_HOME/javadb
 export PATH=\
 $JAVA_HOME/bin:\
 $GLASSFISH_HOME/bin:\
 $DB_HOME/bin:\
 $PATH
+
+The installation of the software is not dependant on setting the environmental variables.  However this note makes use of them.
 
 Glassfish Server:
 
@@ -49,7 +53,7 @@ ICATUSER schema username/password:       APP/APP
 
 ICAT username/password:                  root/password
 
-Obtaining the materials:
+Obtaining the materials for the installation:
 
 svn co https://icatproject.googlecode.com/svn/ops/icat42
 
@@ -114,7 +118,7 @@ cd icat.ear.config; python test.py localhost 8080 db username root password pass
 
 # If all is well, then ICAT is working.  To reverse all of this, do the following ...
 
-# 6. Undeploy the authenticator and icat
+# 6. Undeploy the authenticator and icat.
 
 asadmin undeploy authn_db.ear-1.0.0
 asadmin undeploy icat.ear-4.2.0-http
