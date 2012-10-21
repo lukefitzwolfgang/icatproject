@@ -1,7 +1,5 @@
 #summary Installation instructions for rapid deployment of ICAT 4.2
 
-<wiki:toc max_depth="3" />
-
 = Simplified installation instructions for ICAT 4.2 =
 
 Please note that these instructions should not be considered as definitive. The definitive documentation for ICAT may be found below:
