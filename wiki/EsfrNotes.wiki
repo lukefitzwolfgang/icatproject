@@ -36,7 +36,7 @@ The meeting took place on 18 October.  The actions are recorded in the table.
 || 1.09|| Provide an icat for ESRF for SV-0                                                       || Alistair         ||      .|| 
 || 1.10|| Provide notes based on his experience of installing ICAT                                || Julien           ||      .|| 
 || 1.11|| Make arrangements for a globally available ICAT from ESRF  for January 2013             || Stephan          ||      .|| 
-|| 1.12|| Proved the email addresses of the team members at ESRF                                  || Nicola           ||      .|| 
+|| 1.12|| Provide the email addresses of the team members at ESRF                                 || Nicola           ||      .|| 
 || 1.13|| Provide regression tests for future ICATs 4.3                                           || Alistair/Steve   ||      .|| 
 || 1.14|| Publish the ICAT  schema for ICATs 4.1 and 4.2 in contrib                               || Nicola           ||      .|| 
 || 1.15|| Revise the commentary on the ICAT data dictionary                                       || Alistair         ||      .|| 
