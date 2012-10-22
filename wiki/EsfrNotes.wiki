@@ -1,9 +1,19 @@
 #summary Notes on collaboration with ESRF
 
+<wiki:toc max_depth="3" />
 
+= Record of collaboration meetings with ESRF =
+
+The purpose of this note is to keep a record of the collaboration within ICAT.
 
 = Meeting 1 - 18 October 2012 =
 
+== Notes 1 ==
+
+== Attendance 1 ==
+
+|| Init. || Name || Partner ||
+|| AM || || ||
 
 == Actions 1 ==
 
