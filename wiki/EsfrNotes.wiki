@@ -10,10 +10,17 @@ The purpose of this note is to keep a record of the collaboration within ICAT.
 
 == Notes 1 ==
 
+The meeting took place on 18 October.  The actions are recorded in the table.
+
 == Attendance 1 ==
 
-|| Init. || Name || Partner ||
-|| AM || || ||
+||Init ||Name                         || Institute                  ||     Present  || Not present ||
+||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||             ||
+||NB   ||Nicola Bessone               || ESRF                       ||     +        ||             ||
+||J.   ||Julian                       || ESRF                       ||     +        ||             ||
+||AG   ||Andy Gotz                    || ESRF                       ||     +        ||             ||
+||SS   ||Stefan Schultz               || ESRF                       ||     +        ||      +      ||
+||SF   ||Steve Fisher                 || STFC eSc                   ||              ||             ||
 
 == Actions 1 ==
 
@@ -34,9 +41,5 @@ The purpose of this note is to keep a record of the collaboration within ICAT.
 || 1.14|| Publish the ICAT  schema for ICATs 4.1 and 4.2 in contrib                               || Nicola           ||      .|| 
 || 1.15|| Revise the commentary on the ICAT data dictionary                                       || Alistair         ||      .|| 
 || 1.16|| Provide help to Nicola on mapping ESRF data to ICAT                                     || Alistair         ||      .|| 
-
-== Notes 1 ==
-
-
 
 = - the end - =
