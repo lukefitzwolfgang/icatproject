@@ -19,8 +19,8 @@ The meeting took place on 18 October.  The actions are recorded in the table.
 ||NB   ||Nicola Bessone               || ESRF                       ||     +        ||             ||
 ||J.   ||Julian                       || ESRF                       ||     +        ||             ||
 ||AG   ||Andy Gotz                    || ESRF                       ||     +        ||             ||
-||SS   ||Stefan Schultz               || ESRF                       ||     +        ||      +      ||
-||SF   ||Steve Fisher                 || STFC eSc                   ||              ||             ||
+||SS   ||Stefan Schultz               || ESRF                       ||     +        ||             ||
+||SF   ||Steve Fisher                 || STFC eSc                   ||              ||      +      ||
 
 == Actions 1 ==
 
