@@ -7,8 +7,6 @@ package icat.rest.ws.converter;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.apache.log4j.Logger;
-import org.icatproject.core.entity.Dataset;
-import org.icatproject.core.entity.Investigation;
 
 /**
  *
@@ -32,12 +30,11 @@ public class DatafileKeys {
   public DatafileKeys() {
   }
 
-  public DatafileKeys(Dataset dataset) {
-    Investigation investigation = dataset.getInvestigation();
-    this.facil = investigation.getFacility().getName();
-    this.inst = investigation.getInstrument().getName();
-    this.prop = investigation.getName();
-    this.coll = investigation.getVisitId();
-    this.run = dataset.getName();
+  public DatafileKeys(String facility, String instrument, String proposal, String collection, String runNumber) {
+    this.facil = facility;
+    this.inst = instrument;
+    this.prop = proposal;
+    this.coll = collection;
+    this.run = runNumber;
   }
 }

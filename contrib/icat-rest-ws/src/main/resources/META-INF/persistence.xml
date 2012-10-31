@@ -47,15 +47,15 @@
     <properties>
       <property name="eclipselink.target-server" value="SunAS9" />
       <property name="eclipselink.cache.shared.default" value="false" />
-      <property name="eclipselink.logging.level" value="WARNING" />
+<!--      <property name="eclipselink.logging.level" value="WARNING" />-->
       <property name="eclipselink.ddl-generation" value="create-tables" />
       <property name="eclipselink.ddl-generation.output_mode"
-                      value="both" />
+                value="both" />
     </properties>
   </persistence-unit>
 
   <persistence-unit name="icatuser"
-                      transaction-type="JTA">
+                    transaction-type="JTA">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>jdbc/icatuser</jta-data-source>
     <class>org.icatproject.useransto.entity.UserE</class>
@@ -66,10 +66,10 @@
     <properties>
       <property name="eclipselink.target-server" value="SunAS9" />
       <property name="eclipselink.cache.shared.default" value="false" />
-      <property name="eclipselink.logging.level" value="WARNING" />
+<!--      <property name="eclipselink.logging.level" value="WARNING" />-->
       <property name="eclipselink.ddl-generation" value="create-tables" />
       <property name="eclipselink.ddl-generation.output_mode"
-                      value="both" />
+                value="both" />
     </properties>
 
   </persistence-unit>

@@ -1,3 +1,4 @@
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -6,10 +7,7 @@ package icat.rest.ws.service;
 
 import icat.rest.ws.converter.DatafileKeys;
 import icat.rest.ws.converter.DatafileLocation;
-import icat.rest.ws.converter.LastRunConverter;
-import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -20,7 +18,7 @@ import javax.ws.rs.core.Context;
 import org.apache.log4j.Logger;
 import org.icatproject.core.IcatException;
 import org.icatproject.core.entity.Datafile;
-import org.icatproject.core.entity.Dataset;
+import org.icatproject.core.entity.Investigation;
 import org.icatproject.core.manager.BeanManager;
 import org.icatproject.core.manager.SearchResponse;
 
@@ -55,47 +53,67 @@ public class DatafileFacadeREST extends AbstractFacade<Datafile> {
 //    BigDecimal lastRun = (BigDecimal) getEntityManager().createNativeQuery(query).setParameter(1, inst).getSingleResult();
 //    return new LastRunConverter(lastRun);
 //  }
-
   @GET
   @Path("{facil}/{inst}/{run}")
   @Produces({"application/xml", "application/json"})
-  public DatafileLocation findFileLocation(@PathParam("inst") String inst, @PathParam("run") String run, @QueryParam("contains") String contains, @QueryParam("ext") String ext, @Context HttpServletRequest requestContext) {
+  public DatafileLocation findFiles(@PathParam("inst") String instrument, @PathParam("run") String run, @QueryParam("contains") String contains, @QueryParam("ext") String ext, @Context HttpServletRequest requestContext) {
+    String yourIP = requestContext.getRemoteAddr().toString();
+    ArrayList<String> list = new ArrayList<String>();
+    try {
+      log.info("Beginning findFiles from IP: " + yourIP);
+      String filename = instrument + "_" + run + "%";
+      log.info("filename: " + filename);
+      String query = "Datafile.location <-> Datafile [name LIKE ':filename']";
+      query = query.replace(":filename", filename);
+      SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
+      Iterator iter = results.getList().iterator();
+      while (iter.hasNext()) {
+        String location = (String) iter.next();
+        if (contains != null && !contains.isEmpty() && !location.contains(contains)) {
+          location = "";
+        }
+        if (ext != null && !ext.isEmpty() && !location.endsWith(ext)) {
+          location = "";
+        }
+        if (!location.isEmpty()) {
+          list.add(location);
+        }
+      }
+      log.info("Ending getFiles()");
+      return new DatafileLocation(list);
+    } catch (IcatException ex) {
+      log.error("In findFiles: IcatException " + ex.getMessage());
+    } finally {
+      return new DatafileLocation(list);
+    }
+  }
+  
+  @GET
+  @Path("filename/{filename}")
+  @Produces({"application/xml", "application/json"})
+  public DatafileLocation findFileLocation(@PathParam("filename") String filename, @Context HttpServletRequest requestContext) {
     String yourIP = requestContext.getRemoteAddr().toString();
     ArrayList<String> list = new ArrayList<String>();
     try {
       log.info("Beginning findFileLocation from IP: " + yourIP);
-      String query = "Dataset INCLUDE Datafile [name = ':run'] <-> Investigation  <-> Instrument [name = ':inst']";
-      query = query.replace(":run", run).replace(":inst", inst);
+      String query = "Datafile.location <-> Datafile [name = ':filename']";
+      query = query.replace(":filename", filename);
       SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
       Iterator iter = results.getList().iterator();
       while (iter.hasNext()) {
-        Dataset ds = (Dataset) iter.next();
-        Iterator iter2 = ds.getDatafiles().iterator();
-        while (iter2.hasNext()) {
-          Datafile file = (Datafile) iter2.next();
-          String fileName = file.getName();
-          String location = file.getLocation();
-          log.info("getFileLocationImpl: file name + " + file.getName());
-          if (contains != null && !contains.isEmpty() && !fileName.contains(contains)) {
-            location = "";
-          }
-          if (ext != null && !ext.isEmpty() && !fileName.endsWith(ext)) {
-            location = "";
-          }
-          if (!location.isEmpty()) {
-            list.add(location);
-          }
+        String location = (String) iter.next();
+        if (!location.isEmpty()) {
+          list.add(location);
         }
       }
       log.info("Ending getFileLocation()");
-      return new DatafileLocation(list);
     } catch (IcatException ex) {
       log.error("In findFileLocation: IcatException " + ex.getMessage());
     } finally {
       return new DatafileLocation(list);
     }
   }
-
+    
   @GET
   @Path("facil/{facil}/inst/{inst}/run/{run}")
   @Produces({"application/xml", "application/json"})
@@ -103,21 +121,24 @@ public class DatafileFacadeREST extends AbstractFacade<Datafile> {
     try {
       String yourIP = requestContext.getRemoteAddr().toString();
       log.info("Beginning findFiveKeys IP: " + yourIP);
-      String query = "Dataset [name = ':run'] <-> Investigation <-> Instrument [name = ':inst']";
+      //String query = "DISTINCT Dataset [name = ':run'] <-> Investigation <-> Instrument [name = ':inst']";
+      String query = "DISTINCT Investigation  <-> Dataset [name = ':run'] <-> Instrument [name = ':inst']";
       query = query.replace(":run", run).replace(":inst", inst);
+      System.out.println("query=" + query);
       SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
       if (results.getList().size() == 1) {
         Iterator iter = results.getList().iterator();
-        Dataset dataset = (Dataset) iter.next();
-        return new DatafileKeys(dataset);
+        Investigation inv = (Investigation) iter.next();
+        log.info("Ending findFiveKeys, found 5 keys");
+        return new DatafileKeys(facil, inst, inv.getName(), inv.getVisitId(), run);
       }
       return new DatafileKeys();
     } catch (IcatException ex) {
-      log.error("In findFileLocation: IcatException " + ex.getMessage());
+      log.error("In findFiveKeys: IcatException " + ex.getMessage());
       return new DatafileKeys();
     }
   }
-  
+
   @Override
   protected EntityManager getEntityManager() {
     return em;
