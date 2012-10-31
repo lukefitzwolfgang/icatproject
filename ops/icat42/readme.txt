@@ -1,5 +1,5 @@
 README.txt for ICAT 4.2.0 rapid installation
-Alistair Mills - 13 October 2012
+Alistair Mills - October 2012
 $Id$
 
 For more detailed instructions please visit:
@@ -25,6 +25,7 @@ It is usual to add content to the ./bashrc such as the following:
 export      JAVA_HOME=/usr/lib/jvm/java-6-openjdk
 export GLASSFISH_HOME=/home/glassfish3/glassfish312
 export        DB_HOME=$GLASSFISH_HOME/javadb
+export      ICAT_HOME=/home/glassfish3/icat42
 export PATH=\
 $JAVA_HOME/bin:\
 $GLASSFISH_HOME/bin:\
@@ -96,7 +97,7 @@ Go to the directory called icat42 containing the material from the svn command a
 asadmin start-domain domain1
 asadmin start-database --dbhost 127.0.0.1
 
-# 2. Create the database pools and deploy the authenticator and icat.
+# 2. Create the jdbc connections for the authenticator and icat.
 
 cd icat.ear.config     ; ./create.sh;   cd ..
 cd authn_db.ear.config ; ./create.sh;   cd ..
