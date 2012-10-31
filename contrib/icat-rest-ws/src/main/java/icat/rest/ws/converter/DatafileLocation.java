@@ -4,7 +4,6 @@
  */
 package icat.rest.ws.converter;
 
-import icat.rest.ws.service.DatafileFacadeREST;
 import java.util.Collection;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;

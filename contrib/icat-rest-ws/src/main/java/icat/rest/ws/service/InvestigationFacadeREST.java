@@ -25,7 +25,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 
 import org.icatproject.core.entity.Investigation;
-import org.icatproject.core.entity.Dataset;
 import org.icatproject.core.manager.SearchResponse;
 import org.icatproject.core.manager.BeanManager;
 import org.icatproject.core.IcatException;
@@ -41,16 +40,10 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
 
   @PersistenceContext(unitName = "icat4PU")
   private EntityManager em;
-  private static Logger log = Logger.getLogger(InvestigationFacadeREST.class);
+  private static final Logger log = Logger.getLogger(InvestigationFacadeREST.class);
 
   public InvestigationFacadeREST() {
     super(Investigation.class);
-  }
-
-  @GET
-  @Produces({"application/text"})
-  public String getHello() {
-    return "Hello world";
   }
 
   @GET
@@ -61,13 +54,12 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
     try {
       String yourIP = requestContext.getRemoteAddr().toString();
       log.info("Beginning getInstruments(): " + yourIP);
-      String query = "Instrument <-> Facility [ name = ':facility']";
+      String query = "Instrument.name ORDER BY name <-> Facility [ name = ':facility']";
       query = query.replace(":facility", facility);
       SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
       Iterator iter = results.getList().iterator();
       while (iter.hasNext()) {
-        Instrument inst = (Instrument) iter.next();
-        list.add(inst.getName());
+        list.add((String) iter.next());
       }
       log.info("Ending getInstruments(): " + list.size());
     } catch (IcatException ex) {
@@ -86,14 +78,13 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
     try {
       String yourIP = requestContext.getRemoteAddr().toString();
       log.info("Beginning getProposals: " + yourIP);
-      String query = "Investigation <-> Instrument [ name = ':instrument']";
+      String query = "DISTINCT Investigation.name ORDER BY name <-> Instrument [ name = ':instrument']";
       query = query.replace(":instrument", instrument);
       SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
       ArrayList<String> list = new ArrayList<String>();
       Iterator iter = results.getList().iterator();
       while (iter.hasNext()) {
-        Investigation inv = (Investigation) iter.next();
-        list.add(inv.getName());
+        list.add((String) iter.next());
       }
       log.info("Ending getProposals, found " + list.size() + " proposals for instrment " + instrument);
       return new ProposalConverter(list);
@@ -145,7 +136,7 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
       if (inIncrement) {
         runRange = runRange.concat(oldRunNumber);
       }
-      log.info("Ending getRuns, found " + runRange + " runs for instrment " + instrument + " and proposal " + proposal);
+      log.info("Ending getRuns, found run range: " + runRange + " for instrment " + instrument + " and proposal " + proposal);
       return new RunConverter(runRange);
     } catch (IcatException ex) {
       log.error("In getRuns: got IcatException " + ex.getMessage());
@@ -160,19 +151,22 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
     try {
       String yourIP = requestContext.getRemoteAddr().toString();
       log.info("Beginning getMeta: " + yourIP);
-      String query = "Investigation [name = ':proposal'] <-> Instrument [ name = ':instrument']";
+      String query = "Investigation INCLUDE 1 [ name = ':proposal' ] <-> Instrument [ name = ':instrument']";
       query = query.replace(":instrument", instrument).replace(":proposal", proposal);
       SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
-      log.info("Ending getMeta, found " + results.getList().size() + " proposals for instrment " + instrument);
+      log.info("Ending getMeta, found " + results.getList().size() + " proposals for instrument " + instrument);
       if (results.getList().size() != 1) {
         return new InvestigationConverter();
       } else {
         Iterator iter = results.getList().iterator();
-        Investigation inv = (Investigation) iter.next();
-        return new InvestigationConverter(inv);
+        while (iter.hasNext()) {
+          Investigation inv = (Investigation) iter.next();
+          return new InvestigationConverter(inv);
+        }
+        return new InvestigationConverter();
       }
     } catch (IcatException ex) {
-      log.error("In getRuns: got IcatException " + ex.getMessage());
+      log.error("In getMeta: got IcatException " + ex.getMessage());
       return new InvestigationConverter();
     }
   }

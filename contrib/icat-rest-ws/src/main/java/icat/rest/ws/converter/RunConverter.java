@@ -4,8 +4,6 @@
  */
 package icat.rest.ws.converter;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.apache.log4j.Logger;

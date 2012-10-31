@@ -6,6 +6,7 @@ package icat.rest.ws.service;
 
 import java.util.List;
 import javax.persistence.EntityManager;
+import org.apache.log4j.PropertyConfigurator;
 
 /**
  *
@@ -17,6 +18,7 @@ public abstract class AbstractFacade<T> {
 
   public AbstractFacade(Class<T> entityClass) {
     this.entityClass = entityClass;
+        PropertyConfigurator.configure("icat-rest-ws.properties");
   }
 
   protected abstract EntityManager getEntityManager();
