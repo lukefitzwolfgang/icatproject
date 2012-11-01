@@ -3,7 +3,11 @@
 = Contribution Index =
 
 
- [http://code.google.com/p/icatproject/source/browse/contrib/icat-ER-Diagrams ER Diagrams]
+ [http://code.google.com/p/icatproject/source/browse/contrib/icat-ER-Diagrams            ER Diagrams]
+ [http://code.google.com/p/icatproject/source/browse/contrib/icat-java-client-demo       Client Demo]
+ [http://code.google.com/p/icatproject/source/browse/contrib/icat-rest-ws                RESTful ICAT]
+ [http://code.google.com/p/icatproject/source/browse/contrib/scripts                     Scripts]
+
+ [PyIcat                                                                                 PyICAT - a webservice client module]
 
 == - the end - ==
-
