@@ -3,29 +3,7 @@
 
 = ICAT Main page =
 
-== ICAT4.2 ==
-
- * [Icat42Roadmap            Icat4.2 Roadmap]
- * [RequirementsIcat42       Icat4.2 Requirements]
- * [Icat42ReleaseCriteria    Icat4.2 Release criteria]
- * [Icat4Workpackages        Icat4.2 Work Packages]
-
-== ICAT4.1 ==
-
- * [Icat41Roadmap            Icat4.1 Roadmap]
- * [RequirementsIcat41       Icat4.1 Requirements]
- * [Icat41ReleaseCriteria    Icat4.1 Release criteria]
- * [Icat4Workpackages        Icat4.1 Work Packages]
- * [InstallIcat41            Icat4.1 Installation notes]
-
-== ICAT4.0 ==
-
- * [Icat4Roadmap             Icat4.0 Roadmap]
- * [Icat40Announcement       Icat4.0 Announcement]
- * [InstallIcat40            Icat4.0 Installation notes]
- * [Icat4ReleaseCriteria     Icat4.0 Release Criteria]
- * [Icat40Demonstrator       Icat4.0 Demonstration system]
-
+ * [IcatRequirements            Icat Requirements]
 
 == Collaboration information ==
 
@@ -34,25 +12,15 @@
  * [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICATCollaborationAssessment-v1.0.pdf  Review document]
  * [http://www.icatproject.org/index.php/ICAT_review_by_SSI_-_January_2012                                                 Summary of review]
  
-
 == Design ==
 
- 
  * [CSMD             ICAT Metadata Model (CSMD)]
-
-
-== Installation ==
-
- * [IcatInstallation Revised Database and Icat Installation]
- * [Logging                              Control of Logging]
-
-
 
 == Project ==
 
- * [3rd_Party_Licenses 3rd Party Licenses]
- * [IcatWhosWho ICAT Who's Who]
- * [http://code.google.com/p/icatproject/issues/entry Create New Issue]
+ * [3rd_Party_Licenses                                   3rd Party Licenses]
+ * [IcatWhosWho                                          ICAT Who's Who]
+ * [http://code.google.com/p/icatproject/issues/entry    Create New Issue]
 
 == Partners ==
 
