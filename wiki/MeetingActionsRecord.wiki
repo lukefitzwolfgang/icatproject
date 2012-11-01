@@ -7,7 +7,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
-== Meeting 46 - 1 Npvember 2012 ==
+== Meeting 46 - 1 November 2012 ==
 
  * Actions from the meetings 45 (Alistair/Steve)
  * Plan for the face to face meeting in March 2013
