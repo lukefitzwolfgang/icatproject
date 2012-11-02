@@ -7,6 +7,8 @@ package icat.rest.ws.service;
 
 import icat.rest.ws.converter.DatafileKeys;
 import icat.rest.ws.converter.DatafileLocation;
+import icat.rest.ws.converter.LastRunConverter;
+import icat.rest.ws.converter.RunConverter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import javax.ejb.Stateless;
@@ -38,21 +40,39 @@ public class DatafileFacadeREST extends AbstractFacade<Datafile> {
     super(Datafile.class);
   }
 
-//  @GET
-//  @Path("{facil}/{inst}")
-//  @Produces({"application/xml", "application/json"})
-//  public LastRunConverter findLastRun(@PathParam("inst") String inst, @Context HttpServletRequest requestContext) {
-//    String yourIP = requestContext.getRemoteAddr().toString();
-//    log.info("Beginning findLastRun IP: " + yourIP);
-//    String query = "SELECT MAX(datafile_parameter.numeric_value) "
-//            + "FROM datafile_parameter, datafile, dataset, investigation "
-//            + "WHERE dataset.investigation_id = investigation.id AND dataset.id = datafile.dataset_id "
-//            + "AND datafile.id = datafile_parameter.datafile_id AND datafile_parameter.name = 'run_number' "
-//            + "AND investigation.instrument = ?";
-//    log.info("findLastRun query = " + query);
-//    BigDecimal lastRun = (BigDecimal) getEntityManager().createNativeQuery(query).setParameter(1, inst).getSingleResult();
-//    return new LastRunConverter(lastRun);
-//  }
+  @GET
+  @Path("{facil}/{inst}")
+  @Produces({"application/xml", "application/json"})
+  public LastRunConverter findLastRun(@PathParam("inst") String instrument, @Context HttpServletRequest requestContext) {
+    try {
+      String yourIP = requestContext.getRemoteAddr().toString();
+      log.info("Beginning findLastRun IP: " + yourIP);
+
+      //String query = "Investigation INCLUDE Dataset [name = ':proposal'] <-> Instrument [ name = ':instrument'] order by Dataset.name";
+      String query = "DISTINCT Dataset.name  <-> Investigation <-> Instrument [ name = ':instrument']";
+      query = query.replace(":instrument", instrument);
+      SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
+
+      long lastRun = 0;
+      long currentRun = 0;
+      String runNumber;
+      Iterator iter = results.getList().iterator();
+
+      while (iter.hasNext()) {
+        runNumber = (String) iter.next();
+        currentRun = Long.parseLong(runNumber);
+        if (currentRun > lastRun) {
+          lastRun = currentRun;
+        }
+      }
+      log.info("findLastRun lastRun = " + lastRun);
+      return new LastRunConverter(lastRun);
+    } catch (IcatException ex) {
+      log.error("In getRuns: got IcatException " + ex.getMessage());
+      return new LastRunConverter();
+    }
+  }
+
   @GET
   @Path("{facil}/{inst}/{run}")
   @Produces({"application/xml", "application/json"})
@@ -87,7 +107,7 @@ public class DatafileFacadeREST extends AbstractFacade<Datafile> {
       return new DatafileLocation(list);
     }
   }
-  
+
   @GET
   @Path("filename/{filename}")
   @Produces({"application/xml", "application/json"})
@@ -113,7 +133,7 @@ public class DatafileFacadeREST extends AbstractFacade<Datafile> {
       return new DatafileLocation(list);
     }
   }
-    
+
   @GET
   @Path("facil/{facil}/inst/{inst}/run/{run}")
   @Produces({"application/xml", "application/json"})
