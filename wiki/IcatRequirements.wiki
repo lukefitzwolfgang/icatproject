@@ -1,4 +1,4 @@
-#summary Requirements for ICAT - to be tabulated
+#summary Requirements for ICAT - to be tabulated.
 
 <wiki:toc max_depth="3" />
 
