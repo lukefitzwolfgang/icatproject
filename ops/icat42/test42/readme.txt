@@ -6,7 +6,7 @@ svn co https://icatproject.googlecode.com/svn/ops/icat40/test40
 svn co https://icatproject.googlecode.com/svn/ops/icat41/test41
 svn co https://icatproject.googlecode.com/svn/ops/icat42/test42
 
-This material is a simple test for icat for use in Service Verification - 0 in November 2012.  It is not intended for production.  It has been tested on linux.  The use of this material on other platforms such as windows, cygwin and MacOS is not supported, but it may work with minor changes.
+This material is a simple test for icat for use in Service Verification - 0 in November 2012.  It is not intended for production.  It has been tested on linux and MacOs.  The use of this material on other platforms such as windows and cygwin is not supported, but it may work with minor changes.
 
 There are three directories, each containing similar materials.  The jar files in each directory are different, as they have been built for only one version of ICAT.  Using materials for icat 4.2 when connecting to a server running icat 4.1 or 4.0 will not work.
 
@@ -40,14 +40,14 @@ Usage of test_all.sh:
 To run all of the tests do this:
 ./test_all.sh
 
-The output is in csv form, showing date, host, properties, response, wsdl.location
+The output is in csv form showing date, host, properties, response, wsdl.location and can be imported into a spreadsheet such as Excel and LibreOffice.
 
 Output of test_all.sh:
 Expect something of the following form:
 
-Wed Oct 31 23:53:53 GMT 2012, u-8100, test42, domain1, authenticator = db Session ID = 59e2623f-50e0-4784-a175-29067ac3ec55 API Version = 4.2.0, wsdl.location=http://localhost:8080/ICATService/ICAT?wsdl
-Wed Oct 31 23:53:55 GMT 2012, u-8100, test42, domain2, authenticator = db Session ID = d5c702e2-27fb-4854-92a7-5512f9e71a54 API Version = 4.2.0, wsdl.location=http://localhost:8080/ICATService/ICAT?wsdl
-Wed Oct 31 23:53:56 GMT 2012, u-8100, test42, domain3, authenticator = db Session ID = 499844da-159c-4040-ac64-388f01f9b85e API Version = 4.2.0, wsdl.location=http://localhost:8080/ICATService/ICAT?wsdl
+31/10/2012 23:53:53, u-8100, test42, domain1, authenticator = db Session ID = 59e2623f-50e0-4784-a175-29067ac3ec55 API Version = 4.2.0, wsdl.location=http://localhost:8080/ICATService/ICAT?wsdl
+31/10/2012 23:53:55, u-8100, test42, domain2, authenticator = db Session ID = d5c702e2-27fb-4854-92a7-5512f9e71a54 API Version = 4.2.0, wsdl.location=http://localhost:8080/ICATService/ICAT?wsdl
+31/10/2012 23:53:56, u-8100, test42, domain3, authenticator = db Session ID = 499844da-159c-4040-ac64-388f01f9b85e API Version = 4.2.0, wsdl.location=http://localhost:8080/ICATService/ICAT?wsdl
 
 Testing a single icat:
 To select a single test do this:
