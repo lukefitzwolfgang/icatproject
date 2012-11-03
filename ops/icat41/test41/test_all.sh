@@ -2,20 +2,22 @@
 #
 # $Id$
 #
-export list_of_icats=list_of_icats.txt
-export           pwd=`pwd`
-export          base=`basename $pwd`
-export          host=`hostname`
+export                pwd=`pwd`
+export               base=`basename $pwd`
+export               host=`hostname`
+export        date_format='-u +%d/%m/%Y%t%T'
+export example_properties='example.properties'
 #
-./change_icat.sh > $list_of_icats
+./change_icat.sh |\
 while read icat
 do
   ./change_icat.sh $icat
-  date="`date`"
+  date="`date $date_format`"
   test=`./test_one.sh`
-  wsdl=`grep ^wsdl example.properties`
+  wsdl=`grep ^wsdl $example_properties`
   echo $date, $host, $base, $icat, $test, $wsdl
-done < $list_of_icats
+  rm $example_properties
+done
 #
 # - the end - 
 #
