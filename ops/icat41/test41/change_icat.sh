@@ -4,6 +4,7 @@ export properties=example.properties
 
 if [ "$1" = "" ]  
 then
+  # [ -h $properties ] && link=`ls -l example.properties` echo ${link#*.}
   for i in *_properties
   do 
     export j=${i%%_properties}
