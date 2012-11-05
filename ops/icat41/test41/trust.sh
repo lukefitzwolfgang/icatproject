@@ -22,7 +22,7 @@ then
     echo This url is not https: $url_0
     exit 1
   else
-    echo | java InstallCert $url_1 > /dev/null
+    echo | java -cp InstallCert.jar InstallCert $url_1 > /dev/null
     mv jssecacerts $file
     ls -l $file
   fi
