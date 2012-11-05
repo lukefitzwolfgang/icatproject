@@ -26,10 +26,10 @@ Tests
 || PSI         || Bjoern Abt                   || ?      || ?                                || psi               || .    || .        || .        || .     || .         || .                         ||
 || SNS         || Shelly Ren                   || ?      || ?                                || sns               || .    || .        || .        || .     || .         || .                         ||
 || SOLEIL      || Idrissou Chado               || yes    || ?                                || soleil            || .    || .        || .        || .     || .         || .                         ||
-|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:2080  || domain2           || 4.1  || icat41   || secret   || db    || test40    || not required              || 
-|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:5080  || domain5           || 4.2  || icat42   || secret   || db    || test42    || not required              ||
 || STFC        || Alistair Mills               || yes    || http://www.icatproject.org:8080  || domain1           || 4.0  || icat40   || secret   || db    || test40    || not required              ||
+|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:2080  || domain2           || 4.0  || icat40   || secret   || db    || test40    || not required              || 
 || STFC        || Alistair Mills               || yes    || https://www.icatproject.org:4081 || domain4           || 4.1  || icat41   || secret   || db    || test41    || _www_icatproject_org_4081 ||
+|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:5080  || domain5           || 4.2  || icat42   || secret   || db    || test42    || not required              ||
 || .           || .                            || .      || ?                                || .                 || .    || .        || .        || .     || .         || .                         ||
 || .           || .                            || .      || ?                                || .                 || .    || .        || .        || .     || .         || .                         ||
 || .           || .                            || .      || ?                                || .                 || .    || .        || .        || .     || .         || .                         ||
