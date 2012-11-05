@@ -1,0 +1,37 @@
+#summary Summary of Service Verifications for Pandata
+
+<wiki:toc max_depth="3" />
+
+= Introduction =
+
+To be added.
+
+== Status ==
+
+Tests
+
+|| Partner     || Contact                      || Client || Url                              || Server-connection || Icat || Username || Password || Authn || Directory || Certificate file          ||
+|| ALBA        || Daniel Salvat                || ?      || ?                                || alba              || .    || .        || .        || .     || .         || .                         ||
+|| ANSTO       || Steve Androulakis            || ?      || ?                                || anso              || .    || .        || .        || .     || .         || .                         ||
+|| DESY        || Thorsten Kracht              || ?      || ?                                || desy              || .    || .        || .        || .     || .         || .                         ||
+|| DLS         || Ghita Kouadri Mostefaoui     || yes    || https://www.icatproject.org:6081 || dls               || 4.2  || icat42   || secret   || db    || test42    || _www_icatproject_org_6081 ||
+|| ELETTRA     || Milan Prica                  || yes    || ?                                || elettra           || .    || .        || .        || .     || .         || .                         ||
+|| ESRF        || Nicola Bessone               || yes    || ?                                || esrf              || .    || .        || .        || .     || .         || .                         ||
+|| FRM         || Christian Felder             || ?      || ?                                || frm               || .    || .        || .        || .     || .         || .                         ||
+|| HZB         || Juergen                      || ?      || ?                                || hzb               || .    || .        || .        || .     || .         || .                         ||
+|| ILL         || Jamie Hall                   || yes    || ?                                || ill               || .    || .        || .        || .     || .         || .                         ||
+|| ISIS        || Tom Griffin                  || yes    || ?                                || isis              || .    || .        || .        || .     || .         || .                         ||
+|| LLB         || .                            || ?      || ?                                || llb               || .    || .        || .        || .     || .         || .                         ||
+|| MAX         || .                            || ?      || ?                                || max               || .    || .        || .        || .     || .         || .                         ||
+|| PSI         || Bjoern Abt                   || ?      || ?                                || psi               || .    || .        || .        || .     || .         || .                         ||
+|| SNS         || Shelly Ren                   || ?      || ?                                || sns               || .    || .        || .        || .     || .         || .                         ||
+|| SOLEIL      || Idrissou Chado               || yes    || ?                                || soleil            || .    || .        || .        || .     || .         || .                         ||
+|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:2080  || domain2           || 4.1  || icat41   || secret   || db    || test40    || not required              || 
+|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:5080  || domain5           || 4.2  || icat42   || secret   || db    || test42    || not required              ||
+|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:8080  || domain1           || 4.0  || icat40   || secret   || db    || test40    || not required              ||
+|| STFC        || Alistair Mills               || yes    || https://www.icatproject.org:4081 || domain4           || 4.1  || icat41   || secret   || db    || test41    || _www_icatproject_org_4081 ||
+|| .           || .                            || .      || ?                                || .                 || .    || .        || .        || .     || .         || .                         ||
+|| .           || .                            || .      || ?                                || .                 || .    || .        || .        || .     || .         || .                         ||
+|| .           || .                            || .      || ?                                || .                 || .    || .        || .        || .     || .         || .                         ||
+
+== - the end - ==
