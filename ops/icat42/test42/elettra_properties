@@ -8,7 +8,7 @@ username=test
 authenticator=db
 
 #ICAT password
-password=secret
+password=elettratest
 
 #keywords (separated by commas) are used in following examples: CaseSensitiveKeywordSearch, KeywordDisplay, KeywordSearch
 keywords=HRPD,lmo
