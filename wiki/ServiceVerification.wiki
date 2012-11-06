@@ -4,34 +4,61 @@
 
 = Introduction =
 
-To be added.
+Instructions for participation in the service verification for Pandata WP4 on 9 November 2012.
+
+In order to participate in the service verification, you should do the following things:
+
+ * inform Alistair.Mills@stfc.ac.uk that you intend to participate;
+
+ * download the materials and try the tests now;
+
+ * inform Alistair if you have a service to offer;
+
+ * attend the telco on Thursday 8/11/2012 at 14h UT;
+
+ * inform Alistair of any technical difficulties.
+
+If you have a service offer, send the connection inform to Alistair and he will test it, and publish the connection information into the SVN.  If you do not wish to publish the password, then tell Alistair.  As this is a very simple test to test ICATs, revealing a password to a test account on a test icat is very unlikely to weaken security of your Institute.  Be careful, your security officer may have another opinion!
+ 
+Please read the following:
+
+ * http://pandatawp4.wordpress.com/
+
+ * http://code.google.com/p/icatproject/wiki/ServiceVerification
+
+ * http://code.google.com/p/icatproject/source/browse/ops/icat42/test42/readme.txt
+
+Please check out the materials using the following commands:
+{{{
+svn co https://icatproject.googlecode.com/svn/ops/icat40/test40
+svn co https://icatproject.googlecode.com/svn/ops/icat41/test41
+svn co https://icatproject.googlecode.com/svn/ops/icat42/test42
+}}}
 
 == Status ==
 
 Tests
 
-|| Partner     || Contact                      || Client || Url                              || Server-connection || Icat || Username || Password || Authn || Directory || Certificate file          ||
-|| ALBA        || Daniel Salvat                || ?      || ?                                || alba              || .    || .        || .        || .     || .         || .                         ||
-|| ANSTO       || Steve Androulakis            || ?      || ?                                || anso              || .    || .        || .        || .     || .         || .                         ||
-|| DESY        || Thorsten Kracht              || ?      || ?                                || desy              || .    || .        || .        || .     || .         || .                         ||
-|| DLS         || Ghita Kouadri Mostefaoui     || yes    || https://www.icatproject.org:6081 || dls               || 4.2  || icat42   || secret   || db    || test42    || _www_icatproject_org_6081 ||
-|| ELETTRA     || Milan Prica                  || yes    || ?                                || elettra           || .    || .        || .        || .     || .         || .                         ||
-|| ESRF        || Nicola Bessone               || yes    || ?                                || esrf              || .    || .        || .        || .     || .         || .                         ||
-|| FRM         || Christian Felder             || ?      || ?                                || frm               || .    || .        || .        || .     || .         || .                         ||
-|| HZB         || Juergen                      || ?      || ?                                || hzb               || .    || .        || .        || .     || .         || .                         ||
-|| ILL         || Jamie Hall                   || yes    || ?                                || ill               || .    || .        || .        || .     || .         || .                         ||
-|| ISIS        || Tom Griffin                  || yes    || ?                                || isis              || .    || .        || .        || .     || .         || .                         ||
-|| LLB         || .                            || ?      || ?                                || llb               || .    || .        || .        || .     || .         || .                         ||
-|| MAX         || .                            || ?      || ?                                || max               || .    || .        || .        || .     || .         || .                         ||
-|| PSI         || Bjoern Abt                   || ?      || ?                                || psi               || .    || .        || .        || .     || .         || .                         ||
-|| SNS         || Shelly Ren                   || ?      || ?                                || sns               || .    || .        || .        || .     || .         || .                         ||
-|| SOLEIL      || Idrissou Chado               || yes    || ?                                || soleil            || .    || .        || .        || .     || .         || .                         ||
-|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:8080  || domain1           || 4.0  || icat40   || secret   || db    || test40    || not required              ||
-|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:2080  || domain2           || 4.0  || icat40   || secret   || db    || test40    || not required              || 
-|| STFC        || Alistair Mills               || yes    || https://www.icatproject.org:4081 || domain4           || 4.1  || icat41   || secret   || db    || test41    || _www_icatproject_org_4081 ||
-|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:5080  || domain5           || 4.2  || icat42   || secret   || db    || test42    || not required              ||
-|| .           || .                            || .      || ?                                || .                 || .    || .        || .        || .     || .         || .                         ||
-|| .           || .                            || .      || ?                                || .                 || .    || .        || .        || .     || .         || .                         ||
-|| .           || .                            || .      || ?                                || .                 || .    || .        || .        || .     || .         || .                         ||
+|| Partner     || Contact                      || Client || Url                                               || Server-connection || Icat || Username || Password || Authn || Directory || Certificate file          ||
+|| ALBA        || Daniel Salvat                || ?      || ?                                                 || alba              || .    || .        || .        || .     || .         || .                         ||
+|| ANSTO       || Steve Androulakis            || ?      || ?                                                 || ansto              || .    || .        || .        || .     || .         || .                         ||
+|| DESY        || Juergen Starek               || yes    || ?                                                 || desy              || .    || .        || .        || .     || .         || .                         ||
+|| DLS         || Ghita Kouadri Mostefaoui     || yes    || https://www.icatproject.org:6081                  || dls               || 4.2  || icat42   || secret   || db    || test42    || _www_icatproject_org_6081 ||
+|| ELETTRA     || Milan Prica                  || yes    || https://icat-elettra.grid.elettra.trieste.it:8181 || elettra           || .    || .        || .        || .     || .         || .                         ||
+|| ESRF        || Nicola Bessone               || yes    || ?                                                 || esrf              || .    || .        || .        || .     || .         || .                         ||
+|| FRM         || Christian Felder             || ?      || ?                                                 || frm               || .    || .        || .        || .     || .         || .                         ||
+|| HZB         || .                            || ?      || ?                                                 || hzb               || .    || .        || .        || .     || .         || .                         ||
+|| ILL         || Jamie Hall                   || yes    || ?                                                 || ill               || .    || .        || .        || .     || .         || .                         ||
+|| ISIS        || Tom Griffin                  || yes    || ?                                                 || isis              || .    || .        || .        || .     || .         || .                         ||
+|| LLB         || .                            || ?      || ?                                                 || llb               || .    || .        || .        || .     || .         || .                         ||
+|| MAXLab      || Krister                      || ?      || ?                                                 || max               || .    || .        || .        || .     || .         || .                         ||
+|| PSI         || Bjoern Abt                   || ?      || ?                                                 || psi               || .    || .        || .        || .     || .         || .                         ||
+|| SNS         || Shelly Ren                   || ?      || ?                                                 || sns               || .    || .        || .        || .     || .         || .                         ||
+|| SOLEIL      || Idrissou Chado               || yes    || ?                                                 || soleil            || .    || .        || .        || .     || .         || .                         ||
+|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:8080                   || domain1           || 4.0  || icat40   || secret   || db    || test40    || not required              ||
+|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:2080                   || domain2           || 4.0  || icat40   || secret   || db    || test40    || not required              || 
+|| STFC        || Alistair Mills               || yes    || https://www.icatproject.org:4081                  || domain4           || 4.1  || icat41   || secret   || db    || test41    || _www_icatproject_org_4081 ||
+|| STFC        || Alistair Mills               || yes    || http://www.icatproject.org:5080                   || domain5           || 4.2  || icat42   || secret   || db    || test42    || not required              ||
+
 
 == - the end - ==
