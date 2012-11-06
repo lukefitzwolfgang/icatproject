@@ -17,16 +17,12 @@ The directory contains the following materials:
 change_icat.sh
 domain1_properties
 domain2_properties
-domain3_properties
+domain4_properties
 icat_api_examples.jar
 icat.client-4.1.0.jar
-InstallCert.class
-InstallCert.java
-InstallCert$SavingTrustManager.class
+InstallCert.jar
 jssecacerts-www.icatproject.org
 readme.txt
-SSLPoke.class
-SSLPoke.java
 test41.csv
 test_all.sh
 test_one.sh
@@ -34,7 +30,8 @@ trust.sh
 
 Jar files:
 One jar file contains the icat-client jar for the version of ICAT.  
-The other jar file contains a compiled version of a small set of tests for this version of ICAT.
+Another jar file contains a compiled version of a small set of tests for this version of ICAT.
+Another jar file contains code for creating the certificate trust store.
 
 Properties files:
 Each of the properties files contains the connection information for an icat.  The choice of the name of the file is not significant, but its contents are important.
@@ -48,8 +45,8 @@ The file trust.sh allows the user to tell the tests to trust additional hosts - 
 Jssecacerts file:
 This is the default trust file.  It tells the test scripts to trust www.icatproject.org.
 
-Java and class files:
-These are associated with adding trust for additional hosts.  See Trusting additional hosts.
+Certificate files:
+_icat-elettra_grid_elettra_trieste_it_8181 contains the truststore for elettra.
 
 Usage of test_all.sh:
 To run all of the tests do this:
@@ -60,9 +57,9 @@ The output is in csv form showing date, host, properties, response, wsdl.locatio
 Output of test_all.sh:
 Expect something of the following form:
 
-04/11/2012 10:33:42, u-8100, test41, domain1, Session ID = 6d8c9408-9c01-41a1-83e6-9a01f6ca73e5, wsdl.location=https://www.icatproject.org:4081/ICATService/ICAT?wsdl
-04/11/2012 10:33:44, u-8100, test41, domain2, Session ID = 26605ea6-6bf6-492a-80b0-0b87e516aa41, wsdl.location=https://www.icatproject.org:4081/ICATService/ICAT?wsdl
-04/11/2012 10:33:47, u-8100, test41, domain3, Session ID = 2da6dd7c-24bf-4b69-a97b-b357ec4bd12e, wsdl.location=https://www.icatproject.org:4081/ICATService/ICAT?wsdl
+06/11/2012 23:03:37, u-8100, test42, dls, authenticator = db Session ID = 8f9f1fe8-6df4-427b-bfb4-602f2ea3c471 API Version = 4.2.0, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+06/11/2012 23:03:38, u-8100, test42, domain5, authenticator = db Session ID = 79d61063-f8df-4d18-888b-29aee579b19d API Version = 4.2.0, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+06/11/2012 23:03:39, u-8100, test42, elettra, authenticator = db Session ID = ec5ab2af-67d6-41c7-a0cb-f782b4d67f3c API Version = 4.2.1, wsdl.location=https://icat-elettra.grid.elettra.trieste.it:8181/ICATService/ICAT?wsdl
 
 Testing a single icat:
 
@@ -79,7 +76,7 @@ Customisation of the tests:
 
 There is no limit to the number of _properties files.  Three are provided as examples.  The user can create additional _properties files and give them names which indicate their content; for example a file called esrf_properties may contain the properties which are required to connect to esrf.  
 
-Depending on the local firewall, it may be necessary to change the file test_one.sh to pass the address of the local proxy server.  There is a commented out example of this test_one.sh.
+Depending on the local firewall, it may be necessary to change the file test_one.sh to pass the address of the local proxy server.  There is a commented out example of this in test_one.sh.
 
 If the remote host is using a non standard certificate on a secure protocol, it may be necessary to tell the java virtual machine to trust the host.  This is described in the next section.  
 
@@ -87,11 +84,11 @@ Trusting additional hosts:
 
 To trust an additional host use the script trust.sh.  For example, use the following command:
 
-./trust.sh domain1
+./trust.sh domain4
 
 In this case this creates a file called _www_icatproject_org_4081.  The script test_one.sh uses this file to trust the host.
 
-When adding a host to the tests and the host does not have a trusted certificate, this script provides an easy way to collect the certificate.
+This script provides an easy way to collect the certificate when adding a host to the tests and the host does not have a trusted certificate.
 
 - the end - 
 
