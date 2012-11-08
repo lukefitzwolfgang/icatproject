@@ -131,6 +131,7 @@ public class IcatXmlTestClient {
 			}
 			JAXBContext jc = JAXBContext.newInstance(Icatdata.class);
 			Marshaller m = jc.createMarshaller();
+			m.setProperty("jaxb.formatted.output", Boolean.TRUE);
 			OutputStream os = System.out;
 			if (outFile != null) {
 				os = new FileOutputStream(outFile);
