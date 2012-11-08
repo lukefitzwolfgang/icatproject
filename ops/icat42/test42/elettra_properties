@@ -1,4 +1,4 @@
-# $Id: dls_properties 2214 2012-11-05 23:20:54Z crcamills@gmail.com $
+# $Id$
 wsdl.location=https://icat-elettra.grid.elettra.trieste.it:8181/ICATService/ICAT?wsdl
 
 #ICAT username
