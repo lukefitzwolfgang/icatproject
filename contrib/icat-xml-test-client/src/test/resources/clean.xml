@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- removes all data from icat DB -->
+<icatdata xmlns:ns2="http://icatproject.org">
+	<!-- config for client -->
+	<config>
+		<haltOnError>false</haltOnError>
+		<tables2Clean>
+			<table>Facility</table>
+			<table>Instrument</table>
+			<table>InstrumentScientist</table>
+			<table>ParameterType</table>
+			<table>PermissibleStringValue</table>
+			<table>SampleType</table>
+			<table>DatasetType</table>
+			<table>DatafileFormat</table>
+			<table>InvestigationType</table>
+			<table>FacilityCycle</table>
+			<table>Investigation</table>
+			<table>InvestigationParameter</table>
+			<table>Keyword</table>
+			<table>InvestigationUser</table>
+			<table>Study</table>
+			<table>StudyInvestigation</table>
+			<table>Shift</table>
+			<table>Sample</table>
+			<table>SampleParameter</table>
+			<table>Dataset</table>
+			<table>DatasetParameter</table>
+			<table>Datafile</table>
+			<table>DatafileParameter</table>
+			<table>Publication</table>
+			<!-- clean auth tables at the end -->
+			<table>UserGroup</table>
+			<table>User</table>
+			<table>Group</table>
+		</tables2Clean>
+	</config>
+</icatdata>
