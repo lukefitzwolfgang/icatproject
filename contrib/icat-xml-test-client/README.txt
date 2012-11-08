@@ -176,7 +176,6 @@ in the Icatdata container class.
 
 TODOs
 -----
-+ format xml file that contains search result
 + perhaps use XML ID and XML IDREF instead of current <id> elements for
   references (requires strings instead of longs)
 + add a <searchidquery> element instead of the <id> element to search in a
