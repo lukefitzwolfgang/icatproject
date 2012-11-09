@@ -13,7 +13,7 @@ Build the client
 
 You need maven installed and properly configured on your machine.
 Run 'mvn package' in the icatXmlTestClient directory to create the
-icatXmlTestClient-0.1.jar in the target sub-directory.
+icatXmlTestClient-0.2.jar in the target sub-directory.
 
 Using the client
 ----------------
