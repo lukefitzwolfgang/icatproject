@@ -30,12 +30,12 @@ public class IcatWriter {
 	private String sessionId;
 
 	/**
-	 * A map key class to store icat datatype objects under their datatype and id.
+	 * A map key class to store icat datatype objects under their datatype and id or searchId.
 	 * 
 	 * @author SSCHULZE
 	 * 
 	 */
-	public static class DataTypeID {
+	public static class DataTypeID<T> {
 		/**
 		 * The icat datatype.
 		 */
@@ -44,12 +44,12 @@ public class IcatWriter {
 		/**
 		 * The icat id.
 		 */
-		private Long id;
+		private T id;
 
 		public DataTypeID() {
 		};
 
-		public DataTypeID(final String dataType, final Long id) {
+		public DataTypeID(final String dataType, final T id) {
 			this.dataType = dataType;
 			this.id = id;
 		}
@@ -66,9 +66,9 @@ public class IcatWriter {
 		public boolean equals(Object obj) {
 			if (this == obj)
 				return true;
-			if (!(obj instanceof DataTypeID))
+			if (!(obj instanceof DataTypeID<?>))
 				return false;
-			DataTypeID o = (DataTypeID) obj;
+			DataTypeID<T> o = (DataTypeID<T>) obj;
 			return ((this.id == null ? o.id == null : this.id.equals(o.id)) && (this.dataType == null ? o.dataType == null
 					: this.dataType.equals(o.dataType)));
 		}
@@ -88,23 +88,28 @@ public class IcatWriter {
 	/**
 	 * The local id cache.
 	 */
-	private Map<DataTypeID, EntityBaseBean> localObjMap;
+	private Map<DataTypeID<Long>, EntityBaseBean> localObjMap;
 
 	/**
 	 * The initial id cache.
 	 */
-	private Map<DataTypeID, EntityBaseBean> searchedObjMap;
+	private Map<DataTypeID<Long>, EntityBaseBean> searchedObjMap;
 
 	/**
 	 * The icat id cache.
 	 */
-	private Map<DataTypeID, EntityBaseBean> icatObjMap;
+	private Map<DataTypeID<Long>, EntityBaseBean> icatObjMap;
+
+	/**
+	 * The icat search id query cache.
+	 */
+	private Map<DataTypeID<String>, EntityBaseBean> searchIdQueryMap;
 
 	public IcatWriter(Icatdata data) {
 		this.data = data;
 	}
 
-	public IcatWriter(Icatdata data, Map<DataTypeID, EntityBaseBean> searchedObjMap) {
+	public IcatWriter(Icatdata data, Map<DataTypeID<Long>, EntityBaseBean> searchedObjMap) {
 		this.data = data;
 		this.searchedObjMap = searchedObjMap;
 	}
@@ -120,17 +125,18 @@ public class IcatWriter {
 		// init
 		this.icat = icat;
 		this.sessionId = sessionId;
-		this.localObjMap = new HashMap<DataTypeID, EntityBaseBean>();
+		this.localObjMap = new HashMap<DataTypeID<Long>, EntityBaseBean>();
 		if (this.searchedObjMap != null) {
 			this.localObjMap.putAll(searchedObjMap);
 		}
-		this.icatObjMap = new HashMap<DataTypeID, EntityBaseBean>();
+		this.icatObjMap = new HashMap<DataTypeID<Long>, EntityBaseBean>();
+		this.searchIdQueryMap = new HashMap<DataTypeID<String>, EntityBaseBean>();
 		this.create(this.data);
 		// dumpCache(this.localObjMap);
 	}
 
-	private void dumpCache(final Map<DataTypeID, EntityBaseBean> cache) throws Exception {
-		for (Map.Entry<DataTypeID, EntityBaseBean> entry : cache.entrySet()) {
+	private void dumpCache(final Map<DataTypeID<Long>, EntityBaseBean> cache) throws Exception {
+		for (Map.Entry<DataTypeID<Long>, EntityBaseBean> entry : cache.entrySet()) {
 			System.out.println(entry.getKey().toString() + ": " + objToStr(entry.getValue()));
 		}
 	}
@@ -153,18 +159,37 @@ public class IcatWriter {
 	}
 
 	/**
-	 * Fetch the entity base object either from the local map or ICAT (cached also locally). The search key is the id.
+	 * Fetch the entity base object either from the local map or ICAT (cached also locally). The search key is the id or the search id query.
 	 * If no object is found null is returned.
 	 * 
 	 * @param ebIn
 	 * @return
 	 * @throws Exception
 	 */
-	private EntityBaseBean getEbForId(final EntityBaseBean ebIn) throws Exception {
-		if (ebIn == null || ebIn.getId() == null)
+	private EntityBaseBean getEbForIdOrSearchId(final EntityBaseBean ebIn) throws Exception {
+		if (ebIn == null)
 			return null;
+		
+		if(ebIn.getSearchId() != null && ebIn.getSearchId().trim().length() > 0) {
+			return this.getEbForSearchId(ebIn);
+		}
+		
+		if (ebIn.getId() != null) {
+			return this.getEbForId(ebIn);
+		}
+		
+		return null;
+	}
+	
+	/**
+	 * Get entity base bean from local references or ICAT id.
+	 * @param ebIn
+	 * @return
+	 * @throws Exception
+	 */
+	private EntityBaseBean getEbForId(final EntityBaseBean ebIn) throws Exception {
 		EntityBaseBean ebOut = null;
-		DataTypeID did = new DataTypeID(ebIn.getClass().getSimpleName(), ebIn.getId());
+		DataTypeID<Long> did = new DataTypeID<Long>(ebIn.getClass().getSimpleName(), ebIn.getId());
 		if (this.data.getConfig().getLocalIdRange().inRange(did.id)) {
 			return this.localObjMap.get(did);
 		}
@@ -183,6 +208,44 @@ public class IcatWriter {
 		}
 		return ebOut;
 	}
+	
+	/**
+	 * Get entity base bean either from local query cache or from icat.
+	 * @param ebIn
+	 * @return
+	 * @throws Exception
+	 */
+	private EntityBaseBean getEbForSearchId(final EntityBaseBean ebIn) throws Exception {
+		EntityBaseBean ebOut = null;
+		ebIn.setSearchId(ebIn.getSearchId().trim());
+		// check if object is already in cache
+		DataTypeID<String> dsid = new DataTypeID<String>(ebIn.getClass().getSimpleName(), ebIn.getSearchId());
+		if(this.searchIdQueryMap.containsKey(dsid)) {
+			return this.searchIdQueryMap.get(dsid);
+		}
+		// search object in icat
+		try {
+			List<Object> results = icat.search(sessionId, ebIn.getSearchId());
+			if (results != null && results.size() > 1)
+				throw new ArrayIndexOutOfBoundsException("Found more than one entity base bean for query="
+						+ ebIn.getSearchId());
+			ebOut = (EntityBaseBean) results.get(0);
+			// cache with query
+			this.searchIdQueryMap.put(dsid, ebOut);
+			if (ebIn.getId() != null) {
+				// cache since locally referenced
+				this.localObjMap.put(new DataTypeID<Long>(ebIn.getClass().getSimpleName(), ebIn.getId()), ebOut);
+			}
+			
+		} catch (Exception e) {
+			if (this.data.getConfig().getHaltOnError())
+				throw e;
+			System.err.println("ERROR: " + e.toString());
+			e.printStackTrace(System.err);
+			System.err.println("Continuing import...");
+		}
+		return ebOut;
+	}
 
 	/**
 	 * Cache locally referenced entity base objects
@@ -192,7 +255,7 @@ public class IcatWriter {
 	private void cacheEb(final EntityBaseBean eb) {
 		if (eb == null || eb.getId() == null)
 			return;
-		DataTypeID did = new DataTypeID(eb.getClass().getSimpleName(), eb.getId());
+		DataTypeID<Long> did = new DataTypeID<Long>(eb.getClass().getSimpleName(), eb.getId());
 		if (!this.data.getConfig().getLocalIdRange().inRange(did.id))
 			return;
 		this.localObjMap.put(did, eb);
@@ -215,7 +278,7 @@ public class IcatWriter {
 			List l = (List) obj;
 			for (int i = 0; i < l.size(); i++) {
 				if (l.get(i) instanceof EntityBaseBean) {
-					EntityBaseBean refEb = this.getEbForId((EntityBaseBean) l.get(i));
+					EntityBaseBean refEb = this.getEbForIdOrSearchId((EntityBaseBean) l.get(i));
 					if (refEb != null) {
 						// replace parsed object by cached object
 						l.remove(i);
@@ -240,7 +303,7 @@ public class IcatWriter {
 					EntityBaseBean ebProp = (EntityBaseBean) m.invoke(eb);
 					if (ebProp == null)
 						continue;
-					EntityBaseBean refEb = this.getEbForId(ebProp);
+					EntityBaseBean refEb = this.getEbForIdOrSearchId(ebProp);
 					if (refEb != null) {
 						Method setter = eb.getClass().getMethod("s" + m.getName().substring(1), ebProp.getClass());
 						setter.invoke(eb, refEb);
@@ -258,7 +321,7 @@ public class IcatWriter {
 		if (eb instanceof Icatdata)
 			return;
 		// no we create a new object in icat so remove any ids since they are only file local
-		DataTypeID oldDid = new DataTypeID(eb.getClass().getSimpleName(), eb.getId());
+		DataTypeID<Long> oldDid = new DataTypeID<Long>(eb.getClass().getSimpleName(), eb.getId());
 		eb.setId(null);
 		try {
 			// create the object

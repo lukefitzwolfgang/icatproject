@@ -21,7 +21,7 @@ Using the client
 You need a java VM of version 1.6 or higher. Open a command line change into the
 directory which contains the icatXmlTestClient-0.1.jar and call
 
-java -cp icatclient.jar [proxy_params] org.icatproject.testclient.IcatXmlTestClient command [query] [file] icat_base_URL user password auth_mechanism
+java -cp icatXmlTestClient-0.2.jar [proxy_params] org.icatproject.testclient.IcatXmlTestClient command [query] [file] icat_base_URL user password auth_mechanism
 
 proxy_params: standard java properties e.g. to configure your proxy requirements:
    -Dhttp.nonProxyHosts=myicat.xxx.yy to avoid passing through the proxy for
@@ -48,7 +48,7 @@ password: the password of the authenticating user
 auth_mechanism: the authentication mechanism that you are using (db or ldap)
 
 Example:
-java -cp icatclient.jar -Dhttp.nonProxyHosts=myserver.xxx.yy org.icatproject.testclient.IcatXmlTestClient import icatdata.xml http://myserver.xxx.yy:8080 root secret db
+java -cp icatXmlTestClient-0.2.jar -Dhttp.nonProxyHosts=myserver.xxx.yy org.icatproject.testclient.IcatXmlTestClient import icatdata.xml http://myserver.xxx.yy:8080 root secret db
    
 
 Search command
@@ -57,7 +57,7 @@ Search command
 The search command executes a query and saves all results to a file.
 
 Example:
-java -cp icatclient.jar org.icatproject.testclient.IcatXmlTestClient search "Facility [name = 'ESRF']" search.xml http://myserver.xxx.yy:8080 root secret db
+java -cp icatXmlTestClient-0.2.jar org.icatproject.testclient.IcatXmlTestClient search "Facility [name = 'ESRF']" search.xml http://myserver.xxx.yy:8080 root secret db
 
 This will fetch the facility named 'ESRF' and save it to the search.xml file.
 
@@ -68,7 +68,7 @@ Import command
 The import command imports icat data from an xml file.
 
 Example:
-java -cp icatclient.jar org.icatproject.testclient.IcatXmlTestClient search "Facility [name = 'ESRF']" import-icat.xml http://myserver.xxx.yy:8080 root secret db
+java -cp icatXmlTestClient-0.2.jar org.icatproject.testclient.IcatXmlTestClient search "Facility [name = 'ESRF']" import-icat.xml http://myserver.xxx.yy:8080 root secret db
 
 This will import all data from import-icat.xml.
 
@@ -78,10 +78,10 @@ The xml file structure has to be:
 <icatdata xmlns:ns2="http://icatproject.org">
 	<config>
 		<haltOnError></haltOnError>
-		<tables2Clean>
-			<table></table>
+		<entities2clean>
+			<query></query>
 			...
-		</tables2Clean>
+		</entities2clean>
 		<localIdRange>
 			<min></min>
 			<max></max>
@@ -96,6 +96,7 @@ The xml file structure has to be:
 	<!-- icat data part (e.g. instrument) --> 
 	<instrument>
 		<id></id>
+		<searchid></searchid>
 		<name></name>
 		...
 	</instrument>
@@ -110,10 +111,13 @@ resolve references between icat objects:
 haltOnError: if true any error stops the execution of the client, if false
    (default) the client ignores errors and tries to continue
    
-tables2Clean: all data from every 'table' which is listed here will be removed
-   before importing; allows to start from a clean DB for each import run;
-   the table name is actually the name of the EntityBaseBean xml element (e.g.
-   instrument, facility, dataset ...)
+entities2clean: all data which is returned by the queries listed here will be
+   removed before importing. You can have one or more query elements inside to
+   reference all data to be deleted. Allows to start from a clean DB for each
+   import run. The syntax is the icat query syntax (see search command above).
+   If you specify only the name of the EntityBaseBean xml element (e.g.
+   instrument, facility, dataset ...) all data of this entity base bean will
+   be deleted (empty table)
    
 localIdRange: min (default MIN_INTEGER) and max (default MAX_INTEGER) define a
    range of ids used in the xml file to reference other icat objects in the
@@ -133,6 +137,13 @@ To reference an object you place only the <id> element with the id inside the
 objects element. You can also add an <id> element to an object that you are
 creating (a local id). This local id can then be referenced further down in
 the file.
+
+You can also reference existing icat objects through the <searchid> element
+which does a search on icat for the object. If you additionally specify a local
+id the searched element can be referenced further down with the local id.
+This behavior is similar to searching for an object in the searchid part of the
+config element but it can be more convenient to do it in the data part right in
+the object that you are creating.
 
 The client caches ids per entity base bean type (i.e. you can use the same id
 for different types). The first time it comes across an id it assumes that you
@@ -157,7 +168,7 @@ http://code.google.com/p/java-use-examples/source/browse/trunk/src/com/aw/ad/uti
 for the InstallSert utility which creates a trust store called jssecacerts
 with your certificate. You then have to pass this trust store as the default
 trust store to your vm:
-java -cp icatclient.jar -Djavax.net.ssl.trustStore=jssecacerts -Dhttp.nonProxyHosts=myserver.xxx.yy org.icatproject.testclient.IcatXmlTestClient ...
+java -cp icatXmlTestClient-0.2.jar -Djavax.net.ssl.trustStore=jssecacerts -Dhttp.nonProxyHosts=myserver.xxx.yy org.icatproject.testclient.IcatXmlTestClient ...
 
 Development details
 -------------------
@@ -171,15 +182,18 @@ be removed since otherwise the dataset or datafile element could not be
 retrieved by the xml unmarshaller and icat throws an exception since the
 dataset/datafile are mandatory.
 
+An addtional member called searchId has been added to the EnityBaseBean class
+to handle reference resolving over icat queries. 
+
 The marshalling and un-marshalling is handled by JAXB and has its root element
 in the Icatdata container class.
 
 TODOs
 -----
++ add general update flag which updates each element which has an icat
+  reference id or a searchid element (or use update attribute instead?)
 + perhaps use XML ID and XML IDREF instead of current <id> elements for
   references (requires strings instead of longs)
-+ add a <searchidquery> element instead of the <id> element to search in a
-  contained element instead of searching for it in the config header
   
 Contact
 -------
