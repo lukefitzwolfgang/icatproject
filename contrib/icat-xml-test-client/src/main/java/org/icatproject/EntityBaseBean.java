@@ -38,7 +38,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "createTime",
     "modTime",
     "id",
-    "modId"
+    "modId",
+    "searchId"
 })
 @XmlSeeAlso({
     Datafile.class,
@@ -84,6 +85,7 @@ public abstract class EntityBaseBean {
     protected XMLGregorianCalendar modTime;
     protected Long id;
     protected String modId;
+    protected String searchId;
 
     /**
      * Gets the value of the createId property.
@@ -203,6 +205,30 @@ public abstract class EntityBaseBean {
      */
     public void setModId(String value) {
         this.modId = value;
+    }
+
+    /**
+     * Gets the value of the searchId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSearchId() {
+        return searchId;
+    }
+
+    /**
+     * Sets the value of the searchId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSearchId(String value) {
+        this.searchId = value;
     }
 
 }

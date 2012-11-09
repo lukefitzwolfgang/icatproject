@@ -72,10 +72,10 @@ public class IcatXmlTestClient {
 	 * @throws Exception
 	 */
 	private final void clean(final Config config) throws Exception {
-		if (config.getTables2clean() == null || config.getTables2clean().isEmpty())
+		if (config.getEntities2clean() == null || config.getEntities2clean().isEmpty())
 			return;
-		for (String table : config.getTables2clean()) {
-			cleanData(table, config.getHaltOnError());
+		for (String query : config.getEntities2clean()) {
+			cleanData(query, config.getHaltOnError());
 		}
 		System.out.println("Cleaned all data!");
 	}
@@ -83,13 +83,13 @@ public class IcatXmlTestClient {
 	/**
 	 * Removes all data for one datatype (table) in ICAT.
 	 * 
-	 * @param datatype
+	 * @param query
 	 * @param haltOnError
 	 * @throws Exception
 	 */
-	private final void cleanData(final String datatype, final boolean haltOnError) throws Exception {
+	private final void cleanData(final String query, final boolean haltOnError) throws Exception {
 		try {
-			List<Object> results = icat.search(sessionId, datatype);
+			List<Object> results = icat.search(sessionId, query);
 			if (results == null || results.size() == 0)
 				return;
 			for (Object object : results) {
@@ -103,7 +103,7 @@ public class IcatXmlTestClient {
 					System.err.println("Continuing cleaning...");
 				}
 			}
-			System.out.println("Cleaned all data for data type: " + datatype);
+			System.out.println("Cleaned " + results.size() + " entities for query: " + query);
 		} catch (Exception e) {
 			if (haltOnError)
 				throw e;
@@ -142,17 +142,17 @@ public class IcatXmlTestClient {
 		}
 	}
 
-	private final Map<DataTypeID, EntityBaseBean> searchIDs(final Config config) throws Exception {
+	private final Map<DataTypeID<Long>, EntityBaseBean> searchIDs(final Config config) throws Exception {
 		if (config.getSearchids() == null || config.getSearchids().isEmpty())
 			return null;
-		Map<DataTypeID, EntityBaseBean> objMap = new HashMap<DataTypeID, EntityBaseBean>();
+		Map<DataTypeID<Long>, EntityBaseBean> objMap = new HashMap<DataTypeID<Long>, EntityBaseBean>();
 		for (SearchContainer search : config.getSearchids()) {
 			try {
 				List<Object> results = icat.search(sessionId, search.getQuery());
 				if (results != null && results.size() > 1)
-					throw new ArrayIndexOutOfBoundsException("Found more than one entity bae bean for query="
+					throw new ArrayIndexOutOfBoundsException("Found more than one entity base bean for query="
 							+ search.getQuery());
-				objMap.put(new DataTypeID(results.get(0).getClass().getSimpleName(), search.getId()),
+				objMap.put(new DataTypeID<Long>(results.get(0).getClass().getSimpleName(), search.getId()),
 						(EntityBaseBean) results.get(0));
 			} catch (Exception e) {
 				if (config.getHaltOnError())
@@ -190,7 +190,7 @@ public class IcatXmlTestClient {
 		Unmarshaller um = jc.createUnmarshaller();
 		Icatdata data = (Icatdata) um.unmarshal(new File(fileName));
 		this.clean(data.getConfig());
-		Map<DataTypeID, EntityBaseBean> objMap = this.searchIDs(data.getConfig());
+		Map<DataTypeID<Long>, EntityBaseBean> objMap = this.searchIDs(data.getConfig());
 		IcatWriter w = new IcatWriter(data, objMap);
 		w.write(this.icat, this.sessionId);
 		System.out.println("Data import done!");

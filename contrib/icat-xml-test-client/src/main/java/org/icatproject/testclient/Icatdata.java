@@ -134,9 +134,9 @@ public class Icatdata extends EntityBaseBean {
 		/**
 		 * All datatypes (tables) which should be cleaned (delete all entries) before the import.
 		 */
-		@XmlElementWrapper(name = "tables2Clean")
-		@XmlElement(name = "table")
-		private List<String> tables2clean = new ArrayList<String>();
+		@XmlElementWrapper(name = "entities2Clean")
+		@XmlElement(name = "query")
+		private List<String> entities2clean = new ArrayList<String>();
 
 		public boolean getHaltOnError() {
 			return haltOnError;
@@ -162,12 +162,12 @@ public class Icatdata extends EntityBaseBean {
 			this.searchids = searchids;
 		}
 
-		public List<String> getTables2clean() {
-			return tables2clean;
+		public List<String> getEntities2clean() {
+			return entities2clean;
 		}
 
-		public void setTables2clean(List<String> tables2clean) {
-			this.tables2clean = tables2clean;
+		public void setEntities2clean(List<String> entities2clean) {
+			this.entities2clean = entities2clean;
 		}
 	}
 

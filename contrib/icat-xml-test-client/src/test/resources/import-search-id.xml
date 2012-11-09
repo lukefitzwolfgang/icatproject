@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Does an import while referencing already existing data in the data part-->
+<icatdata xmlns:ns2="http://icatproject.org">
+	<!-- config for client -->
+	<config>
+		<haltOnError>false</haltOnError>
+		<localIdRange>
+			<min></min>
+			<max>0</max>
+		</localIdRange>
+	</config>
+	<!-- load data -->
+	<instrument>
+		<id>-1</id>
+		<name>ID03</name>
+		<fullName>Beamline ID03</fullName>
+		<description>Third beamline</description>
+		<facility>
+			<id>-1</id>
+			<searchId>Facility [name = 'ESRF']</searchId>
+		</facility>
+		<type>Beamline</type>
+	</instrument>
+	<instrument>
+		<id>-2</id>
+		<name>ID04</name>
+		<fullName>Beamline ID04</fullName>
+		<description>Fourth beamline</description>
+		<facility>
+			<id>-1</id>
+		</facility>
+		<type>Beamline</type>
+	</instrument>
+</icatdata>

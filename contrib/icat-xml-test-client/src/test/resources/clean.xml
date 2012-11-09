@@ -4,35 +4,35 @@
 	<!-- config for client -->
 	<config>
 		<haltOnError>false</haltOnError>
-		<tables2Clean>
-			<table>Facility</table>
-			<table>Instrument</table>
-			<table>InstrumentScientist</table>
-			<table>ParameterType</table>
-			<table>PermissibleStringValue</table>
-			<table>SampleType</table>
-			<table>DatasetType</table>
-			<table>DatafileFormat</table>
-			<table>InvestigationType</table>
-			<table>FacilityCycle</table>
-			<table>Investigation</table>
-			<table>InvestigationParameter</table>
-			<table>Keyword</table>
-			<table>InvestigationUser</table>
-			<table>Study</table>
-			<table>StudyInvestigation</table>
-			<table>Shift</table>
-			<table>Sample</table>
-			<table>SampleParameter</table>
-			<table>Dataset</table>
-			<table>DatasetParameter</table>
-			<table>Datafile</table>
-			<table>DatafileParameter</table>
-			<table>Publication</table>
+		<entities2Clean>
+			<query>Facility</query>
+			<query>Instrument</query>
+			<query>InstrumentScientist</query>
+			<query>ParameterType</query>
+			<query>PermissibleStringValue</query>
+			<query>SampleType</query>
+			<query>DatasetType</query>
+			<query>DatafileFormat</query>
+			<query>InvestigationType</query>
+			<query>FacilityCycle</query>
+			<query>Investigation</query>
+			<query>InvestigationParameter</query>
+			<query>Keyword</query>
+			<query>InvestigationUser</query>
+			<query>Study</query>
+			<query>StudyInvestigation</query>
+			<query>Shift</query>
+			<query>Sample</query>
+			<query>SampleParameter</query>
+			<query>Dataset</query>
+			<query>DatasetParameter</query>
+			<query>Datafile</query>
+			<query>DatafileParameter</query>
+			<query>Publication</query>
 			<!-- clean auth tables at the end -->
-			<table>UserGroup</table>
-			<table>User</table>
-			<table>Group</table>
-		</tables2Clean>
+			<query>UserGroup</query>
+			<query>User</query>
+			<query>Group</query>
+		</entities2Clean>
 	</config>
 </icatdata>
