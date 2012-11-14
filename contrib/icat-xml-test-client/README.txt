@@ -68,7 +68,7 @@ Import command
 The import command imports icat data from an xml file.
 
 Example:
-java -cp icatXmlTestClient-0.2.jar org.icatproject.testclient.IcatXmlTestClient search "Facility [name = 'ESRF']" import-icat.xml http://myserver.xxx.yy:8080 root secret db
+java -cp icatXmlTestClient-0.2.jar org.icatproject.testclient.IcatXmlTestClient import import-icat.xml http://myserver.xxx.yy:8080 root secret db
 
 This will import all data from import-icat.xml.
 
