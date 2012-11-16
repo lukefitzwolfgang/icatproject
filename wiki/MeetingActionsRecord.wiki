@@ -10,6 +10,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 == Meeting 48 - 29 November 2012 ==
 
  * Actions from the meetings 47 (Alistair)
+ * Icat legacy policy (Alistair)
  * Requirements for ICAT 4.3 and beyond (Tom)
  * Update from PaN-data (Milan/George)
  * Deployment of ICAT 4.2 for DLS (Ghita)
