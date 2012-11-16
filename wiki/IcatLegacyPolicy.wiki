@@ -28,7 +28,8 @@ ICAT 4.1 is a fully functional ICAT using the new ICAT 4 API. It is not suitable
 The login method and the authentication method for this ICAT are similar to ICAT 3.3 and are not compatible with ICAT 4.2 and beyond.
 
 An ICAT 3.3 compatible web service end-point is part of the ICAT for use with legacy clients.
-ICAT 4.2
+
+== ICAT 4.2 ==
 
 ICAT 4.2 is a fully functional ICAT and migration tools have been developed in order to move ISIS, DLS from ICAT 3 to this ICAT.
 This release has been extensively tested with unit tests, and functional tests on production services within ISIS, DLS, CLF and SNS. It has been used for the service verifications of Pandata.
