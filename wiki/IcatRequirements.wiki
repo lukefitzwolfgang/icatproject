@@ -1,4 +1,5 @@
 #summary Requirements for ICAT
+#labels Featured
 
 <wiki:toc max_depth="3" />
 
