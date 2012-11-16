@@ -10,9 +10,9 @@ Figure 1: Service Verification Summary
  
 The following can be observed in the graphic:
 
- •Most of the connections were successful;
+ •Most of the connections were successful (85%);
 
- •Some partners had failures connecting to the services at JCNS and STFC.
+ •Some partners had failures connecting to the services at JCNS and ELETTRA.
  
 The following partners provided servers (4/15):
 
@@ -62,15 +62,15 @@ The test provided a reasonably large and diverse set of conditions for the tests
 
  •both http and https protocols;
 
- •the db authentication mechanism;
+ •the db authentication mechanism using oracle, derby and mysql databases;
 
  •11 different firewalls for outbound connections;
 
  •4 firewalls for inbound connections;
 
- •2 http connections on ports 8080, 2080, 5080;
+ •3 http connections on ports 8080, 2080, 5080;
 
- •https connections on ports 4081, 8181, 9111;
+ •3 https connections on ports 4081, 8181, 9111;
 
  •connections from 11 countries;
 
