@@ -1,0 +1,58 @@
+#summary Icat Legacy Policy
+
+<wiki:toc max_depth="3" />
+
+
+= Icat Legacy Policy =
+
+The resources available for the development, deployment and support of ICAT are scarce, and so we have to use the resources carefully. For that reason, we want to have a Legacy Policy which does not commit us to unlimited backward and forward compatibility. The purpose of this document is to clarify the policy. Comments are welcome.
+
+Note that there are example deployments of all ICATs on www.icatproject.org. These demonstrators are available for use by members of the collaboration.
+
+This document states that the responsibility for some components such as Mantid and contrib rest with others parties. The ICAT core team will provide support for the work of others, but it cannot take on responsibility for their components.
+
+== ICAT 3 ==
+
+ICAT 3 is now out of date. By early 2013, the only ICAT 3 in general use will be the ICAT at ILL. The ICAT team at RAL will provide support to ILL, so that ILL can replace the ICAT 3 with an ICAT 4.2 or greater.
+
+== ICAT 4.0 ==
+
+ICAT 4.0 is a technology preview and no migration tools are available to either migrate to it, nor to migrate from it. We do not believe that anyone is using this in production.
+
+An ICAT 3.3 compatible web service end-point is part of the ICAT for use with legacy clients.
+
+== ICAT 4.1 ==
+
+ICAT 4.1 is a fully functional ICAT using the new ICAT 4 API. It is not suitable for production use, and new users should use ICAT 4.2. We do not believe that anyone is using it in production.
+
+The login method and the authentication method for this ICAT are similar to ICAT 3.3 and are not compatible with ICAT 4.2 and beyond.
+
+An ICAT 3.3 compatible web service end-point is part of the ICAT for use with legacy clients.
+ICAT 4.2
+
+ICAT 4.2 is a fully functional ICAT and migration tools have been developed in order to move ISIS, DLS from ICAT 3 to this ICAT.
+This release has been extensively tested with unit tests, and functional tests on production services within ISIS, DLS, CLF and SNS. It has been used for the service verifications of Pandata.
+
+The intention is that the API will be supported on all future versions of ICAT. The API contains only 14 methods, but is object orientated so that the methods operate on a variety of objects. The available objects are likely to increase in later versions of the API, but the methods will continue to operate on objects defined in an earlier version of the API.
+
+== ICAT 4.3 ==
+
+Part of the release process for ICAT 4.3 and beyond will be tests for backward compatibility. That is an application written for ICAT 4.2 should work without a source change in a later ICAT. It may be necessary to use the icat-client.jar for the later ICAT, and it may be necessary to recompile the application. Advice will be provided in the release notes for later releases.
+
+== TOPCAT ==
+
+Topcat supports all version of ICAT from ICAT 3.3 onwards. It can connect simultaneously to a heterogeneous network of ICATs.
+
+== Contrib ==
+
+It is the responsibility of users of a contrib to verify the compatibility of the contrib with the ICAT in use.
+
+== Mantid ==
+
+It is the responsibility of users of the Mantid development team to verify the compatibility of a Mantid with the ICAT in use.
+
+== Others ==
+
+Most users of ICAT have client applications customised to their requirements. It is the responsibility of the owner of the client application to verify that the application is functioning correctly.
+
+== - the end - ==
