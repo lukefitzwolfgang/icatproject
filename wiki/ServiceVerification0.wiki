@@ -4,7 +4,7 @@ The initial service verification was carried out on Friday 9th November 2012.  T
  
 The following graphic provides a summary of the results:
  
-
+http://icatproject.googlecode.com/svn/ops/miscellany/png/sv0-2.png
 
 Figure 1: Service Verification Summary
  
@@ -50,7 +50,7 @@ The following partners provided clients (11/15):
  
 The following associates provided clients (2/2):
 
- •ANO – Australia;
+ •ANS – Australia;
 
  •SNS/ORNL – USA.
  
