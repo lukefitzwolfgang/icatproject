@@ -1,5 +1,4 @@
 #summary Installation instructions for rapid deployment of ICAT 4.2
-#labels Featured
 
 = Simplified installation instructions for ICAT 4.2 =
 
