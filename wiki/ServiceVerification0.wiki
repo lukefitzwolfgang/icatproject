@@ -106,6 +106,6 @@ For future service verifications, we intend to do the following:
 
  •ensure that genuine authentication mechanisms are in use;
 
- •that the servers are configured as production services.
+ •ensure that the servers are configured as production services.
  
 Alistair Mills, STFC, UK
