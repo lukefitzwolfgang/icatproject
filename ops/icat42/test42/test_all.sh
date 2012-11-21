@@ -16,6 +16,8 @@ do
   test=`/usr/bin/time -f %e ./test_one.sh 2>time`
   time=`cat time`
   rm time
+  time=`echo $time 1000*dpq |dc`
+  time=`printf "%4.0f" $time`
   wsdl=`grep ^wsdl $example_properties`
   echo $date, $host, $base, $icat, $test, $wsdl, $time
   rm $example_properties
