@@ -5,7 +5,7 @@
 # This procedure accepts an argument with the url for a web service and transforms it
 #
 # For example:
-# ./change_url wsdl.location=https://wwws.esrf.fr/icat/ICATService/ICAT?wsdl
+# ./change_url.sh wsdl.location=https://wwws.esrf.fr/icat/ICATService/ICAT?wsdl
 #
 # returns:
 #
