@@ -39,7 +39,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 || 47.05 || Add more bootstrap information for developers to wikis and documentation        || SF        ||                 .||                   -||
 || 47.06 || Ask Juergen to investigate deploying ICAT using Jboss                           || AM        ||              Done||                   -||
 || 47.07 || Remove ICATCompat from icat 4.3                                                 || SF        ||                 .||                   -||
-|| 47.08 || Update IcatRequirements based on the discussions in this meeting                || TG        ||                 .||                   -||
+|| 47.08 || Update IcatRequirements based on the discussions in this meeting                || TG        ||              Done||                   -||
 || 47.09 || Do a prototype of machine generated documentation of the WS End Point           || AW        ||                 .||                   -||
 || 47.10 || Investigate the ICAT class in Nexus                                             || GK        ||                 .||                   -||
 || 47.01 || Call next meeting on Thursday 29th November (NOT a public holiday in USA)       || AM        ||              Done||                   -||
@@ -109,7 +109,6 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 ||TG   ||Tom Griffin                  || STFC ISIS Facility         ||              ||      +    ||
 ||AW   ||Antony Wilson                || STFC eSc                   ||              ||      +    ||
 ||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||      +    ||     
-||TG   ||Tom Griffin                  || STFC ISIS Facility         ||              ||      +    ||
 ||SR   ||Shelly Ren                   || ORNL SNS                   ||              ||      +    ||
 
 === Notes 45 ===
