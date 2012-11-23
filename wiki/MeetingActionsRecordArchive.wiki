@@ -4,6 +4,231 @@ This page holds all but the most recent meetings.  The latest meetings are at Me
 
 <wiki:toc max_depth="3" />
 
+== Meeting 43 - 6 September 2012 ==
+
+=== Agenda 43 ===
+
+ * Actions from the meeting 42 (Steve)
+ * Ingest client for ICAT (Tom/ Shelly)
+ * ICAT 4.2 - Status  (Steve)
+ * Plans for ICAT 4.3 (Tom)
+ * Update on plans for the ICAT meeting at Nobugs2012 (Kevin)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.3 for DLS (Ghita)
+ * Deployment of ICAT 4.3 for ISIS (Tom)
+ * Deployment of ICAT 4.2 for CLF (Alistair)
+ * AOB (Any)
+
+== Meeting 42 - 23 August 2012 ==
+
+=== Agenda 42 ===
+
+ * Actions from the meeting 41 (Alistair)
+ * Ingest client for ICAT (Tom/ Shelly)
+ * ICAT 4.2 - Status  (Steve)
+ * Plans for ICAT 4.3 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.3 for DLS (Ghita)
+ * Deployment of ICAT 4.3 for ISIS (Tom)
+ * Deployment of ICAT 4.2 for CLF (Alistair)
+ * AOB (Any)
+
+=== Actions 42 ===
+
+|| Item  || Description                                                                     || Res*(1)   ||           Status||     Comment||
+|| 42.00 || Document the meeting                                                            || AM        ||             Done||           -||
+|| 42.01 || Make an announcement of the availability of ICAT 4.2.0                          || SF        ||             Done||           -||
+|| 42.02 || Discuss anonymous login and NeXus ingest client                                 || TG/SR     || See action 44.02||           -||
+|| 42.03 || Steve to chair the meeting on 6 September, Kevin the meeting on 20/09           || SF/KP     ||             Done||           -||
+|| 42.04 || Call the next meeting on 6 September 2012 - to be chaired by Steve              || AM        ||             Done||           -||
+
+=== Attendance 42 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||SMF  ||Steve Fisher                 || STFC eSc                   ||     +        ||           ||
+||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||              ||      +    ||     
+||HC   ||Harjinder Chahal             || STFC eSc                   ||              ||      +    ||
+||KP   ||Kevin Phipps                 || STFC eSc                   ||     +        ||           ||
+||AW   ||Antony Wilson                || STFC eSc                   ||     +        ||           ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||              ||           ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+||MG   ||Mark Green                   || Tech-X                     ||     +        ||           ||
+
+== Meeting 41 - 9 August 2012 ==
+
+=== Agenda 41 ===
+
+ * Actions from the meeting 40 (Alistair)
+ * ICAT 4.1 - Status  (Alistair)
+ * Plans for ICAT 4.3 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.3 for DLS (Ghita)
+ * Deployment of ICAT 4.3 for ISIS (Tom)
+ * Deployment of ICAT 4.2 for CLF (Alistair)
+ * AOB (Any)
+
+=== Actions 41 ===
+
+|| Item  || Description                                                                     || Res*(1)   ||           Status||     Comment||
+|| 41.00 || Document the meeting                                                            || AM        ||             Done||           -||
+|| 41.01 || Publish the Nexus ingest to Google/contrib                                      || SR        ||             Done||          - ||
+|| 41.02 || Call the next meeting on 23 August 2012                                         || AM        ||             Done||        -   ||
+
+=== Attendance 41 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||SMF  ||Steve Fisher                 || STFC eSc                   ||              ||     +     ||
+||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||HC   ||Harjinder Chahal             || STFC eSc                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC eSc                   ||              ||      +    ||
+||AW   ||Antony Wilson                || STFC eSc                   ||              ||      +    ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||              ||      +    ||
+||GK   ||George Kourousias            || ELETTRA                    ||              ||           ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+
+== Meeting 40 - 26 July 2012 ==
+
+=== Agenda 40 ===
+
+ * Actions from the meetings of 14 June (Steve)
+ * ICAT 4.1 - Status  (Steve)
+ * Plans for ICAT 4.2 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.2 for DLS (Ghita)
+ * Deployment of ICAT 4.2 for ISIS (Tom)
+ * Deployment of ICAT 4.1 for CLF (Steve)
+ * AOB (Any)
+
+=== Actions 40 ===
+
+||Item   ||Description                                                                      || Res*(1)   ||           Status||     Comment||
+||40.00  ||Document the meeting                                                             || SMF       ||             Done||           -||
+|| 40.01 || Investigate XMLIngest with new API - can it be generic?                         || TG        ||         On-going||          - ||
+|| 40.02 || Organise ICAT presence at NOBUGS and its ICAT workshop                          || TG        ||         On-going||        -   ||
+|| 40.03 || Provide data to Ghita in ICAT 4.1/4.2 format                                    || GKM       ||               - || Assigned to Ghita for the moment to make sure it is not forgotten. ||
+
+=== Attendance 40 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||SMF  ||Steve Fisher                 || STFC eSc                   ||              ||       +   ||
+||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||HC   ||Harjinder Chahal             || STFC eSc                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC eSc                   ||              ||        +  ||
+||AW   ||Antony Wilson                || STFC eSc                   ||              ||       +   ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||              ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||              ||           ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||              ||           ||
+
+=== Notes 40 ===
+Steve mentioned the timing issue in 4.1
+
+Tom indicated that ISIS would like XMLIngest back - but they will modify it to use the new API efficiently and attempt to make it generic.
+
+The purpose and format of the ICAT workshop at NOBUGS was discussed. It was thought that a tutorial might be useful. Neither Alistair nor Steve will be present.
+
+Ghita would like some data in an ICAT 4.1 to test her eclipse plugin.
+
+== Meeting 39 - 14 June 2012 ==
+
+=== Agenda 39 ===
+
+ * Actions from the meetings of 31 May (Alistair)
+ * ICAT 4.1 - Status  (Steve)
+ * Plans for ICAT 4.2 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4 for DLS (Ghita)
+ * Deployment of ICAT 4 for ISIS (Tom)
+ * AOB (Any)
+
+=== Actions 39 ===
+
+||Item   ||Description                                                                       ||Res*(1)   ||           Status||                                                   Comment||
+||39.00  ||Document the meeting                                                              ||AM        ||             Done||                                                         -||
+||39.01  ||Distribute TOC/Plan for the Pandata Deliverable WP4.1                             ||MP        ||             Done||                                                         -||
+||39.02  ||Make an announcement about the availability of ICAT 4.1                           ||AM        ||             Done||                                                         -||
+
+=== Attendance 39 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||SF   ||Steve Fisher                 || STFC eSc                   ||              ||       +   ||
+||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||HC   ||Harjinder Chahal             || STFC eSc                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC eSc                   ||     +        ||           ||
+||AW   ||Antony Wilson                || STFC eSc                   ||              ||       +   ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||              ||       +   ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||     +        ||           ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||              ||       +   ||
+ 
+== Meeting 38 - 31 May 2012 ==
+
+=== Agenda 38 ===
+
+ * Actions from the meetings of 19 May (Alistair)
+ * ICAT 4.1 - Status  (Steve)
+ * Availability of release candidate for ICAT41 including Mysql (Alistair)
+ * Plans for ICAT 4.2 (Tom)
+ * Deployment of ICAT 4 for DLS (Ghita)
+ * Deployment of ICAT 4 for ISIS (Tom)
+ * Update from PaN-data (Milan/George)
+ * AOB (Any)
+
+=== Actions 38 ===
+
+||Item   ||Description                                                                       ||Res*(1)   ||           Status||                                                   Comment||
+||38.00  ||Document the meeting                                                              ||AM        ||             Done||                                                         -||
+||38.01  ||Send a message to Barcelona asking for help testing ICAT 4.1 RC                   ||AM        ||             Done||                                                         -||
+||38.02  ||Include Topcat in the responsibilities of the IEB                                 ||AM        ||             Done||                                                         -||
+||38.03  ||ICAT Collaboration is to include discussion of requirements and changes to Topcat ||All       ||             Done||                                                         -||
+||38.04  ||Send changes to ICAT 4.0 to support SNS to SF                                     ||SR        ||             Done||                                                         -||
+
+== Meeting 37 - 17 May 2012 ==
+
+=== Agenda 37 ===
+
+ * Actions from the meetings of 3 May (Alistair)
+ * ICAT Executive Board (IEB) [IcatExecutiveBoard Proposed Terms for the Board]
+ * Changes to the SVN on GoogleCode   (Steve)
+ * Update from PaN-data (Milan/George)
+ * ICAT 4.1 - Status  (Steve)
+ * Availability of release candidate for ICAT41 (Alistair)efficientyly
+ * Availability of Mysql version of ICAT 
+ * AOB (Any)
+
+=== Actions 37 ===
+
+||Item   ||Description                                                                       ||Res*(1)   ||           Status||                                                   Comment||
+||37.00  ||Document the meeting                                                              ||AM        ||             Done||                                                         -||
+||37.01  ||Test deployment of ICAT 4.1 with MySql                                            ||AM        ||             Done||                                                         -||
+||37.02  ||Add documentation on addMany method to ICAT 4.1 API documentation                 ||SF        ||             Done||                                                         -||
+||37.03  ||Prepare a topcat41 which is compatible with ICAT 4.1                              ||AW        ||     Awaiting 4.1||                                                         -||
+||37.04  ||Add pages to the wiki for planning ICAT 4.2                                       ||AM        ||             Done|| Icat42Roadmap, RequirementsIcat42, Icat42ReleaseCriteria ||
+||37.05  ||Comment on Terms for the Executive Board                                          ||All       ||             Done||                                       IcatExecutiveBoard ||
+||37.06  ||Communicate with Shelly about the downloader                                      ||AW/SR     ||      In progress||                                                         -||
+||37.07  ||Do initial definition of ICAT 4.2                                                 ||TG/AM     ||      In progress|| Icat42Roadmap, RequirementsIcat42, Icat42ReleaseCriteria ||
+
+=== Attendance 37 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||SF   ||Steve Fisher                 || STFC eSc                   ||     +        ||           ||
+||AM   ||Alistair Mills               || STFC eSc                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||HC   ||Harjinder Chahal             || STFC eSc                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC eSc                   ||     +        ||           ||
+||AW   ||Antony Wilson                || STFC eSc                   ||     +        ||           ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||     +        ||           ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+
 == Meeting 36 - 3 May 2012 =
 
 === Agenda 36 ===
