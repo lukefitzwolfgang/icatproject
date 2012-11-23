@@ -220,7 +220,7 @@ Shelly reported that she added the following two modules to the icat project con
 || 44.05 || Provide a copy of the entity diagram for comment                                || NB/SF     ||  See action 45.02||           -||
 || 44.06 || Send an email to SF about the difficulties of building ICAT with Eclipse        || NB        ||              Done||           -||
 
-=== Earlier meetings ===
+== Earlier meetings ==
 
 See MeetingActionsRecordArchive
 
