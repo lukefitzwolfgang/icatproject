@@ -11,32 +11,34 @@ This document will change over time, but the SVN associated with the project wil
 
 == General Project ==
 || *Requirement* || *Requestor* || *Priority* || *Notes* ||
-|| A fully supported upgrade path from ICAT 3.3 to 4.2 and beyond || ISIS, DLS, PaNdata || Essential || Must be continued 4.2 -> 4.3 -> 4.4 etc ||
-|| Include licence in downloads and maven builds || ? || High || - ||
-|| Provide support for data mining || CRISP || ? || - ||
-|| Developer documentation - the status of the different branches in the repository, setting up a development environment, etc || PaNdata || ? || - ||
-|| Alternatives to glassfish - some sites do not use glassfish so it should be possible to deploy ICAT on other servers such as WebLogic and JBoss || PaNdata (DESY?) || ? || - ||
-|| Integration of a work flow management system such as Taverna || PaNdata || ? || - ||
+|| A fully supported upgrade path from ICAT 3.3 to 4.2 and beyond || ISIS, DLS, ILL, PaNdata || Essential || Done for ISIS and DLS. SF to share scripts with ILL ||
+|| A fully supported upgrade path (scripts etc) for future ICAT versions 4.2 -> 4.3 -> 4.4 etc || All || Essential || In progress - IcatLegacyPolicy ||
+|| Include licence in downloads and maven builds ||  || High || - ||
+|| Provide support for data mining || CRISP || ? || JH to investigate and provide more detail ||
+|| Developer documentation - the status of the different branches in the repository, setting up a development environment, etc || PaNdata || In progress || SF to add some extra documentation (Action 47.05). ContribIndex ||
+|| Alternatives to glassfish - some sites do not use glassfish so it should be possible to deploy ICAT on other servers such as WebLogic and JBoss || DESY ||  || Nothing in current set up is container specific. DESY (Juergen) to investigate and report back any issues. ||
+|| Integration of a work flow management system such as Taverna || PaNdata || Low || Consider use of Passerelle in DAWN ||
 
 == API, Model etc ==
 || *Requirement* || *Requestor* || *Priority* || *Notes* ||
-|| Maintain a legacy icat3-exposed web service API to allow gradual migration || ISIS || Essential || - ||
-|| Maintain the ability to create many datafiles in an existing dataset in one web service call || ISIS || Essential || Complete? ||
-|| Usage reports (how many people use ICAT, how many people downloaded dataset x, how many times has anyone asked for data >3 years old) || ISIS || High || - ||
-|| Upload of derived data through TopCAT; || ISIS || Essential || - ||
-|| A way of grouping parameter names - to solve the 86 variations of 'temperature' problem  || ISIS || Desirable || Will be increasingly important for cross facility searching ||
+|| Usage reports (how many people use ICAT, how many people downloaded dataset x, how many times has anyone asked for data >3 years old) || ISIS || High || SF to publish his log file extraction tool ||
+|| A way of grouping parameter names - to solve the 86 variations of 'temperature' problem  || ISIS || Desirable || Will be increasingly important for cross facility searching. Keywords are being considered as a solution for this ||
 || Provide a new API method to allow a quick metadata search without a user login || SNS || High || e.g. start time, run title, run notes, total run time, total accelerator current, sample to detector distance, wave length band used for a given run number or a range of run numbers ||
-|| Cross referencing runs - linking calibaration (transmission, vandaium empty) to sample data to help automate reduction || SNS, ISIS || Desirable || - ||
+|| Cross referencing runs - linking calibration (transmission, vanadium empty) to sample data to help automate reduction || SNS, ISIS || Desirable || - ||
 || RESTful web service || PaNdata (PSI) || ? || - ||
-|| ICAT must work over standard web service ports (80/443) and use standard certificates || PaNdata || Essential || Done? ||
-|| Clean, well documented plugin API for authentication/authorization || PaNdata || ? || - ||
-|| Clean, well documented plugin API for Interface (what is now the WSDL connector) || PaNdata || ? || - ||
 
 == TopCAT ==
 || *Requirement* || *Requestor* || *Priority* || *Notes* ||
-|| TopCAT - expose information about the investigators || ISIS || Complete || - ||
-|| TopCAT - download all metadata for an investigation or dataset || Requestor || Priority || - ||
-|| TopCAT - add ability for data owners to grant permission on their datasets to others || ISIS || Essential || - ||
-|| Basic visualize or view data in TopCAT, possibly using jpowder or similar || ISIS || Desirable || - ||
-|| Visualization of data in TopCAT || ESRF || ? || Merge with above? ||
-|| TopCAT must work over standard web ports (80.443) and use standard certificates || PaNdata || Essential || Done? ||
+|| Upload of derived data through TopCAT || ISIS || Essential || AW working on ||
+|| Add ability for data owners to grant permission on their datasets to others || ISIS || Essential || May require enhancement to ICAT rules system ||
+|| Basic visualize or view data in TopCAT, possibly using jpowder or similar || ISIS, ESRF || Desirable || Agreement between ISIS, DLS & SCD to use jpowder for low effort trial||
+
+== Completed ==
+|| *Requirement* || *Requestor* || *Priority* || *Notes* ||
+|| Maintain the ability to create many datafiles in an existing dataset in one web service call || ISIS || Completed || Released in 4.2 ||
+|| ICAT must work over standard web service ports (80/443) and use standard certificates || PaNdata || Complete || ICAT has always been deployable on any port ||
+|| TopCAT must work over standard web ports (80.443) and use standard certificates || PaNdata || Complete || TopCAT has always been deployable on any port ||
+|| Clean, well documented plugin API for authentication/authorization || PaNdata || Complete || 4.1 and 4.2 improved the way auth plugins work ||
+|| Clean, well documented plugin API for Interface (what is now the WSDL connector) || PaNdata || Complete || In 4.0 the API was simplified. Documentation is available ||
+|| TopCAT -Expose information about the investigators || ISIS || Complete || Released ||
+|| TopCAT - download all metadata for an investigation or dataset || - || Complete || Released ||
