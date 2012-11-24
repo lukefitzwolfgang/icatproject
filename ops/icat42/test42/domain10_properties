@@ -1,5 +1,5 @@
 # $Id$
-wsdl.location=https://www.icatproject.org/ICATService/ICAT?wsdl
+wsdl.location=https://www.icatproject.org:8443/ICATService/ICAT?wsdl
 
 #ICAT username
 username=icat42
