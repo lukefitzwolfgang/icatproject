@@ -1,3 +1,5 @@
+# $Id$
+#
 # Driver
 driver=oracle.jdbc.pool.OracleDataSource 
 
