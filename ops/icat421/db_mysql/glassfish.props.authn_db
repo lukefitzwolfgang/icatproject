@@ -1,0 +1,11 @@
+# Driver
+driver=com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+
+# Authn DB connection properties
+authn_dbProperties=url="'"jdbc:mysql://localhost:3306/icatuser"'":user=icatuser:password=myicatuserpasswd:databaseName=icatuser
+
+# Must contain "glassfish/domains"
+glassfish=/home/glassfish3/glassfish3/glassfish
+
+# Port for glassfish admin calls (normally 4848)
+port=4848
