@@ -4,7 +4,7 @@
 #
 
 # load user details
-. ./vars
+. ./properties.sh
 
 sqlplus -s $DB_USERNAME/$DB_PASSWORD@localhost as sysdba <<EOF
 set serveroutput on

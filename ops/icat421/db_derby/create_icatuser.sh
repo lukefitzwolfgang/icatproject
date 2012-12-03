@@ -4,7 +4,7 @@
 #
 
 # load user details
-. ./vars
+. ./properties.sh
 
 ij <<EOF
 connect 'jdbc:derby://localhost:1527/icatuser;Password=$DB_USERNAME:User=$DB_PASSWORD';

@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# $Id$
+#
 
 usage() {
     echo "Usage:"
@@ -61,3 +64,5 @@ case "$1" in
         usage
         ;;
 esac
+
+# - the end -
