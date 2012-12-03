@@ -7,12 +7,21 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 <wiki:toc max_depth="3" />
 
+== Meeting 50 - 10 January 2013 ==
+
+ * Actions from the meetings 50 (Alistair)
+ * Plans for Sweden2013 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.2 for RAL - DLS, ISIS and CLF (Ghita, Tom, Kevin)
+ * Status of contribs (ContribIndex) (Alistair)
+ * AOB (Any)
+
 == Meeting 49 - 13 December 2012 ==
 
  * Actions from the meetings 48 (Alistair)
- * Plans for ICAT 2013 (Alistair)
+ * Plans for ICAT 2013 (Tom)
  * Update from PaN-data (Milan/George)
- * Deployment of ICAT 4.2 for RAL - DLS, ISIS and CLF (Alistair)
+ * Deployment of ICAT 4.2 for RAL - DLS, ISIS and CLF (Ghita, Tom, Kevin)
  * Status of contribs (ContribIndex) (Alistair)
  * AOB (Any)
 
@@ -30,20 +39,20 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 === Actions 48 ===
 
-|| Item  || Description                                                                     || Res*(1)   ||            Status||             Comment||
-|| 48.00 || Document the meeting                                                            || AM        ||              Done||                   -||
-|| 48.01 || Ask Juan to clarify the dates for the conference in Lund in March (ICAT 2013)   || AM        ||              .   ||                   -||
-|| 48.02 || Email Shelly about the conference in Lund                                       || AM        ||              .   ||                   -||
-|| 48.03 || Add licence information to all source code parts in ICAT 4.3 (ticket)           || AM        ||              .   ||                   -||
-|| 48.04 || Remind Jamie Hall about clarifications of requirements for data mining          || AM        ||              .   ||                   -||
-|| 48.05 || Create tickets for action 47.05, 47.07, 47.09                                   || AM        ||              .   ||                   -||
-|| 48.06 || Add a note to the wiki about Nexus Archive and ICAT                             || GK        ||              .   ||                   -||
-|| 48.07 || Contact Mark Koenig about Nexus standards and ICAT                              || GK        ||              .   ||                   -||
-|| 48.08 || Talk to Bill Pulford about Nexus, DLS and ICAT                                  || AM        ||              .   ||                   -||
-|| 48.09 || Create wiki page for the agenda for ICAT 2013 and add item on Nexus             || AM        ||              .   ||                   -||
-|| 48.10 || Enhance the ICAT Legacy Policy with a clause for support of ICAT after 6 months || AM        ||              .   ||                   -||
-|| 48.11 || Start a discussion on the mailing lists about changes to uniqueness constraints || SF        ||              .   ||                   -||
-|| 48.12 || Call next meetings on 13 December 2012, 10 January 2013; cancel 27 December 2012|| AM        ||              .   ||                   -||
+|| Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
+|| 48.00 || Document the meeting                                                            || AM        ||              Done||                     -||
+|| 48.01 || Ask Juan to clarify the dates for the conference in Lund in March (ICAT 2013)   || AM        ||     Email to Juan||                     -||
+|| 48.02 || Email Shelly about the conference in Lund                                       || AM        ||     Email to Juan||                     -||
+|| 48.03 || Add licence information to all source code parts in ICAT 4.3 (ticket)           || AM        ||              Done||            Ticket #85||
+|| 48.04 || Remind Jamie Hall about clarifications of requirements for data mining          || AM        ||              Done||                     -||
+|| 48.05 || Create tickets for action 47.05, 47.07, 47.09                                   || AM        ||              Done|| Tickets #86, #87 #88 ||    
+|| 48.06 || Add a note to the wiki about Nexus Archive and ICAT                             || GK        ||              .   ||                     -||
+|| 48.07 || Contact Mark Koenig about Nexus standards and ICAT                              || GK        ||              .   ||                     -||
+|| 48.08 || Talk to Bill Pulford about Nexus, DLS and ICAT                                  || AM        ||       In progress||                     -||
+|| 48.09 || Create wiki page for the agenda for ICAT 2013 and add item on Nexus             || AM        ||              Done||            Sweden2013||
+|| 48.10 || Enhance the ICAT Legacy Policy with a clause for support of ICAT after 6 months || AM        ||              .   ||                     -||
+|| 48.11 || Start a discussion on the mailing lists about changes to uniqueness constraints || SF        ||              .   ||                     -||
+|| 48.12 || Call next meetings on 13 December 2012, 10 January 2013; cancel 27 December 2012|| AM        ||              Done||                     -||
 
 === Attendance 48 ===
 
@@ -90,11 +99,11 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 || 47.02 || Clarify ICAT licence                                                            || AM        ||              Done|| http://opensource.org/licenses/BSD-3-Clause||
 || 47.03 || Notify people of IcatLegacyPolicy                                               || AM        ||              Done||                   -||
 || 47.04 || Clarify the data mining requirements                                            || JH        ||                 .||                   -||
-|| 47.05 || Add more bootstrap information for developers to wikis and documentation        || SF        ||          Ticketed||                   -||
+|| 47.05 || Add more bootstrap information for developers to wikis and documentation        || SF        ||      Ticketed #86||                   -||
 || 47.06 || Ask Juergen to investigate deploying ICAT using Jboss                           || AM        ||              Done||                   -||
-|| 47.07 || Remove ICATCompat from icat 4.3                                                 || SF        ||          Ticketed||                   -||
+|| 47.07 || Remove ICATCompat from icat 4.3                                                 || SF        ||      Ticketed #87||                   -||
 || 47.08 || Update IcatRequirements based on the discussions in this meeting                || TG        ||              Done||                   -||
-|| 47.09 || Do a prototype of machine generated documentation of the WS End Point           || AW        ||          Ticketed||                   -||
+|| 47.09 || Do a prototype of machine generated documentation of the WS End Point           || AW        ||      Ticketed #88||                   -||
 || 47.10 || Investigate the ICAT class in Nexus                                             || GK        ||              Done||                   -||
 || 47.01 || Call next meeting on Thursday 29th November (NOT a public holiday in USA)       || AM        ||              Done||                   -||
 
