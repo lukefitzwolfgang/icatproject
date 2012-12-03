@@ -58,9 +58,9 @@ icat.ear.config/icat.properties         : The file has been added to $GLASSFISH_
 icat.ear.config/log4j.properties        : The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
 authn_db.ear.config/authn_db.properties : The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
 
-The Glasssfish server requires a database-driver.jar for the MySQL and Oracle databases. See Database Configuration section below.
+The Glasssfish server requires a database driver for the MySQL and Oracle databases. See Database Configuration section below.
 
-database-driver.jar : The database driver has been added to $GLASSFISH_HOME/glassfish/domains/domain1/lib
+database driver : The appropriate database driver has been added to $GLASSFISH_HOME/glassfish/domains/domain1/lib
 
 
 Ports

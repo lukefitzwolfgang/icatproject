@@ -4,7 +4,7 @@
 #
 
 # load user details
-. ./vars
+. ./properties.sh
 
 mysql -u$DB_ICATUSER_USERNAME -p$DB_ICATUSER_PASSWORD <<EOF
 use icatuser;

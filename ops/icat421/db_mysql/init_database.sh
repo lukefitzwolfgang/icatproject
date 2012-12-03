@@ -4,7 +4,7 @@
 #
 
 # load user details
-. ./vars
+. ./properties.sh
 
 mysql -u$DB_USERNAME -p$DB_PASSWORD <<EOF
 CREATE USER $DB_ICAT_USERNAME IDENTIFIED BY '$DB_ICAT_PASSWORD';

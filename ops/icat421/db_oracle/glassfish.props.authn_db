@@ -4,7 +4,7 @@
 driver=oracle.jdbc.pool.OracleDataSource 
 
 # Authn DB connection o=propertieest
-authn_dbProperties=url="'"jdbc:oracle:thin:@//sig-13.esc.rl.ac.uk:1521/XE"'":ImplicitCachingEnabled=true:MaxStatements=200:user=icatuser:password=myicatuserpasswd
+authn_dbProperties=url="'"jdbc:oracle:thin:@//localhost:1521/XE"'":ImplicitCachingEnabled=true:MaxStatements=200:user=icatuser:password=myicatuserpasswd
 
 # Must contain "glassfish/domains"
 glassfish=/home/glassfish3/glassfish3/glassfish

@@ -4,7 +4,7 @@
 #
 
 # load user details
-. ./vars
+. ./properties.sh
 
 sqlplus -s $DB_ICATUSER_USERNAME/$DB_ICATUSER_PASSWORD@localhost <<EOF
 set serveroutput on

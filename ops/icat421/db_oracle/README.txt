@@ -9,12 +9,11 @@ Before you deploy ICAT make sure you have followed the steps below.
    be put in $GLASSFISH_HOME/glassfish/domains/domain1/lib before starting the
    domain. It can be obtained from the Oracle website.
 
-2) ./vars contains the usernames and passwords for various accounts that need
-   to be created. If you make any changes please make sure these are reflected
-   in both of the glassfish.props files in this directory.
+2) This installation also requires SQLPlus which can be obtained from the
+   Oracle website. Make sure the glassfish3 user has SQLPlus on their PATH.
 
-3) This installation also requires SQLPlus which can be obtained from the
-   Oracle website. If you have trouble running SQLPlus after installing it
-   from an rpm, check you PATH and LD_LIBRARY_PATH.
+3) ./properties.sh contains the usernames and passwords for various accounts
+   that need to be created. If you make any changes please make sure these are 
+   reflected in both of the glassfish.props files in this directory.
 
 - the end -
