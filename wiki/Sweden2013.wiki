@@ -1,11 +1,62 @@
-#summary Notes about the ICAT meeting in Sweden in 2013
+#summary Notes about the ICAT meeting in Lund in Sweden in March 2013
 
 <wiki:toc max_depth="3" />
 
-= Introduction =
+= Attending =
 
-I shall add more information later - Alistair.
+If you are interested in attending this meeting please contact tom.griffin@stfc.ac.uk
+
+= Agenda =
+
+The purpose is to discuss plans for the development and use of ICAT at facilities and by projects such as PaN-Data and CRISP.
+
+All times are too specific to be realistic.
+
+
+
+|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||Notes ||
+|| 09:00      || Session 1 - Chair person - Tom                                               ||              ||                    ||.||
+|| 09:00      || Welcome and introductions                                                    || 55           || .                  ||.||
+|| 09:55      || Q u i c k . . . b r e a k . . .                                              || 05           ||                    ||.||
+|| .          || .                                                                            ||              ||                    ||.||
+|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
+|| 10:00      || Session 2 - Chair person - ?                                                 ||              ||                    ||.||
+|| .          || .                                                                            ||              ||                    ||.||
+|| 11:00      || L o n g  . . . B r e a k . . .                                               || 15           ||                    ||.||
+|| .          || .                                                                            ||              ||                    ||.||
+|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
+|| 11:15      || Session 3 - Chair person - ?                                                 ||              ||                    ||.||
+|| .          || .                                                                            ||              ||                    ||.||
+|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
+|| 12:15      || L u n c h . . .                                                              || 75           ||                    ||.||
+|| .          || .                                                                            ||              ||                    ||.||
+|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
+|| 13:30      || Session 4 - Chair person - ?                                                 ||              ||                    ||.||
+|| 14:30      || B r e a k . . .                                                              || 15           ||                    ||.||
+|| .          || .                                                                            ||              ||                    ||.||
+|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
+|| 14:45      || Session 5 - Chair person - ?                                                 ||              ||                    ||.||
+||            || Discussion of the collaboration between the ICAT team and the WP teams       || 75           || All                ||.||
+|| 16:00      || Wrap-up                                                                      || 15           || All                ||.||
+|| 16:15      || C l o s e . . .                                                              ||              ||                    ||.||
+|| .          || .                                                                            ||              ||                    ||.||
+|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
+|| 16:30      || Technical clinic - optional; bring your technical problems                   || 60           || Harjinder/ Kevin   ||.||
+
+This table has a list of people intending to attend:
+
+|| Name                          || Organisation || Comments                                        ||Notes ||
+|| Alistair Mills                || STFC         || .                                               ||.||
+|| Steve Fisher                  || RAL/STFC     || .                                               ||.||
+|| Antony Wilson                 || RAL/STFC     || .                                               ||.||
+|| Kevin Phipps                  || RAL/STFC     || .                                               ||.||
+|| Tom Griffin                   || STFC/ISIS    || .                                               ||.||
+|| Brian Matthews                || RAL/STFC     || .                                               ||.||
+
+Apologies:
+
+|| Name                          || Organisation || Comments                                        ||Notes ||
+
+
 
 == - the end - ==
-
-
