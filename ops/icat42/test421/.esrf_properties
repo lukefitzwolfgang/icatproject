@@ -1,0 +1,26 @@
+# $Id:  $
+wsdl.location=https://wwws.esrf.fr/icat/ICATService/ICAT?wsdl
+
+#ICAT username
+username=root
+
+#ICAT authenticator
+authenticator=db
+
+#ICAT password
+password=icat
+
+#keywords (separated by commas) are used in following examples: CaseSensitiveKeywordSearch, KeywordDisplay, KeywordSearch
+keywords=HRPD,lmo
+
+#investigation id is used in following examples: CheckAuthorisation, DrillDown
+investigationId=42
+
+#datasetId is used in following examples: DirectDSDF, GetURLForDownload
+datasetId=15067493
+
+#datafileId is used in following example: GetURLForDownload
+datafileId=3908539
+#Please add the following entries to example.properties:
+datasetId=5001
+datafileId=5001

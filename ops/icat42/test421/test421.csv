@@ -1,0 +1,12 @@
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Authenticate : authenticator = db : Session ID = fe614278-5766-41fb-88f9-39965abff51a : API Version = 4.2.0, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Search Facility.name : CLF, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Search Facility.name : My Facility, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Search Investigation.name : My Investigation, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Search Investigation.name : None, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Search Investigation.name : Temp, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Search Dataset.name : My Dataset, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Search DISTINCT Dataset.name : My Dataset, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Search DISTINCT Datafile.name : My Datafile 2, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, Search DISTINCT Datafile.name : My Datafile 1, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, GetUserName : Username = CIC, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+04/12/2012 17:06:59, abm65.esc.rl.ac.uk, test421, domain5, RemainingMinutes : Remaining Minutes:119.99938333333333, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
