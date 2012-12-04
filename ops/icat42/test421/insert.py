@@ -46,10 +46,10 @@ sessionId = service.login(plugin, credentials,)
 # facility
 facilities = service.search(sessionId, "Facility[name='My Facility']")
 if len(facilities): 
-    print "Facility 'My Facility' already exists ..."
+    print "Facility: 'My Facility' already exists ..."
     facility = facilities[0]
 else:
-    print "Creating facility 'My Facility' ..."
+    print "Facility: creating 'My Facility' ..."
     facility = factory.create("facility")
     facility.name = "My Facility"
     facility.fullName = "This is a test facility"
@@ -59,10 +59,10 @@ else:
 # investigationType
 investigation_types = service.search(sessionId, "InvestigationType[name='My Investigation Type']")
 if len(investigation_types): 
-    print "Investigation type 'My Investigation Type' already exists ..."
+    print "InvestigationType: 'My Investigation Type' already exists ..."
     investigation_type = investigation_types[0]
 else:
-    print "Creating investigation type 'My Investigation Type' ..."
+    print "InvestigationType: creating 'My Investigation Type' ..."
     investigation_type = factory.create("investigationType")
     investigation_type.name = "My Investigation Type"
     investigation_type.description = "This is a test investigation type"
@@ -89,10 +89,10 @@ sessionId = service.login(plugin, credentials,)
 # investigation
 investigations = service.search(sessionId, "Investigation[name='My Investigation']")
 if len(investigations): 
-    print "Investigation 'My Investigation' already exists ..."
+    print "Investigation: 'My Investigation' already exists ..."
     investigation = investigations[0]
 else:
-    print "Creating investigation 'My Investigation' ..."
+    print "Investigation: creating 'My Investigation' ..."
     investigation = factory.create("investigation")
     investigation.name = "My Investigation"
     investigation.title = "This is a test investigation"
@@ -103,10 +103,10 @@ else:
 # datasetType
 dataset_types = service.search(sessionId, "DatasetType[name='My Dataset Type']")
 if len(dataset_types): 
-    print "Dataset type 'My Dataset Type' already exists ..."
+    print "DatasetType: 'My Dataset Type' already exists ..."
     dataset_type = dataset_types[0]
 else:
-    print "Creating dataset type 'My Dataset Type' ..."
+    print "DatasetType: creating 'My Dataset Type' ..."
     dataset_type = factory.create("datasetType")
     dataset_type.name = "My Dataset Type"
     dataset_type.description = "This is an example of a dataset type"
@@ -116,10 +116,10 @@ else:
 # dataset
 datasets = service.search(sessionId, "Dataset[name='My Dataset']")
 if len(datasets): 
-    print "Dataset 'My Dataset' already exists ..."
+    print "Dataset: 'My Dataset' already exists ..."
     dataset = datasets[0]
 else:
-    print "Creating dataset 'My Dataset' ..."
+    print "Dataset: creating 'My Dataset' ..."
     dataset = factory.create("dataset")
     dataset.name = "My Dataset"
     dataset.investigation = investigation
@@ -129,9 +129,9 @@ else:
 # datafile1
 datafile1 = service.search(sessionId, "Datafile[name='My Datafile 1']")
 if len(datafile1): 
-    print "Dataset 'My Datafile 1' already exists ..."
+    print "Datafile: 'My Datafile 1' already exists ..."
 else:
-    print "Creating datafile 'My Datafile 1' ..."
+    print "Datafile: creating 'My Datafile 1' ..."
     datafile1 = factory.create("datafile")
     datafile1.name = "My Datafile 1"
     datafile1.description = "This is a description of data file 1"
@@ -141,9 +141,9 @@ else:
 # datafile2
 datafile2 = service.search(sessionId, "Datafile[name='My Datafile 2']")
 if len(datafile2): 
-    print "Dataset 'My Datafile 2' already exists ..."
+    print "Datafile: 'My Datafile 2' already exists ..."
 else:
-    print "Creating datafile 'My Datafile 2' ..."
+    print "Datafile: creating 'My Datafile 2' ..."
     datafile2 = factory.create("datafile")
     datafile2.name = "My Datafile 2"
     datafile2.description = "This is a description of data file 2"

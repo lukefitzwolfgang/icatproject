@@ -44,45 +44,45 @@ sessionId = service.login(plugin, credentials)
 # datafile1
 datafile1 = service.search(sessionId, "Datafile[name='My Datafile 1']")
 if len(datafile1): 
-    print "Datafile 'My Datafile 1' already exists ... so delete it"
+    print "Datafile: 'My Datafile 1' already exists ... so delete it"
     service.delete(sessionId, datafile1)
 else:
-    print "Datafile 'My Datafile 1' does not exist"
+    print "Datafile: 'My Datafile 1' does not exist"
 
 # datafile2
 datafile2 = service.search(sessionId, "Datafile[name='My Datafile 2']")
 if len(datafile2): 
-    print "Datafile 'My Datafile 2' already exists ... so delete it"
+    print "Datafile: 'My Datafile 2' already exists ... so delete it"
     service.delete(sessionId, datafile2)
 else:
-    print "Datafile 'My Datafile 2' does not exist"
+    print "Datafile: 'My Datafile 2' does not exist"
 
 # dataset type
 dataset_types = service.search(sessionId, "DatasetType[name='My Dataset Type']")
 if len(dataset_types): 
-    print "DatasetType 'My Dataset Type' already exists ... so delete it"
+    print "DatasetType: 'My Dataset Type' already exists ... so delete it"
     datasetType = dataset_types[0]
     service.delete(sessionId, datasetType)
 else:
-    print "DatasetType 'My Dataset Type' does not exist"
+    print "DatasetType: 'My Dataset Type' does not exist"
 
 # dataset
 datasets = service.search(sessionId, "Dataset[name='My Dataset']")
 if len(datasets): 
-    print "Dataset 'My Dataset' already exists ... so delete it"
+    print "Dataset: 'My Dataset' already exists ... so delete it"
     dataset = datasets[0]
     service.delete(sessionId, dataset)
 else:
-    print "Dataset 'My Dataset' does not exist"
+    print "Dataset: 'My Dataset' does not exist"
 
 # investigation
 investigations = service.search(sessionId, "Investigation[name='My Investigation']")
 if len(investigations): 
-    print "Investigation 'My Investigation' already exists ... so delete it"
+    print "Investigation: 'My Investigation' already exists ... so delete it"
     investigation = investigations[0]
     service.delete(sessionId, investigation)
 else:
-    print "Investigation 'My Investigation' does not exist"
+    print "Investigation: 'My Investigation' does not exist"
 
 service.logout(sessionId)
 
@@ -106,20 +106,20 @@ sessionId = service.login(plugin, credentials)
 # investigation type
 investigation_types = service.search(sessionId, "InvestigationType[name='My Investigation Type']")
 if len(investigation_types): 
-    print "InvestigationType 'My Investigation Type' already exists ... so delete it"
+    print "InvestigationType: 'My Investigation Type' already exists ... so delete it"
     investigation_type = investigation_types[0]
     service.delete(sessionId, investigation_type)
 else:
-    print "InvestigationType 'My Investigation Type' does not exist"
+    print "InvestigationType: 'My Investigation Type' does not exist"
 
 # facility
 facilities = service.search(sessionId, "Facility[name='My Facility']")
 if len(facilities): 
-    print "Facility 'My Facility' already exists ... so delete it"
+    print "Facility: 'My Facility' already exists ... so delete it"
     facility = facilities[0]
     service.delete(sessionId, facility)
 else:
-    print "Facility 'My Facility' does not exist"
+    print "Facility: 'My Facility' does not exist"
 
 service.logout(sessionId)
 
