@@ -116,19 +116,41 @@ public class DatafileFacadeREST extends AbstractFacade<Datafile> {
     ArrayList<String> list = new ArrayList<String>();
     try {
       log.info("Beginning findFileLocation from IP: " + yourIP);
-      String query = "Datafile.location <-> Datafile [name = ':filename']";
-      query = query.replace(":filename", filename);
-      SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
-      Iterator iter = results.getList().iterator();
-      while (iter.hasNext()) {
-        String location = (String) iter.next();
-        if (!location.isEmpty()) {
-          list.add(location);
+
+      String runNumber;
+      if (filename.startsWith("REF_L") || filename.startsWith("REF_M")) {
+        String refStr = "REF_L";
+        int len = refStr.length();
+        runNumber = filename.substring(len + 1);
+      } else {
+        runNumber = filename.substring(filename.indexOf("_") + 1);
+      }
+
+      if (runNumber.contains(".")) {
+        runNumber = runNumber.substring(0, runNumber.indexOf("."));
+      }
+      if (runNumber.contains("_")) {
+        runNumber = runNumber.substring(0, runNumber.indexOf("_"));
+      }
+
+      log.info("filename = " + filename + ", run = " + runNumber);
+      if (!runNumber.isEmpty()) {
+        String query = "Datafile.location <-> Datafile [name like ':filename'] <-> Dataset [name = ':runNumber']";
+        query = query.replace(":filename", filename + "%").replace(":runNumber", runNumber);
+        SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
+        Iterator iter = results.getList().iterator();
+        while (iter.hasNext()) {
+          String location = (String) iter.next();
+          if (!location.isEmpty()) {
+            list.add(location);
+          }
         }
       }
       log.info("Ending getFileLocation()");
     } catch (IcatException ex) {
       log.error("In findFileLocation: IcatException " + ex.getMessage());
+    } catch (Exception ex) {
+      log.error("In findFileLocation: Exception " + ex.getMessage());
     } finally {
       return new DatafileLocation(list);
     }
