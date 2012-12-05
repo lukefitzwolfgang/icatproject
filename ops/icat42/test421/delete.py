@@ -57,15 +57,6 @@ if len(datafile2):
 else:
     print "Datafile: 'My Datafile 2' does not exist"
 
-# dataset type
-dataset_types = service.search(sessionId, "DatasetType[name='My Dataset Type']")
-if len(dataset_types): 
-    print "DatasetType: 'My Dataset Type' already exists ... so delete it"
-    datasetType = dataset_types[0]
-    service.delete(sessionId, datasetType)
-else:
-    print "DatasetType: 'My Dataset Type' does not exist"
-
 # dataset
 datasets = service.search(sessionId, "Dataset[name='My Dataset']")
 if len(datasets): 
@@ -74,6 +65,15 @@ if len(datasets):
     service.delete(sessionId, dataset)
 else:
     print "Dataset: 'My Dataset' does not exist"
+
+# dataset type
+dataset_types = service.search(sessionId, "DatasetType[name='My Dataset Type']")
+if len(dataset_types): 
+    print "DatasetType: 'My Dataset Type' already exists ... so delete it"
+    datasetType = dataset_types[0]
+    service.delete(sessionId, datasetType)
+else:
+    print "DatasetType: 'My Dataset Type' does not exist"
 
 # investigation
 investigations = service.search(sessionId, "Investigation[name='My Investigation']")
