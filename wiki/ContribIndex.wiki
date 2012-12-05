@@ -1,4 +1,5 @@
 #summary Contribution Index.
+#labels Featured
 
 = Contribution Index =
 
