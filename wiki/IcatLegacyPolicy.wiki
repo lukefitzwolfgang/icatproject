@@ -17,6 +17,7 @@ Part of the release process for ICAT 4.3 and beyond will be tests for backward c
 
 == TopCAT ==
 The latest version of TopCAT will support all currently supported versions of ICAT. i.e. the current release and the previous release in the 6 month overlap support period.
+New functionality in TopCAT MAY not be available when connecting to ICATs that are not the current release.
 
 Subsequent releases of TopCAT may drop support for older versions.
 
