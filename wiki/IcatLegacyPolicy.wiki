@@ -29,4 +29,4 @@ Most users of ICAT have client applications customised to their requirements. It
 == ICAT Version History == 
 Note that there are example deployments of all ICATs on www.icatproject.org. These demonstrators are available for use by members of the collaboration.
 
-The detailed version history is available at http://www.icatproject.org/mvn/site/icat/4.2.1/release-notes.html
+The detailed version history is available at http://www.icatproject.org/index.php/Documentation_for_current_release (Release Notes)
