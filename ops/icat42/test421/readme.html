@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<TITLE>README for ICAT rapid test for service verification 1</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<CENTER>
+<H1>README for ICAT rapid test for service verification 1</H1>
+<FONT SIZE="4"><I>Alistair Mills - December 2012</I></FONT><BR>
+<FONT SIZE="4">$Id: readme.t2t 2219 2012-12-06 23:10:22Z crcamills@gmail.com $</FONT>
+</CENTER>
+
+<P></P>
+<HR NOSHADE SIZE=1>
+<P></P>
+
+  <OL>
+  <LI><A HREF="#toc1">Introduction</A>
+  <LI><A HREF="#toc2">Materials</A>
+    <UL>
+    <LI><A HREF="#toc3">2.1. Bash scripts</A>
+    <LI><A HREF="#toc4">2.2. Python scripts</A>
+    <LI><A HREF="#toc5">2.3. Txt files</A>
+    <LI><A HREF="#toc6">2.4. Example properties file</A>
+    <LI><A HREF="#toc7">2.5. Example output from the test</A>
+    <LI><A HREF="#toc8">2.6. Java jar files for the tests</A>
+    <LI><A HREF="#toc9">2.7. Trust store files</A>
+    <LI><A HREF="#toc10">2.8. Zip file</A>
+    </UL>
+  <LI><A HREF="#toc11">Use of the files</A>
+    <UL>
+    <LI><A HREF="#toc12">3.1. Bash scripts</A>
+    <LI><A HREF="#toc13">3.2. Python scripts</A>
+    <LI><A HREF="#toc14">3.3. Properties files</A>
+    <LI><A HREF="#toc15">3.4. Txt files</A>
+    <LI><A HREF="#toc16">3.5. Csv file</A>
+    <LI><A HREF="#toc17">3.6. Jar files</A>
+    <LI><A HREF="#toc18">3.7. Trust store files</A>
+    <LI><A HREF="#toc19">3.8. Zip and tar files</A>
+    </UL>
+  <LI><A HREF="#toc20">Running the tests</A>
+    <UL>
+    <LI><A HREF="#toc21">4.1. Output of test_all.sh</A>
+    <LI><A HREF="#toc22">4.2. Testing a single icat</A>
+    <LI><A HREF="#toc23">4.3. Customisation of the tests</A>
+    <LI><A HREF="#toc24">4.4. Tell the scripts how to deal with the local firewall</A>
+    <LI><A HREF="#toc25">4.5. Trusting additional hosts</A>
+    </UL>
+  <LI><A HREF="#toc26">Preparing the ICAT for the test</A>
+    <UL>
+    <LI><A HREF="#toc27">5.1. Unzip the zip file</A>
+    <LI><A HREF="#toc28">5.2. Execute the utility program</A>
+    <LI><A HREF="#toc29">5.3. Add CIC, reader, guest to the authenticator</A>
+    <LI><A HREF="#toc30">5.4. Create additional objects in the ICAT</A>
+    </UL>
+  <LI><A HREF="#toc31">- the end -</A>
+  </OL>
+
+<P></P>
+<HR NOSHADE SIZE=1>
+<P></P>
+
+<A NAME="toc1"></A>
+<H1>1. Introduction</H1>
+
+<P>
+This material is a simple test for icat for use in Service Verification - 1 in December 2012.  It is not intended for production.  It has been tested on linux and MacOs.  The use of this material on other platforms such as windows and cygwin is not supported, but it may work with minor changes.
+</P>
+<P>
+This directory only contains material for testing icat 4.2.  If connecting to a server running icat 4.1 or 4.0, it will not work.
+</P>
+<P>
+The client computer should have a normal java run time environment, the bash shell, python and svn.
+</P>
+<P>
+To get a copy of this files and the files which form the test, use the following command
+</P>
+<P>
+svn co <A HREF="https://icatproject.googlecode.com/svn/ops/icat42/test421">https://icatproject.googlecode.com/svn/ops/icat42/test421</A>
+</P>
+
+<A NAME="toc2"></A>
+<H1>2. Materials</H1>
+
+<P>
+The directory contains the following materials.  Their use is described later.
+</P>
+
+<A NAME="toc3"></A>
+<H2>2.1. Bash scripts</H2>
+
+<PRE>
+  change_icat.sh
+  change_url.sh
+  change_wsdl.sh
+  test_2.sh
+  test_all.sh
+  test_two.sh
+  trust.sh
+</PRE>
+
+<A NAME="toc4"></A>
+<H2>2.2. Python scripts</H2>
+
+<PRE>
+  create.py
+  delete.py
+</PRE>
+
+<A NAME="toc5"></A>
+<H2>2.3. Txt files</H2>
+
+<PRE>
+  list_of_examples.txt
+  readme.txt
+</PRE>
+
+<A NAME="toc6"></A>
+<H2>2.4. Example properties file</H2>
+
+<PRE>
+  domain5_properties
+</PRE>
+
+<A NAME="toc7"></A>
+<H2>2.5. Example output from the test</H2>
+
+<PRE>
+  test421.csv
+</PRE>
+
+<A NAME="toc8"></A>
+<H2>2.6. Java jar files for the tests</H2>
+
+<PRE>
+  icat_api_examples.jar
+  icat-client.jar
+  InstallCert.jar
+</PRE>
+
+<A NAME="toc9"></A>
+<H2>2.7. Trust store files</H2>
+
+<PRE>
+  _apps_jcns_fz-juelich_de_9111
+  _icat-elettra_grid_elettra_trieste_it_8181
+  _icat_synchrotron-soleil_fr
+  _www_icatproject_org
+  _www_icatproject_org_8443
+  _wwws_esrf_fr
+  jssecacerts-www.icatproject.org
+</PRE>
+
+<A NAME="toc10"></A>
+<H2>2.8. Zip file</H2>
+
+<PRE>
+  clf-setup-1.0.0-SNAPSHOT-distro.zip
+</PRE>
+
+<A NAME="toc11"></A>
+<H1>3. Use of the files</H1>
+
+<A NAME="toc12"></A>
+<H2>3.1. Bash scripts</H2>
+
+<P>
+change_icat.sh links one of the _properties files to the name example.properties.  
+test_two.sh runs a test using the file example.properties.
+test_all.sh runs test_two.sh using each of the properties files.
+trust.sh allows the user to tell the tests to trust additional hosts - see Trusting additional hosts.
+change_url.sh is a utility for transforming the url from one form to another.
+change_wsdl.sh is a utility for transforming the wsdl line in the properties files to a url.
+</P>
+
+<A NAME="toc13"></A>
+<H2>3.2. Python scripts</H2>
+
+<P>
+One file does a series of create operations to add an Investigation and other objects to the ICAT.  
+The other file reverses the create operations.
+</P>
+
+<A NAME="toc14"></A>
+<H2>3.3. Properties files</H2>
+
+<P>
+The properties file contains the connection information for an icat.  The choice of the name of the file is not significant, but its contents are important.  Additional properties files are in the directory called sites.
+</P>
+
+<A NAME="toc15"></A>
+<H2>3.4. Txt files</H2>
+
+<P>
+One file contains this text.  The other is used by test_two.sh.
+</P>
+
+<A NAME="toc16"></A>
+<H2>3.5. Csv file</H2>
+
+<P>
+This is an example of the output from running the test on a single ICAT.
+</P>
+
+<A NAME="toc17"></A>
+<H2>3.6. Jar files</H2>
+
+<P>
+One jar file contains the icat-client jar for the version of ICAT.  
+Another jar file contains a compiled version of a small set of tests for this version of ICAT.
+Another jar file contains code for creating the trust store files.
+</P>
+
+<A NAME="toc18"></A>
+<H2>3.7. Trust store files</H2>
+
+<P>
+The trust store files are used to tell the Java virtual machine to trust a host.  The url of the host is implied in the name of the file.
+The file jssecacerts-<A HREF="http://www.icatproject.org">www.icatproject.org</A> is the default trust file.  It tells the test script to trust <A HREF="http://www.icatproject.org">www.icatproject.org</A>.
+For example, the file _icat-elettra_grid_elettra_trieste_it_8181 contains the truststore for elettra on https:8181.
+</P>
+
+<A NAME="toc19"></A>
+<H2>3.8. Zip and tar files</H2>
+
+<P>
+The use of the clf-setup is described at the end of this note.  This is only required if installing an ICAT server and wish to insert some content.  The zip file contains the materials for preparing the environment for the test.  The tar file contains the source code.
+</P>
+
+<A NAME="toc20"></A>
+<H1>4. Running the tests</H1>
+
+<P>
+== Usage of test_all.sh =
+</P>
+<P>
+To run all of the tests do this:
+</P>
+
+<PRE>
+  ./test_all.sh
+</PRE>
+
+<P>
+The output is in csv form showing date, host, properties, response, wsdl.location and can be imported into a spreadsheet such as Excel and LibreOffice.
+</P>
+
+<A NAME="toc21"></A>
+<H2>4.1. Output of test_all.sh</H2>
+
+<P>
+Expect something of the following form:
+</P>
+
+<PRE>
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Authenticate : authenticator = db : Session ID = 2aa7adb9-0380-4065-a6cf-33f281e07aed : API Version = 4.2.0, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Search Facility.name : CLF, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Search Facility.name : My Facility, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Search Investigation.name : My Investigation, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Search Investigation.name : None, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Search Investigation.name : Temp, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Search Dataset.name : My Dataset, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Search DISTINCT Dataset.name : My Dataset, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Search DISTINCT Datafile.name : My Datafile 2, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, Search DISTINCT Datafile.name : My Datafile 1, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, GetUserName : Username = CIC, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+  04/12/2012 17:10:24, abm65.esc.rl.ac.uk, test421, domain5, RemainingMinutes : Remaining Minutes:119.99963333333334, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+</PRE>
+
+<A NAME="toc22"></A>
+<H2>4.2. Testing a single icat</H2>
+
+<P>
+To select a single test do this:
+</P>
+
+<PRE>
+  ./change_icat.sh domain5
+  ./test_two.sh
+</PRE>
+
+<P>
+Expect something of the following form:
+</P>
+
+<PRE>
+  Authenticate : authenticator = db : Session ID = 38d0de50-882d-4ecb-aea1-63eed7fe428e : API Version = 4.2.0
+  Search Facility.name : CLF
+  Search Facility.name : My Facility
+  Search Investigation.name : My Investigation
+  Search Investigation.name : None
+  Search Investigation.name : Temp
+  Search Dataset.name : My Dataset
+  Search DISTINCT Dataset.name : My Dataset
+  Search DISTINCT Datafile.name : My Datafile 2
+  Search DISTINCT Datafile.name : My Datafile 1
+  GetUserName : Username = CIC
+  RemainingMinutes : Remaining Minutes:119.9997
+</PRE>
+
+<A NAME="toc23"></A>
+<H2>4.3. Customisation of the tests</H2>
+
+<P>
+There is no limit to the number of _properties files.  Others are provided in the sites directory.  Simply copy them from the directory.  The user can create additional _properties files and give them names which indicate their content; for example a file called esrf_properties may contain the properties which are required to connect to esrf.  
+</P>
+
+<A NAME="toc24"></A>
+<H2>4.4. Tell the scripts how to deal with the local firewall</H2>
+
+<P>
+Depending on the local firewall, it may be necessary to change the file test_2.sh to pass the address of the local proxy server.  There is a commented out example of this in test_2.sh.
+</P>
+<P>
+If the remote host is using a non standard certificate on a secure protocol, it may be necessary to tell the java virtual machine to trust the host.  This is described in the next section.  
+</P>
+
+<A NAME="toc25"></A>
+<H2>4.5. Trusting additional hosts</H2>
+
+<P>
+To trust an additional host use the script trust.sh.  For example, use the following command:
+</P>
+
+<PRE>
+  ./trust.sh domain4
+</PRE>
+
+<P>
+In this case this creates a file called _www_icatproject_org_4081.  The script test_2.sh uses this file to trust the host.
+</P>
+<P>
+This script provides an easy way to collect the certificate when adding a host to the tests and the host does not have a trusted certificate.
+</P>
+
+<A NAME="toc26"></A>
+<H1>5. Preparing the ICAT for the test</H1>
+
+<P>
+If you wish to install content into an empty ICAT, the .zip file and the .py files facilitate this.  For the moment, we are re-using materials created for a deployment at RAL.  There are other tools available in the contrib directory for this purpose.
+</P>
+<P>
+Note, that you are not obliged to use this method.  If you prefer to use another method, you may do so. 
+</P>
+
+<A NAME="toc27"></A>
+<H2>5.1. Unzip the zip file</H2>
+
+<P>
+Unzip the zip file and this creates a directory called clf-setup with a utility java jar:
+</P>
+
+<PRE>
+  unzip clf-setup-1.0.0-SNAPSHOT-distro.zip
+</PRE>
+
+<A NAME="toc28"></A>
+<H2>5.2. Execute the utility program</H2>
+
+<P>
+If the ICAT has been deployed on http:8080 on localhost, use the following command:
+</P>
+
+<PRE>
+  java -cp "clf-setup/*" Setup create --url http://localhost:8080
+</PRE>
+
+<P>
+The ICAT can be emptied with the following command.  Warning this is very destructive!
+</P>
+
+<PRE>
+  java -cp "clf-setup/*" Setup drop --url http://localhost:8080
+</PRE>
+
+<P>
+If the icat is on https:8181, use the following:
+</P>
+
+<PRE>
+  java -cp "clf-setup/*" Setup create --url https://localhost:8181
+</PRE>
+
+<P>
+It is necessary to tell the JVM to trust the host.  The trust script is provided to make this easy.  The details of its use are described above.
+</P>
+<P>
+The program prompts for the password of the "root" user.  The name of the root user is in the icat.properties file.  The username and password of the root user must also be known to the authentication method.  Usually this means that it is in the table PASSWD in the icatuser database.
+</P>
+<P>
+If the program is silent, all is well.  It has created users called CIC, reader and guest, and given them appropriate authorizations.  If you do not like these names, there is an option to provide alternatives.
+</P>
+
+<A NAME="toc29"></A>
+<H2>5.3. Add CIC, reader, guest to the authenticator</H2>
+
+<P>
+ Add the users CIC, reader and guest to the authentication mechanism.  Usually this means that it is in the table PASSWD in the icatuser database.  The detail of how to do this is provided elsewhere.
+</P>
+
+<A NAME="toc30"></A>
+<H2>5.4. Create additional objects in the ICAT</H2>
+
+<P>
+To create additional objects in ICAT, do this:
+</P>
+
+<PRE>
+  python create.py http://localhost:8080 db username CIC password password
+</PRE>
+
+<P>
+To delete the additional objects in ICAT, do this:
+</P>
+
+<PRE>
+  python delete.py http://localhost:8080 db username CIC password password
+</PRE>
+
+<A NAME="toc31"></A>
+<H1>6. - the end -</H1>
+
+<!-- html code generated by txt2tags 2.6 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags -\-toc -\-enum-title -t html -i readme.t2t -->
+</BODY></HTML>

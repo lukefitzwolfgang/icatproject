@@ -1,5 +1,5 @@
 # $Id: jcns_properties 2236 2012-11-14 18:27:45Z crcamills@gmail.com $
-wsdl.location=https://apps.jcns.fz-juelich.de:9111/ICATService/ICAT?wsdl
+wsdl.location=http://apps.jcns.fz-juelich.de:5080/ICATService/ICAT?wsdl
 
 #ICAT username
 username=icat42
