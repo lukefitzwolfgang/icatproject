@@ -48,9 +48,9 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 || 48.05 || Create tickets for action 47.05, 47.07, 47.09                                   || AM        ||              Done|| Tickets #86, #87 #88 ||    
 || 48.06 || Add a note to the wiki about Nexus Archive and ICAT                             || GK        ||              .   ||                     -||
 || 48.07 || Contact Mark Koenig about Nexus standards and ICAT                              || GK        ||              .   ||                     -||
-|| 48.08 || Talk to Bill Pulford about Nexus, DLS and ICAT                                  || AM        ||       In progress||                     -||
+|| 48.08 || Talk to Bill Pulford about Nexus, DLS and ICAT                                  || AM        ||              Done||                     -||
 || 48.09 || Create wiki page for the agenda for ICAT 2013 and add item on Nexus             || AM        ||              Done||            Sweden2013||
-|| 48.10 || Enhance the ICAT Legacy Policy with a clause for support of ICAT after 6 months || AM        ||              .   ||                     -||
+|| 48.10 || Enhance the ICAT Legacy Policy with a clause for support of ICAT after 6 months || AM        ||       Done by Tom||                     -||
 || 48.11 || Start a discussion on the mailing lists about changes to uniqueness constraints || SF        ||              .   ||                     -||
 || 48.12 || Call next meetings on 13 December 2012, 10 January 2013; cancel 27 December 2012|| AM        ||              Done||                     -||
 
