@@ -20,6 +20,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
  * Actions from the meetings 48 (Alistair)
  * Plans for ICAT 2013 (Tom)
+ * Open ticket review (Steve)
  * Update from PaN-data (Milan/George)
  * Deployment of ICAT 4.2 for RAL - DLS, ISIS and CLF (Ghita, Tom, Kevin)
  * Status of contribs (ContribIndex) (Alistair)
