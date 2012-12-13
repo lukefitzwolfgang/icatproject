@@ -12,8 +12,4 @@ The CSMD is developed to support data collected within a facility’s scientific
   * [RAMSpecification Research Activity Model]
   * [CSMDSchemas Schemas and formats]
   * [IcatApi API]
-  * Relationship to other models 
-    * Nexus
-    * Dublin Core
-  * Useful Links
-  * [CSMDPublications Publications]
+  
