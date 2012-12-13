@@ -37,7 +37,6 @@
  * [http://code.google.com/p/topcat/ TopCAT]
 
 === FAQ ===
- * [IcatDoc Documentation]
 
  * [IcatFaq Frequently Asked Questions]
      * [IcatFaq#technologies What are the technologies Used?]
