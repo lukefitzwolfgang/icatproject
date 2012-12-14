@@ -1,12 +1,11 @@
-# $Id: dls_properties 2214 2012-11-05 23:20:54Z crcamills@gmail.com $
+# $Id: domain5_properties 2271 2012-12-04 17:35:59Z crcamills@googlemail.com $
 wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
 
 #ICAT username
-username=icat42
+username=CIC
 
 #ICAT authenticator
 authenticator=db
 
 #ICAT password
-password=icat42passwd
-
+password=password
