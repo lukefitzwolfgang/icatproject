@@ -1,0 +1,13 @@
+# $Id $
+wsdl.location=https://icat.ill.fr/ICATService/ICAT?wsdl
+
+
+#ICAT username
+username=icatsvtest
+
+#ICAT authenticator
+authenticator=ldap
+
+#ICAT password
+password=ask-alistair-or-jamie
+
