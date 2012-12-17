@@ -172,7 +172,10 @@ public class IcatXmlTestClient {
 	 * @param url
 	 * @throws Exception
 	 */
-	private final void createService(final String url) throws Exception {
+	private final void createService(String url) throws Exception {
+		if(url.endsWith("/")) {
+			url = url.substring(0, url.length()-1);
+		}
 		URL icatUrl = new URL(url + ICAT_SERVICE_WSDL);
 		ICATService service = new ICATService(icatUrl);
 		this.icat = service.getICATPort();
