@@ -47,7 +47,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 ||AW   ||Antony Wilson                || STFC SCD                   ||     +        ||           ||
 ||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
 ||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
-||Px   ||Pablo                        || Alba                       ||     +        ||           ||
+||Px   ||Pablo Garcia                 || Alba                       ||     +        ||           ||
 ||DL   ||David Lopez                  || Alba                       ||     +        ||           ||
 ||JS   ||Julian Savoyet               || ESRF                       ||     +        ||           ||
 
