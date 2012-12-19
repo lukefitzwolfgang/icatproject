@@ -1,5 +1,6 @@
 package org.icatproject.testclient;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
@@ -286,7 +287,15 @@ public class IcatWriter {
 						continue;
 					}
 				}
-				this.create(l.get(i));
+				try {
+					this.create(l.get(i));
+				} catch(Exception e) {
+					if (this.data.getConfig().getHaltOnError())
+						throw e;
+					System.err.println("ERROR: " + e.toString());
+					e.printStackTrace(System.err);
+					System.err.println("Continuing import...");
+				}
 			}
 			return;
 		}
@@ -305,9 +314,25 @@ public class IcatWriter {
 						continue;
 					EntityBaseBean refEb = this.getEbForIdOrSearchId(ebProp);
 					if (refEb != null) {
-						Method setter = eb.getClass().getMethod("s" + m.getName().substring(1), ebProp.getClass());
-						setter.invoke(eb, refEb);
-						continue;
+						try {
+							Method setter = eb.getClass().getMethod("s" + m.getName().substring(1), ebProp.getClass());
+							setter.invoke(eb, refEb);
+							continue;
+						} catch(NoSuchMethodException e) {
+							NoSuchMethodException e2 = new NoSuchMethodException(e.getMessage() + " (Cannot set property " + m.getName().substring(3) + " on icat object of type " + eb.getClass().getSimpleName());
+							e2.initCause(e.getCause());
+							e2.setStackTrace(e.getStackTrace());
+							throw e2;
+						} catch(IllegalArgumentException e) {
+							IllegalArgumentException e2 = new IllegalArgumentException(e.getMessage() + " (Cannot set property " + m.getName().substring(3) + " on icat object of type " + eb.getClass().getSimpleName());
+							e2.initCause(e.getCause());
+							e2.setStackTrace(e.getStackTrace());
+							throw e2;
+						} catch(InvocationTargetException e) {
+							InvocationTargetException e2 = new InvocationTargetException(e.getCause(), e.getMessage() + " (Cannot set property " + m.getName().substring(3) + " on icat object of type " + eb.getClass().getSimpleName());
+							e2.setStackTrace(e.getStackTrace());
+							throw e2;
+						}
 					}
 					// we have a new object so create it
 					this.create(ebProp);
