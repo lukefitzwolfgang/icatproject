@@ -11,6 +11,7 @@ import icat.rest.ws.converter.RunConverter;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.TreeSet;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,7 +29,6 @@ import org.icatproject.core.entity.Investigation;
 import org.icatproject.core.manager.SearchResponse;
 import org.icatproject.core.manager.BeanManager;
 import org.icatproject.core.IcatException;
-import org.icatproject.core.entity.Instrument;
 
 /**
  *
@@ -102,39 +102,45 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
       String yourIP = requestContext.getRemoteAddr().toString();
       String runRange = "";
       log.info("Beginning getRuns: " + yourIP);
-      //String query = "Investigation INCLUDE Dataset [name = ':proposal'] <-> Instrument [ name = ':instrument'] order by Dataset.name";
       String query = "DISTINCT Dataset.name ORDER BY name <-> Investigation [name = ':proposal'] <-> Instrument [ name = ':instrument']";
       query = query.replace(":instrument", instrument).replace(":proposal", proposal);
       SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
       Iterator iter = results.getList().iterator();
-      String oldRunNumber = "";
-
-      boolean firstRun = true;
-      boolean inIncrement = false;
+      log.info("results size: " + results.getList().size());
+      TreeSet set = new TreeSet();
       while (iter.hasNext()) {
         String runNumber = (String) iter.next();
+        set.add(Integer.parseInt(runNumber));
+      }
+      int oldRunNumber = 0;
+
+      Iterator it = set.iterator();
+      boolean firstRun = true;
+      boolean inIncrement = false;
+      while (it.hasNext()) {
+        int runNumber = (Integer) it.next();
         if (firstRun) {
-          runRange = runNumber;
+          runRange = Integer.toString(runNumber);
           firstRun = false;
         } else {
-          if (Long.parseLong(runNumber) == Long.parseLong(oldRunNumber) + 1) {
+          if (runNumber == oldRunNumber + 1) {
             if (!inIncrement) {
               runRange = runRange.concat("-");
               inIncrement = true;
             }
           } else {
             if (inIncrement) {
-              runRange = runRange.concat(oldRunNumber);
+              runRange = runRange.concat(Integer.toString(oldRunNumber));
               inIncrement = false;
             }
-            runRange = runRange.concat(", ").concat(runNumber);
+            runRange = runRange.concat(", ").concat(Integer.toString(runNumber));
           }
         }
         oldRunNumber = runNumber;
       }
       //Be careful here, we might have exited in the middle of an incremental range. If so, tack on the last number.
       if (inIncrement) {
-        runRange = runRange.concat(oldRunNumber);
+        runRange = runRange.concat(Integer.toString(oldRunNumber));
       }
       log.info("Ending getRuns, found run range: " + runRange + " for instrment " + instrument + " and proposal " + proposal);
       return new RunConverter(runRange);
