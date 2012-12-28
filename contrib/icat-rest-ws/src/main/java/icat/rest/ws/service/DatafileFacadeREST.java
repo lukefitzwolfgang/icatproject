@@ -81,14 +81,23 @@ public class DatafileFacadeREST extends AbstractFacade<Datafile> {
     ArrayList<String> list = new ArrayList<String>();
     try {
       log.info("Beginning findFiles from IP: " + yourIP);
-      String filename = instrument + "_" + run + "%";
+      String filename = instrument + "_" + run;
+      String filenameWild = filename + "%";
       log.info("filename: " + filename);
       String query = "Datafile.location <-> Datafile [name LIKE ':filename']";
-      query = query.replace(":filename", filename);
+      query = query.replace(":filename", filenameWild);
       SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
       Iterator iter = results.getList().iterator();
       while (iter.hasNext()) {
         String location = (String) iter.next();
+        String[] result = location.split("\\/");
+        int len = result.length;
+        if (len != 0) {
+          String name = result[len-1];
+          if (!name.startsWith(filename + "_") && !name.startsWith(filename + ".")) {
+            location = "";
+          }
+        }
         if (contains != null && !contains.isEmpty() && !location.contains(contains)) {
           location = "";
         }
