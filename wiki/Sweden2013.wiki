@@ -2,9 +2,13 @@
 
 <wiki:toc max_depth="3" />
 
+= Date of the meeting =
+
+The meeting will be held as part of the Pandata 2013 conference during the week of 11-15 March 2013 at the University of Lund in Sweden.  The likely time of the meeting is from midday on Tuesday 12 March to midday on Wednesday 13 March 2013.  It is expected that most people attending the ICAT meeting will also attend the Pandata conference. 
+
 = Attending =
 
-If you are interested in attending this meeting please contact tom.griffin@stfc.ac.uk
+If you are interested in attending this meeting please contact tom.griffin@stfc.ac.uk or alistair.mills@stfc.ac.uk.
 
 = Agenda =
 
