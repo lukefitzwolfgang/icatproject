@@ -93,7 +93,7 @@ The meeting finished at 15:30.
 || 50.00 || Document the meeting                                                            || AM        ||              Done||                     -||
 || 50.01 || Provide additional information about venue, hotel, contacts for Sweden          || AM        ||                 .||                     -||
 || 50.02 || Update the page on the wiki with information about Sweden                       || AM        ||          on-going||                     -||
-|| 50.03 || Consider a mechanism for introducing speculative features to ICAT               || SF        ||                 .||                     -||
+|| 50.03 || Consider a mechanism for introducing speculative features to ICAT               || SF        ||              Done||                     -||
 || 50.04 || Call next meeting for 24 January 2013                                           || AM        ||              Done||                     -||
 
 
