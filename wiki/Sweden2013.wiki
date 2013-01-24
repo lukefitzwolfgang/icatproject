@@ -4,7 +4,7 @@
 
 = Date of the workshop =
 
-The workshop will be held as part of the Pandata 2013 conference during the week of 11-15 March 2013 at the University of Lund in Sweden.  The ICAT meeting is from midday on Tuesday 12 March to midday on Wednesday 13 March 2013.  It is expected that most people attending the ICAT workshop will also attend the Pandata conference which follows from midday on Wednesday 13 March to midday on Thursday 14 March 2013. 
+The workshop will be held as part of the Pandata 2013 conference during the week of 11-15 March 2013 at the University of Lund in Sweden.  The ICAT meeting is from midday on Tuesday 12 March to midday on Wednesday 13 March 2013.  It is expected that most people attending the ICAT workshop will also attend the Pandata conference which follows from midday on Wednesday 13 March to midday on Thursday 14 March 2013. It is likely that there will be a tour of MAX scheduled between the workshop and the conference.
 
 = Attending =
 
@@ -14,7 +14,7 @@ If you are interested in attending this meeting please contact tom.griffin@stfc.
 
 The purpose is to discuss plans for the development and use of ICAT at facilities and by projects such as PaN-Data and CRISP.
 
-All times are too specific to be realistic.
+All times are too specific to be realistic.  The names are indicative.
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||Notes ||
 || 13:30      || Session 1 - Chair person - Krister                                           || .            || .                  ||.||
@@ -24,8 +24,8 @@ All times are too specific to be realistic.
 || .          || Technical presentation on Topcat and IDS plans - Antony                      || 20           || Antony             ||.||
 || 14:30      || B r e a k . . .                                                              || 15           || .                  ||.||
 || 14:45      || Session 2 - Chair person - Tom                                               || .            || .                  ||.||
-|| .          || Facilities -                                                                 || 30           || Ghita, Tom, Shelly, Nicola, Jamie ||.||
-|| .          || Project WPs                                                                  || 30           || Milan, Mirjam, Thorsten           ||.||
+|| .          || Facilities status: ISIS, DLS, SNS, CLF                                       || 30           || Ghita, Tom, Shelly, Nicola, Jamie ||.||
+|| .          || Project WPs status: Pandata, CRISP                                           || 30           || Milan, Mirjam, Thorsten           ||.||
 || 16:00      || Wrap-up                                                                      || 15           || All                ||.||
 || 16:15      || B r e a k . . .                                                              ||              ||                    ||.||
 || 16:30      || Technical clinic - optional; bring your technical problems                   || 60           || Alistair/ Kevin    ||.||
