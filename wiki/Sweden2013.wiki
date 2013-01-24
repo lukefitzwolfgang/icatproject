@@ -1,10 +1,10 @@
-#summary Notes about the ICAT meeting in Lund in Sweden in March 2013
+#summary Notes about the ICAT workshop in Lund in Sweden in March 2013
 
 <wiki:toc max_depth="3" />
 
-= Date of the meeting =
+= Date of the workshop =
 
-The meeting will be held as part of the Pandata 2013 conference during the week of 11-15 March 2013 at the University of Lund in Sweden.  The likely time of the meeting is from midday on Tuesday 12 March to midday on Wednesday 13 March 2013.  It is expected that most people attending the ICAT meeting will also attend the Pandata conference. 
+The workshop will be held as part of the Pandata 2013 conference during the week of 11-15 March 2013 at the University of Lund in Sweden.  The ICAT meeting is from midday on Tuesday 12 March to midday on Wednesday 13 March 2013.  It is expected that most people attending the ICAT workshop will also attend the Pandata conference which follows from midday on Wednesday 13 March to midday on Thursday 14 March 2013. 
 
 = Attending =
 
@@ -16,46 +16,60 @@ The purpose is to discuss plans for the development and use of ICAT at facilitie
 
 All times are too specific to be realistic.
 
-
-
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||Notes ||
-|| 09:00      || Session 1 - Chair person - Tom                                               ||              ||                    ||.||
-|| 09:00      || Welcome and introductions                                                    || 55           || .                  ||.||
-|| 09:55      || Q u i c k . . . b r e a k . . .                                              || 05           ||                    ||.||
-|| .          || .                                                                            ||              ||                    ||.||
+|| 13:30      || Session 1 - Chair person - Krister                                           || .            || .                  ||.||
+|| .          || Welcome and introductions                                                    || 5            || .                  ||.||
+|| .          || Overview on the status of ICAT - Alistair                                    || 15           || Alistair           ||.||
+|| .          || Technical presentation on ICAT plans - Steve                                 || 20           || Steve              ||.||
+|| .          || Technical presentation on Topcat and IDS plans - Antony                      || 20           || Antony             ||.||
+|| 14:30      || B r e a k . . .                                                              || 15           || .                  ||.||
+|| 14:45      || Session 2 - Chair person - Tom                                               || .            || .                  ||.||
+|| .          || Facilities -                                                                 || 30           || Ghita, Tom, Shelly, Nicola, Jamie ||.||
+|| .          || Project WPs                                                                  || 30           || Milan, Mirjam, Thorsten           ||.||
+|| 16:00      || Wrap-up                                                                      || 15           || All                ||.||
+|| 16:15      || B r e a k . . .                                                              ||              ||                    ||.||
+|| 16:30      || Technical clinic - optional; bring your technical problems                   || 60           || Alistair/ Kevin    ||.||
+|| .          || Evening event                                                                ||              ||                    ||.||
+
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
-|| 10:00      || Session 2 - Chair person - ?                                                 ||              ||                    ||.||
+|| 09:00      || Session 3 - Chair person - Shelly                                            || 55           ||                    ||.||
+|| .          || .                                                                            ||              ||                    ||.||
+|| 09:55      || Q u i c k . . . b r e a k . . .                                              || 05           ||                    ||.||
+|| 10:00      || Session 4 - Chair person - Jean-Francois                                     || 60           ||                    ||.||
 || .          || .                                                                            ||              ||                    ||.||
 || 11:00      || L o n g  . . . B r e a k . . .                                               || 15           ||                    ||.||
 || .          || .                                                                            ||              ||                    ||.||
-|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
-|| 11:15      || Session 3 - Chair person - ?                                                 ||              ||                    ||.||
+|| 11:15      || Session 5 - Chair person - Brian                                             || 60           ||                    ||.||
 || .          || .                                                                            ||              ||                    ||.||
-|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
 || 12:15      || L u n c h . . .                                                              || 75           ||                    ||.||
 || .          || .                                                                            ||              ||                    ||.||
-|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
-|| 13:30      || Session 4 - Chair person - ?                                                 ||              ||                    ||.||
-|| 14:30      || B r e a k . . .                                                              || 15           ||                    ||.||
-|| .          || .                                                                            ||              ||                    ||.||
-|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
-|| 14:45      || Session 5 - Chair person - ?                                                 ||              ||                    ||.||
-||            || Discussion of the collaboration between the ICAT team and the WP teams       || 75           || All                ||.||
-|| 16:00      || Wrap-up                                                                      || 15           || All                ||.||
-|| 16:15      || C l o s e . . .                                                              ||              ||                    ||.||
-|| .          || .                                                                            ||              ||                    ||.||
-|| Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
-|| 16:30      || Technical clinic - optional; bring your technical problems                   || 60           || Harjinder/ Kevin   ||.||
 
 This table has a list of people intending to attend:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
 || Alistair Mills                || STFC         || .                                               ||.||
-|| Steve Fisher                  || RAL/STFC     || .                                               ||.||
-|| Antony Wilson                 || RAL/STFC     || .                                               ||.||
-|| Kevin Phipps                  || RAL/STFC     || .                                               ||.||
-|| Tom Griffin                   || STFC/ISIS    || .                                               ||.||
-|| Brian Matthews                || RAL/STFC     || .                                               ||.||
+|| Steve Fisher                  || STFC         || .                                               ||.||
+|| Antony Wilson                 || STFC         || .                                               ||.||
+|| Kevin Phipps                  || STFC         || .                                               ||.||
+|| Tom Griffin                   || ISIS         || .                                               ||.||
+|| Brian Matthews                || STFC         || .                                               ||.||
+|| Noris                         || STFC         || .                                               ||.||
+|| Shelly Ren                    || SNS/ORNL     || .                                               ||.||
+|| .                             || Alba         || .                                               ||.||
+|| .                             || DESY         || .                                               ||.||
+|| .                             || ELETTRA      || .                                               ||.||
+|| .                             || ESRF         || .                                               ||.||
+|| .                             || FRM          || .                                               ||.||
+|| .                             || HZB          || .                                               ||.||
+|| .                             || ILL          || .                                               ||.||
+|| .                             || JCNS         || .                                               ||.||
+|| .                             || LLB          || .                                               ||.||
+|| .                             || MAX          || .                                               ||.||
+|| .                             || MAX          || .                                               ||.||
+|| .                             || PSI          || .                                               ||.||
+|| .                             || SOLEIL       || .                                               ||.||
+|| .                             || DLS          || .                                               ||.||
+
 
 Apologies:
 
