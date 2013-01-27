@@ -1,5 +1,7 @@
 #! /bin/bash
 #
+# $Id$
+#
 export properties=example.properties
 
 if [ "$1" = "" ]  
