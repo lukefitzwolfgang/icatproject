@@ -1,0 +1,13 @@
+# $Id$
+wsdl.location=https://icattest.cells.es:2081/ICATService/ICAT?wsdl
+
+#ICAT username
+username=test_user
+
+#ICAT authenticator
+authenticator=db
+
+#ICAT password
+password=test_password
+
+
