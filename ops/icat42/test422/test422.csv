@@ -1,0 +1,14 @@
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Authenticate : authenticator = db : Session ID = 0e455960-e203-4589-815d-2b976e325a62 : API Version = 4.2.2, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search Facility.name : CLF, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search Facility.name : My Facility, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search Investigation.name : My Investigation, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search Investigation.name : None, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search Investigation.name : Temp, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search Dataset.name : My Dataset, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search Datafile.name : My Datafile 1, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search Datafile.name : My Datafile 2, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search DISTINCT Dataset.name : My Dataset, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search DISTINCT Datafile.name : My Datafile 2, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, Search DISTINCT Datafile.name : My Datafile 1, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, GetUserName : Username = CIC, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
+27/01/2013 14:08:30, abm65.esc.rl.ac.uk, test422, domain5, RemainingMinutes : Remaining Minutes:119.99971666666667, wsdl.location=http://www.icatproject.org:5080/ICATService/ICAT?wsdl
