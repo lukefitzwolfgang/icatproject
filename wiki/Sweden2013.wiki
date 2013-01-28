@@ -2,6 +2,45 @@
 
 <wiki:toc max_depth="3" />
 
+= Meeting in Sweden in 2013 =
+
+ICAT and PaNdata F2F meeting at MAX V laboratory on Lund.
+
+The ICAT meeting is from lunch time 12th of March to lunch time 13th of March.
+
+PaNdata F2F Project Meeting lunch time 13th of March to lunch time 14th of March.
+The dinner will be in the evening on the 13th. 
+
+A MAV IV site visit is planned for the 13th from 13:00-14:00.
+
+We have reserved a limited number of rooms at the following hotels:
+
+The first hotel is Hotel Ideon Gästeri, 1 193 SEK/night (http://www.hotelideon.com/en/). 
+
+The other is Hotel Sparta (lower standard) for 778:-/night (http://www.spartahotell.se only in Swedish). 
+
+They will keep the rooms for us until February 26. To make a reservation for one of the rooms just let them know it's for the MAX IV workshop (or just MAX).
+
+The venue for the meeting is not set yet, but will be close to any of these hotels.
+
+A detailed schedule for the meeting and additional information about the venue will be sent as soon as possible.
+
+To register for the meeting please send an e-mail to:
+
+krister-dot-larsson-at-maxlab.lu.se 
+
+with cc to:
+
+denise-dot-small-at-stfc-dot-ac-dot-uk
+
+helena-dot-ullman-at-maxlab-dot-lu-dot-se
+
+Please tell us which meetings you will attend ICAT and/or PaNdata F2F.
+
+If you will join us for dinner on the 13th.
+
+If you would like to visit the site on the 13th.
+
 = Date of the workshop =
 
 The workshop will be held as part of the Pandata 2013 conference during the week of 11-15 March 2013 at the University of Lund in Sweden.  The ICAT meeting is from midday on Tuesday 12 March to midday on Wednesday 13 March 2013.  It is expected that most people attending the ICAT workshop will also attend the Pandata conference which follows from midday on Wednesday 13 March to midday on Thursday 14 March 2013. It is likely that there will be a tour of MAX scheduled between the workshop and the conference.
