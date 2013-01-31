@@ -3,7 +3,7 @@ wsdl.location=https://icat.synchrotron-soleil.fr/ICATService/ICAT?wsdl
 
 
 #ICAT username
-username=root
+username=CIC
 
 #ICAT authenticator
 authenticator=db
