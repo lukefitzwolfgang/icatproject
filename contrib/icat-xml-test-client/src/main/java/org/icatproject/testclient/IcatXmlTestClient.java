@@ -60,7 +60,7 @@ public class IcatXmlTestClient {
 	 * 
 	 * @throws Exception
 	 */
-	private final void logout() throws Exception {
+	public final void logout() throws Exception {
 		icat.logout(sessionId);
 		this.sessionId = null;
 	}
@@ -120,7 +120,7 @@ public class IcatXmlTestClient {
 	 * @param outFile
 	 * @throws Exception
 	 */
-	private final void search(final String query, final String outFile) throws Exception {
+	public final void search(final String query, final String outFile) throws Exception {
 		List<Object> results = icat.search(sessionId, query);
 		if (results == null || results.size() == 0) {
 			System.out.println("No result for query: " + query);
@@ -188,7 +188,7 @@ public class IcatXmlTestClient {
 	 * @param fileName
 	 * @throws Exception
 	 */
-	private void read(final String fileName) throws Exception {
+	public void read(final String fileName) throws Exception {
 		JAXBContext jc = JAXBContext.newInstance(Icatdata.class);
 		Unmarshaller um = jc.createUnmarshaller();
 		Icatdata data = (Icatdata) um.unmarshal(new File(fileName));
@@ -223,6 +223,13 @@ public class IcatXmlTestClient {
 			System.err.println("ERROR: command " + cmd + " unknown!");
 		}
 		this.logout();
+	}
+	
+	public static IcatXmlTestClient createInstance(final String url, final String username, final String password, final String authMethod) throws Exception {
+		IcatXmlTestClient client = new IcatXmlTestClient();
+		client.createService(url);
+		client.login(username, password, authMethod);
+		return client;
 	}
 
 	public static void main(String[] args) {
