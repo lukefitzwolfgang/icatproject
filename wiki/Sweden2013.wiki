@@ -9,6 +9,7 @@ ICAT and PaNdata F2F meeting at MAX V laboratory on Lund.
 The ICAT meeting is from lunch time 12th of March to lunch time 13th of March.
 
 PaNdata F2F Project Meeting lunch time 13th of March to lunch time 14th of March.
+
 The dinner will be in the evening on the 13th. 
 
 A MAV IV site visit is planned for the 13th from 13:00-14:00.
@@ -59,23 +60,21 @@ All times are too specific to be realistic.  The names are indicative.
 || 13:30      || Session 1 - Chair person - Krister                                           || .            || .                  ||.||
 || .          || Welcome and introductions                                                    || 5            || .                  ||.||
 || .          || Overview on the status of ICAT - Alistair                                    || 15           || Alistair           ||.||
-|| .          || Technical presentation on ICAT plans - Steve                                 || 20           || Steve              ||.||
-|| .          || Technical presentation on Topcat and IDS plans - Antony                      || 20           || Antony             ||.||
+|| .          || ?                                                                            || 40           || .                  ||.||
 || 14:30      || B r e a k . . .                                                              || 15           || .                  ||.||
 || 14:45      || Session 2 - Chair person - Tom                                               || .            || .                  ||.||
-|| .          || Facilities status: ISIS, DLS, SNS, CLF                                       || 30           || Ghita, Tom, Shelly, Nicola, Jamie ||.||
-|| .          || Project WPs status: Pandata, CRISP                                           || 30           || Milan, Mirjam, Thorsten           ||.||
-|| 16:00      || Wrap-up                                                                      || 15           || All                ||.||
+|| .          || Facilities status: ISIS, DLS, SNS, CLF                                       || 45           || Ghita, Tom, Shelly, Nicola, Jamie ||.||
+|| .          || Project WPs status: Pandata, CRISP                                           || 45           || Milan, Mirjam, Thorsten           ||.||
 || 16:15      || B r e a k . . .                                                              ||              ||                    ||.||
 || 16:30      || Technical clinic - optional; bring your technical problems                   || 60           || Alistair/ Kevin    ||.||
 || .          || Evening event                                                                ||              ||                    ||.||
 
 || Start Time || Subject                                                                      || Time (mins)  || Speaker            ||.||
 || 09:00      || Session 3 - Chair person - Shelly                                            || 55           ||                    ||.||
-|| .          || .                                                                            ||              ||                    ||.||
+|| .          || Technical presentation on Topcat and IDS plans                               || 55            || Antony             ||.||
 || 09:55      || Q u i c k . . . b r e a k . . .                                              || 05           ||                    ||.||
 || 10:00      || Session 4 - Chair person - Jean-Francois                                     || 60           ||                    ||.||
-|| .          || .                                                                            ||              ||                    ||.||
+|| .          || Technical presentation on ICAT plans                                         || 60           || Steve              ||.||
 || 11:00      || L o n g  . . . B r e a k . . .                                               || 15           ||                    ||.||
 || .          || .                                                                            ||              ||                    ||.||
 || 11:15      || Session 5 - Chair person - Brian                                             || 60           ||                    ||.||
@@ -94,20 +93,19 @@ This table has a list of people intending to attend:
 || Brian Matthews                || STFC         || .                                               ||.||
 || Noris                         || STFC         || .                                               ||.||
 || Shelly Ren                    || SNS/ORNL     || .                                               ||.||
-|| .                             || Alba         || .                                               ||.||
-|| .                             || DESY         || .                                               ||.||
-|| .                             || ELETTRA      || .                                               ||.||
-|| .                             || ESRF         || .                                               ||.||
+|| Frazer Barnsley               || STFC         || .                                               ||.||
+|| Noris Nyamekye                || STFC         || .                                               ||.||
+|| Milan Prica                   || ELETTRA      || .                                               ||.||
+|| Nicola Bessone                || ESRF         || .                                               ||.||
 || .                             || FRM          || .                                               ||.||
 || .                             || HZB          || .                                               ||.||
-|| .                             || ILL          || .                                               ||.||
-|| .                             || JCNS         || .                                               ||.||
-|| .                             || LLB          || .                                               ||.||
-|| .                             || MAX          || .                                               ||.||
-|| .                             || MAX          || .                                               ||.||
-|| .                             || PSI          || .                                               ||.||
-|| .                             || SOLEIL       || .                                               ||.||
-|| .                             || DLS          || .                                               ||.||
+|| Jamie Hall                    || ILL          || .                                               ||.||
+|| Christian                     || JCNS         || .                                               ||.||
+|| Stephane Longeville           || LLB          || .                                               ||.||
+|| Krister Larsson               || MAX          || .                                               ||.||
+|| Heinz-Josef                   || PSI          || .                                               ||.||
+|| Idrissou Chado                || SOLEIL       || .                                               ||.||
+|| Ghita                         || DLS          || .                                               ||.||
 
 
 Apologies:
