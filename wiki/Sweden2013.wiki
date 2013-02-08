@@ -1,4 +1,5 @@
 #summary Notes about the ICAT workshop in Lund in Sweden in March 2013
+#labels Featured
 
 <wiki:toc max_depth="3" />
 
