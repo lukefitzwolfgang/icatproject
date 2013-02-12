@@ -103,7 +103,7 @@ This table has a list of people intending to attend:
 || Kevin Phipps                  || STFC         || .                                               ||.||
 || Tom Griffin                   || ISIS         || .                                               ||.||
 || Brian Matthews                || STFC         || .                                               ||.||
-|| Noris                         || STFC         || .                                               ||.||
+|| Denise Small                  || STFC         || .                                               ||.||
 || Shelly Ren                    || SNS/ORNL     || .                                               ||.||
 || Frazer Barnsley               || STFC         || .                                               ||.||
 || Noris Nyamekye                || STFC         || .                                               ||.||
