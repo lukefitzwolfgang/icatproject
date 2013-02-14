@@ -97,27 +97,36 @@ All times are too specific to be realistic.  The names are indicative.
 This table has a list of people intending to attend:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
-|| Alistair Mills                || STFC         || .                                               ||.||
-|| Steve Fisher                  || STFC         || .                                               ||.||
-|| Antony Wilson                 || STFC         || .                                               ||.||
-|| Kevin Phipps                  || STFC         || .                                               ||.||
-|| Tom Griffin                   || ISIS         || .                                               ||.||
-|| Brian Matthews                || STFC         || .                                               ||.||
-|| Denise Small                  || STFC         || .                                               ||.||
-|| Shelly Ren                    || SNS/ORNL     || .                                               ||.||
-|| Frazer Barnsley               || STFC         || .                                               ||.||
-|| Noris Nyamekye                || STFC         || .                                               ||.||
-|| George K                      || ELETTRA      || .                                               ||.||
-|| Nicola Bessone                || ESRF         || .                                               ||.||
-|| .                             || FRM          || .                                               ||.||
-|| .                             || HZB          || .                                               ||.||
-|| Jamie Hall                    || ILL          || .                                               ||.||
-|| Christian                     || JCNS         || .                                               ||.||
-|| Stephane Longeville           || LLB          || .                                               ||.||
+|| David López	                 || ALBA         || .                                               ||.||
+|| Pablo García	                 || ALBA         || .                                               ||.||
+|| Daniel Salvat	         || ALBA         || .                                               ||.||
+|| Frank Schluenzen	         || DESY         || .                                               ||.||
+|| Jan Kotanski	                 || DESY         || .                                               ||.||
+|| Ghita Mostefaoui              || DLS          || .                                               ||.||
+|| George K                      || ELETTRA      || Not on Krister's list - 14/02/2012              ||.||
+|| Nicola Bessone                || ESRF         || Not on Krister's list - 14/02/2012              ||.||
+|| Thomas Holm Rod	         || ESS (DMSC)   || .                                               ||.||
+|| Jamie Hall                    || ILL          || Not on Krister's list - 14/02/2012              ||.||
+|| Christian                     || JCNS         || Not on Krister's list - 14/02/2012              ||.||
+|| Stephane Longeville           || LLB          || Not on Krister's list - 14/02/2012              ||.||
 || Krister Larsson               || MAX          || .                                               ||.||
 || Heinz-Josef                   || PSI          || .                                               ||.||
-|| Idrissou Chado                || SOLEIL       || .                                               ||.||
-|| Ghita                         || DLS          || .                                               ||.||
+|| Mirjam van Daalen             || PSI          || .                                               ||.||
+|| Shelly Ren                    || ORNL (SNS)   || Not on Krister's list - 14/02/2012              ||.||
+|| Idrissou Chado                || SOLEIL       || Not on Krister's list - 14/02/2012              ||.||
+|| Alistair Mills                || STFC (SCD)   || .                                               ||.||
+|| Erica Yang                    || STFC (SCD)   || .                                               ||.||
+|| Denise Small                  || STFC (SCD)   || .                                               ||.||
+|| Brian Matthews                || STFC (SCD)   || .                                               ||.||
+|| Juan Bicarregui               || STFC (SCD)   || .                                               ||.||
+|| Antony Wilson                 || STFC (SCD)   || .                                               ||.||
+|| Kevin Phipps                  || STFC (SCD)   || .                                               ||.||
+|| Steve Fisher                  || STFC (SCD)   || .                                               ||.||
+|| Noris Nyamekye                || STFC (SCD)   || .                                               ||.||
+|| Frazer Barnsley               || STFC (SCD)   || .                                               ||.||
+|| Tom Griffin                   || STFC (ISIS)  || .                                               ||.||
+|| .                             || FRM          || .                                               ||.||
+|| .                             || HZB          || .                                               ||.||
 
 
 Apologies:
