@@ -103,6 +103,7 @@ This table has a list of people intending to attend:
 || Frank Schluenzen	         || DESY         || .                                               ||.||
 || Jan Kotanski	                 || DESY         || .                                               ||.||
 || Thorsten Kracht               || DESY         || .                                               ||.||
+|| Jürgen Starek                 || DESY         || .                                               ||.||
 || Ghita Mostefaoui              || DLS          || .                                               ||.||
 || George K                      || ELETTRA      || Not on Krister's list - 14/02/2012              ||.||
 || Nicola Bessone                || ESRF         || Not on Krister's list - 14/02/2012              ||.||
