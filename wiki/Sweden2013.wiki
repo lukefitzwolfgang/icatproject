@@ -108,7 +108,8 @@ This table has a list of people intending to attend:
 || Ghita Mostefaoui              || DLS          || .                                               ||.||
 || Thomas Holm Rod	         || ESS (DMSC)   || .                                               ||.||
 || Krister Larsson               || MAX          || .                                               ||.||
-|| Heinz-Josef                   || PSI          || .                                               ||.||
+|| Shelly Ren                    || ORNL (SNS)   || .                                               ||.||
+|| Heinz-Josef Weyer             || PSI          || .                                               ||.||
 || Mirjam van Daalen             || PSI          || .                                               ||.||
 || Alistair Mills                || STFC (SCD)   || .                                               ||.||
 || Erica Yang                    || STFC (SCD)   || .                                               ||.||
@@ -127,16 +128,14 @@ This table has a list of people intending to attend:
 This table has a list of people expected, but not yet confirmed:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
-|| George K                      || ELETTRA      || Not on Krister's list - 14/02/2012              ||.||
+|| George Kourousias             || ELETTRA      || Not on Krister's list - 14/02/2012              ||.||
 || Nicola Bessone                || ESRF         || Not on Krister's list - 14/02/2012              ||.||
 || Jamie Hall                    || ILL          || Not on Krister's list - 14/02/2012              ||.||
 || Christian Felder              || JCNS         || Not on Krister's list - 14/02/2012              ||.||
 || Stephane Longeville           || LLB          || Not on Krister's list - 14/02/2012              ||.||
-|| Shelly Ren                    || ORNL (SNS)   || Not on Krister's list - 14/02/2012              ||.||
-|| Idrissou Chado                || SOLEIL       || Not on Krister's list - 14/02/2012              ||.||
 
 Apologies:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
-
+|| Idrissou Chado                || SOLEIL       ||                                                 ||.||
 == - the end - ==
