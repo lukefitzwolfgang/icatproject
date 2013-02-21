@@ -175,18 +175,26 @@ Development details
 
 The web service client is generated using wsimport tool from jdk. The
 ICATService class has been modified manually to add a convenience constructor.
+Call wsimport with the following parameters to generate the code in a
+directory called 'src':
+wsimport -s src http://myserver.xxx.yy:8080/icat/ICATService/ICAT?wsdl
 
 The @XmlElement(namespace = "http://icatproject.org") annotation was generated
 by wsimport for several properties. These properties could not be retrieved
 later on by the xml unmarshaller. The annotations had to be removed to be able
 to marshall/unmarshall these properties correctly. The origin of this issue
-seems to be the xsd referenced by the wsdl of icat. The elements that cause the
-issue above are all declared as references
+seems to be that the datafile and dataset class are annotated as xml root elements.
+Therefore in the xsd referenced by the wsdl of icat these elements are all
+declared as references
 (e.g. <xs:element ref="tns:dataset" .../>)
 instead of simple elements
 (e.g. <xs:element name="..." type="tns:dataset" .../>).
+Normally by specifying the org.icatproject namespace in the JAXB context
+used for marshalling/unmarshalling xml the references should be found.
+Unfortunately this does not work so far.
 
-The following properties were concerned:
+To fix the problem the annotations had to be removed from the following
+properties:
 
 Datafile.dataset
 DatafileParameter.datafile
