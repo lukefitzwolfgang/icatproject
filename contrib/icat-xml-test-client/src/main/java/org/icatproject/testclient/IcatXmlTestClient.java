@@ -12,6 +12,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+import org.icatproject.Dummy;
 import org.icatproject.EntityBaseBean;
 import org.icatproject.ICAT;
 import org.icatproject.ICATService;
@@ -129,7 +130,7 @@ public class IcatXmlTestClient {
 			for (Object object : results) {
 				data.getBeans().add((EntityBaseBean) object);
 			}
-			JAXBContext jc = JAXBContext.newInstance(Icatdata.class);
+			JAXBContext jc = this.getJAXBContext();
 			Marshaller m = jc.createMarshaller();
 			m.setProperty("jaxb.formatted.output", Boolean.TRUE);
 			OutputStream os = System.out;
@@ -140,6 +141,10 @@ public class IcatXmlTestClient {
 			data.setConfig(null);
 			m.marshal(data, os);
 		}
+	}
+	
+	private JAXBContext getJAXBContext() throws Exception {
+		return JAXBContext.newInstance(Icatdata.class, Dummy.class);
 	}
 
 	private final Map<DataTypeID<Long>, EntityBaseBean> searchIDs(final Config config) throws Exception {
@@ -189,7 +194,7 @@ public class IcatXmlTestClient {
 	 * @throws Exception
 	 */
 	public void read(final String fileName) throws Exception {
-		JAXBContext jc = JAXBContext.newInstance(Icatdata.class);
+		JAXBContext jc = this.getJAXBContext();
 		Unmarshaller um = jc.createUnmarshaller();
 		Icatdata data = (Icatdata) um.unmarshal(new File(fileName));
 		this.clean(data.getConfig());
