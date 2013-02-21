@@ -176,11 +176,25 @@ Development details
 The web service client is generated using wsimport tool from jdk. The
 ICATService class has been modified manually to add a convenience constructor.
 
-The @XmlElement annotation from the datafile property in the DatafileParameter
-class and also from the dataset property in the DatasetParameter class had to
-be removed since otherwise the dataset or datafile element could not be
-retrieved by the xml unmarshaller and icat throws an exception since the
-dataset/datafile are mandatory.
+The @XmlElement(namespace = "http://icatproject.org") annotation was generated
+by wsimport for several properties. These properties could not be retrieved
+later on by the xml unmarshaller. The annotations had to be removed to be able
+to marshall/unmarshall these properties correctly. The origin of this issue
+seems to be the xsd referenced by the wsdl of icat. The elements that cause the
+issue above are all declared as references
+(e.g. <xs:element ref="tns:dataset" .../>)
+instead of simple elements
+(e.g. <xs:element name="..." type="tns:dataset" .../>).
+
+The following properties were concerned:
+
+Datafile.dataset
+DatafileParameter.datafile
+DatasetParameter.dataset
+InputDatafile.datafile
+InputDataset.dataset
+OutputDatafile.datafile
+OutputDataset.dataset
 
 An addtional member called searchId has been added to the EnityBaseBean class
 to handle reference resolving over icat queries. 

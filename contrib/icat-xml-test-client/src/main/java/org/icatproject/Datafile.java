@@ -72,7 +72,6 @@ public class Datafile
     protected DatafileFormat datafileFormat;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar datafileModTime;
-    @XmlElement(namespace = "http://icatproject.org")
     protected Dataset dataset;
     protected String description;
     @XmlElement(nillable = true)

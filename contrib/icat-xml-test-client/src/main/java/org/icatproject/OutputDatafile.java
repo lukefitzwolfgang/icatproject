@@ -36,7 +36,6 @@ public class OutputDatafile
     extends EntityBaseBean
 {
 
-    @XmlElement(namespace = "http://icatproject.org")
     protected Datafile datafile;
     protected Job job;
 

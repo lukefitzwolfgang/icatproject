@@ -36,7 +36,6 @@ public class InputDataset
     extends EntityBaseBean
 {
 
-    @XmlElement(namespace = "http://icatproject.org")
     protected Dataset dataset;
     protected Job job;
 
