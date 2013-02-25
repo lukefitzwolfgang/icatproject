@@ -107,6 +107,8 @@ This table has a list of people intending to attend:
 || Jürgen Starek                 || DESY         || .                                               ||.||
 || Ghita Mostefaoui              || DLS          || .                                               ||.||
 || Thomas Holm Rod	         || ESS (DMSC)   || .                                               ||.||
+|| Dietmar Herrendörfer          || HZB          || .                                               ||.||
+|| Rolf Krahl                    || HZB          || .                                               ||.||
 || Krister Larsson               || MAX          || .                                               ||.||
 || Shelly Ren                    || ORNL (SNS)   || .                                               ||.||
 || Heinz-Josef Weyer             || PSI          || .                                               ||.||
@@ -123,7 +125,7 @@ This table has a list of people intending to attend:
 || Frazer Barnsley               || STFC (SCD)   || .                                               ||.||
 || Tom Griffin                   || STFC (ISIS)  || .                                               ||.||
 || .                             || FRM          || .                                               ||.||
-|| .                             || HZB          || .                                               ||.||
+
 
 This table has a list of people expected, but not yet confirmed:
 
