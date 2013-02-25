@@ -16,9 +16,16 @@ We are expecting to release ICAT 4.3 in March, and the reference implementation 
  * Feb 21 - Meeting in Lund
  * Mar 7 - Meeting in Lund
 
+== Meeting 54 - 21 February 2013 ==
+
+ * Actions from the meetings 52/53 (Alistair)
+ * Plans for Sweden2013 (Krister)
+ * Update from PaN-data (Milan/George)
+ * AOB (Any)
+
 == Meeting 53 - 21 February 2013 ==
 
- * Actions from the meetings 51 (Alistair)
+ * Actions from the meetings 52 (Alistair)
  * Plans for Sweden2013 (Krister)
  * Update from PaN-data (Milan/George)
  * AOB (Any)
