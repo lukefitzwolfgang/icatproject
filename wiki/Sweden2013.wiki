@@ -124,7 +124,7 @@ This table has a list of people intending to attend:
 || Noris Nyamekye                || STFC (SCD)   || .                                               ||.||
 || Frazer Barnsley               || STFC (SCD)   || .                                               ||.||
 || Tom Griffin                   || STFC (ISIS)  || .                                               ||.||
-|| .                             || FRM          || .                                               ||.||
+|| Christian Felder                             || JCNS          || .                                               ||.||
 
 
 This table has a list of people expected, but not yet confirmed:
@@ -133,7 +133,6 @@ This table has a list of people expected, but not yet confirmed:
 || George Kourousias             || ELETTRA      || Not on Krister's list - 14/02/2012              ||.||
 || Nicola Bessone                || ESRF         || Not on Krister's list - 14/02/2012              ||.||
 || Jamie Hall                    || ILL          || Not on Krister's list - 14/02/2012              ||.||
-|| Christian Felder              || JCNS         || Not on Krister's list - 14/02/2012              ||.||
 || Stephane Longeville           || LLB          || Not on Krister's list - 14/02/2012              ||.||
 
 Apologies:
