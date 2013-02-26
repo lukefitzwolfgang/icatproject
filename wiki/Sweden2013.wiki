@@ -68,7 +68,13 @@ All times are too specific to be realistic.  The names are indicative.
 || 13:30      || Session 1 - Chair person - Krister Larsson                                       || .            || .                                         ||.||
 || .          || Welcome and introductions                                                        || 5            || .                                         ||.||
 || .          || Status of the ICAT collaboration project                                         || 15           || Alistair Mills                            ||.||
-|| 13:50      || Status of the contribs, PyICAT, Restful, icat-xml, api_examples (ContribIndex)   || 40           || Christian, Shelly, et al                  ||.||
+|| 13:50      || Status of the contribs( ContribIndex )                                           ||              ||                                           ||.||
+|| .          || PyICAT                                                                           || 10           || Christian                                 ||.||
+|| .          || Restful                                                                          || 10           || Shelly                                    ||.||
+|| .          || xml-ingest                                                                       || 10           || Tom                                       ||.||
+|| .          || icat-xml                                                                         ||  5           || TBA                                       ||.||
+|| .          || api-examples                                                                     ||  5           || Alistair                                  ||.||
+
 || 14:30      || B r e a k . . .                                                                  || 15           || .                                         ||.||
 || 14:45      || Session 2 - Chair person - Tom Griffin                                           || .            || .                                         ||.||
 || .          || Facilities status: ISIS, DLS, SNS, ESRF, ILL ...                                 || 45           || Tom, Ghita Shelly, Nicola, Jamie. et al   ||.||
@@ -78,10 +84,10 @@ All times are too specific to be realistic.  The names are indicative.
 || 19.30      || Evening event                                                                    ||              ||                                           ||.||
 
 || Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||.||
-|| 09:00      || Session 3 - Chair person - Shelly, SNS/ORNL                                      || 55           ||                                           ||.||
+|| 09:00      || Session 3 - Chair person - Shelly, SNS/ORNL                                      ||  .           ||                                           ||.||
 || .          || Technical presentation on Topcat and IDS plans                                   || 55           || Antony Wilson/ Frazer Barnsley            ||.||
 || 09:55      || Q u i c k . . . b r e a k . . .                                                  || 05           ||                                           ||.||
-|| 10:00      || Session 4 - Chair person - Jean-Francois                                         || 60           ||                                           ||.||
+|| 10:00      || Session 4 - Chair person - Jean-Francois                                         ||  .           ||                                           ||.||
 || .          || Technical presentation on ICAT plans                                             || 60           || Steve Fisher                              ||.||
 || 11:00      || L o n g  . . . B r e a k . . .                                                   || 15           ||                                           ||.||
 || .          || .                                                                                ||              ||                                           ||.||
@@ -124,7 +130,7 @@ This table has a list of people intending to attend:
 || Noris Nyamekye                || STFC (SCD)   || .                                               ||.||
 || Frazer Barnsley               || STFC (SCD)   || .                                               ||.||
 || Tom Griffin                   || STFC (ISIS)  || .                                               ||.||
-|| Christian Felder                             || JCNS          || .                                               ||.||
+|| Christian Felder              || JCNS         || .                                               ||.||
 
 
 This table has a list of people expected, but not yet confirmed:
