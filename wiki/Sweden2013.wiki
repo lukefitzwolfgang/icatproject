@@ -80,7 +80,7 @@ All times are too specific to be realistic.  The names are indicative.
 || .          || Facilities status: ISIS, DLS, SNS, ESRF, ILL ...                                 || 45           || Tom, Ghita Shelly, Nicola, Jamie. et al   ||.||
 || .          || Project WPs status: Pandata, CRISP                                               || 45           || Milan, Mirjam, Thorsten, et al            ||.||
 || 16:15      || B r e a k . . .                                                                  ||              ||                                           ||.||
-|| 16:30      || Technical technical training - optional - installing and maintaining ICAT        || 90           || Alistair/ Kevin                           ||.||
+|| 16:30      || Technical technical training - optional - installing and maintaining ICAT        || 90           || TrainingInLund                            ||.||
 || 19.30      || Evening event                                                                    ||              ||                                           ||.||
 
 || Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||.||
