@@ -1,10 +1,13 @@
 package org.icatproject.testclient;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -126,21 +129,56 @@ public class IcatXmlTestClient {
 		if (results == null || results.size() == 0) {
 			System.out.println("No result for query: " + query);
 		} else {
-			Icatdata data = new Icatdata();
-			for (Object object : results) {
-				data.getBeans().add((EntityBaseBean) object);
-			}
-			JAXBContext jc = this.getJAXBContext();
-			Marshaller m = jc.createMarshaller();
-			m.setProperty("jaxb.formatted.output", Boolean.TRUE);
+			System.out.println("Found object(s)!");
 			OutputStream os = System.out;
 			if (outFile != null) {
 				os = new FileOutputStream(outFile);
 			}
-			System.out.println("Found object(s)!");
-			data.setConfig(null);
-			m.marshal(data, os);
+			if(this.isXmlSerializable(results)){
+				this.serialize2xml(os, results);
+			} else {
+				System.out.println("Results cannot be serialized to xml since one or more objects are no entity base beans!\nThe results will be written as text.");
+				this.serialize2txt(os, results);
+			}
 		}
+	}
+	
+	private void serialize2xml(OutputStream os, final List<Object> results) throws Exception {
+		Icatdata data = new Icatdata();
+		for (Object object : results) {
+			data.getBeans().add((EntityBaseBean) object);
+		}
+		JAXBContext jc = this.getJAXBContext();
+		Marshaller m = jc.createMarshaller();
+		m.setProperty("jaxb.formatted.output", Boolean.TRUE);
+		data.setConfig(null);
+		m.marshal(data, os);
+	}
+	
+	private void serialize2txt(OutputStream os, final List<Object> results) throws Exception {
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os));
+		Iterator<Object> it = results.iterator();
+		while(it.hasNext()) {
+			bw.write(it.next().toString());
+			if(it.hasNext()) {
+				bw.newLine();
+			}
+		}
+		bw.close();
+	}
+	
+	/**
+	 * Check if a list of search results contains only Entity Base Beans.
+	 * If yes, the list can be serialized as xml otherwise not.
+	 * @param results
+	 * @return
+	 */
+	private boolean isXmlSerializable(final List<Object> results) {
+		if (results == null || results.size() == 0) return false;
+		for (Object object : results) {
+			if(!(object instanceof EntityBaseBean)) return false;
+		}
+		return true;
 	}
 	
 	private JAXBContext getJAXBContext() throws Exception {

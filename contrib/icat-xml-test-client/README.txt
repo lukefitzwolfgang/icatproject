@@ -61,10 +61,10 @@ java -cp icatXmlTestClient-0.2.jar org.icatproject.testclient.IcatXmlTestClient 
 
 This will fetch the facility named 'ESRF' and save it to the search.xml file.
 
-Please NOTE: The search command can only serialize entity base bean objects to xml.
-As long as your search returns those you won't have any trouble. But you cannot
-run searches that return simple values (e.g. Facility.name) or function results
-(e.g. max or count).
+PLEASE NOTE: The search command can only serialize entity base bean objects to xml.
+If your search returns simple values (e.g. Facility.name) or function results
+(e.g. MAX or COUNT) you will see a warning message and the results will be written
+as simple text (using java's toString() method on the results' objects).
 
 
 Import command
