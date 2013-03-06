@@ -23,9 +23,7 @@ The other is Hotel Sparta (lower standard) for 778:-/night (http://www.spartahot
 
 They will keep the rooms for us until February 26. To make a reservation for one of the rooms just let them know it's for the MAX IV workshop (or just MAX).
 
-The venue for the meeting is not set yet, but will be close to any of these hotels.
-
-A detailed schedule for the meeting and additional information about the venue will be sent as soon as possible.
+The venue for the meeting is close to the hotels.
 
 To register for the meeting please send an e-mail to:
 
@@ -51,8 +49,6 @@ An informal snack lunch will be provided at the venue on Tuesday.
 
 Wireless networking will be available at the venue.
 
-The details of the venue will be available soon.
-
 = Attending =
 
 If you are interested in attending this meeting please contact tom.griffin@stfc.ac.uk or alistair.mills@stfc.ac.uk.
@@ -63,27 +59,28 @@ The purpose is to discuss plans for the development and use of ICAT at facilitie
 
 All times are too specific to be realistic.  The names are indicative.
 
-
 || Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes ||
 || 13:30      || Session 1 - Chair person - Krister Larsson                                       || .            || .                                         ||.||
 || .          || Welcome and introductions                                                        || 5            || .                                         ||.||
 || .          || Status of the ICAT collaboration project                                         || 10           || Alistair Mills                            ||.||
-|| 13:45      || Status of the contribs( ContribIndex )                                           ||              ||                                           ||.||
-|| .          || PyICAT                                                                           || 10           || Christian                                 ||.||
-|| .          || Restful                                                                          || 10           || Shelly                                    ||.||
-|| .          || xml-ingest                                                                       || 10           || Tom                                       ||.||
-|| .          || ICAT eclipse plugin                                                              || 10           || Ghita                                     ||.||
-|| .          || ICAT setup                                                                       || 10           || Steve Fisher                              ||.||
-|| .          || icat-xml                                                                         ||  5           || Alistair                                  ||.||
-|| .          || api-examples                                                                     ||  5           || Alistair                                  ||.||
+|| 13:45      || Status of the contribs( ContribIndex )                                           || 8 x 7        ||                                           ||.||
+|| .          || PyICAT                                                                           || .            || Christian                                 ||.||
+|| .          || Restful                                                                          || .            || Shelly                                    ||.||
+|| .          || xml-ingest                                                                       || .            || Tom                                       ||.||
+|| .          || ICAT eclipse plugin                                                              || .            || Ghita                                     ||.||
+|| .          || ICAT setup                                                                       || .            || Steve Fisher                              ||.||
+|| .          || icat-xml-client                                                                  || .            || Alistair                                  ||.||
+|| .          || api-examples                                                                     || .            || Alistair                                  ||.||
+|| .          || training materials                                                               || .            || Alistair                                  ||.||
 
 || 14:45      || B r e a k . . .                                                                  || 15           || .                                         ||.||
-|| 14:45      || Session 2 - Chair person - Tom Griffin                                           || .            || .                                         ||.||
-|| .          || Facilities status, problems and requirements: ISIS, DLS, SNS, ESRF, ILL, ALBA, ANS ...  || 45 (9x5) || Tom, Ghita Shelly, Nicola, Jamie. et al   ||.||
-|| 16:15      || B r e a k . . .                                                                  ||              ||                                           ||.||
-|| 16:30      || Technical technical training - optional - installing and maintaining ICAT        || 90           || TrainingInLund                            ||.||
-|| 19.30      || Evening event                                                                    ||              ||                                           ||.||
+|| 15:00      || Session 2 - Chair person - Tom Griffin                                           || .            || .                                         ||.||
+|| .          || Facilities status, problems and requirements: ISIS, DLS, SNS, ESRF, ANS ...      || 45 (9x5)     || Tom, Ghita Shelly, Nicola, Steve, et al   ||.||
 
+|| 16:15      || B r e a k . . .                                                                  || 15           ||                                           ||.||
+|| 16:30      || Technical technical training - optional - installing and maintaining ICAT        || 90           || TrainingInLund                            ||.||
+
+|| 19.30      || Evening event                                                                    ||              ||                                           ||.||
 || Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||.||
 || 09:00      || Session 3 - Chair person - Shelly, SNS/ORNL                                      ||  .           ||                                           ||.||
 || .          || Technical presentation on Topcat                                                 || 15           || Antony Wilson                             ||.||
@@ -147,4 +144,5 @@ Apologies:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
 || Idrissou Chado                || SOLEIL       ||                                                 ||.||
+
 == - the end - ==
