@@ -3,7 +3,10 @@
 # $Id$
 #
 
-asadmin start-database --dbhost 127.0.0.1
+# load configuration details
+. ./properties.sh
+
+asadmin start-database --dbhost $SERVER
 
 #
 # - the end -

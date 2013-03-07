@@ -16,9 +16,9 @@ usage() {
 
 init-database()
 {
-    # copy relevant glasshfish.props files for db to icat and authn_db configuration directories
-    cp db_$SELECTED_DATABASE/glassfish.props.icat icat.ear.config/glassfish.props
-    cp db_$SELECTED_DATABASE/glassfish.props.authn_db authn_db.ear.config/glassfish.props
+    # copy properties.sh to icat and authn_db configuration directories
+    cp db_$SELECTED_DATABASE/properties.sh icat.ear.config/properties.sh
+    cp db_$SELECTED_DATABASE/properties.sh authn_db.ear.config/properties.sh
 
     cd db_$SELECTED_DATABASE
     ./init_database.sh

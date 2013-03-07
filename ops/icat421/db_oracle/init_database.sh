@@ -3,7 +3,7 @@
 # $Id$
 #
 
-# load user details
+# load configuration details
 . ./properties.sh
 
 sqlplus -s $DB_USERNAME/$DB_PASSWORD@localhost as sysdba <<EOF

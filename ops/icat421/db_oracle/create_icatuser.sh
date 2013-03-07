@@ -3,7 +3,7 @@
 # $Id$
 #
 
-# load user details
+# load configuration details
 . ./properties.sh
 
 sqlplus -s $DB_ICATUSER_USERNAME/$DB_ICATUSER_PASSWORD@localhost <<EOF
