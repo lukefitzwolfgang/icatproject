@@ -28,9 +28,9 @@ We are expecting to release ICAT 4.3 in March, and the reference implementation 
 || Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
 || 54.00 || Document the meeting                                                            || AM        ||              Done||                     -||
 || 54.01 || Update the timetable for Sweden2013                                             || AM        ||              Done||                     -||
-|| 54.02 || Send information about the conference venue to SR                               || AM        ||                 .||                     -||
+|| 54.02 || Send information about the conference venue to SR                               || AM        ||              Done||                     -||
 || 54.03 || Send Elettra status summary for presentation in Lund to AM                      || MP        ||                 .||                     -||
-|| 54.04 || Send one page template for status of a contrib to SR                            || AM        ||                 .||                     -||
+|| 54.04 || Send one page template for status of a contrib to SR, TG, SR                    || AM        ||              Done||                     -||
 || 54.05 || Distribute the latest notes on the contents of icat 4.3                         || SF        ||                 .||                     -||
 
 
