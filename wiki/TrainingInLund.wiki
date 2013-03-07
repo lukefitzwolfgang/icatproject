@@ -9,9 +9,11 @@
 
 The topics to be covered are:
 
- * Installation of ICAT on a remote to connect to another remote oracle server and the installation of the authn_db plugin to authenticate against a database.
+ * Installation of ICAT on a remote computer and the installation of the authn_db plugin to authenticate against a database.
  * Running tests to verify that the ICAT is working.
  * Viewing the status of the ICAT using a Topcat.
+
+
 
 == Participation ==
 
@@ -22,19 +24,20 @@ Each pair of participants will have a laptop with a suitable terminal client suc
 == Remote virtual computers == 
 
 The remote virtual computer will be configured with the following:
-- Centos 6.2
-- suitable userids including root access if required
-- Java Developer Kit
-- Java Enterprise Edition including Derby database
-- Glassfish server
-- Connectors for remote mysql and oracle databases
-- Downloaded distribution materials from the ICAT 4.2 release
+ * Centos 6.2
+ * suitable userids including root access if required
+ * Java Developer Kit
+ * Java Enterprise Edition including Derby database
+ * Glassfish server
+ * Connectors for remote mysql and oracle databases
+ * Downloaded distribution materials from the ICAT 4.2 release
+
+Both Derby and Mysql databases will be available.
 
 == Remote virtual server == 
 
 A remote virtual server will be configured with the following:
  * Centos 6.2
- * Java Application Express
  * Mysql Server
  * Topcat
  * a service engineer who can change the configuration if necessary
