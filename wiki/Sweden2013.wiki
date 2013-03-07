@@ -23,7 +23,16 @@ The other is Hotel Sparta (lower standard) for 778:-/night (http://www.spartahot
 
 They will keep the rooms for us until February 26. To make a reservation for one of the rooms just let them know it's for the MAX IV workshop (or just MAX).
 
-The venue for the meeting is close to the hotels.
+The workshop will take place at Ideon Science Park (www.ideon.se), close to the present MAX IV laboratory.
+The address is: Scheelevägen 17, Lund. Maps can be found here:
+
+http://www.ideon.se/om-ideon/karta/ (The entrance is at the roundabout below “Beta 4”)
+
+http://kartor.eniro.se/m/nCUch
+
+http://maps.google.se/maps?f=q&source=s_q&hl=en&geocode=&q=Scheelev%C3%A4gen+17,+Lund&aq=0&oq=scheelev%C3%A4gen+17&sll=55.938992,13.513117&sspn=2.507492,5.037231&vpsrc=0&ie=UTF8&hq=&hnear=Scheelev%C3%A4gen+17,+223+63+Lund&t=m&z=16&iwloc=A
+
+The meeting room is “Enoch Thulin” and yes, there is a Wifi connection.
 
 To register for the meeting please send an e-mail to:
 
@@ -63,17 +72,20 @@ All times are too specific to be realistic.  The names are indicative.  Some of 
 || 13:30      || Session 1 - Chair person - Krister Larsson                                       || .            || .                                         ||.||
 || .          || Welcome and introductions                                                        || 5            || .                                         ||.||
 || .          || Status of the ICAT collaboration project                                         || 10           || Alistair Mills                            ||.||
-|| 13:45      || Status of the contribs( ContribIndex )                                           || 8 x 7        ||                                           ||.||
+|| 13:45      || Status of the contribs( ContribIndex )                                           || 60 (10 x 6)  ||                                           ||.||
 || .          || PyICAT                                                                           || .            || Christian                                 ||.||
 || .          || Restful                                                                          || .            || Shelly                                    ||.||
 || .          || xml-ingest                                                                       || .            || Tom                                       ||.||
+|| .          || Nexus ingest                                                                     || .            || Shelly                                    ||.||
 || .          || ICAT eclipse plugin                                                              || .            || Ghita                                     ||.||
 || .          || ICAT setup                                                                       || .            || Steve Fisher                              ||.||
 || .          || icat-xml-client                                                                  || .            || Alistair                                  ||.||
 || .          || api-examples                                                                     || .            || Alistair                                  ||.||
 || .          || training materials                                                               || .            || Alistair                                  ||.||
-
+|| .          || TBD                                                                              || .            || TBD                                       ||.||
 || 14:45      || B r e a k . . .                                                                  || 15           || .                                         ||.||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes ||
 || 15:00      || Session 2 - Chair person - Tom Griffin                                           || .            || .                                         ||.||
 || .          || Facilities status, problems and requirements                                     || 75 (15x5)    || .                                         ||.||
 || .          || Alba                                                                             || .            || Daniel                                    ||.||
@@ -88,29 +100,36 @@ All times are too specific to be realistic.  The names are indicative.  Some of 
 || .          || Llb                                                                              || .            || Stephane                                  ||.||
 || .          || Max                                                                              || .            || Krister                                   ||.||
 || .          || Psi                                                                              || .            || Mairjam                                   ||.||
-|| .          || Ill                                                                              || .            || Tom                                       ||.||
 || .          || Sns                                                                              || .            || Shelly                                    ||.||
-|| .          || STFC                                                                             || .            || Alistair                                  ||.||
-
+|| .          || Clf                                                                              || .            || Alistair                                  ||.||
+|| .          || TBD                                                                              || .            || TBD                                       ||.||
 || 16:15      || B r e a k . . .                                                                  || 15           ||                                           ||.||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes ||
 || 16:30      || Technical technical training - optional - installing and maintaining ICAT        || 90           || TrainingInLund                            ||.||
 
-|| 19.30      || Evening event                                                                    ||              ||                                           ||.||
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes ||
+|| 19.30      || Evening event                                                                    || 150          ||                                           ||.||
+
 || Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||.||
 || 09:00      || Session 3 - Chair person - Shelly, SNS/ORNL                                      ||  .           ||                                           ||.||
 || .          || Technical presentation on Topcat                                                 || 15           || Antony Wilson                             ||.||
 || .          || Technical presentation on IDS                                                    || 30           || Antony Wilson/ Frazer Barnsley            ||.||
-|| 09:45      || Q u i c k . . . b r e a k . . .                                                  || 15           ||                                           ||.||
+|| 09:45      || B r e a k . . .                                                                  || 15           ||                                           ||.||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes ||
 || 10:00      || Session 4 - Chair person - Jean-Francois                                         ||  .           ||                                           ||.||
 || .          || Technical presentation on ICAT 4.3 plans                                         || 45           || Steve Fisher                              ||.||
 || .          || ICAT Beyond 4.3                                                                  || 15           || Brian Matthews                            ||.||
-|| 11:00      || L o n g  . . . B r e a k . . .                                                   || 15           ||                                           ||.||
-|| .          || .                                                                                ||              ||                                           ||.||
-|| 11:15      || Session 5 - Chair person - Brian Matthews, STFC                                  || 60           ||                                           ||.||
-|| .          || ICAT Job Portal                                                                  || 20           || Steve Fisher                              ||.||
-|| .          || Integration tools                                                                || 20           || Alistair Mills                            ||.||
-|| .          || Authentication                                                                   || 20           || Someone from Pandata                      ||.||
+|| 11:00      || B r e a k . . .                                                                  || 15           ||                                           ||.||
 
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes ||
+|| 11:15      || Session 5 - Chair person - Brian Matthews, STFC                                  || 60 (3x20)    ||                                           ||.||
+|| .          || ICAT Job Portal                                                                  ||  .           || Steve Fisher                              ||.||
+|| .          || Integration tools                                                                ||  .           || Alistair Mills                            ||.||
+|| .          || Authentication                                                                   ||  .           || Someone from Pandata                      ||.||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes ||
 || 12:15      || L u n c h . . .                                                                  || 75           ||                                           ||.||
 || 13:00      || Tour of MAX                                                                      || 60           ||                                           ||.||
 || 14:00      || Pandata conference                                                               ||              ||                                           ||.||
@@ -144,12 +163,11 @@ This table has a list of people intending to attend:
 || Frazer Barnsley               || STFC (SCD)   || .                                               ||.||
 || Tom Griffin                   || STFC (ISIS)  || .                                               ||.||
 || Christian Felder              || JCNS         || .                                               ||.||
-
+|| Steve Androulakis             || ANS          || .                                               ||.||
 
 This table has a list of people expected, but not yet confirmed:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
-|| George Kourousias             || ELETTRA      || Not on Krister's list - 14/02/2012              ||.||
 || Nicola Bessone                || ESRF         || Not on Krister's list - 14/02/2012              ||.||
 || Jamie Hall                    || ILL          || Not on Krister's list - 14/02/2012              ||.||
 || Stephane Longeville           || LLB          || Not on Krister's list - 14/02/2012              ||.||
@@ -158,6 +176,7 @@ Apologies:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
 || Kevin Phipps                  || STFC (SCD)   || .                                               ||.||
-|| Idrissou Chado                || SOLEIL       ||                                                 ||.||
+|| Idrissou Chado                || SOLEIL       || .                                               ||.||
+|| George Kourousias             || ELETTRA      || .                                               ||.||
 
 == - the end - ==
