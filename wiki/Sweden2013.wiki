@@ -57,7 +57,7 @@ If you are interested in attending this meeting please contact tom.griffin@stfc.
 
 The purpose is to discuss plans for the development and use of ICAT at facilities and by projects such as PaN-Data and CRISP.
 
-All times are too specific to be realistic.  The names are indicative.
+All times are too specific to be realistic.  The names are indicative.  Some of the status updates may not happen.
 
 || Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes ||
 || 13:30      || Session 1 - Chair person - Krister Larsson                                       || .            || .                                         ||.||
@@ -75,7 +75,22 @@ All times are too specific to be realistic.  The names are indicative.
 
 || 14:45      || B r e a k . . .                                                                  || 15           || .                                         ||.||
 || 15:00      || Session 2 - Chair person - Tom Griffin                                           || .            || .                                         ||.||
-|| .          || Facilities status, problems and requirements: ISIS, DLS, SNS, ESRF, ANS ...      || 45 (9x5)     || Tom, Ghita Shelly, Nicola, Steve, et al   ||.||
+|| .          || Facilities status, problems and requirements                                     || 75 (15x5)    || .                                         ||.||
+|| .          || Alba                                                                             || .            || Daniel                                    ||.||
+|| .          || Desy                                                                             || .            || Juergen                                   ||.||
+|| .          || Dls                                                                              || .            || Ghita                                     ||.||
+|| .          || Elettra                                                                          || .            || George                                    ||.||
+|| .          || Esrf                                                                             || .            || Nicola                                    ||.||
+|| .          || Hzb                                                                              || .            || Deitmar                                   ||.||
+|| .          || Ill                                                                              || .            || Jamie                                     ||.||
+|| .          || Isis                                                                             || .            || Tom                                       ||.||
+|| .          || Jcns                                                                             || .            || Christian                                 ||.||
+|| .          || Llb                                                                              || .            || Stephane                                  ||.||
+|| .          || Max                                                                              || .            || Krister                                   ||.||
+|| .          || Psi                                                                              || .            || Mairjam                                   ||.||
+|| .          || Ill                                                                              || .            || Tom                                       ||.||
+|| .          || Sns                                                                              || .            || Shelly                                    ||.||
+|| .          || STFC                                                                             || .            || Alistair                                  ||.||
 
 || 16:15      || B r e a k . . .                                                                  || 15           ||                                           ||.||
 || 16:30      || Technical technical training - optional - installing and maintaining ICAT        || 90           || TrainingInLund                            ||.||
@@ -92,9 +107,9 @@ All times are too specific to be realistic.  The names are indicative.
 || 11:00      || L o n g  . . . B r e a k . . .                                                   || 15           ||                                           ||.||
 || .          || .                                                                                ||              ||                                           ||.||
 || 11:15      || Session 5 - Chair person - Brian Matthews, STFC                                  || 60           ||                                           ||.||
-|| .          || ICAT Job Portal                                                                  || 30           || Kevin Phipps                              ||.||
+|| .          || ICAT Job Portal                                                                  || 20           || Steve Fisher                              ||.||
 || .          || Integration tools                                                                || 20           || Alistair Mills                            ||.||
-|| .          || Authentication                                                                   || 10           || Someone from Pandata                      ||.||
+|| .          || Authentication                                                                   || 20           || Someone from Pandata                      ||.||
 
 || 12:15      || L u n c h . . .                                                                  || 75           ||                                           ||.||
 || 13:00      || Tour of MAX                                                                      || 60           ||                                           ||.||
@@ -103,15 +118,15 @@ All times are too specific to be realistic.  The names are indicative.
 This table has a list of people intending to attend:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
-|| David López	                 || ALBA         || .                                               ||.||
-|| Pablo García	                 || ALBA         || .                                               ||.||
-|| Daniel Salvat	         || ALBA         || .                                               ||.||
-|| Frank Schluenzen	         || DESY         || .                                               ||.||
-|| Jan Kotanski	                 || DESY         || .                                               ||.||
+|| David López                   || ALBA         || .                                               ||.||
+|| Pablo García                  || ALBA         || .                                               ||.||
+|| Daniel Salvat                 || ALBA         || .                                               ||.||
+|| Frank Schluenzen              || DESY         || .                                               ||.||
+|| Jan Kotanski                  || DESY         || .                                               ||.||
 || Thorsten Kracht               || DESY         || .                                               ||.||
 || Jürgen Starek                 || DESY         || .                                               ||.||
 || Ghita Mostefaoui              || DLS          || .                                               ||.||
-|| Thomas Holm Rod	         || ESS (DMSC)   || .                                               ||.||
+|| Thomas Holm Rod               || ESS (DMSC)   || .                                               ||.||
 || Dietmar Herrendörfer          || HZB          || .                                               ||.||
 || Rolf Krahl                    || HZB          || .                                               ||.||
 || Krister Larsson               || MAX          || .                                               ||.||
@@ -124,7 +139,6 @@ This table has a list of people intending to attend:
 || Brian Matthews                || STFC (SCD)   || .                                               ||.||
 || Juan Bicarregui               || STFC (SCD)   || .                                               ||.||
 || Antony Wilson                 || STFC (SCD)   || .                                               ||.||
-|| Kevin Phipps                  || STFC (SCD)   || .                                               ||.||
 || Steve Fisher                  || STFC (SCD)   || .                                               ||.||
 || Noris Nyamekye                || STFC (SCD)   || .                                               ||.||
 || Frazer Barnsley               || STFC (SCD)   || .                                               ||.||
@@ -143,6 +157,7 @@ This table has a list of people expected, but not yet confirmed:
 Apologies:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
+|| Kevin Phipps                  || STFC (SCD)   || .                                               ||.||
 || Idrissou Chado                || SOLEIL       ||                                                 ||.||
 
 == - the end - ==
