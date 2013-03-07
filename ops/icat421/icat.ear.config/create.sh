@@ -1,30 +1,17 @@
 #!/bin/sh
 
-props=./glassfish.props
-if [ ! -f $props ]; then
-    echo There is no $props file
-    exit 1
-fi
+# load configuration details
+. ./properties.sh
 
-. $props
-
-for key in icatProperties driver port; do
-    eval val='$'$key
-    if [ -z "$val" ]; then
-        echo $key must be set in $props file
-        exit 1
-    fi
-done
-
-asadmin="$glassfish/bin/asadmin --port $port"
+asadmin="$GLASSFISH/bin/asadmin --port $PORT"
 
 $asadmin set server.http-service.access-log.format="common"
 $asadmin set server.http-service.access-logging-enabled=true
 
 $asadmin create-jdbc-connection-pool \
-   --datasourceclassname ${driver} --restype javax.sql.DataSource \
+   --datasourceclassname ${ICAT_DRIVER} --restype javax.sql.DataSource \
    --failconnection=true --steadypoolsize 2 --maxpoolsize 8 --ping \
-   --property ${icatProperties} \
+   --property ${ICAT_PROPERTIES} \
    icat
 $asadmin create-jdbc-resource --connectionpoolid icat jdbc/icat
 

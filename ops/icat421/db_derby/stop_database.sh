@@ -3,7 +3,10 @@
 # $Id$
 #
 
-asadmin stop-database --dbhost 127.0.0.1
+# load configuration details
+. ./properties.sh
+
+asadmin stop-database --dbhost $SERVER
 
 #
 # - the end -

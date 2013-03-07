@@ -3,7 +3,7 @@
 # $Id$
 #
 
-# load user details
+# load configuration details
 . ./properties.sh
 
 mysql -u$DB_ICATUSER_USERNAME -p$DB_ICATUSER_PASSWORD <<EOF
