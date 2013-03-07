@@ -9,12 +9,9 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 == Topics for future meetings ==
 
-We are expecting to release ICAT 4.3 in March, and the reference implementation of the IDS in April.  We will discuss the priorities for the future in Lund.
+ * add an issues review to the agenda for the next teleconference (21st March);
+ * Tom will not be able to attend on 21st March due to another meeting offsite and sends his apologies.
 
- * Mar 7 - Meeting in Lund
- * Feb 21 - Meeting in Lund
- * Feb 7 - IDS reference implementation
- * Jan 24 - Contents of ICAT 4.3
 
 == Meeting 54 - 7 March 2013 ==
 
