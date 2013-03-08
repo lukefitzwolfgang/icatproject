@@ -6,7 +6,7 @@
 # load configuration details
 . ./properties.sh
 
-sqlplus -s $DB_ICATUSER_USERNAME/$DB_ICATUSER_PASSWORD@localhost <<EOF
+sqlplus -s $DB_ICATUSER_USERNAME/$DB_ICATUSER_PASSWORD@$SERVER <<EOF
 set serveroutput on
 set heading off
 set feedback on
