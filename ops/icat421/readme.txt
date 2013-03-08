@@ -5,6 +5,8 @@ ICAT 4.2.1 Rapid Installation
 
 This material is not the complete set of materials for ICAT 4.2.1. It is a selected set of materials which are packaged to make it easy to get ICAT to run and is not intended for production.
 
+In addition to this README file, there is a README file in each of the directories associated with the database.
+
 For more detailed instructions please visit: http://code.google.com/p/icatproject/wiki/InstallIcat42
 
 
@@ -43,7 +45,6 @@ The installation of the software is not dependant on setting the environmental v
 
 
 Glassfish Server
-----------------
 
 The operating system user glassfish3 will be running the Glassfish Server and the applications. The installer of ICAT has to insert properties files into the Glassfish server, so it is best if Glassfish is installed by the user glassfish3 and not by root.
 
@@ -58,20 +59,18 @@ icat.ear.config/icat.properties         : The file has been added to $GLASSFISH_
 icat.ear.config/log4j.properties        : The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
 authn_db.ear.config/authn_db.properties : The file has been added to $GLASSFISH_HOME/glassfish/domains/domain1/config
 
-The Glasssfish server requires a database driver for the MySQL and Oracle databases. See Database Configuration section below.
+The Glasssfish server requires a database driver for the MySQL and Oracle databases. See Database configuration section below.
 
 database driver : The appropriate database driver has been added to $GLASSFISH_HOME/glassfish/domains/domain1/lib
 
 
 Ports
------
 
 The port 8080 is available for the glassfish Server to deploy icat
 The port 4848 is available for the the admin console of glassfish
 
 
-Obtaining the Materials for the Installation
---------------------------------------------
+Obtaining the materials for the Installation
 
 svn co https://icatproject.googlecode.com/svn/ops/icat421
 
@@ -94,19 +93,16 @@ The file icat.ear-4.2.1-http.ear is only distributed for the purpose of testing 
 
 
 Database Configuration
-----------------------
 
 ICAT 4.2.1 has been tested against MySQL, Oracle and Derby databases. Further information and configuration settings for each database can be found in their respective directories: db_derby, db_mysql, db_oracle. You should view their README file before attempting to deploy ICAT.
 
 
 Server certificate
-------------------
 
 Neither the server nor a client application require a certificate as ICAT is deployed using http protocol.
 
 
 Instructions
-------------
 
 Create a test environment similar to the one assumed. If it is not possible to be identical, then the files containing configuration may require changes.
 
