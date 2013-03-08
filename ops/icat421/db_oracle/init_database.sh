@@ -6,7 +6,7 @@
 # load configuration details
 . ./properties.sh
 
-sqlplus -s $DB_USERNAME/$DB_PASSWORD@localhost as sysdba <<EOF
+sqlplus -s $DB_USERNAME/$DB_PASSWORD@$SERVER as sysdba <<EOF
 set serveroutput on
 set heading off
 set feedback off
