@@ -47,3 +47,4 @@ AUTHDB_PROPERTIES=url="'"jdbc:mysql://$SERVER:3306/icatuser"'":user=$DB_ICATUSER
 #
 # - the end -
 #
+

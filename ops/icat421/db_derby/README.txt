@@ -12,6 +12,6 @@ Before you deploy ICAT make sure you have followed the steps below.
    their PATH.
 
 3) ./properties.sh contains various credentials and database settings. You should
-   check that the values are correct before running icat_seup.sh 
+   check that the values are correct before running icat_seup.sh.
 
 - the end -
