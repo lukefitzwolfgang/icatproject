@@ -18,6 +18,7 @@ This document will change over time, but the SVN associated with the project wil
 || Developer documentation - the status of the different branches in the repository, setting up a development environment, etc || PaNdata || In progress || SF to add some extra documentation (Action 47.05). ContribIndex ||
 || Alternatives to glassfish - some sites do not use glassfish so it should be possible to deploy ICAT on other servers such as WebLogic and JBoss || DESY ||  || Nothing in current set up is container specific. DESY (Juergen) to investigate and report back any issues. ||
 || Integration of a work flow management system such as Taverna || PaNdata || Low || Consider use of Passerelle in DAWN ||
+|| Support mounting the ICAT catalogue as a file system using NFS or something similar || PaNdata || Low || . ||
 
 == API, Model etc ==
 || *Requirement* || *Requestor* || *Priority* || *Notes* ||
