@@ -71,11 +71,11 @@ All times are too specific to be realistic.  The names are indicative.  Some of 
 || Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes ||
 || 13:30      || Session 1 - Chair person - Krister Larsson                                       || .            || .                                         ||.||
 || .          || Welcome and introductions                                                        || 5            || .                                         ||.||
-|| .          || Status of the ICAT collaboration project                                         || 10           || Alistair Mills                            ||.||
-|| 13:45      || Status of the contribs( ContribIndex )                                           || 60 (10 x 6)  ||                                           ||.||
-|| .          || PyICAT                                                                           || .            || Christian                                 ||.||
-|| .          || Restful                                                                          || .            || Shelly                                    ||.||
-|| .          || xml-ingest                                                                       || .            || Tom                                       ||.||
+|| .          || Status of the ICAT collaboration project                                         || 10           || Alistair Mills                            ||https://code.google.com/p/icatproject/source/browse/meetings/Lund2013Talks/Alistair/Lund-Mills-Mar13-Session-1-01.pdf ||
+|| 13:45      || Status of the contribs( ContribIndex )                                           || 60 (10 x 6)  ||                                           ||. ||
+|| .          || PyICAT                                                                           || .            || Christian                                 ||https://code.google.com/p/icatproject/source/browse/meetings/Lund2013Talks/Christian/PyICAT-handout.pdf               ||
+|| .          || Restful                                                                          || .            || Shelly                                    ||https://code.google.com/p/icatproject/source/browse/meetings/Lund2013Talks/Shelly/RestfulWebService.pdf               ||
+|| .          || xml-ingest                                                                       || .            || Tom                                       || source:meetings/Lund2013Talks/Tom/ICAT2013XmlIngest.pdf                  ||
 || .          || Nexus ingest                                                                     || .            || Shelly                                    ||.||
 || .          || ICAT eclipse plugin                                                              || .            || Ghita                                     ||.||
 || .          || ICAT setup                                                                       || .            || Steve Fisher                              ||.||
