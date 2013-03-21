@@ -1,0 +1,20 @@
+Copy and modify mdb_example.properties.example to mdb_example.properties in the config 
+directory for the domain where icat is installed.
+
+Build the system with maven. The command "mvn install" will produce a file:
+
+  target/mdb_example-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+  
+Install it with:
+
+  asadmin deploy --force target/mdb_example-1.0.0-SNAPSHOT-jar-with-dependencies.jar
+  
+where the --force will make it replace an existing jar if necessary.
+
+Your ICAT must be configured to publish notifications. Take a look at the log file 
+mdb_example.log in the glassfish logs directory for you chosen domain.
+
+Then adjust the code - which even includes some comments - to do what you want!
+
+The log4j properties in the resources directory will be respected. You may wish to 
+change the default logging level from INFO to TRACE to see what is going on.
