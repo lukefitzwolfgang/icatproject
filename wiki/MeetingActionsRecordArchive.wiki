@@ -3,6 +3,159 @@
 This page holds all but the most recent meetings.  The latest meetings are at MeetingActionsRecord.
 
 <wiki:toc max_depth="3" />
+
+== Meeting 51 - 24 January 2013 ==
+
+ * Actions from the meetings 50 (Alistair)
+ * Contents of ICAT 4.3
+ * Plans for Sweden2013 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Proposals for ICAT 4.3 release
+ * AOB (Any)
+
+=== Actions 51 ===
+
+|| Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
+|| 51.00 || Document the meeting                                                            || AM        ||              Done||                     -||
+|| 51.01 || Find out about visa requirements and notify GKM                                 || KL        ||              Done||                     -||
+|| 51.02 || Review the wiki page about the meeting in Sweden regularly                      || AM        ||          On-going||                     -||
+|| 51.03 || Update the description of ICAT 4.3 based on the discussion in the meeting       || SF        ||              Done||                     -||
+|| 51.04 || Have one to one discussion of ICAT 4.3 on the telephone                         || SF/SR     ||              Done||                     -||
+|| 51.05 || Call the next meeting on 7 February; Antony to lead the discussion of IDS       || AM/AW     ||                 .||                     -||
+
+=== Attendance 51 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
+||SF   ||Steve Fisher                 || STFC SCD                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC SCD                   ||     +        ||           ||
+||JS   ||Juergen Starek               || DESY                       ||     +        ||           ||
+||KL   ||Kristen Larsson              || MAX                        ||     +        ||           ||  
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||AW   ||Antony Wilson                || STFC SCD                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||MP   ||Milan Prica                  || ELETTRA                    ||              ||      +    ||
+||GK   ||George Kourousias            || ELETTRA                    ||              ||      +    ||  
+
+== Meeting 50 - 10 January 2013 ==
+
+ * Actions from the meetings 49 (Alistair)
+ * Plans for Sweden2013 (Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.2 for RAL - DLS, ISIS and CLF (Ghita, Tom, Kevin)
+ * Status of contribs (ContribIndex) (Alistair)
+ * AOB (Any)
+
+=== Notes 50 ===
+
+Shelly asked that additional information such as venue, contact names and hotel details be added to the wiki for the conference in Sweden.  See actions 50.01 and 50.02.
+
+Milan reported that he was working on a deliverable for WP4 of Pandata, but requires data from Thorsten in DESY.  Thorsten is still on vacation and so the deliverable will be delayed until the data is available.  He is expecting to use the data for the next service verification on 1 February.  When this has occurred, the deliverable can be completed.
+
+Steve reported  that he was considering including some speculative features in ICAT 4.3.  These speculative features are being introduced to support data mining and they may change or be removed from future ICATs.  There was discussion about how to achieve this.  The meeting did not agree any particular mechanism.  It was proposed that odd numbered minor revisions such as 4.3 may contain such features, but even numbered revisions such as 4.2 and 4.4 do not.  A facility using ICAT would normally go from even to even.  However where a Facility requires a speculative feature, then it may deploy an odd version on the understanding that the interface to the speculative feature may change.  See action 50.03.
+
+The meeting finished at 15:30.
+
+=== Attendance 50 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
+||SF   ||Steve Fisher                 || STFC SCD                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC SCD                   ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||     +        ||           ||  
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+
+=== Actions 50 ===
+
+|| Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
+|| 50.00 || Document the meeting                                                            || AM        ||              Done||                     -||
+|| 50.01 || Provide additional information about venue, hotel, contacts for Sweden          || AM        ||                 .||                     -||
+|| 50.02 || Update the page on the wiki with information about Sweden                       || AM        ||          on-going||                     -||
+|| 50.03 || Consider a mechanism for introducing speculative features to ICAT               || SF        ||              Done||                     -||
+|| 50.04 || Call next meeting for 24 January 2013                                           || AM        ||              Done||                     -||
+
+
+== Meeting 49 - 13 December 2012 ==
+
+ * Actions from the meetings 48 (Alistair)
+ * Plans for ICAT 2013 (Tom)
+ * Open ticket review (Steve)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.2 for RAL - DLS, ISIS and CLF (Ghita, Tom, Kevin)
+ * Status of contribs (ContribIndex) (Alistair)
+ * AOB (Any)
+
+=== Actions 49 ===
+
+|| Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
+|| 49.00 || Document the meeting                                                            || AM        ||              Done||                     -||
+|| 49.01 || Forward the email from Juan about Sweden to Shelly                              || AM        ||              Done||                     -||
+|| 49.02 || Update the page on the wiki with information about Sweden                       || AM        ||          on-going||                     -||
+|| 49.03 || Update the status of the tickets on google code                                 || SF        ||              Done||                     -||
+|| 49.04 || Call next meeting for 10 January 2013                                           || AM        ||              Done||                     -||
+
+=== Attendance 48 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
+||SF   ||Steve Fisher                 || STFC SCD                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC SCD                   ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||     +        ||           ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||              ||     +     ||
+||AW   ||Antony Wilson                || STFC SCD                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+||Px   ||Pablo Garcia                 || Alba                       ||     +        ||           ||
+||DL   ||David Lopez                  || Alba                       ||     +        ||           ||
+||JS   ||Julian Savoyet               || ESRF                       ||     +        ||           ||
+
+
+== Meeting 48 - 29 November 2012 ==
+
+ * Actions from the meetings 47 (Alistair)
+ * Icat legacy policy (IcatLegacyPolicy) (Alistair)
+ * Requirements for ICAT 4.3 and beyond (IcatRequirements)(Tom)
+ * Update from PaN-data (Milan/George)
+ * Deployment of ICAT 4.2 for DLS (Ghita)
+ * Deployment of ICAT 4.2 for ISIS (Tom)
+ * Deployment of ICAT 4.2 for CLF (Alistair)
+ * Status of contribs (ContribIndex) - icat_setup, artefects from pandata/crisp (Alistair)
+ * AOB (Any)
+
+=== Actions 48 ===
+
+|| Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
+|| 48.00 || Document the meeting                                                            || AM        ||              Done||                     -||
+|| 48.01 || Ask Juan to clarify the dates for the conference in Lund in March (ICAT 2013)   || AM        ||     Email to Juan||                     -||
+|| 48.02 || Email Shelly about the conference in Lund                                       || AM        ||     Email to Juan||                     -||
+|| 48.03 || Add licence information to all source code parts in ICAT 4.3 (ticket)           || AM        ||              Done||            Ticket #85||
+|| 48.04 || Remind Jamie Hall about clarifications of requirements for data mining          || AM        ||              Done||                     -||
+|| 48.05 || Create tickets for action 47.05, 47.07, 47.09                                   || AM        ||              Done|| Tickets #86, #87 #88 ||    
+|| 48.06 || Add a note to the wiki about Nexus Archive and ICAT                             || GK        ||                 .||                     -||
+|| 48.07 || Contact Mark Koenig about Nexus standards and ICAT                              || GK        ||         Cancelled||                     -||
+|| 48.08 || Talk to Bill Pulford about Nexus, DLS and ICAT                                  || AM        ||              Done||                     -||
+|| 48.09 || Create wiki page for the agenda for ICAT 2013 and add item on Nexus             || AM        ||              Done||            Sweden2013||
+|| 48.10 || Enhance the ICAT Legacy Policy with a clause for support of ICAT after 6 months || AM        ||       Done by Tom||                     -||
+|| 48.11 || Start a discussion on the mailing lists about changes to uniqueness constraints || SF        ||              Done||                     -||
+|| 48.12 || Call next meetings on 13 December 2012, 10 January 2013; cancel 27 December 2012|| AM        ||              Done||                     -||
+
+
+=== Attendance 48 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
+||SF   ||Steve Fisher                 || STFC SCD                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC SCD                   ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||     +        ||           ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||AW   ||Antony Wilson                || STFC SCD                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+
 == Meeting 47 - 15 November 2012 ==
 
  * Actions from the meetings 46 (Alistair/Steve)
@@ -42,7 +195,6 @@ This page holds all but the most recent meetings.  The latest meetings are at Me
 || 47.09 || Do a prototype of machine generated documentation of the WS End Point           || AW        ||      Ticketed #88||                   -||
 || 47.10 || Investigate the ICAT class in Nexus                                             || GK        ||              Done||                   -||
 || 47.01 || Call next meeting on Thursday 29th November (NOT a public holiday in USA)       || AM        ||              Done||                   -||
-
 
 === Attendance 47 ===
 
