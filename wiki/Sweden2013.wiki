@@ -87,7 +87,7 @@ All times are too specific to be realistic.  The names are indicative.  Some of 
 || .          || Alba                                                                             || .            || Daniel                                    ||https://code.google.com/p/icatproject/source/browse/meetings/Lund2013Talks/Daniel/ICAT_in_ALBA.pdf                          ||
 || .          || Desy                                                                             || .            || Juergen                                   ||.                                                                                                                           ||
 || .          || Dls                                                                              || .            || Ghita                                     ||.                                                                                                                           ||
-|| .          || Elettra                                                                          || .            || George                                    ||.                                                                                                                           ||
+|| .          || Elettra                                                                          || .            || Milan (in absentia)                       ||https://code.google.com/p/icatproject/source/browse/meetings/Lund2013Talks/Milan/Elettra_ICAT_Lund_March2013.pdf            ||
 || .          || Esrf                                                                             || .            || Nicola                                    ||https://code.google.com/p/icatproject/source/browse/meetings/Lund2013Talks/Nicola/ESRF_ICAT_integration-Lund.pdf            ||
 || .          || Hzb                                                                              || .            || Deitmar                                   ||.                                                                                                                           ||
 || .          || Ill                                                                              || .            || Jamie                                     ||https://code.google.com/p/icatproject/source/browse/meetings/Lund2013Talks/Jamie/IcatStatus.pdf                             ||
@@ -95,7 +95,7 @@ All times are too specific to be realistic.  The names are indicative.  Some of 
 || .          || Jcns                                                                             || .            || Christian                                 ||.                                                                                                                           ||
 || .          || Llb                                                                              || .            || Stephane                                  ||.                                                                                                                           ||
 || .          || Max                                                                              || .            || Krister                                   ||.                                                                                                                           ||
-|| .          || Psi                                                                              || .            || Mirijam                                   ||.                                                                                                                           ||
+|| .          || Psi                                                                              || .            || Mirjam                                    ||.                                                                                                                           ||
 || .          || Sns                                                                              || .            || Shelly                                    ||https://code.google.com/p/icatproject/source/browse/meetings/Lund2013Talks/Shelly/ICAT4ExperienceAtSNS.pdf                  ||
 || .          || Clf                                                                              || .            || Alistair                                  ||.                                                                                                                           ||
 || 16:15      || B r e a k . . .                                                                  || 15           ||                                           ||.                                                                                                                           ||
@@ -150,9 +150,6 @@ This table has a list of people intending to attend:
 || Mirjam van Daalen             || PSI          || .                                               ||.||
 || Alistair Mills                || STFC (SCD)   || .                                               ||.||
 || Erica Yang                    || STFC (SCD)   || .                                               ||.||
-|| Denise Small                  || STFC (SCD)   || .                                               ||.||
-|| Brian Matthews                || STFC (SCD)   || .                                               ||.||
-|| Juan Bicarregui               || STFC (SCD)   || .                                               ||.||
 || Antony Wilson                 || STFC (SCD)   || .                                               ||.||
 || Steve Fisher                  || STFC (SCD)   || .                                               ||.||
 || Noris Nyamekye                || STFC (SCD)   || .                                               ||.||
@@ -161,11 +158,7 @@ This table has a list of people intending to attend:
 || Christian Felder              || JCNS         || .                                               ||.||
 || Steve Androulakis             || ANS          || .                                               ||.||
 || Nicola Bessone                || ESRF         || .                                               ||.||
-|| Jamie Hall                    || ILL          || .                                              ||.||
-
-This table has a list of people expected, but not yet confirmed:
-
-|| Name                          || Organisation || Comments                                        ||Notes ||
+|| Jamie Hall                    || ILL          || .                                               ||.||
 
 Apologies:
 
@@ -174,5 +167,9 @@ Apologies:
 || Idrissou Chado                || SOLEIL       || .                                               ||.||
 || George Kourousias             || ELETTRA      || .                                               ||.||
 || Stephane Longeville           || LLB          || .                                               ||.||
+|| Brian Matthews                || STFC (SCD)   || .                                               ||.||
+|| Denise Small                  || STFC (SCD)   || .                                               ||.||
+|| Juan Bicarregui               || STFC (SCD)   || .                                               ||.||
+
 
 == - the end - ==
