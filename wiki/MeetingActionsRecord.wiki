@@ -9,9 +9,16 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 == Topics for future meetings ==
 
- * add an issues review to the agenda for the next teleconference (21st March);
  * Tom will not be able to attend on 21st March due to another meeting offsite and sends his apologies.
 
+== Meeting 55 - 21 March 2013 ==
+
+ * Actions from the meetings 52-54 (Alistair)
+ * Discussion of the outcomes from Lund
+ * Discussion of the content of ICAT 4.3
+ * Discussion of the agenda for the collaboration meetings Spring 2013
+ * Update from PaN-data (Milan/George)
+ * AOB (Any)
 
 == Meeting 54 - 7 March 2013 ==
 
