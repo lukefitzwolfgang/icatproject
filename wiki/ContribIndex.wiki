@@ -12,4 +12,4 @@
  * [http://code.google.com/p/icatproject/source/browse/contrib/icat-api-examples           Examples in Java of how to call the Icat API (Alistair)]
  * [http://code.google.com/p/icatproject/source/browse/contrib/training-materials          Training materials (Alistair)]
  * [IcatSetup                                                                              Icat Setup (Steve)]
-== - the end - ==
+ * [http://code.google.com/p/icatproject/source/browse/contrib/notification-receiver-example An MDB for people to play with and be inspired by (Steve)]
