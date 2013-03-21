@@ -46,6 +46,10 @@ The meeting discussed the conference in Lund.  It was generally agreed that it w
  * There should be a half day ICAT workshop added to the Pandata meeting in Barcelona in September;
  * There will be a Pandata WP4 telco next week to discuss matters arising from the Pandata meeting in Lund.
 
+The meeting discussed topics to be addressed in the next three months of collaboration meetings - see the list above.
+
+The meeting finished at 15h35.
+
 === Actions 55 ===
 
 || Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
@@ -178,8 +182,6 @@ Milan reported that he was working on a deliverable for WP4 of Pandata.  He repo
 || 52.09 || Provide a "dry-run" option on API calls to support greyed-out buttons in GUIs   || SF        ||              Done||  This will be in ICAT 4.3||
 || 52.10 || Fix for bug in createMany to be released in icat 4.2.3                          || SF        ||              Done||                         -||
 || 52.11 || Chair the next meeting on 21 February 2013 as Alistair will be on leave         || SF        ||              Done||                         -||
-
-
 
 == Earlier meetings ==
 
