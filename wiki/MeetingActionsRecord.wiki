@@ -21,12 +21,52 @@ The dates shown on this list are indicative only.
 
 == Meeting 57 - 18 April 2013 ==
 
+ * Actions from the meetings 56 (Alistair)
+ * ICAT 4.3 readiness (18 April 13)
+ * AOB (Any)
+
 == Meeting 56 - 4 April 2013 ==
 
  * Actions from the meetings 55 (Alistair)
  * Review of requirements for ICAT (Steve)
  * Review of requirements for ICAT related parts such as Topcat, IDS, IJP (Steve)
  * AOB (Any)
+
+=== Actions 56 ===
+
+|| Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
+|| 56.00 || Document the meeting and update the actions                                     || AM        ||              Done||                     -||
+|| 56.01 || Arrange for copies of Pandata presentations to be available                     || AM        ||                 .||                     -||
+|| 56.02 || Add requirements for ICAT:                                                      || AM        ||                 .||                     -||
+||   .   ||   - Deployment methods                                                          || AM        ||                 .||                     -||
+||   .   ||   - Ingestion methods                                                           || AM        ||                 .||                     -||
+||   .   ||   - Integration with User office                                                || AM        ||                 .||                     -||
+||   .   ||   - Publishing methods                                                          || AM        ||                 .||                     -||
+||   .   ||   - Setup methods such as icat-setup, lsf-setup                                 || AM        ||                 .||                     -||
+||   .   ||   - Operational requirements                                                    || AM        ||                 .||                     -||
+||   .   ||   - Common code meta data fields                                                || AM        ||                 .||                     -||
+||   .   ||   - PMH interface                                                               || AM        ||                 .||                     -||
+||   .   ||   - Revision of XML schema                                                      || AM        ||                 .||                     -||
+||   .   ||   - Additional indices in some tables                                           || AM        ||                 .||                     -||
+|| 56.03 || Make the priority of the requirement for filesystem interface to ICAT, high     || AM        ||                 .||                     -||
+|| 56.04 || Create tickets for each of the ICAT  requirements and link to index page        || AM        ||                 .||                     -||
+|| 56.05 || Provide information about the memory leak in the logging to SN et alia          || TG        ||                 .||                     -||
+
+=== Attendance 56 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
+||SF   ||Steve Fisher                 || STFC SCD                   ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||NV   ||Nicola Bessone               || ESRF                       ||     +        ||           ||
+||PG   ||Pablo Garcia                 || Alba                       ||     +        ||           ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC SCD                   ||     +        ||           ||
+||BM   ||Brian Matthews               || STFC SCD                   ||     +        ||           ||
+||AW   ||Antony Wilson                || STFC SCD                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||IC   ||Idrissou Chado               || Soleil                     ||              ||    +      ||
 
 == Meeting 55 - 21 March 2013 ==
 
