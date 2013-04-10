@@ -25,7 +25,7 @@ The meeting took place on 18 October.  The actions are recorded in the table.
 == Actions 1 ==
 
 || No  || Description                                                                             || Responsible      ||         Status|| 
-|| 1.01|| Provide a copy of the simple client for testing ICAT in contrib                         || Stefan           ||              .|| 
+|| 1.01|| Provide a copy of the simple client for testing ICAT in contrib                         || Stefan           ||           Done|| 
 || 1.02|| Eliminate the need for the user of the ICAT to know about the authentication method     || Alistair         ||     Not viable|| 
 || 1.03|| Provide a property for ICAT to deploy on http                                           || Alistair/Steve   ||   Not possible|| 
 || 1.04|| Provide additional properties in authn_ldap.properties                                  || Alistair/Steve   ||           Done|| 
