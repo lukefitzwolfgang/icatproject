@@ -37,7 +37,7 @@ The dates shown on this list are indicative only.
 || Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
 || 56.00 || Document the meeting and update the actions                                     || AM        ||              Done||                     -||
 || 56.01 || Arrange for copies of Pandata presentations to be available                     || AM        ||                 .||                     -||
-|| 56.02 || Add requirements for ICAT:                                                      || AM        ||                 .||                     -||
+|| 56.02 || Add requirements for ICAT:                                                      ||         ||                 .||                     -||
 ||   .   ||   - Deployment methods                                                          || AM        ||                 .||                     -||
 ||   .   ||   - Ingestion methods                                                           || AM        ||                 .||                     -||
 ||   .   ||   - Integration with User office                                                || AM        ||                 .||                     -||
@@ -45,18 +45,18 @@ The dates shown on this list are indicative only.
 ||   .   ||   - Setup methods such as icat-setup, lsf-setup                                 || AM        ||                 .||                     -||
 ||   .   ||   - Operational requirements                                                    || AM        ||                 .||                     -||
 ||   .   ||   - Common code meta data fields                                                || AM        ||                 .||                     -||
-||   .   ||   - PMH interface                                                               || SMF        ||                 .||                     -||
-||   .   ||   - Revision of XML schema                                                      || SMF        ||                 .||                     -||
-||   .   ||   - Additional indices in some tables                                           || SMF        ||                 .||                     -||
-|| 56.03 || Make the priority of the requirement for filesystem interface to ICAT, high     || SMF        ||                 .||                     -||
-|| 56.04 || Create tickets for each of the ICAT  requirements and link to index page        || SMF        ||                 .||                     -||
-|| 56.05 || Provide information about the memory leak in the logging to SN et alia          || TG        ||                 .||                     -||
+||   .   ||   - PMH interface                                                               || SMF        ||                 Done||                     -||
+||   .   ||   - Revision of XML schema                                                      || SMF        ||                 Done||                     -||
+||   .   ||   - Additional indices in some tables                                           || SMF        ||                 Done||                     -||
+|| 56.03 || Make the priority of the requirement for filesystem interface to ICAT, high     || SMF        ||                 Done||                     -||
+|| 56.04 || Create tickets for each of the ICAT  requirements and link to index page        || SMF        ||                 Done||                     -||
+|| 56.05 || Provide information about the memory leak in the logging to SN et alia          || TG        ||                 Done||                     -||
 
 === Attendance 56 ===
 
 ||Init ||Name                         || Institute                  ||     Present  || Apologies ||
 ||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
-||SF   ||Steve Fisher                 || STFC SCD                   ||     +        ||           ||
+||SMF  ||Steve Fisher                 || STFC SCD                   ||     +        ||           ||
 ||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
 ||NV   ||Nicola Bessone               || ESRF                       ||     +        ||           ||
 ||PG   ||Pablo Garcia                 || Alba                       ||     +        ||           ||
