@@ -45,11 +45,11 @@ The dates shown on this list are indicative only.
 ||   .   ||   - Setup methods such as icat-setup, lsf-setup                                 || AM        ||                 .||                     -||
 ||   .   ||   - Operational requirements                                                    || AM        ||                 .||                     -||
 ||   .   ||   - Common code meta data fields                                                || AM        ||                 .||                     -||
-||   .   ||   - PMH interface                                                               || AM        ||                 .||                     -||
-||   .   ||   - Revision of XML schema                                                      || AM        ||                 .||                     -||
-||   .   ||   - Additional indices in some tables                                           || AM        ||                 .||                     -||
-|| 56.03 || Make the priority of the requirement for filesystem interface to ICAT, high     || AM        ||                 .||                     -||
-|| 56.04 || Create tickets for each of the ICAT  requirements and link to index page        || AM        ||                 .||                     -||
+||   .   ||   - PMH interface                                                               || SMF        ||                 .||                     -||
+||   .   ||   - Revision of XML schema                                                      || SMF        ||                 .||                     -||
+||   .   ||   - Additional indices in some tables                                           || SMF        ||                 .||                     -||
+|| 56.03 || Make the priority of the requirement for filesystem interface to ICAT, high     || SMF        ||                 .||                     -||
+|| 56.04 || Create tickets for each of the ICAT  requirements and link to index page        || SMF        ||                 .||                     -||
 || 56.05 || Provide information about the memory leak in the logging to SN et alia          || TG        ||                 .||                     -||
 
 === Attendance 56 ===
