@@ -3,29 +3,12 @@
 
 = Requirements for ICAT =
 
-Most of the ICAT requirements may be found as "enhancements" in the IssuesList http://code.google.com/p/icatproject/issues/list
+Most of the ICAT requirements may be found as "enhancements" in the  [http://code.google.com/p/icatproject/issues/list Issues list]. This describes requirements for the central ICAT component as well as the related tools.
 
 There are however a few general requirements to be generally observed and which can never be said to have been implemented:
 
-* Fully supported upgrade path from one version of ICAT and related tools to the next
+ * Fully supported upgrade path from one version of ICAT and related tools to the next
 
 In addition there are a few which require further explanation:
 
-
-
-
-Those below are still being converted ...
-
-
-== API, Model etc ==
-
-|| A way of grouping parameter names - to solve the 86 variations of 'temperature' problem  || ISIS || Desirable || Will be increasingly important for cross facility searching. Keywords are being considered as a solution for this ||
-|| Provide a new API method to allow a quick metadata search without a user login || SNS || High || e.g. start time, run title, run notes, total run time, total accelerator current, sample to detector distance, wave length band used for a given run number or a range of run numbers ||
-|| Cross referencing runs - linking calibration (transmission, vanadium empty) to sample data to help automate reduction || SNS, ISIS || Desirable || - ||
-|| RESTful web service || PaNdata (PSI) || ? || - ||
-
-== TopCAT ==
-|| *Requirement* || *Requestor* || *Priority* || *Notes* ||
-|| Upload of derived data through TopCAT || ISIS || Essential || AW working on ||
-|| Add ability for data owners to grant permission on their datasets to others || ISIS || Essential || May require enhancement to ICAT rules system ||
-|| Basic visualize or view data in TopCAT, possibly using jpowder or similar || ISIS, ESRF || Desirable || Agreement between ISIS, DLS & SCD to use jpowder for low effort trial||
+ * Provide a new API method to allow a quick metadata search without a user login such as start time, run title, run notes, total run time, total accelerator current, sample to detector distance, wave length band used for a given run number or a range of run numbers
