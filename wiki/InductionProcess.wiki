@@ -1,5 +1,5 @@
 #labels Featured
-#Induction Process for new collaborators
+#Induction Process for new collaborators.
 
 = Induction Process for new collaborators =
 
