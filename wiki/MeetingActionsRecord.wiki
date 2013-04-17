@@ -12,8 +12,8 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 The dates shown on this list are indicative only.
 
  * Review of requirements for ICAT (4 April 13)
- * ICAT 4.3 readiness (18 April 13)
- * Icat Data Server (IDS) development (2 May 13)
+ * Icat Data Server (IDS) development (18 April 13)
+ * ICAT 4.3 readiness (2 May 13)
  * Topcat status (16 May 13)
  * ICAT Job Portal (IJP) development (30 May 13)
  * ICAT contribs (13 June 13)
@@ -22,7 +22,7 @@ The dates shown on this list are indicative only.
 == Meeting 57 - 18 April 2013 ==
 
  * Actions from the meetings 56 (Alistair)
- * ICAT 4.3 readiness (18 April 13)
+ * Icat Data Server (IDS) development (18 April 13)
  * AOB (Any)
 
 == Meeting 56 - 4 April 2013 ==
@@ -34,23 +34,16 @@ The dates shown on this list are indicative only.
 
 === Actions 56 ===
 
-|| Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
-|| 56.00 || Document the meeting and update the actions                                     || AM        ||              Done||                     -||
-|| 56.01 || Arrange for copies of Pandata presentations to be available                     || AM        ||                 .|| https://code.google.com/p/icatproject/source/browse/#svn%2Fmeetings%2FPandataLund, https://code.google.com/p/icatproject/source/browse/#svn%2Fmeetings%2FLund2013Talks||
-|| 56.02 || Add requirements for ICAT:                                                      ||  .        ||                 .||                     -||
-||   .   ||   - Deployment methods                                                          || AM        ||                 .||                     -||
-||   .   ||   - Ingestion methods                                                           || AM        ||                 .||                     -||
-||   .   ||   - Integration with User office                                                || AM        ||                 .||                     -||
-||   .   ||   - Publishing methods                                                          || AM        ||                 .||                     -||
-||   .   ||   - Setup methods such as icat-setup, lsf-setup                                 || AM        ||                 .||                     -||
-||   .   ||   - Operational requirements                                                    || AM        ||                 .||                     -||
-||   .   ||   - Common code meta data fields                                                || AM        ||                 .||                     -||
-||   .   ||   - PMH interface                                                               || SMF       ||              Done||                     -||
-||   .   ||   - Revision of XML schema                                                      || SMF       ||              Done||                     -||
-||   .   ||   - Additional indices in some tables                                           || SMF       ||              Done||                     -||
-|| 56.03 || Make the priority of the requirement for filesystem interface to ICAT, high     || SMF       ||              Done||                     -||
-|| 56.04 || Create tickets for each of the ICAT  requirements and link to index page        || SMF       ||              Done||                     -||
-|| 56.05 || Provide information about the memory leak in the logging to SN et alia          || TG        ||              Done||                     -||
+|| Item  || Description                                                                     || Res*(1)   ||  Status||               Comment||
+|| 56.00 || Document the meeting and update the actions                                     || AM        ||    Done||                     -||
+|| 56.01 || Arrange for copies of Pandata presentations to be available                     || AM        ||    Done|| https://code.google.com/p/icatproject/source/browse/#svn%2Fmeetings%2FPandataLund, https://code.google.com/p/icatproject/source/browse/#svn%2Fmeetings%2FLund2013Talks||
+|| 56.02 || Add a paragraph to the requirements page about general requirements             || AM        ||    Done|| Deployment, Ingestion, Publishing, User office, Setup, Operations, Common standards||
+||   .   ||   - PMH interface                                                               || SMF       ||    Done||                     -||
+||   .   ||   - Revision of XML schema                                                      || SMF       ||    Done||                     -||
+||   .   ||   - Additional indices in some tables                                           || SMF       ||    Done||                     -||
+|| 56.03 || Make the priority of the requirement for filesystem interface to ICAT, high     || SMF       ||    Done||                     -||
+|| 56.04 || Create tickets for each of the ICAT  requirements and link to index page        || SMF       ||    Done||                     -||
+|| 56.05 || Provide information about the memory leak in the logging to SN et alia          || TG        ||    Done||                     -||
 
 === Attendance 56 ===
 
