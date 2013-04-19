@@ -19,11 +19,55 @@ The dates shown on this list are indicative only.
  * ICAT contribs (13 June 13)
  * ICAT production deployments at RAL, ISS, SNS, ESRF (27 June 13)
 
+== Meeting 58 - 2 May 2013 ==
+
+ * Actions from the meetings 56 (Alistair)
+ * Status of ICAT 4.3 (Steve)
+ * Status of SV4 of Pandata (Alistair)
+ * Status of CCFE (Alistair)
+ * AOB (Any)
+
 == Meeting 57 - 18 April 2013 ==
+
+=== Agenda 57 ===
 
  * Actions from the meetings 56 (Alistair)
  * Icat Data Server (IDS) development (18 April 13)
  * AOB (Any)
+
+=== Notes 57 ===
+
+The meeting discussed actions from earlier meetings and updated the status of actions.
+
+The meeting discussed the arrival of CCFE as a collaborator.  Alistair agreed to send a note to the collaboration about this.  There is now a note called InductionProcess on the wiki.  The intention is to follow this process and to enhance the note.  The purpose of this is to ensure that new partners get off to a good start.  We look forward to having a representative of CCFE attend one of these meetings.
+
+The meeting discussed the status of the reference implementation of the IDS.  One part of this is called the Download Manager.  This is now in pre-production with both the ISIS and DLS facilities.  It will also be used as part of the service verification which will be conducted by Pandata.  It was agreed to make a distribution of the download manager.  This is a technology preview, and should only be used for testing.
+
+As Steve Fisher is on vacation, the meeting did not discuss the status of ICAT 4.3.
+
+Steve has created a google group called icat-issues@googlegroups.com.  Alistair agreed to add a link to this group on http://www.icatproject.org. 
+
+The meeting concluded after 20 minutes.  A new record for brevity!
+
+=== Actions 57 ===
+
+|| Item  || Description                                                                     || Res*(1)   ||       Status||               Comment||
+|| 57.00 || Document the meeting and update the actions                                     || AM        ||  In progress||                     -||
+|| 57.01 || Inform the collaboration of the arrival of CCFE                                 || AM        ||            .|| http://www.ccfe.ac.uk||
+|| 57.02 || Prepare a distribution of a technology preview of the Download Manager          || AW        ||            .||                     -||
+|| 57.03 || Add a link to icat-issues on http://www.icatproject.org                         || AM        ||         Done||                     -||
+
+=== Attendance 57 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
+||SMF  ||Steve Fisher                 || STFC SCD                   ||              ||    +      ||
+||E    ||Eugenio                      || Alba                       ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC SCD                   ||     +        ||           ||
+||AW   ||Antony Wilson                || STFC SCD                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||FB   ||Frazer Barnsley              || STFC SCD                   ||     +        ||           ||
 
 == Meeting 56 - 4 April 2013 ==
 
@@ -89,8 +133,8 @@ The meeting finished at 15h35.
 
 || Item  || Description                                                                     || Res*(1)   ||            Status||               Comment||
 || 55.00 || Document the meeting and update the actions                                     || AM        ||              Done||                     -||
-|| 55.01 || Arrange for copies of Pandata presentations to be available                     || AM        ||                 .||                     -||
-|| 55.02 || Arrange an ICAT workshop with the Pandata meeting at Alba in September          || AM/DS     ||                 .||                     -||
+|| 55.01 || Arrange for copies of Pandata presentations to be available                     || AM        ||              Done||                     -||
+|| 55.02 || Arrange an ICAT workshop with the Pandata meeting at Alba in September          || AM/DS     ||          On-going||                     -||
 
 === Attendance 55 ===
 
