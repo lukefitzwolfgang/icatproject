@@ -43,7 +43,7 @@ The meeting discussed the status of the reference implementation of the IDS.  On
 
 As Steve Fisher is on vacation, the meeting did not discuss the status of ICAT 4.3.
 
-Steve has created a google group called icat-issues@googlegroups.com.  Alistair agreed to add a link to this group on http://www.icatproject.org. 
+Tom has created a google group called icat-issues@googlegroups.com.  Alistair agreed to add a link to this group on http://www.icatproject.org. 
 
 The meeting concluded after 20 minutes.  A new record for brevity!
 
