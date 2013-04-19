@@ -29,10 +29,8 @@ The dates shown on this list are indicative only.
 
 == Meeting 57 - 18 April 2013 ==
 
-=== Agenda 57 ===
-
  * Actions from the meetings 56 (Alistair)
- * Icat Data Server (IDS) development (18 April 13)
+ * Icat Data Server (IDS) development (Antony)
  * AOB (Any)
 
 === Notes 57 ===
@@ -52,7 +50,7 @@ The meeting concluded after 20 minutes.  A new record for brevity!
 === Actions 57 ===
 
 || Item  || Description                                                                     || Res*(1)   ||       Status||               Comment||
-|| 57.00 || Document the meeting and update the actions                                     || AM        ||  In progress||                     -||
+|| 57.00 || Document the meeting and update the actions                                     || AM        ||         Done||                     -||
 || 57.01 || Inform the collaboration of the arrival of CCFE                                 || AM        ||            .|| http://www.ccfe.ac.uk||
 || 57.02 || Prepare a distribution of a technology preview of the Download Manager          || AW        ||            .||                     -||
 || 57.03 || Add a link to icat-issues on http://www.icatproject.org                         || AM        ||         Done||                     -||
