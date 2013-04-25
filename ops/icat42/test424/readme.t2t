@@ -14,5 +14,13 @@ To get a copy of this files and the files which form the test, use the following
 
 svn co https://icatproject.googlecode.com/svn/ops/icat42/test424
 
+It may be necessary to set an environmental variable to the address of your institutions proxy server, such as:
+
+export http_proxy=wwwcache.rl.ac.uk:8080
+
+It may be necessary to add similar information to the script called test_2.sh
+
+The file tng-1_properties has the credentials of a feline member of our family.  You should use your own credentials.  Simply edit the file.
+
 = - the end - =
 
