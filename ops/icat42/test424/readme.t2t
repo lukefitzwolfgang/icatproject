@@ -1,0 +1,18 @@
+README for ICAT rapid test for service verification 1
+Alistair Mills - April 2013
+$Id$
+
+= Introduction =
+
+This material is a simple test for icat for use in Service Verification[4] in May 2013.  It is not intended for production.  It has been tested on linux and MacOs.  The use of this material on other platforms such as windows and cygwin is not supported, but it may work with minor changes.
+
+This directory only contains material for testing icat 4.2.  If connecting to a server running icat 4.1 or 4.0, it will not work.
+
+The client computer should have a normal java run time environment, the bash shell, python and svn.
+
+To get a copy of this files and the files which form the test, use the following command:
+
+svn co https://icatproject.googlecode.com/svn/ops/icat42/test424
+
+= - the end - =
+
