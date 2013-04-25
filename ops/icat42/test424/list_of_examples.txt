@@ -1,0 +1,31 @@
+Authenticate
+
+# EntityInfo Application Datafile DatafileFormat DatafileParameter Dataset DatasetParameter DatasetType Facility FacilityCycle Group InputDatafile InputDataset Instrument InstrumentScientist Investigation InvestigationParameter InvestigationType InvestigationUser Job Keyword NotificationRequest OutputDatafile OutputDataset ParameterType PermissibleStringValue Publication RelatedDatafile Rule Sample SampleParameter SampleType Shift Study StudyInvestigation User UserGroup
+
+Search Facility.name
+Search Investigation.name
+#Search Investigation.id
+#Search Investigation.visitId
+#Search Investigation.facilityCycle
+#Search Investigation.instrument
+
+Search Dataset.name
+Search Dataset.id
+#Search Dataset.sample
+#Search Dataset.investigation
+#Search Dataset.type
+
+Search Datafile.name
+Search Datafile.location
+#Search Datafile.dataset
+
+#Search Dataset INCLUDE Datafile,DatasetParameter,DatafileParameter
+#Search Dataset.id [type.name IN ('GS', 'GQ')]
+#Search MAX (Dataset.id)
+#Search Dataset.id <-> DatasetParameter[type.name = 'TIMESTAMP']
+
+GetUserName
+RemainingMinutes
+
+
+
