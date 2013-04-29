@@ -51,7 +51,7 @@ The meeting concluded after 20 minutes.  A new record for brevity!
 
 || Item  || Description                                                                     || Res*(1)   ||       Status||               Comment||
 || 57.00 || Document the meeting and update the actions                                     || AM        ||         Done||                     -||
-|| 57.01 || Inform the collaboration of the arrival of CCFE                                 || AM        ||            .|| http://www.ccfe.ac.uk||
+|| 57.01 || Inform the collaboration of the arrival of CCFE                                 || AM        ||         Done|| http://www.ccfe.ac.uk||
 || 57.02 || Prepare a distribution of a technology preview of the Download Manager          || AW        ||            .||                     -||
 || 57.03 || Add a link to icat-issues on http://www.icatproject.org                         || AM        ||         Done||                     -||
 
@@ -60,7 +60,7 @@ The meeting concluded after 20 minutes.  A new record for brevity!
 ||Init ||Name                         || Institute                  ||     Present  || Apologies ||
 ||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
 ||SMF  ||Steve Fisher                 || STFC SCD                   ||              ||    +      ||
-||E    ||Eugenio                      || Alba                       ||     +        ||           ||
+||DG   ||David Garcia                || Alba                       ||     +        ||           ||
 ||KP   ||Kevin Phipps                 || STFC SCD                   ||     +        ||           ||
 ||AW   ||Antony Wilson                || STFC SCD                   ||     +        ||           ||
 ||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
