@@ -32,9 +32,9 @@
     </issueManagement>
 
     <scm>
-        <connection>scm:svn:http://icatproject.googlecode.com/svn/icat/tags/v4.2.5</connection>
-        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/icat/tags/v4.2.5</developerConnection>
-        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ficat%2Ftags%2Fv4.2.5</url>
+        <connection>scm:svn:http://icatproject.googlecode.com/svn/icat/tags/v4.2.6</connection>
+        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/icat/tags/v4.2.6</developerConnection>
+        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ficat%2Ftags%2Fv4.2.6</url>
     </scm>
 
     <licenses>
