@@ -19,12 +19,3 @@ Below is a list of the 3rd party libraries that are used by ICAT, including a sh
 || || Jaxb-xjc.jar || Java to XML binding || CDDL ||
 || || Jsr173_api.jar || Java Streaming XML Parser || CDDL ||
 || Testing || Junit-4.1.jar || Unit testing framework || Common Public License ||
-|| SRB || Jargon.jar || Java SRB client	|| BSD ||
-|| Security || Cog-jglobus-kerberos.jar	|| Java Commodity Grid Kit || Apache v2 ||
-|| || Cryptix-asn1.jar || Java Cryptography Extension || Cryptix General License ||
-|| || Cryptix.jar || Java Cryptography Extension || Cryptix General License ||
-|| || Cryptix32.jar || Java Cryptography Extension || Cryptix General License ||
-|| || Jce-jdk13-120.jar	 || Java Cryptography Extension	|| www.bouncycastle.org/license.html ||
-|| || Jgss.jar	|| for securely exchanging messages between communicating applications || Apache v2 ||
-|| || Puretls || Java-only implementation of the SSLv3 and TLSv1 (RFC2246) protocol || BSD ||
-|| Misc	|| Commons-codec || Implementations of common encoders || Apache v2 ||
