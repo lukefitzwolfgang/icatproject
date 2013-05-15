@@ -21,7 +21,7 @@ The dates shown on this list are indicative only.
 
 == Meeting 59 - 16 May 2013 ==
 
- * Actions from the meetings 57 (Alistair)
+ * Actions from the meetings 58 (Alistair)
  * Status of ICAT 4.3 (Steve)
  * Status of anonymous authenticator (Steve)
  * Status of IDS (Antony)
@@ -29,7 +29,7 @@ The dates shown on this list are indicative only.
 
 == Meeting 58 - 2 May 2013 ==
 
- * Actions from the meetings 56 (SMF)
+ * Actions from the meetings 57 (SMF)
  * Status of ICAT 4.3 (SMF)
  * Status of SV4 of Pandata (AM)
  * Status of CCFE (AM)
@@ -43,15 +43,9 @@ SMF stated that a 4.2.5 version of ICAT would be released to fix a thread/memory
 
 SMF stated that ICAT 4.3.0 would include the changes required by ISIS for a more powerful query language supporting more complex authz rules.
 
-The meeting discussed the arrival of CCFE as a collaborator.  Alistair agreed to send a note to the collaboration about this.  There is now a note called InductionProcess on the wiki.  The intention is to follow this process and to enhance the note.  The purpose of this is to ensure that new partners get off to a good start.  We look forward to having a representative of CCFE attend one of these meetings.
+In AM's absence GK reported on PaN-data
 
-The meeting discussed the status of the reference implementation of the IDS.  One part of this is called the Download Manager.  This is now in pre-production with both the ISIS and DLS facilities.  It will also be used as part of the service verification which will be conducted by Pandata.  It was agreed to make a distribution of the download manager.  This is a technology preview, and should only be used for testing.
 
-As Steve Fisher is on vacation, the meeting did not discuss the status of ICAT 4.3.
-
-Tom has created a google group called icat-issues@googlegroups.com.  Alistair agreed to add a link to this group on http://www.icatproject.org. 
-
-The meeting concluded after 20 minutes.  A new record for brevity!
 
 === Actions 58 ===
 
