@@ -49,7 +49,7 @@ AOB:
 
 SR reported that she was working with APS on a new pilot project
 
-SMF asked if there was any interest in a "File Authenticator". There wasn't so it will not happen. The question then arose can we find out what authenticator's are present and what credentials they require. TopCAT can manage without but at the expense of having to configure a plugin correctly. A new requirement will be added.
+SMF asked if there was any interest in a "File Authenticator". There wasn't so it will not happen. The question then arose can we find out what authenticators are present and what credentials they require. TopCAT can manage without but at the expense of having to configure a plugin correctly. A new requirement will be added.
 
 AW reported that there was good progress on Noris's admin interface to TopCAT.
 
@@ -65,7 +65,7 @@ Finally GKM reported that "Actors" had been added to DAWN.
 || 57.02 || Prepare a distribution of a technology preview of the Download Manager          || AW        ||            .||                     -||
 || 58.00 || Document the meeting and update the actions                                     || SMF        ||         Done||                     -||
 || 58.01 || Produce 4.2.5 release of ICAT       || SMF        ||         Done|| - ||
-|| 58.02 || Add a requirement to be able to discover what authenticator's are present and what credentials they require.       || SMF        ||         Done|| - ||
+|| 58.02 || Add a requirement to be able to discover what authenticators are present and what credentials they require.       || SMF        ||         Done|| Issue 122 ||
 
 
 === Attendance 58 ===
