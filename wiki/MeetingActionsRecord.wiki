@@ -19,6 +19,15 @@ The dates shown on this list are indicative only.
  * ICAT contribs (13 June 13)
  * ICAT production deployments at RAL, ISS, SNS, ESRF (27 June 13)
 
+== Meeting 59 - 16 May 2013 ==
+
+ * Actions from the meetings 57 (Alistair)
+ * Status of ICAT 4.3 (Steve)
+ * Status of anonymous authenticator (Steve)
+ * Status of IDS (Antony)
+ * Status of IDS (Antony)
+ * AOB (Any)
+
 == Meeting 58 - 2 May 2013 ==
 
  * Actions from the meetings 56 (Alistair)
