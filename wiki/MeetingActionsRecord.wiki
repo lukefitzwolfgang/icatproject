@@ -25,16 +25,59 @@ The dates shown on this list are indicative only.
  * Status of ICAT 4.3 (Steve)
  * Status of anonymous authenticator (Steve)
  * Status of IDS (Antony)
- * Status of IDS (Antony)
  * AOB (Any)
 
 == Meeting 58 - 2 May 2013 ==
 
- * Actions from the meetings 56 (Alistair)
- * Status of ICAT 4.3 (Steve)
- * Status of SV4 of Pandata (Alistair)
- * Status of CCFE (Alistair)
+ * Actions from the meetings 56 (SMF)
+ * Status of ICAT 4.3 (SMF)
+ * Status of SV4 of Pandata (AM)
+ * Status of CCFE (AM)
  * AOB (Any)
+
+=== Notes 58 ===
+
+The meeting discussed actions and updated the status of actions.
+
+SMF stated that a 4.2.5 version of ICAT would be released to fix a thread/memory leak related initialisation of log4j. He was reminded that there may be a problem with the frequency of access to teh sequence table and that this might also go into 4.2.5. 
+
+SMF stated that ICAT 4.3.0 would include the changes required by ISIS for a more powerful query language supporting more complex authz rules.
+
+The meeting discussed the arrival of CCFE as a collaborator.  Alistair agreed to send a note to the collaboration about this.  There is now a note called InductionProcess on the wiki.  The intention is to follow this process and to enhance the note.  The purpose of this is to ensure that new partners get off to a good start.  We look forward to having a representative of CCFE attend one of these meetings.
+
+The meeting discussed the status of the reference implementation of the IDS.  One part of this is called the Download Manager.  This is now in pre-production with both the ISIS and DLS facilities.  It will also be used as part of the service verification which will be conducted by Pandata.  It was agreed to make a distribution of the download manager.  This is a technology preview, and should only be used for testing.
+
+As Steve Fisher is on vacation, the meeting did not discuss the status of ICAT 4.3.
+
+Tom has created a google group called icat-issues@googlegroups.com.  Alistair agreed to add a link to this group on http://www.icatproject.org. 
+
+The meeting concluded after 20 minutes.  A new record for brevity!
+
+=== Actions 58 ===
+
+|| Item  || Description                                                                     || Res   ||       Status||               Comment||
+|| 57.02 || Prepare a distribution of a technology preview of the Download Manager          || AW        ||            .||                     -||
+|| 58.00 || Document the meeting and update the actions                                     || SMF        ||         Done||                     -||
+|| 58.01 || Produce 4.2.5 release of ICAT                                || SMF        ||         Done|| - ||
+
+
+
+=== Attendance 58 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC SCD                   ||            ||       +    ||
+||SMF  ||Steve Fisher                 || STFC SCD                   ||     +         ||          ||
+||DG   ||David Garcia                || Alba                       ||             ||        +   ||
+||KP   ||Kevin Phipps                 || STFC SCD                   ||      +     ||           ||
+||AW   ||Antony Wilson                || STFC SCD                   ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||NB   ||Nicola Bessone               || ESRF                       ||     +        ||           ||
+||IC   ||Idrissou Chado               || Soleil                     ||       +       ||          ||
+||SR   ||Shelly Ren                   || ORNL SNS                   ||     +        ||           ||
+||GK   ||George Kourousias            || ELETTRA                    ||     +        ||           ||
+
+
 
 == Meeting 57 - 18 April 2013 ==
 
