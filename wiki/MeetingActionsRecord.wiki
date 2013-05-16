@@ -1,13 +1,10 @@
-#summary Record of actions from recent ICAT collaboration meetings
+#summary Recent ICAT collaboration meetings
 #labels Featured
 
-= Record of actions from ICAT collaboration meetings =  
-
-This page holds records of the recent meetings. Earlier meetings are at MeetingActionsRecordArchive.
-
+*Contents*
 <wiki:toc max_depth="2" />
 
-== Topics for future meetings ==
+= Topics for future meetings =
 
 The dates shown on this list are indicative only.
 
@@ -18,6 +15,11 @@ The dates shown on this list are indicative only.
  * ICAT Job Portal (IJP) development (30 May 13)
  * ICAT contribs (13 June 13)
  * ICAT production deployments at RAL, ISS, SNS, ESRF (27 June 13)
+
+= Record of actions from recent ICAT collaboration meetings =  
+
+This page holds records of the recent meetings. Earlier meetings are at MeetingActionsRecordArchive.
+
 
 == Meeting 59 - 16 May 2013 ==
 
@@ -318,6 +320,6 @@ Milan reported that he was working on a deliverable for WP4 of Pandata.  He repo
 || 52.10 || Fix for bug in createMany to be released in icat 4.2.3                          || SF        ||              Done||                         -||
 || 52.11 || Chair the next meeting on 21 February 2013 as Alistair will be on leave         || SF        ||              Done||                         -||
 
-== Earlier meetings ==
+= Earlier meetings =
 
 See MeetingActionsRecordArchive
