@@ -5,7 +5,7 @@
 
 This page holds records of the recent meetings. Earlier meetings are at MeetingActionsRecordArchive.
 
-<wiki:toc max_depth="3" />
+<wiki:toc max_depth="2" />
 
 == Topics for future meetings ==
 
@@ -321,5 +321,3 @@ Milan reported that he was working on a deliverable for WP4 of Pandata.  He repo
 == Earlier meetings ==
 
 See MeetingActionsRecordArchive
-
-== - the end - ==
