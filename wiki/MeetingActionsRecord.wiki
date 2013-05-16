@@ -39,7 +39,7 @@ The dates shown on this list are indicative only.
 
 The meeting discussed actions and updated the status of actions.
 
-SMF stated that a 4.2.5 version of ICAT would be released to fix a thread/memory leak related initialisation of log4j. He was reminded that there may be a problem with the frequency of access to teh sequence table and that this might also go into 4.2.5. 
+SMF stated that a 4.2.5 version of ICAT would be released to fix a thread/memory leak related to the initialisation of log4j. He was reminded that there may be a problem with the frequency of access to the sequence table and that this might also go into 4.2.5. 
 
 SMF stated that ICAT 4.3.0 would include the changes required by ISIS for a more powerful query language supporting more complex authz rules.
 
@@ -53,7 +53,7 @@ SMF asked if there was any interest in a "File Authenticator". There wasn't so i
 
 AW reported that there was good progress on Noris's admin interface to TopCAT.
 
-It was reported that the Chinese Neutron Source have successfully deployed and ICAT and TopCAT.
+It was reported that the Chinese Neutron Source have successfully deployed an ICAT and TopCAT.
 
 Finally GKM reported that "Actors" had been added to DAWN.
 
