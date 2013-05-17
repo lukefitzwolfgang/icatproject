@@ -46,7 +46,7 @@ Kevin reported that he has deployed ICAT 4.2.5 in production for CLF at RAL.  Th
 
 Kevin and Tom both reported that adding additional indexes to some of the tables in the database has made a large difference to the time required for queries.  The response time is much lower, and it is much more consistent.
 
-There was discussion of how to implement index generation in ICAT 4.3.  There is not a standard way in SQL to tell a database to create indexes.  Furthermore, the tables which requires the indexes can vary from one installation to another.  There is a way to tell Eclipse to generate indexes in tables, but this does not work if a different IDE is in use.  It was agreed to provide documentation on index generation.
+There was discussion of how to implement index generation in ICAT 4.3.  There is not a standard way in SQL to tell a database to create indexes.  Furthermore, the tables which requires the indexes can vary from one installation to another.  There is a way to tell EclipseLink to generate indexes in tables, but this does not work if a different persistence provider is used.  It was agreed to provide documentation on index generation.
 
 Steve reported that adding the extensions to the query language for ICAT to support the changes to the schema to be introduced in icat 4.3 is rather complicated and would delay the availability of ICAT 4.3.  It was agreed that Steve should take the time to get it correct, and if it delays ICAT 4.3 until after the summer recess, this would be satisfactory.  [There is a requirement of Pandata that the changes to the schema of ICAT are required by October 2013 - Ed].
 
