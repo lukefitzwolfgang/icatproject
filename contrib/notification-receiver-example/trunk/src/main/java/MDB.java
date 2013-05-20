@@ -8,14 +8,14 @@ import javax.jms.ObjectMessage;
 /*
  * The MessageDriven annotation defines a message selector with an SQL like syntax to select only datafile creates.
  */
-@MessageDriven(mappedName = "jms/ICATTopic", activationConfig = { @ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "entity = 'DATAFILE' AND operation='CREATE'") })
+@MessageDriven(mappedName = "jms/ICATTopic", activationConfig = { @ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "entity = 'Datafile' AND operation='C'") })
 public class MDB implements MessageListener {
 
 	/**
 	 * This is a singleton as the container may create many instances of a message driven bean and
-	 * we choose to have one instance dealing with all messages. In this case it is not
-	 * necessary however if we wish to deal with create and delete of data files then having one
-	 * instance with an overview is preferable.
+	 * we choose to have one instance dealing with all messages. In this case it is not necessary
+	 * however if we wish to deal with create and delete of data files then having one instance with
+	 * an overview is preferable.
 	 */
 	static private final DelayedAction delayedAction = DelayedAction.INSTANCE;
 
