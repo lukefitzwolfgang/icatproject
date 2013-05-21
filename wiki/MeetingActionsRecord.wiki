@@ -23,6 +23,8 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 == Meeting 60 - 30 May 2013 ==
 
  * Actions from the meeting 59 (Alistair)
+ * Roadmap for ICAT 4.3 (Alistair)
+ * Release conditions for ICAT 4.3 (Alistair)
  * Status of IJP (Steve)
  * Status of IDS (Alistair)
  * Status of Topcat (Alistair)
