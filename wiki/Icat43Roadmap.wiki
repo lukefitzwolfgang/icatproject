@@ -1,13 +1,12 @@
-#summary Road map for icat 4.3
-#labels Featured
+#summary Contents of ICAT4.3
 
 <wiki:toc max_depth="3" />
 
-= Road map for Icat 4.3 =
+= Contents of ICAT4.3 =
 
 == Introduction ==
 
-Note that this is a draft proposal and has NOT been agreed with the major facilities using ICAT.
+This page is not yet complete.
 
 == ICAT-4.3 ==
 
