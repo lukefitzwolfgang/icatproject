@@ -1,0 +1,49 @@
+Premain.txt
+===========
+
+$Id$
+
+This little gadget allows the script to trust everyone!
+
+cat premain.java
+import java.lang.instrument.*;
+import java.net.URL;
+import javax.xml.namespace.QName;
+import javax.xml.ws.Service;
+
+public class premain {
+    static {
+        javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier( new javax.net.ssl.HostnameVerifier(){
+            public boolean verify(String hostname, javax.net.ssl.SSLSession sslSession) {
+                return true;
+            }
+        });
+    }
+
+    public static void premain(String args, Instrumentation inst) {
+        //System.out.println("Ignore Host Certificate Error") ;
+    }
+}
+
+
+cat manifest.txt
+Premain-Class: premain
+
+
+To comile and build it do this:
+
+javac premain.java
+jar -cmf manifest.txt premain.jar premain*class
+java -javaagent:premain.jar -Djavax.net.ssl.trustStore=_icat_default_stfc_uk0_bigv_io_8181 -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.Authenticate
+
+
+The following URLs were helpful in working out what to do:
+
+http://www.mkyong.com/webservices/jax-ws/java-security-cert-certificateexception-no-name-matching-localhost-found/
+http://stackoverflow.com/questions/6031258/java-ssl-how-to-disable-hostname-verification
+http://www.javamex.com/tutorials/memory/instrumentation.shtml
+http://www.skylit.com/javamethods/faqs/createjar.html
+
+- the end -
+
+
