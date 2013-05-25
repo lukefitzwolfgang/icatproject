@@ -1,0 +1,12 @@
+# $Id$
+wsdl.location=https://icat.default.stfc.uk0.bigv.io:8181/ICATService/ICAT?wsdl
+#wsdl.location=https://icat.default.stfc.uk0.bigv.io/icat/ICATService/ICAT?wsdl
+
+#ICAT username
+username=CIC
+
+#ICAT authenticator
+authenticator=db
+
+#ICAT password
+password=password
