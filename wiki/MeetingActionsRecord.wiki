@@ -61,9 +61,12 @@ The meeting finished at 15:25 BST.
 
 || Item  || Description                                                                     || Res   ||           Status||               Comment||
 || 60.00 || Document the meeting and update the actions                                     || AM    ||             Done||                     -||
-|| 60.01 || Send a note to the mailing list about the notes on release conditions           || AM    ||                .||                     -||
-|| 60.02 || Finalise a release of IJP and send a note to the mailing list                   || SF    ||                .||                     -||
-|| 60.03 || Consider offering help to support or develop Topcat                             || All   ||                .||                     -||
+|| 60.01 || Add a page to the wiki about ICAT 4.3 and IDS 1.0 release conditions            || AM    ||             Done||                     -||
+|| 60.02 || Send a note to the mailing list about the notes on release conditions           || AM    ||             Done||                     -||
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || SF    ||                .||                     -||
+|| 60.04 || Consider offering help to support or develop Topcat                             || All   ||                .||                     -||
+|| 60.05 || Make changes to the room booking at RAL for the ICAT meetings                   || AM    ||             Done||                     -||
+
 
 === Attendance 60 ===
 
