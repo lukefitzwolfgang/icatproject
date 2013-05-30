@@ -1,7 +1,7 @@
 #summary Release criteria for IDS reference implementation
 
 *Contents*
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 
 = Release criteria for the reference implementation of IDS =
 
