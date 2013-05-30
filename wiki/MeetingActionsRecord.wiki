@@ -20,6 +20,13 @@ The dates shown on this list are indicative only:
 
 This page holds records of the recent meetings. Earlier meetings are at MeetingActionsRecordArchive.
 
+== Meeting 61 - 13 June 2013 ==
+
+ * Actions from the meeting 60 (Alistair)
+ * Release conditions for products (Alistair)
+ * Status of contribs  (Alistair)
+ * AOB (Any)
+
 == Meeting 60 - 30 May 2013 ==
 
  * Actions from the meeting 59 (Alistair)
@@ -29,6 +36,42 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Status of IDS (Alistair)
  * Status of Topcat (Alistair)
  * AOB (Any)
+
+=== Notes 60 ===
+
+We were pleased to have Milan join us again.  He has been away from work for a month following an operation on his wrist.
+
+Ghita informed us that she is going to leave Diamond in June to take up an academic position teaching Computer Science in a University.  The chairman thanked Ghita for her work with ICAT and wished her well in her new position.
+
+Steve said that work on ICAT 4.3 was progressing well, with the development of Notifications and Logging completed.  He will deal with Free text next.  He said that when he completes the development of a feature, he changes the status of the corresponding ticket to started.  The ticket will be closed when the feature is included in a release.  If further work is required following release, a new ticket will be created.
+
+Alistair reported that he had written notes about the release conditions for ICAT and IDS.  He will send an email to the mailing list inviting comments.
+
+Steve reported that the IJP is now ready for deployment in LSF at STFC.  A paper has been written and will be presented at a conference in Zurich new week.  He agreed to finalise a release of this product and to make an announcement.
+
+The meeting finished at 15:25 BST.
+
+
+=== Actions 60 ===
+
+|| Item  || Description                                                                     || Res   ||           Status||               Comment||
+|| 60.00 || Document the meeting and update the actions                                     || AM    ||             Done||                     -||
+|| 60.01 || Send a note to the mailing list about the notes on release conditions           || AM    ||                .||                     -||
+|| 60.02 || Finalise a release of IJP and send a note to the mailing list                   || SF    ||                .||                     -||
+
+=== Attendance 60 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
+||SMF  ||Steve Fisher                 || STFC SCD                   ||     +        ||           ||
+||PG   ||Pablo Garcia                 || Alba                       ||     +        ||           ||
+||GKM  ||Ghita Kouadri Mostefaoui     || Diamond                    ||     +        ||           ||     
+||NB   ||Nicola Bessone               || ESRF                       ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||GK   ||George K                     || ELETTRA                    ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC SCD                   ||              ||     +     ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||              ||     +     ||
+||IC   ||Idrissou Chado               || Soleil                     ||              ||     +     ||
 
 == Meeting 59 - 16 May 2013 ==
 
