@@ -49,8 +49,13 @@ Alistair reported that he had written notes about the release conditions for ICA
 
 Steve reported that the IJP is now ready for deployment in LSF at STFC.  A paper has been written and will be presented at a conference in Zurich new week.  He agreed to finalise a release of this product and to make an announcement.
 
-The meeting finished at 15:25 BST.
+Steve reported that as Antony has left the project, we are short of resources for the development and support of Topcat.  We would very much appreciate it, if one of our partners were to volunteer to support or develop Topcat.
 
+Alistair reported that as Frazer has left the project, we have recruited a student who will join for three months from the beginning of September.  His main task will be to prepare the IDS for release.  We are expecting to have Frazer working with the project team from September again.  This will provide continuity in the work with IDS.
+
+Alistair and Steve reported that STFC is going to recruit at least one contractor for several months to support the ICAT related work until a permanent replacement can be found for Antony.
+
+The meeting finished at 15:25 BST.
 
 === Actions 60 ===
 
@@ -58,6 +63,7 @@ The meeting finished at 15:25 BST.
 || 60.00 || Document the meeting and update the actions                                     || AM    ||             Done||                     -||
 || 60.01 || Send a note to the mailing list about the notes on release conditions           || AM    ||                .||                     -||
 || 60.02 || Finalise a release of IJP and send a note to the mailing list                   || SF    ||                .||                     -||
+|| 60.03 || Consider offering help to support or develop Topcat                             || All   ||                .||                     -||
 
 === Attendance 60 ===
 
