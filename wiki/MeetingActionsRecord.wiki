@@ -14,7 +14,7 @@ The dates shown on this list are indicative only:
  * Topcat status (16 May 13)
  * ICAT Job Portal (IJP) development (30 May 13)
  * ICAT contribs (13 June 13)
- * ICAT production deployments at RAL, ISS, SNS, ESRF (27 June 13)
+ * ICAT production deployments at RAL, ILL, SNS, ESRF (27 June 13)
 
 = Record of actions from recent ICAT collaboration meetings =  
 
@@ -24,6 +24,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
  * Actions from the meeting 61 (Chairperson)
  * STatus of ICAT 4.3 (Steve)
+ * ICAT production deployments at ISIS, DLS, CLF, ILL, SNS, ESRF
  * AOB (Any)
 
 == Meeting 61 - 13 June 2013 ==
@@ -49,14 +50,13 @@ SF reported that he has done some timing tests on the download component of the 
 
 AM reported that GF 4 has been released and that he has deployed ICAT, Authdb and Topcat on a GF 4 and that they appear to work correctly.  There was a problem trying to deploy the download component of IDS; as this is not yet a supported product, this is a matter for development.
 
-AM reported that he had deployed ICAT with GF4 with an Apache from end.  The GF4 and the Apache communicate with one another using AJP.  There was a bug in GF 3 which meant that this did not work.  It has been fixed in GF 4.
-
+AM reported that he had deployed ICAT with GF4 with an Apache front-end.  This work has been done at ESRF and will be used for the ESRF production ICAT.  The GF4 and the Apache communicate with one another using AJP.  There was a bug in GF 3 which meant that this did not work.  It has been fixed in GF 4.
 
 === Actions 61 ===
 
 || Item  || Description                                                                     || Res   ||           Status||               Comment||
 || 61.00 || Document the meeting and update the actions                                     || AM    ||             Done||                     -||
-|| 61.01 || Put simple ICAT browser in contrib when it is ready                             || TG    ||                .||                     -||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || TG    ||                .||                     -||
 || 61.02 || Write a note about the performance on the download component of IDS             || SF    ||                .||                     -||
 || 61.03 || Write a note about GF 4 and AJP                                                 || AM    ||                .||                     -||
 
