@@ -1,0 +1,6 @@
+export user='username alistair.mills@btinternet.com'
+export pass='password 711978200'
+export authenticator=db
+credentials="$user $pass"
+export icat="http://www.icatproject.org:5080"
+
