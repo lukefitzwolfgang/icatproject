@@ -1,0 +1,29 @@
+README for ICAT rapid test for service verification [4]
+Alistair Mills - June 2013
+$Id$
+
+= Introduction =
+
+This material is a simple test for icat for use in Service Verification[5] in June 2013.  It is not intended for production.  It has been tested on linux and MacOs.  The use of this material on other platforms such as windows and cygwin is not supported, but it may work with minor changes.
+
+This directory only contains material for testing icat 4.2.  If connecting to a server running icat 4.1 or 4.0, it will not work.
+
+The client computer should have a normal java run time environment, the bash shell, python and svn.
+
+To get a copy of this files and the files which form the test, use the following command:
+
+svn co https://icatproject.googlecode.com/svn/ops/icat42/test425
+
+It will be necessary to edit the files called _properties and insert your username and password.  The username and password was obtained in a previous service verification.
+
+It may be necessary to set an environmental variable to the address of your institutions proxy server, such as:
+
+export http_proxy=wwwcache.rl.ac.uk:8080
+
+It may be necessary to add similar information to the script called test_2.sh.
+
+In order to the set of tests, use the following script:
+
+./test_all.sh
+
+= - the end - =
