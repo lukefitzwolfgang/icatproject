@@ -2,9 +2,15 @@
 #
 # $Id$
 #
+export         properties='example.properties'
+export        trust_store=jssecacerts-www.icatproject.org
+#
+wsdl=`grep ^wsdl ${properties}`
+file=`./change_wsdl.sh $wsdl`
+[ "${file:0:1}" = "_" -a -f $file ] && trust_store=$file
 #set -x
-java                                                           -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.$*
-#java -Dhttp.proxyHost=proxy.esrf.fr -Dhttp.proxyPort=3128 -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.$*
+java -Djavax.net.ssl.trustStore=$trust_store                                                          -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.$*
+#java -Djavax.net.ssl.trustStore=$trust_store -Dhttp.proxyHost=wwwcache.rl.ac.uk -Dhttp.proxyPort=8080 -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.$*
 #
 # - the end - 
 #
