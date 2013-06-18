@@ -1,0 +1,11 @@
+# $Id$
+wsdl.location=https://wwws.esrf.fr/icat/ICATService/ICAT?wsdl
+
+#ICAT username
+username=your-user-name
+
+#ICAT authenticator
+authenticator=db
+
+#ICAT password
+password=your-user-password
