@@ -1,0 +1,33 @@
+adduser alistair.mills@btinternet.com rall
+adduser anders@kaestner.se rall
+adduser andreas.tomiak@gmx.de rall
+adduser bessone@esrf.fr rall
+adduser catherine.mills@btinternet.com rall
+adduser changliuuk@yahoo.co.uk rall
+adduser dlnonell@hotmail.com rall
+adduser earendiltheroamer@gmail.com rall
+adduser ercu2841@hotmail.com rall
+adduser hall@ill.eu rall
+adduser hurrhurrhurr@tradermail.info rall
+adduser icatsoleil@gmail.com rall
+adduser isakat54@hotmail.com rall
+adduser jcasson@gmail.com rall
+adduser kea@alistairmills.com rall
+adduser mprica@gmail.com rall
+adduser noris.nyamekye@stfc.ac.uk rall
+adduser oxford.iclub@gmail.com rall
+adduser patrick5a5@hotmail.com rall
+adduser rolf.krahl@gmx.net rall
+adduser stephane.longeville@cea.fr rall
+adduser steve.androulakis@gmail.com rall
+adduser sv.elettra@gmail.com rall
+adduser tangm@ihep.ac.cn rall
+adduser tangriffin@hotmail.com rall
+adduser the.melwyn@gmail.com rall
+adduser yaren_emrecan@hotmail.com rall
+adduser alba_user rall
+adduser desy rall
+addrule rall all  R
+addrule cruall all CRU
+addrule crudall all CRUD
+

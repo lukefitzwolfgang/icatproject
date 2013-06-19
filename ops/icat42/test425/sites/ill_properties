@@ -1,11 +1,12 @@
 # $Id$
-wsdl.location=https://wwws.esrf.fr/icat/ICATService/ICAT?wsdl
+wsdl.location=https://icat.ill.eu/ICATService/ICAT?wsdl
 
 #ICAT username
 username=kea@alistairmills.com
 
 #ICAT authenticator
-authenticator=db
+authenticator=ldap
 
 #ICAT password
 password=100005604064616
+

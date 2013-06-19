@@ -2,11 +2,11 @@
 wsdl.location=https://icat-elettra.grid.elettra.trieste.it:8443/ICATService/ICAT?wsdl
 
 #ICAT username
-username=your-user-name
+username=kea@alistairmills.com
 
 #ICAT authenticator
 authenticator=db
 
 #ICAT password
-password=your-user-password
+password=100005604064616
 
