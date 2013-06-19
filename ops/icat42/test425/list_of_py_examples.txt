@@ -1,4 +1,4 @@
-Authenticate
+./authenticate.py $icat $authenticator $credentials
 
 #Search Facility.name
 #Search Investigation.name

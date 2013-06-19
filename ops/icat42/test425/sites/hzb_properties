@@ -1,5 +1,5 @@
 # $Id$
-wsdl.location=https://wwws.esrf.fr/icat/ICATService/ICAT?wsdl
+wsdl.location=https://icat.helmholtz-berlin.de/ICATService/ICAT?wsdl
 
 #ICAT username
 username=kea@alistairmills.com
