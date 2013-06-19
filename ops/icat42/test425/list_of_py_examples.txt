@@ -1,14 +1,8 @@
 ./authenticate.py $icat $authenticator $credentials
-
-#Search Facility.name
-#Search Investigation.name
-
-#Search Dataset.name
-#Search Dataset.id
-
-#Search Datafile.name
-#Search Datafile.location
-
-#GetUserName
-#RemainingMinutes
+#./search.py $icat $authenticator $credentials Facility.name
+#./search.py $icat $authenticator $credentials Investigation.name
+#./search.py $icat $authenticator $credentials Dataset.name
+#./search.py $icat $authenticator $credentials Dataset.id
+#./search.py $icat $authenticator $credentials Datafile.name
+#./search.py $icat $authenticator $credentials Datafile.location
 
