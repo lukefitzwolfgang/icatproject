@@ -2,5 +2,5 @@ export user='username kea@alistairmills.com'
 export pass='password 100005604064616'
 export authenticator=db
 export credentials="$user $pass"
-export icat="https://icat.helmholtz-berlin.de/ICATService/ICAT?wsdl"
+export icat="https://icat.helmholtz-berlin.de"
 
