@@ -1,0 +1,12 @@
+# $Id$
+wsdl.location=https://apps.jcns.fz-juelich.de:5443/ICATService/ICAT?wsdl
+
+#ICAT username
+username=icat42
+
+#ICAT authenticator
+authenticator=db
+
+#ICAT password
+password=secret
+
