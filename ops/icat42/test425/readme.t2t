@@ -22,8 +22,9 @@ export http_proxy=wwwcache.rl.ac.uk:8080
 
 It may be necessary to add similar information to the script called test_2.sh.
 
-In order to the set of tests, use the following script:
+In order to run the set of tests, use the following commands:
 
-./test_all.sh
+./test_java_all.sh
+./test_py_all.sh
 
 = - the end - =
