@@ -5,7 +5,7 @@ wsdl.location=https://icat.ill.eu/ICATService/ICAT?wsdl
 username=kea@alistairmills.com
 
 #ICAT authenticator
-authenticator=ldap
+authenticator=db
 
 #ICAT password
 password=100005604064616
