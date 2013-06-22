@@ -1,0 +1,5 @@
+# $Id$
+wsdl.location=http://icat.science3d.org:8080/ICATService/ICAT?wsdl
+username=kea@alistairmills.com
+authenticator=db
+password 100005604064616
