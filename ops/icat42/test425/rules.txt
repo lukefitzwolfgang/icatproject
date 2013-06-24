@@ -28,6 +28,8 @@ adduser yaren_emrecan@hotmail.com rall
 adduser alba_user rall
 adduser desy rall
 addrule rall all  R
+adduser root cruall
+adduser root crudall
 addrule cruall all CRU
 addrule crudall all CRUD
 
