@@ -50,7 +50,7 @@ SF reported that he has done some timing tests on the download component of the 
 
 AM reported that GF 4 has been released and that he has deployed ICAT, Authdb and Topcat on a GF 4 and that they appear to work correctly.  There was a problem trying to deploy the download component of IDS; as this is not yet a supported product, this is a matter for development.
 
-AM reported that he had deployed ICAT with GF4 with an Apache front-end.  This work has been done at ESRF and will be used for the ESRF production ICAT.  The GF4 and the Apache communicate with one another using AJP.  There was a bug in GF 3 which meant that this did not work.  It has been fixed in GF 4.
+AM reported that he had deployed ICAT with GF4 with an Apache front-end.  This work has been done at ESRF and will be used for the ESRF production ICAT.  The GF4 and the Apache communicate with one another using AJP.  There was a bug in GF 3 which meant that this did not work when using https, due to an error in the GF which continued to use http, when it should have used https.  The bug has been fixed in GF 4.  To verify that the bug was due to GF3, having got ICAT to work with GF4, AM then tried changing back to GF3, and the ICAT did not work.
 
 === Actions 61 ===
 
