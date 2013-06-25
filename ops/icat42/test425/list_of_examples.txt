@@ -1,14 +1,14 @@
 Authenticate
 
-#Search Facility.name
-#Search Investigation.name
+Search Facility.name
+Search Investigation.name
 
-#Search Dataset.name
-#Search Dataset.id
+Search Dataset.name
+Search Dataset.id
 
-#Search Datafile.name
-#Search Datafile.location
+Search Datafile.name
+Search Datafile.location
 
-#GetUserName
-#RemainingMinutes
+GetUserName
+RemainingMinutes
 
