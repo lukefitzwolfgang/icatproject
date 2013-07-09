@@ -1,0 +1,8 @@
+Unpack the zip file (which contains a copy of this file) and from the directory where you unpacked the zip file type:
+
+    java -cp "icat-setup/*" Setup [option...] args
+    
+One possible arg is -h. This is a good place to start.
+
+The program has the ability to add, list and delete users, groups and rules. It will accept commands from a file or from stdin. 
+In interactive mode it will report errors and continue. However when reading from a file it will abort at the first error.
