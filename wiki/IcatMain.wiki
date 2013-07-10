@@ -19,7 +19,6 @@
 
 == Project ==
 
- * [3rd_Party_Licenses                                   3rd Party Licenses]
  * [IcatWhosWho                                          ICAT Who's Who]
  * [http://code.google.com/p/icatproject/issues/entry    Create New Issue]
 
