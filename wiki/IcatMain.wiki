@@ -40,5 +40,3 @@
  * [IcatFaq Frequently Asked Questions]
      * [IcatFaq#technologies What are the technologies Used?]
      * [IcatFaq#whereIsCode Where is the source code?]
-
- * [IcatQuestions Questions without answers. Yet!]
