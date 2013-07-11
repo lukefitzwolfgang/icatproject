@@ -33,7 +33,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
 === Notes 62 ===
 
-Present: David Garcia, George Kourousias, Tom Griffin and Steve Fisher (Chair)
+Present: Daniel Salvat, Pablo Garcia, David Lopez, George Kourousias, Tom Griffin and Steve Fisher (Chair)
 
 SMF: ICAT4.3 now needs two more things: schema changes with associated scripts and enhanced query language. End of August still looks possible. 
 
@@ -47,7 +47,7 @@ TG: ISIS is still using ICAT3.3 and is waiting for ICAT4.3 with the enhanced que
 
 GK: Umbrella will be part of the next PaNData verifications so will probably need an umbrella authenticator.
 
-DG: Reminder about the Barcelona workshop which is expected to have two satellite meetings: one on icat and and one on umbrella.
+DS: Reminder about the Barcelona workshop which is expected to have two satellite meetings: one on icat and and one on umbrella.
 
 === Actions 62 ===
 
