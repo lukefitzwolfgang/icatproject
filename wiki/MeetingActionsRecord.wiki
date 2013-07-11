@@ -20,12 +20,14 @@ The dates shown on this list are indicative only:
 
 This page holds records of the recent meetings. Earlier meetings are at MeetingActionsRecordArchive.
 
-== Meeting 62 - 27 June 2013 ==
+== Meeting 62 - 11 July 2013 ==
 
- * Actions from the meeting 61 (Chairperson)
- * STatus of ICAT 4.3 (Steve)
- * ICAT production deployments at ISIS, DLS, CLF, ILL, SNS, ESRF
- * AOB (Any)
+ * Actions from the meeting 61 (Chair)
+ * Status of ICAT 4.3 (Steve)
+ * New components (Steve)
+ * Feedback on Topcat 1.9 Snapshot (All)
+ * Issues from ICAT production deployments (All)
+ * AOB (All)
 
 == Meeting 61 - 13 June 2013 ==
 
