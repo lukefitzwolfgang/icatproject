@@ -1,0 +1,10 @@
+#summary How to install and configure Glassfish.
+
+= Introduction =
+
+This page is here for convenience though it is nothing to do with ICAT.
+
+
+= Details =
+
+To be written
