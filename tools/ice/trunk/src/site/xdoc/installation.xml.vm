@@ -17,10 +17,15 @@
                         <a href="${repoUrl}/org/icatproject/ice/${project.version}/ice-${project.version}-distro.zip">ice-${project.version}-distro.zip</a>
                     </li>
                     <li>
-                        and a suitable deployed container (here assumed to be glassfish though tomcat should be sufficient) to support a web
-                        application. Testing has been carried out with
-                        <a href="https://code.google.com/p/icatproject/wiki/Glassfish">Glassfish</a>
-                        3.1.2.
+                        A suitable deployed container (here assumed to be glassfish though tomcat should be sufficient) to support a web
+                        application.
+                        Testing has been carried out with Glassfish 3.1.2.
+                        <a href="https://code.google.com/p/icatproject/wiki/Glassfish">Installation Instructions</a>
+                        are available.
+                    </li>
+                    <li>
+                        A deployed ICAT 4.2 or 4.3 - not necessarily on the same server where you will install
+                        ice
                     </li>
                 </ul>
             </subsection>
