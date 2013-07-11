@@ -7,15 +7,20 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <dependencySets>
         <dependencySet>
-            <outputDirectory>icat-setup</outputDirectory>
-            <useProjectArtifact>true</useProjectArtifact>
-            <unpack>false</unpack>
-            <scope>runtime</scope>
+            <outputDirectory>ice</outputDirectory>
+            <useTransitiveDependencies>false</useTransitiveDependencies>
+            <includes>
+                <include>org.icatproject:ice</include>
+            </includes>
         </dependencySet>
     </dependencySets>
     <fileSets>
         <fileSet>
-            <outputDirectory>icat-setup</outputDirectory>
+            <outputDirectory>ice</outputDirectory>
+            <directory>${basedir}/src/main/config</directory>
+        </fileSet>
+        <fileSet>
+            <outputDirectory>ice</outputDirectory>
             <directory>${basedir}</directory>
             <includes>
                 <include>*.txt</include>
