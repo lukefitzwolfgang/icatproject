@@ -40,7 +40,6 @@
         </repository>
     </repositories>
 
-
     <scm>
         <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/ice/trunk</connection>
         <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/ice/trunk</developerConnection>
@@ -68,7 +67,7 @@
         <url>http://www.icatproject.org</url>
     </organization>
 
-    <name>ICAT Editor</name>
+    <name>ICE</name>
 
     <dependencies>
         <dependency>
