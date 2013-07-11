@@ -7,7 +7,7 @@
     </ui:style>
     <g:VerticalPanel>
         <g:HTML>
-            <h1>ICE - Icat Data Editor</h1>
+            <h1>ICE - ICAT Editor</h1>
         </g:HTML>
         <g:HorizontalPanel>
 
