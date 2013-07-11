@@ -6,13 +6,69 @@
     <groupId>org.icatproject</groupId>
     <artifactId>ice</artifactId>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <gwtVersion>2.5.1</gwtVersion>
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <repoMachineAndPath>www.icatproject.org/mvn/repo</repoMachineAndPath>
+        <repoUrl>http://${repoMachineAndPath}</repoUrl>
     </properties>
+
+    <distributionManagement>
+        <downloadUrl>http://${repoMachineAndPath}</downloadUrl>
+        <site>
+            <id>website</id>
+            <url>scp://www.icatproject.org/var/www/html/mvn/site/tools/ice/${project.version}</url>
+        </site>
+        <repository>
+            <id>repo</id>
+            <url>scp://www.icatproject.org/var/www/html/mvn/repo</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>ICAT Repo</id>
+            <url>http://${repoMachineAndPath}</url>
+        </repository>
+
+        <repository>
+            <id>nexus.esc.rl.ac.uk</id>
+            <url>http://nexus.esc.rl.ac.uk:8081/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+
+
+    <scm>
+        <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/ice/trunk</connection>
+        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/ice/trunk</developerConnection>
+        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ftools%2Fice%2Ftrunk</url>
+    </scm>
+
+    <description>An ICAT Editor. The main use for this is envisaged to be creating Facility, ParameterTypes, DatasetTypes etc.</description>
+
+    <issueManagement>
+        <url>http://code.google.com/p/icatproject/issues/list</url>
+        <system>Google Code</system>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>BSD 2-Clause</name>
+            <url>http://www.opensource.org/licenses/BSD-2-Clause</url>
+            <distribution>repo</distribution>
+            <comments>Also know informally as the Simplified BSD or FreeBSD License</comments>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>The ICAT Collaboration</name>
+        <url>http://www.icatproject.org</url>
+    </organization>
+
+    <name>ICAT Editor</name>
 
     <dependencies>
         <dependency>
@@ -52,7 +108,7 @@
             <artifactId>icat.client</artifactId>
             <version>4.2.5</version>
         </dependency>
-        
+
         <dependency>
             <groupId>uk.ac.rl.esc</groupId>
             <artifactId>cat-utils</artifactId>
@@ -115,7 +171,80 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assemble/distribution.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+                <dependencies>
+                    <dependency><!-- add support for ssh/scp -->
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-ssh</artifactId>
+                        <version>1.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+                <dependencies>
+                    <dependency><!-- add support for ssh/scp -->
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-ssh</artifactId>
+                        <version>1.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
         </plugins>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>index</report>
+                            <report>summary</report>
+                            <report>dependencies</report>
+                            <report>issue-tracking</report>
+                            <report>license</report>
+                            <report>plugins</report>
+                            <report>scm</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>
