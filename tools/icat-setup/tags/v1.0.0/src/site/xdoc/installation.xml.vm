@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+    <properties>
+        <title>Installation</title>
+    </properties>
+
+    <body>
+
+        <section name="Installation">
+            <subsection name="Prerequisites">
+                <ul>
+                    <li>
+                        The icat-setup distribution:
+                        <a href="${repoUrl}/org/icatproject/icat-setup/${project.version}/icat-setup-${project.version}-distro.zip">icat-setup-${project.version}-distro.zip</a>
+                    </li>
+                    <li>
+                        One or more installations of ICAT 4.2 or 4.3.
+                    </li>
+                    <li>Python 2.4 to 2.7</li>
+                </ul>
+            </subsection>
+
+            <subsection name="Summary of steps">
+                <ol>
+                    <li> Download and unpack the distribution,</li>
+                    <li> run the install script,</li>
+                    <li> and see if it works.</li>
+                </ol>
+            </subsection>
+
+            <subsection name="Running setup.py">
+                <p>
+                    From the unpacked distribution run
+                    <tt>./setup.py install</tt>
+                    . Jar files will be installed to the defined appDir and a binary to the defined binDir. By default appDir and binDir are ~/java
+                    and ~/bin respectively for a non-root user and are /usr/share and /usr/bin for root. The appDir and binDir directories must exist
+                    and be writable by the person installing. They may be overridden. For example:
+                    <tt>./setup.py install --binDir /bin</tt>
+                    will write the executable to /bin. See
+                    <tt>./setup.py -h</tt>
+                    to get details of options.
+
+                    <p>Any existing installation will be removed first.</p>
+
+                    <p>
+                        To uninstall use
+                        <tt>./setup.py uninstall</tt>
+                        which has the same options and will do nothing if there is no installation.
+                    </p>
+                </p>
+
+
+            </subsection>
+
+            <subsection name="Check that icat-setup works">
+                <p>
+                    Assuming that you have installed to somewhere on your path please enter
+                    <tt>icat-setup</tt>
+                    otherwise of course you will need to specify the full path. It should respond:
+                    <tt>Must have arguments url, authenticator, credentials</tt>
+                </p>
+            </subsection>
+
+
+        </section>
+    </body>
+</document>
+			
