@@ -98,7 +98,7 @@ public class Updater extends Composite {
 								if (field.getType().equals("String")) {
 									if (field.getStringLength() <= 100) {
 										TextBox tb = new TextBox();
-										tb.setSize(field.getStringLength() + "em", "1ex");
+										tb.setSize(field.getStringLength() + "em", "2ex");
 										tb.setText(value);
 										w = tb;
 									} else {
@@ -110,7 +110,7 @@ public class Updater extends Composite {
 									}
 								} else if (field.getType().equals("Date")) {
 									TextBox tb = new TextBox();
-									tb.setSize("12em", "1ex");
+									tb.setSize("12em", "2ex");
 									tb.setText(value);
 									w = tb;
 								} else if (field.getType().equals("boolean")) {
