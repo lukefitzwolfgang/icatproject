@@ -1,4 +1,0 @@
-1.0.0 - Initial release
-
-1.0.1 - interchange content of Installation.txt and ReleaseNotes.txt
-	  - Superior output for listuser and listgroup - but requires at least ICAT 4.2.4
