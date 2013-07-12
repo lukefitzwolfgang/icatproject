@@ -4,21 +4,42 @@
     <artifactId>icat-setup</artifactId>
     <version>1.0.2-SNAPSHOT</version>
 
+    <name>icat-setup</name>
+
+    <description>A line based editing program for ICAT authorization. It edits the User, Group, UserGroup and Rule tables.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <repoMachineAndPath>www.icatproject.org/mvn/repo</repoMachineAndPath>
+        <repoUrl>http://${repoMachineAndPath}</repoUrl>
+    </properties>
+
+    <organization>
+        <name>The ICAT Collaboration</name>
+        <url>http://www.icatproject.org</url>
+    </organization>
+
+    <issueManagement>
+        <system>Google Code</system>
+        <url>http://code.google.com/p/icatproject/issues/list</url>
+    </issueManagement>
+
     <distributionManagement>
-        <downloadUrl>http://nexus.esc.rl.ac.uk:8081/nexus</downloadUrl>
+        <downloadUrl>http://${repoMachineAndPath}</downloadUrl>
+        <site>
+            <id>website</id>
+            <url>scp://www.icatproject.org/var/www/html/mvn/site/tools/icat-setup/${project.version}</url>
+        </site>
         <repository>
-            <id>nexus.esc.rl.ac.uk</id>
-            <url>http://nexus.esc.rl.ac.uk:8081/nexus/content/repositories/releases</url>
+            <id>repo</id>
+            <url>scp://www.icatproject.org/var/www/html/mvn/repo</url>
         </repository>
-        <snapshotRepository>
-            <id>nexus.esc.rl.ac.uk</id>
-            <url>http://nexus.esc.rl.ac.uk:8081/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
     </distributionManagement>
 
     <scm>
-        <connection>scm:svn:https://svn.esc.rl.ac.uk/repos/sig/icat-setup/trunk</connection>
-        <developerConnection>scm:svn:https://svn.esc.rl.ac.uk/repos/sig/icat-setup/trunk</developerConnection>
+        <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/icat-setup/trunk</connection>
+        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/icat-setup/trunk</developerConnection>
+        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ftools%2Ficat-setup%2Ftrunk</url>
     </scm>
 
     <repositories>
@@ -33,7 +54,7 @@
         <dependency>
             <groupId>org.icatproject</groupId>
             <artifactId>icat.client</artifactId>
-            <version>4.2.4</version>
+            <version>4.2.5</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.icatproject</groupId>
@@ -47,7 +68,6 @@
             <artifactId>commons-cli</artifactId>
             <version>1.2</version>
         </dependency>
-
 
     </dependencies>
 
@@ -101,8 +121,59 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+                <dependencies>
+                    <dependency><!-- add support for ssh/scp -->
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-ssh</artifactId>
+                        <version>1.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+                <dependencies>
+                    <dependency><!-- add support for ssh/scp -->
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-ssh</artifactId>
+                        <version>1.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
         </plugins>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>index</report>
+                            <report>summary</report>
+                            <report>dependencies</report>
+                            <report>issue-tracking</report>
+                            <report>license</report>
+                            <report>plugins</report>
+                            <report>scm</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+
 
 
 
