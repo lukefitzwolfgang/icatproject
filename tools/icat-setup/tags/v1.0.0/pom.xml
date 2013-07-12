@@ -1,0 +1,184 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.icatproject</groupId>
+    <artifactId>icat-setup</artifactId>
+    <version>1.0.0</version>
+
+    <name>icat-setup</name>
+
+    <description>A line based editing program for ICAT authorization. It edits the User, Group, UserGroup and Rule tables.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <repoMachineAndPath>www.icatproject.org/mvn/repo</repoMachineAndPath>
+        <repoUrl>http://${repoMachineAndPath}</repoUrl>
+    </properties>
+
+    <organization>
+        <name>The ICAT Collaboration</name>
+        <url>http://www.icatproject.org</url>
+    </organization>
+
+    <issueManagement>
+        <system>Google Code</system>
+        <url>http://code.google.com/p/icatproject/issues/list</url>
+    </issueManagement>
+
+    <distributionManagement>
+        <downloadUrl>http://${repoMachineAndPath}</downloadUrl>
+        <site>
+            <id>website</id>
+            <url>scp://www.icatproject.org/var/www/html/mvn/site/tools/icat-setup/${project.version}</url>
+        </site>
+        <repository>
+            <id>repo</id>
+            <url>scp://www.icatproject.org/var/www/html/mvn/repo</url>
+        </repository>
+    </distributionManagement>
+
+    <scm>
+        <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/icat-setup/tags/v1.0.0</connection>
+        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/icat-setup/tags/v1.0.0</developerConnection>
+        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ftools%2Ficat-setup%2Ftrunk/tags/v1.0.0</url>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>ICAT Repo</id>
+            <url>http://www.icatproject.org/mvn/repo</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.icatproject</groupId>
+            <artifactId>icat.client</artifactId>
+            <version>4.2.5</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.icatproject</groupId>
+                    <artifactId>icat.ear</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2.2</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assemble/distribution.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <preparationGoals>clean install</preparationGoals>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+                <dependencies>
+                    <dependency><!-- add support for ssh/scp -->
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-ssh</artifactId>
+                        <version>1.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+                <dependencies>
+                    <dependency><!-- add support for ssh/scp -->
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-ssh</artifactId>
+                        <version>1.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>index</report>
+                            <report>summary</report>
+                            <report>dependencies</report>
+                            <report>issue-tracking</report>
+                            <report>license</report>
+                            <report>plugins</report>
+                            <report>scm</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+
+
+
+
+</project>
+
+
+
+
