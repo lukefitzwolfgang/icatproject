@@ -11,10 +11,12 @@ def abort(msg):
 root = os.getuid() == 0 
 
 parser = OptionParser("usage: %prog [options] install | uninstall")
-default = '/usr/share' if root else '~/java'
+if root: default = '/usr/share'
+else: default = '~/java'
 parser.add_option("--appDir", "-a", help="location to store java applications [" + default + "]", default=default)
 
-default = '/usr/bin' if root else '~/bin'
+if root: default = '/usr/bin'
+else: default = '~/bin'
 parser.add_option("--binDir", "-b", help="location to store executables [" + default + "]", default=default)
 
 options, args = parser.parse_args()
@@ -43,13 +45,16 @@ if cmd == "INSTALL":
                 shutil.copy(file, path)
                 
         file = os.path.join(binDir, "icat-setup")
-        with open(file, "w") as f:
-            print >> f, "#!/bin/sh"
-            print >> f, 'java -cp "' + path + '/*" Setup $*'
-            
+        f = open(file, "w")
+        print >> f, "#!/bin/sh"
+        print >> f, 'java -cp "' + path + '/*" Setup $*'
+        f.close()
+     
         os.chmod(file, 0755)
+        
+        print "Installed", path, "and", file 
 
-    except Exception as e:
+    except Exception, e:
         abort(str(e))
         
 else:  # UNINSTALL
@@ -60,9 +65,11 @@ else:  # UNINSTALL
             shutil.rmtree(path)
             
         file = os.path.join(binDir, "icat-setup")    
-        if os.path.exists(file): os.remove(file)
+        if os.path.exists(file): os.remove(file) 
+        
+        print "Uninstalled", path, "and", file 
     
-    except Exception as e:
+    except Exception, e:
         abort(str(e))       
     
             

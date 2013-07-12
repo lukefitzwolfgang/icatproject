@@ -74,7 +74,7 @@ public class Setup {
 			p.add("Credentials must be provided in the form 'username root password secret'");
 			p.add("There must be an even number of words. It is preferable to specify the");
 			p.add("password value as '-' then you will be prompted for it.");
-			p.add("For example: 'setup https://example.com:8181 ldap username fisher password -'");
+			p.add("For example: 'icat-setup https://example.com:8181 ldap username fisher password -'");
 			System.out.println(p);
 
 			p = new Para(WIDTH);
@@ -261,6 +261,14 @@ public class Setup {
 		Para p = new Para(WIDTH);
 		p.add("The program has the ability to add, list and delete users, groups and rules.");
 		p.add("Valid commands are help, adduser, addrule, listuser, listrule, listgroup, deluser, delrule and delgroup.");
+		System.out.println(p);
+
+		p = new Para(WIDTH);
+		p.add("adduser syntax is: adduser <username> <groupname> where the user and group are created as necessary and linked");
+		System.out.println(p);
+
+		p = new Para(WIDTH);
+		p.add("addrule syntax is: addrule <groupname> <what> <crud> where 'crud' is letters from the set C,R,U,D and 'what' is the rule. 'What' may have the special value 'ALL' to apply the specified 'crud' to all tables for that group.");
 		System.out.println(p);
 
 		p = new Para(WIDTH);
