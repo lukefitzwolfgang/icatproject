@@ -354,7 +354,8 @@ public class IcatGwtServiceImpl extends RemoteServiceServlet implements IcatGwtS
 								} catch (ParseException e) {
 									throw new EditorException("Attribute of type " + type + " in "
 											+ beanName + " has bad representation " + value
-											+ " It must conform to " + formatString);
+											+ " It must conform to "
+											+ formatString.replace("'", ""));
 								}
 								gc.setTimeInMillis(date.getTime());
 								setter.invoke(bean, datatypeFactory.newXMLGregorianCalendar(gc));
@@ -646,6 +647,11 @@ public class IcatGwtServiceImpl extends RemoteServiceServlet implements IcatGwtS
 					if (value != null) {
 						if (value instanceof EntityBaseBean) {
 							value = ((EntityBaseBean) value).getId();
+						} else if (value instanceof XMLGregorianCalendar) {
+							synchronized (dfout) {
+								value = dfout.format(((XMLGregorianCalendar) value)
+										.toGregorianCalendar().getTime());
+							}
 						}
 						valueMap.put(fieldName, value.toString());
 						logger.debug(fieldName + " = " + value.toString());
