@@ -2,7 +2,7 @@
 <document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
 
     <properties>
-        <title>ICE User Guide</title>
+        <title>The icat-setup User Guide</title>
     </properties>
 
     <body>
@@ -10,101 +10,31 @@
         <section name="Introduction">
             <subsection name="Purpose">
                 <p>
-                    ICE has been designed to work well on tables which do not have a large number of rows inside. The assumption is that tables with a
-                    lot
-                    of data (such as
-                    Datasets, Datafiles and their associated parameters) will be populated via some program through the ICAT API.
-                </p>
-
-                <p>
-                    Smaller tables, for which
-                    <i>ice</i>
-                    is well suited, (such as Facility, DatasetType and InvestigationType) will normally be populated by hand when setting up ICAT and
-                    a
-                    further
-                    group of relatively small tables (such as User and Investigation) will be updated periodically.
+                    icat-setup can be used to add and delete users, groups and Rules. These tables may be manipulated by those in the ICAT
+                    "rootUserNames"
                 </p>
             </subsection>
 
             <subsection name="Applicability">
-                <p>The application can connect to ICAT 4.2.x or 4.3.x as it does not know anything about the schema but interrogates the ICAT to find
-                    the
-                    structure it has to work with.
+                <p>The application can connect to ICAT 4.2.x or 4.3.x.
                 </p>
             </subsection>
 
         </section>
 
-        <section name="Logging in">
+        <section name="Running it">
             <p>
-                You will initially see a greyed out page with a login panel in the centre. The login is made to the underlying ICAT so you should
-                choose
-                the appropriate authenticator (the list has been defined by the installer of
-                <i>ice</i>
-                ), complete any fields and hit return or click the login button. This will log you in to ICAT and you will have the permissions
-                associated
-                with your login. The controls then become accessible: a drop down list of operations, a drop down list of configured
-                entities and a
-                <tt>logout</tt>
-                button. Note that the menus are not aware of your permissions - so, for example, if you have read access to something but not update
-                access then you will able to see the object, change its fields but will then get an error when you try to commit the changes.
+            
+            
+               <!-- The program has the ability to add, list and delete users, groups and rules. It will accept commands from a file or from stdin. -->
+        <!-- In interactive mode it will report errors and continue. However when reading from a file it will abort at the first error. -->
+            
+            
+               
             </p>
         </section>
 
-        <section name="Create">
-            <p>
-                Select the
-                <tt>Create</tt>
-                operation and the entity name of your choice. Some items have dependencies upon others - for example you cannot create an
-                InvestigationType before you have created a Facility. If you try to do so a warning box will pop up.
-            </p>
-            <p>
-                A form will appear with all the user setable fields (attributes and many to one relationships). If you hover over a field or its label
-                then a description of that field will appear. The
-                <tt>*</tt>
-                against the field indicates that a value must be entered.
-            </p>
-            <p>
-                For many to one relationships the choice of entity to relate to appears in a pull down list. The entity is identified by a set of
-                constraint fields. These may be nested; for example when adding an Investigation you might see for the
-                <tt>type</tt>
-                <tt>field: name=RawData, facility=(name=SomeFacility)</tt>
-                meaning that is an InvestigationType with a name of
-                <tt>RawData</tt>
-                and a Facility identified by a name of
-                <tt>SomeFacility</tt>
-            </p>
-        </section>
-
-        <section name="Update">
-            <p>
-                Select the
-                <tt>Update</tt>
-                operation and the entity name of your choice. You will be offered a list of entities available for update. They are identified using
-                one of their constraint sets in the same way as choosing the target of a many to one relationship in the create operation. Select the
-                one you wish to edit by clicking the radio button and the same form used for creation will appear. Simply edit the fields and click
-                the
-                <tt>Apply Update</tt>
-                button. If you select another entity before clicking the
-                <tt>Apply Update</tt>
-                button then any changes made on the screen will be silently discarded.
-            </p>
-        </section>
-
-        <section name="Delete">
-            <p>
-                Select the
-                <tt>Delete</tt>
-                operation and the entity name of your choice. You will be offered a list of entities available for delete. Once again they are
-                identified using
-                one of their constraint sets in the same way as choosing the target of a many to one relationship in the create
-                operation. Select the
-                ones you wish to delete by clicking the check boxes and finally click the
-                <tt>Deleted checked items</tt>
-                button. They will be deleted if you have permission to do so and will vanish from the display. Remember that ICAT makes use of
-                cascaded operations; for example deleting an Investigation will also delete its Datasets and their Datafiles and all their Parameters.
-            </p>
-        </section>
+     
 
     </body>
 </document>
