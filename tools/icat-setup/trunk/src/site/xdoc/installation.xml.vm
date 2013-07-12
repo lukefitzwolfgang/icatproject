@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+    <properties>
+        <title>Installation</title>
+    </properties>
+
+    <body>
+
+        <!-- Unpack the zip file (which contains a copy of this file) and from the directory where you unpacked the zip file type: -->
+
+        <!-- java -cp "icat-setup/*" Setup [option...] args -->
+
+        <!-- One possible arg is -h. This is a good place to start. -->
+
+     
+
+        <section name="Installation">
+            <subsection name="Prerequisites">
+                <ul>
+                    <li>
+                        The icat-setup distribution:
+                        <a href="${repoUrl}/org/icatproject/ice/${project.version}/icat-setup-${project.version}-distro.zip">icat-setup-${project.version}-distro.zip</a>
+                    </li>
+                    <li>
+                        One or more installations of ICAT 4.2 or 4.3.
+                    </li>
+                </ul>
+            </subsection>
+
+            <subsection name="Summary of steps">
+                <ol>
+                    <li> Download and unpack the distribution,</li>
+                    <li> run the install script,</li>
+                    <li> and see if it works.</li>
+                </ol>
+            </subsection>
+
+          
+   
+
+            <subsection name="Check that ICE works">
+                <p>
+                    Go to https://&lt;host&gt;:&lt;port&gt;/ice and the application should start and you will be prompted for an ICAT login. The login
+                    box will have a pull down list of authentication methods.
+                    Use of them to login in and check that the set of beans you may edit is
+                    the expected set as defined in beans.list. Please have a look at the
+                    <a href="guide.html">user guide</a>
+                    to see how to use
+                    <i>ice</i>
+                    .
+                </p>
+
+                <p>In case of problems, look at the log files:
+                    server.log and ice.log which can both be found in the logs directory below your
+                    domain.
+                    If you have errors in your ice.properties the application will not respond.
+                </p>
+            </subsection>
+
+
+        </section>
+    </body>
+</document>
+			
