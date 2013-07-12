@@ -6,7 +6,7 @@
     <groupId>org.icatproject</groupId>
     <artifactId>ice</artifactId>
     <packaging>war</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <properties>
         <gwtVersion>2.5.1</gwtVersion>
@@ -41,9 +41,9 @@
     </repositories>
 
     <scm>
-        <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/ice/tags/ice-1.0.0</connection>
-        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/ice/tags/ice-1.0.0</developerConnection>
-        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ftools%2Fice%2Ftrunk/tags/ice-1.0.0</url>
+        <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/ice/trunk</connection>
+        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/ice/trunk</developerConnection>
+        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ftools%2Fice%2Ftrunk</url>
     </scm>
 
     <description>An ICAT Editor. The main use for this is envisaged to be creating Facility, ParameterTypes, DatasetTypes etc.</description>
