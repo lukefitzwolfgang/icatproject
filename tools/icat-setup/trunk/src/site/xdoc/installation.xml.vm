@@ -7,24 +7,17 @@
 
     <body>
 
-        <!-- Unpack the zip file (which contains a copy of this file) and from the directory where you unpacked the zip file type: -->
-
-        <!-- java -cp "icat-setup/*" Setup [option...] args -->
-
-        <!-- One possible arg is -h. This is a good place to start. -->
-
-     
-
         <section name="Installation">
             <subsection name="Prerequisites">
                 <ul>
                     <li>
                         The icat-setup distribution:
-                        <a href="${repoUrl}/org/icatproject/ice/${project.version}/icat-setup-${project.version}-distro.zip">icat-setup-${project.version}-distro.zip</a>
+                        <a href="${repoUrl}/org/icatproject/icat-setup/${project.version}/icat-setup-${project.version}-distro.zip">icat-setup-${project.version}-distro.zip</a>
                     </li>
                     <li>
                         One or more installations of ICAT 4.2 or 4.3.
                     </li>
+                    <li>Python 2.4 to 2.7</li>
                 </ul>
             </subsection>
 
@@ -36,25 +29,36 @@
                 </ol>
             </subsection>
 
-          
-   
-
-            <subsection name="Check that ICE works">
+            <subsection name="Running setup.py">
                 <p>
-                    Go to https://&lt;host&gt;:&lt;port&gt;/ice and the application should start and you will be prompted for an ICAT login. The login
-                    box will have a pull down list of authentication methods.
-                    Use of them to login in and check that the set of beans you may edit is
-                    the expected set as defined in beans.list. Please have a look at the
-                    <a href="guide.html">user guide</a>
-                    to see how to use
-                    <i>ice</i>
-                    .
+                    From the unpacked distribution run
+                    <tt>./setup.py install</tt>
+                    . Jar files will be installed to the defined appDir and a binary to the defined binDir. By default appDir and binDir are ~/java
+                    and ~/bin respectively for a non-root user and are /usr/share and /usr/bin for root. The appDir and binDir directories must exist
+                    and be writable by the person installing. They may be overridden. For example:
+                    <tt>./setup.py install --binDir /bin</tt>
+                    will write the executable to /bin. See
+                    <tt>./setup.py -h</tt>
+                    to get details of options.
+
+                    <p>Any existing installation will be removed first.</p>
+
+                    <p>
+                        To uninstall use
+                        <tt>./setup.py uninstall</tt>
+                        which has the same options and will do nothing if there is no installation.
+                    </p>
                 </p>
 
-                <p>In case of problems, look at the log files:
-                    server.log and ice.log which can both be found in the logs directory below your
-                    domain.
-                    If you have errors in your ice.properties the application will not respond.
+
+            </subsection>
+
+            <subsection name="Check that icat-setup works">
+                <p>
+                    Assuming that you have installed to somewhere on your path please enter
+                    <tt>icat-setup</tt>
+                    otherwise of course you will need to specify the full path. It should respond:
+                    <tt>Must have arguments url, authenticator, credentials</tt>
                 </p>
             </subsection>
 
