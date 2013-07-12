@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.icatproject</groupId>
     <artifactId>icat-setup</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>icat-setup</name>
 
@@ -37,9 +37,9 @@
     </distributionManagement>
 
     <scm>
-        <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/icat-setup/trunk</connection>
-        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/icat-setup/trunk</developerConnection>
-        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ftools%2Ficat-setup%2Ftrunk</url>
+        <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/icat-setup/tags/v1.0.0</connection>
+        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/icat-setup/tags/v1.0.0</developerConnection>
+        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ftools%2Ficat-setup%2Ftrunk/tags/v1.0.0</url>
     </scm>
 
     <repositories>
