@@ -5,26 +5,28 @@
         <format>zip</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
+
     <dependencySets>
         <dependencySet>
-            <outputDirectory>ice</outputDirectory>
-            <useTransitiveDependencies>false</useTransitiveDependencies>
-            <includes>
-                <include>org.icatproject:ice</include>
-            </includes>
+            <outputDirectory>icat-setup</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
         </dependencySet>
     </dependencySets>
+
     <fileSets>
         <fileSet>
-            <outputDirectory>ice</outputDirectory>
-            <directory>${basedir}/src/main/config</directory>
-        </fileSet>
-        <fileSet>
-            <outputDirectory>ice</outputDirectory>
+            <outputDirectory>icat-setup</outputDirectory>
             <directory>${basedir}</directory>
             <includes>
                 <include>*.txt</include>
             </includes>
         </fileSet>
+        <fileSet>
+            <outputDirectory>icat-setup</outputDirectory>
+            <directory>${basedir}/src/main/scripts</directory>
+        </fileSet>
     </fileSets>
+
 </assembly>
+
+  
