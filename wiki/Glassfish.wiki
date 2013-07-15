@@ -7,4 +7,38 @@ This page is here for convenience though it is nothing to do with ICAT.
 
 = Details =
 
-To be written
+== JDK ==
+
+Get the latest stable jdk for your architecture from the Oracle web site. It is known as Java SE and you want the JDK download. 
+
+Openjdk has exhibited some problems with glassfish so it is preferable to use the Oracle build.
+
+jdk-7u25-linux-x64.rpm is known to work on RedHat/CentOS/SL machines. You need to ensure that it is in the PATH of the person running glassfish. This can be done by adding `/usr/java/jdk1.7.0_??/bin/` to the beginning of the PATH for that user (ahead of /usr/bin if openjdk is also installed) or use the alternatives command to specify that this is your preferred java. You should ensure that java, javac, jps, keytool etc are all available from the Oracle distribution.
+
+=== Glassfish ===
+
+Designate an account for running glassfish. I will call this the glassfish account though the user name does not have to be glassfish.
+Get the latest glassfish3 zip file and unzip it to the  home directory of the glassfish account. Add ~/glassfish3/glassfish/bin to the path of the user. ogs-3.1.2.2.zip is know to work. 
+
+Some success has been reported with  glassfish-4.0.zip however it is not known if all the asadmin commands work in just the same way.
+
+Ensure that hostname -f returns a sensible result. Then issue the following commands. When you create the domain you will be asked to specify the admin username and password. Do not use the default empty password.
+
+{{{
+asadmin delete-domain domain1
+asadmin create-domain domain1
+asadmin start-domain
+asadmin enable-secure-admin
+asadmin stop-domain
+asadmin start-domain
+asadmin login
+asadmin set server.http-service.access-log.format="common"
+asadmin set server.http-service.access-logging-enabled=true
+asadmin set server.thread-pools.thread-pool.http-thread-pool.max-thread-pool-size=128
+asadmin delete-ssl --type http-listener http-listener-2
+asadmin delete-network-listener http-listener-2
+asadmin create-network-listener --listenerport 8181 --protocol http-listener-2 http-listener-2
+asadmin create-ssl --type http-listener --certname s1as --ssl3enabled=false --ssl3tlsciphers +SSL_RSA_WITH_RC4_128_MD5,+SSL_RSA_WITH_RC4_128_SHA http-listener-2
+}}}
+
+If you wish, go to http://localhost:4848 you will be redirected to https and will be able to login as admin to see from the GUI how the server is configured.
