@@ -10,10 +10,11 @@ This page is here for convenience though it is nothing to do with ICAT.
 == JDK ==
 
 Get the latest stable jdk for your architecture from the Oracle web site. It is known as Java SE and you want the JDK download. 
+* You must use at least JDK 1.7 *
 
 Openjdk has exhibited some problems with glassfish so it is preferable to use the Oracle build.
 
-jdk-7u25-linux-x64.rpm is known to work on RedHat/CentOS/SL machines. You need to ensure that it is in the PATH of the person running glassfish. This can be done by adding `/usr/java/jdk1.7.0_??/bin/` to the beginning of the PATH for that user (ahead of /usr/bin if openjdk is also installed) or use the alternatives command to specify that this is your preferred java. You should ensure that java, javac, jps, keytool etc are all available from the Oracle distribution.
+jdk-7u25-linux-x64.rpm is known to work on `RedHat/CentOS/SL` machines. You need to ensure that it is in the PATH of the person running glassfish. This can be done by adding `/usr/java/jdk1.7.0_??/bin/` to the beginning of the PATH for that user (ahead of /usr/bin if openjdk is also installed) or use the alternatives command to specify that this is your preferred java. You should ensure that java, javac, jps, keytool etc are all available from the Oracle distribution.
 
 === Glassfish ===
 
