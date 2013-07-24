@@ -13,6 +13,8 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Actions from the meeting 62 (Chair)
  * Status of ICAT 4.3 (Steve)
  * Feedback on new components (authn_simple, topcat 1.9, ice and icat-setup (All)
+ * Feedback on changes to query language, authz rules etc (All)
+ * Feedback on guidelines for developers (All)
  * Issues from ICAT production deployments (All)
  * AOB (All)
 
