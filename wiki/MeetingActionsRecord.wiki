@@ -12,7 +12,7 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
 
  * Actions from the meeting 63 (Chair)
  * Status of ICAT 4.3 (Steve)
- * ICAT Meeting in Barcelona (Steve and Alastair)
+ * ICAT F2F Meeting (Steve and Alastair)
  * Issues from ICAT production deployments (All)
  * AOB (All)
 
