@@ -3,12 +3,13 @@
 
 = Contribution Index =
 
- * [http://code.google.com/p/icatproject/source/browse/contrib/icat-ER-Diagrams            ER Diagrams (Nicola)]
- * [http://code.google.com/p/icatproject/source/browse/contrib/icat-java-client-demo       Client Demo (Steve)]
- * [http://code.google.com/p/icatproject/source/browse/contrib/icat-rest-ws                RESTful ICAT (Shelly)]
- * [http://code.google.com/p/icatproject/source/browse/contrib/scripts                     Scripts for Nexusfile ingestion (Shelly)]
- * [http://code.google.com/p/icatproject/source/browse/contrib/icat-xml-test-client        Icat xml test client (Stefan)]
- * [PyIcat                                                                                 PyICAT - a webservice client module (Christian)]
- * [http://code.google.com/p/icatproject/source/browse/contrib/icat-api-examples           Examples in Java of how to call the Icat API (Alistair)]
- * [http://code.google.com/p/icatproject/source/browse/contrib/training-materials          Training materials (Alistair)]
- * [http://code.google.com/p/icatproject/source/browse/contrib/notification-receiver-example An MDB for people to play with and be inspired by (Steve)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/icat-ER-Diagrams                ER Diagrams (Nicola)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/icat-java-client-demo           Client Demo (Steve)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/icat-rest-ws                    RESTful ICAT (Shelly)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/scripts                         Scripts for Nexusfile ingestion (Shelly)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/icat-xml-test-client            Icat xml test client (Stefan)]
+ * [PyIcat                                                                                     PyICAT - a webservice client module (Christian)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/icat-api-examples               Examples in Java of calling the Icat API (Alistair)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/icat-api-py                     Examples in Python calling the Icat API (Alistair)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/training-materials              Training materials (Alistair)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/notification-receiver-example   An MDB for people to play with and be inspired by (Steve)]
