@@ -48,13 +48,13 @@ AOB: Earlier in the meeting Shelley had asked about the IDS - Steve emphasised t
 
 === Actions 63 ===
 
-|| Item  || Description                                                                     || Res           ||  Status||
-|| 63.00 || Document the meeting and update the actions                                     || Steve         ||    Done||
-|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||       .||
-|| 61.02 || Write a note about glassfish configuration to reduce https overhead             || Steve         ||    Done|| 
-|| 61.03 || Write a note about GF 4 and AJP                                                 || Alistair      ||       .||  
-|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||       .|| 
-|| 63.01 || Plan the ICAT meeting in Barcelona                                              || Steve/Alistair||       .||
+|| Item  || Description                                                                     || Res           ||              Status||
+|| 63.00 || Document the meeting and update the actions                                     || Steve         ||                Done||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||                   .||
+|| 61.02 || Write a note about glassfish configuration to reduce https overhead             || Steve         ||                Done|| 
+|| 61.03 || Write a note about GF 4 and AJP                                                 || Alistair      || ApacheAndGlassfish ||  
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||                   .|| 
+|| 63.01 || Plan the ICAT meeting in Barcelona                                              || Steve/Alistair||                   .||
 
 == Meeting 62 - 11 July 2013 ==
 
