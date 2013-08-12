@@ -1,6 +1,12 @@
 # $Id$
+#
+#
 export user='username CIC'
 export pass='password password'
 export authenticator=db
 export credentials="$user $pass"
 export icat="https://icat.synchrotron-soleil.fr"
+export connection="$icat $authenticator $credentials"
+#
+# - the end -
+#

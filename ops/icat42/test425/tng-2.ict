@@ -1,11 +1,11 @@
 # $Id$
-#
-#
+# 
+# 
 export user='username kea@alistairmills.com'
 export pass='password 100005604064616'
 export authenticator=db
 export credentials="$user $pass"
-export icat="https://wwws.esrf.fr/icat"
+export icat="http://tng-2.default.stfc.uk0.bigv.io:8080"
 export connection="$icat $authenticator $credentials"
 #
 # - the end -

@@ -1,6 +1,12 @@
 # $Id$
+#
+#
 export user='username icat42'
 export pass='password secret'
 export authenticator=db
 export credentials="$user $pass"
 export icat="https://apps.jcns.fz-juelich.de:5443"
+export connection="$icat $authenticator $credentials"
+#
+# - the end -
+#

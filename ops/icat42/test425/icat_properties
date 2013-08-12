@@ -1,0 +1,11 @@
+# $Id$
+wsdl.location=https://icat.default.stfc.uk0.bigv.io/icat/ICATService/ICAT?wsdl
+
+#ICAT username
+username=kea@alistairmills.com
+
+#ICAT authenticator
+authenticator=db
+
+#ICAT password
+password=100005604064616

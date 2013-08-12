@@ -1,0 +1,11 @@
+# $Id$
+wsdl.location=http://tng-2.default.stfc.uk0.bigv.io:8080/ICATService/ICAT?wsdl
+
+#ICAT username
+username=kea@alistairmills.com
+
+#ICAT authenticator
+authenticator=db
+
+#ICAT password
+password=100005604064616

@@ -1,6 +1,12 @@
 # $Id$
+#
+#
 export user='username kea@alistairmills.com'
 export pass='password 100005604064616'
 export authenticator=db
 export credentials="$user $pass"
 export icat="https://icat-elettra.grid.elettra.trieste.it:8443"
+export connection="$icat $authenticator $credentials"
+#
+# - the end -
+#
