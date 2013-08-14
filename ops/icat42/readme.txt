@@ -7,7 +7,6 @@ http://code.google.com/p/icatproject/wiki/InstallIcat42
 This material is not the complete set of materials for icat 4.2.0.  It is a selected set of materials which are packaged to make it easy to get ICAT 4.2.0 to run.  It is not intended for production.
 
 Pre-requisites
-
 In order to make it simple to install ICAT42, the following configuration is assumed:
 
 operation system:       linux
@@ -43,7 +42,6 @@ ln -s $ICAT_HOME/icat.ear.config/log4j.properties .
 ln -s $ICAT_HOME/authn_db.ear.config/authn_db.properties .
 
 Glassfish Server
-
 Note that the operating system user glassfish3 is running the Glassfish Server and the applications.  The installer of ICAT has to insert properties files into the Glassfish server, so it is best if Glassfish is installed by the user glassfish3 and not by root.  The Glassfish server can run as a user process run the user glassfish3.
 
 directory:                               /home/glassfish3/glassfish3/
@@ -62,7 +60,7 @@ Obtaining the materials for the installation:
 
 svn co https://icatproject.googlecode.com/svn/ops/icat42
 
-Directories:
+Directories
 icat42/                                  contains the ear files taken from the icat 4.2 distribution materials 
 icat42/usertable_init/                   contains a script to add a user to ICATUSER database
 icat42/test_icat/                        contains a simple test for ICAT
@@ -82,20 +80,17 @@ Ports
 The port 8080 is available for the glassfish Server to deploy icat
 The port 4848 is available for the the admin console of glassfish
 
-Configuration information
-
-Configuration is stored in the following files; you only need to configure the one for the database in use:
-./db_derby/properties.sh 
-./db_oracle/properties.sh
-./db_mysql/properties.sh
-
 Instructions
-
 Create a test environment similar to the one assumed.  If it is not possible to be identical, then the files containing configuration may require changes.
 
 Ensure that the Glassfish Server is installed, but not running.  Make sure that the properties files are installed in the glassfish server as described above.
 
 Go to the directory called icat42 containing the material from the svn command and do the following:
+
+# 0. Edit the files which tell the glassfish about the database.
+
+#./authn_db.ear.config/glassfish.props
+#./icat.ear.config/glassfish.props
 
 # 1. Start the glassfish server and the database.
 
