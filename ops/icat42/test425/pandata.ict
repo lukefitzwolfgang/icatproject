@@ -1,0 +1,10 @@
+# $Id$
+export user='username root'
+export pass='password password'
+export authenticator=db
+export credentials="$user $pass"
+export icat="http://www.pandata.org:8080"
+export connection="$icat $authenticator $credentials"
+#
+# - the end -
+#
