@@ -1,5 +1,4 @@
 #summary Induction Process for new collaborators
-#labels Featured
 
 = Induction Process for new collaborators =
 
