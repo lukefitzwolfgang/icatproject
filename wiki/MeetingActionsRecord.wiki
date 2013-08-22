@@ -8,7 +8,7 @@
 
 This page holds records of the recent meetings. Earlier meetings are at MeetingActionsRecordArchive.
 
-== Meeting 65 - 22 Aug 2013 ==
+== Meeting 65 - future ==
 
  * Actions from the meeting 64 (Chair)
  * Status of ICAT 4.3 (Steve)
@@ -47,11 +47,13 @@ The meeting concluded at 15h30.
 
 === Actions 64 ===
 
-|| Item  || Description                                                                     || Res           ||              Status||
-|| 64.00 || Document the meeting and update the actions                                     || Alistair      ||                Done||
-|| 64.01 || Invite invitations to host the ICAT collaboration meeting in March '14          || Alistair      ||                Done||
-|| 64.02 || Schedule a web cast on the contents of ICAT 4.3 for September                   || Steve         ||                   .||
-|| 64.03 || Make snapshots of ICAT 4.3.rc available for comment in August                   || Steve         ||                   .||
+|| Item  || Description                                                                     || Res           ||  Status||
+|| 64.00 || Document the meeting and update the actions                                     || Alistair      ||    Done||
+|| 64.01 || Invite invitations to host the ICAT collaboration meeting in March '14          || Alistair      ||    Done||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3 for September                   || Steve         ||       .||
+|| 64.03 || Make snapshots of ICAT 4.3.rc available for comment in August                   || Steve         ||       .||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||       .|| 
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||       .|| 
 
 
 == Meeting 63 - 25 July 2013 ==
@@ -82,13 +84,13 @@ AOB: Earlier in the meeting Shelley had asked about the IDS - Steve emphasised t
 
 === Actions 63 ===
 
-|| Item  || Description                                                                     || Res           ||              Status||
-|| 63.00 || Document the meeting and update the actions                                     || Steve         ||                Done||
-|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||                   .||
-|| 61.02 || Write a note about glassfish configuration to reduce https overhead             || Steve         ||                Done|| 
-|| 61.03 || Write a note about GF 4 and AJP                                                 || Alistair      || ApacheAndGlassfish ||  
-|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||                   .|| 
-|| 63.01 || Plan the ICAT meeting in Barcelona                                              || Steve/Alistair||                Done||
+|| Item  || Description                                                                     || Res           ||     Status||
+|| 63.00 || Document the meeting and update the actions                                     || Steve         ||       Done||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||       .||
+|| 61.02 || Write a note about glassfish configuration to reduce https overhead             || Steve         ||       Done|| 
+|| 61.03 || Write a note about GF 4 and AJP                                                 || Alistair      ||ApacheAndGlassfish ||  
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||           .|| 
+|| 63.01 || Plan the ICAT meeting in Barcelona                                              || Steve/Alistair||       Done||
 
 == Meeting 62 - 11 July 2013 ==
 
