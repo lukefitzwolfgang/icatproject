@@ -22,7 +22,7 @@ These guidelines are for developers of components to encourage uniformity - espe
  * It should be possible to run setup.py install or setup.py uninstall multiple times without errors.
  * in the case .war and .ear files containing a version number, install should remove the previous one first
  * uninstall should reverse the install except that if two or more components make the same state change upon installation they should not reverse it when uninstalled.
- * install.py should consider esisiting entries in the config directory. If the target is already present but different a warning should be produced unless the -f or --force option is present to allow overwriting to take place.
+ * install.py should consider existing entries in the config directory. If the target is already present but different a warning should be produced. Overwriting should only take place if the -f or --force option is specified.
 == Documentation ==
  * All components must make use of the maven site mechanism to deploy a user guide and installation manual as one or more html pages on www.icatproject.org
 == Testing ==
