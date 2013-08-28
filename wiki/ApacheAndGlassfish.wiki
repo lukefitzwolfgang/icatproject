@@ -120,7 +120,61 @@ The following parts are done as the glassfish user, conventionally glassfish3, e
 
 === Install Glassfish4 ===
 
-As the glassfish user, install glassfish4 and get the ICAT working on https://localhost:8181/icat/ICAT/ICATService?wsdl.  This is described elsewhere.   The standard ear file is not suitable as it deploys to :8181/ICATService/ICAT?wsdl.
+As the glassfish user, install glassfish4 and get the ICAT working on https://localhost:8181/icat/ICAT/ICATService?wsdl. 
+
+== Configure the icat.ear file ==
+
+The standard ear file is not suitable as it deploys to:
+
+https://hostname:8181/ICATService/ICAT?wsdl.
+
+For example, at ESRF we could use: 
+
+https://wwws.esrf.fr/ICATService/ICAT?wsdl
+
+But we use:
+
+https://wwws.esrf.fr/icat/ICATService/ICAT?wsdl
+
+The configuration file for the end point is hidden in the icat .ear file. It is necessary to unzip/unjar the main .ear file and then unzip/unjar the icat.exposed-4.x.x.jar file, which contains file META-INF/sun-ejb-jar.xml.  In this file, the last line:
+
+{{{
+<endpoint-address-uri>ICATService/ICAT</endpoint-address-uri>
+}}}
+
+has to be modified to add “icat/”
+
+{{{
+<endpoint-address-uri>icat/ICATService/ICAT</endpoint-address-uri>
+}}}
+
+The following command-line commands are suitable:
+{{{
+mkdir tmp_icat.ear
+cd  tmp_icat.ear
+jar xvf ../icat.ear-4.2.5.ear
+mkdir tmp_expose
+cd  tmp_expose
+jar xvf ../icat.exposed-4.2.5.jar
+vi  META-INF/sun-ejb-jar.xml
+}}}
+
+To re-create jar/ear and remove the tmp files, use:
+{{{
+jar cvf  ../icat.exposed-4.2.5.jar .
+cd ..
+rm -rf tmp_expose
+jar cvf  ../icat.ear-4.2.5-icat.ear .
+rm -rf tmp_icat.ear
+}}}
+
+Undeploy and deploy...
+
+{{{
+asadmin undeploy icat.ear-4.2.5
+asadmin deploy icat.ear-4.2.5-icat.ear
+}}}
+
 
 Ensure that the tests from one of the service verifications run correctly before proceeding!
 
