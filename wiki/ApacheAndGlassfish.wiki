@@ -2,7 +2,7 @@
 
 *Contents*
 
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 
 
 = Apache Icat Front End =
@@ -178,7 +178,7 @@ asadmin deploy icat.ear-4.2.5-icat.ear
 
 Ensure that the tests from one of the service verifications run correctly before proceeding!
 
-=== Configure Glassfish to listen to ajp ===
+== Configure Glassfish to listen to ajp ==
 
 Tell the Glassfish server to pick up content from ajp on port 8009 and restart the Glassfish.
 
