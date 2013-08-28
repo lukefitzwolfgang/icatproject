@@ -122,7 +122,7 @@ The following parts are done as the glassfish user, conventionally glassfish3, e
 
 As the glassfish user, install glassfish4 and get the ICAT working on https://localhost:8181/icat/ICAT/ICATService?wsdl. 
 
-== Configure the icat.ear file ==
+=== Configure the icat.ear file ===
 
 The standard ear file is not suitable as it deploys to:
 
@@ -178,7 +178,7 @@ asadmin deploy icat.ear-4.2.5-icat.ear
 
 Ensure that the tests from one of the service verifications run correctly before proceeding!
 
-== Configure Glassfish to listen to ajp ==
+=== Configure Glassfish to listen to ajp ===
 
 Tell the Glassfish server to pick up content from ajp on port 8009 and restart the Glassfish.
 
@@ -190,7 +190,7 @@ asadmin restart-domain domain1
 
 Note that in the above lines, the label "ajp" can be almost anything, but it must be the same in both lines.
 
-=== Run the tests with the new endpoint ===
+== Run the tests with the new endpoint ==
 
 Run the tests again this time with:
 
