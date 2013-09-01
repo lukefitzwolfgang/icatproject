@@ -1,7 +1,6 @@
-#summary ICAT Main page
-#labels Installation
+#summary Contents
 
-= ICAT Main page =
+= Contents =
 
  * [IcatRequirements            Icat Requirements]
 
