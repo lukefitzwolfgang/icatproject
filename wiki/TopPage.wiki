@@ -6,4 +6,4 @@ ICAT is a database with a well defined API that provides an interface to Large F
 
 If you have found a problem or want a new feature to be included in ICAT, please submit an issue providing all the requested information.
 
-Please see the contents panel to the left.
+Please see the contents panel to the left or see a [http://code.google.com/p/icatproject/w/list list] of all Wiki pages.
