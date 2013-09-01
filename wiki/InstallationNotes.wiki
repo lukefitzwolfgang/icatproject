@@ -1,0 +1,6 @@
+#summary List of installation notes.
+
+ * [ApacheAndGlassfish Apache front end for Glassfish]
+ * [Databases Choice of Database and considerations for ICAT use]
+ * [FirewallsWithICAT Dealing with firewalls]
+ * [Glassfish How to install and configure Glassfish]
