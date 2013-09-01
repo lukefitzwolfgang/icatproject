@@ -4,9 +4,7 @@
 
  * [IcatRequirements            Icat Requirements]
  * [InstallationNotes Installation Notes]
-
 == Collaboration information ==
-
  * [MeetingActionsRecord                                                                                                   Meetings]
  * [ReviewRecommendations                                                                                                  Recommendations from the review]
  * [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICATCollaborationAssessment-v1.0.pdf  Review document]
@@ -21,19 +19,6 @@
 
  * [IcatWhosWho                                          ICAT Who's Who]
  * [http://code.google.com/p/icatproject/issues/entry    Create New Issue]
-
-== Partners ==
-
- * Diamond Light Source (STFC & Welcome Trust, UK)
- * ISIS (STFC, UK)
- * Central Laser Facility (STFC, UK)
- * International
-
-=== Clients ===
-
- * ISIS Trigger Mechanism
- * Diamond Data Handler
- * [http://code.google.com/p/topcat/ TopCAT]
 
 === FAQ ===
 
