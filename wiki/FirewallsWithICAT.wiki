@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Dealing with firewalls.
 
 = Dealing with the use of firewalls with ICAT =
 
@@ -30,6 +30,3 @@ It may be necessary to have an icat application on another port as well as its e
 {{{
 iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8181
 }}}
-
-
-= - the end - =
