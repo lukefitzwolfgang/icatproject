@@ -2,26 +2,10 @@
 
 = Contents =
 
- * [IcatRequirements            Icat Requirements]
+ * [IcatRequirements Requirements]
  * [InstallationNotes Installation Notes]
-== Collaboration information ==
- * [MeetingActionsRecord                                                                                                   Meetings]
- * [ReviewRecommendations                                                                                                  Recommendations from the review]
- * [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICATCollaborationAssessment-v1.0.pdf  Review document]
- * [http://www.icatproject.org/index.php/ICAT_review_by_SSI_-_January_2012                                                 Summary of review]
- * [ContribIndex Contributions from partners]
-
-== Design ==
-
+ * [CollaborationInformation Collaboration Information]
  * [CSMD             ICAT Metadata Model (CSMD)]
-
-== Project ==
-
  * [IcatWhosWho                                          ICAT Who's Who]
- * [http://code.google.com/p/icatproject/issues/entry    Create New Issue]
-
-=== FAQ ===
-
  * [IcatFaq Frequently Asked Questions]
-     * [IcatFaq#technologies What are the technologies Used?]
-     * [IcatFaq#whereIsCode Where is the source code?]
+ 
