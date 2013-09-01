@@ -4,6 +4,8 @@
 
  * [IcatRequirements            Icat Requirements]
 
+ * [InstallationNotes Installation Notes]
+
 == Collaboration information ==
 
  * [MeetingActionsRecord                                                                                                   Meetings]
