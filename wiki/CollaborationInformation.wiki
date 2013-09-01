@@ -1,5 +1,7 @@
 #summary Information for Collaborators
 
+= Collaboration Information =
+
  * [MeetingActionsRecord                                                                                                   Meetings]
  * [ReviewRecommendations                                                                                                  Recommendations from the review]
  * [http://code.google.com/p/icatproject/source/browse/icat3_api/trunk/Documentation/ICATCollaborationAssessment-v1.0.pdf  Review document]
