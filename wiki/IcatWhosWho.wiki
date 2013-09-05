@@ -4,11 +4,10 @@
 
 || *_Name                _* || *_Google account_*                  || *_Group_*                        || *_Role_*                         || *_Responsibilities _*    ||
 || Alun Ashton              || -                                   || STFC, DLS                        || DLS analysis group leader        || -                        ||
-|| Steve Fisher             || dr.s.m.fisher                       || STFC, ESC                        || ICAT-CLF Principal Developer     || -                        ||
-|| Tom Griffin              || tangrif...@hotmail.com              || STFC, ISIS                       || Developer                        || -                        ||
-|| Brian Matthews           || -                                   || STFC, ESC Group Leader           || ICAT Manager                     || -                        ||
-|| Alistair Mills           || crcamills                           || STFC, ESC                        || ICAT-CLF Project Manager         || -                        ||
-|| Ghita Kouadri Mostefaoui ||  -                                  || STFC, DLS                        || DLS analysis group member        || -                        ||
-|| Kevin Phipps             || -                                   || STFC, ESC                        || ICAT-CLF Developer               || -                        ||
-|| Shelly Ren               || -                                   || SNS, ORNL                        || -                                || -                        ||
-|| Antony Wilson            || -                                   || STFC, ESC                        || -                                || -                        ||
+|| Steve Fisher             || dr.s.m.fisher                       || STFC, SCD                        || ICAT principal developer         || -                        ||
+|| Tom Griffin              || tangrif...@hotmail.com              || STFC, ISIS                       || ISIS deployment manager          || -                        ||
+|| Brian Matthews           || -                                   || STFC, SCD Group Leader           || ICAT manager                     || -                        ||
+|| Alistair Mills           || crcamills                           || STFC, SCD                        || ICAT project manager             || -                        ||
+|| Kevin Phipps             || -                                   || STFC, SCD                        || CLF deployment manager           || -                        ||
+|| Shelly Ren               || -                                   || SNS, ORNL                        || SNS deployment manager           || -                        ||
+|| Kunal Arora              || -                                   || STFC, SCD                        || ICAT support                     || -                        ||
