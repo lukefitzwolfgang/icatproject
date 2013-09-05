@@ -13,9 +13,10 @@ This page holds records of the recent meetings. Earlier meetings are at MeetingA
  * Actions from the meeting 65 (Chair)
  * Status of ICAT 4.3 (Steve)
  * Update from Pandata (Alistair)
+ * Status of IDS (Steve)
  * AOB (All)
 
-== Meeting 65 - future ==
+== Meeting 65 - 5 September 2013 ==
 
  * Actions from the meeting 64 (Chair)
  * Status of ICAT 4.3 (Steve)
