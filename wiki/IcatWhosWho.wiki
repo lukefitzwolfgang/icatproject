@@ -5,9 +5,9 @@
 || *_Name                _* || *_Google account_*                  || *_Group_*                        || *_Role_*                         || *_Responsibilities _*    ||
 || Alun Ashton              || -                                   || STFC, DLS                        || DLS analysis group leader        || -                        ||
 || Steve Fisher             || dr.s.m.fisher                       || STFC, SCD                        || ICAT principal developer         || -                        ||
-|| Tom Griffin              || tangrif...@hotmail.com              || STFC, ISIS                       || ISIS deployment manager          || -                        ||
+|| Tom Griffin              || tom.grif...@stfc.ac.uk              || STFC, ISIS                       || ISIS computing group             || -                        ||
 || Brian Matthews           || -                                   || STFC, SCD Group Leader           || ICAT manager                     || -                        ||
 || Alistair Mills           || crcamills                           || STFC, SCD                        || ICAT project manager             || -                        ||
-|| Kevin Phipps             || -                                   || STFC, SCD                        || CLF deployment manager           || -                        ||
+|| Kevin Phipps             || -                                   || STFC, SCD                        || ISIS & CLF service manager       || -                        ||
 || Shelly Ren               || -                                   || SNS, ORNL                        || SNS deployment manager           || -                        ||
 || Kunal Arora              || -                                   || STFC, SCD                        || ICAT support                     || -                        ||
