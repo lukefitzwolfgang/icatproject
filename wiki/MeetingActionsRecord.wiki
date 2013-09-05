@@ -44,6 +44,10 @@ The meeting concluded at 15h30.
 || 65.01 || Discuss the arrangements for ICAT 2014 with Pandata                             || TG/AM         ||       .||
 || 65.02 || Provide feedback on ICAT 4.3 and its related parts                              || All           ||       .||
 || 65.03 || Meet again on 19 September                                                      || All           ||       .||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3 for September                   || Steve         ||       .||
+|| 64.03 || Make snapshots of ICAT 4.3.rc available for comment in August                   || Steve         ||       .||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||       .|| 
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||       .|| 
 
 == Meeting 64 - 8 Aug 2013 ==
 
