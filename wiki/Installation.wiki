@@ -14,7 +14,13 @@ The installation command is setup. Some linux distributions have a setup command
 
 Some components make use of a config file which is not itself to be installed. This takes the form xxx-setup.properties. If it is not present in the current directory when you run any setup command it will be copied from a file xxx-setup.properties.example and you will be invited to edit it and the command will terminate.
 
-The setup command 
+The setup command has a help flag. So you can enter:
+
+{{{
+./setup -h
+}}}
+
+This will list the options one of which will be -v (or --verbose). Generally -v prints the commands that are being issued and -vv prints the command output as well.
 
 == Configure ==
 
@@ -38,3 +44,27 @@ This will
 Once configure has run succesfully then move on to use "./setup install"
 
 It should be safe to run "./setup configure" at any time to check the state of the config files.
+
+== Install ==
+
+Change directory to the unpacked distribution and enter 
+
+{{{
+./setup install
+}}}
+
+This will now carry out the installation. It will stop on some errors but will generally try to continue so that as many problems as possible will be found in each pass. 
+
+There is no need to uninstall before trying to install again.
+
+It is fine to run install after a successful installation; the component will simply be reinstalled.
+
+== Uninstall ==
+
+Change directory to the unpacked distribution and enter 
+
+{{{
+./setup uninstall
+}}}
+
+This will uninstall the component. Any configuration files will be removed. So if you simply want to install a new version of the component then do not use uninstall on the old one as old configuration files will be lost.
