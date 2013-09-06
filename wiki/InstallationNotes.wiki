@@ -1,6 +1,7 @@
 #summary List of installation notes.
 
 = Installation Notes =
+ * [Installation Installation instructions for all new ICAT component releases]
  * [ApacheAndGlassfish Apache front end for Glassfish]
  * [Databases Choice of Database and considerations for ICAT use]
  * [FirewallsWithICAT Dealing with firewalls]
