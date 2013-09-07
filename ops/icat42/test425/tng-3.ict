@@ -1,0 +1,12 @@
+# $Id$
+export user='username kea@alistairmills.com'
+export pass='password 100005604064616'
+export user='username root'
+export pass='password password'
+export authenticator=db
+export credentials="$user $pass"
+export icat="http://tng-3.default.stfc.uk0.bigv.io:8080"
+export connection="$icat $authenticator $credentials"
+#
+# - the end -
+#
