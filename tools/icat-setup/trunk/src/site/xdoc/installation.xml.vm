@@ -21,36 +21,14 @@
                 </ul>
             </subsection>
 
-            <subsection name="Summary of steps">
+              <subsection name="Summary of steps">
                 <ol>
-                    <li> Download and unpack the distribution,</li>
-                    <li> run the install script,</li>
-                    <li> and see if it works.</li>
+                    <li>
+                        Please follow
+                        <a href="http://code.google.com/p/icatproject/wiki/Installation"> the generic installation instructions</a>
+                    </li>
+                    <li>Check that it works.</li>
                 </ol>
-            </subsection>
-
-            <subsection name="Running setup.py">
-                <p>
-                    From the unpacked distribution run
-                    <tt>./setup.py install</tt>
-                    . Jar files will be installed to the defined appDir and a binary to the defined binDir. By default appDir and binDir are ~/java
-                    and ~/bin respectively for a non-root user and are /usr/share and /usr/bin for root. The appDir and binDir directories must exist
-                    and be writable by the person installing. They may be overridden. For example:
-                    <tt>./setup.py install --binDir /bin</tt>
-                    will write the executable to /bin. See
-                    <tt>./setup.py -h</tt>
-                    to get details of options.
-
-                    <p>Any existing installation will be removed first.</p>
-
-                    <p>
-                        To uninstall use
-                        <tt>./setup.py uninstall</tt>
-                        which has the same options and will do nothing if there is no installation.
-                    </p>
-                </p>
-
-
             </subsection>
 
             <subsection name="Check that icat-setup works">
