@@ -9,14 +9,35 @@
     <dependencySets>
         <dependencySet>
             <outputDirectory>icat-setup</outputDirectory>
-            <useProjectArtifact>true</useProjectArtifact>
+            <useTransitiveDependencies>true</useTransitiveDependencies>
+            <includes>
+                <include>org.icatproject:icat.client</include>
+                <include>org.icatproject:icat-setup</include>
+                <include>commons-cli:commons-cli</include>
+            </includes>
         </dependencySet>
+
+        <dependencySet>
+            <outputDirectory>icat-setup</outputDirectory>
+            <useTransitiveDependencies>false</useTransitiveDependencies>
+            <unpack>true</unpack>
+            <unpackOptions>
+                <includes>
+                    <include>*.py</include>
+                </includes>
+            </unpackOptions>
+            <includes>
+                <include>org.icatproject:icat.utils</include>
+            </includes>
+        </dependencySet>
+
     </dependencySets>
 
     <fileSets>
         <fileSet>
             <outputDirectory>icat-setup</outputDirectory>
             <directory>${basedir}</directory>
+            <filtered>true</filtered>
             <includes>
                 <include>*.txt</include>
             </includes>
