@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.icatproject</groupId>
     <artifactId>icat-setup</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
 
     <name>icat-setup</name>
 
@@ -54,7 +54,7 @@
         <dependency>
             <groupId>org.icatproject</groupId>
             <artifactId>icat.client</artifactId>
-            <version>4.2.5</version>
+            <version>4.3.0-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.icatproject</groupId>
@@ -69,6 +69,11 @@
             <version>1.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.icatproject</groupId>
+            <artifactId>icat.utils</artifactId>
+            <version>4.3.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
