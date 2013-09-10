@@ -6,6 +6,15 @@
     </properties>
 
     <body>
+
+        <section name="1.0.1">
+            <p>Initial release</p>
+            <ul>
+                <li>Works with icat 4.3</li>
+                <li>Also edits PublicStep</li>
+            </ul>
+        </section>
+
         <section name="1.0.0">
             <p>Initial release</p>
         </section>
