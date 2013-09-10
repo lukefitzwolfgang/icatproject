@@ -17,13 +17,14 @@ import org.apache.commons.cli.GnuParser;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
-import org.icatproject.Group;
+import org.icatproject.Grouping;
 import org.icatproject.ICAT;
 import org.icatproject.ICATService;
 import org.icatproject.IcatExceptionType;
 import org.icatproject.IcatException_Exception;
 import org.icatproject.Login.Credentials;
 import org.icatproject.Login.Credentials.Entry;
+import org.icatproject.PublicStep;
 import org.icatproject.Rule;
 import org.icatproject.User;
 import org.icatproject.UserGroup;
@@ -32,20 +33,13 @@ public class Setup {
 
 	private static ICAT icatEP;
 	private static String sessionId;
-	private static int WIDTH = 60;
+	private static int WIDTH = 80;
 
 	enum TableType {
-		Rule, Group, User
+		Rule, Grouping, User, PublicStep
 	};
 
-	private static String[] tables = { "Application", "Datafile", "DatafileFormat",
-			"DatafileParameter", "Dataset", "DatasetParameter", "DatasetType", "Facility",
-			"FacilityCycle", "Group", "InputDatafile", "InputDataset", "Instrument",
-			"InstrumentScientist", "Investigation", "InvestigationParameter", "InvestigationType",
-			"InvestigationUser", "Job", "Keyword", "OutputDatafile", "OutputDataset",
-			"ParameterType", "PermissibleStringValue", "Publication", "RelatedDatafile", "Rule",
-			"Sample", "SampleParameter", "SampleType", "Shift", "Study", "StudyInvestigation",
-			"User", "UserGroup" };
+	private static List<String> tables;;
 
 	public static void main(String[] args) {
 
@@ -118,7 +112,24 @@ public class Setup {
 		}
 		ICATService icatService = new ICATService(icatUrl, new QName("http://icatproject.org",
 				"ICATService"));
+		
 		Setup.icatEP = icatService.getICATPort();
+		try {
+			String[] version = icatEP.getApiVersion().split("\\.");
+			if (version.length != 3) {
+				abort("Unexpected ICAT version information " + icatEP.getApiVersion());
+			}
+			try {
+				if (Integer.parseInt(version[0]) * 10 + Integer.parseInt(version[1]) < 43) {
+					abort("ICAT Version must be >= 4.3.x");
+				}
+			} catch (NumberFormatException e) {
+				abort("Major and minor version must be numeric. Version was "
+						+ icatEP.getApiVersion());
+			}
+		} catch (IcatException_Exception e) {
+			abort("Unable to get version of ICAT " + e.getClass() + " " + e.getMessage());
+		}
 
 		if (args.length % 2 != 0) {
 			abort("Credential list must of even length with a series of name value e.g. 'username root password secret'");
@@ -145,6 +156,7 @@ public class Setup {
 
 		try {
 			sessionId = icatEP.login(authenticator, credentials);
+			tables = icatEP.getEntityNames();
 		} catch (IcatException_Exception e) {
 			abort(e.getMessage());
 		}
@@ -168,10 +180,10 @@ public class Setup {
 					} else if (line.startsWith("listuser")) {
 						String[] tokens = line.split("\\s+");
 						if (tokens.length == 2) {
-							search("User INCLUDE UserGroup, Group [name like '" + tokens[1] + "']",
-									TableType.User);
+							search("User INCLUDE UserGroup, Grouping [name like '" + tokens[1]
+									+ "']", TableType.User);
 						} else {
-							search("User INCLUDE UserGroup, Group", TableType.User);
+							search("User INCLUDE UserGroup, Grouping", TableType.User);
 						}
 					} else if (line.startsWith("deluser")) {
 						String[] tokens = line.split("\\s+");
@@ -204,10 +216,10 @@ public class Setup {
 					} else if (line.startsWith("listrule")) {
 						String[] tokens = line.split("\\s+");
 						if (tokens.length == 2) {
-							search("Rule INCLUDE Group <-> Group[name like '" + tokens[1] + "']",
-									TableType.Rule);
+							search("Rule INCLUDE Grouping <-> Grouping[name like '" + tokens[1]
+									+ "']", TableType.Rule);
 						} else {
-							search("Rule INCLUDE Group", TableType.Rule);
+							search("Rule INCLUDE Grouping", TableType.Rule);
 						}
 					} else if (line.startsWith("delrule")) {
 						String[] tokens = line.split("\\s+");
@@ -221,10 +233,10 @@ public class Setup {
 					} else if (line.startsWith("listgroup")) {
 						String[] tokens = line.split("\\s+");
 						if (tokens.length == 2) {
-							search("Group INCLUDE UserGroup, User [name like '" + tokens[1] + "']",
-									TableType.Group);
+							search("Grouping INCLUDE UserGroup, User [name like '" + tokens[1]
+									+ "']", TableType.Grouping);
 						} else {
-							search("Group INCLUDE UserGroup, User", TableType.Group);
+							search("Grouping INCLUDE UserGroup, User", TableType.Grouping);
 						}
 					} else if (line.startsWith("delgroup")) {
 						String[] tokens = line.split("\\s+");
@@ -232,16 +244,43 @@ public class Setup {
 							throw new ApplicationException("delgroup requires 1 parameters - id '"
 									+ line + "'");
 						}
-						Group g = new Group();
+						Grouping g = new Grouping();
 						g.setId(Long.parseLong(tokens[1]));
 						icatEP.delete(sessionId, g);
+
+					} else if (line.startsWith("addstep")) {
+						String[] tokens = line.split("\\s+");
+						if (tokens.length != 3) {
+							throw new ApplicationException(
+									"addstep requires 2 parameters - origin and field '" + line
+											+ "'");
+						}
+						addStep(tokens[1], tokens[2]);
+					} else if (line.startsWith("liststep")) {
+						String[] tokens = line.split("\\s+");
+						if (tokens.length == 2) {
+							search("PublicStep [field like '" + tokens[1] + "']",
+									TableType.PublicStep);
+						} else {
+							search("PublicStep", TableType.PublicStep);
+						}
+					} else if (line.startsWith("delstep")) {
+						String[] tokens = line.split("\\s+");
+						if (tokens.length != 2) {
+							throw new ApplicationException("delstep requires 1 parameter - id '"
+									+ line + "'");
+						}
+						PublicStep s = new PublicStep();
+						s.setId(Long.parseLong(tokens[1]));
+						icatEP.delete(sessionId, s);
+
 					} else if (line.trim().isEmpty() || line.startsWith("#")) {
 						// Skip empty lines or lines starting with #}
 					} else if (line.startsWith("help")) {
 						printHelp();
 					} else {
 						throw new ApplicationException(
-								"Valid commands are help, adduser, addrule, listuser, listrule, listgroup, deluser, delrule, delgroup");
+								"Valid commands are help, adduser, addrule, addstep, listuser, listrule, listgroup, liststep, deluser, delrule, delgroup, delstep");
 					}
 				} catch (Exception e) {
 					if (interactive) {
@@ -259,27 +298,33 @@ public class Setup {
 
 	private static void printHelp() {
 		Para p = new Para(WIDTH);
-		p.add("The program has the ability to add, list and delete users, groups and rules.");
-		p.add("Valid commands are help, adduser, addrule, listuser, listrule, listgroup, deluser, delrule and delgroup.");
+		p.add("The program has the ability to add, list and delete Users, Groupings, Rules and PublicSteps.");
+		p.add("Valid commands are help, adduser, addrule, addstep, listuser, listrule, listgroup, liststep, deluser, delrule, delgroup and delstep.");
 		System.out.println(p);
 
 		p = new Para(WIDTH);
-		p.add("adduser syntax is: adduser <username> <groupname> where the user and group are created as necessary and linked");
+		p.add("adduser syntax is: adduser <username> <groupname> where the User and Grouping are created as necessary and linked");
 		System.out.println(p);
 
 		p = new Para(WIDTH);
-		p.add("addrule syntax is: addrule <groupname> <what> <crud> where 'crud' is letters from the set C,R,U,D and 'what' is the rule. 'What' may have the special value 'ALL' to apply the specified 'crud' to all tables for that group.");
+		p.add("addrule syntax is: addrule <groupname> <what> <crud> where 'crud' is letters from the set C,R,U,D and 'what' is the rule.");
+		p.add("'What' may have the special value 'ALL' to apply the specified 'crud' to all tables for that Grouping.");
+		p.add("'Groupname' may have the special value 'null' to indicate that the rule does not apply to a specific Grouping.");
+		System.out.println(p);
+
+		p = new Para(WIDTH);
+		p.add("addstep syntax is: addstep <origin> <field>.");
 		System.out.println(p);
 
 		p = new Para(WIDTH);
 		p.add("All the list commands will take an extra parameter to match against the");
-		p.add("name of a user, the name of a group, or the name of the group to which a rule");
-		p.add("applies. The parameter may contain SQL style wild cards.");
+		p.add("name of a User, the name of a Grouping, the name of the Grouping to which a rule");
+		p.add("applies or the origin entity for a PublicStep. The parameter may contain SQL style wild cards.");
 		System.out.println(p);
 
 		p = new Para(WIDTH);
 		p.add("The del commands all expect the id of the object to be deleted. This can");
-		p.add(" be obtained from the corresponding list command");
+		p.add("be obtained from the corresponding list command.");
 		System.out.println(p);
 	}
 
@@ -297,17 +342,17 @@ public class Setup {
 					} else {
 						System.out.print(", ");
 					}
-					System.out.print(ug.getGroup().getName());
+					System.out.print(ug.getGrouping().getName());
 				}
 				System.out.println("]");
 			} else if (tt == TableType.Rule) {
 				Rule r = (Rule) o;
-				Group g = r.getGroup();
+				Grouping g = r.getGrouping();
 				String name = g == null ? "NULL" : g.getName();
 				System.out.println(r.getId() + " : " + name + " " + r.getWhat() + " "
 						+ r.getCrudFlags());
-			} else if (tt == TableType.Group) {
-				Group g = (Group) o;
+			} else if (tt == TableType.Grouping) {
+				Grouping g = (Grouping) o;
 				System.out.print(g.getId() + " : " + g.getName() + " [");
 				boolean first = true;
 				for (UserGroup ug : g.getUserGroups()) {
@@ -319,6 +364,9 @@ public class Setup {
 					System.out.print(ug.getUser().getName());
 				}
 				System.out.println("]");
+			} else if (tt == TableType.PublicStep) {
+				PublicStep s = (PublicStep) o;
+				System.out.println(s.getId() + " : " + s.getOrigin() + " to " + s.getField());
 			}
 		}
 
@@ -333,29 +381,36 @@ public class Setup {
 			throws IcatException_Exception, ApplicationException {
 		Rule rule = new Rule();
 		if (groupName != null) {
-			List<Object> os = icatEP.search(sessionId, "Group[name ='" + groupName + "']");
+			List<Object> os = icatEP.search(sessionId, "Grouping[name ='" + groupName + "']");
 			if (os.size() != 1) {
-				throw new ApplicationException("Group " + groupName + " does not exist");
+				throw new ApplicationException("Grouping " + groupName + " does not exist");
 			}
-			Group g = (Group) os.get(0);
-			rule.setGroup(g);
+			Grouping g = (Grouping) os.get(0);
+			rule.setGrouping(g);
 		}
 		rule.setWhat(what);
 		rule.setCrudFlags(crudFlags);
 		icatEP.create(sessionId, rule);
 	}
 
+	private static void addStep(String origin, String field) throws IcatException_Exception {
+		PublicStep s = new PublicStep();
+		s.setOrigin(origin);
+		s.setField(field);
+		icatEP.create(sessionId, s);
+	}
+
 	private static void addUserGroupMember(String userName, String groupName)
 			throws IcatException_Exception {
-		Group group = null;
+		Grouping group = null;
 
-		List<Object> os = icatEP.search(sessionId, "Group[name ='" + groupName + "']");
+		List<Object> os = icatEP.search(sessionId, "Grouping[name ='" + groupName + "']");
 		if (os.size() == 0) {
-			group = new Group();
+			group = new Grouping();
 			group.setName(groupName);
 			group.setId(icatEP.create(sessionId, group));
 		} else if (os.size() == 1) {
-			group = (Group) os.get(0);
+			group = (Grouping) os.get(0);
 		}
 
 		User user = null;
@@ -371,7 +426,7 @@ public class Setup {
 
 		UserGroup userGroup = new UserGroup();
 		userGroup.setUser(user);
-		userGroup.setGroup(group);
+		userGroup.setGrouping(group);
 
 		try {
 			icatEP.create(sessionId, userGroup);
