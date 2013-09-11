@@ -1,0 +1,54 @@
+digraph {
+    rankdir=LR;
+    node [shape=box];
+    edge [fontsize=10];
+    { rank=same;
+      Job -> Application; 
+      Application -> Shift -> Keyword -> Publication -> Study [style=invis]; 
+      Study -> User;
+      User -> Group [dir=both]; 
+      Group -> Rule [dir=back]; }
+    { rank=same;
+      Datafile -> Dataset -> Sample -> Investigation -> Instrument; }
+    { rank=same;
+      edge [style=invis];
+      DatafileParameter -> DatafileFormat -> DatasetParameter -> DatasetType -> SampleParameter -> SampleType -> InvestigationParameter -> InvestigationType -> FacilityCycle; }
+    { rank=same;
+      PermissibleStringValue -> ParameterType -> Facility; }
+
+    Job -> Datafile [dir=both,label=InputDatafile];
+    Job -> Datafile [dir=both,label=OutputDatafile];
+    Job -> Dataset [dir=both,label=InputDataset];
+    Job -> Dataset [dir=both,label=OutputDataset];
+
+    Shift -> Investigation;
+    Keyword -> Investigation;
+    Publication -> Investigation;
+    Study -> Investigation [dir=both];
+    User -> Investigation [dir=both,label=InvestigationUser];
+
+    User -> Instrument [dir=both,label=InstrumentScientist];
+
+    Datafile -> Datafile [dir=both,label=RelatedDatafile];
+    Datafile -> DatafileParameter [dir=back];
+    DatafileParameter -> ParameterType [weight=2];
+    Datafile -> DatafileFormat -> Facility;
+
+    Dataset -> DatasetParameter [dir=back];
+    DatasetParameter -> ParameterType;
+    Dataset -> DatasetType -> Facility;
+
+    Sample -> SampleParameter [dir=back];
+    SampleParameter -> ParameterType;
+    Sample -> SampleType -> Facility;
+
+    Dataset -> Investigation;
+
+    Investigation -> Facility;
+    Investigation -> InvestigationType -> Facility;
+    Investigation -> InvestigationParameter [dir=back];
+    InvestigationParameter -> ParameterType;
+    Investigation -> FacilityCycle -> Facility;
+
+    Instrument -> Facility;
+}
