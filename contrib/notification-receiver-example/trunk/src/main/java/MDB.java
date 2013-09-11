@@ -8,7 +8,7 @@ import javax.jms.ObjectMessage;
 /*
  * The MessageDriven annotation defines a message selector with an SQL like syntax to select only datafile creates.
  */
-@MessageDriven(mappedName = "jms/ICATTopic", activationConfig = { @ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "entity = 'Datafile' AND operation='C'") })
+@MessageDriven(mappedName = "jms/ICAT/Topic", activationConfig = { @ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "entity = 'Datafile' AND operation='C'") })
 public class MDB implements MessageListener {
 
 	/**
