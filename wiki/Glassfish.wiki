@@ -22,7 +22,7 @@ Designate an account for running glassfish. I will call this the glassfish accou
 
 For glassfish3 get the latest glassfish3 zip file and unzip it to the  home directory of the glassfish account. Add ~/glassfish3/glassfish/bin to the path of the user. ogs-3.1.2.2.zip is know to work.
 
-For glassfish4 get the latest distribution without jdk. For example java_ee_sdk-7-unix.sh is known to work. Install with the defaults. You may prefer not to install the updatetool. Add ~/glassfish4/glassfish/bin to the path of the user.
+For glassfish4 get the latest distribution without jdk. Install with the defaults. You may prefer not to install the updatetool. Add ~/glassfish4/glassfish/bin to the path of the user. * However ICAT4.3.0 will not install under glassfish4 *
 
 Ensure that hostname -f returns a sensible result. Then issue the following commands. When you create the domain you will be asked to specify the admin username and password. Do not use the default empty password.
 
@@ -46,9 +46,13 @@ asadmin create-ssl --type http-listener --certname s1as --ssl3enabled=false --ss
 If you wish, go to http://localhost:4848 you will be redirected to https and will be able to login as admin to see from the GUI how the server is configured.
 
 === Expired certificates ===
-Even glassfish4 is distributed with expired ca certs. They do not do any harm expept for cluttering the server.log. To get rid of the two dated 2002 go to the config directory for your domain and:
+Expired cacerts appear to do not harm except for cluttering the server.log. To get rid of them go to the config directory for your domain and:
 {{{
 keytool -delete -keystore cacerts.jks -alias gtecybertrustglobalca
 keytool -delete -keystore cacerts.jks -alias gtecybertrust5ca
 }}}
-in each case you will be prompted for the keystore password which by default is "changeit".
+for each offending certificate. In each case you will be prompted for the keystore password which by default is "changeit".
+
+=== Database connectors ===
+Your chosen database jars must be installed in the lib directory of your domain. These files will have names such as: mysql-connector-java-5.1.21-bin.jar (for MySQL) and ojdbc6.jar (for Oracle).
+
