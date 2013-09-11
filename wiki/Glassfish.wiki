@@ -47,8 +47,8 @@ If you wish, go to http://localhost:4848 you will be redirected to https and wil
 
 === Expired certificates ===
 Even glassfish4 is distributed with expired ca certs. They do not do any harm expept for cluttering the server.log. To get rid of the two dated 2002 go to the config directory for your domain and:
-
+{{{
 keytool -delete -keystore cacerts.jks -alias gtecybertrustglobalca
 keytool -delete -keystore cacerts.jks -alias gtecybertrust5ca
-
+}}}
 in each case you will be prompted for the keystore password which by default is "changeit".
