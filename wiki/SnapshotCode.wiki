@@ -23,7 +23,7 @@ In addition for ICAT please take note of changes in:
 
 == Still to do ==
 
-Two small recent changes to the schema that were proposed. It is still not clear to me what to do with these suggested changes.
+ * Two small recent changes to the schema that were proposed. It is still not clear to me what to do with these suggested changes.
 
 == Postponed to 3.4.1 ==
  * Support for glassfish 4
