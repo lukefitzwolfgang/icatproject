@@ -1,0 +1,32 @@
+#summary Snapshot Code
+
+= Snapshot Code =
+
+These snapshots exists for people to test before the code is released. The snapshot code should not be used in production environments and should be thrown away when the final code is released.
+
+== Components == 
+
+There are interdependencies the new authn_db needs at least icat 4.3 and icat-setup version 1.1.0 is needed to talk to the new snapshot. I am very interested in getting feedback on both installation and the components themselves. You will find that the installation process has changed so PLEASE READ THE INSTRUCTIONS.
+
+As these are snapshot releases the url pointing to the distro is wrong in each case so I give it below. This is the suggested order of installation:
+
+ # http://www.icatproject.org/mvn/site/authn_db/1.1.0-SNAPSHOT/authn_db.ear/installation.html with distro
+http://www.icatproject.org/mvn/repo/org/icatproject/authn_db.ear/1.1.0-SNAPSHOT/authn_db.ear-1.1.0-20130906.153139-2-distro.zip
+
+
+ # http://www.icatproject.org/mvn/site/tools/icat-setup/1.1.0-SNAPSHOT/installation.html with distro
+http://www.icatproject.org/mvn/repo/org/icatproject/icat-setup/1.1.0-SNAPSHOT/icat-setup-1.1.0-20130906.160307-1-distro.zip
+
+
+# http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.ear/installation.html with distro
+http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.3.0-SNAPSHOT/icat.ear-4.3.0-20130906.155806-2-distro.zip
+
+In addition for ICAT please take not of changes in:
+
+ * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.client/manual.html with distro
+* http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.core/schema.html
+* http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/release-notes.html
+
+== Still to do ==
+
+There are a couple of changes that not yet made it to icat 4.3.0 - these are the two small recent changes to the schema that were proposed. Also nested JPQL queries are not yet supported. Adding the schema changes is very easy once it is clear what they should be. The nested JPQL will probably be 4.3.1.
