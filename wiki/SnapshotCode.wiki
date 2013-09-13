@@ -12,20 +12,16 @@ As these are snapshot releases the url pointing to the distro is wrong in each c
 
  # http://www.icatproject.org/mvn/site/authn_db/1.1.0-SNAPSHOT/authn_db.ear/installation.html with distro
 http://www.icatproject.org/mvn/repo/org/icatproject/authn_db.ear/1.1.0-SNAPSHOT/authn_db.ear-1.1.0-20130906.153139-2-distro.zip
-
-
  # http://www.icatproject.org/mvn/site/tools/icat-setup/1.1.0-SNAPSHOT/installation.html with distro
 http://www.icatproject.org/mvn/repo/org/icatproject/icat-setup/1.1.0-SNAPSHOT/icat-setup-1.1.0-20130906.160307-1-distro.zip
-
-
 # http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.ear/installation.html with distro
 http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.3.0-SNAPSHOT/icat.ear-4.3.0-20130906.155806-2-distro.zip
 
 In addition for ICAT please take not of changes in:
 
- * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.client/manual.html with distro
-* http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.core/schema.html
-* http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/release-notes.html
+ * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.client/manual.html 
+ * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.core/schema.html
+ * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/release-notes.html
 
 == Still to do ==
 
