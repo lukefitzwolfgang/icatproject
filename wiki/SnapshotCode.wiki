@@ -23,4 +23,8 @@ In addition for ICAT please take note of changes in:
 
 == Still to do ==
 
-There are a couple of changes that not yet made it to icat 4.3.0 - these are the two small recent changes to the schema that were proposed. Also nested JPQL queries are not yet supported. Adding the schema changes is very easy once it is clear what they should be. The nested JPQL will probably be 4.3.1.
+Two small recent changes to the schema that were proposed. It is still not clear to me what to do with these suggested changes.
+
+== Postponed to 3.4.1 ==
+ * Support for glassfish 4
+ * Support for queries with nested JPQL (subselects)
