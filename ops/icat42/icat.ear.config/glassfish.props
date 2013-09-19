@@ -5,7 +5,7 @@ driver=org.apache.derby.jdbc.ClientDataSource
 icatProperties=Password=APP:User=APP:serverName=localhost:DatabaseName=icat:connectionAttributes=";"create"'"="'"true
 
 # Must contain "glassfish/domains"
-glassfish=/home/kunalpractice/glassfish3
+glassfish=/home/glassfish3/glassfish3
 
 # Port for glassfish admin calls (normally 4848)
 port=4848
