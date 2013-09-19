@@ -36,7 +36,7 @@ The installation of the software is not dependant on setting the environmental v
 
 It is necessary for the application property files to be installed for the glassfish.  To do this, use the following commands:
 
-cd $GLASSFISH_HOME/glassfish/domains/domain1
+cd $GLASSFISH_HOME/glassfish/domains/domain1/config
 ln -s $ICAT_HOME/icat.ear.config/icat.properties .
 ln -s $ICAT_HOME/icat.ear.config/log4j.properties .
 ln -s $ICAT_HOME/authn_db.ear.config/authn_db.properties .
