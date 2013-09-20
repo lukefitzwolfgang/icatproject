@@ -51,7 +51,7 @@ If you don't have a trusted certificate then any java application seeking to use
 {{{
 keytool -export -keystore keystore.jks -file cert -storepass changeit -alias s1as
 }}}
-will extract the certificate to a file called cert. The keystore password is by default "changeit".Then go to the jre/lib/security directory for the jdk you will use and if jssecacerts does not exist:
+will extract the certificate to a file called cert. The keystore password is by default "changeit". Then go to the jre/lib/security directory for the jdk you will use and if jssecacerts does not exist:
 {{{
 cp cacerts jssecacerts
 }}}
