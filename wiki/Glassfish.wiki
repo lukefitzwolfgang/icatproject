@@ -53,5 +53,18 @@ keytool -delete -keystore cacerts.jks -alias gtecybertrust5ca
 }}}
 for each offending certificate. In each case you will be prompted for the keystore password which by default is "changeit".
 
+=== Certificates ===
+If you don't have a trusted certificate then any java application seeking to use the glassfish will need to be told to trust it. Go to the config directory for your domain and:
+{{{
+keytool -export -keystore keystore.jks -file cert -storepass changeit -alias s1as
+}}}
+will extract the certificate. Then go to the jre/lib/security directory for the jdk you will use and if jssecacerts does not exist:
+{{{
+cp cacerts jssecacerts
+}}}
+{{{
+keytool -import -keystore jssecacerts -file <cert> -storepass changeit -alias <full host name> -noprompt
+where <cert> identifies the exported certificate and the recommended alias is the fully qualified name of the machine you are trusting.
+
 === Database connectors ===
-Your chosen database jars must be installed in the lib directory of your domain. These files will have names such as: mysql-connector-java-5.1.21-bin.jar (for MySQL) and ojdbc6.jar (for Oracle).
+Your chosen database jars must be installed in the lib directory of your domain. These files will have names such as: mysql-connector-java-5.1.21-bin.jar (for MySQL) and ojdbc6.jar (for Oracle). After installing these jars glassfish must be restarted. It is recommended to use asadmin stop-domain followed by asadmin start-domain to achieve this.
