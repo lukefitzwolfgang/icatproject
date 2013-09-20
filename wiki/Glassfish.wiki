@@ -51,14 +51,14 @@ If you don't have a trusted certificate then any java application seeking to use
 {{{
 keytool -export -keystore keystore.jks -file cert -storepass changeit -alias s1as
 }}}
-will extract the certificate. Then go to the jre/lib/security directory for the jdk you will use and if jssecacerts does not exist:
+will extract the certificate to a file called cert. The keystore password is by default "changeit".Then go to the jre/lib/security directory for the jdk you will use and if jssecacerts does not exist:
 {{{
 cp cacerts jssecacerts
 }}}
 {{{
 keytool -import -keystore jssecacerts -file <cert> -storepass changeit -alias <full host name> -noprompt
 }}}
-where <cert> identifies the exported certificate and the recommended alias is the fully qualified name of the machine you are trusting.
+where {{{<cert>}}} identifies the exported certificate and the recommended alias is the fully qualified name of the machine you are trusting.
 
 === Expired certificates ===
 Expired cacerts appear to do not harm except for cluttering the server.log. To get rid of them go to the config directory for your domain and:
