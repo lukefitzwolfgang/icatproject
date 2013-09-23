@@ -9,9 +9,11 @@ The database system must be supported by eclipselink and must support transactio
                     
 It has been tested with: MySQL, Oracle and Derby. 
 
-You will need a schema/database with permissions for data definition operations such as "CREATE TABLE ..." 
+You will need a schema/database with permissions for data definition operations such as "CREATE TABLE ..." and for data manipulation operation such as "INSERT INTO ...".
 
-If you are using [Glassfish] You must place a copy of the "JDBC Connector" for your database in the lib directory below the domain where you will install ICAT. You should get the connector from the database supplier. In the case of Oracle and MySQL these are both included in the Glassfish distribution but must be copied to the lib directory. For Derby no action is required - the connector is pre-installed.
+Installation of those ICAT components that require a database will attempt to create the tables in the schema, but the schema itself must exist.
+
+If you are using [Glassfish] You must place a copy of the "JDBC Connector" for your database in the lib directory below the domain where you will install ICAT. You should get the connector from the database supplier. In the case of Oracle and MySQL these may be both included in the Glassfish distribution but must be copied to the lib directory. For Derby no action is required - the connector is pre-installed.
 
 == MySQL ==
 MySQL must be installed with InnoDB support and you must ensure that while installing ICAT the default engine is InnoDB. You can see the default engine with "show engines;". To fix an existing system you can use the ALTER TABLE command as explained in: http://dev.mysql.com/doc/refman/5.1/en/storage-engine-setting.html.
