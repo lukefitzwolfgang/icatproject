@@ -55,6 +55,7 @@ will extract the certificate to a file called cert. The keystore password is by 
 {{{
 cp cacerts jssecacerts
 }}}
+which leaves the original cacerts unchanged. However jssecacerts will be used in preference to caceerts. Then:
 {{{
 keytool -import -keystore jssecacerts -file <cert> -storepass changeit -alias <full host name> -noprompt
 }}}
