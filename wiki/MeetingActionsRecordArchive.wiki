@@ -4,6 +4,123 @@ This page holds all but the most recent meetings.  The latest meetings are at Me
 
 <wiki:toc max_depth="2" />
 
+== Meeting 63 - 25 July 2013 ==
+
+ * Actions from the meeting 62 (Chair)
+ * Status of ICAT 4.3 (Steve)
+ * Feedback on new components (authn_simple, topcat 1.9, ice and icat-setup (All)
+ * Feedback on changes to query language, authz rules etc (All)
+ * Feedback on guidelines for developers (All)
+ * Issues from ICAT production deployments (All)
+ * AOB (All)
+
+=== Notes 63 ===
+
+Present: Juergen, Milan, George, Shelley, Tom, Brian, Kevin and Steve (Chair)
+
+There was no progress on any of the actions.
+
+Steve: ICAT 4.3 is still progressing well. There is a problem in the MySQL migration script. It is hoped that when this is converted to Oracle the error may become apparent. It currently looks like a MySQL bug. Besides this the only work left to do is the new query language and related authz changes. Old style queries are being parsed and converted into the new JPQL style. They will then be subject to the new authorization code. This means that because the authz code is changing the data that comes back from INCLUDE may change in 4.3. Some modifications to authz rules may be needed to restore the old behaviour if so desired.
+
+Tom: A couple of feature requests for TopCAT have been submitted, ice and icat-setup seem to work as advertised.
+
+Steve: Feedback on the query language changes had been received saying that we should keep the old language for an extended period. This is to avoid forcing people to change and because its simplicity is appreciated. There seems to be no problem with this. Following a question from Tom, it was explained that authz rules would be applied to included entities but that a mechanism would be provided to say that it was always allowed to go from one specific entity type to another: for example from Dataset to Datafile.
+
+The developer guidelines were discussed briefly. Antony had requested by e-mail the inclusion of something about logging. Tom questioned the need to provide a python install script for the trivial installations, but agreed that, if it were provided, then it should be in python and follow the guidelines. Tom would also like to see some documentation on what the scripts were doing. He was happy to have a verbose option to provide this.
+
+AOB: Earlier in the meeting Shelley had asked about the IDS - Steve emphasised that though it had been made available to parts of !PanData it was not yet a supported ICAT component. Juergen expressed an interest in using !OpenId with ICAT however he has no spare effort at the moment to do anything about it. Brian asked what was being done about organising the ICAT part of the Barcelona meeting. Steve suggested that it should have two parts: one relating to !PanData and a more general part. An action has been added for Steve and Alistair.
+
+=== Actions 63 ===
+
+|| Item  || Description                                                                     || Res           ||             Status||
+|| 63.00 || Document the meeting and update the actions                                     || Steve         ||               Done||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||                  .||
+|| 61.02 || Write a note about glassfish configuration to reduce https overhead             || Steve         ||               Done|| 
+|| 61.03 || Write a note about GF 4 and AJP                                                 || Alistair      ||ApacheAndGlassfish ||  
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||                  .|| 
+|| 63.01 || Plan the ICAT meeting in Barcelona                                              || Steve/Alistair||               Done||
+
+== Meeting 62 - 11 July 2013 ==
+
+ * Actions from the meeting 61 (Chair)
+ * Status of ICAT 4.3 (Steve)
+ * New components (Steve)
+ * Feedback on Topcat 1.9 Snapshot (All)
+ * Issues from ICAT production deployments (All)
+ * AOB (All)
+
+=== Notes 62 ===
+
+Present: Daniel Salvat, Pablo Garcia, David Lopez, George Kourousias, Tom Griffin and Steve Fisher (Chair)
+
+SMF: ICAT4.3 now needs two more things: schema changes with associated scripts and enhanced query language. End of August still looks possible. 
+
+Rolf Krahl's simple authenticator has been released and at some point a class he has written to handle hashed passwords will also be used by the db authenticator.
+
+A SNAPSHOT of TopCAT 1.9 has been made available - no feedback has been received so far.
+
+Releases of ice (an ICAT Editor and icat-setup for editing authz related tables) are imminent. Kevin will test them both before release.
+
+TG: ISIS is still using ICAT3.3 and is waiting for ICAT4.3 with the enhanced query language to support more specific rules.
+
+GK: Umbrella will be part of the next PaNData verifications so will probably need an umbrella authenticator.
+
+DS: Reminder about the Barcelona workshop which is expected to have two satellite meetings: one on icat and and one on umbrella.
+
+=== Actions 62 ===
+
+|| Item  || Description                                                                     || Res       ||           Status||
+|| 62.00 || Document the meeting and update the actions                                     || Steve     ||             Done||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom       ||                .||
+|| 61.02 || Write a note about glassfish configuration to reduce https overhead             || Steve     ||                .||
+|| 61.03 || Write a note about GF 4 and AJP                                                 || Alistair  ||             Done||
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve     ||                .||
+
+== Meeting 61 - 13 June 2013 ==
+
+ * Actions from the meeting 60 (Alistair)
+ * Release conditions for products (Alistair)
+ * Status of contribs  (Alistair)
+ * AOB (Any)
+
+=== Notes 61 ===
+
+We were pleased to have Milan join us again.  He has been away from work for a month following an operation on his wrist.
+
+Nicola informed us that he is going to leave ESRF in June to work in a commercial organisation in Zurich.  The chairman thanked Nicola for his work with ICAT and wished him well in his new position.
+
+There was discussion about the appropriateness of the release conditions which AM had added to the wiki.  It was agreed that this would be discussed again, for example when ICAT 4.3 is close to release.
+
+SF reported that progress with ICAT 4.3 is good; that free text search is working and is very efficient; that consolidation of code is reducing the volume of code, and making things simpler in the longer term. 
+
+TG reported that he is working on a simple browser for ICAT.  He will put it into contrib when it is ready.
+
+SF reported that he has done some timing tests on the download component of the IDS.  This has led to changes in the implementation which ensures that the cypher in SSL mode is set dynamically and this generally ensure less time for the cypher.
+
+AM reported that GF 4 has been released and that he has deployed ICAT, Authdb and Topcat on a GF 4 and that they appear to work correctly.  There was a problem trying to deploy the download component of IDS; as this is not yet a supported product, this is a matter for development.
+
+AM reported that he had deployed ICAT with GF4 with an Apache front-end.  This work has been done at ESRF and will be used for the ESRF production ICAT.  The GF4 and the Apache communicate with one another using AJP.  There was a bug in GF 3 which meant that this did not work when using https, due to an error in the GF which continued to use http, when it should have used https.  The bug has been fixed in GF 4.  To verify that the bug was due to GF3, having got ICAT to work with GF4, AM then tried changing back to GF3, and the ICAT did not work.
+
+=== Actions 61 ===
+
+|| Item  || Description                                                                     || Res   ||           Status||               Comment||
+|| 61.00 || Document the meeting and update the actions                                     || AM    ||             Done||                     -||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || TG    ||                .||                     -||
+|| 61.02 || Write a note about the performance on the download component of IDS             || SF    ||                .||                     -||
+|| 61.03 || Write a note about GF 4 and AJP                                                 || AM    ||             Done||                     -||
+
+=== Attendance 61 ===
+
+||Init ||Name                         || Institute                  ||     Present  || Apologies ||
+||AM   ||Alistair Mills               || STFC SCD                   ||     +        ||           ||
+||SMF  ||Steve Fisher                 || STFC SCD                   ||     +        ||           ||
+||NB   ||Nicola Bessone               || ESRF                       ||     +        ||           ||
+||MP   ||Milan Prica                  || ELETTRA                    ||     +        ||           ||
+||TG   ||Tom Griffin                  || STFC ISIS Facility         ||     +        ||           ||
+||JH   ||Jamie Hall                   || ILL                        ||     +        ||           ||
+||KP   ||Kevin Phipps                 || STFC SCD                   ||              ||     +     ||
+||IC   ||Idrissou Chado               || Soleil                     ||              ||     +     ||
+
 == Meeting 60 - 30 May 2013 ==
 
  * Actions from the meeting 59 (Alistair)
