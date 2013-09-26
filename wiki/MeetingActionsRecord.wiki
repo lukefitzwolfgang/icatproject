@@ -45,7 +45,7 @@ The meeting concluded at 15h30.
 || 66.00 || Document the meeting and update the actions                                     || AM            ||        Done||
 || 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         ||           .||
 || 66.02 || Send a note to TG about Nxingest                                                || AM            ||           .||
-|| 66.03 || Send a note to the icat collaboration about the training for Pandata            || AM            ||           .||
+|| 66.03 || Send a note to the icat collaboration about the training for Pandata            || AM            || https://code.google.com/p/pandata/wiki/TrainingSwInstallation ||
 || 66.04 || Discuss autoreduction with Erica Yang and Shelly Ren                            || AM            ||           .||
 || 65.02 || Provide feedback on ICAT 4.3 and its related parts                              || All           ||    On-going||
 || 64.02 || Schedule a web cast on the contents of ICAT 4.3 for September                   || Steve         ||           .||
