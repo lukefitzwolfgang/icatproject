@@ -27,4 +27,4 @@ In addition for ICAT please take note of changes in:
 
 == Postponed to 3.4.1 ==
  * Support for glassfish 4
- * Support for queries with nested JPQL (subselects)
+ 
