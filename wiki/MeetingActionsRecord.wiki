@@ -2,9 +2,16 @@
 #labels Featured
 
 *Contents*
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 
 = Record of actions from recent ICAT collaboration meetings =  
+
+== Meeting 67 - 3 October 2013 ==
+
+ * Actions from meeting 66 (Alistair)
+ * Status of ICAT 4.3 (Steve)
+ * Status of IDS (Steve)
+ * AOB (All)
 
 This page holds records of the recent meetings. Earlier meetings are at MeetingActionsRecordArchive.
 
