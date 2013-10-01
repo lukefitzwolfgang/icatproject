@@ -21,7 +21,7 @@ In addition for ICAT please take note of changes in:
  * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.core/schema.html
  * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/release-notes.html
 
-== Still to do (though it may get postponed to 3.4.1)
+== Still to do (though it may get postponed to 3.4.1) ==
 
  * Support for glassfish 4
  
