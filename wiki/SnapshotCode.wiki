@@ -11,7 +11,7 @@ There are interdependencies the new authn_db needs at least icat 4.3 and icat-se
 
 As these are snapshot releases the url pointing to the distro is wrong in each case so I give it below. This is the suggested order of installation:
 
- # http://www.icatproject.org/mvn/site/authn_db/1.1.0-SNAPSHOT/authn_db.ear/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/authn_db/1.1.0-SNAPSHOT/authn_db-1.1.0-20130926.180408-6-distro.zip
+ # http://www.icatproject.org/mvn/site/authn_db/1.1.0-SNAPSHOT/authn_db.ear/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/authn_db/1.1.0-SNAPSHOT/authn_db-1.1.0-20131003.093239-7-distro.zip
  # http://www.icatproject.org/mvn/site/tools/icat-setup/1.1.0-SNAPSHOT/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/icat-setup/1.1.0-SNAPSHOT/icat-setup-1.1.0-20130906.160307-1-distro.zip
  # http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.ear/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.3.0-SNAPSHOT/icat.ear-4.3.0-20131001.175409-8-distro.zip
 
