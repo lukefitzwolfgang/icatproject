@@ -21,6 +21,12 @@ In addition for ICAT please take note of changes in:
  * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.core/schema.html
  * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/release-notes.html
 
+== To fix before release ==
+
+ * Increase "query" field of log table to 4096
+
+ * Query where more than 1 authz rule applied has failed. Tom has provided example code
+
 == Still to do (though it may get postponed to 3.4.1) ==
 
  * Support for glassfish 4
