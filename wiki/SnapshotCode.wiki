@@ -27,12 +27,9 @@ In addition for ICAT please take note of changes in:
 
  * Tom reports "I had a mistake in a rule (i.investigationInstrument rather than i.investigationInstruments  - ‘s’)   and the rule creation was successful. It caused problems when I tried a query that invoked the rule"
  
-
+ * Query where more than 1 authz rule applied has failed. Tom has provided example code
 
 == To fix before release ==
-
- 
- * Query where more than 1 authz rule applied has failed. Tom has provided example code
 
 == Still to do (though it may get postponed to 3.4.1) ==
 
