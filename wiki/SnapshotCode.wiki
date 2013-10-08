@@ -13,7 +13,7 @@ As these are snapshot releases the url pointing to the distro is wrong in each c
 
  # http://www.icatproject.org/mvn/site/authn_db/1.1.0-SNAPSHOT/authn_db.ear/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/authn_db/1.1.0-SNAPSHOT/authn_db-1.1.0-20131003.093239-7-distro.zip
  # http://www.icatproject.org/mvn/site/tools/icat-setup/1.1.0-SNAPSHOT/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/icat-setup/1.1.0-SNAPSHOT/icat-setup-1.1.0-20130906.160307-1-distro.zip
- # http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.ear/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.3.0-SNAPSHOT/icat.ear-4.3.0-20131001.175409-8-distro.zip
+ # http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.ear/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.3.0-SNAPSHOT/icat.ear-4.3.0-20131008.092729-9-distro.zip
 
 In addition for ICAT please take note of changes in:
 
@@ -22,12 +22,6 @@ In addition for ICAT please take note of changes in:
  * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/release-notes.html
 
 == Fixed in source code but not yet released ==
-
- * Increase "query" field of log table to 4000
-
- * Tom reports "I had a mistake in a rule (i.investigationInstrument rather than i.investigationInstruments  - ‘s’)   and the rule creation was successful. It caused problems when I tried a query that invoked the rule"
- 
- * Query where more than 1 authz rule applied has failed. Tom has provided example code
 
 == To fix before release ==
 
