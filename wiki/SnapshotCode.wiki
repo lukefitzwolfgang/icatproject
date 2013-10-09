@@ -25,10 +25,10 @@ In addition for ICAT please take note of changes in:
 
 == To fix before release ==
 
-== Still to do (though it may get postponed to 3.4.1) ==
+== Still to do (though it may get postponed to 4.3.1) ==
 
  * Support for glassfish 4
 
-== Problems that will be addressed in 3.4.1 ==
+== Problems that will be addressed in 4.3.1 ==
 
  
