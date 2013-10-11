@@ -1,0 +1,65 @@
+digraph {
+    rankdir=LR;
+    node [shape=box];
+    edge [fontsize=10];
+    { rank=same;
+      // There should be two edges from Job to DataCollection (input
+      // and output), but dot segfaults when I try to put this here ...
+      DataCollection -> Job [dir=back];
+      Job -> Application; 
+      Application -> Shift -> Keyword -> Publication -> Study [style=invis]; 
+      Study -> User;
+      User -> Grouping [dir=both]; 
+      Grouping -> Rule [dir=back]; }
+    { rank=same;
+      Datafile -> Dataset -> Sample -> Investigation;
+      Investigation -> Instrument [dir=both]; }
+    { rank=same;
+      edge [style=invis];
+      DatafileParameter -> DatafileFormat -> DatasetParameter -> DatasetType -> DataCollectionParameter -> SampleParameter -> SampleType -> InvestigationParameter -> InvestigationType -> FacilityCycle; }
+    { rank=same;
+      PermissibleStringValue -> ParameterType -> Facility; }
+
+    DataCollection -> Datafile [dir=both,weight=3];
+    DataCollection -> Dataset [dir=both,weight=3];
+
+    Shift -> Investigation;
+    Keyword -> Investigation;
+    Publication -> Investigation;
+    Study -> Investigation [dir=both];
+    User -> Investigation [dir=both,label=InvestigationUser];
+
+    User -> Instrument [dir=both,label=InstrumentScientist];
+
+    Datafile -> Datafile [dir=both,label=RelatedDatafile];
+    Datafile -> DatafileParameter [dir=back];
+    DatafileParameter -> ParameterType [weight=3];
+    Datafile -> DatafileFormat [weight=2];
+    DatafileFormat -> Facility;
+
+    Dataset -> DatasetParameter [dir=back];
+    DatasetParameter -> ParameterType;
+    Dataset -> DatasetType -> Facility;
+
+    DataCollection -> DataCollectionParameter [dir=back];
+    DataCollectionParameter -> ParameterType;
+
+    Sample -> SampleParameter [dir=back];
+    SampleParameter -> ParameterType;
+    Sample -> SampleType -> Facility;
+
+    Dataset -> Investigation;
+
+    Investigation -> Facility [weight=5];
+    Investigation -> InvestigationType -> Facility;
+    Investigation -> InvestigationParameter [dir=back];
+    InvestigationParameter -> ParameterType;
+    // For some strange raison, dot completely degrades the graph if I
+    // remove the edge Investigation -> FacilityCycle
+    Investigation -> FacilityCycle [style=invis];
+    FacilityCycle -> Facility;
+
+    Instrument -> Facility;
+
+    Application -> Facility;
+}
