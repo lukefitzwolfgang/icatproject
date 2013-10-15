@@ -68,3 +68,21 @@ Change directory to the unpacked distribution and enter
 }}}
 
 This will uninstall the component. Any configuration files will be removed. So if you simply want to install a new version of the component then do not use uninstall on the old one as old configuration files will be lost.
+
+= Installation on Windows =
+
+The setup scripts will also work on Windows (where it has been tested on Windows 7 with Glassfish and MySQL). However please note:
+
+ * Create directories C:\usr\bin and C:\usr\share
+
+ * The Glassfish installer should be avoided - simply unzip the .zip file.
+
+ * It is easier but not essential to include the Python directory (probably C:\Python27) in your PATH.
+
+ * To install suds find a distribution (0.4 is the current one) unpack and move the suds directory to the site-packages directory (probably C:\Python27\Lib\site-packages)
+
+ * Invoke python scripts (such as setup, testicat and asadmin by preceding them with python. So instead of ./setup configure type python setup configure
+
+ * testicat and asadmin are by default installed under C:\usr\bin
+
+ 
