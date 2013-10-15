@@ -27,11 +27,6 @@ A range of issues related to multiple authz rules
 
 == To fix before release ==
 
-File permissions:
-After unzipping, the directories icat-setup and
-icat are created with mode 0777.  Suggest creating the zips with
-mode go-w.
-
 == Still to do (though it may get postponed to 4.3.1) ==
 
  * Support for glassfish 4
