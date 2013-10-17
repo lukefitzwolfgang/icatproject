@@ -6,6 +6,19 @@
 
 = Record of actions from recent ICAT collaboration meetings =  
 
+== Meeting 68 - 17 October 2013 ==
+
+ * Actions from meeting 67 (Alistair)
+ * Status of ICAT 4.3 (Steve)
+ * Status of IDS (Steve)
+ * Status of TopCAT (Wayne)
+ * Issues from ICAT production deployments (All)
+ * AOB (All)
+
+=== Notes 68 ===
+
+=== Actions 68 ===
+
 == Meeting 67 - 3 October 2013 ==
 
  * Actions from meeting 66 (Steve)
@@ -16,20 +29,21 @@
 
 === Notes 67 ===
 
+Present: Milan, George, Shelly, Steve, Tom, Wayne and Frazer
+
 === Actions 67 ===
 
-=== Actions 66 ===
-
 || Item  || Description                                                                     || Res           ||      Status||
-|| 66.00 || Document the meeting and update the actions                                     || AM            ||        Done||
+|| 67.00 || Document the meeting and update the actions                                     || SMF           ||   Done     ||
 || 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         ||           .||
 || 66.02 || Send a note to TG about Nxingest                                                || AM            ||           .||
 || 66.03 || Send a note to the icat collaboration about the training for Pandata            || AM            || https://code.google.com/p/pandata/wiki/TrainingSwInstallation ||
-|| 66.04 || Discuss autoreduction with Erica Yang and Shelly Ren                            || AM            ||           .||
+|| 66.04 || Discuss with Erica Yang issues of mutual concern                                || Shelly        ||           .||
 || 65.02 || Provide feedback on ICAT 4.3 and its related parts                              || All           ||    On-going||
-|| 64.02 || Schedule a web cast on the contents of ICAT 4.3 for September                   || Steve         ||           .||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3                                 || Steve         ||           .||
 || 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||           .|| 
 || 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||           .|| 
+
 
 == Meeting 66 - 19 September 2013 ==
 
