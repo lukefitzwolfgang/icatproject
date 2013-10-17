@@ -20,9 +20,9 @@ jdk-7u25-linux-x64.rpm is known to work on `RedHat/CentOS/SL` machines. You need
 
 Designate an account for running glassfish. I will call this the glassfish account though the user name does not have to be glassfish.
 
-For glassfish3 get the latest glassfish3 zip file and unzip it to the  home directory of the glassfish account. Add ~/glassfish3/glassfish/bin to the path of the user. ogs-3.1.2.2.zip is known to work.
+For glassfish3 get the latest glassfish3 zip file and unzip it to, for example, the  home directory of the glassfish account. Add ~/glassfish3/glassfish/bin to the path of the user. ogs-3.1.2.2.zip is known to work.
 
-For glassfish4 get the latest distribution without jdk. Install with the defaults. You may prefer not to install the updatetool. Add ~/glassfish4/glassfish/bin to the path of the user. * However ICAT4.3.0 will not install under glassfish4 *
+For glassfish4 get the latest distribution without jdk. Testing has been carried out with glassfish-4.0.zip. Install with the defaults. You may prefer not to install the updatetool. Add ~/glassfish4/glassfish/bin to the path of the user. * However ICAT4.3.0 will not install under glassfish4 *
 
 Ensure that hostname -f returns a sensible result. Then issue the following commands. When you create the domain you will be asked to specify the admin username and password. Do not use the default empty password.
 
