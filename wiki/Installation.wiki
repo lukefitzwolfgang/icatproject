@@ -75,7 +75,7 @@ The setup scripts will also work on Windows (where it has been tested on Windows
 
  * Create directories C:\usr\bin and C:\usr\share
 
- * The Glassfish installer should be avoided - simply unzip the .zip file.
+ * The Glassfish installer should be avoided - simply unzip the .zip file. It is recommended to unzip into C:\ - do avoid a path with spaces for the moment.
 
  * It is easier but not essential to include the Python directory (probably C:\Python27) in your PATH.
 
