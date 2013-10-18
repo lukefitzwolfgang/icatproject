@@ -17,7 +17,16 @@
 
 === Notes 68 ===
 
+Present: Steve, Tom, Wayne, Frazer, Alistair, Kunal
+
 === Actions 68 ===
+
+|| Item  || Description                                                                     || Res           || Status   ||
+|| 68.00 || Document the meeting and update the actions                                     || AM            || Done     ||
+|| 68.01 || Check that the list of requirements for Topcat                                  || TG            || .        ||
+|| 68.02 || Check that the topcat43 plugins works with ICAT 4.3.0                           || WC            || .        ||
+|| 68.03 || Get a credential from ISIS to access the ISIS Topcat                            || WC            || .        ||
+|| 68.04 || Talk to Bill and Stefan about integrating ICAT with Umbrella                    || SMF           || .        ||
 
 == Meeting 67 - 3 October 2013 ==
 
