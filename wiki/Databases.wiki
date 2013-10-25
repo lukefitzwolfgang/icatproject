@@ -1,5 +1,4 @@
 #summary Choice of Database and considerations for ICAT use.
-#labels Featured
 
 = Introduction =
 
