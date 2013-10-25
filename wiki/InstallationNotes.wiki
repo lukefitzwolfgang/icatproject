@@ -1,4 +1,5 @@
 #summary List of installation notes.
+#labels Featured
 
 = Installation Notes =
  * [Installation Installation instructions for all new ICAT component releases]
