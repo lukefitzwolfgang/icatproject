@@ -1,5 +1,4 @@
 #summary Guidelines to be followed by members of the ICAT family
-#labels Featured
 
 = Introduction =
 
