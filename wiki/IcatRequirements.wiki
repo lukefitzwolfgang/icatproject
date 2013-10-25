@@ -1,5 +1,4 @@
 #summary Requirements for ICAT
-#labels Featured
 
 = Requirements for ICAT =
 
