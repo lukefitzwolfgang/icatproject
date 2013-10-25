@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+    <properties>
+        <title>Installation</title>
+    </properties>
+
+    <body>
+
+        <section name="Installation">
+            <subsection name="Prerequisites">
+                <ul>
+                    <li>
+                        The icat-setup distribution:
+                        <a href="${repoUrl}/org/icatproject/icat-setup/${project.version}/icat-setup-${project.version}-distro.zip">icat-setup-${project.version}-distro.zip</a>
+                    </li>
+                    <li>
+                        One or more installations of ICAT 4.2 or 4.3.
+                    </li>
+                    <li>Python 2.4 to 2.7</li>
+                </ul>
+            </subsection>
+
+              <subsection name="Summary of steps">
+                <ol>
+                    <li>
+                        Please follow
+                        <a href="http://code.google.com/p/icatproject/wiki/Installation"> the generic installation instructions</a>
+                    </li>
+                    <li>Check that it works.</li>
+                </ol>
+            </subsection>
+
+            <subsection name="Check that icat-setup works">
+                <p>
+                    Assuming that you have installed to somewhere on your path please enter
+                    <tt>icat-setup</tt>
+                    otherwise of course you will need to specify the full path. It should respond:
+                    <tt>Must have arguments url, authenticator, credentials</tt>
+                </p>
+            </subsection>
+
+
+        </section>
+    </body>
+</document>
+			
