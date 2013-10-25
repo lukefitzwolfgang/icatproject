@@ -1,0 +1,72 @@
+#!/usr/bin/env python
+from setup_utils import *
+import shutil
+import os
+import platform
+
+actions, options, cmd = getActions(binDir=True, appDir=True)
+ 
+appDir = os.path.expanduser(options.appDir)
+binDir = os.path.expanduser(options.binDir)
+
+if not os.path.exists ("setup"): abort ("This must be run from the unpacked distribution directory")
+windows = platform.system() == "Windows"
+
+if cmd == "CONFIGURE":
+    actions.setConfigured()
+
+elif cmd == "INSTALL":
+    
+    actions.checkConfigured()
+    
+    try:
+        path = os.path.join(appDir, "icat-setup")
+        if os.path.exists(path):
+            shutil.rmtree(path)
+        os.mkdir(path)
+        
+        for file in os.listdir("."):
+            ext = os.path.splitext(file)[1]
+            if ext == ".jar":
+                shutil.copy(file, path)
+        
+        if windows:
+            file = os.path.join(binDir, "icat-setup.bat")
+            f = open(file, "w")
+            print >> f, "@echo off"
+            print >> f, 'java -cp "' + path + '/*" Setup %*'
+        else:      
+            file = os.path.join(binDir, "icat-setup")
+            f = open(file, "w")
+            print >> f, "#!/bin/sh"
+            print >> f, 'java -cp "' + path + '/*" Setup $*'
+        f.close()
+     
+        os.chmod(file, 0755)
+        
+        if options.verbose: print "Installed", path, "and", file 
+
+    except Exception, e:
+        abort(str(e))
+        
+else:  # UNINSTALL
+    
+    try:
+        path = os.path.join(appDir, "icat-setup")
+        if os.path.exists(path):
+            shutil.rmtree(path)
+            if options.verbose: print "Uninstalled", path 
+        
+        if windows:
+            file = os.path.join(binDir, "icat-setup.bat")
+        else:
+            file = os.path.join(binDir, "icat-setup")    
+        if os.path.exists(file): 
+            os.remove(file) 
+            if options.verbose: print "Uninstalled", file 
+    
+    except Exception, e:
+        abort(str(e))       
+    
+            
+    
