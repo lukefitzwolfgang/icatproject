@@ -1,5 +1,4 @@
 #summary Snapshot Code
-#labels featured
 
 = Snapshot Code =
 
@@ -7,28 +6,6 @@ These snapshots exists for people to test before the code is released. The snaps
 
 == Components == 
 
-There are interdependencies the new authn_db needs at least icat 4.3 and icat-setup version 1.1.0 is needed to talk to the new snapshot. I am very interested in getting feedback on both installation and the components themselves. You will find that the installation process has changed so PLEASE READ THE INSTRUCTIONS.
-
-As these are snapshot releases the url pointing to the distro is wrong in each case so I give it below. This is the suggested order of installation:
-
- # http://www.icatproject.org/mvn/site/authn_db/1.1.0-SNAPSHOT/authn_db.ear/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/authn_db/1.1.0-SNAPSHOT/authn_db-1.1.0-20131015.173845-8-distro.zip
- # http://www.icatproject.org/mvn/site/tools/icat-setup/1.1.0-SNAPSHOT/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/icat-setup/1.1.0-SNAPSHOT/icat-setup-1.1.0-20131015.182121-5-distro.zip
- # http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.ear/installation.html with distro http://www.icatproject.org/mvn/repo/org/icatproject/icat.ear/4.3.0-SNAPSHOT/icat.ear-4.3.0-20131015.180224-11-distro.zip
-
-In addition for ICAT please take note of changes in:
-
- * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.client/manual.html 
- * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/icat.core/schema.html
- * http://www.icatproject.org/mvn/site/icat/4.3.0-SNAPSHOT/release-notes.html
-
-== Fixed in source code but not yet released ==
-
-== To fix before release ==
-
-== Still to do (though it may get postponed to 4.3.1) ==
-
- * Support for glassfish 4
-
-== Problems that will be addressed in 4.3.1 ==
+There are none presently.
 
  
