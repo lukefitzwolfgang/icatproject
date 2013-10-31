@@ -41,13 +41,13 @@ Alistair reported that good progress was being made with the ingester for ESRF a
 
 (Ed's note - Jamie sent a report that ILL has recruited an additional engineer to work on the ILL catalogue.  The engineer will start work in November).
 
-=== Actions 68 ===
+=== Actions 69 ===
 
-|| Item  || Description                                                                     || Res           || Status   ||
-|| 69.00 || Document the meeting and update the actions                                     || AM            || Done     ||
-|| 69.01 || Make use of the new ISIS ICAT in SV6 on 1 November                              || AM            || .        ||
-|| 69.02 || Make use of the new DLS ICAT in SV6 on 1 November                               || AM            || .        ||
-|| 69.03 || Discuss that training course for Pandata and make changes to the materials      || AM/SF         || .        ||
+|| Item  || Description                                                                     || Res           || Status            ||
+|| 69.00 || Document the meeting and update the actions                                     || AM            || Done              ||
+|| 69.01 || Make use of the new ISIS ICAT in SV6 on 1 November                              || AM            || Asked ISIS        ||
+|| 69.02 || Make use of the new DLS ICAT in SV6 on 1 November                               || AM            || Asked DLS         ||
+|| 69.03 || Discuss that training course for Pandata and make changes to the materials      || AM/SF         || Done              ||
 
 == Meeting 68 - 17 October 2013 ==
 
