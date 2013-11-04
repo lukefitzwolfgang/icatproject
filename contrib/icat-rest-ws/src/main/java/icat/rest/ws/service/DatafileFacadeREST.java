@@ -108,7 +108,7 @@ public class DatafileFacadeREST extends AbstractFacade<Datafile> {
           list.add(location);
         }
       }
-      log.info("Ending getFiles()");
+      log.info("Ending findFiles()");
       return new DatafileLocation(list);
     } catch (IcatException ex) {
       log.error("In findFiles: IcatException " + ex.getMessage());

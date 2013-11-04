@@ -142,7 +142,11 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
       if (inIncrement) {
         runRange = runRange.concat(Integer.toString(oldRunNumber));
       }
-      log.info("Ending getRuns, found run range: " + runRange + " for instrment " + instrument + " and proposal " + proposal);
+      if (runRange.isEmpty()) {
+        log.info("Ending getRuns, found run range: ZERO for instrment " + instrument + " and proposal " + proposal);
+      } else {
+        log.info("Ending getRuns, found run range: " + runRange + " for instrment " + instrument + " and proposal " + proposal);
+      }
       return new RunConverter(runRange);
     } catch (IcatException ex) {
       log.error("In getRuns: got IcatException " + ex.getMessage());
