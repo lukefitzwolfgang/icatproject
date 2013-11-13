@@ -7,9 +7,25 @@ for writing programs that access an ICAT service using the SOAP
 interface.  It is based on Suds and extends it with ICAT specific
 features.
 
+== System Requirements ==
+
+ * Python 2.7.  (Python 2.6 will do for most of python-icat.)
+ * [https://fedorahosted.org/suds/ Suds 0.4].
+ * [http://pyyaml.org/wiki/PyYAML PyYAML].  (Only for the examples, not needed for python-icat itself.)
+
 == Download ==
 
  * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.1.0.tar.gz python-icat 0.1.0]
+
+== Installation ==
+
+python-icat follows the standard Python conventions of packaging source distributions.  See the documentation on [http://docs.python.org/2.7/install/ Installing Python Modules] for details or to customize the install process.
+
+ # Download the sources, unpack, and change into the source directory.
+ # {{{python setup.py build}}}
+ # {{{python setup.py install}}}
+
+The last step might require admin privileges in order to write into the site-packages directory of your Python installation.
 
 == Author ==
 
