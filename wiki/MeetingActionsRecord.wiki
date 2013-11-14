@@ -6,6 +6,27 @@
 
 = Record of actions from recent ICAT collaboration meetings = 
 
+== Meeting 70 - 14 November 2013 ==
+
+ * Actions from meeting 69 (Alistair)
+ * Status of ICAT 4.3 and related parts such as authn (Steve)
+ * Status of IDS (Steve)
+ * Status of TopCAT (Wayne)
+ * Training and SV for Panadata (Alistair)
+ * Issues from ICAT production deployments (All)
+ * AOB (All)
+
+=== Notes 70 ===
+
+Present: 
+
+Apologies: 
+
+=== Actions 69 ===
+
+|| Item  || Description                                                                     || Res           || Status            ||
+|| 70.00 || Document the meeting and update the actions                                     || AM            || .                 ||
+
 == Meeting 69 - 31 October 2013 ==
 
  * Actions from meeting 68 (Alistair)
@@ -45,9 +66,15 @@ Alistair reported that good progress was being made with the ingester for ESRF a
 
 || Item  || Description                                                                     || Res           || Status            ||
 || 69.00 || Document the meeting and update the actions                                     || AM            || Done              ||
-|| 69.01 || Make use of the new ISIS ICAT in SV6 on 1 November                              || AM            || Asked ISIS        ||
-|| 69.02 || Make use of the new DLS ICAT in SV6 on 1 November                               || AM            || Asked DLS         ||
+|| 69.01 || Make use of the new ISIS ICAT in SV6 on 1 November                              || AM            || Done              ||
+|| 69.02 || Make use of the new DLS ICAT in SV6 on 1 November                               || AM            || Done              ||
 || 69.03 || Discuss that training course for Pandata and make changes to the materials      || AM/SF         || Done              ||
+|| 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         ||                  .||
+|| 66.02 || Send a note to TG about Nxingest                                                || AM            || Done              ||
+|| 66.04 || Discuss with Erica Yang issues of mutual concern                                || Shelly        ||                  .||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3                                 || Steve         ||                  .||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||                  .|| 
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||                  .|| 
 
 == Meeting 68 - 17 October 2013 ==
 
@@ -81,7 +108,7 @@ Wayne reported that there had been a review of TopCAT issues out of which the it
 || 68.03 || Get a credential from ISIS to access the ISIS Topcat                            || WC            || Done     ||
 || 68.04 || Talk to Bill and Stefan about Umbrella authentication plugin for ICAT           || SMF           || Done     ||
 || 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         ||         .||
-|| 66.02 || Send a note to TG about Nxingest                                                || AM            ||         .||
+|| 66.02 || Send a note to TG about Nxingest                                                || AM            || Done     ||
 || 66.04 || Discuss with Erica Yang issues of mutual concern                                || Shelly        ||         .||
 || 64.02 || Schedule a web cast on the contents of ICAT 4.3                                 || Steve         ||         .||
 
@@ -109,14 +136,14 @@ that the installation script might check for the EJBTimer. This is present when 
 === Actions 67 ===
 
 || Item  || Description                                                                     || Res           ||      Status||
-|| 67.00 || Document the meeting and update the actions                                     || SMF           ||   Done     ||
+|| 67.00 || Document the meeting and update the actions                                     || SMF           ||        Done||
 || 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         ||           .||
 || 66.02 || Send a note to TG about Nxingest                                                || AM            ||           .||
 || 66.04 || Discuss with Erica Yang issues of mutual concern                                || Shelly        ||           .||
-|| 65.02 || Provide feedback on ICAT 4.3 and its related parts                              || All           ||    Done||
+|| 65.02 || Provide feedback on ICAT 4.3 and its related parts                              || All           ||        Done||
 || 64.02 || Schedule a web cast on the contents of ICAT 4.3                                 || Steve         ||           .||
-|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||  Drop|| 
-|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||   Drop|| 
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||        Drop|| 
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||        Drop|| 
 
 
 == Meeting 66 - 19 September 2013 ==
