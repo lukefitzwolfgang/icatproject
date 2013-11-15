@@ -14,14 +14,13 @@ These guidelines are for developers of components to encourage uniformity - espe
 
 == Installation ==
  * Installation scripts should be in python compatible with versions 2.4 to 2.7
- * The normal installation mechanism is to download a file xxxxx-n.n.n-distro.zip, unpack it, configure a .properties file named xxxxx-setup.properties and a component properties files or properties directories and then be installed by setup.py install and uninstalled by setup.py uninstall. Any properties files that must be changed should have a suffix .example appended and the instructions should tell the installer to copy it to a file of the same name without the suffix and edit it.
+ * The normal installation mechanism is to download a file xxxxx-n.n.n-distro.zip, unpack it, configure a .properties file named xxxxx-setup.properties and a component properties files or properties directories and then be installed by setup.py install and uninstalled by setup.py uninstall. Any properties should have a suffix .example appended or be within a directory having a .example appended.
  * the distribution should contain a file README.txt pointing to the top level of the documentation for that component on www.icatproject.org
  * setup.py may have options - especially if the component does not really need an xxxxxx-setup.properties file
  * setup.py may be interactive but this should be avoided where possible
  * It should be possible to run setup.py install or setup.py uninstall multiple times without errors.
  * in the case .war and .ear files containing a version number, install should remove the previous one first
  * uninstall should reverse the install except that if two or more components make the same state change upon installation they should not reverse it when uninstalled.
- * install.py should consider existing entries in the config directory. If the target is already present but different a warning should be produced. Overwriting should only take place if the -f or --force option is specified.
 == Documentation ==
  * All components must make use of the maven site mechanism to deploy a user guide and installation manual as one or more html pages on www.icatproject.org
 == Testing ==
