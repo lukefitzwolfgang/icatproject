@@ -33,6 +33,10 @@ python-icat follows the standard Python conventions of packaging source distribu
 
 The last step might require admin privileges in order to write into the site-packages directory of your Python installation.
 
+== Additional Resources ==
+
+ * I gave a [https://pandata.googlecode.com/svn/trunk/training/november_2013/pdf/python-icat.pdf presentation in python-icat] at Pandata Software Workshop, November 2013 at Elettra, Trieste.
+
 == Author ==
 
 Rolf Krahl
