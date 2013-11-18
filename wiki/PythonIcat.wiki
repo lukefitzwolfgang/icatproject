@@ -15,6 +15,12 @@ features.
 
 == Download ==
 
+Current Release:
+
+ * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.2.0.tar.gz python-icat 0.2.0]
+
+Old versions:
+
  * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.1.0.tar.gz python-icat 0.1.0]
 
 == Installation ==
