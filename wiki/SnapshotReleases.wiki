@@ -3,12 +3,12 @@
 
 There are four IDS snapshot components for people to try: server, client, storage_file (an example plugin) and plugin which is the interface if you want to write your own. As these are snapshots the link to the distribution files does not work so it is reproduced below for the server and the file_storage plugin. It is assumed that you will use maven to get the client.
 
-http://www.icatproject.org/mvn/site/ids/ contains the four components
+http://www.icatproject.org/mvn/site/ids/ contains the components
 
 distros are at:
 
-http://www.icatproject.org/mvn/repo/org/icatproject/ids.server/1.0.0-SNAPSHOT/ids.server-1.0.0-20131111.162041-10-distro.zip
+http://www.icatproject.org/mvn/repo/org/icatproject/ids.server/1.0.0-SNAPSHOT/ids.server-1.0.0-20131126.173239-11-distro.zip
 
 and
 
-http://www.icatproject.org/mvn/repo/org/icatproject/ids.storage_file/1.0.0-SNAPSHOT/ids.storage_file-1.0.0-20131111.162002-5-distro.zip
+http://www.icatproject.org/mvn/repo/org/icatproject/ids.storage_file/1.0.0-SNAPSHOT/ids.storage_file-1.0.0-20131126.173150-6-distro.zip
