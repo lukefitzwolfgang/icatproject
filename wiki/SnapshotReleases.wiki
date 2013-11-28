@@ -12,3 +12,7 @@ http://www.icatproject.org/mvn/repo/org/icatproject/ids.server/1.0.0-SNAPSHOT/id
 and
 
 http://www.icatproject.org/mvn/repo/org/icatproject/ids.storage_file/1.0.0-SNAPSHOT/ids.storage_file-1.0.0-20131126.173150-6-distro.zip
+
+and the client jar at:
+
+http://www.icatproject.org/mvn/repo/org/icatproject/ids.client/1.0.0-SNAPSHOT/ids.client-1.0.0-20131111.162222-7.jar
