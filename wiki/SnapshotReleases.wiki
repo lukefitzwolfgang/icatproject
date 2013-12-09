@@ -1,7 +1,7 @@
 #summary IDS Snapshot.
 #labels Featured
 
-There are four IDS snapshot components for people to try: server, client, storage_file (an example plugin) and plugin which is the interface if you want to write your own. As these are snapshots the link to the distribution files does not work so it is reproduced below for the server and the file_storage plugin. 
+There are four IDS snapshot components for people to try: server, client, storage_file (an example plugin) and plugin which is the interface if you want to write your own. As these are snapshots the links to the distribution files do not work so they are reproduced below: 
 
 http://www.icatproject.org/mvn/site/ids/ contains the components
 
