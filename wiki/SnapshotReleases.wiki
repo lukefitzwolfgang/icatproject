@@ -15,4 +15,4 @@ http://www.icatproject.org/mvn/repo/org/icatproject/ids.server/1.0.0-SNAPSHOT/id
 
 and
 
-http://www.icatproject.org/mvn/repo/org/icatproject/ids.client/1.0.0-SNAPSHOT/ids.client-1.0.0-20131209.152422-11-distro.zip
+http://www.icatproject.org/mvn/repo/org/icatproject/ids.client/1.0.0-SNAPSHOT/ids.client-1.0.0-20131210.124939-13-distro.zip
