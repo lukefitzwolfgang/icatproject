@@ -7,12 +7,12 @@ http://www.icatproject.org/mvn/site/ids/ contains the components
 
 distros are at:
 
-http://www.icatproject.org/mvn/repo/org/icatproject/ids.storage_file/1.0.0-SNAPSHOT/ids.storage_file-1.0.0-20131209.151504-7-distro.zip
+http://www.icatproject.org/mvn/repo/org/icatproject/ids.storage_file/1.0.0-SNAPSHOT/ids.storage_file-1.0.0-20131212.172309-8-distro.zip
 
 ,
 
-http://www.icatproject.org/mvn/repo/org/icatproject/ids.server/1.0.0-SNAPSHOT/ids.server-1.0.0-20131209.151545-12-distro.zip
+http://www.icatproject.org/mvn/repo/org/icatproject/ids.server/1.0.0-SNAPSHOT/ids.server-1.0.0-20131212.174830-13-distro.zip
 
 and
 
-http://www.icatproject.org/mvn/repo/org/icatproject/ids.client/1.0.0-SNAPSHOT/ids.client-1.0.0-20131210.124939-13-distro.zip
+http://www.icatproject.org/mvn/repo/org/icatproject/ids.client/1.0.0-SNAPSHOT/ids.client-1.0.0-20131212.175642-14-distro.zip
