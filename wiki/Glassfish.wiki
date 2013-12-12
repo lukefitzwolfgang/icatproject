@@ -74,3 +74,17 @@ for each offending certificate. The keystore password is by default "changeit".
 
 === Database connectors ===
 Your chosen database jars must be installed in the lib directory of your domain. These files will have names such as: mysql-connector-java-5.1.21-bin.jar (for MySQL) and ojdbc6.jar (for Oracle). After installing these jars glassfish must be restarted. It is recommended to use asadmin stop-domain followed by asadmin start-domain to achieve this.
+
+=== Problems starting glassfish ===
+In some circumstances glassfish may refuse to start. A series of dots will appear on the screen and after about four rows will time out. To get round this problem:
+ * determine which is the bad component by looking at the end of the server.log to see what it is was trying to load
+ * edit domain.xml in the config directory - find the line in the section 
+{{{
+  <servers>
+    <server>
+}}}
+starting with  <application-ref ref="... for the troublesome component and disable it it by inserting "enabled="false" so that the line now starts:  <application-ref "enabled="false" ref="...
+ * start the domain with asadmin start-domain ...
+ * enable the component with asadmin enable ...
+
+To avoid the problem if you need to stop and start the domain, disable the troublesome component before stopping it and enable it after starting the domain.
