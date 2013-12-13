@@ -8,7 +8,6 @@ package icat.rest.ws.service;
 import icat.rest.ws.converter.DatafileKeys;
 import icat.rest.ws.converter.DatafileLocation;
 import icat.rest.ws.converter.LastRunConverter;
-import icat.rest.ws.converter.RunConverter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import javax.ejb.Stateless;

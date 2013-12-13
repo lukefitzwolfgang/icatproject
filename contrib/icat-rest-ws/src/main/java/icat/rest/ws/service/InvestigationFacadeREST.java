@@ -4,10 +4,7 @@
  */
 package icat.rest.ws.service;
 
-import icat.rest.ws.converter.InstrumentConverter;
-import icat.rest.ws.converter.InvestigationConverter;
-import icat.rest.ws.converter.ProposalConverter;
-import icat.rest.ws.converter.RunConverter;
+import icat.rest.ws.converter.*;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -155,7 +152,7 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
   }
 
   @GET
-  @Path("{facil}/{inst}/{prop}/{meta}")
+  @Path("{facil}/{inst}/{prop}/meta")
   @Produces({"application/xml", "application/json"})
   public InvestigationConverter getMeta(@PathParam("facil") String facility, @PathParam("inst") String instrument, @PathParam("prop") String proposal, @Context HttpServletRequest requestContext) {
     try {
@@ -178,6 +175,33 @@ public class InvestigationFacadeREST extends AbstractFacade<Investigation> {
     } catch (IcatException ex) {
       log.error("In getMeta: got IcatException " + ex.getMessage());
       return new InvestigationConverter();
+    }
+  }
+
+  @GET
+  @Path("{facil}/{inst}/{prop}/all")
+  @Produces({"application/xml", "application/json"})
+  public InvestigationAllConverter getAll(@PathParam("facil") String facility, @PathParam("inst") String instrument, @PathParam("prop") String proposal, @Context HttpServletRequest requestContext) {
+    try {
+      String yourIP = requestContext.getRemoteAddr().toString();
+      log.info("Beginning getAll: " + yourIP);
+      String query = "Investigation INCLUDE Dataset, DatasetParameter, DatasetType, ParameterType [name = ':proposal'] <-> Instrument [name = ':instrument']";
+      query = query.replace(":instrument", instrument).replace(":proposal", proposal);
+      SearchResponse results = BeanManager.search(RestfulConstant.RESTFUL_USER, query, em);
+      log.info("Ending getAll, found " + results.getList().size() + " proposals for instrument " + instrument);
+      if (results.getList().size() != 1) {
+        return new InvestigationAllConverter();
+      } else {
+        Iterator iter = results.getList().iterator();
+        while (iter.hasNext()) {
+          Investigation inv = (Investigation) iter.next();
+          return new InvestigationAllConverter(inv);
+        }
+        return new InvestigationAllConverter();
+      }
+    } catch (IcatException ex) {
+      log.error("In getAll: got IcatException " + ex.getMessage());
+      return new InvestigationAllConverter();
     }
   }
 
