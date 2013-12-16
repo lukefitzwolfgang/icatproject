@@ -6,7 +6,7 @@
 
 = Record of actions from recent ICAT collaboration meetings = 
 
-== Meeting 70 - 14 November 2013 ==
+== Meeting 70 - 12 December 2013 ==
 
  * Actions from meeting 69 (Alistair)
  * Status of ICAT 4.3 and related parts such as authn (Steve)
@@ -22,10 +22,19 @@ Present:
 
 Apologies: 
 
-=== Actions 69 ===
+=== Actions 70 ===
 
-|| Item  || Description                                                                     || Res           || Status            ||
-|| 70.00 || Document the meeting and update the actions                                     || AM            || .                 ||
+|| Item || Description                                                                     || Res           || Status                    ||
+|| 70.0 || Document the meeting and update the actions                                     || AM            || In progress               ||
+|| 70.1 || .                                                                               || .             || .                         ||
+|| 70.2 || .                                                                               || .             || .                         ||
+|| 70.3 || .                                                                               || .             || .                         ||
+|| 70.4 || .                                                                               || .             || .                         ||
+|| 70.5 || .                                                                               || .             || .                         ||
+|| 70.6 || .                                                                               || .             || .                         ||
+|| 70.7 || .                                                                               || .             || .                         ||
+|| 70.8 || .                                                                               || .             || .                         ||
+|| 70.9 || .                                                                               || .             || .                         ||
 
 == Meeting 69 - 31 October 2013 ==
 
