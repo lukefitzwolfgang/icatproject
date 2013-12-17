@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.logging.Logger;
 
 import org.icatproject.editor.client.IcatGwtServiceAsync;
 import org.icatproject.editor.client.event.LoginEvent;
@@ -47,7 +46,6 @@ public class LoginPanel extends Composite {
 
 	private static MyUiBinder uiBinder = GWT.create(MyUiBinder.class);
 	private static final IcatGwtServiceAsync icat = IcatGwtServiceAsync.Util.getInstance();
-	final private static Logger logger = Logger.getLogger(LoginPanel.class.getName());
 
 	private static final EventBus bus = TheBus.getInstance();
 
@@ -137,7 +135,6 @@ public class LoginPanel extends Composite {
 			String value = ((TextBox) credentials.getWidget(i, 1)).getText();
 			credMap.put(key, value);
 		}
-		logger.fine("Will use the " + method + " authenticator to log in");
 
 		icat.login(method, credMap, new AsyncCallback<LoginResult>() {
 
