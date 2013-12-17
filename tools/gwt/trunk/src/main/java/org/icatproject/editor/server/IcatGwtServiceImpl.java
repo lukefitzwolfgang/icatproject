@@ -28,29 +28,14 @@ import org.icatproject.editor.shared.CredType.Visibility;
 import org.icatproject.editor.shared.EditorException;
 import org.icatproject.editor.shared.LoginResult;
 import org.icatproject.editor.shared.SessionException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import uk.ac.rl.esc.catutils.CheckedProperties;
+import org.icatproject.utils.CheckedProperties;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")
 public class IcatGwtServiceImpl extends RemoteServiceServlet implements IcatGwtService {
 
-	private DatatypeFactory datatypeFactory;
-
-	private DateFormat dfout;
-
-	private static final String formatString = "yyyy-MM-dd' 'HH:mm:ss";
-
-	private static final Logger logger = LoggerFactory.getLogger(IcatGwtServiceImpl.class);
-
-	private Map<String, IceEntityInfo> eiMap = new HashMap<String, IceEntityInfo>();
-
 	private ICAT icatEP;
-
-	private List<String> beanNames;
 
 	private Map<String, List<CredType>> credentialList = new LinkedHashMap<String, List<CredType>>();
 
@@ -67,17 +52,6 @@ public class IcatGwtServiceImpl extends RemoteServiceServlet implements IcatGwtS
 			ICATService icatService = new ICATService(icatUrl, new QName("http://icatproject.org",
 					"ICATService"));
 			icatEP = icatService.getICATPort();
-
-			datatypeFactory = DatatypeFactory.newInstance();
-			dfout = new SimpleDateFormat(formatString);
-			dfout.setLenient(false);
-
-			beanNames = new ArrayList<String>(Arrays.asList(props.getString("bean.list").split(
-					"\\s+")));
-			for (String beanName : beanNames) {
-				/* This will detect any invalid names */
-				icatEP.getEntityInfo(beanName);
-			}
 
 			ArrayList<String> authnNames = new ArrayList<String>(Arrays.asList(props.getString(
 					"authn.list").split("\\s+")));
@@ -102,22 +76,16 @@ public class IcatGwtServiceImpl extends RemoteServiceServlet implements IcatGwtS
 			}
 
 		} catch (Exception e) {
-			logger.error(e.getClass() + " " + e.getMessage());
+
 			throw new ServletException(e.getClass() + " " + e.getMessage());
 		}
 
-		logger.info("Init of IcatGwtServiceImpl succesful");
 	}
 
-	
-
-
-
-	
 	@Override
 	public LoginResult login(String plugin, Map<String, String> map) throws EditorException,
 			SessionException {
-		logger.debug("Plugin is " + plugin);
+
 		try {
 			Credentials credentials = new Credentials();
 			for (Entry<String, String> e : map.entrySet()) {
@@ -128,7 +96,7 @@ public class IcatGwtServiceImpl extends RemoteServiceServlet implements IcatGwtS
 			}
 			String sessionId = icatEP.login(plugin, credentials);
 			String userName = icatEP.getUserName(sessionId);
-			logger.debug("Logged in as " + userName);
+
 			return new LoginResult(sessionId, userName);
 		} catch (IcatException_Exception e) {
 			if (e.getFaultInfo().getType() == IcatExceptionType.SESSION) {
@@ -146,18 +114,8 @@ public class IcatGwtServiceImpl extends RemoteServiceServlet implements IcatGwtS
 		} catch (IcatException_Exception e) {
 			// Ignore it
 		}
-		logger.debug("User with sessionId " + sessionId + " logged out");
+
 	}
-
-
-
-	
-
-
-
-
-
-
 
 	@Override
 	public Map<String, List<CredType>> getCredentialList() {

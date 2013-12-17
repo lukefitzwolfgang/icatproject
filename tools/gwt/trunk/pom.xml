@@ -20,7 +20,7 @@
         <downloadUrl>http://${repoMachineAndPath}</downloadUrl>
         <site>
             <id>website</id>
-            <url>scp://www.icatproject.org/var/www/html/mvn/site/tools/ice/${project.version}</url>
+            <url>scp://www.icatproject.org/var/www/html/mvn/site/tools/gwt/${project.version}</url>
         </site>
         <repository>
             <id>repo</id>
@@ -41,9 +41,9 @@
     </repositories>
 
     <scm>
-        <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/ice/trunk</connection>
-        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/ice/trunk</developerConnection>
-        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ftools%2Fice%2Ftrunk</url>
+        <connection>scm:svn:http://icatproject.googlecode.com/svn/tools/gwt/trunk</connection>
+        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/tools/gwt/trunk</developerConnection>
+        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ftools%2Fgwt%2Ftrunk</url>
     </scm>
 
     <description>An ICAT Editor. The main use for this is envisaged to be creating Facility, ParameterTypes, DatasetTypes etc.</description>
@@ -85,33 +85,15 @@
         </dependency>
 
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.6.6</version>
-        </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.6.6</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.icatproject</groupId>
             <artifactId>icat.client</artifactId>
             <version>4.2.5</version>
         </dependency>
 
         <dependency>
-            <groupId>uk.ac.rl.esc</groupId>
-            <artifactId>cat-utils</artifactId>
-            <version>1.5.0</version>
+            <groupId>org.icatproject</groupId>
+            <artifactId>icat.utils</artifactId>
+            <version>4.3.2-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
@@ -142,24 +124,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Copy static web files before executing gwt:run -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.1.1</version>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>exploded</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <webappDirectory>${webappDirectory}</webappDirectory>
-                </configuration>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -174,24 +138,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>2.7</version>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <descriptors>
-                        <descriptor>src/assemble/distribution.xml</descriptor>
-                    </descriptors>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
 
             <plugin>
