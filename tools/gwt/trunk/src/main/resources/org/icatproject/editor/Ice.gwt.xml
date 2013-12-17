@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='Ice'>
+
+    <inherits name='com.google.gwt.user.User' />
+
+    <inherits name='com.google.gwt.user.theme.clean.Clean' />
+    <inherits name='com.google.gwt.logging.Logging' />
+
+    <entry-point class='org.icatproject.editor.client.Ice' />
+
+    <source path='client' />
+    <source path='shared' />
+
+    <set-property name="gwt.logging.popupHandler" value="DISABLED" />
+    <set-property name="gwt.logging.logLevel" value="FINEST" />
+
+</module>
