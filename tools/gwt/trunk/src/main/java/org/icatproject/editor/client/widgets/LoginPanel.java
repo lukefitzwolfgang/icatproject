@@ -7,7 +7,6 @@ import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.icatproject.editor.client.IcatGwtServiceAsync;
-import org.icatproject.editor.client.Ice;
 import org.icatproject.editor.client.event.LoginEvent;
 import org.icatproject.editor.client.event.TheBus;
 import org.icatproject.editor.shared.CredType;
@@ -62,7 +61,7 @@ public class LoginPanel extends Composite {
 
 			@Override
 			public void onFailure(Throwable caught) {
-				Ice.processFailure(caught);
+				// TODO Ice.processFailure(caught);
 			}
 
 			@Override
