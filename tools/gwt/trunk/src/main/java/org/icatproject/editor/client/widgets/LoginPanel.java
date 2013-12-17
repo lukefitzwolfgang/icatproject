@@ -5,23 +5,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.icatproject.editor.client.IcatGwtServiceAsync;
-import org.icatproject.editor.client.event.LoginEvent;
-import org.icatproject.editor.client.event.TheBus;
 import org.icatproject.editor.shared.CredType;
 import org.icatproject.editor.shared.CredType.Visibility;
-import org.icatproject.editor.shared.LoginResult;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
-import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.Label;
@@ -30,7 +24,7 @@ import com.google.gwt.user.client.ui.PasswordTextBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
-public class LoginPanel extends Composite {
+public abstract class LoginPanel extends Composite {
 
 	interface MyUiBinder extends UiBinder<Widget, LoginPanel> {
 	}
@@ -45,36 +39,20 @@ public class LoginPanel extends Composite {
 	Label messageLabel;
 
 	private static MyUiBinder uiBinder = GWT.create(MyUiBinder.class);
-	private static final IcatGwtServiceAsync icat = IcatGwtServiceAsync.Util.getInstance();
-
-	private static final EventBus bus = TheBus.getInstance();
 
 	private TextBox first;
 
 	private Map<String, List<CredType>> credTypes;
 
-	public LoginPanel() {
+	public LoginPanel(Map<String, List<CredType>> credTypes) {
 		initWidget(uiBinder.createAndBindUi(this));
-		icat.getCredentialList(new AsyncCallback<Map<String, List<CredType>>>() {
 
-			@Override
-			public void onFailure(Throwable caught) {
-				// TODO Ice.processFailure(caught);
-			}
-
-			@Override
-			public void onSuccess(Map<String, List<CredType>> credTypes) {
-				LoginPanel.this.credTypes = credTypes;
-				for (Entry<String, List<CredType>> entry : credTypes.entrySet()) {
-					authnList.addItem(entry.getKey());
-				}
-
-				authnList.setSelectedIndex(0);
-				buildForm();
-
-			}
-		});
-
+		LoginPanel.this.credTypes = credTypes;
+		for (Entry<String, List<CredType>> entry : credTypes.entrySet()) {
+			authnList.addItem(entry.getKey());
+		}
+		authnList.setSelectedIndex(0);
+		buildForm();
 	}
 
 	@UiHandler("authnList")
@@ -136,21 +114,11 @@ public class LoginPanel extends Composite {
 			credMap.put(key, value);
 		}
 
-		icat.login(method, credMap, new AsyncCallback<LoginResult>() {
+		login(method, credMap);
 
-			@Override
-			public void onFailure(Throwable caught) {
-				messageLabel.setText("Error: " + caught.getMessage());
-			}
-
-			@Override
-			public void onSuccess(LoginResult loginResult) {
-				bus.fireEvent(new LoginEvent(loginResult.getUserName(), loginResult.getSessionId()));
-				messageLabel.setText("");
-			}
-
-		});
 	}
+
+	abstract void login(String method, Map<String, String> credMap);
 
 	public void focus() {
 		if (first != null) {
