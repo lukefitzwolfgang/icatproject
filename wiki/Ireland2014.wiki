@@ -1,0 +1,134 @@
+#summary Notes about the ICAT workshop in Dublin in Ireland in March 2014
+#labels Featured
+
+<wiki:toc max_depth="3" />
+
+= Meeting in Ireland in 2014 =
+
+ICAT and PaNdata F2F meeting in Dublin .
+
+The ICAT meeting is from lunch time 24th of March to lunch time 25th of March.
+
+The dinner will be in the evening on the 24th. 
+
+= Date and location of the workshop =
+
+The workshop will be held as part of the RDA 2014 conference during the week of 24-28 March 2014 in Dublin, Ireland.  The ICAT meeting is from mid-day on Monday 24 March to mid-day on Tuesday 25 March 2014.  It is expected that most people attending the ICAT workshop will also attend the RDA conference which follows on Wednesday 26 March to Friday 28 March 2014.
+
+Wireless networking will be available at the venue.
+
+= Attending =
+
+If you are interested in attending this meeting please contact tom.griffin@stfc.ac.uk or alistair -dot- mills -at- stfc -dot- ac -dot- uk.
+
+= Agenda =
+
+The purpose is to discuss plans for the development and use of ICAT at facilities and by projects such as Pandata and Crisp.
+
+All times are too specific to be realistic.  The names are indicative.  The agenda is likely to change.
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes           ||
+|| 13:30      || Session 1 - Chair person - TBS                                                   || .            || .                                         ||.               ||
+|| .          || Welcome and introductions                                                        || 5            || .                                         ||.               ||
+|| .          || Status of the ICAT collaboration project                                         || 10           || Alistair Mills                            ||.               ||
+|| 13:45      || Status of the contribs( ContribIndex )                                           || 60 (10 x 6)  ||                                           ||.               ||
+|| .          || PyICAT                                                                           || .            || Christian                                 ||.               ||
+|| .          || Restful                                                                          || .            || Shelly                                    ||.               ||
+|| .          || xml-ingest                                                                       || .            || Tom                                       ||.               ||
+|| .          || Nexus ingest                                                                     || .            || Shelly                                    ||.               ||
+|| .          || ICAT eclipse plugin                                                              || .            || Alun                                      ||.               ||
+|| .          || ICAT setup                                                                       || .            || Steve Fisher                              ||.               ||
+|| .          || icat-xml-client                                                                  || .            || Alistair                                  ||.               ||
+|| .          || api-examples                                                                     || .            || Alistair                                  ||.               ||
+|| .          || training materials                                                               || .            || Alistair                                  ||.               ||
+|| 14:45      || B r e a k . . .                                                                  || 15           || .                                         ||.               ||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes           ||
+|| 15:00      || Session 2 - Chair person - Tom Griffin                                           || .            || .                                         ||.               ||
+|| .          || Facilities status, problems and requirements                                     || 75 (15x5)    || .                                         ||.               ||
+|| .          || Alba                                                                             || .            || Daniel                                    ||.               ||
+|| .          || Desy                                                                             || .            || Juergen                                   ||.               ||
+|| .          || Dls                                                                              || .            || Alun                                      ||.               ||
+|| .          || Elettra                                                                          || .            || Milan                                     ||.               ||
+|| .          || Esrf                                                                             || .            || Nicola                                    ||.               ||
+|| .          || Hzb                                                                              || .            || Rolf                                      ||.               ||
+|| .          || Ill                                                                              || .            || Jamie                                     ||.               ||
+|| .          || Isis                                                                             || .            || Tom                                       ||.               ||
+|| .          || Jcns                                                                             || .            || Christian                                 ||.               ||
+|| .          || Llb                                                                              || .            || Stephane                                  ||.               ||
+|| .          || Max                                                                              || .            || Krister                                   ||.               ||
+|| .          || Psi                                                                              || .            || Leonardo                                  ||.               ||
+|| .          || Sns                                                                              || .            || Shelly                                    ||.               ||
+|| .          || Clf                                                                              || .            || Kevin                                     ||.               ||
+|| 16:15      || B r e a k . . .                                                                  || 15           ||                                           ||.               ||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes           ||
+|| 16:30      || Technical technical training - optional -                                        || 90           || Alistair                                  ||.               ||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes           ||
+|| 20.00      || Evening event                                                                    || 150          || Juan                                      ||.               ||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||.               ||
+|| 09:00      || Session 3 - Chair person - Shelly, SNS/ORNL                                      ||  .           ||                                           ||.               ||
+|| .          || Technical presentation on Topcat                                                 || 15           || .                                         ||.               ||
+|| .          || Technical presentation on IDS                                                    || 30           || Wayne Chung/ Antony Wilson                ||.               ||
+|| 09:45      || B r e a k . . .                                                                  || 15           ||                                           ||.               ||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes           ||
+|| 10:00      || Session 4 - Chair person - Jean-Francois                                         ||  .           ||                                           ||.               ||
+|| .          || Technical presentation on ICAT 4.3 plans                                         || 45           || Steve Fisher                              ||.               ||
+|| .          || ICAT Beyond 4.3                                                                  || 15           || Brian Matthews                            ||.               ||
+|| 11:00      || B r e a k . . .                                                                  || 15           ||                                           ||.               ||
+
+|| Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes           ||
+|| 11:15      || Session 5 - Chair person - Brian Matthews, STFC                                  || 60 (3x20)    ||                                           ||.               ||
+|| .          || ICAT Job Portal                                                                  ||  .           || Steve Fisher                              ||.               ||
+|| .          || Integration tools                                                                ||  .           || Alistair Mills                            ||.               ||
+|| .          || Authentication                                                                   ||  .           || Heinz-Josef                               ||.               ||
+|| .          || .                                                                                ||  .           || .                                         ||.               ||
+|| 12:15      || L u n c h . . .                                                                  ||  .           ||                                           ||.               ||
+
+This table has a list of people who may attend:
+
+|| Name                          || Organisation || Comments                                        ||Notes ||
+|| David López                   || ALBA         || .                                               ||.||
+|| Daniel Salvat                 || ALBA         || .                                               ||.||
+|| Frank Schluenzen              || DESY         || .                                               ||.||
+|| Jan Kotanski                  || DESY         || .                                               ||.||
+|| Thorsten Kracht               || DESY         || .                                               ||.||
+|| Juergen Starek                || DESY         || .                                               ||.||
+|| Bill Pulford                  || DLS          || .                                               ||.||
+|| Andy Goetz                    || ESRF         || .                                               ||.||
+|| Dietmar Herrendörfer          || HZB          || .                                               ||.||
+|| Rolf Krahl                    || HZB          || .                                               ||.||
+|| Krister Larsson               || MAX          || .                                               ||.||
+|| Shelly Ren                    || ORNL (SNS)   || .                                               ||.||
+|| Heinz-Josef Weyer             || PSI          || .                                               ||.||
+|| Mirjam van Daalen             || PSI          || .                                               ||.||
+|| Leonardo Sala                 || PSI          || .                                               ||.||
+|| Alistair Mills                || STFC (SCD)   || .                                               ||.||
+|| Erica Yang                    || STFC (SCD)   || .                                               ||.||
+|| Antony Wilson                 || STFC (SCD)   || .                                               ||.||
+|| Steve Fisher                  || STFC (SCD)   || .                                               ||.||
+|| Wayne Chung                   || STFC (SCD)   || .                                               ||.||
+|| Kunal Arora                   || STFC (SCD)   || .                                               ||.||
+|| Tom Griffin                   || STFC (ISIS)  || .                                               ||.||
+|| Christian Felder              || JCNS         || .                                               ||.||
+|| Christophe Cleva              || ESRF         || .                                               ||.||
+|| Jamie Hall                    || ILL          || .                                               ||.||
+|| Kevin Phipps                  || STFC (SCD)   || .                                               ||.||
+|| Idrissou Chado                || SOLEIL       || .                                               ||.||
+|| George Kourousias             || ELETTRA      || .                                               ||.||
+|| Milan Prica                   || ELETTRA      || .                                               ||.||
+|| Stephane Longeville           || LLB          || .                                               ||.||
+|| Brian Matthews                || STFC (SCD)   || .                                               ||.||
+|| Denise Small                  || STFC (SCD)   || .                                               ||.||
+|| Juan Bicarregui               || STFC (SCD)   || .                                               ||.||
+
+Apologies:
+
+|| Name                          || Organisation || Comments                                        ||Notes ||
+
+
+
+== - the end - ==
