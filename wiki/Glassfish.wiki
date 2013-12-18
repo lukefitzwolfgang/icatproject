@@ -22,7 +22,7 @@ Designate an account for running glassfish. I will call this the glassfish accou
 
 For glassfish3 get the latest glassfish3 zip file and unzip it to, for example, the  home directory of the glassfish account. Add ~/glassfish3/glassfish/bin to the path of the user. ogs-3.1.2.2.zip is known to work.
 
-For glassfish4 get the latest distribution without jdk. Testing has been carried out with glassfish-4.0.zip. Install with the defaults. You may prefer not to install the updatetool. Add ~/glassfish4/glassfish/bin to the path of the user. * However ICAT4.3.0 will not install under glassfish4 *
+For glassfish4 get the latest distribution without jdk. Testing has been carried out with glassfish-4.0.zip. Install with the defaults. You may prefer not to install the updatetool. Add ~/glassfish4/glassfish/bin to the path of the user. 
 
 Ensure that hostname -f returns a sensible result. Then issue the following commands. When you create the domain you will be asked to specify the admin username and password. Do not use the default empty password.
 
@@ -42,6 +42,13 @@ asadmin delete-network-listener http-listener-2
 asadmin create-network-listener --listenerport 8181 --protocol http-listener-2 http-listener-2
 asadmin create-ssl --type http-listener --certname s1as --ssl3enabled=false --ssl3tlsciphers +SSL_RSA_WITH_RC4_128_MD5,+SSL_RSA_WITH_RC4_128_SHA http-listener-2
 }}}
+
+
+In the case of glassfish 4, it is _essential_ to also issue:
+{{{
+asadmin set configs.config.server-config.cdi-service.enable-implicit-cdi=false
+}}}
+
 
 If you wish, go to http://localhost:4848 you will be redirected to https and will be able to login as admin to see from the GUI how the server is configured.
 
