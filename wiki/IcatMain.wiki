@@ -7,5 +7,5 @@
  * [CollaborationInformation Collaboration Information]
  * [CSMD             ICAT Metadata Model (CSMD)]
  * [IcatWhosWho                                          ICAT Who's Who]
- * [IcatFaq Frequently Asked Questions]
+ 
  
