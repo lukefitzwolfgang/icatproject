@@ -2,8 +2,11 @@
 #labels Featured
 
 = Installation Notes =
- * [Installation Installation instructions for all new ICAT component releases]
  * [ApacheAndGlassfish Apache front end for Glassfish]
- * [Databases Choice of Database and considerations for ICAT use]
  * [FirewallsWithICAT Dealing with firewalls]
- * [Glassfish How to install and configure Glassfish]
+ 
+Also please see: http://icat-web.esc.rl.ac.uk/installation/
+
+which will soon become:
+
+http://icatproject.org/installation/
