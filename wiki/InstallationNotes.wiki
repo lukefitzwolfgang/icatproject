@@ -5,8 +5,4 @@
  * [ApacheAndGlassfish Apache front end for Glassfish]
  * [FirewallsWithICAT Dealing with firewalls]
  
-Also please see: http://icat-web.esc.rl.ac.uk/installation/
-
-which will soon become:
-
-http://icatproject.org/installation/
+Also please see: http://icatproject.org/installation/
