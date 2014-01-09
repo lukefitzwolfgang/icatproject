@@ -8,7 +8,7 @@ Here we give a specification of the current version of CSMD, v.3.0.
 
 The reference for CSMD 2.0 is available here [http://epubs.stfc.ac.uk/bitstream/485/csmdm.version-2.pdf]
 
-The data dictionary describing how CMSD is used in ICAT3 is available here [http://icatproject.googlecode.com/svn/icat3_api/trunk/Documentation/data_dictionary.pdf]
+The data dictionary describing how CMSD is used in ICAT3 is available here [https://code.google.com/p/icatproject/source/browse/parked/old-doc/data_dictionary.pdf]
 
 We use some components from the [http://dublincore.org/documents/singapore-framework/ DCMI Singapore Framework] to provide some concepts to describe the model at different levels of abstraction.  Although are are *not* in this document providing a Dublin Core profile, these provide a useful breakdown of the stages needed to document the metadata model.
 
