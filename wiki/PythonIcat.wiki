@@ -18,10 +18,11 @@ features.
 
 Current Release:
 
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.2.0.tar.gz python-icat 0.2.0]
+ * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.3.0.tar.gz python-icat 0.3.0]
 
 Old versions:
 
+ * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.2.0.tar.gz python-icat 0.2.0]
  * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.1.0.tar.gz python-icat 0.1.0]
 
 == Installation from Source ==
@@ -34,7 +35,7 @@ python-icat follows the standard Python conventions of packaging source distribu
 
 The last step might require admin privileges in order to write into the site-packages directory of your Python installation.
 
-If you are using Python 2.6 or older, apply [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-python2_6.patch this patch] after the first step.  It removes the use of dict comprehensions which were introduced in Python 2.7.
+If you are using Python 2.6 or older, apply python2_6.patch (included in the source distribution) after the first step.  It removes the use of dict comprehensions which were introduced in Python 2.7.
 
 == Additional Resources ==
 
