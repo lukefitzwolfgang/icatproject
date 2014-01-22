@@ -1,0 +1,4 @@
+#summary Page moved
+#labels redirect
+
+See http://icatproject.org/installation/database
