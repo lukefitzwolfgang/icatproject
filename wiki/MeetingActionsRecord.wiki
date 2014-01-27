@@ -6,6 +6,17 @@
 
 = Record of actions from recent ICAT collaboration meetings = 
 
+== Meeting 71 - 31 January 2014 ==
+
+ * Actions from meeting 70 (Alistair)
+ * Meetings in 2014 (Alistair)
+ * Meeting in Dublin in March (Alistair)
+ * ICAT roadmap (Steve)
+ * Status of ICAT 4.3 and related parts such as authn, ids and topcat (Steve)
+ * Release and SV for Panadata (Alistair)
+ * Issues from ICAT production deployments (Any)
+ * AOB (Any)
+
 == Meeting 70 - 12 December 2013 ==
 
  * Actions from meeting 69 (Alistair)
@@ -18,23 +29,33 @@
 
 === Notes 70 ===
 
-Present: 
+Present: Steve, Wayne, Alistair, Shelly, Tom
 
-Apologies: 
+The actions were reviewed and their stati updated/
+
+The face to face meeting for 2014 has been set for 24-25 March.  The venue is the Department of Computer Science at Trinity College, Dublin.  
+
+There will be releases of ICAT, Topcat, Authn_shib and IDS around the end of 2013, or the beginning of 2014.  
+
+A collection of ICAT parts will be tested as a group and adopted by Pandata as part of the Pandata software stack release in January 2014.
+
+There is a need to investigate the use of ICATs sharing a single lucene index.
+
+There was discussion about the ICAT collaboration meetings.  It was agreed to reduce the frequency of meetings from fortnightly to monthly.  It was agreed to investigate the use of alternative technology for the meetings.  The present arrangements with voice only connections in a telephone conference does not support visual means of communication.
 
 === Actions 70 ===
 
 || Item || Description                                                                     || Res           || Status                    ||
-|| 70.0 || Document the meeting and update the actions                                     || AM            || In progress               ||
-|| 70.1 || .                                                                               || .             || .                         ||
-|| 70.2 || .                                                                               || .             || .                         ||
-|| 70.3 || .                                                                               || .             || .                         ||
-|| 70.4 || .                                                                               || .             || .                         ||
-|| 70.5 || .                                                                               || .             || .                         ||
-|| 70.6 || .                                                                               || .             || .                         ||
-|| 70.7 || .                                                                               || .             || .                         ||
-|| 70.8 || .                                                                               || .             || .                         ||
-|| 70.9 || .                                                                               || .             || .                         ||
+|| 70.0 || Document the meeting and update the actions                                     || AM            || Done                      ||
+|| 70.1 || See Juan about the ICAT meeting in Dublin                                       || TG            || Done                      ||
+|| 70.2 || Close actions 66.04 and 64.02                                                   || AM            || Done                      ||
+|| 70.3 || Release ICAT 4.3.1                                                              || SF            || Done                      ||
+|| 70.4 || Release update to the SNAPSHOT IDS and the python api                           || SF            || Done                      ||
+|| 70.5 || Release Topcat 1.11                                                             || SF            || Done                      ||
+|| 70.6 || Test a collection of ICAT parts as Pandata release 003                          || AM            || Done                      ||
+|| 70.7 || Investigate 2 icats sharing a lucene index                                      || SF            || Done                      ||
+|| 70.8 || Release the shibboleth authenticator for use by Umbrella                        || SF            || Done                      ||
+|| 70.9 || Schedule a set of meetings for ICAT in 2014 and investigate alternative technology || AM         || On-going                  ||
 
 == Meeting 69 - 31 October 2013 ==
 
@@ -78,10 +99,10 @@ Alistair reported that good progress was being made with the ingester for ESRF a
 || 69.01 || Make use of the new ISIS ICAT in SV6 on 1 November                              || AM            || Done              ||
 || 69.02 || Make use of the new DLS ICAT in SV6 on 1 November                               || AM            || Done              ||
 || 69.03 || Discuss that training course for Pandata and make changes to the materials      || AM/SF         || Done              ||
-|| 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         ||                  .||
+|| 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         || Done              ||
 || 66.02 || Send a note to TG about Nxingest                                                || AM            || Done              ||
-|| 66.04 || Discuss with Erica Yang issues of mutual concern                                || Shelly        ||                  .||
-|| 64.02 || Schedule a web cast on the contents of ICAT 4.3                                 || Steve         ||                  .||
+|| 66.04 || Discuss with Erica Yang issues of mutual concern                                || Shelly        || Done              ||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3                                 || Steve         || Cancelled         ||
 || 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||                  .|| 
 || 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||                  .|| 
 
