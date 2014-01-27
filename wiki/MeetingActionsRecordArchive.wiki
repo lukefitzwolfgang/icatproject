@@ -1,8 +1,200 @@
+#summary Older ICAT collaboration meetings
+
 = Actions record from ICAT collaboration meetings =
 
 This page holds all but the most recent meetings.  The latest meetings are at MeetingActionsRecord.
 
 <wiki:toc max_depth="2" />
+
+== Meeting 68 - 17 October 2013 ==
+
+ * Actions from meeting 67 (Alistair)
+ * Status of ICAT 4.3 (Steve)
+ * Status of IDS (Steve)
+ * Status of TopCAT (Wayne)
+ * Issues from ICAT production deployments (All)
+ * AOB (All)
+
+=== Notes 68 ===
+
+Present: Steve, Tom, Wayne, Frazer, Alistair, Kunal
+
+Tom reported that the date of the Spring meeting was still being discussed. 
+
+As discussed at the previous meeting actions 61.01 and 60.03 have been dropped - they will be done at some stage.
+
+There had been a lot of useful feedback on the ICAT 4.3.0 snapshots resulting in a number of improvements. The only remaining issue was the inability to install it on Glassfish 4.
+
+There has been some progress with the IDS but not much as Steve has been working mostly on ICAT. He plans to make some changes to the API to make it more convenient to use.
+
+Wayne reported that there had been a review of TopCAT issues out of which the items that should be fixed for the next release were identified. He is working on interfacing to ICAT 4.3.0 but does not have one installed. Tom suggested he should use the ISIS one. Tom will also check to see if he has anything else to add to the issue list.
+
+=== Actions 68 ===
+
+|| Item  || Description                                                                     || Res           || Status   ||
+|| 68.00 || Document the meeting and update the actions                                     || AM            || Done     ||
+|| 68.01 || Check that the list of requirements for Topcat                                  || TG            || Done     ||
+|| 68.02 || Check that the topcat43 plugins works with ICAT 4.3.0                           || WC            || Done     ||
+|| 68.03 || Get a credential from ISIS to access the ISIS Topcat                            || WC            || Done     ||
+|| 68.04 || Talk to Bill and Stefan about Umbrella authentication plugin for ICAT           || SMF           || Done     ||
+|| 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         ||         .||
+|| 66.02 || Send a note to TG about Nxingest                                                || AM            || Done     ||
+|| 66.04 || Discuss with Erica Yang issues of mutual concern                                || Shelly        ||         .||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3                                 || Steve         ||         .||
+
+
+
+== Meeting 67 - 3 October 2013 ==
+
+ * Actions from meeting 66 (Steve)
+ * Status of ICAT 4.3 (Steve)
+ * Status of IDS (Steve)
+ * Issues from ICAT production deployments (All)
+ * AOB (All)
+
+=== Notes 67 ===
+
+Present: Milan, George, Shelly, Steve, Tom, Wayne and Frazer
+
+It was noted that the date of the ICAT meeting in Spring next year is not yet fixed. It should be done soon.
+
+It was suggested that actions 61.01 and 60.03 should be removed as they will be done when they are ready and are not urgent.
+
+Tom reported on his work testing the ICAT4.3.0-SNAPSHOTs. There were still some problems to be addressed with multiple rules. He suggested 
+that the installation script might check for the EJBTimer. This is present when Glassfish is installed but might have been deleted. He had been unable to use the installation scripts on Windows.
+
+=== Actions 67 ===
+
+|| Item  || Description                                                                     || Res           ||      Status||
+|| 67.00 || Document the meeting and update the actions                                     || SMF           ||        Done||
+|| 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         ||           .||
+|| 66.02 || Send a note to TG about Nxingest                                                || AM            ||           .||
+|| 66.04 || Discuss with Erica Yang issues of mutual concern                                || Shelly        ||           .||
+|| 65.02 || Provide feedback on ICAT 4.3 and its related parts                              || All           ||        Done||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3                                 || Steve         ||           .||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||        Drop|| 
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||        Drop|| 
+
+
+== Meeting 66 - 19 September 2013 ==
+
+ * Actions from the meeting 65 (Alistair)
+ * Status of ICAT 4.3 (Steve)
+ * Update from Pandata (Alistair)
+ * Status of IDS (Steve)
+ * AOB (All)
+
+=== Notes 66 ===
+
+Present: Alistair (STFC/chair), Frazer (ISIS), Tom (ISIS), George (Elettra), Milan (Elettra), Julien (ESRF), Shelly (SNS) and Steve (STFC)
+
+Apologies: Jamie (ILL)
+
+The date of the ICAT face to face meeting in 2014 was discussed.  The final Pandata meeting is scheduled for 29 March 2014 in Dublin to meet in the same week as the RDA meeting in Dublin.  The last three face to face meetings in 2011 (Paris), 2012 (Grenoble) and 2013 (Lund) were schedule to meet in the same week as a Pandata meeting.  It was agreed that we would defer a decision on the date until more information is available about a successor project to Pandata.  It is likely that ICAT-2014 will be in May 2014.  We will try to settle the data by December 2013. 
+
+Tom reported that a bug in NxIngest had been detected and corrected.  
+
+Steve reported that the snapshots for ICAT 4.3 and related components are available and he would like more feedback.
+
+Steve reported that progress on IDS 1.0 was good, and that it should be available in October/November.
+
+Tom reported that Mantid now supports ICAT 4.2.
+
+Shelly reported that SNS is now investigating the use of ICAT with autoreduction.   
+
+Alistair reported that he is arranging a two day training course for technical people in Pandata.  The training will include the installation, deployment and operations of the latest ICAT materials including their integration with Apache.  The training will also cover Topcat, IDS, Umbrella.
+
+The meeting concluded at 15h30.
+
+
+=== Actions 66 ===
+
+|| Item  || Description                                                                     || Res           ||      Status||
+|| 66.00 || Document the meeting and update the actions                                     || AM            ||        Done||
+|| 66.01 || Fix the dates of the ICAT and Pandata meetings in Spring 2014                   || TG/AM         ||           .||
+|| 66.02 || Send a note to TG about Nxingest                                                || AM            ||           .||
+|| 66.03 || Send a note to the icat collaboration about the training for Pandata            || AM            || https://code.google.com/p/pandata/wiki/TrainingSwInstallation ||
+|| 66.04 || Discuss autoreduction with Erica Yang and Shelly Ren                            || AM            ||           .||
+|| 65.02 || Provide feedback on ICAT 4.3 and its related parts                              || All           ||    On-going||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3 for September                   || Steve         ||           .||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||           .|| 
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||           .|| 
+ 
+
+== Meeting 65 - 5 September 2013 ==
+
+ * Actions from the meeting 64 (Alistair)
+ * Status of ICAT 4.3 (Steve)
+ * Issues from ICAT production deployments (All)
+ * AOB (All)
+
+=== Notes 65 ===
+
+Present: Alistair (STFC/chair), Kevin (STFC), Tom (ISIS), Idrissou (Soleil) and Steve (STFC)
+
+There has been an offer from ISIS to host the face to face meeting in March 2014.  It was agreed to accept this offer and the chairman thanked Tom for the offer.  The meeting is likely to be held in collaboration with the final meeting of Pandata.
+
+Steve reported that progress on the collection of parts associated with release of ICAT 4.3 was going well.  There are a small number of interdependencies.  For example ICAT 4.3 requires a new version of Icat-setup.  The authn_db has also changed.  There was a discussion of detection of compatibilities.  It was agreed to review these, following experience of using the new versions of the parts.
+
+There were no issues with any production deployment.  However Tom reported that he was very keen to move to ICAT 4.3 as it solves some of his difficulties.
+
+There was a question about the status of IDS.  Steve reported the technical work was going well, and that a version for comment would be available in October.  Tom asked that this version be available soon, even if some advanced features for remote file systems are not supported. 
+
+The meeting concluded at 15h30.
+
+=== Actions 65 ===
+
+|| Item  || Description                                                                     || Res           ||      Status||
+|| 65.00 || Document the meeting and update the actions                                     || AM            ||        Done||
+|| 65.01 || Discuss the arrangements for ICAT 2014 with Pandata                             || TG/AM         ||        Done||
+|| 65.02 || Provide feedback on ICAT 4.3 and its related parts                              || All           ||    On-going||
+|| 65.03 || Meet again on 19 September                                                      || All           ||        Done||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3 for September                   || Steve         ||           .||
+|| 64.03 || Make snapshots of ICAT 4.3.rc available for comment in August                   || Steve         ||        Done||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||           .|| 
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||           .|| 
+
+== Meeting 64 - 8 Aug 2013 ==
+
+ * Actions from the meeting 63 (Alistair)
+ * Status of ICAT 4.3 (Steve)
+ * ICAT F2F Meeting (Steve and Alistair)
+ * Issues from ICAT production deployments (All)
+ * AOB (All)
+
+=== Notes 64 ===
+
+Present: Alistair (STFC/chair), Kevin (STFC), Tom (ISIS), Ivan (CCFE) and Steve (STFC)
+
+As it is August, the meeting was quiet.
+
+Ivan from CCFE joined the conference for the first time.  CCFE is the Centre for Fusion Energy.  We welcome CCFE to the collaboration.
+
+The Pandata meeting in Barcelona in September was discussed.  It was noted that there would NOT be a meeting about ICAT.  However Steve offered to host a web cast session in September where he would discuss the contents of ICAT 4.3.
+
+It was agreed to invite members of the collaboration to offer to host a face to face meeting of ICAT in March 2014.  
+
+Steve discussed the status of ICAT 4.3 and reported that progress was good.  He will make a snapshot of the software and the documentation available to interested parties later in August.  Following that, he will release ICAT 4.3.  During September, he will host a webcast session to discuss ICAT 4.3.
+
+There are no known problems with the production deployments.
+
+Ivan reported that he was making progress with ICAT.  At the moment he is investigating how to integrate ICAT with other meta data systems at CCFE.
+
+Steve reported that he intends to move www.icatproject.org to a new host during August.  The new host will be located within STFC and have a new IP address.  This change should not affect anyone using the resources such as the maven repository on www.icatproject.org.
+
+The meeting concluded at 15h30.
+
+=== Actions 64 ===
+
+|| Item  || Description                                                                     || Res           ||  Status||
+|| 64.00 || Document the meeting and update the actions                                     || Alistair      ||    Done||
+|| 64.01 || Invite invitations to host the ICAT collaboration meeting in March '14          || Alistair      ||    Done||
+|| 64.02 || Schedule a web cast on the contents of ICAT 4.3 for September                   || Steve         ||       .||
+|| 64.03 || Make snapshots of ICAT 4.3.rc available for comment in August                   || Steve         ||       .||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||       .|| 
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||       .|| 
+
+
 
 == Meeting 63 - 25 July 2013 ==
 
