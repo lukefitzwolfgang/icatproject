@@ -57,6 +57,8 @@ There was discussion about the ICAT collaboration meetings.  It was agreed to re
 || 70.7 || Investigate 2 icats sharing a lucene index                                      || SF            || Done                      ||
 || 70.8 || Release the shibboleth authenticator for use by Umbrella                        || SF            || Done                      ||
 || 70.9 || Schedule a set of meetings for ICAT in 2014 and investigate alternative technology || AM         || On-going                  ||
+|| 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||                  .|| 
+|| 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||                  .|| 
 
 == Meeting 69 - 31 October 2013 ==
 
