@@ -8,12 +8,13 @@
 
 == Meeting 71 - 31 January 2014 ==
 
- * Actions from meeting 70 (Alistair)
- * Meetings in 2014 (Alistair)
+ * Actions from meeting 70 (Steve)
+ * Meeting technology (Alistair)
  * Meeting in Dublin in March (Alistair)
  * ICAT roadmap (Steve)
- * Status of ICAT 4.3 and related parts such as authn, ids and topcat (Steve)
- * Release and SV for Panadata (Alistair)
+ * Status of recent releases (Steve)
+ * Coordination of IDS plugins (Andy/Christophe)
+ * Release and SV for Pandata (Alistair)
  * Issues from ICAT production deployments (Any)
  * AOB (Any)
 
