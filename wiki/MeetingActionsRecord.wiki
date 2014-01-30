@@ -4,7 +4,21 @@
 *Contents*
 <wiki:toc max_depth="3" />
 
-= Record of actions from recent ICAT collaboration meetings = 
+= Record of actions from recent ICAT collaboration meetings =
+
+== Meeting 72 - 27 February 2014 ==
+
+Provisional agenda
+
+ * Actions from meeting 71 (Steve)
+ * Meeting technology (Kunal)
+ * Meeting in Dublin in March (Alistair)
+ * ICAT roadmap (Steve)
+ * Status of recent releases (Steve)
+ * Coordination of IDS plugins (Andy/Christophe)
+ * Release and SV for Pandata (Alistair)
+ * Issues from ICAT production deployments (Any)
+ * AOB (Any) 
 
 == Meeting 71 - 31 January 2014 ==
 
@@ -17,6 +31,35 @@
  * Release and SV for Pandata (Alistair)
  * Issues from ICAT production deployments (Any)
  * AOB (Any)
+
+=== Notes 71 ===
+Present: Rolf, Shelley, Milan, Alistair, Kunal and Steve
+Apologies: Tom
+
+Kunal had looked at a number of choices including GoToMeeting and Teamviewer. Evo was also suggested as another possibility. He will try out one or more products with Milan and Shelley and report back.
+
+Alastair explained that the current Dublin meeting agenda was currently a clone of that for the the last meeting. Steve requested that any site reports should highlight any problems.
+
+Steve went through the draft Road Map. A lot of useful ideas were put forward which will be reflected in the map:
+  * Documentation improvements are needed for search and authorization (doing it efficiently)
+  * Rolf has data export/import for his python code but it is quite slow. He uses yaml syntax with ids replaced by the uniqueness constraint fields which is similar to what Steve had in mind.
+  * It was suggested again that it would be good to isolate the federation part of Topcat. This might be a service in its own right.
+  * There was a suggestion that ICE should be incorporated into TopCAT.
+
+PaNData service verification will start tomorrow.
+
+Milan had found a problem with TopCAT for which he will submit a bug report
+
+=== Actions 71 ===
+
+|| Item || Description                                                                     || Assigned      || Status            ||
+|| 71.0 || Organise the Dublin meeting                                                     || Alistair      || .                 ||
+|| 71.1 || Update road map with ideas from meeting                                         || Steve         || .                 ||
+|| 71.2 || Submit TopCAT bug report                                                        || Milan         || . 
+|| 70.6 || Test a collection of ICAT parts as Pandata release 003                          || Alistair      || In progress       ||     
+|| 70.9 || Investigate alternative meeting technology                                      || Kunal         || In progress       ||
+|| 61.1 || Put the simple ICAT browser into contrib when it is ready                       || Tom           || .                 || 
+|| 60.3 || Finalise a release of IJP and send a note to the mailing list                   || Steve         || .                 || 
 
 == Meeting 70 - 12 December 2013 ==
 
@@ -53,10 +96,10 @@ There was discussion about the ICAT collaboration meetings.  It was agreed to re
 || 70.3 || Release ICAT 4.3.1                                                              || SF            || Done                      ||
 || 70.4 || Release update to the SNAPSHOT IDS and the python api                           || SF            || Done                      ||
 || 70.5 || Release Topcat 1.11                                                             || SF            || Done                      ||
-|| 70.6 || Test a collection of ICAT parts as Pandata release 003                          || AM            || Done                      ||
-|| 70.7 || Investigate 2 icats sharing a lucene index                                      || SF            ||                       .||
+|| 70.6 || Test a collection of ICAT parts as Pandata release 003                          || AM            || In progress                      ||
+|| 70.7 || Investigate 2 icats sharing a lucene index                                      || SF            || To be considered as part of the Road Map||
 || 70.8 || Release the shibboleth authenticator for use by Umbrella                        || SF            || Done                      ||
-|| 70.9 || Schedule a set of meetings for ICAT in 2014 and investigate alternative technology || AM         || On-going                  ||
+|| 70.9 || Schedule a set of meetings for ICAT in 2014 and investigate alternative technology || Kunal         || In progress - transferred to Kunal ||
 || 61.01 || Put the simple ICAT browser into contrib when it is ready                       || Tom           ||                  .|| 
 || 60.03 || Finalise a release of IJP and send a note to the mailing list                   || Steve         ||                  .|| 
 
