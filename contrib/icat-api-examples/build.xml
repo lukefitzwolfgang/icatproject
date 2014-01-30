@@ -2,7 +2,6 @@
 
 <project name="icat_api_examples" default="build">
 
-
 	<target name="build" depends="compile">
 		<jar destfile="icat_api_examples.jar">
 			<fileset dir="bin" includes="**/*.class" />
@@ -11,9 +10,10 @@
 
 	<target name="compile">
 		<mkdir dir="bin" />
-		<javac srcdir="src" destdir="bin" includeantruntime="false">
+		<javac debug="true" srcdir="src" destdir="bin" includeantruntime="false">
 			<classpath>
-				<pathelement location="icat-client.jar"/>
+				<pathelement location="ids.client-1.0.0.jar"/>
+				<pathelement location="icat.client-4.3.0.jar"/>
 				<pathelement location="build"/>
 			</classpath>
 		</javac>
