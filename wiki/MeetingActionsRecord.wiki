@@ -34,6 +34,7 @@ Provisional agenda
 
 === Notes 71 ===
 Present: Rolf, Shelley, Milan, Alistair, Kunal and Steve
+
 Apologies: Tom
 
 Kunal had looked at a number of choices including GoToMeeting and Teamviewer. Evo was also suggested as another possibility. He will try out one or more products with Milan and Shelley and report back.
@@ -47,6 +48,8 @@ Steve went through the draft Road Map. A lot of useful ideas were put forward wh
   * There was a suggestion that ICE should be incorporated into TopCAT.
 
 PaNData service verification will start tomorrow.
+
+Alistair said that he planned to produce a report on ICAT from PaNData. Steve asked him to make sure that problems were promptly reported in the usual way (the appropriate googlecode issue list) so that any issues could be addressed as soon as possible.
 
 Milan had found a problem with TopCAT for which he will submit a bug report
 
