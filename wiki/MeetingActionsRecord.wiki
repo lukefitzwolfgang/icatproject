@@ -55,7 +55,7 @@ Milan had found a problem with TopCAT for which he will submit a bug report
 || Item || Description                                                                     || Assigned      || Status            ||
 || 71.0 || Organise the Dublin meeting                                                     || Alistair      || .                 ||
 || 71.1 || Update road map with ideas from meeting                                         || Steve         || .                 ||
-|| 71.2 || Submit TopCAT bug report                                                        || Milan         || . 
+|| 71.2 || Submit TopCAT bug report                                                        || Milan         || .                 ||
 || 70.6 || Test a collection of ICAT parts as Pandata release 003                          || Alistair      || In progress       ||     
 || 70.9 || Investigate alternative meeting technology                                      || Kunal         || In progress       ||
 || 61.1 || Put the simple ICAT browser into contrib when it is ready                       || Tom           || .                 || 
