@@ -13,7 +13,17 @@ Search
 
 4. Execute the program of choice.  For example to use Authenticate use: 
 
-java -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.Authenticate
+export CLASS_PATH=\
+icat_api_examples.jar:\
+icat.client-4.3.0.jar:\
+ids.client-1.0.0.jar:\
+jackson-databind-2.2.0.jar:\
+jackson-core-2.2.0.jar:\
+jackson-annotations-2.2.0.jar
+
+java uk.icat.examples.Authenticate
+
+
 
 5. Expect a response such as: Session ID = d7cfaac0-1269-4398-874d-23601ca26b1b
 

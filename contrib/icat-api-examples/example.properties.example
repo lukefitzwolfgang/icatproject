@@ -1,0 +1,12 @@
+# $Id: example.properties 1066 2011-10-27 16:25:24Z abm65@FED.CCLRC.AC.UK $
+
+# Note that it is the last group of parameters which are used
+
+wsdl.location=https://icatisis.esc.rl.ac.uk/ICATService/ICAT?wsdl
+username=email@something.ac.uk
+password=secret-password
+authenticator=uows
+
+#
+# - the end -
+#
