@@ -53,7 +53,7 @@ Milan had found a problem with TopCAT for which he will submit a bug report
 === Actions 71 ===
 
 || Item || Description                                                                     || Assigned      || Status            ||
-|| 71.0 || Organise the Dublin meeting                                                     || Alistair      || .                 ||
+|| 71.0 || Organise the Dublin meeting                                                     || Alistair      || In progress       ||
 || 71.1 || Update road map with ideas from meeting                                         || Steve         || .                 ||
 || 71.2 || Submit TopCAT bug report                                                        || Milan         || .                 ||
 || 70.6 || Test a collection of ICAT parts as Pandata release 003                          || Alistair      || In progress       ||     
