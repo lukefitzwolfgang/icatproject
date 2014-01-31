@@ -68,7 +68,7 @@ All times are too specific to be realistic.  The names are indicative.  The agen
 || 16:30      || Technical technical training - optional -                                        || 90           || Alistair                                  ||.               ||
 
 || Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||Notes           ||
-|| 20.00      || Evening event                                                                    || 150          || Juan                                      ||.               ||
+|| 20.00      || Evening event                                                                    || 150          || Prof. Jones of Trinity College            ||.               ||
 
 || Start Time || Subject                                                                          || Time (mins)  || Speaker                                   ||.               ||
 || 09:00      || Session 3 - Chair person - Shelly, SNS/ORNL                                      ||  .           ||                                           ||.               ||
