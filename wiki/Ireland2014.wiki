@@ -126,6 +126,7 @@ This table has a list of people who may attend:
 || Brian Matthews                || STFC (SCD)   || .                                               ||.||
 || Denise Small                  || STFC (SCD)   || .                                               ||.||
 || Juan Bicarregui               || STFC (SCD)   || .                                               ||.||
+|| John Walsh                    || TCD (CS)     || .                                               ||.||
 
 Apologies:
 
