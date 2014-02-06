@@ -9,7 +9,7 @@ features.
 
 == System Requirements ==
 
- * Python 2.7.  (Python 2.6 will do for most of python-icat.)
+ * Python 2.6 or 2.7.  Python 2.4 is not supported.  Python 2.5 has never been tested (feedback welcome).
  * [https://fedorahosted.org/suds/ Suds 0.4].
  * [http://pyyaml.org/wiki/PyYAML PyYAML].  (Only for the examples, not needed for python-icat itself.)
  * [http://code.google.com/p/argparse/ argparse]. (Only for Python 2.6 and older, argparse became part of the Python standard library in 2.7.)
