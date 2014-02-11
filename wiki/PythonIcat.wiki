@@ -9,19 +9,20 @@ features.
 
 == System Requirements ==
 
- * Python 2.6 or 2.7.  Python 2.5 or older is not supported.
- * [https://fedorahosted.org/suds/ Suds 0.4].
+ * Python 2.7 or newer.  Python 2.6 will do but requires patching the sources, see below.
+ * Suds, either the [https://fedorahosted.org/suds/ original version] or the [https://bitbucket.org/jurko/suds/ fork by Jurko Gospodnetić].  The latter is recommended as the original version is not maintained any more and contains bugs.  Python 3 requires the jurko fork.
  * [http://pyyaml.org/wiki/PyYAML PyYAML].  (Only for the examples, not needed for python-icat itself.)
- * [http://code.google.com/p/argparse/ argparse]. (Only for Python 2.6 and older, argparse became part of the Python standard library in 2.7.)
+ * [http://code.google.com/p/argparse/ argparse]. (Only for Python 2.6, argparse became part of the Python standard library in 2.7.)
 
 == Download ==
 
 Current Release:
 
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.3.0.tar.gz python-icat 0.3.0]
+ * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.4.0.tar.gz python-icat 0.4.0]
 
 Old versions:
 
+ * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.3.0.tar.gz python-icat 0.3.0]
  * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.2.0.tar.gz python-icat 0.2.0]
  * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.1.0.tar.gz python-icat 0.1.0]
 
@@ -35,7 +36,7 @@ python-icat follows the standard Python conventions of packaging source distribu
 
 The last step might require admin privileges in order to write into the site-packages directory of your Python installation.
 
-If you are using Python 2.6 or older, apply python2_6.patch (included in the source distribution) after the first step.  It removes the use of dict comprehensions which were introduced in Python 2.7.
+If you are using Python 2.6, apply python2_6.patch (included in the source distribution) after the first step.  It removes the use of dict comprehensions which were introduced in Python 2.7.
 
 == Additional Resources ==
 
