@@ -11,7 +11,7 @@ This is what I did on icat.default.stfc.uk0.bigv.io.  I repeated it on tng-1.def
 
 Note that you MUST have Glassfish 4 to get this to work.  Glassfish 4 also requires Java 1.7 jdk.  The operating system was Centos 6.  On other systems, the files may be in different places and have different names.  Eg httpd becomes apache2 on ubuntu.
 
-These notes are good enough for me, but they do not explain things.  They are a person aide-memoire.  They  may omit details.  For example, it does not tell you where you get mod_ssl.so (answer, get the source and compile it for yourself!).
+These notes are good enough for me, but they do not explain things.  They are a personal aide-memoire.  They  may omit details.  For example, it does not tell you where you get mod_ssl.so.  Answer, get the source and compile it for yourself!  Alternatively there is a copy in the SVN for Pandata.   You copy it to the file /etc/httpd/modules/mod_jk.so.
 
 == Configure the Apache ==
 
@@ -33,15 +33,23 @@ I found that if you do not add the fonts, the display is unreadable.
 
 === Create a directory for jk ===
 {{{
-mkdir /etc/httpd/jk ===
+mkdir /etc/httpd/jk
 }}}
 
 === Route icat traffic to the worker ===
 
-Add the following line to the bottom of: /etc/httpd/conf.d/ssl.conf 
+Add the following line to the bottom of the file: /etc/httpd/conf.d/ssl.conf 
+
+Add it just before the line </VirtualHost>
 
 {{{
-JkMount /icat/* worker1
+JkMount /* worker1
+}}}
+
+At ESRF use:
+
+{{{
+JkMount /icat worker1
 }}}
 
 === Configure jk ===
@@ -120,9 +128,11 @@ The following parts are done as the glassfish user, conventionally glassfish3, e
 
 === Install Glassfish4 ===
 
-As the glassfish user, install glassfish4 and get the ICAT working on https://localhost:8181/icat/ICAT/ICATService?wsdl. 
+As the glassfish user, install glassfish4 and get the ICAT working on https://localhost:8181/ICAT/ICATService?wsdl. 
 
 === Configure the icat.ear file ===
+
+Only configure icat.ear at ESRF.  Do not do it elsewhere!
 
 The standard ear file is not suitable as it deploys to:
 
@@ -193,6 +203,12 @@ Note that in the above lines, the label "ajp" can be almost anything, but it mus
 == Run the tests with the new endpoint ==
 
 Run the tests again this time with:
+
+{{{
+https://localhost/icat/ICAT/ICATService.wsdl
+}}}
+
+At ESRF use:
 
 {{{
 https://localhost/icat/ICAT/ICATService.wsdl
