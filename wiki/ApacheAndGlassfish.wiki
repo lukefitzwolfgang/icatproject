@@ -119,7 +119,7 @@ You do not need to use Wireshark, but it is very useful to see what is going on.
 
 Start wireshark with the following filter: 
 {{{
-tcp.port == 8009 || tcp.port == 8181 || tpc.port == 443 
+tcp.port == 8009 || tcp.port == 8181 || tcp.port == 443 
 }}}
 
 == Configure the Glassfish ==
