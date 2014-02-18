@@ -7,7 +7,7 @@
 
 = Apache Icat Front End =
 
-This is what I did on icat.default.stfc.uk0.bigv.io.  I repeated it on tng-1.default.stfc.uk0.bigv.io and it worked.
+This is what I did on icat.default.stfc.uk0.bigv.io.  I repeated it on tng-1.default.stfc.uk0.bigv.io and tng-3.default.stfc.uk0.bigv.io and it worked.
 
 Note that you MUST have Glassfish 4 to get this to work.  Glassfish 4 also requires Java 1.7 jdk.  The operating system was Centos 6.  On other systems, the files may be in different places and have different names.  Eg httpd becomes apache2 on ubuntu.
 
@@ -40,7 +40,7 @@ mkdir /etc/httpd/jk
 
 Add the following line to the bottom of the file: /etc/httpd/conf.d/ssl.conf 
 
-Add it just before the line </VirtualHost>
+Add it just before the line &lt;/VirtualHost>
 
 {{{
 JkMount /* worker1
