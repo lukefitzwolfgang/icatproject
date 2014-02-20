@@ -2,8 +2,8 @@
 #
 # $Id$
 #
- java -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.Logout \
-`java -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.Login`
+ ./icat_cli.sh Logout \
+`./icat_cli.sh Login`
 #
 # - the end - 
 #
