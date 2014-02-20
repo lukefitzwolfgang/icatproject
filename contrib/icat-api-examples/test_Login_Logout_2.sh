@@ -2,8 +2,10 @@
 #
 # $Id$
 #
-sid=`java -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.Login`
-java -cp icat_api_examples.jar:icat-client.jar uk.icat.examples.Logout $sid
+sid=`./icat_cli.sh Login`
+echo Login $sid rc=$?
+./icat_cli.sh Logout $sid
+echo Logout $sid rc=$?
 #
 # - the end - 
 #
