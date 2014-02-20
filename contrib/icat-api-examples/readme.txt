@@ -1,4 +1,4 @@
-$Id: readme.txt 1534 2012-10-09 11:58:31Z abm65@FED.CCLRC.AC.UK $ 
+$Id$ 
 
 The following list, is the set of examples of how to invoke the API from a simple java program:
 
@@ -13,7 +13,7 @@ Search
 
 4. Execute the program of choice.  For example to use Authenticate use: 
 
-export CLASS_PATH=\
+export CLASSPATH=\
 icat_api_examples.jar:\
 icat.client-4.3.0.jar:\
 ids.client-1.0.0.jar:\
@@ -22,8 +22,6 @@ jackson-core-2.2.0.jar:\
 jackson-annotations-2.2.0.jar
 
 java uk.icat.examples.Authenticate
-
-
 
 5. Expect a response such as: Session ID = d7cfaac0-1269-4398-874d-23601ca26b1b
 
