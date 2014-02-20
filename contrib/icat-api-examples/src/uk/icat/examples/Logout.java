@@ -13,7 +13,7 @@ public class Logout extends ExampleBase {
         public static void main(String[] args) throws Exception {
                 ICAT icat = getIcat();
                 String sid=args[0];
-                System.out.println(sid);
+                //System.out.println(sid);
                 icat.logout(sid);
         }
 }

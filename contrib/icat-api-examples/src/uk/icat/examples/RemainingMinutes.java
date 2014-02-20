@@ -17,11 +17,11 @@ public class RemainingMinutes extends ExampleBase {
                 String sid;
                 if (args.length == 0) {
                     sid = icat.login(authenticator, credentials);
-                    System.out.println("Remaining Minutes:" + icat.getRemainingMinutes(sid));
+                    System.out.println(icat.getRemainingMinutes(sid));
                     icat.logout(sid);
                 } else {
                     sid = args[0];
-                    System.out.println("Remaining Minutes:" + icat.getRemainingMinutes(sid));
+                    System.out.println(icat.getRemainingMinutes(sid));
                 }
         }
 }

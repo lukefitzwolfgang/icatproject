@@ -25,12 +25,12 @@ jackson-databind-2.2.0.jar:\
 jackson-core-2.2.0.jar:\
 jackson-annotations-2.2.0.jar
 
+#set -x
 trust_store=
 wsdl=`grep ^wsdl ${properties}`
 file=`./change_wsdl.sh $wsdl`
 [ "${file:0:1}" = "_" -a -f $file ] && trust_store="-Djavax.net.ssl.trustStore=$file"
 
-#set -x
 java $trust_store $DbyPass $Dshost $Dhost $Dsport $Dport  uk.icat.examples.$*
 
 #
