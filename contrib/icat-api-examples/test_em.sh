@@ -8,7 +8,7 @@ while read line
 do
    if [ "${line:0:1}" != "#" -a ${#line} != 0 ]
    then
-      result="`./test_two.sh $line`"
+      result="`./icat_cli.sh $line`"
       return_code=$?
       total=`expr $total + $return_code`
       echo $line , $result , $return_code 
