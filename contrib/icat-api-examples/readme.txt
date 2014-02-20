@@ -23,6 +23,10 @@ jackson-annotations-2.2.0.jar
 
 java uk.icat.examples.Authenticate
 
+Alternatively, the following script hides all of the details:
+
+./icat_cli.sh Authenticate
+
 5. Expect a response such as: Session ID = d7cfaac0-1269-4398-874d-23601ca26b1b
 
 - the end - 

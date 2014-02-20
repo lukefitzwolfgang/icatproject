@@ -42,6 +42,7 @@ import org.icatproject.UserGroup;
 
 public class ExampleBase {
 
+        private static final String IDS_LOCATION_PROPERTY_NAME = "ids.location";
         private static final String WSDL_LOCATION_PROPERTY_NAME = "wsdl.location";
         private static final String USERNAME_PROPERTY_NAME = "username";
         private static final String EXAMPLE_PROPERTIES_FILENAME = "example.properties";
@@ -52,6 +53,7 @@ public class ExampleBase {
         private static String wsdlLocation;
         protected static String password;
         protected static String authenticator;
+        protected static String ids;
         protected static Login.Credentials credentials; 
 
         public static ICAT getIcat() throws Exception {
@@ -83,6 +85,7 @@ public class ExampleBase {
                 password = (String) properties.get(PASSWORD_PROPERTY_NAME);
                 wsdlLocation = (String) properties.get(WSDL_LOCATION_PROPERTY_NAME);
                 authenticator = (String) properties.get(AUTHENTICATOR_PROPERTY_NAME);
+                ids = (String) properties.get(IDS_LOCATION_PROPERTY_NAME);
         }
 
         private static URL getServiceWsdlLocation() throws MalformedURLException {
