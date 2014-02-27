@@ -41,6 +41,8 @@ Agenda
 === Notes 72 ===
 Present: Milan, Shelly, Ivan, Alistair, Christophe, Anton, Kunal, Tom, Wayne and Steve
 
+Apologies: Rolf
+
 Action 71.0 - there has not been much progress yet with the preparation of the Dublin meeting besides essentials such as a room to meet in. This will be rectified over the next few weeks. It will not appear on the actions list as there will be no further meeting before Dublin. Tom volunteered Jay to talk about integration of ICAT and Mantid and also to talk about his experience (as someone new to ICAT) with the ICAT API.
 
 Action 71.1 - this has now been completed and the first version finalised. Steve will circulate a note with probable time scales for the items on the road map. The time scales may become part of the map when it is next revised.
