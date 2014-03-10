@@ -1,11 +1,11 @@
 #summary Notes about the ICAT workshop in Dublin in Ireland in March 2014
 #labels Featured
 
-<wiki:toc max_depth="3" />
+
 
 = Meeting in Ireland in 2014 =
 
-ICAT and PaNdata F2F meeting in Dublin .
+
 
 The ICAT meeting is from lunch time 24th of March to lunch time 25th of March.
 
@@ -18,6 +18,14 @@ The workshop will be held as part of the RDA 2014 conference during the week of 
 The meeting will be held in the Large Conference Room (LCR),School of Computer Science and Statistics, O'Reilly Institute, Trinity College Dublin - see http://www.tcd.ie/Maps/map.php?q=O%20Reilly%20Institute.
 
 Please note that the visitor entrance for the O'Reilly Institute is through the adjacent external stairwell of the Hamilton Building, see - http://www.tcd.ie/Maps/map.php?b=195. Reduced mobility access is also available through the ground floor of the Hamilton Institute. Wireless networking will be available at the venue.
+
+= Agenda =
+
+This is being worked on ...
+
+
+<wiki:comment>
+
 
 = Attending =
 
@@ -132,6 +140,4 @@ Apologies:
 
 || Name                          || Organisation || Comments                                        ||Notes ||
 
-
-
-== - the end - ==
+</wiki:comment>
