@@ -1,25 +1,21 @@
-#summary Notes about the ICAT workshop in Dublin in Ireland in March 2014
+#summary Notes about the ICAT meeting in Dublin in Ireland in March 2014
 #labels Featured
-
-
 
 = Meeting in Ireland in 2014 =
 
+== Date and time ==
 
+13:30 on 24/Mar/2014 to 12:30 on 25/Mar/2014.
 
-The ICAT meeting is from lunch time 24th of March to lunch time 25th of March.
+with dinner on the evening of the 24th. 
 
-The dinner will be in the evening on the 24th. 
-
-= Date and location of the workshop =
-
-The workshop will be held as part of the RDA 2014 conference during the week of 24-28 March 2014 in Dublin, Ireland.  The ICAT meeting is from mid-day on Monday 24 March to mid-day on Tuesday 25 March 2014.  It is expected that most people attending the ICAT workshop will also attend the RDA conference which follows on Wednesday 26 March to Friday 28 March 2014.
+== Location ==
 
 The meeting will be held in the Large Conference Room (LCR),School of Computer Science and Statistics, O'Reilly Institute, Trinity College Dublin - see http://www.tcd.ie/Maps/map.php?q=O%20Reilly%20Institute.
 
 Please note that the visitor entrance for the O'Reilly Institute is through the adjacent external stairwell of the Hamilton Building, see - http://www.tcd.ie/Maps/map.php?b=195. Reduced mobility access is also available through the ground floor of the Hamilton Institute. Wireless networking will be available at the venue.
 
-= Agenda =
+== Agenda ==
 
 This is being worked on ...
 
