@@ -1,7 +1,0 @@
-#summary Apache front end for Glassfish 4
-
-
-https://code.google.com/p/pandata/wiki/ApacheAndGlassfish
-
-
-- the end -
