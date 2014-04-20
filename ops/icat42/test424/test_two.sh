@@ -8,8 +8,8 @@ while read line
 do
    if [ "${line:0:1}" != "#" -a ${#line} != 0 ]
    then
-      #echo ./test_2.sh $line
-      ./test_2.sh $line |\
+      #echo ./icat_cli.sh $line
+      ./icat_cli.sh $line |\
       while read output
       do
           echo $line : $output

@@ -3,13 +3,13 @@
 # $Id$
 #
 
-#set -x
-
 export         properties='example.properties'
+export     CURL_CA_BUNDLE=sig-11.crt
+export            std_err=std.err
                      wsdl=`grep ^wsdl ${properties}`
                   IDS_URL=`./change_u.sh $wsdl`
 
-          DownloadManager=DownloadManager
+          DownloadManager=ids
       ids_cmd_prepareData=prepareData
        ids_cmd_preparedId=preparedId
         ids_cmd_getStatus=getStatus
@@ -18,45 +18,31 @@ export         properties='example.properties'
 
                sleep_time=1
                 curl_post=-d
-                     curl="curl --silent"
+                     curl="curl "
 
            icat_cmd_Login="Login"
           icat_cmd_Logout="Logout"
           icat_cmd_Search="Search"
           icat_Search_arg="Dataset.id"
-                 SOMEFILE=somefile
-             SOMEFILE_ZIP=$SOMEFILE.zip
 
-             icat_api_cli="./test_2.sh"
+             icat_api_cli="./icat_cli.sh"
+         
 
-[ -f $SOMEFILE_ZIP ] && rm $SOMEFILE_ZIP
-STATUS=
+#set -x
 SESSION_ID=`$icat_api_cli $icat_cmd_Login`
-DATASET_ID=`$icat_api_cli $icat_cmd_Search $icat_Search_arg`
-PREPARED_ID=`$curl $curl_post "sessionId=$SESSION_ID&datasetIds=$DATASET_ID" $IDS_URL/$DownloadManager/$ids_cmd_prepareData`
-export k=0
-export mk=100
-
-while [     \( "$STATUS" != "$ids_status_ONLINE" \) \
-         -a \( $k -lt $mk \) ] 
+echo  SESSION_ID=$SESSION_ID
+for DATASET_ID in `$icat_api_cli $icat_cmd_Search $icat_Search_arg`
 do
-    STATUS=`$curl $IDS_URL/$DownloadManager/$ids_cmd_getStatus?$ids_cmd_preparedId=$PREPARED_ID`
-    printf .
-    sleep $sleep_time
-    export k=`expr $k + 1` 
+   DATASET_ZIP=$DATASET_ID.zip
+   [ -f $DATASET_ZIP ] && rm $DATASET_ZIP
+   PREPARED_ID=`$curl $curl_post "sessionId=$SESSION_ID&datasetIds=$DATASET_ID" $IDS_URL/$DownloadManager/$ids_cmd_prepareData 2>>$std_err`
+   echo PREPARED_ID=$PREPARED_ID
+   GETDATA=`$curl $IDS_URL/$DownloadManager/"$ids_cmd_getData?sessionId=$SESSION_ID&$ids_cmd_preparedId=$PREPARED_ID" > $DATASET_ZIP 2>>$std_err`
+   #echo ____ Downloaded file ______
+   #ls -l     $DATASET_ZIP
+   unzip -o  $DATASET_ZIP
 done
-if [ "$STATUS" = "$ids_status_ONLINE" ]
-then
-    echo ready! '(' $k ')' ... starting download
-    $curl $IDS_URL/$DownloadManager/$ids_cmd_getData?$ids_cmd_preparedId=$PREPARED_ID > $SOMEFILE_ZIP
-    $icat_api_cli $icat_cmd_Logout $SESSION_ID
-    ls -l $SOMEFILE_ZIP
-    unzip -vf $SOMEFILE
-    unzip -o  $SOMEFILE
-else
-    echo timeout! '(' $k ')' ... terminating
-    exit 1
-fi
+$icat_api_cli $icat_cmd_Logout $SESSION_ID
 
 #
 # - the end -

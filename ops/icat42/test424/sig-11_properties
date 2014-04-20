@@ -1,0 +1,13 @@
+# $Id$
+wsdl.location=https://sig-11.esc.rl.ac.uk:8181/ICATService/ICAT?wsdl
+
+#ICAT username
+username=root
+#username=kea@alistairmills.com
+
+#ICAT authenticator
+authenticator=db
+
+#ICAT password
+password=password
+#password=100005604064616
