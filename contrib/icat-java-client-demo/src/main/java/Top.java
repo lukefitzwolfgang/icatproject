@@ -54,23 +54,39 @@ public class Top {
 		String sessionId = icat.login(plugin, credentials);
 		System.out.println("Session id: " + sessionId);
 
+		// First 10 GS datasets ordered by name
 		{
-			// First 10 GS datasets ordered by name
-			List<?> ids = icat.search(sessionId,
-					",10 Dataset.name ORDER BY name [type.name = 'GS']");
-			System.out.print("\nFirst 10 dataset names order by name");
+			// JPQL
+			List<?> ids = icat
+					.search(sessionId,
+							"SELECT ds.name FROM Dataset ds WHERE ds.type.name = 'GS' ORDER BY ds.name LIMIT 0, 10");
+			System.out.print("First 10 dataset names order by name");
 			for (Object id : ids) {
 				System.out.print(" " + id);
 			}
 			System.out.println();
 		}
 
-		String ds1, ds2;
 		{
-			// As before but skip the first 8 and then take the next two
+			// Concise
 			List<?> ids = icat.search(sessionId,
-					"8,2 Dataset.name ORDER BY name [type.name = 'GS']");
-			System.out.print("\n9th and 10th dataset names order by name");
+					",10 Dataset.name ORDER BY name [type.name = 'GS']");
+			System.out.print("First 10 dataset names order by name");
+			for (Object id : ids) {
+				System.out.print(" " + id);
+			}
+			System.out.println();
+		}
+
+		// As before but skip the first 8 and then take the next two
+		String ds1, ds2;
+
+		{
+			// JPQL
+			List<?> ids = icat
+					.search(sessionId,
+							"SELECT ds.name FROM Dataset ds WHERE ds.type.name = 'GS' ORDER BY ds.name LIMIT 8, 2");
+			System.out.print("9th and 10th dataset names order by name");
 			for (Object id : ids) {
 				System.out.print(" " + id);
 			}
@@ -85,11 +101,29 @@ public class Top {
 		}
 
 		{
-			// Parameters and files of datasets - note that we only print one
-			// parameter and one file for each dataset - see break statements
-			String query = "Dataset ORDER BY name INCLUDE DatasetParameter, Datafile, ParameterType  [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
+			// Concise
+			List<?> ids = icat.search(sessionId,
+					"8,2 Dataset.name ORDER BY name [type.name = 'GS']");
+			System.out.print("9th and 10th dataset names order by name");
+			for (Object id : ids) {
+				System.out.print(" " + id);
+			}
+			System.out.println();
+			if (ids.size() >= 2) {
+				ds1 = (String) ids.get(0);
+				ds2 = (String) ids.get(1);
+			} else {
+				ds1 = "";
+				ds2 = "";
+			}
+		}
+
+		// Parameters and files of datasets - note that we only print one
+		// parameter and one file for each dataset - see break statements
+		{ // JPQL
+			String query = "SELECT ds FROM Dataset ds WHERE ds.name BETWEEN ':ds1' AND ':ds2' AND ds.type.name = 'GS' ORDER BY ds.name INCLUDE ds.parameters.type, ds.datafiles";
 			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
-			System.out.println("\nParameters and files of datasets with names between " + ds1
+			System.out.println("Parameters and files of datasets with names between " + ds1
 					+ " and " + ds2);
 			System.out.println("Query is " + query);
 			List<?> dss = icat.search(sessionId, query);
@@ -112,11 +146,50 @@ public class Top {
 			}
 		}
 
-		{
-			// Specific dataset parameters only - selected by name
-			String query = "DatasetParameter  INCLUDE Dataset, DatasetType, DatasetParameter, ParameterType [type.name = 'SAD_SPEC_B_FWHM' OR type.name = 'GEM_SHOT_NUM_VALUE'] <-> Dataset [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
+		{ // Concise
+			String query = "Dataset ORDER BY name INCLUDE DatasetParameter, Datafile, ParameterType  [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
 			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
-			System.out.println("\nSpecific dataset parameters only - selected by name");
+			System.out.println("Parameters and files of datasets with names between " + ds1
+					+ " and " + ds2);
+			System.out.println("Query is " + query);
+			List<?> dss = icat.search(sessionId, query);
+			for (Object o : dss) {
+				Dataset ds = (Dataset) o;
+				System.out.println(ds.getName() + " " + ds.getCreateTime() + " "
+						+ ds.getParameters().size() + " " + ds.getDatafiles().size());
+				for (DatasetParameter dp : ds.getParameters()) {
+					System.out
+							.println("   " + dp.getType().getName() + ": " + dp.getNumericValue());
+					break;
+				}
+				for (Datafile dp : ds.getDatafiles()) {
+					final StringBuilder sb = new StringBuilder(host + "/ids/Data/" + "getThumbnail");
+					sb.append("?sessionid=" + sessionId);
+					sb.append("&datafileid=" + dp.getId());
+					System.out.println("   " + dp.getName() + " at " + sb);
+					break;
+				}
+			}
+		}
+
+		// Specific dataset parameters only - selected by name
+		{ // JPQL
+			String query = "SELECT dp FROM DatasetParameter dp, dp.dataset ds WHERE (dp.type.name = 'SAD_SPEC_B_FWHM' OR dp.type.name = 'GEM_SHOT_NUM_VALUE') AND  ds.name BETWEEN ':ds1' AND ':ds2' AND ds.type.name = 'GS' INCLUDE dp.dataset.type , dp.type";
+			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
+			System.out.println("Specific dataset parameters only - selected by name");
+			System.out.println("Query is " + query);
+
+			List<?> dsps = icat.search(sessionId, query);
+			for (Object o : dsps) {
+				DatasetParameter dsp = (DatasetParameter) o;
+				System.out.println(dsp.getType().getName() + " " + dsp.getDataset().getId() + ": "
+						+ dsp.getNumericValue());
+			}
+		}
+		{ // Concise
+			String query = "DatasetParameter  INCLUDE Dataset, DatasetType, ParameterType [type.name = 'SAD_SPEC_B_FWHM' OR type.name = 'GEM_SHOT_NUM_VALUE'] <-> Dataset [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS']";
+			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
+			System.out.println("Specific dataset parameters only - selected by name");
 			System.out.println("Query is " + query);
 
 			List<?> dsps = icat.search(sessionId, query);
@@ -127,11 +200,26 @@ public class Top {
 			}
 		}
 
+		// Datasets selected by presence of a parameter with a specific
+		// value or a file being present. For the concise query this requires multiple queries -
+		// get the two sets and combine them.
+
+		{ // JPQL
+
+			String query = "SELECT ds.id FROM Dataset ds, ds.parameters dp, ds.datafiles df WHERE ds.name BETWEEN ':ds1' AND ':ds2' AND ds.type.name = 'GS' AND ((dp.type.name = 'N_FROG_AUTOWIDTH_VALUE' AND dp.numericValue >= 8) OR df.name = 'LASER_BAY_SCINTILLATOR_TRACE') ";
+			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
+			System.out
+					.println("\nDatasets selected by presence of a parameter with a specific value or a file being present");
+			System.out.println("Query is " + query);
+
+			List<Object> dss = icat.search(sessionId, query);
+
+			System.out.println("dataset ids are: " + dss);
+		}
+
 		Set<Object> dssab;
-		{
-			// Datasets selected by presence of a parameter with a specific
-			// value or a file being present. This requires multiple queries -
-			// get the two sets and combine them.
+		{ // Concise
+
 			String query = "Dataset.id [name >= ':ds1' AND name <= ':ds2' AND type.name = 'GS'] <-> DatasetParameter [(type.name = 'N_FROG_AUTOWIDTH_VALUE' AND numericValue >= 8)]";
 			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
 			System.out
@@ -152,12 +240,35 @@ public class Top {
 			System.out.println("dataset ids are: " + dssab);
 		}
 
-		{
-			// Go from a list of dataset ids and access parameters and
-			// investigations. This time we have all parameters of each dataset
-			// and need to select by Java code. This is rather inefficient the
-			// investigations information should be cached rather than looking
-			// it up every time.
+		// Go from a list of dataset ids and access parameters and
+		// investigations. This time we have all parameters of each dataset
+		// and need to select by Java code. This is rather inefficient the
+		// investigations information should be cached rather than looking
+		// it up every time.
+		{ // JPQL
+			System.out.println("\nGo from a list of dataset ids " + dssab
+					+ "  and access parameters and investigations.");
+			for (Object o : dssab) {
+				Long dsid = (Long) o;
+				Dataset ds = (Dataset) icat.get(sessionId,
+						"Dataset ds INCLUDE ds.parameters.type, ds.datafiles, ds.investigation",
+						dsid);
+				Investigation inv = (Investigation) icat.get(sessionId, "Investigation", ds
+						.getInvestigation().getId());
+				System.out.println(ds.getName() + " with inv " + inv.getName() + " and "
+						+ +ds.getParameters().size() + " parameters and "
+						+ ds.getDatafiles().size() + " files");
+				for (DatasetParameter dp : ds.getParameters()) {
+					String name = dp.getType().getName();
+					if (Arrays.asList("N_FROG_AUTOWIDTH_VALUE", "S_PUMP_TIMING_XPOS")
+							.contains(name)) {
+						System.out.println("   " + name + ": " + dp.getNumericValue());
+					}
+				}
+			}
+
+		}
+		{ // Concise
 			System.out.println("\nGo from a list of dataset ids " + dssab
 					+ "  and access parameters and investigations.");
 			for (Object o : dssab) {
@@ -205,8 +316,8 @@ public class Top {
 					+ icat.search(sessionId, "COUNT(Dataset)").get(0));
 		}
 
-		{
-			// Datasets without a specific file
+		// Datasets without a specific file
+		{ 
 			String query = ",1000 Dataset.id  [type.name = 'GS' AND startDate BETWEEN :lower AND :upper]";
 			query = query.replace(":lower", tsb + "2011-06-15 00:00:00" + tse).replace(":upper",
 					tsb + "2012-09-01 00:00:00" + tse);
