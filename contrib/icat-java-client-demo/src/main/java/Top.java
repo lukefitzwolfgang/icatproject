@@ -60,7 +60,7 @@ public class Top {
 			List<?> ids = icat
 					.search(sessionId,
 							"SELECT ds.name FROM Dataset ds WHERE ds.type.name = 'GS' ORDER BY ds.name LIMIT 0, 10");
-			System.out.print("First 10 dataset names order by name");
+			System.out.print("\nFirst 10 dataset names order by name");
 			for (Object id : ids) {
 				System.out.print(" " + id);
 			}
@@ -86,7 +86,7 @@ public class Top {
 			List<?> ids = icat
 					.search(sessionId,
 							"SELECT ds.name FROM Dataset ds WHERE ds.type.name = 'GS' ORDER BY ds.name LIMIT 8, 2");
-			System.out.print("9th and 10th dataset names order by name");
+			System.out.print("\n9th and 10th dataset names order by name");
 			for (Object id : ids) {
 				System.out.print(" " + id);
 			}
@@ -123,7 +123,7 @@ public class Top {
 		{ // JPQL
 			String query = "SELECT ds FROM Dataset ds WHERE ds.name BETWEEN ':ds1' AND ':ds2' AND ds.type.name = 'GS' ORDER BY ds.name INCLUDE ds.parameters.type, ds.datafiles";
 			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
-			System.out.println("Parameters and files of datasets with names between " + ds1
+			System.out.println("\nParameters and files of datasets with names between " + ds1
 					+ " and " + ds2);
 			System.out.println("Query is " + query);
 			List<?> dss = icat.search(sessionId, query);
@@ -176,7 +176,7 @@ public class Top {
 		{ // JPQL
 			String query = "SELECT dp FROM DatasetParameter dp, dp.dataset ds WHERE (dp.type.name = 'SAD_SPEC_B_FWHM' OR dp.type.name = 'GEM_SHOT_NUM_VALUE') AND  ds.name BETWEEN ':ds1' AND ':ds2' AND ds.type.name = 'GS' INCLUDE dp.dataset.type , dp.type";
 			query = query.replace(":ds1", ds1).replace(":ds2", ds2);
-			System.out.println("Specific dataset parameters only - selected by name");
+			System.out.println("\nSpecific dataset parameters only - selected by name");
 			System.out.println("Query is " + query);
 
 			List<?> dsps = icat.search(sessionId, query);
@@ -244,7 +244,7 @@ public class Top {
 		// investigations. This time we have all parameters of each dataset
 		// and need to select by Java code. This is rather inefficient the
 		// investigations information should be cached rather than looking
-		// it up every time.
+		// it up every time.		
 		{ // JPQL
 			System.out.println("\nGo from a list of dataset ids " + dssab
 					+ "  and access parameters and investigations.");
