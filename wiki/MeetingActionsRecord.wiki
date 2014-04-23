@@ -8,20 +8,34 @@
 
 == Meeting 73 - 24 April 2014 ==
 
-Provisional agenda
+Agenda
 
  * Actions from meeting 72 (Steve)
-<wiki:comment>
- * Meeting technology (Kunal)
- * Meeting in Dublin in March (Alistair)
- * ICAT roadmap (Steve)
  * ICAT development (Steve)
  * TopCAT development (Wayne)
- * Coordination of IDS plugins (Andy/Christophe)
- * Release and SV for Pandata (Alistair)
-</wiki:comment>
+ * Alternatives to Glassfish (Any)
+ * ICAT roadmap update (Steve)
  * Issues from ICAT production deployments (Any)
  * AOB (Any) 
+
+=== Notes 73 ===
+Present:
+
+Apologies: Milan
+
+=== Actions 73 ===
+
+|| Item || Description                                                                     || Assigned      || Status            ||
+|| 72.0 || Circulate likely time-scales for the items on the current road map              || Steve         || New               ||
+|| 72.1 || Organise a Hangout familiarisation meeting                                      || Kunal         || New               ||
+|| 72.2 || Send note to Steve about the shortcomings of the IDS plugin interface           || Christophe    || New               ||
+|| 72.3 || Understand why SV's fail when ISIS ICAT is contacted                            || Alistair      || New               || 
+|| 72.4 || Raise an issue on case sensitivity of searches                                  || Tom           || New               || 
+|| 72.5 || Add authz rules to contrib directory                                            || Tom           || New               ||    
+|| 71.3 || Invite WP4 of Pandata to provide feedback on their experience of ICAT products  || Alistair      || Pending           || 
+|| 61.1 || Put the simple ICAT browser into contrib when it is ready                       || Tom           || Pending           || 
+|| 60.3 || Finalise a release of IJP and send a note to the mailing list                   || Steve         || Pending           || 
+
 
 == Meeting 72 - 27 February 2014 ==
 
@@ -37,6 +51,7 @@ Agenda
  * Release and SV for Pandata (Alistair)
  * Issues from ICAT production deployments (Any)
  * AOB (Any)
+
 
 === Notes 72 ===
 Present: Milan, Shelly, Ivan, Alistair, Christophe, Anton, Kunal, Tom, Wayne and Steve
