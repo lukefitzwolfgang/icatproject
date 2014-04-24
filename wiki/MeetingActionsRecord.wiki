@@ -60,7 +60,7 @@ Kunal has started looking at WildFly as an alternative container. He will report
 
 Tom explained his ideas about issuing DOIs for the ICAT software. He will put this into a posting in order to get feedback on the desired granularity - Action
 
-Steve explained the updated roadmap. A couple of small changes were suggested and having reassured Tom that nothing had been removed besides giving consideration to integration of ICE into TopCAT and the construction of a federation service there was agreement that the updated roadmap - with the two extra changes from the meeting should replace the existing roadmap, but that the existing one be preserved on the web site to show progress.
+Steve explained the updated roadmap. A couple of small changes were suggested and having reassured Tom that nothing had been removed besides giving consideration to integration of ICE into TopCAT and the construction of a federation service there was agreement that the updated roadmap - with the two extra changes from the meeting should replace the existing roadmap, but that the existing one be preserved on the web site to show progress. Changes to multi-ICAT searching were discussed, including providing mockups of the proposed designs.
 
 Tom reported that Kevin had been updating their ICAT 4.3.2 to use Glassfish 4. He had had some problems with certificates.
 
@@ -71,6 +71,7 @@ Shelly asked about the date of the next meeting. It is normally held on the last
 || Item || Description                                                                     || Assigned      || Status  ||
 || 73.0 || Send round a proposal for ICAT DOIs                                             || Tom           || New     ||
 || 73.1 || Report on issues porting to WildFly                                             || Kunal         || New     ||
+|| 73.2 || Send around details of Balsamiq mockups                                         || Tom           || Done    ||
 || 72.4 || Raise an issue on case sensitivity of searches                                  || Tom           || Pending || 
 || 72.5 || Add authz rules to contrib directory                                            || Tom           || Pending ||    
 || 71.3 || Invite WP4 of Pandata to provide feedback on their experience of ICAT products  || Alistair      || Pending || 
