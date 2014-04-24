@@ -14,6 +14,7 @@ Agenda
  * ICAT development (Steve)
  * TopCAT development (Wayne)
  * Alternatives to Glassfish (Any)
+ * Issuing DOIs for ICAT (Tom)
  * ICAT roadmap update (Steve)
  * Issues from ICAT production deployments (Any)
  * AOB (Any) 
