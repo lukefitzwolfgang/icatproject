@@ -16,7 +16,7 @@ Agenda
  * TopCAT development (Wayne)
  * Issues from ICAT production deployments (Any)
  * AOB (Any) 
-<wiki:comment/>
+</wiki:comment>
 
 === Notes 73 ===
 
