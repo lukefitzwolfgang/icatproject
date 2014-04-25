@@ -56,7 +56,7 @@ Steve reported on the 4.3.3 SNAPSHOTs of the server and client. Shelly asked abo
 
 Wayne reported that the next TopCAT release was delayed by about a month. Various bug fixes had been made but the upload facility was not yet complete.
 
-Kunal has started looking at WildFly as an alternative container. He will report next month.
+Kunal has started looking at !WildFly as an alternative container. He will report next month.
 
 Tom explained his ideas about issuing DOIs for the ICAT software. He will put this into a posting in order to get feedback on the desired granularity - Action
 
@@ -70,7 +70,7 @@ Shelly asked about the date of the next meeting. It is normally held on the last
 
 || Item || Description                                                                     || Assigned ||
 || 73.0 || Send round a proposal for ICAT DOIs                                             || Tom      ||
-|| 73.1 || Report on issues porting to WildFly                                             || Kunal    ||
+|| 73.1 || Report on issues porting to !WildFly                                             || Kunal    ||
 || 73.2 || Send around details of Balsamiq mockups                                         || Tom      ||  
 || 72.5 || Add authz rules to contrib directory                                            || Tom      ||      
 || 71.3 || Invite WP4 of Pandata to provide feedback on their experience of ICAT products  || Alistair || 
