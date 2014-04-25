@@ -50,7 +50,7 @@ Action 72.2 - The IDS plugin interface was discussed in Dublin and the views of 
  
 Action 72.3 - Tom explained that Alistair had had some misconfiguration - Closed
 
-Action 72.4 - Tom thought there had been some discussion on case sensitivity but Steve was not able to find it. So the action remains with Tom.
+Action 72.4 - Fixed in 4.3.3 - Closed
 
 Steve reported on the 4.3.3 SNAPSHOTs of the server and client. Shelly asked about the need to use Glassfish 4. Steve explained that Glassfish 4 was used for testing and that it allowed the deployment order of components to be defined but that version 3 of Glassfish should still work.
 
@@ -68,15 +68,14 @@ Shelly asked about the date of the next meeting. It is normally held on the last
 
 === Actions 73 ===
 
-|| Item || Description                                                                     || Assigned      || Status  ||
-|| 73.0 || Send round a proposal for ICAT DOIs                                             || Tom           || New     ||
-|| 73.1 || Report on issues porting to WildFly                                             || Kunal         || New     ||
-|| 73.2 || Send around details of Balsamiq mockups                                         || Tom           || Done    ||
-|| 72.4 || Raise an issue on case sensitivity of searches                                  || Tom           || Pending || 
-|| 72.5 || Add authz rules to contrib directory                                            || Tom           || Pending ||    
-|| 71.3 || Invite WP4 of Pandata to provide feedback on their experience of ICAT products  || Alistair      || Pending || 
-|| 61.1 || Put the simple ICAT browser into contrib when it is ready                       || Tom           || Pending || 
-|| 60.3 || Finalise a release of IJP and send a note to the mailing list                   || Steve         || Pending || 
+|| Item || Description                                                                     || Assigned ||
+|| 73.0 || Send round a proposal for ICAT DOIs                                             || Tom      ||
+|| 73.1 || Report on issues porting to WildFly                                             || Kunal    ||
+|| 73.2 || Send around details of Balsamiq mockups                                         || Tom      ||  
+|| 72.5 || Add authz rules to contrib directory                                            || Tom      ||      
+|| 71.3 || Invite WP4 of Pandata to provide feedback on their experience of ICAT products  || Alistair || 
+|| 61.1 || Put the simple ICAT browser into contrib when it is ready                       || Tom      ||
+|| 60.3 || Finalise a release of IJP and send a note to the mailing list                   || Steve    ||  
 
 
 == Meeting 72 - 27 February 2014 ==
