@@ -19,21 +19,24 @@
                         <a href="${repoUrl}/org/icatproject/authn_shib2local/${project.version}/authn_shib2local-${project.version}-distro.zip">authn_shib2local-${project.version}-distro.zip</a>
                     </li>
                     <li>
-                        A suitable deployed container (here assumed to be glassfish though tomcat should be sufficient) to support a web
+                        A suitable deployed container (here assumed to be glassfish) to support a web
                         application.
-                        Testing has been carried out with Glassfish 3.1.2.
-                        <a href="https://code.google.com/p/icatproject/wiki/Glassfish">Glassfish installation instructions</a>
+                        Testing has been carried out with
+                        Glassfish 4.0.
+                        <a href="http://icatproject.org/installation/glassfish/">Glassfish installation instructions</a>
                         are available.
                     </li>
                     <li>
                         A database as described in
-                        <a href="https://code.google.com/p/icatproject/wiki/Databases">Database installation instructions</a>
+                        <a href="http://icatproject.org/installation/database/">Database installation instructions</a>
                         installed on the server
                     </li>
 
                     <li>
                         Python (version 2.4 to 2.7) installed on the server.
                     </li>
+
+                    <li>An ECP enabled Shibboleth Identity Provider and an ECP enabled Shibboleth Service Provider</li>
                 </ul>
             </subsection>
 
@@ -56,8 +59,7 @@
                     <dt>dbProperties</dt>
                     <dd>identifies the mapping database and how to connect to it.</dd>
                     <dt>glassfish</dt>
-                    <dd>is the top level of the glassfish installation. It must contain "glassfish/domains", and will be referred to here as
-                        GLASSFISH_HOME as if an environment variable had been set.
+                    <dd>is the top level of the glassfish installation. It must contain "glassfish/domains".
                     </dd>
                     <dt>port</dt>
                     <dd>is the administration port of the chosen glassfish domain which is typically 4848.</dd>
@@ -120,6 +122,15 @@
                         NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"&gt;
                         You can either specify "uid" or "urn:oid:0.9.2342.19200300.100.1.1" as attribute
                     </dd>
+                    <dt>mapping</dt>
+                    <dd>Flag with case-insensitive value ALWAYS, NEVER or TRY. If the flag is ALWAYS, mapping will be attempted and a failure will
+                        result in a failed login.
+                        If the flag is NEVER then no mapping is performed. If the flag is TRY then mapping will be attempted.
+                    </dd>
+                    <dt>unmapped_user</dt>
+                    <dd>Optional user name to return if no succesful mapping has been performed. If no value is specifed the SAML attribute will be
+                        returned
+                    </dd>
                     <dt>proxy_host</dt>
                     <dd>Optional name of proxy host. If specified the proxy_port must also be specified</dd>
                     <dt>proxy_port</dt>
@@ -132,6 +143,8 @@
                         specified it will be
                         provided simply as 'xyz123'.
                     </dd>
+
+
                 </dl>
 
             </subsection>
@@ -148,22 +161,19 @@
                 </p>
             </subsection>
 
-            <subsection name="Add user mappings">Users should be added to the database table ACCOUNTIDMAP. This has
-                two columns, one for the EAAHash value and
+            <subsection name="Add user mappings">Users should be added to the database table ACCOUNTIDMAP. This has two columns, one for the EAAHash value and
                 one for the ICAT username to map it onto. The table may be manually edited. It is expected that a facility will provide a web based
-                mechanism to authenticate simultaneously to Shibboleth and to something that guarantees his ICAT user name and then put an entry
-                in the
-                table.
+                mechanism to authenticate simultaneously to Shibboleth and to something that guarantees his ICAT user name and then put an entry in
+                the table.
             </subsection>
 
             <subsection name="Check that authn_shib2local works">
-                <p>Use testicat (which is installed with ICAT) for someone with a Shibboleth account and for which a mapping has
-                    been provided in the
-                    database ACCOUNTIDMAP table. It should report that it logs in, but may or may not have
-                    the permission to run the rest of the test.
-                    If it does not report that it has logged in then please check the server.log and the
-                    authn_shib2local.log files which can both be
-                    found in the logs directory below your domain.
+                <p>Use testicat (which is installed with ICAT) for someone with a Shibboleth account and for which a mapping has been provided in the
+                    database ACCOUNTIDMAP table if required by the configured mapping property. It should report that it logs in, but may or may not
+                    have the permission to run the rest of the test. If it does not report that it has logged in then please check the server.log and
+                    the authn_shib2local.log files which can both be found in the logs directory below your domain. If you modify the
+                    authn_shib2local.properties file you can use the setup script to reinstall but you must also restart ICAT (which will have a stale
+                    handle to the old instance) and which can be done by restarting the glassfish domain.
                 </p>
             </subsection>
 

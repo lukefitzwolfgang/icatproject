@@ -7,6 +7,16 @@
 
     <body>
 
+        <section name="1.1.0">
+            <p>Add configuration to work without mapping entries</p>
+            <ul>
+                <li>Use updated setup script - where configure step is optional</li>
+                <li>Use updated shibboleth-ecp-authclient</li>
+                <li>Added property 'mapping'</li>
+                <li>Added optional property 'unmapped_user'</li>
+            </ul>
+        </section>
+
         <section name="1.0.0">
             <p>Initial release</p>
         </section>
