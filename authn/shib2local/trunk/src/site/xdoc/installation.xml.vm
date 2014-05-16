@@ -44,7 +44,7 @@
                 <ol>
                     <li>
                         Please follow
-                        <a href="http://code.google.com/p/icatproject/wiki/Installation"> the generic installation instructions</a>
+                        <a href="http://icatproject.org/installation/component/"> the generic installation instructions</a>
                     </li>
                     <li>Update the icat.properties file for icat to see the authenticator.</li>
                     <li>Check that it works.</li>
