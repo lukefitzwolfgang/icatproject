@@ -16,9 +16,12 @@
 #              NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
 #      You can either specify "uid" or "urn:oid:0.9.2342.19200300.100.1.1" as attribute
 #
+# 4. What do do about mapping
+
 service_provider_url https://umbrella.psi.ch/secure
 identity_provider_url https://umbrella.psi.ch/idp/profile/SAML2/SOAP/ECP
 lookup_attribute EAAHash
+mapping ALWAYS
 
 # Optionally, you need:
 # 1. The wep proxy host (not a URL, just the host) if connections to the SP or the  
@@ -28,9 +31,12 @@ lookup_attribute EAAHash
 #
 # 3. Disable the certificate check when using self-signed certificates (true or false)
 #
+# 4. Name for unmapped user
+
 proxy_host wwwcache.rl.ac.uk
 proxy_port 8080
 disable_cert_check false
+!unmapped_user fred
 
 # If access to Shibboleth-to-Local authentication should only be allowed from certain 
 # IP addresses then provide a space separated list of allowed values. These 

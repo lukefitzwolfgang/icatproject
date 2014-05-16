@@ -8,16 +8,14 @@ actions, options, arg = getActions()
 props = actions.getGlassfish("authn_shib2local-setup.properties", ["dbProperties", "glassfish", "driver", "port"])
 
 prop_name = "authn_shib2local.properties"
-prop_list = []
+prop_list = ["service_provider_url", "identity_provider_url", "lookup_attribute", "mapping"]
 
-if arg == "CONFIGURE":
+if arg in ["CONFIGURE", "INSTALL"]:
     actions.configure(prop_name, prop_list)
-    actions.setConfigured()
+    actions.checkNoErrors()
     
-elif arg == "INSTALL":
+if arg == "INSTALL":
     
-    actions.checkConfigured()
-           
     icatProperties = actions.getProperties(prop_name, prop_list)       
            
     actions.installFile(prop_name)
@@ -36,12 +34,12 @@ elif arg == "INSTALL":
         
         actions.asadmin("create-jdbc-resource --connectionpoolid authn_shib2local jdbc/authn_shib2local")
       
-        actions.deploy("authn_shib2local-*.war")
+        actions.deploy("authn_shib2local-*.war", deploymentorder=80)
                     
     except Exception, e:
         abort(str(e))
                
-else:  # UNINSTALL
+if arg == "UNINSTALL":
     
     actions.removeFile(prop_name)
     

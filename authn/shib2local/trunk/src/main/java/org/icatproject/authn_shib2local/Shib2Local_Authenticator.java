@@ -23,6 +23,7 @@ import org.icatproject.utils.CheckedProperties;
 import org.icatproject.utils.CheckedProperties.CheckedPropertyException;
 import org.opensaml.DefaultBootstrap;
 import org.opensaml.saml2.core.Attribute;
+import org.opensaml.saml2.core.Response;
 import org.opensaml.ws.soap.client.SOAPClientException;
 import org.opensaml.xml.XMLObject;
 import org.opensaml.xml.parse.BasicParserPool;
@@ -56,6 +57,14 @@ public class Shib2Local_Authenticator implements Authenticator {
 
 	private String mechanism;
 
+	private Mapping mapping;
+
+	private String unmapped_user;
+
+	private enum Mapping {
+		ALWAYS, NEVER, TRY
+	};
+
 	@PostConstruct
 	private void init() {
 
@@ -77,9 +86,21 @@ public class Shib2Local_Authenticator implements Authenticator {
 			}
 
 			// We require a Service Provider and an Identity Provider, as well as a lookup attribute
+			// and a mapping
 			serviceProviderUrl = props.getURL("service_provider_url").toString();
 			identityProviderUrl = props.getURL("identity_provider_url").toString();
 			lookupAttribute = props.getString("lookup_attribute");
+
+			try {
+				mapping = Mapping.valueOf(Mapping.class, props.getString("mapping").toUpperCase());
+			} catch (IllegalArgumentException e) {
+				String msg = "mapping must be one of ALWAYS, NEVER or TRY.";
+				logger.fatal(msg);
+				throw new IllegalStateException(msg);
+			}
+			if (props.has("unmapped_user")) {
+				unmapped_user = props.getString("unmapped_user");
+			}
 
 			// Optional proxy access. If host or port specified, then both required
 			if (props.has("proxy_host") || props.has("proxy_port")) {
@@ -133,10 +154,18 @@ public class Shib2Local_Authenticator implements Authenticator {
 			ShibbolethECPAuthClient ecpClient = new ShibbolethECPAuthClient(this.proxyConnection,
 					this.identityProviderUrl, this.serviceProviderUrl, this.disableCertCheck);
 
-			// Try to authenticate. If we get an exception here with our 'chained' get(...) calls,
-			// we have a problem anyway!
-			List<Attribute> attributes = ecpClient.authenticate(username, password).getAssertions()
-					.get(0).getAttributeStatements().get(0).getAttributes();
+			// Try to authenticate. If authentication failed, an AuthenticationException is thrown
+			final Response response = ecpClient.authenticate(username, password);
+
+			// If we get an exception here with our 'chained' get(...) calls, we have a problem!
+			List<Attribute> attributes;
+			try {
+				attributes = response.getAssertions().get(0).getAttributeStatements().get(0)
+						.getAttributes();
+			} catch (final IndexOutOfBoundsException e) {
+				throw new AttributeNotFoundException(
+						"The Shibboleth Identity Provider either returned no SAML assertions or no attribute statements");
+			}
 
 			// If there are no attributes, we can't do a lookup.
 			if (attributes.isEmpty()) {
@@ -180,16 +209,27 @@ public class Shib2Local_Authenticator implements Authenticator {
 					+ e.toString());
 		}
 
-		// Look up the attribute's value in our database to see if we have a mapping for it
-		AccountIdMap account = this.manager.find(AccountIdMap.class, lookupAttributeValue);
-		if (account == null) {
+		AccountIdMap account = null;
+		if (mapping != Mapping.NEVER) {
+			account = this.manager.find(AccountIdMap.class, lookupAttributeValue);
+		}
+
+		if (account == null && mapping == Mapping.ALWAYS) {
 			fail("Unable to find a local account for Shibboleth user " + username);
 		}
 
-		// Return a new authentication object
-		logger.info(username + " logged in and mapped to " + account.getLocalUid()
-				+ " successfully.");
-		return new Authentication(account.getLocalUid(), mechanism);
+		if (account != null) {
+			logger.info(username + " logged in and mapped to " + account.getLocalUid());
+			return new Authentication(account.getLocalUid(), mechanism);
+		} else {
+			if (unmapped_user != null) {
+				logger.info(username + " logged in as unmapped_user " + unmapped_user);
+				return new Authentication(unmapped_user, mechanism);
+			} else {
+				logger.info(username + " logged in unmapped as " + lookupAttributeValue);
+				return new Authentication(lookupAttributeValue, mechanism);
+			}
+		}
 	}
 
 	private void fail(String msg) throws IcatException {
