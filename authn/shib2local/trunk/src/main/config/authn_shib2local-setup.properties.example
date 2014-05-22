@@ -7,7 +7,7 @@ driver=com.mysql.jdbc.jdbc2.optional.MysqlDataSource
 dbProperties=user=icat:password=secret:databaseName=authn_shib2local
 
 # Must contain "glassfish/domains"
-glassfish=/home/fisher/pf/glassfish3
+glassfish=/home/fisher/pf/glassfish4
 
 # Port for glassfish admin calls (normally 4848)
 port=4848
