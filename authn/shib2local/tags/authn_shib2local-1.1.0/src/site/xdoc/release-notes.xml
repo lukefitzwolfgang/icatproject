@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+    <properties>
+        <title>ICAT AUTHN_SHIB2LOCAL Release Notes</title>
+    </properties>
+
+    <body>
+
+        <section name="1.1.0">
+            <p>Add configuration to work without mapping entries</p>
+            <ul>
+                <li>Use updated setup script - where configure step is optional</li>
+                <li>Use updated shibboleth-ecp-authclient</li>
+                <li>Added property 'mapping'</li>
+                <li>Added optional property 'unmapped_user'</li>
+            </ul>
+        </section>
+
+        <section name="1.0.0">
+            <p>Initial release</p>
+        </section>
+
+    </body>
+</document>
+            
+            
+   
