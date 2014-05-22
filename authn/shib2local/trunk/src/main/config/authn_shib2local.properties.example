@@ -18,8 +18,8 @@
 #
 # 4. What do do about mapping
 
-service_provider_url https://umbrella.psi.ch/secure
-identity_provider_url https://umbrella.psi.ch/idp/profile/SAML2/SOAP/ECP
+service_provider_url = https://umbrellaid.org/secure
+identity_provider_url : https://umbrellaid.org/idp/profile/SAML2/SOAP/ECP
 lookup_attribute EAAHash
 mapping ALWAYS
 
