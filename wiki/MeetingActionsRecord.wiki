@@ -54,7 +54,7 @@ Steve also reported on the IDS development for which a snapshot is also availabl
 
 Wayne then reported on TopCAT. The remaining work preventing the next release is the file upload. The file can be uploaded but he is not able to see whether or not the operation was successful because of the same-origin policy enforced by the browser. He is lookign for a work-around. Next week he plans to use Balsamiq to mock up a new TopCAT interface with the hope that it can be shown at the forthcoming PanData workshop to attract feedback.
 
-Tom reported that he had been working with Kevin to fix a problem when the Oracle Racks go down and no failover takes place. The solution should appear in the installation scripts or at least be documented. Tom also reported that as a test he had tried deleting all the investigations for an instrument and that it took about a second for each investigation (which is the top of a tree of course) so he resorted to a direct operation on the database.
+Tom reported that he had been working with Kevin to fix a problem when the Oracle RAC nodes go down and no failover takes place. The solution should appear in the installation scripts or at least be documented. Tom also reported that as a test he had tried deleting all the investigations for an instrument and that it took about a second for each investigation (which is the top of a tree of course) so he resorted to a direct operation on the database.
 
 There were no AOB items.
  
