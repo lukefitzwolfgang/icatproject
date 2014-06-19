@@ -40,7 +40,7 @@ If you are using Python 2.6, apply python2_6.patch (included in the source distr
 
 == Additional Resources ==
 
- * I gave a [https://pandata.googlecode.com/svn/trunk/training/november_2013/pdf/python-icat.pdf presentation on python-icat] at Pandata Software Workshop, November 2013 at Elettra, Trieste.
+ * I gave a [http://icatproject.org/wp-content/uploads/2014/03/RolfKrahl_python-icat_Dublin_2014.pdf presentation on python-icat] at the ICAT meeting, March 2014, Dublin.
 
 == Author ==
 
