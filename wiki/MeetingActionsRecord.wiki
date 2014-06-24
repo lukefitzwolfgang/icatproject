@@ -9,13 +9,25 @@
 == Meeting 75 - 26 June 2014 ==
 
 Agenda
-<wiki:comment> * Actions from meeting 74 (Steve)
+ * Actions from meeting 74 (Steve)
+<wiki:comment>
  * Steering Group (Tom or any other member)
+</wiki:comment>
+ * Report from recent PanData meeting (Alistair and others)
+ * Actions from the PanData meeting (Steve and others)
  * ICAT development (Steve)
  * IDS development (Steve)
  * TopCAT development (Wayne)
  * Issues from ICAT production deployments (Any)
  * AOB (Any) 
+
+<wiki:comment>
+|| Item || Description                                                                       || Assigned       ||
+|| 74.0 || Look into JDBC connector resilience with Wildfly                                  || Steve    || 
+|| 74.1 || Document or implement in setup script the JDBC connector fix for Glassfish/Oracle || Kevin or Steve || 
+|| 72.5 || Add authz rules to contrib directory                                              || Tom      ||      
+|| 61.1 || Put the simple ICAT browser into contrib when it is ready                         || Tom      ||
+|| 60.3 || Finalise a release of IJP and send a note to the mailing list                     || Steve    ||  
 </wiki:comment>
 
 == Meeting 74 - 29 May 2014 ==
