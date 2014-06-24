@@ -13,4 +13,5 @@
  * [http://code.google.com/p/icatproject/source/browse/contrib/icat-api-examples               Examples in Java of calling the Icat API (Alistair)]
  * [http://code.google.com/p/icatproject/source/browse/contrib/icat-api-py                     Examples in Python calling the Icat API (Alistair)]
  * [http://code.google.com/p/icatproject/source/browse/contrib/training-materials              Training materials (Alistair)]
- * [http://code.google.com/p/icatproject/source/browse/contrib/notification-receiver-example   An MDB for people to play with and be inspired by (Steve)]
+ * [http://code.google.com/p/icatproject/source/browse/contrib/notification-receiver-example   An MDB for people to play with and be inspired (Steve)]
+ * [https://icatproject.googlecode.com/svn/contrib/contributed-docs/ICAT.pdf                   Installation documentation (Jan)]
