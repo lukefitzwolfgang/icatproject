@@ -13,6 +13,7 @@ Agenda
 <wiki:comment>
  * Steering Group (Tom or any other member)
 </wiki:comment>
+ * DOIs - next steps (Tom)
  * Report from recent !PanData meeting (Alistair and others)
  * Actions from the !PanData meeting (Steve and others)
  * ICAT development (Steve)
