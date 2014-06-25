@@ -17,26 +17,17 @@ Agenda
  * Report from recent !PanData meeting (Alistair and others)
  * Actions from the !PanData meeting (Steve and others)
 <wiki:comment>
- consider readthedocs
-add a diagram overview - graphviz?
-how to allow people to contribute to the documentation
-ice does not work on Safari
-allow ldap to bind to use a functional user (with username and password in config file
-authenticator chaining is a common pattern
-a lot of unhappiness width TopCAT
-use config file rather than topcatadmin
-mockup was appreciated. Tom will convert a licence for web use so that we can make updated version available to all
-Andy will submit some requirements
-readthedocs
-add a diagram overview - graphviz?
-how to allow people to contribute to the documentation
-ice does not work on Safari
-allow ldap to bind to use a functional user (with username and password in config file
-authenticator chaining is a common pattern
-a lot of unhappiness with TopCAT
-use config file rather than topcatadmin
-mockup was appreciated. Tom will convert a licence for web use so that we can make updated version available to all
-Andy will submit some requirements
+ consider readthedocs and how to allow people to contribute to the documentation
+ add a diagram overview of the system - done
+ add a diagram to the schema - Steve
+ produce description of schema - Steve
+ ice does not work on Safari - submit a bug - Steve
+ allow ldap to bind to use a functional user (with username and password in config file - submit a bug - Steve
+ a lot of unhappiness width TopCAT
+ consider use config file rather than topcatadmin
+ mockup was appreciated. Tom will convert a licence for web use so that we can make updated version available to all - Tom
+ imporove mockup - Wayne
+ Andy will submit some requirements - Andy
 </wiki:comment>
  * ICAT development (Steve)
  * !InvestigationGroup (Rolf)
