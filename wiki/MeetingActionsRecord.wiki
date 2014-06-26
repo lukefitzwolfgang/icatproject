@@ -58,7 +58,7 @@ ICAT development - Steve reported that 4.3.3 client had been released and that a
 
 TopCAT development - Wayne requested a revised IDS snapshot to allow him to complete testing of 1.12. The upload is now almost ready.
 
-AOB - Alistair told us that the final !PanData service verification was about to start and that it would use the latest 4.3.3-SNAPSHOT. He also said that he had been contacted by SSI who have reviewed the ICAT project a few years ago. He observed that of the 34 recommendations they had made 26 had been implemented. The meeting agreed that if SSI wish to repeat the exercise we would agree to it. Steve would be responsible for liaison with SSI.
+AOB - Alistair told us that the final !PanData service verification was about to start and that it would use the latest 4.3.3-SNAPSHOT. He also said that he had been contacted by SSI who had reviewed the ICAT project a few years ago. He observed that of the 34 recommendations they had made 26 had been implemented. The meeting agreed that if SSI wish to repeat the exercise we would agree to it with Steve responsible for liaison.
 
 === Actions ===
 || Item || Description                                                                       || Assigned ||
@@ -149,7 +149,7 @@ Action 72.0 - Circulate likely time-scales for the items on the current road map
 
 Action 72.1 - Kunal had organised a Hangout familiarisation meeting last week - Closed
 
-Action 72.2 - The IDS plugin interface was discussed in Dublin and the views of Christophe accepted - Closed
+Action 72.2 - The IDS plugin interface was discussed in Dub with SSIlin and the views of Christophe accepted - Closed
  
 Action 72.3 - Tom explained that Alistair had had some misconfiguration - Closed
 
