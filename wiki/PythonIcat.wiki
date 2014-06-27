@@ -38,7 +38,7 @@ python-icat follows the standard Python conventions of packaging source distribu
 
 The last step might require admin privileges in order to write into the site-packages directory of your Python installation.
 
-If you are using Python 2.6, apply python2_6.patch (included in the source distribution) after the first step.  It removes the use of dict comprehensions  and of the bytes string prefix 'b' which were introduced in Python 2.7.
+If you are using Python 2.6, apply python2_6.patch (included in the source distribution, see the README for detailed instructions) after the first step.  It removes the use of dict comprehensions  and of the bytes string prefix 'b' which were introduced in Python 2.7.
 
 == Additional Resources ==
 
