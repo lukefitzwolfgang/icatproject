@@ -9,7 +9,7 @@ features.
 
 == System Requirements ==
 
- * Python 2.7, 2.7, 3.1, or 3.2.  The IDS client in python-icat has issues with Python 3.3 and 3.4, otherwise these Python version work as well.  Python 2.6 will do but requires patching the sources, see below.
+ * Python 2.7 or newer.  Python 2.6 will do but requires patching the sources, see below.
  * Suds, either the [https://fedorahosted.org/suds/ original version] or the [https://bitbucket.org/jurko/suds/ fork by Jurko Gospodnetić].  The latter is recommended as the original version is not maintained any more and contains bugs.  Python 3 requires the jurko fork.
  * [http://pyyaml.org/wiki/PyYAML PyYAML].  (Only needed to use the YAML backend of icatdump.py and icatrestore.py and to run the example scripts.  Not required to install or use python-icat itself.)
  * [http://lxml.de/ lxml].  (Only needed to use the XML backend of icatdump.py and icatrestore.py.  Not required to install or use python-icat itself.)
@@ -19,10 +19,11 @@ features.
 
 Current Release:
 
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.5.0.tar.gz python-icat 0.5.0]
+ * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.5.1.tar.gz python-icat 0.5.1]
 
 Old versions:
 
+ * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.5.0.tar.gz python-icat 0.5.0]
  * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.4.0.tar.gz python-icat 0.4.0]
  * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.3.0.tar.gz python-icat 0.3.0]
  * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.2.0.tar.gz python-icat 0.2.0]
