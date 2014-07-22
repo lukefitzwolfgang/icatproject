@@ -10,16 +10,17 @@
 
 Agenda
  * Actions from meeting 75 (Steve)
-<wiki:comment>
- * Steering Group (Tom or any other member)
-</wiki:comment>
  * DOIs - next steps (Tom)
  * ICAT development (Steve)
- * !InvestigationGroup (Rolf)
- * IDS development (Steve)
+ * !InvestigationGroup (Rolf/Tom)
+ * IDS development - and linking proposal (Steve)
  * TopCAT development (Wayne)
  * Issues from ICAT production deployments (Any)
  * AOB (Any)
+
+=== Notes ===
+
+=== Actions ===
 
 == Meeting 75 - 26 June 2014 ==
 
