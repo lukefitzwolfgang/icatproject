@@ -1,12 +1,13 @@
 #summary Recent ICAT collaboration meetings
 #labels Featured
 
-*Contents*
-<wiki:toc max_depth="2" />
 
 = Record of actions from ICAT collaboration meetings up to meeting 74 in may 2014 =
 
 Note that later meetings are recorded at http://icatproject.org/collaboration/communication/monthly-meetings/
+
+*Contents*
+<wiki:toc max_depth="2" />
 
 
 == Meeting 74 - 29 May 2014 ==
