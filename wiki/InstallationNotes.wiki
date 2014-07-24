@@ -1,7 +1,0 @@
-#summary List of installation notes.
-#labels Featured
-
-= Installation Notes =
- * [ApacheAndGlassfish Apache front end for Glassfish]
- 
-Also please see: http://icatproject.org/installation/
