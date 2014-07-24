@@ -1,4 +1,0 @@
-#summary Page moved
-#labels redirect
-
-Please see http://icatproject.org/installation/component/
