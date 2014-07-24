@@ -2,9 +2,9 @@
 #labels Featured
 
 
-= Record of actions from ICAT collaboration meetings up to meeting 74 in may 2014 =
+= Record of actions from ICAT collaboration meetings up to meeting 74 =
 
-Note that later meetings are recorded at http://icatproject.org/collaboration/communication/monthly-meetings/
+Later meetings are recorded at http://icatproject.org/collaboration/communication/monthly-meetings/
 
 *Contents*
 <wiki:toc max_depth="2" />
