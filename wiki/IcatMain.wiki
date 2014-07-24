@@ -3,7 +3,6 @@
 = Contents =
 
  * [IcatRequirements Requirements]
- * [InstallationNotes Installation Notes]
  * [CollaborationInformation Collaboration Information]
  * [CSMD             ICAT Metadata Model (CSMD)]
  
