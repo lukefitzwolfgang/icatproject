@@ -1,5 +1,4 @@
 #summary Recent ICAT collaboration meetings
-#labels Featured
 
 
 = Record of actions from ICAT collaboration meetings up to meeting 74 =
