@@ -1,7 +1,0 @@
-#summary PanData.
-
-= PanData =
-
- * http://www.pan-data.eu/PaN-data_Europe_News
-
-== - the end - ==
