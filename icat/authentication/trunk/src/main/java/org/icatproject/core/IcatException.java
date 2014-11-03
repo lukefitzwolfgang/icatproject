@@ -1,13 +1,28 @@
 package org.icatproject.core;
 
 import javax.ejb.ApplicationException;
+import javax.ws.rs.core.Response.Status;
 
 @SuppressWarnings("serial")
 @ApplicationException(rollback = true)
 public class IcatException extends Exception {
 
 	public enum IcatExceptionType {
-		BAD_PARAMETER, INTERNAL, INSUFFICIENT_PRIVILEGES, NO_SUCH_OBJECT_FOUND, OBJECT_ALREADY_EXISTS, SESSION, VALIDATION
+		BAD_PARAMETER(Status.BAD_REQUEST), INTERNAL(Status.INTERNAL_SERVER_ERROR), INSUFFICIENT_PRIVILEGES(
+				Status.FORBIDDEN), NO_SUCH_OBJECT_FOUND(Status.NOT_FOUND), 
+				OBJECT_ALREADY_EXISTS(Status.PRECONDITION_FAILED), SESSION(Status.FORBIDDEN), 
+				VALIDATION(Status.PRECONDITION_FAILED);
+
+		private Status status;
+
+		private IcatExceptionType(Status status) {
+			this.status = status;
+		}
+
+		public Status getStatus() {
+			return status;
+		}
+	
 	}
 
 	private IcatExceptionType type;
