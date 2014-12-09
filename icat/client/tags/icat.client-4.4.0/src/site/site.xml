@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+  <body>
+  
+       <menu name="Information for Users">  
+           <item name="Java Client User Manual (SOAP)" href="manual_soap.html"/>
+              <item name="Java Client User Manual (REST)" href="manual_rest.html"/>
+           <item name="Java Client Javadoc" href="apidocs/index.html"/>
+           <item name="Issue Tracking" href="issue-tracking.html"/>
+           <item name="Release Notes" href="release-notes.html"/>
+        </menu>
+       
+        <menu name="Information for Installers">
+            <item name="Java Client Installation" href="installation.html"/>
+        </menu>
+    
+        <menu ref="reports"/>
+    
+  </body>
+</project>
