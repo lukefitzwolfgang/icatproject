@@ -5,7 +5,7 @@
     <packaging>jar</packaging>
     <description>Interface need by authentication plugins</description>
     <groupId>org.icatproject</groupId>
-    <version>4.4.0</version>
+    <version>4.4.1-SNAPSHOT</version>
     <name>ICAT Authentication</name>
 
     <distributionManagement>
@@ -33,9 +33,9 @@
     </issueManagement>
 
     <scm>
-        <connection>scm:svn:http://icatproject.googlecode.com/svn/icat/authentication/tags/icat.authentication-4.4.0</connection>
-        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/icat/authentication/tags/icat.authentication-4.4.0</developerConnection>
-        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ficat%2Fauthentication%2Ftrunk/tags/icat.authentication-4.4.0</url>
+        <connection>scm:svn:http://icatproject.googlecode.com/svn/icat/authentication/trunk</connection>
+        <developerConnection>scm:svn:https://icatproject.googlecode.com/svn/icat/authentication/trunk</developerConnection>
+        <url>http://code.google.com/p/icatproject/source/browse/#svn%2Ficat%2Fauthentication%2Ftrunk</url>
     </scm>
 
     <licenses>
