@@ -21,7 +21,7 @@ Current Release:
 
  * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.6.0.tar.gz python-icat 0.6.0]
 
-Old versions can also be found [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.5.0.tar.gz here].
+Old versions can also be found [http://icatproject.googlecode.com/svn/contrib/python-icat/ here].
 
 == Installation from Source ==
 
