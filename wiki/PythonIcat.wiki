@@ -19,15 +19,9 @@ features.
 
 Current Release:
 
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.5.1.tar.gz python-icat 0.5.1]
+ * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.6.0.tar.gz python-icat 0.6.0]
 
-Old versions:
-
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.5.0.tar.gz python-icat 0.5.0]
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.4.0.tar.gz python-icat 0.4.0]
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.3.0.tar.gz python-icat 0.3.0]
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.2.0.tar.gz python-icat 0.2.0]
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.1.0.tar.gz python-icat 0.1.0]
+Old versions can also be found [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.5.0.tar.gz here].
 
 == Installation from Source ==
 
