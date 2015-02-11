@@ -19,7 +19,7 @@ features.
 
 Current Release:
 
- * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.6.0.tar.gz python-icat 0.6.0]
+ * [http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.7.0.tar.gz python-icat 0.7.0] ([http://icatproject.googlecode.com/svn/contrib/python-icat/python-icat-0.7.0.tar.gz.asc signature])
 
 Old versions can also be found [http://icatproject.googlecode.com/svn/contrib/python-icat/ here].
 
